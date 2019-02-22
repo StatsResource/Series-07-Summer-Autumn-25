@@ -1,0 +1,153 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}Faculty of Actuaries Institute of Actuaries
+EXAMINATIONS
+18 September 2000 (pm)
+Subject 101 — Statistical Modelling
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5 The number of claims which arise under a policy of a particular type in a year is
+to be modelled as a Poisson($\lambda$) random variable. A random sample of 500 such policies gave rise to a total of 84 claims in 1999.
+Calculate a 95% confidence interval for $\lambda$. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 Suppose that the linear regression model
+Y = $\alpha$ + βx + e
+is fitted to data {(yi , xi) : i = 1, 2, … , n}, where y is the salary (£) of a company
+manager and x (years) is the number of years of relevant experience of that
+manager.
+State the units of measurement (if any) of
+(a) ˆ$\alpha$ , the estimate of $\alpha$ ,
+(b) ˆβ , the estimate of β ,
+(c) R2 , the coefficient of determination of the fit. 
+\newpage
+
+7 In a correlation analysis based on a random sample of 10 values from a bivariate
+normal distribution, a t-test of
+H0 : ρ = 0 v. H1 : ρ > 0
+results in a probability-value of 0.025.
+Calculate the value of the sample correlation coefficient. 
+\newpage
+8 Claims on a certain class of policy are classified as being of two types, I and II.
+Past experience has shown that:
+25\% of claims are of type I and 75\% are of type II;
+Type I claim amounts have mean £500 and standard deviation £100;
+Type II claim amounts have mean £300 and standard deviation £70.
+Calculate the mean and the standard deviation of the claim amounts on this
+class of policy. [6]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8 Let Y = amount
+Let X = 1, 2 for types I, II
+∴ P(X = 1) = 0.25, P(X = 2) = 0.75
+E(YX = 1) = 500, Var(YX = 1) = 1002
+all given
+E(YX = 2) = 300, Var(YX = 2) = 702
+E(Y) = E(E(YX)) = 500(0.25) + 300(0.75)
+= 125 + 225 = £350
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 4
+V(Y) = E(V(YX)) + V(E(YX))
+E(V(YX)) = 1002(0.25) + 702(0.75)
+= 2500 + 3675 = 6175
+V(E(YX)) = 5002(0.25) + 3002(0.75) − 3502
+= 62500 + 67500 − 122500 = 7500
+∴ V(Y) = 6175 + 7500 = 13675
+∴ s.d.(Y) = £116.9
+OR: V(E(YX)) = 0.25(500 − 350)2 + 0.75(300 − 350)2 = 7500
+alternative method for V(Y):
+E(Y2X = 1) = 1002 + 5002 = 260000
+E(Y2X=2) = 702 + 3002 = 94900
+∴ E(Y2) = 0.25(260000) + 0.75(94900)
+= 136175
+∴ V(Y) = 136175 − 3502 = 13675
+∴ s.d.(Y) = 116.9
+Q8 Comment: Very few candidates seemed to be aware of the result V(Y) = E[V(Y|X)]
++ V[E(Y|X)] and how and when it should be used.
+9 C(t) = log M(t) = −$\alpha$log(1− θt)
+C′(t) = $\alpha$θ(1 − θt)−1 , C′′(t) = $\alpha$θ2(1 − θt)−2 , C′′′(t) = 2$\alpha$θ3(1 − θt)−3
+∴ κ2 = C′′(0) = $\alpha$θ2 , κ3 = C′′′(0) = 2$\alpha$θ3 so coefficient is
+κ3 / (κ2)3/2 = 2$\alpha$θ3 / ($\alpha$θ2)3/2 = 2 / √$\alpha$
+
+13 ( ) i E Y⋅ = μ + τi and E(Y⋅⋅ ) = μ
+( ) i E Y⋅ E(μˆ ) = E(Y⋅⋅ ) = μ ∴ unbiased
+(ˆ ) i E τ = ( ) i E Y⋅ −Y⋅⋅ = μ + τi − μ = τi ∴ unbiased
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 7
+V(μˆ ) = V(Y⋅⋅ ) =
+2
+kr
+σ
+as Y⋅⋅ is mean of kr r.v.’s each with var σ2
+(ˆ ) i V τ = ( ) i V Y⋅ −Y⋅⋅
+= ( ) ( ) 2 ( , ) i i V Y⋅ + V Y⋅⋅ − Cov Y⋅ Y⋅⋅
+=
+2 2
+1 1 2
+2 . .r
+r kr r kr
+σ + σ − σ
+=
+2 2
+r kr
+σ − σ =
+(k 1) 2
+kr
+− σ
+Alternative method:
+( ) i V Y⋅ −Y⋅⋅ =
+1 1
+1 i j
+j i
+V Y Y
+k ⋅ k ≠ ⋅
+      −  − Σ 
+   
+=
+1 2 2 1 2 2
+1 (k 1)
+k r k r
+  σ   σ
+ −  + −  −
+   
+=
+2
+k2r
+σ {(k − 1)2 + (k − 1)} =
+(k 1) 2
+kr
+− σ
+Q13 Comment: This material was unfamiliar to most candidates.
