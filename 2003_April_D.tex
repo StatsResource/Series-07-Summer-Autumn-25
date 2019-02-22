@@ -1,0 +1,388 @@
+
+12 The following data give the invoiced amounts for work carried out on 12 jobs
+performed by a plumber in private customers houses. The durations of the jobs are
+also given.
+duration x (hrs) 1 1 2 3 4 4 5 6 7 8 9 10
+amount y (£) 45 65 80 95 100 125 145 180 180 210 330 240
+60, 2 402, 1795, 2 343,725, 11,570 xi  xi  yi  yi  xi yi 
+The plumber claims to calculate his total charge for each job on the basis of a single
+call-out charge plus an hourly rate for the time spent working on the job.
+(i) (a) Draw a scatterplot of the data on graph paper and comment briefly on
+your plot.
+(b) The equation of the fitted regression line of y on x is y = 22.4 + 25.4x
+and the coefficient of determination is R2 = 87.8% (you are not asked
+to verify these results).
+Draw the fitted line on your scatterplot. [5]
+(ii) (a) Calculate the fitted regression line of invoiced amount on duration of
+job using only the 11 pairs of values remaining after excluding the
+invoice for which x = 9 and y = 330.
+(b) Calculate the coefficient of determination of the fit in (ii)(a) above.
+(c) Add the second fitted line to your scatterplot, distinguishing it clearly
+from the first line you added (in part (i)(b) above).
+(d) Comment on the effect of omitting the invoice for which x = 9 and
+y = 330.
+(e) Carry out a test to establish whether or not the slope in the model fitted
+in (ii)(a) above is consistent with a rate of £25 per hour for work
+carried out. [13]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+13 The random variable, X, has a gamma distribution with probability density function
+given by:
+ 
+ 
+ 
+ 
+1 exp /
+0 ,
+m
+m
+x x
+f x x
+m
+  
+ 
+ 
+where m and  are positive constants. This distribution has mean m and variance
+m2. Let x1,  , xn denote a random sample of n observations on X.
+(i) Suppose that m is known.
+(a) Show that the maximum likelihood estimate of  is given by
+1
+ / . n
+i i x mn
+
+ 
+(b) Show that 
+is an unbiased estimator of .
+(c) Obtain the Cramer-Rao lower bound for estimators of .
+(d) Show that the maximum likelihood estimator of  has variance equal
+to the lower bound given in (i)(c). [10]
+Suppose now that m is unknown, and is also to be estimated by maximum likelihood.
+It is assumed that m is large enough so that (m) is well approximated by
+g(m) exp( m)m(m 0.5) (2 )0.5 
+   .
+(ii) Determine the approximate maximum likelihood estimates of  and m,
+substituting g(m) for (m) in the likelihood function. [7]
+(iii) Suppose that the sample values are:
+32 48 51 43 82 155
+Obtain the approximate maximum likelihood estimates for  and m given
+in (ii). [2]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+14 A social researcher is interested in the gender distribution among children in families,
+and has collected data for her investigation as follows.
+Three hundred families were selected at random. The table below shows frequency
+distributions of the numbers of girls in families of size 1, 2, 3, and 4, that is with 1, 2,
+3, and 4 children.
+Number of girls in family
+Size of
+family 0 1 2 3 4
+Number of
+families
+1 23 27 - - - 50
+2 30 46 24 - - 100
+3 9 36 43 12 - 100
+4 4 17 15 11 3 50
+(i) The researcher wants to investigate whether the proportion of girls within
+families is independent of family size.
+(a) Construct a suitable 2  4 contingency table, and calculate the overall
+proportion of girls.
+(b) State appropriate hypotheses to use in the researchers investigation.
+(c) Calculate the value of an appropriate test statistic and state whether or
+not its probability value exceeds 0.05.
+(d) State your conclusion. [12]
+(ii) (a) Suggest a model (with all parameter values stated or estimated) for the
+number of girls in a family, for each family size (1, 2, 3, and 4), using
+your conclusion from part (i).
+(b) Suppose the researcher was to test the goodness-of-fit of the models
+you have suggested in part (ii)(a) for family sizes 2, 3, and 4 and that
+the models were rejected as being unsuitable. Discuss briefly how you
+would interpret this lack of fit. [4]
+[Total 16]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12 (i) (a)
+The point (9,330) is an outlier from the general pattern, which is
+strongly linear.
+(b)
+(ii) (a) Now Σx = 51, Σx2 = 321, Σy = 1,465, Σy2 = 234,825, Σxy = 8,600
+Sxx = 84.545, Syy = 39,713.636, Sxy = 1807.727
+  1807.727 /84.545  21.382,  1465 /11(51/11)  34.048
+Fitted line is y = 34.0 + 21.4x
+(b) Coefficient of determination R2 = 1807.7272/(84.545  39713.636)
+= 0.973 i.e. 97.3%
+(or find these by first calculating the three sums of squares SSTOT
+= 39,713.636 as above, SSREG = 1807.7272/84.545 = 38652.515, and
+so SSRES = 1061.121)
+0 1 2 3 4 5 6 7 8 9 10
+400
+300
+200
+100
+0
+duration
+amount
+0 1 2 3 4 5 6 7 8 9 10
+0
+100
+200
+300
+400
+duration
+amount
+Subject 101 (Statistical Modelling)  April 2003  Examiners Report
+Page 8
+(c)
+(d) Removing the influence of the single point (9,330) results in a fitted
+line with a lower slope and a much better fit for the remaining data (R2
+has increased from 87.8% to 97.3%).
+(e) The hourly rate corresponds to the slope in the model
+H0: slope = 25 v H1: slope ≠ 25
+Estimate of error variance = 1061.121/9
+ standard error of slope estimate = [(1061.121/9)/84.545]1/2 = 1.181
+t = (21.382  25)/1.181 = 	3.06 on 9 df
+Upper tail probability is between 0.005 and 0.01 so P-value is between
+0.01 and 0.02, so we have quite strong evidence against H0. We
+conclude that the data are not consistent with an hourly rate of £25.
+0 1 2 3 4 5 6 7 8 9 10
+0
+100
+200
+300
+400
+duration
+amount
+line (outlier omitted)
+original line
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+13
+1 ( ) exp( / ) ( 0)
+( )
+m
+m
+f x x x x
+m
+  
+ 
+ 
+1 1
+1
+1
+exp
+( )
+( )
+n n m i i
+i i n
+i i mn n
+x x
+L fx
+m
+ 
+
+
+  
+ 
+  	 
+ 
+
+ 
+
+
+(i) m is known case.
+(a) 1
+1
+log ( 1) log log log ( )
+n
+n i
+i
+i
+i
+x
+l L m x mn n m 
+
+      
+
+
+
+1 1
+2
+Then 0 
+n n
+i i
+i i
+x x
+l mn l
+mn
+   
+
+  
+ 
+
+
+   
+ 
+(MLE)
+(b) E() nE(Xi ) nm 
+mn mn
+
+    is unbiased
+(c)
+2
+1
+2 3 2 2
+n
+i
+i
+x
+l mn  
+  
+  
+
+2
+2 3 2 2
+E l 2 nE(X ) mn mn
+  
+       
+ 	  	 	 	
+ CRlb =
+2 1
+2
+E l
+    
+ 		 
+
+    
+
+=
+2
+mn
+
+(d) Variance of  :
+2 2
+2 2 2 2 2 2
+1
+( ) 1 ( ) ( )
+n
+i
+i
+V V X n V X nm
+m n m n m n mn 
+ 
+     
+Cramer-Rao lb is attained.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) m is unknown case.
+If m has also to be estimated, ML equations are (approx):
+l l 0
+m
+ 
+ 
+ 
+  1
+1 log ( 1) log log
+n
+n i i
+i i
+x
+l L m x mn 
+
+     
+
+
+
+1 1
+2 2 n m (m ) logm log 2
+1
+2 1
+     0 /
+n
+i i n
+i i
+l x mn x nm 
+
+
+    
+  
+
+ (MLE of )
+ 
+1
+2
+1
+  log log log  0
+
+n
+i i
+l m x n n n n m
+m  m
+   
+     		    
+ 
+
+Substituting for 
+gives
+ 
+1
+1 log log log  0
+ 2 
+n n
+i i
+n x n x n n m
+ m m
+ 
+     
+ 	
+
+2m 1/ log(x / x) where  
+1
+1 1 , / n n n
+i i i i x x x x n
+ 
+   
+ m 1/ log  x / x 2   
+ (MLE of m)
+There are alternative versions, for example,
+ 
+
+i x
+n
+x
+m
+log 1 log
+ 0.5
+Most candidates found Question 13(ii) difficult to complete successfully (the Examiners
+recognise that this part was on the hard side).
+(iii) x  68.5, x  59.147 m  3.406,   20.114
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+14 (i) (a) Suitable table is gender  family size.
+Family size 3: no. of girls = 36 + 43(2) + 12(3) = 158
+so no. of boys = 300  158 = 142, etc.
+family size
+1 2 3 4 total
+no. of girls 27 94 158 92 371
+no. of boys 23 106 142 108 379
+total 50 200 300 200 750
+Overall proportion of girls = 371/750 = 0.495
+(b) H0: gender and family size are independent
+H1: gender and family size are not independent
+(c) Expected frequency (under H0) in brackets
+27 94 158 92
+(24.73) (98.93) (148.40) (98.93)
+23 106 142 108
+(25.27) (101.07) (151.60) (101.07)
+2 = (27-24.73)2/24.73 + ..
+= 0.208 + 0.246 + 0.621 + 0.486 +
+0.203 + 0.241 + 0.608 + 0.476 = 3.088
+df = 3, upper 5% point is 7.815 so P-value exceeds 0.05.
+(d) We have no evidence against H0, which can therefore stand, and so we
+conclude that the proportion of girls is independent of family size.
+(ii) (a) Models: no. of girls ~ binomial(n, 0.495) for n = 1, 2, 3, 4
+(b) The model assumes that the trials are independent i.e. that the gender
+of each child is independent of that of all other children in the family.
+We would interpret the lack of fit as evidence that the genders of
+children in a family are not independently determined.
+In addition, the gender of the first child (or the genders of the first and
+second children) may have an influence on  or even decide - the
+family size.
+Another possible reason is variation in P(girl) across families.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The Examiners did not anticipate that so many candidates would be unable to construct the
+basic 2  4 contingency table appropriate for investigating the matter in question.
