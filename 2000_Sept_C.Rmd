@@ -1,0 +1,159 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+9 The size of a claim, X, which arises under a certain type of insurance contract, is
+to be modelled using a gamma random variable with parameters $\alpha$ and θ
+(both > 0) such that the moment generating function of X is given by
+M(t) = (1 − θt)−$\alpha$ , t < 1/θ .
+By using the cumulant generating function of X, or otherwise, show that the
+coefficient of skewness of the distribution of X is given by 2/√$\alpha$. [5]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10 Let Z be a random variable with mean 0 and variance 1, and let X be a random
+variable independent of Z with mean 5 and variance 4. Let Y = X − Z.
+Calculate the correlation coefficient between X and Y. [5]
+11 Let X1 , X2 ,..., Xn be a random sample of size n from a distribution with density
+2
+2
+( ; ) ,0 : 0
+x
+f x θ = < x < θ θ >
+θ
+.
+(i) Write down the likelihood function clearly and hence by drawing a rough
+sketch of the likelihood function, show that the maximum likelihood
+estimator of θ is given by 1 2
+ˆ max{ , ,..., }. n θ = X X X 
+(ii) Without calculating ˆ ( ) E θ , explain why ˆθ is a biased estimator of θ. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12 A market research company intends to estimate the proportion of the population,
+θ, who support a certain political party. They intend to poll a sample large
+enough so that a 95% confidence interval for θ has a width of 0.03 or less. It is
+thought that θ is approximately equal to 0.4.
+Assuming that everyone questioned will respond to the poll, calculate the
+minimum size of sample which the company should take. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Q9 Comment: Many candidates used the MGF directly (and encountered some
+algebraic difficulties) rather than using the more convenient cumulant generating
+function.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 5
+10 Cov(X , Y) = Cov(X , X − Z) = Cov(X , X) − Cov(X , Z) = V(X) − 0 = 4
+V(X) = 4, V(Y) = V(X) + V(Z) = 5
+so Corr(X , Y) = 4/(4 × 5)1/2 = 0.894
+OR:
+By independence, it is immediate that Y has mean and variance both equal
+to 5.
+Corr(X , Y) =
+( ) [ ( )][ ( )]
+( ) ( )
+E XY E X E Y
+Var X Var Y
+− =
+[ ( )] 25.
+4 5
+E X X − Z −
+×
+The independence of X and Z implies that E(XZ) = 0, and as
+E(X2) = Var(X) + 52 = 29, we obtain that the correlation is
+29 0 25
+20
+− − =
+2
+5
+= 0.894.
+11 (i) L(θ) = 1 2
+2
+: 0
+0 otherwise
+n
+i
+i i
+x
+x
+=
+
+Π < < θ
+θ 
+= 2
+2
+: max( )
+0 otherwise
+n
+i
+n i
+x
+x
+ Π
+θ > 
+θ
+
+∴ maximum occurs at ˆθ = max(Xi)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 6
+(ii) Since Xi < θ for all i
+then max(Xi) < θ always
+∴ ˆ ( ) E θ < θ ∴ˆθ is biased
+Q11 Comment: Few candidates appreciated the significance of the fact that the range of the
+variable included the unknown parameter θ and therefore the likelihood L(θ) has a
+discontinuity (above which it is decreasing).
+12 Assuming n will be large enough to make a normal approximation to the
+binomial acceptable, the confidence interval will be
+ˆ(1 ˆ ) ˆ 1.96 ,
+n
+θ − θ θ ± where ˆθ is the proportion of the sample who support the party.
+Although ˆθ is unknown, it can be estimated as 0.4, so the width of the interval
+will be approximately
+0.4 0.6
+2 1.96
+n
+× × =
+1.9204
+.
+n
+If this is to be less than 0.03 we must have that
+2 1.9204
+0.03
+n
+ 
+> 
+ 
+= 4097.7
+We need to take n = 4,098.
+(As n is large, this confirms that we were correct in assuming that a normal
+approximation would be appropriate.)
+Notes: As this answer is approximate, approximations (such as replacing 1.96
+with 2) are acceptable, as is rounding the final answer.
+An acceptable alternative would be to estimate ˆθ by 0.415 rather than 0.4; this
+is the upper limit of a 95% confidence interval for θ. This leads to a value of
+n = 4,145.
