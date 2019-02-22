@@ -1,0 +1,496 @@
+
+13 In an air pollution monitoring study undertaken in a residential area near an industrial
+plant a sample of 20 sites is chosen and an observation at each site is made of the
+content (in parts per million) of a particular contaminant. The data recorded are given
+in the table below together with some summaries:
+76 78 76 78 84 79 79 81 85 76
+78 79 75 83 87 80 78 77 81 77
+
+x = 1,587 
+x2 = 126,131
+(i) (a) Present these data graphically using a dotplot and comment briefly on
+the shape of the distribution.
+(b) Calculate a 95% confidence interval for the mean contaminant content
+for the residential area from which the sites were selected.
+(c) Comment briefly on the validity of this confidence interval in the light
+of your answer to part (a). [8]
+(ii) After some modifications by the operators of the industrial plant designed to
+reduce the level of pollution due to this contaminant, another observation was
+made at each of the same sites. The data recorded are given in the table below
+with the sites in the same order as in the table above:
+74 74 76 79 83 76 76 81 84 76
+81 77 74 83 89 78 77 72 79 78
+(a) Calculate the difference (before  after) in contaminant content for
+each site, present these differences graphically and comment briefly on
+the shape of the distribution.
+(b) Perform an appropriate test to investigate whether the modification has
+led to a reduction in the contaminant content.
+(c) Comment briefly on the validity of this test in the light of your answer
+to part (ii)(a). [9]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+14 Consider a linear regression model in which responses Yi are uncorrelated and have
+expectations xi and common variance 2 (i 1, ,n)  , i.e. Yi is modelled as a linear
+regression through the origin:
+E(Yi | xi )  xi and V(Yi | xi )  2 (i 1, ,n)  .
+(i) (a) Show that the least squares estimator of  is 2
+1 1 1
+ˆ / n n
+i i i i i xY x
+ 
+   .
+(b) Derive the expectation and variance of 1 ˆ under the model. 
+(ii) An alternative to the least squares estimator in this case is:
+2
+1 1
+ˆ / /
+n n
+i i
+i i
+Y x Y x
+ 
+    .
+(a) Derive the expectation and variance of 2 ˆ under the model.
+(b) Show that the variance of the estimator 2 ˆ is at least as large as that of
+the least squares estimator 1 ˆ . 
+(iii) Now consider an estimator 3 ˆ of  which is a linear function of the
+responses, i.e. an estimator which has the form 3
+1
+ˆ ,
+n
+i i
+i
+a Y
+
+  where a1, ,an 
+are constants.
+(a) Show that 3 ˆ is unbiased for  if 1 1 n
+i i i a x
+
+  , and that the variance
+of 3 ˆ is 2 2
+1
+n
+i i a
+
+  .
+(b) Show that the estimators 1 ˆ and 2 ˆ above may be expressed in the
+form 3
+1
+ˆ
+n
+i i
+i
+a Y
+
+  and hence verify that 1 ˆ and 2 ˆ satisfy the
+condition for unbiasedness in (iii)(a).
+(c) It can be shown that, subject to the condition 1 1 n
+i i i a x
+
+  , the
+variance of 3 ˆ is minimised by setting
+2
+1
+i .
+i n
+i i
+a x
+x
+
+
+
+Comment on this result. [7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+15 Let S(0) denote the price of a certain security, and let S(n) denote the price of the
+security at the end of n successive weeks for n = 1, 2, 3, .... A model for the changes
+in these prices is such that the price ratios ( )
+( 1)
+S n
+S n
+for n 1 are independent
+identically distributed random variables with a lognormal distribution.
+[Note: The random variable Y is lognormal with parameters  and 2 if log(Y) is
+normal N(,2), that is, Y is lognormal if it can be expressed as Y  eX where
+X ~ N(,2). The mean and variance of Y are given by E(Y) =
+2
+e 2
+
+ and
+V(Y) = e2 2 (e 2 1)  
+ .]
+(i) Using the above lognormal model with parameters  = 0.0125 and  = 0.055,
+determine the probability that:
+(a) the price of the security decreases over the next week
+(b) the price of the security decreases over each of the next two weeks
+(c) the price at the end of two weeks is greater than it is at present
+(d) the price at the end of 20 weeks is less than it is at present
+[11]
+(ii) At the start of a period the price is £1,245 and it is then observed for 10 weeks.
+The resulting 10 prices (£) and ratios are given in the following table:
+Week Price Ratio(y)
+0 1,245 -
+1 1,230 0.988
+2 1,280 1.041
+3 1,392 1.088
+4 1,431 1.028
+5 1,428 0.998
+6 1,439 1.008
+7 1,346 0.935
+8 1,265 0.940
+9 1,513 1.196
+10 1,468 0.970
+y = 10.192 y2 = 10.441562
+(a) Based on the specified model, explain why the 10 ratios constitute a
+random sample from a lognormal distribution.
+(b) Calculate the mean and the standard deviation for the random sample
+of 10 ratios.
+(c) Hence determine the method of moments estimates of the parameters 
+and  for the lognormal model. [6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+13 (i) (a)
+. : .
+. : : : : . : . . . .
+---+---------+---------+---------+---------+---------+---ppm
+75.0 77.5 80.0 82.5 85.0 87.5
+Dotplot shows moderate positive skewness
+(b)
+2
+2
+126131 1587 1587 79.35, 20 10.66
+20 19
+x s
+−
+= = = =
+95% confidence interval is
+2
+0.025,19 20
+x ± t s
+giving 79.35 2.093 10.66 79.35 1.53 (77.82,80.88)
+20
+± ⇒ ± ⇒
+(c) This t confidence interval requires normality of the observations.
+This may be doubtful in view of the skewness shown in part (a), but
+the sample size of 20 is perhaps large enough to justify the validity due
+to the robustness of the t analysis.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 9
+(ii) (a) Differences (before − after) are:
+2 4 0 -1 1 3 3 0 1 0
+-3 2 1 0 -2 2 1 5 2 -1
+Dotplot of differences:
+: : :
+. . : : : : : . .
+-+---------+---------+---------+---------+---------+-----diff
+-3.0 -1.5 0.0 1.5 3.0 4.5
+Seems quite symmetrical and normal
+(b) Paired t test is appropriate.
+Σd = 20 and Σd2 = 94
+2
+2
+94 20 20 1.0 20 3.895
+20 19
+d s
+−
+= = = =
+Observed 1.0 2.27
+3.895
+20
+t= = on 19 d.f.
+For one-sided test: 5% point = 1.729, 2.5% point = 2.093 and 1% point
+= 2.539
+P-value is approx. 0.020
+So there is some evidence that the modifications have reduced the
+contaminant content.
+(c) This t analysis requires normality of the differences and this seems
+reasonable from part (a).
+14 (i) (a) The least squares estimate of β minimises
+2 2 2 2
+1 1 1 1 ( ) 2 . n n n n
+i i i i i i i i i i q y x y xy x = = = = =Σ −β =Σ − βΣ +β Σ
+Differentiating with respect toβ gives
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 10
+2
+1 1 2( ). n n
+i i i i i
+dq x x y
+d = = = β −
+β Σ Σ
+Equating to zero gives the least squares estimator as
+1
+1 2
+1
+ˆ
+n
+i i i
+n
+i i
+x Y
+x
+=
+=
+β = Σ
+Σ
+as required.
+(b) Mean and variance of 1 ˆβ :
+2
+1 1 1
+(ˆ ) ( | ) / n n
+i i i i i i E x E Y x x = = β =Σ Σ
+2
+1 1 / n n
+i i i i i x x x = = =Σ β Σ = β
+2 2 22 2 2
+1 1 1 1
+(ˆ ) /( ) / . n n n
+i i i i i i V x x x = = = β = σ Σ Σ = σ Σ
+(ii) (a) The alternative estimator 2 1 1
+ˆ / n n
+i i i i Y x = = β =Σ Σ has expectation and
+variance
+2 1 1 1 1
+(ˆ ) ( | ) / / , n n n n
+i i i i i i i i i E EY x x x x = = = = β =Σ Σ =Σ β Σ = β
+( )2
+2 2 2
+2 1
+(ˆ ) / /( ). n
+i i V n x nx = β = σ Σ = σ
+(b) 2 1 V (βˆ ) ≥V (βˆ )
+2 2 2 2
+1 / / n
+i i nx x = ⇔ σ ≥ σ Σ
+2 2
+1 0 n
+i ix nx = ⇔Σ − ≥
+2
+1( ) 0 n
+i ix x = ⇔Σ − ≥
+∴ The variance of 2 ˆβ is at least as large as the variance of the least
+squares estimator 1 ˆβ .
+(iii) (a) 3
+1 1 1 1
+(ˆ ) ( | )
+n n n n
+i i i i i i i i i
+i i i i
+E E aY aEY x ax ax
+= = = =
+⎛ ⎞
+β = ⎜⎜ ⎟⎟ = = β = β
+⎝ ⎠
+Σ Σ Σ Σ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 11
+∴E(βˆ3) = β , i.e. unbiased, if
+1
+1
+n
+i i
+i
+a x
+=
+Σ =
+3
+1
+(ˆ )
+n
+i i
+i
+V V aY
+=
+⎛ ⎞
+β = ⎜⎜ ⎟⎟
+⎝ ⎠
+Σ = 2 2
+1
+n
+i
+i
+a
+=
+Σ σ
+(b) 1
+1
+2
+1
+ˆ
+n
+i i
+i
+n
+i
+i
+x Y
+x
+=
+=
+β =
+Σ
+Σ
+=
+1
+,
+n
+i i
+i
+a Y
+= Σ
+where
+2
+1
+i , 1, , .
+i n
+i
+i
+a x i n
+x
+=
+= =
+Σ
+…
+2
+1
+1 1 2 2
+1 1
+1
+n
+n n i
+i i
+i i n i n
+i i
+i i
+i i
+x
+a x x x
+x x
+=
+= =
+= =
+∴ = = =
+Σ
+Σ Σ
+Σ Σ
+i.e. the condition 1 1 n
+i i i a x = Σ = is satisfied.
+1
+2
+1
+1
+ˆ ,
+n
+i n
+i
+n i i
+i
+i
+i
+Y
+a Y
+x
+=
+=
+=
+β = =
+Σ
+Σ
+Σ
+where ai 1 , i 1, ,n.
+nx
+= = …
+∴
+1 1
+1 1
+n n
+i i i
+i i
+a x x nx
+= = nx nx
+Σ =Σ = =
+i.e. the condition 1 1 n
+i i i a x = Σ = is satisfied.
+(c) Among estimators of the form 1
+n
+i i i a Y = Σ , the minimum variance
+unbiased estimator of β is
+1
+3 1
+1 2
+1
+ˆ ˆ
+n
+n i i
+i
+i i n
+i
+i
+i
+x Y
+a Y
+x
+=
+=
+=
+β = = =β
+Σ
+Σ
+Σ
+i.e. the least squares estimator.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 12
+15 (i) (a) Let Y = ratio for one week, and Y = eX
+P(decrease in one week) = P(Y < 1)
+= P(eX < 1) = P(X < 0)
+= P(Z < 0 0.0125
+0.055
+−
+= − 0.227) = 1 − 0.5898 = 0.41
+(b) P(decrease in next two weeks) = (0.41)2 = 0.17
+(c) We require ( (2) 1) ( (2) . (1) 1)
+(0) (1) (0)
+P S P S S
+S S S
+> = >
+= P(Y2 .Y1 > 1) = P(X2 + X1 > 0)
+where X2, X1 are independent N(μ,σ2)
+2
+∴X2 + X1 ~ N(2μ,2σ )
+( 0 2(0.0125) 0.321) 0.63
+2(0.055)
+P PZ −
+∴ = > =− = from tables.
+(d) Extending the method of part (c):
+20
+2
+1
+i ~ (20 , 20 )
+i
+X N
+=
+Σ μ σ
+( 0 20(0.0125) 1.016) 0.155
+20(0.055)
+P PZ −
+∴ = < =− =
+(ii) (a) The ratios are independent and identically distributed lognormal r.v.’s.
+This defines a random sample from a lognormal distribution.
+(b) For the 10 observed ratios y1, . . . , y10:
+Σy =10.192 ⇒ y =1.0192
+Σy2 =10.441562 ⇒ s2 = 0.005986⇒ s = 0.0774
+(c) For the method of moments:
+solve the following equations for μ and σ2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1 2
+e 2 1.0192
+μ+ σ
+= (1)
+2 2 2 e μ+σ (eσ −1) = 0.005986 (2)
+2 2 (2) ÷ (1) ⇒eσ −1 = 0.0057625
+∴σ2 = 0.005746 ∴σ = 0.0758
+(1) log(1.0192) 1 2 0.0161
+2
+⇒ μ = − σ =
+[Note: in MME candidates could use σˆ 2 =0.005388 with divisor n not
+(n−1) to obtain σ = 0.0719 and μ = 0.0164 ]
