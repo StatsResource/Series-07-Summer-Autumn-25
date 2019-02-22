@@ -1,0 +1,224 @@
+Faculty of Actuaries Institute of Actuaries
+EXAMINATIONS
+18 September 2000 (pm)
+Subject 101 — Statistical Modelling
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+13 Consider a one-way analysis of variance for comparing k treatments using the
+same number ni = r responses for each treatment. The model is
+Yij = μ + τi + eij : i = 1, 2, ..., k; j = 1,2, ..., r
+where the errors eij are independent N(0, σ2) random variables and where Στi = 0.
+Show that the parameter estimates ˆμ = Y⋅⋅ and ˆi τ = i Y⋅ −Y⋅⋅ are unbiased and
+that their variances are given by
+V(μˆ ) =
+2
+kr
+σ and (ˆ ) i V τ =
+( 1) 2
+.
+k
+kr
+− σ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+14 Let X be a random variable with cumulative distribution function
+FX(x) = P(X < x) = 1 − exp(−x2/θ) , x > 0 , FX(x) = 0 , x ≤ 0
+and let (X1, X2, … , Xn) be a random sample from X.
+(i) By considering P(Y < y), show that Y = X2 has an exponential distribution.
+
+(ii) (a) Show that the maximum likelihood estimator of θ is given by
+ˆθ
+= 1 2
+Xi
+n
+Σ
+(b) Show that ˆθ is an unbiased estimator of θ which attains the
+Cramer-Rao lower bound on variance.
+(c) Using moment generating functions, show that 22
+2 ˆ ~ n
+n θ χ
+θ
+. [11]
+(iii) The above distribution of X is to be used as a model for claim amounts in
+a particular situation. A random sample of 50 such claim amounts (in
+appropriate units) gives the following summary:
+Σx2 = 485.7518
+(a) Calculate the maximum likelihood estimate of θ.
+(b) Using the result of (ii)(c) above, calculate an exact 95\% confidence interval for θ. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+15 A manufacturer uses a certain type of electrical component from supplier A in high quality computing equipment and uses similar components from supplier B in inexpensive playstations. Previous investigations have shown that supplier A
+produces components whose resistances are normally distributed about a mean of 100 units and with a standard deviation of 0.1 units. Similarly, the resistances of supplier B’s components are normally distributed about a mean of 100.5 units
+and with a standard deviation of 0.5. Components are supplied in large batches and are externally identical.
+A batch known to come entirely from one supplier has no labels. The value of X , the mean resistance from a random sample of components, is to be used to decide whether the batch has come from supplier A.
+The hypotheses to be tested are:
+H0 : components come from supplier A i.e. X ~ N(100, 0.12)
+v. H1 : components come from supplier B i.e. X ~ N(100.5, 0.52) .
+101—6
+(i) (a) If the manufacturer insists that the probabilities of the type I and
+type II errors are each to be restricted to at most 5\%, show that at
+least 4 components from the batch have to be examined.
+(b) Using a sample size of 4, calculate the power of the test if the
+probability of the type I error is reduced to 1\%. 
+(ii) Suppose that a sample of 10 components from a batch has mean
+resistance x = 100.1.
+Calculate the probability-value of this observed mean. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+14 (i) FY(y) = P(Y < y) = P(X2 < y) = P(X < √y) = 1 − exp(−y/θ)
+which is the cdf of an exponential r.v. with mean θ.
+(ii) (a) fX(x) = 2(x / θ)exp(−x2 / θ)
+So L(θ) = k1 θ−n exp[−(Σx2) / θ] so logL = k2 − nlog θ − (Σx2) / θ
+dlog L / dθ = −n/θ + (Σx2)/θ2 = 0  ˆθ = 2 1
+i X
+n
+Σ
+(b) From (i) E(X2) = E(Y) = θ and V(X2) = V(Y) = θ2
+So E(θˆ ) = (1 / n) ( 2 ) i ΣE X = (1 / n) nθ = θ, and
+V(θˆ ) = (1 / n2) ( 2 ) i ΣV X = (1 / n2) nθ2 = θ2 / n
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 8
+Now, d2log L / dθ2 = nθ−2 − 2(Σx2) θ−3
+so −E(d2log L / dθ2) = −nθ−2 + 2θ−3(nθ) = n / θ2 = 1/V
+So ˆθ is unbiased and attains the C–R bound.
+(c) Y = X2 has mgf (1 − θt)−1 so nˆθ = ΣYi has mgf (1 − θt)−n
+So 2nˆθ / θ has mgf [1 − θ(2t / θ)]−n = (1 − 2t)−n
+which is mgf of χ2 with 2n d.f.
+(iii) (a) ˆθ = 485.9028/50 = 9.718
+(b) P(74.22 < 100ˆθ / θ < 129.6) = 0.95 from tables of χ2 with 100 d.f.
+ 95% CI for θ is (100ˆθ / 129.6 , 100ˆθ / 74.22)
+i.e. (971.8056 / 129.6 , 971.8056 / 74.22) i.e. (7.50,13.1)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+15 (i) (a) Let critical value be c, such that we reject H0 for X > c for a
+sample of size n.
+\begin{itemize}
+    \item P(type I error) = P( X > c ) where X ~ N(100, 0.12 / n)
+∴ (c − 100) / (0.1 / √n) = 1.645 …… (*)
+    \item P(type II error) = P( X < c ) where X ~ N(100.5, 0.52 / n)
+∴ (c − 100.5) / (0.5 / √n) = −1.645 …… (**)
+\end{itemize}
+
+Solving (*) and (**) for n gives 100 + 1.645(0.1/√n) = 100.5 − 1.645(0.5 / √n)
+ √n = 1.645 × 0.6/0.5 = 1.974  n = 3.9
+∴ sample of size n = 4 should be examined
+(b) Let critical value be c
+P(type I error) = 0.01  (c − 100) / (0.1 / √4) = 2.326
+∴ c = 100 + 2.326(0.1 / √4) = 100.1163
+Power = 1 − P(type II error) = 1 − P[Z < (100.1163 − 100.5) / (0.5 / √4)]
+= 1 − P(Z < −1.535) = P(Z < 1.535) = 0.9376 i.e. Power = 93.8%
+(ii) P-value = P( X > 1001. ) where X ~ N(100, 0.12 / 10)
+= P[ Z > (100.1 − 100) / (0.1 / √10)] = P(Z > 3.162) = 1 − 0.9992
+= 0.0008 i.e. 0.08%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 9
+Q15 Comment: Most candidates understood the concepts of testing errors, but
+were unable to apply that knowledge.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+16 At the end of the skiing season the tourist board in a mountain region examines
+the records of ten ski resorts. For each one it obtains the total number (y,
+thousands) of visitor-days during the season as a measure of the resort’s
+popularity, and the ski-lift capacity (x, thousands), being the maximum number
+of skiers that can be transported per hour. The resulting data are given in the
+following table:
+Resort: A B C D E F G H I J
+Lift capacity x: 1.9 3.3 1.2 4.2 1.5 2.2 1.0 5.6 1.9 3.8
+Visitor-days y: 15.1 22.6 9.2 37.5 8.9 21.1 5.8 41.0 9.2 32.4
+Σx = 26.6, Σx2 = 91.08, Σy = 202.8, Σy2 = 5603.12, Σxy = 707.58
+\begin{enumerate}[(a)]
+\item Draw a scatterplot of y against x and comment briefly on any relationship
+between a resort’s popularity and its ski-lift capacity. 
+\item Calculate the correlation coefficient between x and y and comment briefly
+in the light of your comment in part (i). 
+\item Calculate the fitted linear regression equation of y on x. 
+\item (a) Calculate the “total sum of squares” together with its partition into
+the “regression sum of squares” and the “residual sum of squares”.
+(b) Use the values in part (iv)(a) above to calculate the coefficient of
+determination R2 and comment briefly on its relationship with the
+correlation coefficient calculated in part (ii).
+(c) Use the values in part (iv)(a) above to calculate an estimate of the
+error variance σ2 in the usual linear regression model. 
+\item Suppose that a resort can increase its ski-lift capacity by 500 skiers per
+hour.
+\end{enumerate}
+Estimate the increase in the number of visitor-days it can expect in a
+season, and specify a standard error for this estimate. 
+16 (i)
+Seems to be a strong increasing linear relationship.
+(ii) Sxx = 91.08 −
+26.62
+10
+= 20.324
+Syy = 5603.12 −
+202.82
+10
+= 1490.336
+Sxy = 707.58 − (26.6)(202.8)
+10
+= 168.132
+r =
+168.132
+(20.324)(1490.336)
+= 0.966
+Large and positive agreeing with comment above.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 10
+(iii) y = $\alpha$ˆ + βˆ x where
+ˆβ
+=
+168.132
+20.324
+= 8.2726
+−1.73 + 8.273x
+ˆ$\alpha$ =
+202.8 26.6
+8.2726
+10 10
+  −  
+ 
+= −1.73
+(iv) (a) SSTOT = Syy = 1490.336
+SSRES = Syy −
+2
+xy
+xx
+S
+S
+(formula from green book)
+= 1490.336 −
+(168.132)2
+20.324
+= 99.450
+∴ SSREG = 1390.886
+(b) R2 =
+SSREG
+SSTOT
+= 0.933 = r2 from (ii)
+(c) σˆ 2 =
+1
+8
+(SSRES) = 12.43
+(v) If x increases by 0.5 (500 in ‘000’s), then expected increase in y is 0.5βˆ
+= 0.5(8.2726) = 4.136 or 4136 visitor days
+2
+(0.5ˆ ) = (0.5)2 ( ˆ ) = 0.25 ˆ
+xx
+Var Var
+S
+σ
+β β
+=
+12.43
+0.25 = 0.153
+20.324
+∴ s.d. (0.5βˆ ) = 0.391
+∴ standard error of estimate is 391
+Q16 Comment: Nearly all candidates scored well on parts (i) – (iv), but most used
+an inappropriate expression for the standard error of 0.5βˆ .
+
+\end{document}
