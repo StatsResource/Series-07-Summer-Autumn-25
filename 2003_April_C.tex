@@ -1,0 +1,109 @@
+
+9 An insurance company specifies in its advertising literature that 75% of all small
+claims (less than £200) on household policies are fully settled within one month. As
+part of an internal audit a random sample of 200 small claims is examined.
+(i) It is found that 146 of these small claims were fully settled within one month.
+Obtain an approximate one-sided 99% confidence interval for the true
+percentage of all small claims which are fully settled within one month. [3]
+(ii) The mean and standard deviation of the individual claim amounts were
+calculated as x  £112.41and s = £51.62 respectively. Obtain an approximate
+two-sided 99% confidence interval for the population mean of all small claim
+amounts. [2]
+[Total 5]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10 In an investigation into the comparison of claim amounts between three different
+regions, a random sample of 10 independent claim amounts was taken from each
+region and an analysis of variance was performed. The resulting ANOVA table is
+given below with some entries omitted:
+Source of variation d.f. SS MSS
+Between regions 2 4439.7 2219.9
+Residual * * *
+Total 29 15153.2
+(i) Calculate the missing entries in this table and perform the appropriate F-test to
+determine whether there are significant differences between the mean claim
+amounts for the three regions. [3]
+(ii) The three sample means were given by:
+Region A B C
+Sample mean 147.47 154.56 125.95
+Given that it was of particular interest to compare regions A and B, calculate a
+95% confidence interval for the difference in their means and comment on
+your answer in the light of the F-test performed in part (i). [4]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11 Let S  X1  X2 ... XN (and S = 0 if N = 0) where the Xi s are independent and
+identically distributed as exponential random variables with mean  and are also
+independent of N, which has a Poisson distribution with mean .
+(i) Prove, from first principles (that is without quoting any general results for
+compound distributions), that the moment generating function of S, MS(t), is
+given by    ( ) = exp 1 1 1 MS t t        	
+. [4]
+(ii) Using the expression for the moment generating function of S in (i) (and
+without quoting any general results for compound distributions), derive an
+expression for the variance of S. [4]
+[Total 8]
+101 A20035 PLEASE TURN OVER
+
+
+9 (i)  146 0.73
+200
+p 
+The usual two-sided 99% confidence interval for the proportion p would be
+p  2.58 s.e.( p ) to p  2.58 s.e.( p )
+Given the nature of the claim, the appropriate one-sided 99% confidence
+interval for the proportion p is of the form (0, pU),
+where 0.73 2.326 (0.73)(0.27) 0.73 0.073
+U 200 p     giving (0, 0.803)
+For percentage: (0, 80.3%)
+(ii) 99% confidence interval for the mean  is
+x 2.58 s
+n
+ for large n
+112.41 2.58 51.62 £112.41 9.42
+200
+    or (£102.99, £121.83)
+Note: using 2.576 gives £112.41 9.40 or (£103.01, £121.81)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10 (i) Missing entries are:
+d.f. = 27 by subtraction
+SS = 10713.5 by subtraction
+MS = 396.8 being 10713.5/27.
+Observed F = 5.59 on 2 and 27 d.f.
+From tables the 1% critical point is 5.488
+Significant at 1%, so there is quite strong evidence of a difference in the mean
+claim amounts for the three regions.
+(ii) 95% confidence interval for (A  B ) , or equivalently (A  B ) , is
+0.025,27
+( )  1 1
+A B 10 10 y  y  t  
+giving
+(147.47 154.56) 2.052 396.8 1 1
+10 10
+  
+	7.09  18.28 or (	25.37, 11.19)
+This comfortably contains zero indicating no difference between the
+underlying means for regions A and B.
+The significant result of the F-test clearly comes from region C mean being
+much lower than the region A and B means.
+11 (i) MS(t) = E[etS] = E[E(etS|N)]
+E[etS|N=n] = E[exp{t(X1 + X2 ++ Xn}|N=n]
+= E[exp{t(X1 + X2 ++ Xn}] (since the Xis are independent of N)
+= 
+ E[exp(tXi)] (since the Xis are iid)
+= {MX(t)}n
+ MS(t) = E[{MX(t)}N] = E[exp{NlogMX(t)}] = MN{logMX(t)}
+Here MN(t) = exp{(et  1)} and MX(t) = (1 	t)1 and so
+     exp 1 1 1 MS t t       	 
+
+(ii) MS′(t) = MS(t)  (1 	 t)2
+Subject 101 (Statistical Modelling)  April 2003  Examiners Report
+Page 6
+MS′′(t) = MS(t)  22 (1 	 t)3 + MS′(t)  (1 	 t)2
+So E[S] = MS′(0) = 
+E[S2] = MS′′(0) = 22 + (  
+22 + 22
+V[S] = 22 + 22	22
+22
+Alternative solution using the cumulant generating function
+Let CS(t) = logMS(t) = {(1 - t)-1  1}
+CS (t) = (1 - t)-2 , CS(t) = 2(1 - t)-3
+So E[S] = CS (0) =  and V[S] = CS(0) = 22
