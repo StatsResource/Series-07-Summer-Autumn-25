@@ -1,0 +1,302 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9 In order to simulate an observation of a normal random variable it is suggested that
+1
+=
+n
+i
+i
+S X
+is used, where X1, , Xn is a random sample from a continuous uniform distribution
+on the interval ( 1 1
+2 2 , ).
+(i) Determine the approximate distribution of S. [2]
+(ii) Determine the value of n which should be used if S is required to represent a
+standard normal random variable. [1]
+(iii) Explain why S has the same coefficient of skewness as a standard normal
+random variable. [1]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10 The number of claims which arise in a year under a policy of a certain type follows a
+Poisson distribution with mean . It is required to test
+H0 : = 0.2 v H1 :
+and it is decided to reject H0 in favour of H1 if 15 or more claims arise in a year under
+a group of 50 independent such policies.
+By using tables of Poisson distribution probabilities, calculate the power of this test in
+each of the cases:
+(a) = 0.3, and
+(b) = 0.4
+and comment briefly on the results. [5]
+11 The following table gives the sums insured (in units of £1,000) for a random sample
+of insurance policies on the contents of private houses for each of four insurance
+companies.
+Company
+1 2 3 4
+(y1) (y2) (y3) (y4)
+39 24 21 33
+29 28 30 26
+33 33 30 28
+36 22 51 30
+27 29 23 27
+36 20 23 37
+27 23 35 37
+y1 = 227 y2 = 179 y3 = 213 y4 = 218
+y1
+2 = 7,501 y2
+2 = 4,703 y3
+2 = 7,125 y4
+2 = 6,916
+(i) Test whether there are any differences between the population means of the
+four companies, using one-way analysis of variance.
+[5]
+101 A2004 5 PLEASE TURN OVER
+(ii) A plot of the residuals for the fitted one-way analysis of variance model is
+given below:
+Comment on the adequacy of the model. [2]
+[Total 7]
+1 2 3 4
+-10
+0
+10
+20
+Company
+Residuals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12 For the estimation of a binomial probability p = P(success), a series of n independent
+trials are performed and X represents the number of successes observed.
+(i) Write down the likelihood function L(p) and show that the maximum
+likelihood estimator (MLE) of p is =
+X
+p
+n
+.
+[3]
+(ii) (a) Determine the Cramer-Rao lower bound for the estimation of p.
+(b) Show that the variance of the MLE is equal to the Cramer-Rao lower
+bound.
+(c) Write down an approximate sampling distribution for p valid for
+large n.
+[4]
+(iii) In order to develop an approximate 95% confidence interval for p for large n,
+the following pivotal quantity is to be used
+(0,1)
+(1 )
+p p
+N
+p p
+n
+.
+Assuming that this pivotal quantity is monotonic in p, show that rearrangement
+of the inequality
+1.96 1.96
+(1 )
+p p
+p p
+n
+leads to a quadratic inequality in p, and hence determine an approximate 95%
+confidence interval for p of the form pL ( p) p pU ( p) .
+[5]
+(iv) A simpler and more widely used approximate confidence interval is obtained
+by using the following pivotal quantity
+(0,1)
+(1 )
+p p
+N
+p p
+n
+.
+Determine the resulting approximate 95% confidence interval using this. [2]
+101 A2004 7 PLEASE TURN OVER
+(v) In two separate applications the following data were observed:
+(a) 4 successes out of 10 trials
+(b) 80 successes out of 200 trials
+In each case calculate the two approximate confidence intervals from parts
+(iii) and (iv) and comment briefly on your answers.
+[6]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9 (i) S is approximately normal for large n by Central Limit Theorem.
+Using results from the Yellow Book for Xi
+1 1
+U( 2 , 2 ) :
+E[S] = nE[Xi] = n 0 = 0 , [ ] [ ] [ ]
+12 i i
+n
+Var S Var X nVar X
+So S ~ N(0, n/12)
+(ii) S approx N(0, 1) if n = 12.
+(iii) The distribution of each Xi is symmetric and so the distribution of the sum
+S = Xi is also symmetric. So skewness is zero, as for any normal distribution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+10 Total number of claims N Poisson(50 )
+(a) In the case 0.3
+Power = P[N 15| N Poisson(15)]
+= 1 P[N 14| N Poisson(15)] = 1 0.466 = 0.534
+(b) In the case 0.4
+Power = P[N 15| N Poisson(20)] = 1 0.105 = 0.895
+Comment: power higher for = 0.4, which is further away from H0 value 0.2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+11 (i) n1 = n2 = n3 = n4 = 7 n = 28
+y1 = 227 y2 = 179 y3 = 213 y4 = 218 yij = 837
+y1
+2 = 7501 y2
+2 = 4703 y3
+2 = 7125 y4
+2 = 6916 yij
+2 = 26245
+SST = 26245
+8372
+28
+= 26245 25020.321 = 1224.7
+SSB =
+1
+7
+(2272 + 1792 + 2132 + 2182) 25020.321
+= 25209 25020.321 = 188.7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 6
+SSR = SST SSB = 1224.7 188.7 = 1036.0
+Source of variation d.f. SS MSS
+Companies 3 188.7 62.9
+Residual 24 1036.0 43.2
+Total 27 1224.7
+F =
+62.9
+43.2
+= 1.46 on (3,24) degrees of freedom.
+The 10% point of F3,24 distribution is 2.327. Therefore, there is insufficient
+evidence to reject the null hypothesis that the population means for the four
+companies are equal, i.e., the distributions of the sums insured are the same for
+the four companies.
+(ii) The model used in (i) assumes that the sums insured for each company follow
+a normal distribution, and the population variances are equal.
+The plot of residuals shows:
+normality seems appropriate, but observation £51,000 seems to be an
+outlier
+companies have similar sample variances, but one could argue that there is
+a suggestion that the variance for Company 3 is higher than the variances
+for the other companies.
+Therefore, overall the one-way analysis of variance model seems adequate and
+the conclusions in (i) are valid.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+12 (i) ( ) n x (1 )n x
+L p p p
+x
+log ( ) log log ( ) log(1 )
+n
+L p x p n x p
+x
+log ( )
+1
+x n x
+L p
+p p p
+equate to zero x(1 p) p(n x)
+x
+p
+n
+clearly maximises L(p)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 7
+MLE is
+X
+p
+n
+(ii) (a)
+2
+2 2 2 log ( )
+(1 )
+x n x
+L p
+p p p
+2
+2 2 2 log ( )
+(1 ) 1 (1 )
+np n np n n n
+E L p
+p p p p p p p
+1 (1 )
+(1 )
+p p
+CRlb
+n n
+p p
+(b) Var( p ) = 2
+np(1 p) p(1 p)
+CRlb
+n n
+(c)
+(1 )
+( , ) ( , )
+p p
+p N p CRlb N p
+n
+(iii) 1.96 1.96
+(1 )
+p p
+p p
+n
+2
+( ) 2
+1.96
+(1 )
+p p
+p p
+n
+2
+2 2 1.96 2
+p 2 pp p ( p p )
+n
+2 2
+1.96 2 1.96 2
+(1 ) p (2 p ) p p 0
+n n
+This is a quadratic and will be negative between its two roots.
+So, pL , pU will be the two roots:
+2 2 2
+2 2
+2
+1.96 1.96 1.96
+(2 ) (2 ) 4 (1 )
+1.96
+2(1 )
+p p p
+n n n
+n
+with pL from the " " sign, and pU from the "+" sign.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 8
+(iv) 1.96 1.96
+(1 )
+p p
+p p
+n
+(1 ) (1 )
+1.96 1.96
+p p p p
+p p p
+n n
+giving pL and pU .
+(v) (a) x = 4, n = 10
+quadratic from (iii) is 1.38416 p2 1.18416 p 0.16
+roots give pL = 0.168 and pU = 0.687.
+from (iv) pL = 0.096 and pU = 0.704.
+quite a difference, especially in pL , but n = 10 is small.
+(b) x = 80, n = 200
+quadratic from (iii) is 1.019208 p2 0.819208 p 0.16
+roots give pL = 0.335 and pU = 0.469.
+from (iv) pL = 0.332 and pU = 0.468.
+very similar ( and much narrower than (a)) with n = 200 being large.
+In (i) many candidates wanted to write the likelihood as a product this is OK using
+Bernoulli probabilities as the individual components, as in
+1
+1
+( ) 1 i i
+n
+x x
+i
+L p p p
+where xi = 1 or 0, but not as a product of binomial(n,p) components.
