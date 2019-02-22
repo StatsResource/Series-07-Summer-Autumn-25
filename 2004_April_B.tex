@@ -1,0 +1,127 @@
+
+5 Suppose that is an unbiased estimator of a parameter and has variance
+2
+10
+.
+Derive an expression for the mean square error of k , where k is a constant, and
+determine the value of k for which the mean square error is a minimum.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 Let X and Y be random variables which each takes values 1 and 2 only.
+Calculate E[X|Y = 2], given that E[X] = 6/5, E[X|Y = 1] = 7/6, and P(Y = 1) = 3/5.
+[2]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7 An insurance company has a portfolio of large industrial insurance risks. Three such
+independent risks, labelled A, B, C, are being investigated. The sums insured, in units
+of £100 million, are 2.5, 4.8, 7.2 for A, B, C, respectively. The company's expert risk
+assessors estimate that the probabilities of a claim arising in the next calendar year are
+0.01, 0.02, 0.005 for A, B, C, respectively. If a claim does arise, then the full sum
+insured will be paid out and no further claims can then arise for that risk. The above
+probability estimates should be used throughout this question.
+(i) Determine, for this group of three risks, using suitable indicator variables or
+otherwise, the mean and standard deviation of the total claim amount paid out
+in the next calendar year.
+[3]
+(ii) You are told that exactly one claim has arisen. Calculate the mean total claim
+amount and comment on your answer in relation to your answer in part (i).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8 Let X1 and X2 be independent Poisson variables with respective parameters 1
+and 2 .
+Let S = X1 X2
+(i) Show that S has a Poisson distribution with mean 1 2 . [2]
+(ii) Show that the conditional distribution of X1 given S = s is binomial, and state
+its parameters.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+5 MSE( k ) = E(( k )2) = var( k ) + [E( k )]2 2 E( k ) + 2
+=
+2 2
+2 ( )2 2 2 2 2 2 1
+10 10
+k
+k k k k k
+2
+1
+10
+( ) 1 10
+2 2 2 0 .
+10 1 11
+dMSE k k
+k k
+dk
+This is clearly a minimum as the MSE is a quadratic in k and the coefficient of k2 is
+positive.
+OR: Note explicitly in first line that
+2
+MSE k var k bias k
+[Note: Many candidates stated in error that k was unbiased for . Some attempted
+to minimise the function of k by differentiating with respect to rather than k.]
+6 E[X] = E[E[X|Y]] = P(Y = 1) E[X|Y = 1] + P(Y = 2) E[X|Y = 2]
+So 1.2 = 0.6 (7/6) + 0.4 E[X|Y = 2] and so E[X|Y = 2] = 1.25
+7 (i) Let IA, IB, IC be indicator variables such that
+P(IA = 1) = 0.01, P(IB = 1) = 0.02, P(IC = 1) = 0.005 and 0 otherwise.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 4
+Let T = total claim amount = 2.5 IA + 4.8 IB + 7.2 IC
+E(T) = 2.5(0.01) + 4.8(0.02) + 7.2(0.005) = 0.157 (or £15.7m)
+Var(T) = 2.52(0.01)(0.99) + 4.82(0.02)(0.98) + 7.22(0.005)(0.995) = 0.7714
+s.d.(T) = 0.878 (or £87.8m)
+(ii) P(1 claim) = P(A not BC) + P(B not AC) + P(C not AB)
+= (0.01)(0.98)(0.995) + (0.02)(0.99)(0.995) + (0.005)(0.99)(0.98)
+= 0.009751 + 0.019701 + 0.004851 = 0.034303
+P(A|1 claim) = 0.009751/0.034303 = 0.2843
+P(B|1 claim) = 0.019701/0.034303 = 0.5743
+P(C|1 claim) = 0.004851/0.034303 = 0.1414
+E(T |1 claim) = 2.5(0.2843) + 4.8(0.5743) + 7.2(0.1414) = 4.485
+(or £448.5m)
+Much larger given that a claim does in fact arise.
+
+
+
+8 (i)
+1 ( ) exp{ 1( 1)} t
+MX t e
+2 2 ( ) exp{ ( t 1)}
+MX t e
+1 2
+MS (t) MX (t)MX (t)
+exp{ 1( 1)} exp{ 2 ( 1)} et et
+exp{( 1 2 )( 1)} et
+This is the MGF of a Po( 1 2 ) .
+S Po( 1 2 )
+(ii) 1 1 1 2
+1 1 1 2
+1 2
+( , )
+( | )
+( )
+P X x X X s
+P X x S X X s
+P X X s
+1 1 1 2
+1 1
+1 2
+1 2
+1 1 2 1 1 1 1 2
+( )
+1 2 1 2 1 1 2
+( ) ( ) ! ( )!
+( ) ( ) ( )
+!
+x s x
+x s x
+s s
+e e
+P X x P X s x x s x s
+P X X s e x
+s
+1 1
+1 1
+1 1 2 1 2
+1
+x s x s
+x
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 5
+Binomial distribution with parameters: n = s, 1
+1 2
+p .
