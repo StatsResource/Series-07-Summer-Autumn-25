@@ -1,0 +1,159 @@
+
+9 A statistician suggests that, since a t variable with k degrees of freedom is
+symmetrical with mean 0 and variance
+2
+k
+k
+for k > 2, one can approximate the
+distribution using the normal variable 0,
+2
+k
+N
+k
+.
+(i) Use this to obtain an approximation for the upper 5% percentage points for a
+t variable with:
+(a) 4 degrees of freedom, and
+(b) 40 degrees of freedom
+[2]
+(ii) Compare your answers with the exact values from tables and comment briefly
+on the result. [2]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10 In order to estimate a certain probability of success a single observation is taken from
+the binomial random variable X ~ binomial(20, p).
+(i) Write down an expression for the mean square error of the maximum
+likelihood estimator,
+20
+X
+p , and evaluate this mean square error at p = 0.5.
+[2]
+(ii) Determine an expression for the mean square error of the estimator,
+1
+21
+X
+p , and evaluate this mean square error at p = 0.5. [4]
+(iii) Comment briefly on the comparison of p and p as estimators of p in the case
+p = 0.5. [1]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11 The continuous random variables X and Y have a bivariate probability density
+function
+f(x, y) = 2 for 0 < x + y < 1, x > 0, y > 0.
+The conditional distribution of X given Y = y is a uniform distribution with probability
+density function
+f(x|y) =
+1
+1 y
+0 < x < 1 y
+and the marginal distribution of Y is a beta distribution with probability density
+function
+f(y) = 2(1 y) 0 < y < 1.
+(i) Show that the conditional expectation of X given Y = y is
+E(X|Y = y) =
+1
+,
+2
+y
+and obtain the conditional variance of X given Y = y. [3]
+(ii) Verify in this case that var(X) = var(E(X|Y)) + E(var(X|Y)). [3]
+
+
+
+9 (i) (a) k = 4 using N(0, 4/2) = N(0, 2)
+5% point = 0 + 1.6449 2 = 2.326
+(b) k = 40 using N(0, 40/38) = N(0, 1.0526)
+5% point = 0 + 1.6449 1.0526 = 1.688
+(ii) Exact values are: (a) 2.132 and (b) 1.684
+for small df approximation is poor, but for large df it is quite good.
+10 (i) p is unbiased with variance
+(1 )
+20
+p p
+MSE =
+(1 )
+20
+p p
+.
+Evaluation gives
+0.5(1 0.5)
+0.0125
+20
+(ii) p has bias =
+20 1 1
+21 21
+p p
+p and variance 2
+20 (1 )
+21
+p p
+MSE =
+2
+2 2
+20 (1 ) (1 )
+21 21
+p p p
+Evaluation gives
+2
+2 2
+20(0.5)(1 0.5) (1 0.5)
+0.0113 0.0006 0.0119
+21 21
+(iii) Even though p is the MLE and is unbiased, p is a more efficient estimate
+(for p = 0.5) having a smaller mean square error.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 5
+11 (i) Using results for a uniform distribution given in the Yellow Book we obtain
+the following
+1
+( | )
+2
+y
+E X Y y
+and
+var(X|Y = y) =
+(1 )2
+12
+y
+since the conditional distribution of X given Y = y is a continuous uniform
+distribution with parameters a = 0 and b = 1 y.
+(ii)
+1 1 1 1 1
+var( ( | )) var var( )
+2 4 4 18 72
+Y
+E X Y Y
+since Y has a beta distribution with parameters = 1, = 2, and the Yellow
+Book gives
+1
+var( )
+18
+Y .
+(1 )2
+(var( | ))
+12
+Y
+E X Y E
+1 2 4 1
+0 0
+(1 ) 1 (1 ) 1
+2(1 ) .
+12 6 4 24
+y y
+y dy
+Therefore,
+1 1 1
+var( ( | )) (var( | )) .
+72 24 18
+E X Y E X Y
+By symmetry with the random variable Y, X has a beta distribution with
+parameters = 1, = 2, and
+1
+var( )
+18
+X .
+Examiners Comment: The question helpfully states that the conditional distribution
+is a uniform distribution and the marginal distribution is a beta distribution. Despite
+this many candidates failed to quote standard results given in the Yellow Book
+relating to uniform and beta distributions and instead performed time-consuming
+integrations.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 6
