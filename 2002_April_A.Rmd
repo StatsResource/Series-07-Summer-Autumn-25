@@ -1,0 +1,87 @@
+Faculty of Actuaries Institute of Actuaries
+EXAMINATIONS
+17 April 2002 (pm)
+Subject 101  Statistical Modelling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+101A2002  Institute of Actuaries
+101 A20022
+1 Let t px denote the probability that a life aged x survives for at least a further t years,
+and consider three independent lives aged 40, 50 and 60 years such that
+10 p40 = 0.95, 10 p50 = 0.85, 10 p60 = 0.70.
+\item Determine the probability that exactly one of these three lives survives ten
+years. 
+\item Determine the probability that it is the youngest life that survives, given that
+exactly one life survives ten years. [1]
+[Total 3]
+2 Claim amounts are modelled as an exponential random variable with mean £1,000.
+\item Calculate the probability that one such claim amount is greater than £5,000.
+[1]
+\item Calculate the probability that a claim amount is greater than £5,000 given that
+it is greater than £1,000. 
+[Total 3]
+3 A magazine claims that 25% of its readers are students. A random sample of 200
+readers is taken and is found to contain 42 students.
+Calculate the probability of obtaining 42 or fewer student readers, assuming that the magazines claim is correct. [3]
+4 The percentage return on an investment of a particular type over a period of one year is to be modelled as a normal random variable X with mean  and variance 1. A
+potential investor is interested in the chance that the return on such an investment will
+exceed 9%.
+A random sample of ten such returns have values
+7.3, 8.9, 8.3, 6.2, 9.8, 7.7, 9.4 , 7.9, 9.1, and 7.4 .
+Calculate the maximum likelihood estimate of  = P(X > 9). [3]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 \item P(exactly one) = (0.95)(0.15)(0.30)+(0.05)(0.85)(0.30)+(0.05)(0.15)(0.70)
+= 0.04275 + 0.01275 + 0.00525 = 0.06075
+\item P(youngest | exactly one) = 0.04275 0.704
+0.06075 
+2 \item X ~ exponential with  = 1/1000 and density e x 
+ .
+P(X > t) = e t  (stated or by integration)
+P(X > 5000) =
+1 5000 5 e 1000 = e 
+ = 0.0067
+\item
+1
+2
+1 2
+1 2
+2
+( | ) = ( and ) =
+( )
+t
+t
+P X t X t P X t X t e
+P X t e
+
+
+ 
+ 
+
+P(X > 5000 | X > 1000) =
+5
+4
+1 e = e
+e
+
+
+
+= 0.0183
+OR: candidates may refer to the memoryless property of the exponential to
+obtain P(X > 5000 | X > 1000) = P(X > 4000) = e 4  .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 Let X denote the number of magazine readers in the sample of 200 who are students.
+Assuming the magazines claim is correct, X ~ binomial (200, 0.25).
+Using the normal approximation to the binomial distribution,
+X ~ N(50, 150/4) approximately:
+P(X  42)  42.5 50
+(150 / 4)
+P Z
+  
+    
+ 
+where Z ~ N(0, 1)
+= P(Z < 1.225) = 0.110 (using continuity correction).
+4 Data sum = 82; MLE of  is  = x = 82 /10 = 8.2
+ = P(X  9) = P(Z  9  ) where Z ~ N(0, 1)
+ MLE of  = P(Z  9  ) = P(Z > 9  8.2) = P(Z > 0.8) = 0.212
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
