@@ -1,0 +1,246 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9 Two independent random samples of sizes n1 and n2 are selected from a normal
+population with variance σ2. The sample variances are denoted by 2
+S1 and 2
+S2
+respectively. Let 2W
+S denote a weighted average of the sample variances given by
+2W
+S = 2 2
+1 2 \alphaS + (1 − \alpha) S .
+where \alpha is a constant such that 0 ≤ \alpha ≤ 1.
+\begin{enumerate}[(a)]
+\item Show that 2W
+S is an unbiased estimator of σ2, and obtain an expression for
+the mean square error of 2W
+S .
+(You may use
+4
+2 2
+Var( ) =
+1 i
+i
+S
+n
+σ
+−
+, i = 1, 2.) 
+\item Show that 2W
+S has minimum mean square error if \alpha = 1
+1 2
+1
+.
+2
+n
+n n
+−
++ −
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10 The number of incomplete insurance proposals Y, in a batch of x proposals, is to
+be modelled as a Poisson random variable with mean \lambdax, where \lambda is unknown.
+Data are available from n independent batches of proposals as follows: batch
+number i contains xi proposals of which yi are incomplete, i = 1,2, , n.
+The least squares estimator of \lambda is that value of \lambda for which
+( )2
+1
+( )
+n
+i i
+i
+Y EY
+=
+ −
+is minimised.
+\item Show that the least squares estimator of \lambda is given by:
+2 = i i
+i
+x Y
+x
+\lambda
+
+
+ . 
+\item Determine \lambda , the maximum likelihood estimator of \lambda. 
+\item Determine whether neither, one, or both of \lambda and \lambda provide unbiased
+estimators of \lambda. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11 A random sample of 11 policies on the contents of private houses was examined
+for each of three insurance companies and the sum insured under each policy
+noted. The observations were rounded to the nearest £100 and expressed in units
+of £1,000.
+The sums and sums of squares of the observations are as follows:
+Sum Sum of squares
+Company 1 129.1 1,534.37
+Company 2 109.8 1,109.88
+Company 3 123.5 1,401.73
+The data are to be analysed under the one-way analysis of variance model to
+examine whether company effects are present.
+The ANOVA table is given below, with three entries deleted.
+Source of variation d.f. SS MSS
+Between companies 2 *** ***
+Residual 30 48.24 1.61
+32 ***
+\item Copy the table into your answer book, filling in the three values which
+have been deleted. 
+\item Test the null hypothesis of no company effects and state your conclusion.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12 Claims are classified on inception into one of three categories, simple,
+standard and complex. Last year the percentage of all claims classified in
+each of these categories was 18.4%, 70.3% and 11.3% respectively.
+A random sample of 120 of this years claims to date shows that the numbers
+classified in each category are 15, 87 and 18 respectively.
+Perform a goodness-of-fit test to investigate whether this years pattern to date
+differs from that of last year, and state your conclusion. [5]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+9 \item 2 2 2
+1 2 ( )= ( ) (1 ) ( ) W E S E S    E S
+= 2 + (1  )2 = 2 (using unbiasedness of sample variance)
+Therefore 2
+W S is unbiased for 2. MSE = ( 2 ) W Var S since unbiased.
+MSE = ( 2 ) W Var S 2 2 2 2
+1 2 =  Var(S )  (1  ) Var(S )
+ 2 2 4
+4 2
+1 2
+1 2
+= 2 using ( ) = ; 1,2
+1 1 1 i
+i
+Var S i
+n n n
+             	 
+    
+   
+ 
+\item 4
+1 2
+2 2(1 )
+= 2
+1 1
+dMSE
+d n n
+     
+   
+ 	   
+
+Setting equal to zero gives
+1 2
+1
+n 1 n 1
+ 
+
+ 
+= 0  (n2  1)   (n1  1)(1  ) = 0
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Thus giving 1
+1 2
+1
+=
+2
+n
+n n
+
+
+ 
+which clearly minimises MSE.
+10 \item     2 2
+1 1
+= ( ) =
+n n
+i i i i
+i i
+S Y EY Y x
+ 
+    	
+= 2 ( ) i i i
+dS
+x Y x
+d
+ 
+
+ Setting to 0  2 = i i
+i
+xY
+x
+
+
+
+
+\item ( ) = xi  Yi const. so log =   log const.
+i i i L e x L x Y 
+           
+
+log 1
+i i
+d L
+x Y
+d
+  
+ 
+  Setting to 0   i
+i
+Y
+x
+ 
+
+
+\item   2 2
+1 1
+( )= = = i i i i
+i i
+E E x Y x x
+x x
+    
+ 
+ hence unbiased
+ 
+ 1 1 ( )= = = i i
+i i
+E E Y x
+x x
+   
+ 
+hence unbiased
+Some candidates did not appear to understand that the two methods of deriving
+estimators could produce different estimators.
+11 \item 129.1 + 109.8 + 123.5 = 362.4 , 1,534.37 + 1,109.88 + 1,401.73 = 4,045.98
+SST = 4,045.98  362.42/33 = 66.17
+So SSB = 66.17  48.24 = 17.93 **
+Table is:
+Source of variation d.f. SS MSS
+Between companies 2 17.93 8.97
+Residual 30 48.24 1.61
+32 66.17
+\item  F = 8.97/1.61 = 5.57 on 2,30 d.f.
+P-value is less than 0.01, so reject null hypothesis.
+There is strong evidence that there are differences among the (population)
+means of the sums insured for the three companies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+** OR: Calculate SSB directly as
+SSB = (129.12 + 109.82 + 123.52) / 11  362.42/33 = 17.93
+12 H0 : this years pattern is the same as last years v. H1 : not the same
+Under H0 , the expected frequencies are:
+120  0.184 ; 0.703 ; 0.113 = 22.08 ; 84.36 ; 13.56
+oi ei (o 
+e)2/e
+15 22.08 2.270
+87 84.36 0.083
+18 13.56 1.454
+3.807 on 2 df
+5% point from 22
+ is 5.991. So cannot reject H0 at 5% level.
+These data provide no evidence to suggest that this year’s pattern differs from
+that of last year.
+A few candidates worked with percentages of claims instead of numbers of claims
+(when using the chi-squared goodness-of-fit statistic, one must work with observed
+and expected frequencies). Such work received few if any marks.
