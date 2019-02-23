@@ -1,16 +1,50 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-5 In a quality control test, a random sample of 100 items is selected, of which 90 are
+\item 5 In a quality control test, a random sample of 100 items is selected, of which 90 are
 found to be satisfactory. The value of p, the probability of an item being satisfactory,
 is unknown.
 Write down the probability of observing 90 satisfactory items out of 100 as a function
 of p, and thus derive the maximum likelihood estimate of p. [3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 A national survey research company has past data which indicate that the interview
+\item 6 A national survey research company has past data which indicate that the interview
 time for a consumer opinion study has a standard deviation of 6 minutes.
 Calculate the size of the sample that should be taken if the company requires a 99%
 confidence interval for the mean interview time to be within 2 minutes. 
-7 The following information on white blood cell count (WBCC) was collected from
+\item 7 The following information on white blood cell count (WBCC) was collected from
 subjects one week after the start of chemotherapy treatment. One group of subjects
 (A) received steroids in addition to the chemotherapy treatment and the other group
 (B) received a placebo in addition to the chemotherapy. The subjects were assigned
@@ -23,11 +57,14 @@ Group B  Placebo
 WBCC (millions of cells per ml.)
 17.0 13.5 15.4 14.1 15.4 14.8 12.9 14.4 13.2 13.1
 12.9 13.9 13.0 13.6 13.0 13.4 12.9 13.1 14.4 13.8
+\begin{enumerate}[(a)]
 \item Construct stem and leaf diagrams for Group A and Group B separately. 
 \item Comment on the results in the context of investigating an association between
 WBCC and the treatment with or without steroids. 
 [Total 4]
-101 A20024
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8 Consider a negative binomial variable X with probability function given by
 1
 ( = ) = k x : = 0,1, 2, ... k x
@@ -37,6 +74,7 @@ x
  
  
 where 0 < p < 1 and q = 1  p.
+\begin{itemize}
 \item Show that the moment generating function is given by
 ( ) =
 1
@@ -183,11 +221,7 @@ k
 k
 M t p q t t
 t p q t
-
- 
-   
-                  
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2
 =1 ( ...) ( 1) ( )2 ( ...)2 ...
 2 2
@@ -211,3 +245,7 @@ p p p
 2
 2 = k q k( q ) = kq (1 q ) = kq
 p p p p p
+
+    \item 
+\end{itemize}
+\end{document}
