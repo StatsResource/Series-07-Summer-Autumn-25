@@ -1,3 +1,39 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
 
 9 A statistician suggests that, since a t variable with k degrees of freedom is
 symmetrical with mean 0 and variance
@@ -19,25 +55,27 @@ t variable with:
 (ii) Compare your answers with the exact values from tables and comment briefly
 on the result. [2]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-10 In order to estimate a certain probability of success a single observation is taken from
+\item 10 In order to estimate a certain probability of success a single observation is taken from
 the binomial random variable X ~ binomial(20, p).
-(i) Write down an expression for the mean square error of the maximum
+\begin{enumerate}
+\item (i) Write down an expression for the mean square error of the maximum
 likelihood estimator,
 20
 X
 p , and evaluate this mean square error at p = 0.5.
 [2]
-(ii) Determine an expression for the mean square error of the estimator,
+\item (ii) Determine an expression for the mean square error of the estimator,
 1
 21
 X
 p , and evaluate this mean square error at p = 0.5. [4]
-(iii) Comment briefly on the comparison of p and p as estimators of p in the case
+\item (iii) Comment briefly on the comparison of p and p as estimators of p in the case
 p = 0.5. [1]
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-11 The continuous random variables X and Y have a bivariate probability density
+\item 11 The continuous random variables X and Y have a bivariate probability density
 function
-f(x, y) = 2 for 0 < x + y < 1, x > 0, y > 0.
+\[f(x, y) = 2 for 0 < x + y < 1, x > 0, y > 0.\]
 The conditional distribution of X given Y = y is a uniform distribution with probability
 density function
 f(x|y) =
@@ -55,7 +93,9 @@ E(X|Y = y) =
 y
 and obtain the conditional variance of X given Y = y. [3]
 (ii) Verify in this case that var(X) = var(E(X|Y)) + E(var(X|Y)). [3]
-
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 
 
 9 (i) (a) k = 4 using N(0, 4/2) = N(0, 2)
@@ -156,4 +196,4 @@ this many candidates failed to quote standard results given in the Yellow Book
 relating to uniform and beta distributions and instead performed time-consuming
 integrations.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 6
+\end{document}
