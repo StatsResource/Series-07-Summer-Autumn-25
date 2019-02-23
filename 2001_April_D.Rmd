@@ -1,5 +1,38 @@
+\documentclass[a4paper,12pt]{article}
 
-13 A random sample of insurance policies on the contents of private houses written
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item A random sample of insurance policies on the contents of private houses written
 by each of three companies was examined and the sum insured (y) under each
 policy noted. The results are summarised below (in units of £100).
 Company
@@ -17,19 +50,21 @@ i s
 For all 37 observations: Σy = 4302 , Σy2 = 521662 .
 Consider the model
 = , =1,2,3 Yij μ + τi + eij i ; j =1,2,...,ni
-101 A20015 PLEASE TURN OVER
+
 where Yij is the jth sum insured for company i, ni is the number of responses
 available for company i, the ij e are independent normal variables, each with zero
 mean and variance σ2, and 0 i i
-i
-n τ = .
-(i) Calculate the values of the least squares/maximum likelihood estimates of
+% i
+% n τ = .
+
+\begin{enumerate}[(a)]
+    \item (i) Calculate the values of the least squares/maximum likelihood estimates of
 μ and τi , i = 1, 2, 3. 
-(ii) Perform an analysis of variance to investigate whether real differences
+\item Perform an analysis of variance to investigate whether real differences
 exist among the means of the sums insured under such policies issued by
 the three companies. [5]
-[Total 8]
-101 A20016
+\end{enumerate}
+\item 
 14 Consider a group of 1000 policyholders, all of the same age, and each of whose
 lives is insured under one or more policies. The following frequency distribution
 gives the number of claims per policyholder in 1999 for this group.
@@ -42,26 +77,28 @@ Number of claims per policyholder 0 1 2 3 ≥4
 Expected number of policyholders 796.9 180.9 20.5 1.6 0.1
 A second statistician argues that a more appropriate model for the distribution of
 X is given by:
-P(X = x) = p(1 − p)x , x = 0, 1, 2,
-(i) Without doing any further calculations, comment on the first statisticians
+\[P(X = x) = p(1 − p)x , x = 0, 1, 2,\ldots\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[(a)]
+    \item (i) Without doing any further calculations, comment on the first statisticians
 proposed model for the data. [2]
-Consider the second statisticians proposed model.
-(ii) Verify that the mean of the distribution of X is (1  p)/p and hence
+Consider the second statistician's proposed model.
+\item (ii) Verify that the mean of the distribution of X is (1  p)/p and hence
 calculate the method of moments estimate of p. [4]
 (Note: this estimate is also the maximum likelihood estimate.)
-(iii) Verify that the frequencies expected under the second statisticians
+\item (iii) Verify that the frequencies expected under the second statistician's
 proposed model are as follows:
 Number of claims per policyholder 0 1 2 3 ≥4
 Expected number of policyholders 815.0 150.8 27.9 5.2 1.2
 
-(iv) (a) Test the goodness-of-fit of the second statisticians proposed model
+\item (iv) (a) Test the goodness-of-fit of the second statisticians proposed model
 to the data, quoting the p-value of your test statistic and your
 conclusion.
-(b) Assuming that you had been asked to test the goodness-of-fit at
-the 1% level, state your conclusion.
-[7]
-[Total 16]
-101 A20017 PLEASE TURN OVER
+(b) Assuming that you had been asked to test the goodness-of-fit at
+the 1\% level, state your conclusion.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
 15 It has been decided to model a claim amount distribution using a gamma
 distribution with parameters α = 4 and λ (unknown), that is, with density
 f(x; λ) =
@@ -90,7 +127,7 @@ approximate confidence interval for λ.
 (3) Comment briefly on the comparison of this interval with
 that obtained in part (ii)(a). [6]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-16 The table below gives data on the lean body mass (the weight without fat) and
+\item  The table below gives data on the lean body mass (the weight without fat) and
 resting metabolic rate for twelve women who were the subjects in a study of
 obesity. The researchers suspected that metabolic rate is related to lean body
 mass.
@@ -110,23 +147,22 @@ y
 34.5 1052
 51.1 1347
 41.2 1204
-x = 516.4, x2 = 22741.34
-y = 14821, y2 = 18695125
-xy = 650264.8
-(i) Draw a scatter plot of the resting metabolic rate against lean body mass
-and comment briefly on any relationship. [2]
-(ii) Calculate the least squares fit regression line in which resting metabolic
-rate is modelled as the response and the lean body mass as the
-explanatory variable. 
-(iii) Determine a 95\% confidence interval for the slope coefficient of the model.
-State any assumptions made. [5]
-(iv) Use the fitted model to construct 95\% confidence intervals for the mean
-resting metabolic rate when:
+% x = 516.4, x2 = 22741.34
+% y = 14821, y2 = 18695125
+% xy = 650264.8
+\begin{enumerate}[(a)]
+    \item (i) Draw a scatter plot of the resting metabolic rate against lean body mass and comment briefly on any relationship.
+   \item (ii) Calculate the least squares fit regression line in which resting metabolic rate is modelled as the response and the lean body mass as the explanatory variable. 
+   \item (iii) Determine a 95\% confidence interval for the slope coefficient of the model.
+State any assumptions made. 
+   \item (iv) Use the fitted model to construct 95\% confidence intervals for the mean resting metabolic rate when:
 (a) the lean body mass is 50kg
-(b) the lean body mass is 75kg [4]
-(v) Comment on the appropriateness of each of the confidence intervals given
-in (iv). [2]
-[Total 16]
+(b) the lean body mass is 75kg 
+   \item (v) Comment on the appropriateness of each of the confidence intervals given
+in (iv). 
+\end{enumerate}
+
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 13 (i) Estimate of μ = 4302/37 = 116.27
@@ -177,9 +213,9 @@ The hypothesis that the model describes the data stands.
 4 4 4
 = X = =
 X
-μ ∴ λ
-λ λ
-
+% μ ∴ λ
+% λ λ
+% 
 (2) ( ) = const. 4n( )3 xi
 i L λ λ Πx e−λΣ
 log = . 4 log 3log( )i i L const + n λ + Πx − λΣx
@@ -188,8 +224,8 @@ i
 n n
 L x
 X X
-∂ − Σ  λ
-∂λ λ Σ
+% ∂ − Σ  λ
+% ∂λ λ Σ
 (b)
 (1) ( ) = ( Xt ) = (1 ) 4
 X
@@ -229,7 +265,7 @@ M t E e Σ λ − λ − − t −
 n n
 nX nX
 χ χ
-(ii) (a) n =10,x = 242 2nx = 4840
+(ii) (a) n =10,x = 242 2nx = 4840
 2 2
 0.975,80 0.025,80 χ = 57.15 ,χ =106.6
 95% confidence interval for λ is
@@ -265,7 +301,7 @@ very large.
 112
 242 2.262 = (161.9,322.1) (0.0124,0.0247)
 10
-±  ]
+% ±  ]
 16 (i) x = lean body mass
 y = resting metabolic rate
 35 45 55
@@ -281,7 +317,7 @@ Resting metabolic rate
 Rate against mass
 %--------------------------%
 Linear relationship between x and y.
-x = 516.4 , y =14821
+% x = 516.4 , y =14821
 ( )
 ( )
 ( )( )
@@ -299,9 +335,7 @@ S xy x y n
 −
 −
 −
- 
- 
-  
+
 %--------------------------%
 (ii) Model: y = α + βx
 The least squares estimates of α and β:
@@ -326,8 +360,8 @@ xx xx
 S
 S n
 S S
-σ   β σ  −  −  
- 
+% σ   β σ  −  −  
+%  
 ∴s.e.(β ) = 4.17
 24.03 ± 2.228(4.17) = 24.03 ± 9.299 = (14.7, 33.3)
 Assuming normal errors with a constant variance.
@@ -341,16 +375,13 @@ Assuming normal errors with a constant variance.
 x x
 y t
 S
- −  ± σ  + 
- 
- 
+%  −  ± σ  + 
+%  
+%  
 (a) For x = 50 kg:
 ( )2 1 50 43.03
 1402.5 2.228 9040.4
 12 518.927
- −  ±  + 
- 
- 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1402.5 ± 2.228 × 40.0
 = (1313, 1492)
@@ -358,11 +389,12 @@ S
 1 (75 43.03)2
 2003.1 2.228 9040.4
 12 518.927
- −  ±  + 
- 
- 
+
 = 2003.1 ± 2.228 × 136.2
 = (1700, 2307)
 (v) The confidence interval for x = 50 kg seems OK.
 However, the confidence interval at x = 75 kg involves extrapolation. Care
 needed!
+
+
+\end{document}
