@@ -30,20 +30,9 @@
 
 \setcounter{MaxMatrixCols}{10}
 
-\begin{document}Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-18 September 2000 (pm)
-Subject 101 — Statistical Modelling
-
-%%%%%%%%%%%%%%%%%%%%%
-Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-18 September 2000 (pm)
-Subject 101 — Statistical Modelling
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-1 A random sample of fifty claim amounts (£) arising in a particular section of an
+\begin{document}
+\begin{enumerate}
+\item 1 A random sample of fifty claim amounts (£) arising in a particular section of an
 insurance company's business are displayed below in a stem and leaf plot:
 15
 16
@@ -76,7 +65,8 @@ Stem unit = 100
 Leaf unit = 10
 The sum of the fifty amounts (before rounding) is £92780.
 Calculate the mean and median claim amounts. 
-2 Consider a random sample of 47 white-collar workers and a random sample of 24 blue-collar workers from the workforce of a large company. The mean salary for
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider a random sample of 47 white-collar workers and a random sample of 24 blue-collar workers from the workforce of a large company. The mean salary for
 the sample of white-collar workers is £28,470 and the standard deviation is £4,270; whereas the mean salary for the sample of blue-collar workers is £21,420
 and the standard deviation is £3,020.
 Calculate the mean and the standard deviation of the salaries in the combined
@@ -85,10 +75,10 @@ sample of 71 employees.
 can be modelled by a Poisson distribution with mean 24.
 Determine the probability that fewer than 20 claims arise in a particular month.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 2
+\newpage
 1 Mean = 92780/50 = £1855.60
 25.5th value in order = (17.3 + 17.4)/2 = 17.35 so median amount = £1735
 2 For simplicity change the units into thousands. The sum of the data is
@@ -105,17 +95,16 @@ Thus, the standard deviation of the 71 values is
 3 Can get answer directly from Green tables:
 P(X < 20) = P(X ≤ 19) = 0.18026 = 0.18
 OR: use normal approximation with continuity correction.
-X ~
- N(24, 2 24 )
-P(X < 20) → P(X < 19.5)
+\[X ~ N(24, 2 24 )
+P(X < 20) → P(X < 19.5)\]
 =
 19.5 24
 = 0.92
 24
 P Z
- − 
- < − 
- 
+%  − 
+%  < − 
+%  
 = 1 − 0.82 = 0.18.
 Note: without continuity correction answer is 0.15 — only 1 mark.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -137,6 +126,8 @@ x
 ± 196
 500
 . i.e. 0.168 ± (1.96 × 0.01833) i.e. 0.168 ± 0.036
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 6 (a) £
 (b) £/year i.e. £ × year−1
 (c) no units
@@ -167,6 +158,7 @@ r
 5.318
 13.318
 = 0.3993 ∴ r = 0.632
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q7 Comment: An alternative approach is to use Fisher’s transformation of r. The
 statistic is
 1+ r
@@ -175,3 +167,4 @@ statistic is
 , which, under H0, has, approximately, a N(0,1/7) distribution.
 This approach gives r = 0.630 .
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
