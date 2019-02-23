@@ -1,16 +1,50 @@
-Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-2 April 2001 (pm)
-Subject 101  Statistical Modelling
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-1 The following amounts are the sizes of claims (£) on house insurance policies for a
+\item 1 The following amounts are the sizes of claims (£) on house insurance policies for a
 certain type of repair.
+\begin{verbatim}
 198 221 215 209 224 210 223 215 203 210
 220 200 208 212 216
+\end{verbatim}
+
 Determine the lower quartile, median, upper quartile and interquartile range of
 these claim amounts. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-2 A certain medical test either gives a positive or negative result. The positive test
+\item 2 A certain medical test either gives a positive or negative result. The positive test
 result is intended to indicate that a person has a particular (rare) disease, while
 a negative test result is intended to indicate that they do not have the disease.
 Suppose, however, that the test sometimes gives an incorrect result: 1 in 100 of
@@ -19,51 +53,21 @@ having the disease have negative test results.
 If 1 person in 1000 has the disease, calculate the probability that a person with a
 positive test result has the disease. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3 Suppose that the occurrence of events which give rise to claims in a portfolio of
+\item 3 Suppose that the occurrence of events which give rise to claims in a portfolio of
 motor policies can be modelled as follows: the events occur through time at
 random, at rate μ per hour. Then the number of events which occur in a given
 period of time has a Poisson distribution (you are given this).
 Show that the time between two consecutive events occurring has an exponential
 distribution with mean 1/μ hours. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-4 For a certain type of policy the probability that a policyholder will make a claim
+\item 4 For a certain type of policy the probability that a policyholder will make a claim
 in a year is 0.001. If a random sample of 10,000 policyholders is selected,
 calculate an approximate value for the probability that not more than 5 will
 make a claim next year. [2]
-5 Show that the probability generating function for a binomial (n, p) distribution is
-GX (t) = (1 − p + pt)n .
-Deduce the moment generating function. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 Let X have a normal distribution with mean μ and standard deviation σ, and let
-the ith cumulant of the distribution of X be denoted κi .
-Assuming the moment generating function of X, determine the values of κ2 , κ3 ,
-and κ4 . 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-7 The number of policies (N) in a portfolio at any one time is modelled as a Poisson
-random variable with mean 10.
-The number of claims (Xi) arising on a policy is also modelled as a Poisson
-random variable with mean 2, independently for each policy and independent
-of N.
-Determine the moment generating function for the total number of claims,
-1
-N
-i
-i
-X
-= 
-,
-arising for the portfolio of policies. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+\newpage
 
-Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-April 2001
-Subject 101  Statistical Modelling
-EXAMINERS REPORT
- Faculty of Actuaries
- Institute of Actuaries
-Subject 101 (Statistical Modelling)  April 2001  Examiners Report
-Page 2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1 Ordered data are:
 198 200 203 208 209 210 210 212 215 215
 216 220 221 223 224
@@ -77,7 +81,8 @@ n = Q = observation = £208.25, median = 8th observation = £212
 3 4 3 1 11 observation £219 £10.75 th Q = = Q −Q =
 [OR: Using the alternative definitions of quartiles as 16/4th and 48/4th
 observations gives Q1 = 208, Q3 = 220, Q3 − Q1 = 12.]
-2 Apply Bayes theorem:
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+2 Apply Bayes' theorem:
 1
 1000
 p = (Probability of having disease)
@@ -90,12 +95,17 @@ p
 p p
 = =
 + −
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
 3 Let the number of events in a period of time of length t hours be Xt .
-Then X1 ~ Poisson(μ) and Xt ~ Poisson(μt).
-Let the time between two consecutive events be T.
-Then P(T > t) = P(no events in period of length t) = P(Xt = 0) = exp(−μt).
-So P(T < t) = 1 − exp(−μt) [and so f(t) = μ exp(−μt) , t >0]
-Hence T ~ exponential with mean 1/μ hours.
+\begin{itemize}
+\item Then X1 ~ Poisson(μ) and Xt ~ Poisson(μt).
+\item Let the time between two consecutive events be T.
+\item Then P(T > t) = P(no events in period of length t) = P(Xt = 0) = exp(−μt).
+\item So P(T < t) = 1 − exp(−μt) [and so f(t) = μ exp(−μt) , t >0]
+\item Hence T ~ exponential with mean 1/μ hours.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4 Binomial (10,000, 0.001) approximated by Poisson with mean of 10.
 Approximate probability of no more than 5 claims:
 2 3 4 5
@@ -103,59 +113,10 @@ Approximate probability of no more than 5 claims:
 1 10 0.0671.
 2! 3! 4! 5!
 e−
- 
- + + + + +  =
- 
+%  
+%  + + + + +  =
+%  
 [OR: 0.06709 using Green Book]
 [OR: Use normal approximation with continuity correction]
-Subject 101 (Statistical Modelling)  April 2001  Examiners Report
-Page 3
-5 PGF for binomial (n,p)
-0
-( ) ( ) ( )
-(1 )
-( ) (1 )
-n
-X x
-X
-x
-x x n x
-x nx
-G t Et t P X x
-n
-t p p
-x
-n
-pt p
-x
-=
-−
-−
-= = =
- 
-=   −
- 
- 
-=   −
- 
-
-
-
-= (1 − p + pt)n
-MGF obtained by replacing t by et, i.e. ( ) (1 t )n.
-X M t = − p + pe
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 C(t) = logM(t) = log[exp(μt + σ2t2/2)] from Green Book
-= μt + σ2t2/2
-κr is the coefficient of tr/r! , r = 2,3,
-∴ κ2 = σ2, κ3 = κ4 = 0
-7 Using formulae from the Green book
-mgf of N is exp(10(et − 1)) and mgf of Xi  is exp(2(et − 1))
-mgf of
-1
-N
-i
-i
-X
-= 
-is exp{10[exp(2(et − 1)) − 1]}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
