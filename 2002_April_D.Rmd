@@ -1,45 +1,83 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-12 A simple model for the movement of a stock price is such that, independently in each
+\item 12 A simple model for the movement of a stock price is such that, independently in each
 time period, the stock either:
 goes up with probability (1 )
 4
- ;
+% ;
 stays the same with probability (5 2 )
 8
-  ;
+%   ;
 goes down with probability (1 )
 8
- .
-\item Determine the range of admissible values of the parameter . 
-\item (a) Calculate the probability that the stock goes down in one time period, in the case  = 0.1.
-(b) Calculate the probability that the stock stays the same for two consecutive time periods, in the case  = 0 .
-(c) Calculate the probability that, in four time periods, the stock goes up twice and stays the same twice, in the case  =  0.2 . [4]
+% .
+\begin{enumerate}[(a)]
+
+\item Determine the range of admissible values of the parameter . 
+\item (a) Calculate the probability that the stock goes down in one time period, in the case  = 0.1.
+(b) Calculate the probability that the stock stays the same for two consecutive time periods, in the case  = 0 .
+(c) Calculate the probability that, in four time periods, the stock goes up twice and stays the same twice, in the case  % =  0.2 . [4]
 \item Data are collected for 80 consecutive time periods and yield the following
 observed frequencies:
 change in stock up same down
 no. of time periods 24 35 21
-(a) (1) Write down an expression for L() , the likelihood of these
+(a) (1) Write down an expression for L() , the likelihood of these
 data, and show that
-log L( ) 0 
- 
-
+log L( ) 0 % 
+%  
+% 
 reduces to the quadratic equation
-51202  468 95  0
+% 51202  468 95  0
 (2) Explain why one of the roots of this quadratic yields the
-maximum likelihood estimate of  and hence determine this
+maximum likelihood estimate of  and hence determine this
 estimate. 
+    \item 
+\end{enumerate}
 (b) (1) Calculate the expected frequencies using the model with the
-maximum likelihood estimate of .
+maximum likelihood estimate of .
 (2) Hence perform a 2
- goodness of fit test of the model and state
+ goodness of fit test of the model and state
 your conclusion clearly. 
 (c) Comment briefly on what additional information would be needed for
 these data in order to investigate the validity of the assumption of
 independence used in this model, and comment briefly on how the
 validity might be checked. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13 Six insurance companies were being compared with regard to premiums being
+\item  Six insurance companies were being compared with regard to premiums being
 charged for house contents insurance for houses in a particular postcode region.
 Independent random samples of five policies from each company are examined and
 the premiums (in £) were recorded.
@@ -50,43 +88,47 @@ Company A B C D E F
 167 120 186 138 161 172
 134 115 148 169 152 141
 Totals 748 657 826 741 710 744
-yij = 4, 426 ; yi2j = 661,796
+% yij = 4, 426 ; yi2j = 661,796
+
+\begin{enumerate}[(a)]
 \item Compute an ANOVA table for these data, and show that there are no
-significant differences, at the 5% level, between mean premiums being
+significant differences, at the 5\% level, between mean premiums being
 charged by each company. 
 \item State the assumptions required for the above analysis of variance, and, by
 drawing a suitable diagram of these data, comment briefly on the validity of
 these assumptions. 
-\item Calculate a 95% confidence interval for the underlying common standard
-deviation , using 2
+\item Calculate a 95\% confidence interval for the underlying common standard
+deviation % , using 2
 SSR
-
-as a pivotal quantity with a 2  distribution. 
+
+as a pivotal quantity with a %  2  distribution. 
 \item A colleague points out that company C has the largest mean premium of
 £165.20 and that Company B has the smallest mean premium of £131.40 and
 suggests performing a t-test to compare these two companies.
 (a) Perform this t-test, using the estimate of variance from the ANOVA
 table, and in particular show that there is a significant difference at the
-1% level.
+1\% level.
 (b) Your colleague states that there is therefore a significant difference
 between the six companies.
 Discuss the apparent contradiction with your conclusion and
 explain the flaw in your colleagues argument. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 The table below gives the numbers of deaths nx in a year in groups of women aged x
+\item The table below gives the numbers of deaths nx in a year in groups of women aged x
 years. The exposures of the groups, denoted Ex , are also given (the exposure is
 essentially the number of women alive for the year in question). The values of the
 death rates yx , where yx = nx/Ex , and the log(death rates), denoted wx , are also given.
 age x number of deaths nx exposure Ex yx = nx/Ex wx = logyx
-70 30 426 0.07042 2.6532
-71 38 471 0.08068 2.5173
-72 38 454 0.08370 2.4805
-73 53 482 0.10996 2.2077
-74 59 445 0.13258 2.0205
-75 61 423 0.14421 1.9365
-76 82 468 0.17521 1.7417
-77 96 430 0.22326 1.4994
-x = 588 x2 = 43260 w = 17.0568 w2 = 37.5173 xw = 1246.7879
+% 70 30 426 0.07042 2.6532
+% 71 38 471 0.08068 2.5173
+% 72 38 454 0.08370 2.4805
+% 73 53 482 0.10996 2.2077
+% 74 59 445 0.13258 2.0205
+% 75 61 423 0.14421 1.9365
+% 76 82 468 0.17521 1.7417
+% 77 96 430 0.22326 1.4994
+% x = 588 x2 = 43260 w = 17.0568 w2 = 37.5173 xw = 1246.7879
+\begin{enumerate}[(a)]
 \item A scatter plot of yx against x is shown below.
 Draw a scatter plot of wx against x and comment briefly on the two scatter
 plots and the relationships displayed. 
@@ -101,7 +143,7 @@ regression model of wx on x, adopting the assumptions of the usual
 \item Explain briefly the relationship between the fitting procedure used in part \item
 and a model which states that the number of deaths Nx is a random variable
 with mean Exbcx for some constants b and c. 
-[Total 18]
+\end{enumerate}
 0.00
 0.05
 0.10
@@ -112,85 +154,89 @@ with mean Exbcx for some constants b and c.
 x
 y x
 
- 
-12 \item 0 1 1 1 , 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12 
+\begin{itemize}
+\item 0 1 1 1 , 3
 4 4 4
-    
+%     
 0 5 2 1 3 , 5
 8 16 16
-     
+%      
 0 1 1 1 , 7
 8 8 8
-    
+%     
 combining these 5 1
 16 8
-  
+%   
 \item
 (a) 	 = 0.1 : P(down in one period) = 1 0.1= 0.025
-8 
+8 
 (b) 	 = 0 : P(same in two periods) = [P(same)]2 = (5)2 = 0.391
 8
-(c) 	 = 0.2 : P(up) = 0.45, P(same) = 0.225
+(c) % 	 = 0.2 : P(up) = 0.45, P(same) = 0.225
 = 4! (0.45)2 (0.225)2 = 0.062
 2!2!
-p
+p
 \item
 (a) (1) ( ) = (1 )24 (5 2 )35 (1 )21
 4 8 8
-L     
+% L     
 log = 24log(1 ) 35log(5 2 ) 21log(1 )
 4 8 8
-L      
+% L     
 log = 24 2(35) 21 1 5 2 1
 4 8 8
- L
-  
-
-   
-equate to zero 
+ L
+
+equate to zero % 
 24(5 2 )(1 ) 70(1 )(1 ) 21(1 )(5 2 ) = 0
 8 8 4 8 4 8
-          
+    \item 
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- 102402  936 190 = 0  51202  468 95 = 0
+%  102402  936 190 = 0  51202  468 95 = 0
 (2)
 468 4682 4(5120)(95) 468 1471.2661 = =
 2(5120) 10240
-  
-
-= + 0.189 or 0.0980
+
+
+% = + 0.189 or 0.0980
 + 0.189 is inadmissible, 0.0980 is admissible
-MLE  =  0.0980
-(b) (1) with  =  0.0980 , estimated probabilities are
+% MLE  =  0.0980
+(b) (1) with  =  0.0980 , estimated probabilities are
 P(up) = 0.3480, P(same) = 0.4290, P(down) = 0.2230
 Multiply by 80 for expected frequencies:
 up : 27.84, same : 34.32, down : 17.84
 (2)
-O e (o e)2/e
+% O e (o e)2/e
 24 27.84 0.530
 35 34.32 0.013
 21 17.84 0.560
 
 2 = 1.103
 
-2 = 1.103 on (3  1  1) = 1 d.f.
+% 2 = 1.103 on (3  1  1) = 1 d.f.
 this is well below the 5% point for 2
-1 from tables (3.841)
- large P-value, and so no evidence against the model.
-the model fits these data well.
+% 1 from tables (3.841)
+%  large P-value, and so no evidence against the model.
+the model fits these data well.
 (c) We need information on the order of the up/same/downs;
 and some method of investigating whether the up/same/downs are distributed
 randomly.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13 \item SST =
+13 
+\begin{itemize}
+
+\item SST =
 44262 661796 = 8813.47
-30 
+30 
 SSB =
 2
 1 (7482 6572 8262 7412 7102 7442 ) 4426 = 3046.67
 5 30
-     
- SSR = 8813.47  3046.67 = 5766.80
+
+%  SSR = 8813.47  3046.67 = 5766.80
 Source df SS MS F
 Treatments 5 3046.7 609.3 2.54
 Residual 24 5766.8 240.3
@@ -219,43 +265,46 @@ E
 F
        120       135       150       165       180       195
 normality and equality of variance both seem reasonable.
-Subject 101 (Statistical Modelling)  April 2002  Examiners Report
-Page 9
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Here 2
 2 30 6 24 SSR ~
-  
-
-2 P(12.40  SSR  39.36) = 0.95
-
- 95% CI for 2 is 2
-39.36 12.40
-SSR SSR
-  
+
+
+% 2 P(12.40  SSR  39.36) = 0.95
+% 
+%  95% CI for 2 is 2
+% 39.36 12.40
+% SSR SSR
+%   
 Data gives SSR = 5766.8
- 146.51 < 2 < 465.06
+%  146.51 < 2 < 465.06
 and so 95% CI for  is 12.1 <  < 21.6
-\item (a) Using  2 = 240.3 from the ANOVA
+\item (a) Using  2 = 240.3 from the ANOVA
 For comparing B and C: = 165.2 131.4 = 33.8 = 3.45
 1 1 9.80 240.3( )
 5 5
-t 
-
+t 
+% 
 t24(0.5%) = 2.797 from tables.
 Observed t > 2.797. Therefore significant at 1% level (two-sided).
 (b) There is no contradiction.
 It is wrong to pick out the largest and the smallest of a set of treatment
 means, test for significance, and then draw conclusions about the set.
-Even if H0 : is all equal is true, the largest and smallest sample
+% Even if H0 : is all equal is true, the largest and smallest sample
 means would, of course, differ.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 \item Plot
+14 
+
+\begin{itemize}
+\item Plot
 Comments: yx v x relationship is not linear
 wx v x relationship appears to be linear, strong
 \item (a) Sxx = 43260  5882/8 = 42
-Sxw = 1246.7879  (588  17.0568)/8 = 6.8869
- slope = 6.8869/42 = 0.1640
-so intercept = 17.0568/8  (6.8869/42)  (588/8) = 14.1842
-Fitted line is wx = 14.184 + 0.1640x
+% Sxw = 1246.7879  (588  17.0568)/8 = 6.8869
+%  slope = 6.8869/42 = 0.1640
+% so intercept = 17.0568/8  (6.8869/42)  (588/8) = 14.1842
+% Fitted line is wx = 14.184 + 0.1640x
 (b) Line on plot
 -3.0
 -2.5
@@ -274,24 +323,27 @@ w x
 x
 w x
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(c) Sww = 37.5173  ((17.0568)2/8) = 1.1505
-estimate of error variance = [1.1505  6.88692/42]/6 = 0.003538
- standard error of slope coefficient = (0.003538/42)0.5 = 0.00918
-t6 (0.975) = 2.447
- 95% CI for slope coefficient is 0.1640  (2.447  0.00918)
-i.e. 0.1640  0.0225 or (0.141, 0.187)
-(d) Fitted value of w71 = 2.5421  fitted value of
-y71 = exp(2.5421) = 0.0787
- fitted value of n71 = 471  0.0787 = 37.1
-Fitted value of w76 = 1.7222  fitted value of
-y71 = exp(1.7222) = 0.1787
- fitted value of n76 = 468  0.1787 = 83.6
-\item E(Nx) = Exbcx  E(Nx/Ex) = bcx  E(Yx) = bcx
- logE(Yx) = 
-x where 
-= logb ,  = logc.
+% (c) Sww = 37.5173  ((17.0568)2/8) = 1.1505
+% estimate of error variance = [1.1505  6.88692/42]/6 = 0.003538
+%  standard error of slope coefficient = (0.003538/42)0.5 = 0.00918
+% t6 (0.975) = 2.447
+%  95\% CI for slope coefficient is 0.1640  (2.447  0.00918)
+% i.e. 0.1640  0.0225 or (0.141, 0.187)
+% (d) Fitted value of w71 = 2.5421  fitted value of
+% y71 = exp(2.5421) = 0.0787
+%  fitted value of n71 = 471  0.0787 = 37.1
+% Fitted value of w76 = 1.7222  fitted value of
+% y71 = exp(1.7222) = 0.1787
+%  fitted value of n76 = 468  0.1787 = 83.6
+% \item E(Nx) = Exbcx  E(Nx/Ex) = bcx  E(Yx) = bcx
+%  logE(Yx) = 
+% x where 
+% = logb ,  = logc.
 The procedure above is a linear regression analysis of wx = logyx on x , which
 is a simple and approximate approach to fitting the stated model .
 Note: The method used in  is based on E(Wx) = E(logYx) = c + d x, whereas
 the model stated in (Q) is based on logE(Yx) = c + dx.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item 
+\end{itemize}
+\end{document}
