@@ -1,6 +1,40 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-9 Thirty employees working in the call centre of a bank were chosen at random from
+\item 9 Thirty employees working in the call centre of a bank were chosen at random from
 the workforce and agreed to assist in the assessment of two different training
 programmes (A and B).
 Ten of the selected employees were randomly assigned to each of the two training
@@ -24,7 +58,7 @@ treatment and between treatment variation. [2]
 (ii) Conduct an analysis of variance to investigate whether differences exist
 among the three treatments and comment briefly on your findings. [7]
 [Total 9]
-10 The number of claims N which arise from a portfolio of business is modelled as a
+\item 10 The number of claims N which arise from a portfolio of business is modelled as a
 Poisson variable with mean . The claim amounts Xi : i = 1, 2 , ..., N are modelled as
 independent gamma variables each with parameters  and  and are independent of
 N. Let S be the total claim amount arising from this portfolio.
@@ -37,7 +71,7 @@ and using general results for the mean and variance of S, [2]
 amount S exceeds £12,500, giving a brief justification of your
 approach. [4]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-11 Consider a group of n males each aged 30 years living in a particular society. The
+\item 11 Consider a group of n males each aged 30 years living in a particular society. The
 lives may be assumed to be independent.
 Suppose that x of the n men die by the end of a subsequent period of duration t0 years
 and that n  x survive the period.
@@ -71,6 +105,7 @@ approximately 0.00108.
 (b) Hence, calculate an approximate 95% confidence interval for the mean
 lifetime from age 30 of such men. [7]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9 (i)
@@ -217,3 +252,4 @@ i.e. 46.7 years to 58.3 years
 There was a slight error in line 6 of Question 11: the last word should have appeared as
 years instead of hours. The examiners took this into account, and gave full credit to
 any candidates who provided an alternative answer because of this.
+\end{document}
