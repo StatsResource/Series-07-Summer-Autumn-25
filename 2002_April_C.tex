@@ -1,41 +1,82 @@
+\documentclass[a4paper,12pt]{article}
 
-9 Let X and Y be independent random variables. Let V and W be the random variables
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item 9 Let X and Y be independent random variables. Let V and W be the random variables
 defined by
 V = max {X, Y}, W = min {X, Y}
 i.e. V is the larger, and W is the smaller, of the observations of X and Y.
 Let FX , FY , FV , FW denote the distribution functions of X, Y, V, W respectively.
+\begin{enumerate}[(a)]
 \item Show that FV(t) = FX(t)FY(t) . 
 \item Show that FW(t) = FX(t) + FY(t)  FX(t)FY(t) . [3]
 \item The random variable X has an exponential distribution with parameter 4 and,
 independently, Y has an exponential distribution with parameter 4. Obtain the
 distribution function of the minimum of X and Y and state its mean. [3]
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-10 A company wants to estimate the percentage of its customers who are willing to shop
+\item 10 A company wants to estimate the percentage of its customers who are willing to shop
 on the internet. It decides to do so by calculating a symmetrical 95% two-sided
 confidence interval for the unknown percentage.
+\begin{enumerate}[(a)]
 \item Show that, based on a random sample of 200 of the companys customers, the
 required confidence interval will have a width which is no greater than 13.9%.
 [4]
 \item Calculate the sample size required which will ensure that, whatever the true
 percentage, the width of the confidence interval will be no greater than 10%.
-
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-11 Consider the following model for aggregate claim amounts S:
+\item 11 Consider the following model for aggregate claim amounts S:
 S = X1 + X2 + + XN
 where the Xi are independent, identically distributed random variables representing
 individual claim amounts and N is a random variable, independent of the Xi , and
 representing the number of claims. Let X have mean X and let N have mean N and
 variance 2
 N .
+\begin{enumerate}[(a)]
 \item Show that
 E(SN) = X (2N  2N )
 by considering expected values conditional on the value of N. [3]
 \item Hence derive an expression for the covariance between S and N. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\end{enumerate}
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-9 \item
+
+9
+\begin{itemize}
+\item
 FV(t) = P(V  t) = P(max {X, Y}  t)
 = P(X  t and Y  t) = P(X  t) P(Y  t) = FX(t)FY(t) as X and Y are independent
 \item
@@ -51,22 +92,33 @@ FW(t) = 1  e4t + 1  e4t  (1  e4t)2
 = 1  e8t
 This is the distribution function of an exponential distribution with parameter 8, and
 therefore the mean is 1/8.
-10  \item Width of 95% CI = 2  1.96  {P(1  P)/200}0.5 where P is sample
+\end{itemize}
+
+10  
+\begin{itemize}
+\item Width of 95% CI = 2  1.96  {P(1  P)/200}0.5 where P is sample
 proportion
 Max value of P(1  P) is 0.52 = 0.25
  Max width of CI = 2  1.96  (0.25/200)0.5 = 0.139
 In terms of percentages, this is 13.9%.
 \item 2  1.96  (0.25/n)0.5  0.1  n  385
-11 \item E(SN) = E[E(SN|N)]
+\end{itemize}
+11 
+\begin{itemize}
+\item E(SN) = E[E(SN|N)]
 Now, E(SN|N = n) = E[(X1 + + Xn)n|N = n)] = E[n(X1 + + Xn)]
 = n  nX = n2
 X
  E(SN) = E(XN2) = XE(N2)
 = X
 ( 2 2 ) N  N
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item E(S) = E(NX) = NX
  Cov(S,N) = E(SN)  E(S)E(N) = X
 ( 2 2 ) N  N  (NX)N = X
 2
 N
+
+\end{itemize}
+\end{document}
