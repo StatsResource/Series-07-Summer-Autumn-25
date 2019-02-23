@@ -1,0 +1,130 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 1 Data were collected on 100 consecutive days for the number of claims, x, arising
+from a group of policies. This resulted in the following frequency distribution
+x: 0 1 2 3 4 ≥5
+f: 14 25 26 18 12 5
+Calculate the median and interquartile range for these data. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 2 Let X1 and X2 be independent Poisson random variables with respective means μ1
+and μ2.
+Assuming the moment generating function of a Poisson random variable,
+determine the moment generating function of X1 + X2 and hence state the
+distribution of X1 + X2 . 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 3 Let $X1 , X2 , \ldots , X5$ be independent N(0,1) random variables and let
+( ) 5 5 2 2
+1 1
+1 1
+= and =
+5 4 i i
+i i
+X X S X X
+= =
+% - - − .
+Calculate ( ) 5 2
+1
+0 and 9.488 i
+i
+P X X X
+=
+% - \lambda
+%  > − < 
+%  \times
+% - . 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 4 Let {(xi , yi); i = 1, … , n} denote a set of n pairs of points with
+Assuming the usual expressions for the estimated coefficients, verify that the
+least squares fitted regression line of y on x passes through the point (x, y). 
+\end{enumerate}
+
+\newpage
+
+1 n = 100. So median =
+1
+50
+2
+th observation = 2
+Q1 =
+1
+25
+2
+th observation = 1
+Q3 =
+1
+75
+2
+th observation = 3 -IQR = 3 - 1 = 2
+(same answers using alternative definitions)
+2 As X1 and X2 are independent
+1 2 1 2
+( ) ( ). ( ) X X X X M t M tM t -
+-
+1 ( 1) . 2 ( 1) e et e et -% \lambda - \lambda
+- using formula in Green book
+( 1 2 )( 1) e et - %\lambda- 
+-
+- X1 + X2 is Poisson with mean $(\lambda_1 + \lambda_2)$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 X ~ N with mean 0 so P(X - 0)% \lambda 0.5
+% 4S2/2 ~ 2
+with 4 d.f. i.e. 4S2 ~ % 2
+with 4 d.f.
+%  - \lambda
+5 2 2
+4
+1
+9.488 = ( 9.488) 0.95 i
+i
+P X X P
+-
+% - \lambda
+%
+-
+X and S2 are independent, so probability required = $0.5 \times 0.95 = 0.475$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 Fitted regression line:
+% y = - \lambda x
+% But least squares estimate of  is
+% - \lambda y  x.
+% Therefore y - y \lambda x  x - y  (x \lambda x )
+% - y \lambda y when x \lambda x. Hence line passes through point -x, y\lambda.
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
