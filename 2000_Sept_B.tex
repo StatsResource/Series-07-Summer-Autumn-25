@@ -30,42 +30,45 @@
 
 \setcounter{MaxMatrixCols}{10}
 
-\begin{document}Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-18 September 2000 (pm)
-Subject 101 — Statistical Modelling
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-5 The number of claims which arise under a policy of a particular type in a year is
+\begin{document}
+% 18 September 2000 (pm)
+% Subject 101 — Statistical Modelling
+% Faculty of Actuaries Institute of Actuaries
+% EXAMINATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item 5 The number of claims which arise under a policy of a particular type in a year is
 to be modelled as a Poisson($\lambda$) random variable. A random sample of 500 such policies gave rise to a total of 84 claims in 1999.
-Calculate a 95% confidence interval for $\lambda$. 
+Calculate a 95\% confidence interval for $\lambda$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 Suppose that the linear regression model
-Y = $\alpha$ + βx + e
+\item Suppose that the linear regression model
+\[Y = \alpha + \beta x + e\]
 is fitted to data {(yi , xi) : i = 1, 2, … , n}, where y is the salary (£) of a company
 manager and x (years) is the number of years of relevant experience of that
 manager.
 State the units of measurement (if any) of
-(a) ˆ$\alpha$ , the estimate of $\alpha$ ,
-(b) ˆβ , the estimate of β ,
-(c) R2 , the coefficient of determination of the fit. 
+\begin{enumerate}
+    \item  $\hat{\alpha}$ , the estimate of $\alpha$ ,
+\item $\hat{\beta}$ , the estimate of $\beta$ ,
+\item $R^2$ , the coefficient of determination of the fit. 
+\end{enumerate}
+
 \newpage
 
-7 In a correlation analysis based on a random sample of 10 values from a bivariate
+\item In a correlation analysis based on a random sample of 10 values from a bivariate
 normal distribution, a t-test of
 H0 : ρ = 0 v. H1 : ρ > 0
 results in a probability-value of 0.025.
 Calculate the value of the sample correlation coefficient. 
 \newpage
-8 Claims on a certain class of policy are classified as being of two types, I and II.
+\item  Claims on a certain class of policy are classified as being of two types, I and II.
 Past experience has shown that:
 25\% of claims are of type I and 75\% are of type II;
 Type I claim amounts have mean £500 and standard deviation £100;
 Type II claim amounts have mean £300 and standard deviation £70.
 Calculate the mean and the standard deviation of the claim amounts on this
 class of policy. [6]
-
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -77,7 +80,7 @@ all given
 E(YX = 2) = 300, Var(YX = 2) = 702
 E(Y) = E(E(YX)) = 500(0.25) + 300(0.75)
 = 125 + 225 = £350
-
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 4
 V(Y) = E(V(YX)) + V(E(YX))
@@ -127,6 +130,8 @@ r kr
 (k 1) 2
 kr
 − σ
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip 
 Alternative method:
 ( ) i V Y⋅ −Y⋅⋅ =
 1 1
@@ -134,15 +139,15 @@ Alternative method:
 j i
 V Y Y
 k ⋅ k ≠ ⋅
-      −  − Σ 
-   
+    −  − Σ 
+   
 =
 1 2 2 1 2 2
 1 (k 1)
 k r k r
-  σ   σ
- −  + −  −
-   
+ σ  σ
+ −  + −  −
+   
 =
 2
 k2r
@@ -151,3 +156,5 @@ k2r
 kr
 − σ
 Q13 Comment: This material was unfamiliar to most candidates.
+
+\end{document}
