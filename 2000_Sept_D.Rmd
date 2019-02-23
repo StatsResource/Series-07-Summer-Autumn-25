@@ -1,11 +1,45 @@
-Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-18 September 2000 (pm)
-Subject 101 — Statistical Modelling
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+% Faculty of Actuaries Institute of Actuaries
+% EXAMINATIONS
+% 18 September 2000 (pm)
+% Subject 101 — Statistical Modelling
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-13 Consider a one-way analysis of variance for comparing k treatments using the
+\item 13 Consider a one-way analysis of variance for comparing k treatments using the
 same number ni = r responses for each treatment. The model is
 Yij = μ + τi + eij : i = 1, 2, ..., k; j = 1,2, ..., r
 where the errors eij are independent N(0, σ2) random variables and where Στi = 0.
@@ -21,7 +55,7 @@ k
 kr
 − σ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 Let X be a random variable with cumulative distribution function
+\item 14 Let X be a random variable with cumulative distribution function
 FX(x) = P(X < x) = 1 − exp(−x2/θ) , x > 0 , FX(x) = 0 , x ≤ 0
 and let (X1, X2, … , Xn) be a random sample from X.
 (i) By considering P(Y < y), show that Y = X2 has an exponential distribution.
@@ -47,24 +81,27 @@ appropriate units) gives the following summary:
 (b) Using the result of (ii)(c) above, calculate an exact 95\% confidence interval for θ. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-15 A manufacturer uses a certain type of electrical component from supplier A in high quality computing equipment and uses similar components from supplier B in inexpensive playstations. Previous investigations have shown that supplier A
+\item  A manufacturer uses a certain type of electrical component from supplier A in high quality computing equipment and uses similar components from supplier B in inexpensive playstations. Previous investigations have shown that supplier A
 produces components whose resistances are normally distributed about a mean of 100 units and with a standard deviation of 0.1 units. Similarly, the resistances of supplier B’s components are normally distributed about a mean of 100.5 units
 and with a standard deviation of 0.5. Components are supplied in large batches and are externally identical.
 A batch known to come entirely from one supplier has no labels. The value of X , the mean resistance from a random sample of components, is to be used to decide whether the batch has come from supplier A.
 The hypotheses to be tested are:
 H0 : components come from supplier A i.e. X ~ N(100, 0.12)
 v. H1 : components come from supplier B i.e. X ~ N(100.5, 0.52) .
-101—6
-(i) (a) If the manufacturer insists that the probabilities of the type I and
+
+\begin{enumerate}
+    \item  (a) If the manufacturer insists that the probabilities of the type I and
 type II errors are each to be restricted to at most 5\%, show that at
 least 4 components from the batch have to be examined.
 (b) Using a sample size of 4, calculate the power of the test if the
 probability of the type I error is reduced to 1\%. 
-(ii) Suppose that a sample of 10 components from a batch has mean
+\item  Suppose that a sample of 10 components from a batch has mean
 resistance x = 100.1.
 Calculate the probability-value of this observed mean. 
+\end{enumerate}
 
 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
@@ -147,6 +184,7 @@ hour.
 \end{enumerate}
 Estimate the increase in the number of visitor-days it can expect in a
 season, and specify a standard error for this estimate. 
+\newpage
 16 (i)
 Seems to be a strong increasing linear relationship.
 (ii) Sxx = 91.08 −
@@ -165,7 +203,7 @@ r =
 (20.324)(1490.336)
 = 0.966
 Large and positive agreeing with comment above.
-
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 10
 (iii) y = $\alpha$ˆ + βˆ x where
@@ -220,5 +258,5 @@ S
 ∴ standard error of estimate is 391
 Q16 Comment: Nearly all candidates scored well on parts (i) – (iv), but most used
 an inappropriate expression for the standard error of 0.5βˆ .
-
+
 \end{document}
