@@ -1,6 +1,39 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-5 The number of claims, X, to be processed in a day by an employee of an insurance company is modelled as X ~ Poisson with mean 10. The time (minutes) the
+\item 5 The number of claims, X, to be processed in a day by an employee of an insurance company is modelled as X ~ Poisson with mean 10. The time (minutes) the
 employee takes, Y, to process x claims is modelled as having a distribution with conditional mean and variance given by
 E(Y|X = x) = 15x + 20 , V(Y|X = x) = x + 12.
 Calculate the unconditional variance of the time the employee takes to process
@@ -15,7 +48,7 @@ x x n y y n
 = =
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 \item The occurrence of claims in a group of 200 policies is modelled such that
+ \item The occurrence of claims in a group of 200 policies is modelled such that
 the probability of a claim arising in the next year is 0.015 independently for each policy. Each policy can give rise to a maximum of one claim.
 Calculate an approximate value for the probability that more than 10 claims arise from this group of policies in the next year. 
 \item The occurrence of claims in a group of 2000 policies is modelled such that
@@ -23,14 +56,14 @@ the probability of a claim arising in the next year is 0.015 independently for e
 claims arise from this group of policies in the next year. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-7 The probability density function of a random variable X is given by
+\item The probability density function of a random variable X is given by
 (1 2 ) , 0 1
 ( )=
 0 , otherwise
 kx ax x
 f x
- − ≤ ≤ 
-
+%  − ≤ ≤ 
+% 
 where k and a are positive constants.
 \begin{enumerate}
 \item Show that a ≤ 1, and determine the value of k in terms of a. 
@@ -38,11 +71,11 @@ where k and a are positive constants.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-8 A job takes X minutes to complete, where X is modelled as a N(28,22) random
+\item A job takes X minutes to complete, where X is modelled as a N(28,22) random
 variable. Another job, independent of the first, takes Y minutes to complete, and begins 5 minutes after the first job begins. Y is modelled as a N(25,12) random
 variable.
 Calculate the probability that the job that was begun last is first to be completed.
-
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -55,7 +88,7 @@ Subject 101  Statistical Modelling
 = E(X + 12) + V(15X + 20)
 = E(X) + 12 + [152  V(X)]
 = 10 + 12 + 225(10) = 2272
-6 \item X = number of claims arising
+6  X = number of claims arising
 X ~ binomial with n = 200, p = 0.015
 Use Poisson approximation
 X  Poisson with  = 200(0.015) = 3
@@ -63,7 +96,7 @@ Using Green book tables (or otherwise)
 P(X > 10) = 1  P(X  10) = 1  0.99971 = 0.00029
 The normal approximation is not as appropriate as the Poisson
 approximation for a bit (200, 0.015) distribution, which is quite skewed.
-\item X = number of claims arising X ~ binomial with n = 2000, p = 0.015
+\bigskip X = number of claims arising X ~ binomial with n = 2000, p = 0.015
 Could use Poisson approximation X  Poisson with  = 2000(0.015) = 30
 This is beyond the scope of the Green Book tables, and direct calculation
 would be awkward. So use Normal approximation
@@ -134,4 +167,4 @@ i.e.
 P Z P Z
   
    
- 
+\end{document}
