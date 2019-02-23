@@ -1,8 +1,34 @@
-\documentclass{article}
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
 \usepackage{framed}
-\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
 
+%\usepackage{bigints}
+\usepackage{vmargin}
 
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
 
 \begin{document}
 \begin{enumerate}
@@ -16,24 +42,76 @@ below.
 \end{verbatim}
 
 Calculate the median and the upper and lower quartiles of these forecasts. 
+
+1 As n = 14 the median is half way between the 7th and 8th value
+i.e. m = (1.8 + 1.9)/2=1.85.
+The quartiles are the 4th and 11th values, so Q1 = 1.5 and Q3 = 2.7 .
+OR: Using the definition of the quartiles as the 15/4th and 45/4th value gives
+Q1 = 1.5 and Q3 = 2.8.
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Insurance policies providing car insurance are such that the sizes of claims are
 normally distributed with mean £1,870 and standard deviation £610. In one
 month 50 claims are made. Assuming that claims are independent, calculate
 the probability that the total of the claim sizes is more than £100,000. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 The total claim, T, will be normally distributed with mean 50  1870 = 93500
+and variance 50  6102 = 18,605,000 = 43132.
+(Alternatively, we can work with the mean claim.)
+Thus, the probability that the total claim is greater than £100,000 is
+100,000 93,500
+1
+4313
+  
+  
+ 
+= 1  (1.507) = 0.066.
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item  In an investigation into the proportion (q) of lapses in the first year of a
 certain type of policy, the uncertainty about q is modelled by taking q to have a
 beta distribution with parameters a = 1 and b = 9, that is, with density
 f(q) = 9(1 - q)8 : 0 < q < 1.
 Using this distribution, calculate the probability that q exceeds 0.2. 
+
+
+3 P( > 0.2) =
+1
+8
+0.2
+ 9 (1  ) d
+=
+1
+9
+0.2
+(1  ) 
+= 0 + (1  0.2)9 = 0.89 = 0.13
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-4 Consider the following three probability statements concerning an F variable
+\newpage
+\item Consider the following three probability statements concerning an F variable
 with 6 and 12 degrees of freedom.
+\begin{enumerate}
 \item P(F6,12 > 0.250) = 0.95
 \item P(F6,12 < 4.821) = 0.99
 \item P(F6,12 < 0.130) = 0.01
+\end{enumerate}
+
 State, with reasons, whether each of these statements is true. 
+
+
+4 For (a) to be true, 0.250 must be lower 5\% pt of F6,12 i.e. reciprocal of upper 5% pt
+of F12,6 which is
+1
+4.000
+= 0.250  true.
+For (b) to be true, 4.821 must be upper 1\% pt of F6,12 which is 4.821 true.
+For (c) to be true, 0.130 must be lower 1\% pt of F6,12 i.e. reciprocal of upper 1% pt
+of F12,6 which is
+1
+7.718
+= 0.130 true.
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item  An insurance company’s records suggest that experienced drivers (those aged
 over 21) submit claims at a rate of 0.1 per year, and inexperienced drivers
@@ -58,46 +136,7 @@ H0 : l = 0.14 v H1 : l < 0.14 .
 %%  Subject 101 — Statistical Modelling
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 2
-1 As n = 14 the median is half way between the 7th and 8th value
-i.e. m = (1.8 + 1.9)/2=1.85.
-The quartiles are the 4th and 11th values, so Q1 = 1.5 and Q3 = 2.7 .
-OR: Using the definition of the quartiles as the 15/4th and 45/4th value gives
-Q1 = 1.5 and Q3 = 2.8.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-2 The total claim, T, will be normally distributed with mean 50  1870 = 93500
-and variance 50  6102 = 18,605,000 = 43132.
-(Alternatively, we can work with the mean claim.)
-Thus, the probability that the total claim is greater than £100,000 is
-100,000 93,500
-1
-4313
-  
-  
- 
-= 1  (1.507) = 0.066.
-3 P( > 0.2) =
-1
-8
-0.2
- 9 (1  ) d
-=
-1
-9
-0.2
-(1  ) 
-= 0 + (1  0.2)9 = 0.89 = 0.13
-4 For (a) to be true, 0.250 must be lower 5% pt of F6,12 i.e. reciprocal of upper 5% pt
-of F12,6 which is
-1
-4.000
-= 0.250  true.
-For (b) to be true, 4.821 must be upper 1% pt of F6,12 which is 4.821 true.
-For (c) to be true, 0.130 must be lower 1% pt of F6,12 i.e. reciprocal of upper 1% pt
-of F12,6 which is
-1
-7.718
-= 0.130 true.
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
