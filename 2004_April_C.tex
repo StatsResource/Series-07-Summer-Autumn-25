@@ -1,4 +1,39 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9 In order to simulate an observation of a normal random variable it is suggested that
 1
@@ -16,7 +51,7 @@ standard normal random variable. [1]
 (iii) Explain why S has the same coefficient of skewness as a standard normal
 random variable. [1]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-10 The number of claims which arise in a year under a policy of a certain type follows a
+\item 10 The number of claims which arise in a year under a policy of a certain type follows a
 Poisson distribution with mean . It is required to test
 H0 : = 0.2 v H1 :
 and it is decided to reject H0 in favour of H1 if 15 or more claims arise in a year under
@@ -26,7 +61,7 @@ each of the cases:
 (a) = 0.3, and
 (b) = 0.4
 and comment briefly on the results. [5]
-11 The following table gives the sums insured (in units of £1,000) for a random sample
+\item 11 The following table gives the sums insured (in units of £1,000) for a random sample
 of insurance policies on the contents of private houses for each of four insurance
 companies.
 Company
@@ -61,7 +96,7 @@ Comment on the adequacy of the model. [2]
 Company
 Residuals
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-12 For the estimation of a binomial probability p = P(success), a series of n independent
+\item 12 For the estimation of a binomial probability p = P(success), a series of n independent
 trials are performed and X represents the number of successes observed.
 (i) Write down the likelihood function L(p) and show that the maximum
 likelihood estimator (MLE) of p is =
@@ -111,9 +146,9 @@ Determine the resulting approximate 95% confidence interval using this. [2]
 (b) 80 successes out of 200 trials
 In each case calculate the two approximate confidence intervals from parts
 (iii) and (iv) and comment briefly on your answers.
-[6]
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9 (i) S is approximately normal for large n by Central Limit Theorem.
 Using results from the Yellow Book for Xi
@@ -300,3 +335,5 @@ x x
 i
 L p p p
 where xi = 1 or 0, but not as a product of binomial(n,p) components.
+
+\end{document}
