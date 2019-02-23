@@ -1,13 +1,47 @@
 
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13 Twenty overweight executives take part in an experiment to compare the
+\item 12 Twenty overweight executives take part in an experiment to compare the
 effectiveness of two exercise methods, A (isometric), and B (isotonic). They are
 allocated at random to the two methods, ten to isometric, ten to isotonic methods.
 After several weeks, the reductions in abdomen measurements are recorded in
 centimetres with the following results:
 A (isometric method) 3.1 2.1 3.3 2.7 3.4 2.7 2.7 3.0 3.0 1.6
 B (isotonic method) 4.5 4.1 2.7 2.2 4.7 2.2 3.6 3.0 3.3 3.4
+\begin{enumerate}[(a)]
 \item (a) Plot the data for the two exercise methods on a single diagram.
 Comment on whether the response values for each exercise method
 are well modelled by normal random variables.
@@ -17,14 +51,15 @@ reasonable.
 (c) Perform a t-test to investigate whether these data support the
 claim that the isotonic method is more effective than the other
 method. [9]
-\item (a) Determine a two-sided 95% confidence interval for the difference in
+\item (a) Determine a two-sided 95\% confidence interval for the difference in
 the means for the two exercise methods.
 (b) Assuming that the two sets of 10 measurements are taken from
 normal populations with the same variance, determine a 95%
 confidence interval for the common standard deviation. [7]
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 In a medical study on hypertension amongst young male athletes the researchers
+\item 14 In a medical study on hypertension amongst young male athletes the researchers
 were interested in the effects of the use of a particular (legal) stimulant on systolic
 blood pressure (bp).
 Ten young male athletes from a larger group who had agreed to take part in the
@@ -45,16 +80,17 @@ Summaries: Initial Σx = 1191, Σx2 = 142471 Follow-up Σx = 1264, Σx2 = 160872
 The following models are proposed as possible bases for the analysis:
 (M1) The initial bp of the ith athlete, Xi , is distributed as Xi ~ N(μ, σ1
 2) and the
-follow-up bp, Yi , is distributed such that Yi|Xi = x ~ N(x + \alpha, σ2
-2).
-(M2) The initial bp of the ith athlete, Xi , is distributed as Xi ~ N(μi , σ1
-2) and the
-follow-up bp, Yi , is distributed such that Yi|Xi = x ~ N(x + \alpha, σ2
-2).
+follow-up bp, Yi , is distributed such that $Yi|Xi = x ~ N(x + \alpha, \sigma^2
+2)$.
+(M2) The initial bp of the ith athlete, Xi , is distributed as $Xi ~ N(μi , σ1
+2)$ and the
+follow-up bp, Yi , is distributed such that $Yi|Xi = x ~ N(x + \alpha, \sigma^2
+2)$.
 (M3) The initial bp of the ith athlete, Xi , is distributed as Xi ~ N(μi , σ1
 2) and the
-follow-up bp, Yi , is distributed such that Yi|Xi = x ~ N(x + \alphai , σ2
-2).
+follow-up bp, Yi , is distributed such that $Yi|Xi = x ~ N(x + \alpha_i , \sigma^2
+2)$.
+\begin{enumerate}
 \item (a) Explain briefly the differences between the physical assumptions
 underlying the three models proposed above.
 (b) Explain briefly why model (M3) above could not be used in the
@@ -62,13 +98,15 @@ analysis of the data as given. [7]
 \item Adopting model (M1) above
 (a) Using the initial bp data, calculate a symmetrical, two-sided, 95%
 confidence interval for μ, and
-(b) Calculate a point estimate of \alpha. [6]
+(b) Calculate a point estimate of $\alpha$. [6]
 \item Adopting model (M2) above, calculate a one-sided 95% confidence interval
-for \alpha which brings out the minimum realistic value for the mean increase
-in bp attributable to taking the stimulant. [6]
+for $\alpha$ which brings out the minimum realistic value for the mean increase
+in bp attributable to taking the stimulant.
+\end{enumerate}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-15 In a study into employee share ownership plans, data were obtained from ten
+\item 15 In a study into employee share ownership plans, data were obtained from ten
 large insurance companies on the following two variables:
 employee satisfaction with the plan (x);
 employee commitment to the company (y).
@@ -81,16 +119,16 @@ following table:
 Co. A B C D E F G H I J
 x 5.05 4.12 5.38 4.17 3.81 4.47 5.41 4.88 4.64 5.19
 y 5.36 4.59 5.42 4.35 4.03 5.34 5.64 4.89 4.52 5.88
-x = 47.12, x2 = 224.8554, y = 50.02, y2 = 253.5796, xy = 238.3676
+% x = 47.12, x2 = 224.8554, y = 50.02, y2 = 253.5796, xy = 238.3676
 \begin{enumerate}[(a)]
 \item Draw a scatterplot of y against x and comment briefly on any relationship
 between employee satisfaction and commitment. 
 \item Calculate the fitted linear regression equation of y on x. 
 \item Calculate the coefficient of determination R2 and relate its value to your
-comment in part \item. 
+comment . 
 \item Assuming the full normal model, calculate an estimate of the error
-variance σ2 and obtain a 95% confidence interval for σ2. 
-\item Calculate a 95% confidence interval for the true underlying slope
+variance $\sigma^2$ and obtain a 95\% confidence interval for $\sigma^2$. 
+\item Calculate a 95\% confidence interval for the true underlying slope
 coefficient. 
 \item For companies with an employees satisfaction score of 5.0, calculate an
 estimate of the expected employees commitment score together with 95%
@@ -98,19 +136,19 @@ confidence limits.
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13 \item (a) Plot for Isotonic-Isometric exercise methods:
+13  (a) Plot for Isotonic-Isometric exercise methods:
 Dotplot for Isotonic-Isometric
 Normality seems OK for each data set.
 Let XA , XB be reductions in measurements from the isometric and
 isotonic methods, respectively.
-A: 2 2 = 27.6, = 78.90 ; xA xA xA = 2.76, sA = 0.3027, nA =10
-B: 2 2 = 33.7, =120.53 ; = 3.37, = 0.7734, 10 B B B B B x x x s n 
+A: 2 2 = 27.6, = 78.90 ; % xA xA xA = 2.76, sA = 0.3027, nA =10
+B: 2 2 = 33.7, =120.53 ; % = 3.37, = 0.7734, 10 B B B B B x x x s n 
 (b) 2 = 0.3027 ; 2 = 0.7734 A B s s
 2 2 2 2
-0 1 : = ; : A B A B H   H   
+0 1 : = ; : A B A B H %   H   
 1.6 2.6 3.6 4.6
 Isotonic
 Isometric
@@ -120,57 +158,39 @@ Isometric
 = =2.56
 0.3027
 F on 9,9 d.f.
-Upper 5% point is 3.179, so p-value > 0.10.
+Upper 5\% point is 3.179, so p-value > 0.10.
 Therefore do not reject H0.
 (c) The pooled sample variance
-       2 2 2 = 1 1 / 2 p A A B B A B s n  s  n  s n  n 
-= {(9  0.3027) + (9  0.7734)}/18 = 0.538.
-The test statistic   2 1 1
+%        2 2 2 = 1 1 / 2 p A A B B A B s n  s  n  s n  n 
+% = {(9  0.3027) + (9  0.7734)}/18 = 0.538.
+% The test statistic   2 1 1
 = / B A
 A B
 t x x s
 n n
-  
-  
-  	
-  
-
+%%%%%%%%%%%%%%%%
 1 1
 = (3.37 2.76) / 0.538
 10 10
-  
-  	  
-
-
-  
+%%%%%%%%%%%%%%
 = 1.86.
-H0 :  = 0; H1 :  > 0  : mean difference in reduction in
-abdomen measurements (B  A).
+% H0 :  = 0; H1 :  > 0  : mean difference in reduction in
+% abdomen measurements (B  A).
 A one-sided test is appropriate.
 There are 18 d.f. The upper 5% point of t18 is 1.734. Thus the
 probability value is less than 0.05. There is sufficient evidence, at
 the 5% level, to suggest that the isotonic method (B) is more
 effective in reducing abdomen measurement.
 \item (a) Two-sided 95% confidence interval for B  A :
-  2
+%   2
 18
 1 1
 (2.5%)
 10 10 B A x x t s
-  
-   
-  	
-  
-
- 
 2
 3.37 2.76 2.101 0.538
 10
-  
-   	 
-
 
-  
 0.61  0.69 = (0.08,1.3)
 [Note that this just includes zero.]
 (b)  
@@ -192,47 +212,49 @@ Here nA + nB  2 = 18
 18 18
 ,
 (0.025) (0.975)
- s s 
-     
+%  s s 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 18(0.538) 18(0.538)
 ,
 31.53 8.231
- 
- 
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Taking square-roots gives the 95% confidence interval for the
-common standard deviation  as  0.31, 1.18  = (0.55 ,1.08)
-Some candidates used a paired samples approach in part \item(a). This was quite
+common standard deviation %  as  0.31, 1.18  = (0.55 ,1.08)
+Some candidates used a % paired samples approach in part \item(a). This was quite
 inappropriate.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 \item (a) In Model M1 we have a basic model for the initial bp of the whole
+14 
+\begin{itemize}
+\item (a) In Model M1 we have a basic model for the initial bp of the whole
 population of young male athletes, with mean , and the mean bp
-increases by  after using the stimulant.
-(Note: E(follow-up bp) = E(Y) = E[E(Y|X)] = E[X + ] =  + )
+increases by%   after using the stimulant.
+(Note: E(follow-up bp) = $E(Y) = E[E(Y|X)] = E[X + ] =  + )
 Model M2 extends M1 by allowing for a different initial mean for
-each athlete (i).
+each athlete % (i).
 Model M3 extends M2 by allowing for a different mean increase in
-bp for each athlete (i).
+bp for each athlete % (i).
 (Note: In all three models we have a single population variance for
 initial bp and a single, but different, variance for follow-up bp.)
 (Note: V(follow-up bp) = V(Y) = V[E(Y|X)] + E[V(Y|X)] = 1
-2 + 2
+2 + $ 2
 2)
 (b) For 10 athletes, M3 has 22 unknown parameters  but we only
 have 20 data points. So estimation of parameters is impossible.
-\item (a) Initial bp: x = 1191, x2 = 142471 so x = 119.1 , s2 = 69.211
+\item (a) Initial bp: % x = 1191, x2 = 142471 so x = 119.1 , s2 = 69.211
 t9(0.025) = 2.262
 95% CI for  is 119.1  {2.262  (69.211/10)½} i.e. 119.1  5.95
 i.e. (113.15 , 125.05)
 (b) Follow-up bp : x = 1264 x = 126.4 so  = 126.4  119.1 = 7.3
 \item Use the differences (follow-up less initial) for each athlete:
 di : 7, 4, 11, 10, 14, 5, 8, 7, 2, 9
+\end{itemize}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-d = 73, d2 = 705 so d = 7.3 , s2 = 19.122
+% d = 73, d2 = 705 so d = 7.3 , s2 = 19.122
 t9(0.05) = 1.833
- 95% CI (one-sided) for  is (7.3  1.833(19.122/10)½, ) i.e. (4.77, )
+%  95% CI (one-sided) for  is (7.3  1.833(19.122/10)½, ) i.e. (4.77, )
 The early part of this question (on comparing models) looked hard, but,
 pleasingly, was generally well-attempted.
 15 \item see plot
@@ -247,12 +269,12 @@ there seems to be an increasing and linear relationship.
 (47.12)(50.02)
 = 238.3676 = 2.67336
 10 xy S 
- 2.67336 = = 0.946001
+%  2.67336 = = 0.946001
 2.82596
-
- 50.02 47.12 = (0.946001) = 0.544
+% 
+%  50.02 47.12 = (0.946001) = 0.544
 10 10
- 
+%  
 y = 0.544 + 0.9460x
 4.0 4.5 5.0 5.5
 4
@@ -263,7 +285,9 @@ y
 Commitment v. Satisfaction
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item
+\begin{itemize}
+    \item 
+
 2
 2 (2.67336)
 =
@@ -283,10 +307,7 @@ For confidence interval use
 ( 2) 
 ~ n
 n
-
- 
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2 2
 2 2
 2 2
@@ -294,30 +315,25 @@ n
 ,
 (0.025) (0.975) n n
 n n
- 
-     
-  	   
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8(0.1063) 8(0.1063)
 = , = (0.0485,0.3902)
 17.53 2.180
- 
- 
-	 
-
-\item 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 
 = 0.9460
 its standard error is
  2 0.1063
 = = 0.1939
 2.82596 xx S
-
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 95\% confidence interval is 8
-  t (0.025)  s.e.
-= 0.9460  2.306(0.1939) = 0.946  0.447 or (0.499, 1.393)
-(vi) estimate is 0
- =   (5.0) = 0.544 + 0.9460(5.0) = 5.274
+
+%   t (0.025)  s.e.
+% = 0.9460  2.306(0.1939) = 0.946  0.447 or (0.499, 1.393)
+% (vi) estimate is 0
+%  =   (5.0) = 0.544 + 0.9460(5.0) = 5.274
 2
 2
 0
@@ -332,6 +348,6 @@ n S
 1 (5.0 4.712)2
 = 0.1063( ) = 0.1173
 10 2.82596
-
-
+%%%%%%%%%%%%%%%
 95\% confidence limits are  2.306(0.1173) =  0.270 or (5.004, 5.544)
+\end{document}
