@@ -34,7 +34,8 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13 Suppose that the distribution of a physical coefficient, X, can be modelled
+\begin{enumerate}
+\item Suppose that the distribution of a physical coefficient, X, can be modelled
 using a uniform distribution on (0, 1). A researcher is interested in the
 distribution of Y, an adjusted form of the reciprocal of the coefficient, where Y
 = (1 / X) - 1.
@@ -43,7 +44,7 @@ fY(y) = 1/(1 + y)2 , y > 0
 (ii) Show that the mean of Y does not exist. 
 [Total 5]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 An insurance company issues house buildings policies for houses of similar
+\item An insurance company issues house buildings policies for houses of similar
 size in four different post-code regions A, B, C and D.
 (i) An insurance agent takes independent random samples of 10 house
 buildings policies for houses of similar size in regions A and B. The
@@ -68,17 +69,21 @@ Region C: 253 247 244 245 221 229 245 256 232 269
 (Sx = 2,441 ; Sx2 = 597,607)
 Region D: 279 268 290 245 281 262 287 257 262 246
 (Sx = 2,677 ; Sx2 = 718,973)
+\begin{enumerate}[(a)]
 \item Perform a one-way analysis of variance at the 5% level to
 compare the premiums for all four regions.
 \item Present the new data in a simple diagram and hence comment
 briefly on the validity of the assumptions required for the
 analysis of variance.
-\item Calculate a 95% confidence interval for the underlying common
+\item Calculate a 95\% confidence interval for the underlying common
 standard deviation s of such premiums in the four regions. [10]
 (iii) Comment briefly on your two confidence intervals in (i)\item and (ii)\item
 above. [1]
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-15 An engineer is interested in estimating the probability that a particular
+\newpage
+\item  An engineer is interested in estimating the probability that a particular
 electrical component will last at least 12 hours before failing. In order to do
 this, a random sample of n components is tested to destruction and their
 failure times, , ,..., , 1 2 n x x x are recorded. The engineer models failure times by
@@ -117,11 +122,16 @@ part (ii) above.
 hours, so a second engineer estimates the failure probability by
 61/80 = 0.7625, and constructs an upper 95% confidence interval based
 on the binomial distribution.
+\begin{enumerate}[(a)]
 \item Construct this interval, and
 \item comment on the advantages and disadvantages of this method
 when compared to the method of part (ii). 
+\end{enumerate}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-16 The table below contains measurements on the strengths of beams. The width
+\newpage
+\item  The table below contains measurements on the strengths of beams. The width
 and height of each beam was fixed but the lengths varied. Data are available
 on the length (cm) and strength (Newtons) of each beam.
 Length l x = log l Strength
@@ -147,11 +157,12 @@ A graph of log P against log L is included.
 The simple linear regression model y = a + bx has been fitted to the data, and
 the fitted values and residuals are recorded in the table above.
 (i) Use the data summaries above to calculate the least squares estimates
-$ a of a and ˆb of b . 
+% $ a of a and ˆb of b . 
 (ii) Assuming the usual normal linear regression model
-\begin{emumerate}
-\item estimate the error variance s^2,
-\item calculate a 95% confidence interval for b, and
+
+\begin{enumerate}
+\item estimate the error variance $s^2$,
+\item calculate a 95\% confidence interval for b, and
 \item discuss briefly whether the data are consistent with the
 relationship P = k L . 
 \end{enumerate}
@@ -173,22 +184,23 @@ information contained in the plot.
 1.9 2.1 2.3 2.5 2.7 2.9 3.1 3.3
 x = log l
 y = log p
+
+
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 5
-13 (i) FY(y) = P(Y < y) = P(1/X < y + 1) = P[X > 1/(y + 1)] = 1  1/(y + 1)
+\item 
+\[FY(y) = P(Y < y) = P(1/X < y + 1) = P[X > 1/(y + 1)] = 1 - 1/(y + 1)\]
 so fY(y) = dFY(y)/dy = 1/(y+1)2 , y > 0
 (ii) E(Y) = 2 1 2
 0 0 0
 y(1 y) dy (1 y) dy (1 y) dy
-  
-  
-       
-The integral of (1 + y)1 gives log(1 + y) which 
-  as y 
-  so this
+%%%%%%%%%%%%%%%%
+The integral of $(1 + y) 1$ gives log(1 + y) which 
+as y 
+ so this
 integral is not finite. So E(Y) does not exist.
 14 (i) (a) A
 x = 247.9, 2
@@ -197,9 +209,7 @@ s =
 2 1 2479
 617163
 9 10
- 
-  
- 
+%%%%%%%%%%
 = 290.99
 B
 x = 261.9, 2
@@ -208,27 +218,22 @@ s =
 2 1 2619
 687467
 9 10
- 
-  
- 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 = 172.32
 2
 p
 s =
 290.99 172.32
 2
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 = 231.66
 Obs t =
 247.9 261.9
 1 1
 231.66
 10 10
-
- 
-  
- 
-= 2.06
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+= -2.06
 For two-sided test, t18(2.5%) = 2.101.
 As 2.06 < 2.101, there is no evidence at the 5% level of a difference
 between regions A and B.
@@ -238,9 +243,7 @@ Equal variances — OK.
 A
 B
 210 220 230 240 250 260 270 280 290
-     
-     
-
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 6
 (c)
@@ -250,36 +253,35 @@ Page 6
 18
 ~ p
 S
-
-
- 95% CI for 2 is
+
+
+ 95\% CI for 2 is
 2 2
 2 2
 0.975,18 0.025,18
 18 18
 , p p
- S S 
-     
+ S S 
+ 
 =
 18(231.66) 18(231.66)
 ,
 31.53 8.231
- 
- 
- 
+
+
 = (132.25, 506.6)
- 95% CI for  is (11.5, 22.5)
-(ii) (a) x = 10216, x2 = 2621210
-SST = 2621210 
+ 95% CI for  is (11.5, 22.5)
+(ii) (a) x = 10216, x2 = 2621210
+SST = 2621210 
 2 10216
 40
 = 12043.6
 SSB =
 2 2 2 2 2 2479 2619 2441 2677 10216
 10 40
-  
- = 3774.8
- SSR = 8268.8 by subtraction.
+  
+ = 3774.8
+ SSR = 8268.8 by subtraction.
 Source df SS MS
 Regions
 Residual
@@ -294,24 +296,19 @@ F =
 1258.3
 229.7
 = 5.48 on (3,36) df
-F3,36(5%) 
-
+F3,36(5%) 
+
 2.9 by interpolation
-Clearly reject H0 : A = B = C = D at the 5% level
- Strong evidence of a difference between regions A–D.
+Clearly reject H0 : $\mu_A = \mu_B = \mu_C = \mu_D$ at the 5\% level
+ Strong evidence of a difference between regions A–D.
 (b)
 [same scale!]
 Normality — OK.
 Equal variances for A, B, C, D — OK.
- C
+ C
 D
 210 220 230 240 250 260 270 280 290
- 
- 
- 
-   
-  
-
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 7
 (c)
@@ -320,91 +317,89 @@ Page 7
 2 36
 36ˆ
 ~
-
-
-
-where 2 36ˆ = SSR
- 95% CI for 2 is
+
+
+
+where 2 36ˆ = SSR
+ 95% CI for 2 is
 2 2
 0.975,36 0.025,36
 ,
-R R  SS SS 
-     
+R R  SS SS 
+
 =
 8268.8 8268.8
 ,
 54.4 21.37
- 
- 
- 
+ 
+
 = (152.0, 386.9) [interpolate in tables]
- 95% CI for  is (12.3, 19.7)
+ 95\% CI for  is (12.3, 19.7)
 (iii) Second CI is narrower as it is based on more data.
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-15 (i) Start by writing down the likelihood function
-L() =
+\item (i) Start by writing down the likelihood function
+\[L(\lambda) =
 ( 1)
 (1 )
 n
-i x
-
- 
- 
+i x\]
+
+ 
+ 
 .
 The log-likelihood function is
-l() = log L() = n log( 1)   log(1 + xi).
+\[l(\lambda) = log L(\lambda) = n log(\lambda -1)  \lambda log(1 + xi).\]
 Differentiating gives
-l
-
+l
+
 =
 1
 n
- 
- log(1 + xi).
+ 
+ log(1 + xi).
 It is easy to see that the log-likelihood has only one turning point, so this
 can be found by equating the derivative to zero. This gives that the
 maximum likelihood estimate is
-ˆ
+ˆ
 = 1 + .
 log(1 ) i
 n
-  x
+  x
 The second derivative is
 2
 2
- l
-
+ l
+
 = 2 .
 ( 1)
-n
- 
-So an approximate 95% confidence interval for  is
+n
+ 
+So an approximate 95% confidence interval for \lambda is
 ˆ 1
 ˆ 1.96 .
 n
- 
- 
+ 
+ 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 8
+
 (ii) (a) The probability a component will last less than 12 hours before
 failing can be estimated by the point estimate
-1  ˆ 1
+1  ˆ 1
 1
-13
-= 1  0.56
+13
+= 1  0.56
 1
 13
 = 0.762.
-(b) An approximate 95% confidence upper bound for  is
+(b) An approximate 95\% confidence upper bound for  is
 ˆ 1
 ˆ 1.645
 n
- 
-  = 1.56 + 1.645
+ 
+  = 1.56 + 1.645
 0.56
 80
 = 1.663.
@@ -413,12 +408,12 @@ n
 1
 1
 13
- = 0.817.
+ = 0.817.
 (iii) (a) The endpoint of the binomial confidence interval is
-0.7625 + 1.645 
+0.7625 + 1.645 
 0.7625 (1 0.7625)
 80
- 
+ 
 = 0.841.
 (b) There is no single answer to this part. The main points are:
 The second engineer’s (binomial) method will be valid and doesn’t
@@ -428,32 +423,32 @@ distribution specified, but in that case it will be more powerful
 than the binomial method, which does not use the data efficiently.
 This is illustrated in this data as the two point estimates are very
 close, but the first engineer’s confidence interval is narrower.
-16 (i) Sxx = 91.3978 
+16 (i) Sxx = 91.3978 
 2 34.023
 13
 = 2.354, and
-Sxy = 286.6299 
+Sxy = 286.6299 
 110.679 34.023
 13
-
-= 3.0341.
-The least squares estimates are ˆ =
+
+= 3.0341.
+The least squares estimates are ˆ =
 3.0341
 2.354
-
-= 1.289 and
-ˆ
+
+= 1.289 and
+ˆ
 = ˆ
-y  x = 11.887.
-(ii) (a) The sum of squares of the residuals is 0.049019, so 2 is estimated
+y  x = 11.887.
+(ii) (a) The sum of squares of the residuals is 0.049019, so 2 is estimated
 by the residual mean square 0.049019
 11 = 0.004456.
-(b) The estimated variance of ˆ is 0.004456
+(b) The estimated variance of ˆ is 0.004456
 2.3544 = 0.00189.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 9
-This leads to the following 95% confidence interval for :
-1.289  2.201 0.00189 = (1.384, 1.193).
+This leads to the following 95% confidence interval for :
+1.289  2.201 0.00189 = (1.384, 1.193).
 (c) If the relationship P = k/L is correct the slope parameter of the
 regression line should be –1. As the upper end of the interval is
 less than –1, the data do not support the suggested relationship.
@@ -468,3 +463,7 @@ doesn’t fit the data very well.
 0.10
 1.9 2.1 2.3 2.5 2.7 2.9 3.1 3.3
 log L
+
+
+\end{enumerate}
+\end{document}
