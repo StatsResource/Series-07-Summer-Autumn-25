@@ -89,7 +89,7 @@ this, a random sample of n components is tested to destruction and their
 failure times, , ,..., , 1 2 n x x x are recorded. The engineer models failure times by
 assuming that they come from a distribution with distribution function, F, and
 probability density function, f, given below.
-F(x) = 1 - 1
+\[F(x) = 1 - 1
 (1 ) 1
 ,
 + x a- f(x) = a
@@ -98,7 +98,7 @@ a
 +
 1
 (1 x)
-, a > 1, x > 0.
+, a > 1, x > 0.\]
 (i) Determine aˆ , the maximum likelihood estimator of a, and, assuming n
 is large, use asymptotic theory to show that an approximate 95%
 confidence interval for a is given by
@@ -111,9 +111,9 @@ a ± . [8]
 %------------------------%
 \begin{enumerate}[(a)]
 \item estimate the probability a component will fail before 12 hours,
-\item determine an approximate upper 95% one-sided confidence
+\item determine an approximate upper 95\% one-sided confidence
 interval for a, and
-\item hence determine an approximate 95% one-sided confidence
+\item hence determine an approximate 95\% one-sided confidence
 interval which provides an upper bound for the probability in
 part (ii) above. 
 \end{enumerate}
@@ -350,25 +350,26 @@ i x\]
  
  
 .
-The log-likelihood function is
+\begin{itemize}
+    \item The log-likelihood function is
 \[l(\lambda) = log L(\lambda) = n log(\lambda -1)  \lambda log(1 + xi).\]
-Differentiating gives
-l
+\item Differentiating gives
+\[l
 
 =
 1
 n
  
- log(1 + xi).
-It is easy to see that the log-likelihood has only one turning point, so this
+ log(1 + xi).\]
+\item It is easy to see that the log-likelihood has only one turning point, so this
 can be found by equating the derivative to zero. This gives that the
 maximum likelihood estimate is
-ˆ
+\[ˆ
 = 1 + .
 log(1 ) i
 n
-  x
-The second derivative is
+  x\]
+\item The second derivative is
 2
 2
  l
@@ -377,32 +378,34 @@ The second derivative is
 ( 1)
 n
  
-So an approximate 95% confidence interval for \lambda is
+\item So an approximate 95% confidence interval for \lambda is
 ˆ 1
 ˆ 1.96 .
 n
  
+\end{itemize}
+
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (ii) (a) The probability a component will last less than 12 hours before
 failing can be estimated by the point estimate
-1  ˆ 1
+\[1  ˆ 1
 1
 13
 = 1  0.56
 1
 13
-= 0.762.
+= 0.762.\]
 (b) An approximate 95\% confidence upper bound for  is
-ˆ 1
+\[ ˆ 1
 ˆ 1.645
 n
  
   = 1.56 + 1.645
 0.56
 80
-= 1.663.
+= 1.663.\]
 (c) This gives an upper bound for the failure probability of
 0.663
 1
@@ -423,6 +426,9 @@ distribution specified, but in that case it will be more powerful
 than the binomial method, which does not use the data efficiently.
 This is illustrated in this data as the two point estimates are very
 close, but the first engineer’s confidence interval is narrower.
+
+\newpage
+
 16 (i) Sxx = 91.3978 
 2 34.023
 13
@@ -432,29 +438,28 @@ Sxy = 286.6299
 13
 
 = 3.0341.
-The least squares estimates are ˆ =
-3.0341
-2.354
-
-= 1.289 and
+The least squares estimates are \[ˆ =
+\frac{3.0341}{2.354}= 1.289\] and
 ˆ
 = ˆ
 y  x = 11.887.
-(ii) (a) The sum of squares of the residuals is 0.049019, so 2 is estimated
+\begin{itemize}
+    \item (ii) (a) The sum of squares of the residuals is 0.049019, so 2 is estimated
 by the residual mean square 0.049019
 11 = 0.004456.
-(b) The estimated variance of ˆ is 0.004456
+\item (b) The estimated variance of ˆ is 0.004456
 2.3544 = 0.00189.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 9
-This leads to the following 95% confidence interval for :
+This leads to the following 95\% confidence interval for :
 1.289  2.201 0.00189 = (1.384, 1.193).
-(c) If the relationship P = k/L is correct the slope parameter of the
+\item (c) If the relationship P = k/L is correct the slope parameter of the
 regression line should be –1. As the upper end of the interval is
 less than –1, the data do not support the suggested relationship.
-(iii)
+\item (iii)
 The residuals show that the line underfits in the centre. A straight line
 doesn’t fit the data very well.
+\end{itemize}
 -0.15
 -0.10
 -0.05
