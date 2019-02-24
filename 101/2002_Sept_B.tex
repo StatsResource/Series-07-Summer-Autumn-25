@@ -33,53 +33,64 @@
 \begin{document}
 
 \begin{enumerate}
-\item 5 Suppose that a line is fitted by least squares to a set of data  xi , yi  , i =1, 2,, n
+\item 5 Suppose that a line is fitted by least squares to a set of data $\leq$$\leq$ xi , yi  , i =1, 2,$\leq$, n
 which has sample correlation coefficient r. Let the fitted value at xi be denoted yi .
-Show that the sample correlation coefficient of the data  yi , yi , i =1, 2,, n, that
+Show that the sample correlation coefficient of the data $\leq$$\leq$ yi , yi , i =1, 2,$\leq$, n, that
 is, of the observed and fitted y values, is also equal to r. [3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 6 As part of an investigation an insurance company collected data for the year 2000 on
 claims sizes for all claims on a certain type of motor insurance policy. The resulting
 data are given below in the form of a grouped frequency distribution.
+\begin{verbatim}
 Claim size (£) Frequency
- 100 862
-> 100 and  200 608
-> 200 and  300 1253
-> 300 and  400 1066
-> 400 and  500 558
+$\leq$ 100 862
+> 100 and $\leq$ 200 608
+> 200 and $\leq$ 300 1253
+> 300 and $\leq$ 400 1066
+> 400 and $\leq$ 500 558
 > 500 1290
 Total 5637
-(i) Calculate the cumulative frequencies and draw a graph of the claim size
+\end{verbatim}
+
+
+\begin{enumerate}[(a)]
+    \item (i) Calculate the cumulative frequencies and draw a graph of the claim size
 distribution function (i.e. the cumulative frequencies against claim size). [3]
-(ii) You have been asked to determine the proportion of claim sizes which are less
+    \item (ii) You have been asked to determine the proportion of claim sizes which are less
 than £250. Use linear interpolation to approximate this proportion to two
-decimal places. [2]
-(iii) Use linear interpolation to approximate (to the nearest £) the value of the
+decimal places. 
+    \item (iii) Use linear interpolation to approximate (to the nearest £) the value of the
 median of the claim size distribution. [2]
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 7 Suppose that X is a continuous random variable uniformly distributed on (0, 1).
-(i) Show that the moment generating function of Y =  log X is
-MY(t) = 1/(1  t) for t < 1. [3]
-(ii) Hence state the distribution of Y. [1]
+\begin{enumerate}[(a)]
+    \item  Show that the moment generating function of Y =  log X is
+MY(t) = 1/(1  t) for $t < 1$. 
+    \item Hence state the distribution of Y. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 8 Assume that, for a group of insurance policies, the number of claims on each policy
 can be modelled by a Poisson distribution with the same rate  per year,
 independently for each policy. Such a group of 1500 policies gave rise to a total of
 183 claims during the last year.
-(i) State the value of the maximum likelihood estimate of . [1]
-(ii) Hence obtain estimates of the following quantities:
+\begin{enumerate}[(a)]
+    \item (i) State the value of the maximum likelihood estimate of . 
+\item (ii) Hence obtain estimates of the following quantities:
 (a) The probability that a subset of 10 of these policies results in no claims
 over the next six months.
 (b) The probability that a subset of 250 of these policies results in more
-than 40 claims over the next year. [4]
+than 40 claims over the next year. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 \newpage
 
-5 yi = y (xi  x) soyi = ny so mean of fitted values is y
+5 yi = y $\leq$(xi  x) so$\leq$yi = ny so mean of fitted values is y
  Correlation coefft. of observed and fitted values is
-  
-        2 2 1/ 2 2 1/ 2
+$\leq$ $\leq$ 
+$\leq$ $\leq$  $\leq$   $\leq$  2 2 1/ 2 2 1/ 2
  
 = =
  
@@ -88,10 +99,10 @@ i i yy xx
 y y y y S
 r
 y y y y S S
-  
-  
-
- 
+  $\leq$
+  $\leq$
+$\leq$
+$\leq$ $\leq$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 3
 6 (i) Cumulative frequency distribution is
@@ -106,15 +117,15 @@ max 5637
 (ii) For x = 250 the corresponding F(x) is approximately
 1470 (2723 1470) (250 200) 2096.5
 100
-
-  
+$\leq$
+ $\leq$ 
 and the corresponding approximate proportion is 2096.5 0.37
 5637
-
+$\leq$
 (iii) For the median we need x such that F(x) = 0.5(5637) = 2818.5
 median 300 2818.5 2723 (100) £309
 1066
-
+$\leq$
   
 The maximum claim size is not given, and candidates were expected to exercise common
 sense and judgement. One sensible approach is to leave the x-scale open-ended and indicate
@@ -135,7 +146,7 @@ for P(X<250)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 4
 7 (i) ( ) = ( tY ) = ( t log X )
-MY t E e E e
+MY t E e E e$\leq$
 1 1 1
 0
 0
@@ -144,17 +155,17 @@ MY t E e E e
 t
 E X t x tdx x
 t
- 
- 
- 
+$\leq$ 
+$\leq$ $\leq$
+$\leq$ 
  
   
-
+$\leq$
 = 1 , 1.
 1
 t
 t
-
+$\leq$
 
 (ii) This is the MGF of an exponential distribution with parameter 1, and by
 uniqueness for the MGF this then implies that Y has this distribution.
@@ -162,22 +173,25 @@ uniqueness for the MGF this then implies that Y has this distribution.
 8 (i)  = 183 = 0.122
 1500
 
-(ii) (a) Number of claims X for 10 policies in six months is Poisson with
+\begin{itemize}
+    \item (ii) (a) Number of claims X for 10 policies in six months is Poisson with
 parameter 10(0.5)(0.122) = 0.61
-P(no claims) = P(X = 0) = exp(	0.61) = 0.543
-Alternative:
+\item P(no claims) = P(X = 0) = exp(	0.61) = 0.543
+\item Alternative:
 For a single policy P(no claim) = exp(	0.061) = 0.9408
 For 10 policies P(no claims) = (0.9408)10 = 0.543
-(b) Number of claims X for 250 policies in one year is Poisson with
+\item (b) Number of claims X for 250 policies in one year is Poisson with
 parameter 250(0.122) = 30.5
-Outwith scope of the Green tables, so we must use a normal
+\item Outwith scope of the Green tables, so we must use a normal
 approximation:
-X  N(30.5,30.5)
-Applying a continuity correction:
+X $\leq$ N(30.5,30.5)
+\item Applying a continuity correction:
+\end{itemize}
+
 ( 40) ( 40.5) = ( 40.5 30.5 =1.81) =1 0.96485
 30.5
 = 0.035
-P X P X P Z 
-    
+P X P X P Z $\leq$
+    $\leq$
 
 \end{document}
