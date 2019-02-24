@@ -83,7 +83,7 @@ X is given by:
     \item (i) Without doing any further calculations, comment on the first statisticians
 proposed model for the data. [2]
 Consider the second statistician's proposed model.
-\item (ii) Verify that the mean of the distribution of X is (1  p)/p and hence
+\item (ii) Verify that the mean of the distribution of X is (1 \;-\; p)/p and hence
 calculate the method of moments estimate of p. [4]
 (Note: this estimate is also the maximum likelihood estimate.)
 \item (iii) Verify that the frequencies expected under the second statistician's
@@ -180,33 +180,35 @@ We conclude that real differences do exist : there is a company effect.
 [** OR: Error SS = (14 × 196.41) + (9 × 341.33) + (11 × 609.36) = 12524.7
 ∴ Model SS = 21467.3 − 12524.7 = 8942.6]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-14 (i) The model greatly overestimates the number of policyholders who give
+\begin{itemize}
+    \item 14 (i) The model greatly overestimates the number of policyholders who give
 rise to exactly one claim, and greatly underestimates the number who give
 rise to multiple claims.
-(ii) E(X) = 1 × p(1−p) + 2 × p(1−p)2 + 3 × p(1−p)3 + 
-= p(1−p)[1 + 2(1−p) + 3(1−p)2 + ] = p(1−p)[1  (1−p)]−2 = (1−p)/p
+\item (ii) E(X) = 1 × p(1−p) + 2 × p(1−p)2 + 3 × p(1−p)3 + 
+= p(1−p)[1 + 2(1−p) + 3(1−p)2 + ] = p(1−p)[1 \;-\; (1−p)]−2 = (1−p)/p
 Data mean is (128 + 78 + 21)/1000 = 0.227
 so the method of moments estimate * of p is given by solving
 (1−p)/p = 0.227, which gives estimate of p = 0.81500.
 * it is also in fact the MLE
-(iii) Estimates of probabilities for 0,1,2, and 3 claims are then 0.815,
+\item (iii) Estimates of probabilities for 0,1,2, and 3 claims are then 0.815,
 0.815 × 0.185 = 0.15078, 0.815 × 0.1852 = 0.02789, and
 0.815 × 0.1853 = 0.00516
-So, for 4 or more claims, estimate is 1  0.99883 = 0.00117.
+So, for 4 or more claims, estimate is 1 \;-\; 0.99883 = 0.00117.
 Hence expected frequencies are as follows:
 Number of claims per policyholder  0 1 2 3 ≥4
 Expected number of policyholders 815.0 150.8 27.9 5.2 1.2
-(iv) (a) Using 5 cells:
-χ2 = (826815)2/815+(128150.8)2/150.8+(3927.9)2/27.9 +(75.2)2/5.2
+\item (iv) (a) Using 5 cells:
+\[ χ2 = (826\;-\;815)2/815+(128\;-\;150.8)2/150.8+(39\;-\;27.9)2/27.9 +(7\;-\;5.2)2/5.2\]
 + 1.22/1.2 = 9.84 on 3 df
 P-value is between 0.025 and 0.01
 There is quite strong evidence against the null hypothesis (that the
 second statisticians model describes the data) and we conclude that
 the model does not provide a good fit to the data.
-[Alternative solution: Using 4 cells (for 0 , 1 , 2 , and ≥ 3) the χ2 value
+\item [Alternative solution: Using 4 cells (for 0 , 1 , 2 , and ≥ 3) the χ2 value
 is 8.07 on 2df. P-value is again between 0.025 and 0.01.]
   (b) The P-value exceeds 0.01 so we cannot reject the hypothesis.
 The hypothesis that the model describes the data stands.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 15 (i) (a)
 (1) mean
@@ -302,7 +304,10 @@ very large.
 242 2.262 = (161.9,322.1) (0.0124,0.0247)
 10
 % ±  ]
-16 (i) x = lean body mass
+16 
+
+\begin{itemize}
+    \item (i) x = lean body mass
 y = resting metabolic rate
 35 45 55
 1500
@@ -337,7 +342,7 @@ S xy x y n
 −
 
 %--------------------------%
-(ii) Model: y = α + βx
+    \item (ii) Model: y = α + βx
 The least squares estimates of α and β:
  12467.8 = = = 24.03
 518.927
@@ -351,7 +356,7 @@ S
 α y − βx −
 y = 201.2 + 24.03x.
 %--------------------------%
-(iii) 95% confidence interval for β: ( ) 10
+    \item (iii) 95% confidence interval for β: ( ) 10
 β ± t (2.5%)s.e. β
 2 2
 s.e.(  ) =  ,  2 = xy /( 2) = 9040.4
@@ -366,7 +371,7 @@ S S
 24.03 ± 2.228(4.17) = 24.03 ± 9.299 = (14.7, 33.3)
 Assuming normal errors with a constant variance.
 %---------------------------%
-(iv) 95\% confidence intervals:
+    \item (iv) 95\% confidence intervals:
 ( )2
 2
 10
@@ -392,9 +397,9 @@ S
 
 = 2003.1 ± 2.228 × 136.2
 = (1700, 2307)
-(v) The confidence interval for x = 50 kg seems OK.
+    \item (v) The confidence interval for x = 50 kg seems OK.
 However, the confidence interval at x = 75 kg involves extrapolation. Care
 needed!
-
+\end{itemize}
 
 \end{document}
