@@ -33,34 +33,38 @@
 \begin{document}
 \begin{enumerate}
 \item The size of a claim, X, which arises under a certain type of insurance contract, is
-to be modelled using a gamma random variable with parameters $\alpha$ and θ
+to be modelled using a gamma random variable with parameters $\alpha$ and \theta
 (both > 0) such that the moment generating function of X is given by
-M(t) = (1 − θt)−$\alpha$ , t < 1/θ .
+\[M(t) = (1 - \thetat)-$\alpha$ , t < 1/\theta .\]
 By using the cumulant generating function of X, or otherwise, show that the
 coefficient of skewness of the distribution of X is given by 2/√$\alpha$. [5]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item  Let Z be a random variable with mean 0 and variance 1, and let X be a random
-variable independent of Z with mean 5 and variance 4. Let Y = X − Z.
+variable independent of Z with mean 5 and variance 4. Let Y = X - Z.
 Calculate the correlation coefficient between X and Y. [5]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Let X1 , X2 ,..., Xn be a random sample of size n from a distribution with density
-2
+\[ 2
 2
 ( ; ) ,0 : 0
 x
-f x θ = < x < θ θ >
-θ
-.
-(i) Write down the likelihood function clearly and hence by drawing a rough
+f x \theta = < x < \theta \theta >
+\theta
+.\]
+\begin{enumerate}
+    \item (i) Write down the likelihood function clearly and hence by drawing a rough
 sketch of the likelihood function, show that the maximum likelihood
-estimator of θ is given by 1 2
-ˆ max{ , ,..., }. n θ = X X X 
-(ii) Without calculating ˆ ( ) E θ , explain why ˆθ is a biased estimator of θ. 
+estimator of \theta is given by
+\[1 2
+ˆ max{ , ,..., }. n \theta = X X X \]
+\item Without calculating $E(\hat{\theta})$ , explain why $\hat{\theta}$ is a biased estimator of $\theta$. 
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item A market research company intends to estimate the proportion of the population,
-θ, who support a certain political party. They intend to poll a sample large
-enough so that a 95% confidence interval for θ has a width of 0.03 or less. It is
-thought that θ is approximately equal to 0.4.
+\theta, who support a certain political party. They intend to poll a sample large
+enough so that a 95\% confidence interval for $\theta$ has a width of 0.03 or less. It is
+thought that $\theta$ is approximately equal to 0.4.
 Assuming that everyone questioned will respond to the poll, calculate the
 minimum size of sample which the company should take. 
 \end{enumerate}
@@ -70,7 +74,11 @@ algebraic difficulties) rather than using the more convenient cumulant generatin
 function.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 5
-10 Cov(X , Y) = Cov(X , X − Z) = Cov(X , X) − Cov(X , Z) = V(X) − 0 = 4
+10
+
+\begin{eqnarray*}
+Cov(X , Y) &=& Cov(X , X - Z) \\ &=& Cov(X , X) - Cov(X , Z) \\ &=& V(X) - 0 \\&=& 4\\
+\end{eqnarray*}
 V(X) = 4, V(Y) = V(X) + V(Z) = 5
 so Corr(X , Y) = 4/(4 × 5)1/2 = 0.894
 OR:
@@ -81,20 +89,20 @@ Corr(X , Y) =
 ( ) ( )
 E XY E X E Y
 Var X Var Y
-− =
+- =
 [ ( )] 25.
 4 5
-E X X − Z −
+E X X - Z -
 ×
 The independence of X and Z implies that E(XZ) = 0, and as
 E(X2) = Var(X) + 52 = 29, we obtain that the correlation is
 29 0 25
 20
-− − =
+- - =
 2
 5
 = 0.894.
-11 (i) L(θ) = 1 2
+11 (i) $L(\theta) = 1 2$
 2
 : 0
 0 otherwise
@@ -105,8 +113,8 @@ x
 x
 % 5 =
 % 
-% Π < < θ
-% θ 
+% Π < < \theta
+% \theta 
 % = 2
 2
 : max( )
@@ -117,24 +125,27 @@ n i
 x
 x
 %  Π
-% θ > 
-% θ
+% \theta > 
+% \theta
 % 
-% ∴ maximum occurs at ˆθ = max(Xi)
+% ∴ maximum occurs at \hat{\theta}= max(Xi)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 6
-(ii) Since Xi < θ for all i
-then max(Xi) < θ always
-∴ ˆ ( ) E θ < θ ∴ˆθ is biased
+(ii) Since $X_i < \theta$ for all i
+then $max(Xi) < \theta$ always
+∴ $E( \hat{\theta}) < \theta$ ∴$\hat{\theta}$ is biased
 Q11 Comment: Few candidates appreciated the significance of the fact that the range of the
-variable included the unknown parameter θ and therefore the likelihood L(θ) has a
+variable included the unknown parameter $\theta$ and therefore the likelihood $L(\theta)$ has a
 discontinuity (above which it is decreasing).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\newpage
 12 Assuming n will be large enough to make a normal approximation to the
 binomial acceptable, the confidence interval will be
-ˆ(1 ˆ ) ˆ 1.96 ,
-n
-θ − θ θ ± where ˆθ is the proportion of the sample who support the party.
-Although ˆθ is unknown, it can be estimated as 0.4, so the width of the interval
+% ˆ(1 ˆ ) ˆ 1.96 ,
+% n
+% \theta - \theta \theta ± where ˆ\theta
+is the proportion of the sample who support the party.
+Although $\hat{\theta}$ is unknown, it can be estimated as 0.4, so the width of the interval
 will be approximately
 0.4 0.6
 2 1.96
@@ -154,8 +165,8 @@ We need to take n = 4,098.
 approximation would be appropriate.)
 Notes: As this answer is approximate, approximations (such as replacing 1.96
 with 2) are acceptable, as is rounding the final answer.
-An acceptable alternative would be to estimate ˆθ by 0.415 rather than 0.4; this
-is the upper limit of a 95% confidence interval for θ. This leads to a value of
+An acceptable alternative would be to estimate $\hat{\theta}$ by 0.415 rather than 0.4; this
+is the upper limit of a 95\% confidence interval for $\theta$. This leads to a value of
 n = 4,145.
 
 \end{document}
