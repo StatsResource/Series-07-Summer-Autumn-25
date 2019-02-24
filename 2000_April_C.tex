@@ -35,17 +35,25 @@
 \enumerate}
 \item The discrete random variable X has the following probability function:
 P(X = i) = 0.2 + ai : i = -2, -1, 0, 1, 2.
-(i) State the possible values that a can take. [1]
-(ii) Given a random sample x1 , x2 , ..., xn from this distribution, determine
+
+\begin{enumerate}[(a)]
+\item (i) State the possible values that a can take. [1]
+\item (ii) Given a random sample x1 , x2 , ..., xn from this distribution, determine
 the method of moments estimate of a and show that this can result in
 inadmissible estimates (i.e. estimates outside the range of possible
 values of a). 
-
+\end{enumerate}
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-9 (i) This will be a probability function provided the specified probabilities are
-non-negative; i.e. if and only if 0.1  a  0.1.
-(ii) The method of moments estimate of a is obtained by equating the sample
-mean to the population mean. To do this note that
+9 
+
+\begin{itemize} 
+\item (i) This will be a probability function provided the specified probabilities are
+non-negative; i.e. if and only if $-0.1 < a < 0.1$.
+\item (ii) The method of moments estimate of a is obtained by equating the sample
+mean to the population mean. 
+
+\end{itemize}
+To do this note that
  = 2
 2
  i(0.2 + ai) = a 2
@@ -54,9 +62,9 @@ mean to the population mean. To do this note that
 Thus, the method of moments estimate is 10
 X .
 
-As X can take any value between 2 and +2, the method of moments
+As X can take any value between -2 and +2, the method of moments
 estimate can take any value between –0.2 and +0.2. Thus it can be
-outside the range (0.1, 0.1).
+outside the range (-0.1, 0.1).
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Under a particular model for the evolution of the size of a population over
@@ -78,7 +86,7 @@ t s
 î + l - þ
 .
 If the population dies out, it remains in this extinct state for ever.
-\begin{enumerate}
+\begin{enumerate}[(a)]
     \item Show that the expected size of the population at any time t is 1. 
 \item  Show that the probability that the population has become extinct by
 time t is given by lt / (1 + lt). 
@@ -86,19 +94,23 @@ time t is given by lt / (1 + lt).
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-10 (i)
+10 
+
+\begin{itemize}
+    \item (i)
 t
-X G (s) = (1  t){1 + t(1  s)}1 {s + t(1  s)}{t}{1 + t(1  s)}2
+X G (s) = (1 - t){1 + t(1 - s)}1 -{s + t(1 - s)}{-t}{1 + t(1 - s)}2
   =
 t
-X G (1) = 1  t + t = 1
-(ii) P(extinct by time t) = P(population size at time t is zero)
+X G (1) = 1 - t + t = 1
+\item (ii) P(extinct by time t) = P(population size at time t is zero)
 = (0)
 t
 X G = t / (1 + t)
-(iii) P(extinct by time t) 
+\item (iii) P(extinct by time t) 
  1 as t 
  , so eventual extinction is certain.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
@@ -140,10 +152,17 @@ distribution (X, Y) is as follows:
 
 Calculate the sample correlation coefficient for these data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-12 x = 50(2) + 0 + 60(2) = 20 x2 = 50(4) + 0 + 60(4) = 440
-y = 50(2) + 0 + 60(1) = 40 y2 = 50(4) + 0 + 60(1) = 260
-xy = 50(4) + 0 + 60(2) = 320
-so r = [320  (20  40)/200]/[(440  202/200)(260  402/200)]1/2 = 0.975
+
+
+12
+\begin{itemize}
+    \item $\sum x = 50(-2) + 0 + 60(2) = 20$
+    \item $\sum x2 = 50(4) + 0 + 60(4) = 440$
+\item $\sum y = 50(2) + 0 + 60(-1) = 40$ 
+\item $\sum y2 = 50(4) + 0 + 60(1) = 260$
+\item $\sum xy = 50(-4) + 0 + 60(-2) = -320$
+\end{itemize}
+so r = [-320 - (20  40)/200]/[(440 - 202/200)(260 - 402/200)]1/2 = -0.975
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 \end{document}
