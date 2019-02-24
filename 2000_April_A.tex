@@ -63,7 +63,7 @@ Thus, the probability that the total claim is greater than £100,000 is
 1
 4313
   
-  
+ q 
  
 = 1  (1.507) = 0.066.
 \newpage
@@ -75,17 +75,21 @@ f(q) = 9(1 - q)8 : 0 < q < 1.
 Using this distribution, calculate the probability that q exceeds 0.2. 
 
 
-3 P( > 0.2) =
+3
+
+\begin{eqnarray*}
+P(q > 0.2) &=&
 1
 8
 0.2
- 9 (1  ) d
-=
+ 9 (1  ) d \\
+&=&
 1
 9
 0.2
-(1  ) 
-= 0 + (1  0.2)9 = 0.89 = 0.13
+q(1  )  \\
+&=& 0 + (1 - 0.2)^9 \\ &=& (0.8)^9 \\ &=& 0.13
+\end{eqnarray*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \item Consider the following three probability statements concerning an F variable
@@ -99,36 +103,24 @@ with 6 and 12 degrees of freedom.
 State, with reasons, whether each of these statements is true. 
 
 
-4 For (a) to be true, 0.250 must be lower 5\% pt of F6,12 i.e. reciprocal of upper 5% pt
+4 
+\begin{itemize}
+\item For (a) to be true, 0.250 must be lower 5\% pt of F6,12 i.e. reciprocal of upper 5% pt
 of F12,6 which is
 1
 4.000
 = 0.250  true.
-For (b) to be true, 4.821 must be upper 1\% pt of F6,12 which is 4.821 true.
-For (c) to be true, 0.130 must be lower 1\% pt of F6,12 i.e. reciprocal of upper 1% pt
+    \item For (b) to be true, 4.821 must be upper 1\% pt of F6,12 which is 4.821 true.
+\item For (c) to be true, 0.130 must be lower 1\% pt of F6,12 i.e. reciprocal of upper 1% pt
 of F12,6 which is
 1
 7.718
 = 0.130 true.
 
+\end{itemize}
+
 \newpage
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item  An insurance company’s records suggest that experienced drivers (those aged
-over 21) submit claims at a rate of 0.1 per year, and inexperienced drivers
-(those 21 years old or younger) submit claims at a rate of 0.15 per year. A
-driver can submit more than one claim a year. The company has 40
-experienced and 20 inexperienced drivers insured with it.
-The number of claims for each driver can be modelled by a Poisson
-distribution, and claims are independent of each other. Calculate the
-probability the company will receive three or fewer claims in a year. 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\item The number of claims which arise under a policy of a particular type in a year
-is to be modelled as a Poisson(l) random variable. A random sample of 600
-such policies gave rise to a total of 72 claims in 1999.
-Determine the approximate probability value of this result in a test of
-H0 : l = 0.14 v H1 : l < 0.14 . 
+ 
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
