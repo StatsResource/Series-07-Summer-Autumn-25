@@ -66,19 +66,42 @@ interval is of width ±£10. [2]
 \item 12 In 1998 a market research organisation conducted a survey in a large city. A
 random sample of 400 households showed that 68 were such that at least one
 person in the household was a member of a health/fitness club.
-(i) An estimate of the true proportion of households in the city with at least
+\begin{enumerate}[(a)]
+\item  An estimate of the true proportion of households in the city with at least
 one person being a member of a health/fitness club is therefore
 68
 400
-= 0.17. Calculate 95% confidence limits for the true proportion.
-[2]
-(ii) A similar survey was conducted in 1999 and a random sample of 400
+= 0.17. Calculate 95\% confidence limits for the true proportion.
+\item A similar survey was conducted in 1999 and a random sample of 400
 households showed that 80 were such that at least one person in the
 household was a member of a health/fitness club.
 Perform a one-sided test to investigate whether the true proportion
 increased from 1998 to 1999. In particular determine the p-value of the
 test and state your conclusion. 
-[Total 5]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9 (i) The change after a large number of time periods equals the sum of i.i.d.
+r.v.s.
+
+\begin{itemize}
+    \item The Central Limit theorem leads to an approximate normal distribution.
+(ii)
+x : +1 0 −1
+p : 0.35 0.35 0.30
+\item E(X) = 0.35 − 0.30 = 0.05
+\item E(X2) = 0.35 + 0.30 = 0.65
+\item ∴Var(X) = 0.65 − (0.05)2 = 0.6475 ∴s.d.(X) = 0.8047
+\item Let Y = price change after 500 periods
+\item ∴Y has mean 500(0.05) = 25 and s.d. 500(0.8047) =17.99
+\item P(Y > 20)
+20 25
+( = 0.28) 0.61
+17.99
+≈ P Z > − − =
+\item [Continuity correction can be used if desired]
+\end{itemize}
+
 
 \newpage
 
@@ -95,8 +118,7 @@ n
 20 20
 P Z > − μ − Φ − μ
 where Φ(.) is the cdf of N(0,1).
-Subject 101 (Statistical Modelling)  April 2001  Examiners Report
-Page 5
+
 Using the invariance property of MLE’s, we get μ from the equation
  200  =1 ( )
 20
@@ -111,6 +133,8 @@ So with θ = 0.25, we get μ from
 20
 ∴ − μ from tables
 ∴μ = 200 − 20(0.674) = £186.52
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 11 (i) 95% confidence interval:
 75
 x 1.96
