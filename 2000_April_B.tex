@@ -36,13 +36,24 @@
 %% Subject 101 — Statistical Modelling
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{enumerate}
-    \item 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  An insurance company’s records suggest that experienced drivers (those aged
+over 21) submit claims at a rate of 0.1 per year, and inexperienced drivers (those 21 years old or younger) submit claims at a rate of 0.15 per year. 
+\begin{itemize}
+\item A driver can submit more than one claim a year. The company has 40 experienced and 20 inexperienced drivers insured with it.
+\item The number of claims for each driver can be modelled by a Poisson distribution, and claims are independent of each other.
+\end{itemize}
+ Calculate the
+probability the company will receive three or fewer claims in a year. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 \item  As claims are independent the number of claims by inexperienced drivers will
-follow a Poisson distribution with mean 20  0.15 = 3, and the number of claims
+follow a Poisson distribution with mean $20 \times 0.15 = 3$, and the number of claims
 made by experienced drivers will follow a Poisson distribution with mean
-40  0.1 = 4. Again using the independence assumption, the total number of
-claims, X, is Poisson with mean 7.
+$40 \times 0.1 = 4$. Again using the independence assumption, the total number of
+claims, $X$, is Poisson with mean 7.
 Thus, P(X 3) =
 3
 7
@@ -53,14 +64,24 @@ i
 i
 e
 i
-
-
- = 0.082.
+% 
+% \times
+%  = 0.082.
 (The answer can also be taken directly from the Green Book, which gives
 0.08177.)
+
+\newpage
+
+\item The number of claims which arise under a policy of a particular type in a year
+is to be modelled as a Poisson(l) random variable. A random sample of 600
+such policies gave rise to a total of 72 claims in 1999.
+Determine the approximate probability value of this result in a test of
+H0 : l = 0.14 v H1 : l < 0.14 .
 \item 6 Total number of claims X ~ Poisson(600)
 Under H0: X ~ Poisson(84) ~ N(84,84) approximately
-Prob. value = P(X  72) = P[Z < (72.5  84)/	84] = P(Z < 1.255) = 0.105
+\begin{eqnarray*}
+Prob. value &=& P(X \geq 72) \\ &=& P[Z < (72.5 - 84)/	84] \\ &=& P(Z < -1.255) &=& 0.105\\
+\end{eqnarray*}
 \item 7 ( ) ( , ) ( | ) ( ) ( | ) ( ) Y Y E X xf x y dxdy xf x y dx f y dy E X Y y f y dy
 
 \item Suppose that X and Y are continuous random variables.
@@ -87,16 +108,16 @@ i1
 and s.d. 100(2.6) = 26 hours.
 Central limit theorem 
  T is approximately normal as n is large.
- P(T > 400) 
-
-400 360
-1.54
-26
-P Z
-  
-   
- 	
-= 1  0.93822 = 0.062
+%  P(T > 400) 
+% \times
+% 400 360
+% 1.54
+% 26
+% P Z
+% \times  -
+%    
+% \geq 	
+% = 1 - 0.93822 = 0.062
 
 
 \end{document}
