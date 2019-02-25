@@ -34,10 +34,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \enumerate}
 \item The discrete random variable X has the following probability function:
-P(X = i) = 0.2 + ai : i = -2, -1, 0, 1, 2.
+\[P(X = i) = 0.2 + ai : i = \{-2, -1, 0, 1, 2.\}\]
 
 \begin{enumerate}[(a)]
-\item (i) State the possible values that a can take. [1]
+\item (i) State the possible values that a can take. 
 \item (ii) Given a random sample x1 , x2 , ..., xn from this distribution, determine
 the method of moments estimate of a and show that this can result in
 inadmissible estimates (i.e. estimates outside the range of possible
@@ -99,14 +99,14 @@ time t is given by lt / (1 + lt).
 \begin{itemize}
     \item (i)
 t
-X G (s) = (1 - t){1 + t(1 - s)}1 -{s + t(1 - s)}{-t}{1 + t(1 - s)}2
+\[X G^{\prime} (s) = (1 - \lambda t){1 + \lambda t(1 - s)}1 -{s + \lambda t(1 - s)}{-\lambda t}{1 + \lambda t(1 - s)}2
   =
-t
-X G (1) = 1 - t + t = 1
+t\]
+\[X G^{\prime} (1) = 1 - \lambda t + \lambda t = 1\]
 \item (ii) P(extinct by time t) = P(population size at time t is zero)
 = (0)
 t
-X G = t / (1 + t)
+X G = \lambda t / (1 + \lambda t)
 \item (iii) P(extinct by time t) 
  1 as t 
  , so eventual extinction is certain.
@@ -117,33 +117,41 @@ X G = t / (1 + t)
 \item A charity sent eight hundred of its supporters information packs about its activities and asked for donations to help it continue its work. Two hundred were sent a pack about its work in education, two hundred a pack about its
 work in health care, and four hundred a pack about its anti-poverty programmes. Ninety-seven of the eight hundred people responded with donations; the breakdown is shown in the table below.
 
-Education Health Poverty Total
-Donate 26 31 40 97
-Don’t donate 174 169 360 703
-Total 200 200 400 800
 
-Perform a c2 test on this table to investigate whether the proportions who
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+Expected 	&	Education 	&	Health 	&	Poverty 	&	Total	\\ \hline
+Donate & 26 & 31 & 40 & 97 \\ \hline
+Don’t donate  & 174 & 169& 360&  703\\ \hline
+Total	&	200	&	200	&	400	&	800	\\ \hline
+\end{tabular}
+\end{center}
+
+Perform a $\chi^2$ test on this table to investigate whether the proportions who
 send donations are affected by the type of pack received. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \medskip 
 Complete the table of Expected values:
-Expected Education Health Poverty Total
-Donate 24.25 24.25 48.5 97
-Don’t donate 175.75 175.75 351.5 703
-200 200 400 800
-Calculate 2
- = 3.98.
-The 5\% point of a 2
- random variable on 2 degrees of freedom is 5.991,
-so the 2
- test is not significant at the 5% level.
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+Expected 	&	Education 	&	Health 	&	Poverty 	&	Total	\\ \hline
+Donate 	&	24.25	&	24.25	&	48.5	&	97	\\ \hline
+Don’t donate	&	175.75	&	175.75	&	351.5	&	703	\\ \hline
+	&	200	&	200	&	400	&	800	\\ \hline
+\end{tabular}
+\end{center}
+
+Calculate $\chi^2$ = 3.98.
+The 5\% point of a $\chi^2$ random variable on 2 degrees of freedom is 5.991,
+so the $\chi^2$ test is not significant at the 5\% level.
 On the basis of the data collected, it is plausible that the three packs are equally
 effective.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item A random sample of 200 pairs of observations (x, y) from a discrete bivariate
-distribution (X, Y) is as follows:
+\item A random sample of 200 pairs of observations $(x, y)$ from a discrete bivariate
+distribution $(X, Y)$ is as follows:
 \begin{itemize}
     \item the observation (-2, 2) occurs 50 times
 \item the observation (0, 0) occurs 90 times
@@ -162,7 +170,7 @@ Calculate the sample correlation coefficient for these data.
 \item $\sum y2 = 50(4) + 0 + 60(1) = 260$
 \item $\sum xy = 50(-4) + 0 + 60(-2) = -320$
 \end{itemize}
-so r = [-320 - (20  40)/200]/[(440 - 202/200)(260 - 402/200)]1/2 = -0.975
+so\[ r = \frac{[-320 - (20 \times 40)/200]}{ \sqrt{ [(440 - 202/200)(260 - 402/200)]}} = -0.975\]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 \end{document}
