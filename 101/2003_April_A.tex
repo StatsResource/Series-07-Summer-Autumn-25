@@ -37,17 +37,26 @@
 
 \item Sickness and absence records were kept on 30 employees in a company over a 91-day
 period. These data are tabulated below:
-Number of employees absent 0 1 2 3 4 5
-Number of days 44 19 10 8 7 3
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c|}
+Number of employees absent & 0 & 1 & 2 & 3 & 4 & 5\\
+Number of days & 44 & 19 & 10 & 8 & 7 & 3 \\
+\end{tabular}
+\end{center}
+
+
 Calculate the sample mean and standard deviation of the number of employees absent
 per day. [3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \item A set of claim amounts (£) is given below:
-192 136 253 138 87
+\begin{verbatim}
+    192 136 253 138 87
 112 221 176 336 203
 159 55 308 165 254
-Present these data graphically using a boxplot. [3]
+\end{verbatim}
+
+Present these data graphically using a boxplot. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \item  The probability that a car accident is due to faulty brakes is 0.02, the probability that a
@@ -59,7 +68,7 @@ due to faulty brakes.
 \item 4 The probability that information held on an individual record on a company's
 database is incorrect (e.g. information is out-of-date) is 0.13.
 Calculate the probability that in a random sample of 200 records at most 20 contain
-incorrect information. [3]
+incorrect information. 
 \end{enumerate}
 
 
@@ -81,7 +90,8 @@ Many candidates were unable to makes sense of the frequency distribution of the 
 absent per day.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-2 Ordered: 55 87 112 136 138 159 165 176 192 203 221 253 254 308 336
+2 Ordered: 
+\[\{55 87 112 136 138 159 165 176 192 203 221 253 254 308 336\}\]
 Median = 8th = 176; Q1 = 4.25th = 136.5; Q3 = 11.75th = 245
 (alternatives: Q1 = 4th = 136; Q3 = 12th = 253)
 50 100 150 200 250 300 350
@@ -103,17 +113,16 @@ P
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4 Let X be the number of records with incorrect information.
-X ~ bi(200, 0.13)
-X  N((200)(0.13), 200(0.13)(0.87))
+\[X \sim binomial(200, 0.13)\]
+\[X \sim  N((200)(0.13), 200(0.13)(0.87)) \]
 i.e. N(26, 22.62)
-P(X  20)
-20.5 26
-22.62
+
+\[ P(X < 20) = \frac{20.5 - 26}{22.62}\]
 P Z
   
    
  	
-where Z  N(0,1), using continuity correction,
+where $Z \sim N(0,1)$, using continuity correction,
 5.5
 22.62
 P Z
