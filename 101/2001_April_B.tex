@@ -33,17 +33,17 @@
 \begin{document}
 \begin{enumerate}
 \item 5 Show that the probability generating function for a binomial (n, p) distribution is
-\[ GX (t) = (1 − p + pt)n .\]
+\[ G_X (t) = (1 − p + pt)^n .\]
 Deduce the moment generating function. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 6 Let X have a normal distribution with mean μ and standard deviation σ, and let
-the ith cumulant of the distribution of X be denoted κi .
-Assuming the moment generating function of X, determine the values of κ2 , κ3 ,
-and κ4 . 
+\item 6 Let $X$ have a normal distribution with mean μ and standard deviation σ, and let
+the ith cumulant of the distribution of X be denoted $\kappa_i$ .
+Assuming the moment generating function of X, determine the values of $\kappa_2$ , $\kappa_3$ ,
+and $\kappa_4$ . 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 7 The number of policies (N) in a portfolio at any one time is modelled as a Poisson
 random variable with mean 10.
-The number of claims (Xi) arising on a policy is also modelled as a Poisson
+The number of claims ($X_i$) arising on a policy is also modelled as a Poisson
 random variable with mean 2, independently for each policy and independent
 of N.
 Determine the moment generating function for the total number of claims,
@@ -70,44 +70,35 @@ one, of A and B dies.
 \newpage
 \[PGF	G ( z ) = {\displaystyle G(z)=[(1-p)+pz]^{n}} \]
 5 PGF for binomial (n,p)
-0
-( ) ( ) ( )
-(1 )
-( ) (1 )
-n
-X x
-X
-x
-x x n x
-x nx
-G t Et t P X x
-n
-t p p
-x
-n
-pt p
-x
-=
-−
-−
-= = =
- 
-=   −
- 
- 
-=   −
- 
-
-
-
-= (1 − p + pt)n
+%%%% 2001 April Question 5
+
+
+PGF for binomial (n,p)
+
+
+\begin{eqnarray*}
+G_X(t) 
+&=& E(t^X) \\ 
+&=& \sum^{n}_{x=0} t^x P(X = x)  \\
+&=& \sum^{n}_{x=0} t^x  {n \choose x} p^x \;(1-p)^{n-x} \\
+&=& \sum^{n}_{x=0} {n \choose x} pt^x \;(1-p)^{n-x}\\
+&=& (1 - p + pt)^{n}
+\end{eqnarray*}
+
+
+\begin{framed}
+ Using summation notation, the binomial formula can be written as 
+\[ {\displaystyle (x+y)^{n}=\sum _{k=0}^{n}{n \choose k}x^{n-k}y^{k}=\sum _{k=0}^{n}{n \choose k}x^{k}y^{n-k}.} \]
+\end{framed}
+
+MGF obtained by replacing $t$ by $e^t$, i.e. $M_X(t) = (1 - p + pe^t)^{n}$
 MGF obtained by replacing t by et, i.e. ( ) (1 t )n.
 X M t = − p + pe
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6 \[C(t) = logM(t) = log[exp(μt + σ2t2/2)] \]from Green Book
 = μt + σ2t2/2
-κr is the coefficient of tr/r! , r = 2,3,
-∴ κ2 = σ2, κ3 = κ4 = 0
+\kappa_r is the coefficient of tr/r! , r = 2,3,
+∴ \kappa_2 = σ2, \kappa_3 = \kappa_4 = 0
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7 Using formulae from the Green book
 mgf of N is exp(10(et − 1)) and mgf of Xi  is exp(2(et − 1))
