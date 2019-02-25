@@ -37,14 +37,20 @@
 \item 12 A psychologist conducted an investigation into the effect of alcohol on reaction times
 using 10 male and 10 female subjects. Each subject was given two tests on different
 days, during which his/her reaction times were recorded.
-Before each of the tests, the subject drank a glass of liquid. Some glasses contained a
+\begin{itemize}
+    \item Before each of the tests, the subject drank a glass of liquid. Some glasses contained a
 fixed quantity of alcohol and others contained a liquid which had a similar colour and
-taste but no alcohol. Each subject drank one glass of each type. The order of
+taste but no alcohol.
+\item Each subject drank one glass of each type. The order of
 presentation was randomized, independently for each subject.
-The data below give the reaction times, in units of 0.01 seconds. Also given is the
+\item The data below give the reaction times, in units of 0.01 seconds.
+\item Also given is the
 difference between the reaction time with alcohol and the reaction time without
 alcohol for each subject (reaction time with alcohol minus reaction time without).
-Males
+\end{itemize}
+
+\begin{verbatim}
+    Males
 Subject No. 1 2 3 4 5 6 7 8 9 10
 With alcohol 45 51 35 43 51 54 51 49 44 52
 Without alcohol 40 54 21 31 44 47 39 33 32 56
@@ -54,17 +60,22 @@ Subject No. 1 2 3 4 5 6 7 8 9 10
 With alcohol 47 54 58 48 60 46 55 74 56 49
 Without alcohol 39 40 42 30 51 41 55 68 47 40
 Difference 8 14 16 18 9 5 0 6 9 9
-(i) (a) Construct a 95% confidence interval for the mean difference between
+\end{verbatim}
+
+\begin{enumerate}[(a)]
+    \item (i) (a) Construct a 95\% confidence interval for the mean difference between
 the reaction times with and without alcohol for the males, using the 10
 difference values.
-(b) Construct a similar 95% confidence interval based on the female
+    \item  (b) Construct a similar 95\% confidence interval based on the female
 difference values.
-(c) Comment briefly on the two confidence intervals. [8]
-(ii) (a) Perform a two-sample t-test to investigate whether the alcohol effect
+(c) Comment briefly on the two confidence intervals. 
+    \item  (ii) (a) Perform a two-sample t-test to investigate whether the alcohol effect
 differs between males and females.
-(b) Show that the variances in the male and female samples are not
-significantly different at the 5% level, and comment briefly with
-reference to the test conducted in (ii)(a). [8]
+    \item (b) Show that the variances in the male and female samples are not
+significantly different at the 5\% level, and comment briefly with
+reference to the test conducted in (ii)(a). 
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 13 The table below gives the frequency of coronary heart disease by age group. The
 table also gives the age group midpoint (x) and
@@ -77,7 +88,8 @@ y
 proportion in an age group with coronary heart disease.
 Coronary Heart
 Disease
-Age group x Yes No n y
+\begin{verbatim}
+   Age group x Yes No n y
 2029 25 1 9 10 2.19722
 3034 32.5 2 13 15 1.87180
 3539 37.5 3 9 12 1.09861
@@ -85,7 +97,9 @@ Age group x Yes No n y
 4549 47.5 6 7 13 0.15415
 5054 52.5 5 3 8 0.51083
 5559 57.5 13 4 17 1.17865
-6069 65 8 2 10 1.38629
+6069 65 8 2 10 1.38629 
+\end{verbatim}
+
 x = 360; x2 =17437.5;y =  2.9392; y2 =13.615; xy =  9.0429
 (i) (a) Calculate an estimate of the probability of having coronary heart
 disease under the assumption that the probability does not differ over
@@ -95,12 +109,16 @@ a 2
  test for differences in the probability of having coronary heart
 disease for the different age groups. [8]
 (ii) Consider the regression model y =  x .
-(a) Draw a scatterplot of y against x, and comment on the appropriateness
+
+\begin{enumerate}
+    \item (a) Draw a scatterplot of y against x, and comment on the appropriateness
 of the suggested model.
-(b) Calculate the least squares fitted regression line of y on x.
-(c) Calculate a 99% confidence interval for the slope parameter.
-(d) Interpret the result obtained in (i)(b) with reference to the confidence
+    \item (b) Calculate the least squares fitted regression line of y on x.
+    \item (c) Calculate a 99\% confidence interval for the slope parameter.
+    \item (d) Interpret the result obtained in (i)(b) with reference to the confidence
 interval obtained in (ii)(c). 
+\end{enumerate}
+
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -134,10 +152,14 @@ n
  = 9.4 
  3.848
 = (5.55, 13.25)
-(c) Neither of the intervals include zero, and therefore there is evidence
+
+\begin{itemize}
+    \item (c) Neither of the intervals include zero, and therefore there is evidence
 that the alcohol has an effect on reaction times, i.e. it increases the
 reaction time.
-(ii) (a) Two sample t-test
+\item (ii) (a) Two sample t-test
+\end{itemize}
+
 1 2
 2
 1 2
@@ -185,12 +207,19 @@ We can conclude that alcohol has a similar effect.
 s 1.626
 s
 
-The F9,9 distribution has upper 5\% critical point at 3.179. Our
+
+\begin{itemize}
+    \item The F9,9 distribution has upper 5\% critical point at 3.179.
+    \item Our
 observed value (1.626) is well within the main body of the distribution
 and is not significant at the 10\% level of testing (and therefore not at
-the 5\% level). There is no evidence to suggest that the variances
-differ. The assumption of common variance was made when
+the 5\% level). 
+\item There is no evidence to suggest that the variances
+differ. 
+\item The assumption of common variance was made when
 conducting the test in (ii)(a).
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 13 (i) ni = number in group i , ri = number with coronary heart disease in group i.
 (a) ri = 43 ni =100
