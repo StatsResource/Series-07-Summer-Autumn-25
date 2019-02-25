@@ -39,46 +39,62 @@
 using a uniform distribution on (0, 1). A researcher is interested in the
 distribution of Y, an adjusted form of the reciprocal of the coefficient, where Y
 = (1 / X) - 1.
-(i) Show that the probability density function of Y is given by
+\begin{enumerate}[(a)]
+\item Show that the probability density function of Y is given by
 fY(y) = 1/(1 + y)2 , y > 0 
-(ii) Show that the mean of Y does not exist. 
-[Total 5]
+\item Show that the mean of Y does not exist. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item An insurance company issues house buildings policies for houses of similar
 size in four different post-code regions A, B, C and D.
-(i) An insurance agent takes independent random samples of 10 house
-buildings policies for houses of similar size in regions A and B. The
-annual premiums (£) were as follows:
-Region A: 229 241 270 256 241 247 261 243 272 219
-(Sx = 2,479 ; Sx2 = 617,163)
-Region B: 261 269 284 268 249 255 237 270 269 257
-(Sx = 2,619 ; Sx2 = 687,467)
+\begin{itemize}
+\item  An insurance agent takes independent random samples of 10 house
+buildings policies for houses of similar size in regions A and B.
+\item The
+annual premiums (\$ were as follows:
+
+\begin{center}
+ \begin{tabular}{c|c|c}\hline
+Region A: & 229 241 270 256 241 247 261 243 272 219
+& (Sx = 2,479 ; Sx2 = 617,163)\\  \hline
+Region B: & 261 269 284 268 249 255 237 270 269 257
+& (Sx = 2,619 ; Sx2 = 687,467)\\  \hline
+\end{tabular}   
+\end{center}
+
+\end{itemize}
 \begin{enumerate}[(a)]
-\item Perform a two-sample t-test at the 5% level to compare the
+\item Perform a two-sample t-test at the 5\% level to compare the
 premiums for these two regions.
 \item Present the data in a simple diagram and hence comment briefly
 on the validity of the assumptions required for the above t-test.
-\item Calculate a 95% confidence interval for the underlying common
+\item Calculate a 95\% confidence interval for the underlying common
 standard deviation s of such premiums. 
 \end{enumerate}
 %------------------------%
 (ii) The agent takes further independent random samples of 10 such
 policies from the other two regions C and D. The annual premiums
 were as follows:
-Region C: 253 247 244 245 221 229 245 256 232 269
-(Sx = 2,441 ; Sx2 = 597,607)
-Region D: 279 268 290 245 281 262 287 257 262 246
-(Sx = 2,677 ; Sx2 = 718,973)
+\begin{center}
+ \begin{tabular}{c|c|c}\hline
+Region C: & 253 247 244 245 221 229 245 256 232 269
+& (Sx = 2,441 ; Sx2 = 597,607)\\  \hline
+Region D:&  279 268 290 245 281 262 287 257 262 246
+& (Sx = 2,677 ; Sx2 = 718,973)\\  \hline
+\end{tabular}   
+\end{center}
+
+
 \begin{enumerate}[(a)]
-\item Perform a one-way analysis of variance at the 5% level to
+\item Perform a one-way analysis of variance at the 5\% level to
 compare the premiums for all four regions.
 \item Present the new data in a simple diagram and hence comment
 briefly on the validity of the assumptions required for the
 analysis of variance.
 \item Calculate a 95\% confidence interval for the underlying common
-standard deviation s of such premiums in the four regions. [10]
-(iii) Comment briefly on your two confidence intervals in (i)\item and (ii)\item
-above. [1]
+standard deviation $s$ of such premiums in the four regions. 
+(iii) Comment briefly on your two confidence intervals in (i) and (ii)
+above. 
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,7 +136,7 @@ part (ii) above.
 %------------------------%
 (iii) Sixty-one of the eighty components tested in part (ii) failed before 12
 hours, so a second engineer estimates the failure probability by
-61/80 = 0.7625, and constructs an upper 95% confidence interval based
+61/80 = 0.7625, and constructs an upper 95\% confidence interval based
 on the binomial distribution.
 \begin{enumerate}[(a)]
 \item Construct this interval, and
@@ -136,20 +152,26 @@ and height of each beam was fixed but the lengths varied. Data are available
 on the length (cm) and strength (Newtons) of each beam.
 Length l x = log l Strength
 p
-y = log p Fitted value Residual
-7 1.946 11775 9.374 9.379 -0.005
-7 1.946 11275 9.330 9.379 -0.049
-9 2.197 8400 9.036 9.055 -0.019
-9 2.197 8200 9.012 9.055 -0.043
-12 2.485 6100 8.716 8.684 0.032
-12 2.485 6050 8.708 8.684 0.024
-14 2.639 5200 8.556 8.486 0.070
-18 2.890 3750 8.230 8.162 0.068
-18 2.890 3650 8.202 8.162 0.040
-20 2.996 3275 8.094 8.026 0.068
-20 2.996 3175 8.063 8.026 0.037
-24 3.178 2200 7.696 7.791 -0.095
-24 3.178 2125 7.662 7.791 -0.129
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|}
+y  &  =  &  log  &  p  &  Fitted  &  value  &  Residual\\ \hline
+7  &  1.946  &  11775  &  9.374  &  9.379  &  -0.005\\ \hline
+7  &  1.946  &  11275  &  9.330  &  9.379  &  -0.049\\ \hline
+9  &  2.197  &  8400  &  9.036  &  9.055  &  -0.019 \\ \hline
+9  &  2.197  &  8200  &  9.012  &  9.055  &  -0.043 \\ \hline
+12  &  2.485  &  6100  &  8.716  &  8.684  &  0.032 \\ \hline
+12  &  2.485  &  6050  &  8.708  &  8.684  &  0.024 \\ \hline
+14  &  2.639  &  5200  &  8.556  &  8.486  &  0.070 \\ \hline
+18  &  2.890  &  3750  &  8.230  &  8.162  &  0.068 \\ \hline
+18  &  2.890  &  3650  &  8.202  &  8.162  &  0.040 \\ \hline
+20  &  2.996  &  3275  &  8.094  &  8.026  &  0.068 \\ \hline
+20  &  2.996  &  3175  &  8.063  &  8.026  &  0.037 \\ \hline
+24  &  3.178  &  2200  &  7.696  &  7.791  &  -0.095 \\ \hline
+24  &  3.178  &  2125  &  7.662  &  7.791  &  -0.129 \\ \hline
+\end{tabular}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Sx = 34.023, Sx2 = 91.3978, Sy = 110.679, Sxy = 286.6299
 It is thought that P and L satisfy the law P = k/L where k is a constant, so
 log P = log k - log L, i.e. Y = log k - X.
