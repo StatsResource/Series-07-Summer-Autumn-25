@@ -103,10 +103,46 @@ Calculate the probability-value of this observed mean.
 
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+$V(\hat{\mu} ) = V(\bar{Y}_{\ldot \ldot} ) =
+
+\frac{\sigma^2}{kr}$
+
+
+as $\bar{Y}_{\ldot \ldot}$ is mean of kr r.v.’s each with $var(\sigma2)$.
+
+\begin{eqnarray*}
+V( \hat{\tau}}_i) 
+&=& V(\bar{Y}_{i \ldot} −\bar{Y}_{\ldot \ldot}) \\
+&=& V(\bar{Y}_{i \ldot}) + V (\bar{Y}_{\ldot \ldot}) − Cov (\bar{Y}_{\ldot}, \bar{Y}_{\ldot \ldot}) \\
+&=& \frac{\sigma^2}{r} + \frac{\sigma^2}{kr} - 2 \frac{1}{r} \frac{1}{kr} r \sigma^2 \\
+&=& \frac{\sigma^2}{r} + \frac{\sigma^2}{kr} - 2 \left(\frac{\sigma^2}{kr} \right) \\
+&=& \frac{\sigma^2}{r} - \frac{\sigma^2}{kr} \\
+&=& \frac{(k-1)\sigma^2}{kr} \\
+\end{eqnarray}
+
+%%%%%%%%%%%%%%
+
+Alternative method:
+( ) i V \bar{Y}_{\ldot} −\bar{Y}_{\ldot \ldot} =
+
+
+V\left(  \left( 1 - \frac{1}{k}  \right) \bar{Y}_{i}  - \frac{1}{k} \sum_{j \neq i} \bar{Y}_{j} \right)
+&=& \left(1 - \frac{1}{k} \right) \frac{\sigma^2}{r}  + \left(- \frac{1}{k} \right)^2 \frac{(k-1)\sigma^2}{r} \\
+
+&=& \frac{\sigma^2}{k^2r} \left[  (k-1)^2 + (k-1) \right] \\
+&=& \frac{(k-1)\sigma^2}{kr} \\
+\end{eqnarray}
+
+
+
+
 
 \newpage
 
-14 (i) FY(y) = P(Y < y) = P(X2 < y) = P(X < √y) = 1 − exp(−y/\theta)
+14 (i) \[FY(y) = P(Y < y) = P(X2 < y) = P(X < √y) = 1 − exp(−y/\theta)\]
 which is the cdf of an exponential r.v. with mean $\theta$.
 (ii) (a) fX(x) = 2(x / \theta)exp(−x2 / \theta)
 So \[L(\theta) = k1 \theta−n exp[−(\sum x2) / \theta \] so logL = k2 − nlog \theta − (\sum x2) / \theta
@@ -200,21 +236,21 @@ season, and specify a standard error for this estimate.
 \newpage
 16 (i)
 Seems to be a strong increasing linear relationship.
-(ii) Sxx = 91.08 −
-26.62
-10
-= 20.324
-Syy = 5603.12 −
-202.82
-10
-= 1490.336
-\[Sxy = 707.58 − (26.6)(202.8)
-10
-= 168.132\]
-r =
-168.132
-(20.324)(1490.336)
-= 0.966
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%% Question 14
+
+% ii 
+
+\begin{itemize}
+\item
+${ \displaystyle Sxx = 91.08 − \frac{26.6^2}{10} = 20.324  }$
+\item ${ \displaystyle Syy = 5603.12 − \frac{202.8^2}{10} = 1490.336  }$
+\item ${ \displaystyle Sxy = 707.58 −  − \frac{(26.6)(202.8)}{10} = 168.132  }$
+\item ${ \displaystyle r = \frac{168.132}{\sqrt{(20.324)(1490.336)}}= 0.966}$
+\end{itemize}
+Large and positive agreeing with comment above.
 Large and positive agreeing with comment above.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
