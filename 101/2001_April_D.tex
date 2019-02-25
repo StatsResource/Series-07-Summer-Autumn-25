@@ -166,19 +166,26 @@ in (iv).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 13 (i) Estimate of μ = 4302/37 = 116.27
-Estimate of τ1 = 115.13 − 116.27 = −1.14;
-estimate of τ2 = 95.00 − 116.27 = −21.27;
-estimate of τ3 = 135.42 − 116.27 = 19.15
+
+\begin{itemize}
+\item Estimate of $\tau_1 = 115.13 − 116.27 = −1.14$;
+\item estimate of $\tau_2 = 95.00 − 116.27 = −21.27$;
+\item estimate of $\tau_3 = 135.42 − 116.27 = 19.15$
+\end{itemize}
+
 (ii) Total SS = 521662 − 43022/37 = 21467.3
 Model (Explained) SS = 15(115.132) + 10(952) + 12(135.422) − 43022/37
 = 8942.0 **
 ∴Error SS = 21467.3 − 8942.0 = 12525.3 **
-F = (8942.0/2)/(12525.3/34) = 12.1 on 2,34 degrees of freedom
-Upper 1% point for F2,34 ≈ 5.3 so here P-value << 0.01
-Overwhelming evidence against hypothesis H0 : τi = 0 , i = 1,2,3.
-We conclude that real differences do exist : there is a company effect.
-[** OR: Error SS = (14 × 196.41) + (9 × 341.33) + (11 × 609.36) = 12524.7
-∴ Model SS = 21467.3 − 12524.7 = 8942.6]
+\begin{itemize}
+    \item F = (8942.0/2)/(12525.3/34) = 12.1 on 2,34 degrees of freedom
+\item Upper 1% point for F2,34 ≈ 5.3 so here P-value << 0.01
+\item Overwhelming evidence against hypothesis H0 : τi = 0 , i = 1,2,3.
+\item We conclude that real differences do exist : there is a company effect.
+\item [** OR: Error SS = (14 × 196.41) + (9 × 341.33) + (11 × 609.36) = 12524.7
+\item therefore Model SS = 21467.3 − 12524.7 = 8942.6]
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}
     \item 14 (i) The model greatly overestimates the number of policyholders who give
@@ -195,8 +202,11 @@ so the method of moments estimate * of p is given by solving
 0.815 × 0.1853 = 0.00516
 So, for 4 or more claims, estimate is 1 \;-\; 0.99883 = 0.00117.
 Hence expected frequencies are as follows:
-Number of claims per policyholder  0 1 2 3 ≥4
-Expected number of policyholders 815.0 150.8 27.9 5.2 1.2
+\begin{tabular}{c|c|c|c|c|c|}
+Number of claims per policyholder  & 0 & 1 & 2 & 3 & $\geq 4$ \\
+Expected number of policyholders &  815.0 & 150.8 & 27.9 & 5.2&  1.2 \\ 
+\end{tabular}
+
 \item (iv) (a) Using 5 cells:
 \[ χ2 = (826\;-\;815)2/815+(128\;-\;150.8)2/150.8+(39\;-\;27.9)2/27.9 +(7\;-\;5.2)2/5.2\]
 + 1.22/1.2 = 9.84 on 3 df
@@ -210,46 +220,49 @@ is 8.07 on 2df. P-value is again between 0.025 and 0.01.]
 The hypothesis that the model describes the data stands.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-15 (i) (a)
-(1) mean
-4 4 4
-= X = =
-X
-% μ ∴ λ
-% λ λ
-% 
-(2) ( ) = const. 4n( )3 xi
-i L λ λ Πx e−λΣ
-log = . 4 log 3log( )i i L const + n λ + Πx − λΣx
-4  4 4 log = = 0 = = i
-i
-n n
-L x
-X X
-% ∂ − Σ  λ
-% ∂λ λ Σ
+15 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+15 mean $\mu = \frac{4}{\lambda}$
+
+$\bar{X} = \frac{4}{\lambda}$
+
+$\tilde{\lambda} = \frac{4}{\bar{X}}$
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(2) 
+
+\[ L (\lambda) = const.\lambda^{4n} (\product x_i)^3 e{−\lambda \sum x_i} \]
+
+\[ \log L = const. + 4n \log (\lambda) + 3 \log(\product x_i) - \lambda \sum x_i \]
+
+
+\[ \frac{\partial (\log L)}{\partial \lambda} = \frac{4n}{\lambda} - \sum x_i = 0\]
+
+\[ \hat{\lambda} = \frac{4n}{\sum X_i} = \frac{4}{\bar{X}} \]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (b)
-(1) ( ) = ( Xt ) = (1 ) 4
-X
-t
-M t E e − −
-λ
+(1) 
+
+\[M_{X(t)} = E(e^{Xt} = \left( 1- \frac{t}{\lambda}\right)^{-4}\]
+
+
 from Green book
-( ) 4
-1
-( ) = ( i ) = ( i ) = (1 )
-i
-n
-X t Xt n
-X
-i
-t
-M t E e Σ E e −
-Σ
-=
-−
-λ Π
-= 2 = 2 i Y nλX λΣX
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[M_{\sum X_i(t)} = E(e^{\sum X_i(t)} =  \product^n_{i=1}E(e^{\sum X_i(t)} = \left(1 - \frac{t}{\lambda})^{-4n}
+
+
+\[Y = 2n\lambda \bar{X} = 2 \lambda \sum X_i\]
+
 ( )2 2 4 4
 ( ) = ( Xi t ) = (1 ) n = (1 2 ) n
 Y
@@ -267,15 +280,19 @@ M t E e Σ λ − λ − − t −
 n n
 nX nX
 χ χ
-(ii) (a) n =10,x = 242 2nx = 4840
+
+\begin{itemize}
+    \item (ii) (a) n =10,x = 242 2nx = 4840
 2 2
 0.975,80 0.025,80 χ = 57.15 ,χ =106.6
-95% confidence interval for λ is
+\item 95\% confidence interval for λ is
 57.15 106.6
 ( , )
 4840 4840
 = (0.0118, 0.0220)
 (b)
+\end{itemize}
+
 (1) Approx. 95% confidence interval for μ is 1.96
 s
 x
@@ -296,10 +313,13 @@ Conversion gives
 ( , )
 311.4 172.6
 = (0.0128, 0.0232)
-(3) This is quite close to the exact CI.
-So the CLT approximation is quite good even though n=10 is not
+\begin{itemize}
+    \item (3) This is quite close to the exact CI.
+    \item So the CLT approximation is quite good even though n=10 is not
 very large.
-[Note: allow use of t in (ii)(b)
+    \item [Note: allow use of t in (ii)(b)
+\end{itemize}
+
 112
 242 2.262 = (161.9,322.1) (0.0124,0.0247)
 10
@@ -356,7 +376,7 @@ S
 α y − βx −
 y = 201.2 + 24.03x.
 %--------------------------%
-    \item (iii) 95% confidence interval for β: ( ) 10
+    \item (iii) 95\% confidence interval for β: ( ) 10
 β ± t (2.5%)s.e. β
 2 2
 s.e.(  ) =  ,  2 = xy /( 2) = 9040.4
