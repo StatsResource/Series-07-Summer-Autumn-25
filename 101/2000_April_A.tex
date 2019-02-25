@@ -68,36 +68,34 @@ Thus, the probability that the total claim is greater than £100,000 is
 = 1  (1.507) = 0.066.
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item  In an investigation into the proportion (q) of lapses in the first year of a
-certain type of policy, the uncertainty about q is modelled by taking q to have a
+\item  In an investigation into the proportion ($\theta$) of lapses in the first year of a
+certain type of policy, the uncertainty about q is modelled by taking $\theta$ to have a
 beta distribution with parameters a = 1 and b = 9, that is, with density
-f(q) = 9(1 - q)8 : 0 < q < 1.
-Using this distribution, calculate the probability that q exceeds 0.2. 
+\[f(\theta) = 9(1 - \theta)^8 : 0 < \theta < 1.\]
+Using this distribution, calculate the probability that $\theta$ exceeds 0.2. 
 
 
 3
 
 \begin{eqnarray*}
-P(q > 0.2) &=&
-1
-8
-0.2
- 9 (1  ) d \\
-&=&
-1
-9
-0.2
-q(1  )  \\
-&=& 0 + (1 - 0.2)^9 \\ &=& (0.8)^9 \\ &=& 0.13
+P(\theta > 0.2) &=& \int^{1}_{0.2} 9(1- \theta)^8) d \theta \\
+& & \\
+&=& \left[ -(1-\theta)^9  \right]^{1}_{0.2}\\
+& & \\
+&=& 0 + (1 - 0.2)^9 \\ 
+&=& 0.8^9 \\
+&=& 0.13\\
 \end{eqnarray*}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 \item Consider the following three probability statements concerning an F variable
 with 6 and 12 degrees of freedom.
 \begin{enumerate}
-\item P(F6,12 > 0.250) = 0.95
-\item P(F6,12 < 4.821) = 0.99
-\item P(F6,12 < 0.130) = 0.01
+\item $P(F6,12 > 0.250) = 0.95$
+\item $P(F6,12 < 4.821) = 0.99$
+\item $P(F6,12 < 0.130) = 0.01$
 \end{enumerate}
 
 State, with reasons, whether each of these statements is true. 
@@ -105,13 +103,13 @@ State, with reasons, whether each of these statements is true.
 
 4 
 \begin{itemize}
-\item For (a) to be true, 0.250 must be lower 5\% pt of F6,12 i.e. reciprocal of upper 5% pt
+\item For (a) to be true, 0.250 must be lower 5\% pt of F6,12 i.e. reciprocal of upper 5\% pt
 of F12,6 which is
 1
 4.000
 = 0.250  true.
     \item For (b) to be true, 4.821 must be upper 1\% pt of F6,12 which is 4.821 true.
-\item For (c) to be true, 0.130 must be lower 1\% pt of F6,12 i.e. reciprocal of upper 1% pt
+\item For (c) to be true, 0.130 must be lower 1\% pt of F6,12 i.e. reciprocal of upper 1\% pt
 of F12,6 which is
 1
 7.718
