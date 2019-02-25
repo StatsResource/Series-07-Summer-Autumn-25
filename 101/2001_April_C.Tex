@@ -105,69 +105,86 @@ p : 0.35 0.35 0.30
 
 \newpage
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-10 (i) Using the basic binomial result
- 5 = = =0.25
-20
-x
-n
-θ
-(ii) θ = P(X > 200) using X ~ N(μ , 202)
-200 200
-= ( )=1 ( )
-20 20
-P Z > − μ − Φ − μ
-where Φ(.) is the cdf of N(0,1).
 
-Using the invariance property of MLE’s, we get μ from the equation
- 200  =1 ( )
-20
-θ − Φ − μ
-So with θ = 0.25, we get μ from
-200 
-( ) = 0.75
-20
-Φ − μ
-200 
-= 0.674
-20
-∴ − μ from tables
-∴μ = 200 − 20(0.674) = £186.52
+%%%% 2001 April Question 10 
+
+(i) Using the basic binomial result
+
+
+\[  \hat{\theta} = \frac{x}{n} = \frac{5}{20} = 0.25\]
+
+
+(ii) 
+\[X \sim N(\mu , 202)\]
+
+\begin{eqnarray*} 
+\theta 
+&=& P(X > 200) \\
+&=& P \left( Z > \frac{200 -\mu}{20} \right) \\
+&=& 1 - \Phi\left(  \frac{200 -\mu}{20} \right)\\
+\end{eqnarray*}
+
+where $\Phi(.)$ is the cdf of N(0,1).
+
+Using the invariance property of MLE’s, we get $\mu$ from the equation
+
+\[ \hat{\theta} = 1 - \Phi\left(  \frac{200 -\mu}{20} \right)\]
+So with $\hat{\theta} = 0.25$, we get $\hat{\mu}$ from
+
+\[\Phi\left(  \frac{200 -\hat{\mu}{20} \right) = 0.75\]
+
+\[\left(  \frac{200 -\hat{\mu}{20} \right)
+= 0.674\] from tables
+∴
+\[\hat{\mu} = 200 − 20(0.674) = \$186.52\]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-11 (i) 95% confidence interval:
-75
-x 1.96
-n
-±
-Require
-75
-1.96 10
-n
-≤
-1.96 75
-14.7
-10
-n ×
- ≥ =
-n ≥ 216.09 ∴ take n = 217.
-%------------------------------------%
-(ii) 99\% confidence interval:
-75
-x 2.576
-n
-±
-Require
-75
-2.576 10
-n
-≤
-2.576 75
-=19.32
-10
-n ×
- ≥
-n ≥ 373.3 ∴ take n = 374.
+11 
+%%%%%%%%%%%%%%%%%%%%%%%%
+(i) 95% confidence interval:
+
+
+
+\[ \bar{x} \pm 1.96 \frac{75}{\sqrt{n}}
+\begin{itemize}
+
+\item Require
+
+\item $1.96 \frac{75}{\sqrt{n}} \leq 10 $
+
+\item $\sqrt{n} \geq \frac{1.96 \times 75}{10}$ 
+
+\item $\sqrt{n} \geq 14.7$
+
+\item $n \geq  216.09 $
+
+\item Therefore take $n = 217$.
+
+\end{itemize}
+
+%%%%%%%%%%%%%
+
+(ii) 99% confidence interval:
+
+\[ \bar{x} \pm 2.576 \frac{75}{\sqrt{n}}
+
+\begin{itemize}
+
+\item  Require
+
+\item  $2.576 \frac{75}{\sqrt{n}} \leq 10 $
+
+\item  $\sqrt{n} \geq \frac{2.576 \times 75}{10}$ 
+
+\item $\sqrt{n} \geq 19.32$
+
+\item $n \geq  373.3 $
+
+\item Therefore take $n = 374$.
+\end{itemize}
+
+%%%%%%%%%%%%%
 12 (i) p = 0.17
 95\% confidence interval for the true proportion p is
  (1  )  1.96
