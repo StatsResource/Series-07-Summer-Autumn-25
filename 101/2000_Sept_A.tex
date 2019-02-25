@@ -92,79 +92,42 @@ Thus, the standard deviation of the 71 values is
 70
 −
 = 5.124, or £5,124.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3 Can get answer directly from Green tables:
-P(X < 20) = P(X ≤ 19) = 0.18026 = 0.18
+\[P(X < 20) = P(X \leq 19) = 0.18026 = 0.18\]
 OR: use normal approximation with continuity correction.
-\[X ~ N(24, 2 24 )
-P(X < 20) → P(X < 19.5)\]
-=
-19.5 24
-= 0.92
-24
-P Z
-%  − 
-%  < − 
-%  
-= 1 − 0.82 = 0.18.
-Note: without continuity correction answer is 0.15 — only 1 mark.
+$X \sim  N(24, \sqrt{24}^2 )$
+
+$P(X < 20) \rightarrow P(X < 19.5)$
+
+\begin{eqnarray*}
+P(X < 19.5) &=& P \left( Z < \frac{19.5-24}{\sqrt{24}} \right) \\ 
+&=& P\left(Z \leq -0.92 \right) \\
+&=&  1 − 0.82 \\
+&=&  0.18.\\
+\end{eqnarray*}
+(Note: without continuity correction answer is 0.15)
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
 
 4 Suppose that a random sample of nine observations is taken from a normal
-distribution with mean μ = 0. Let X and S 2 denote the sample mean and
+distribution with mean $\mu = 0$. Let X and S 2 denote the sample mean and
 variance respectively.
 Determine (to 2 decimal places) the probability that the value of X exceeds that of S, i.e. determine P( X > S) . 
 
-4 μ = 0, n = 9 so X / (S / 3) ~ t8 so P( X > S) = P(t8 > 3) ,
+4 $\mu = 0$, n = 9 so $X / (S / 3) \sim t_8$ so P( X > S) = P(t8 > 3) ,
 which, from tables, is just less than 0.01
 (actually 0.0085, but not needed for the marks)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 3
 5 x
 x
-± 196
+\pm 196
 500
-. i.e. 0.168 ± (1.96 × 0.01833) i.e. 0.168 ± 0.036
+. i.e. $0.168 \pm (1.96 \times 0.01833) \mbox{ i.e. } 0.168 \pm 0.036$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-6 (a) £
-(b) £/year i.e. £ × year−1
-(c) no units
-7 t test is based on
-t = 2 2
-2
-~
-1
-n
-r n
-t
-r
-−
-−
-−
-: here n − 2 = 8
-If P-value for this one-sided test is 0.025 then observed t = 2.306 (t0.025,8 from
-Green tables)
-∴
-2
-8
-1
-r
-− r
-= 2.306 and r > 0
-∴ 5.318 (1 − r2) = 8r2
-∴ r2 =
-5.318
-13.318
-= 0.3993 ∴ r = 0.632
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Q7 Comment: An alternative approach is to use Fisher’s transformation of r. The
-statistic is
-1+ r
-½log
-1- r
-, which, under H0, has, approximately, a N(0,1/7) distribution.
-This approach gives r = 0.630 .
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
