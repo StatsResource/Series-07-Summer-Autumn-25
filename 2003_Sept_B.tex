@@ -51,19 +51,16 @@ The moment generating function of S, the total size of all claims which occur in
 period of k weeks (where k is a positive integer), is to be used in a theoretical report
 being written by two students.
 One student (A) suggests that the moment generating function of S is given by:
-  : exp exp 1 2 2 1
-S 2 Suggestion A M t k t t
-       
- 	 
-    
-    
+Suggestion A :
+\[
+M_S ( t ) = exp \left( k\;\lambda \left{ exp \left[ \mu\;t + s 2 t 2 \right] - 1 \right} \; \right)
+\]
+
 while the other (B) disagrees and suggests that it is in fact given by:
-  2 2 : exp exp 1 1
-S 2 Suggestion B M t k t t      
-    	  
- 
-   
-One of the students is correct. Determine which one this is. 
+Suggestion B :
+
+\[M_S ( t ) = exp \left( k\;\lambda exp \left[ \mu\;t + s 2 t 2 \right] - 1 \right)  \]
+One of the students is correct. Determine which one this is.
 \item 8 A student actuary is about to collect data from a batch of insurance proposal forms. It
 is known that on average one in every fifty such forms contains incomplete
 information, and the student wants to be 95% sure of having at least 500 forms which
@@ -75,28 +72,33 @@ information.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 
-5 P(at least one test is significant | each null hypothesis is true)
-= 1 − P(no test is significant | each null hypothesis is true)
-= 1 − (1 − 0.05)10 as the 10 tests are independent
-= 0.4
+5 P(at least one test is significant | each null hypothesis is true)\\
+= 1 − P(no test is significant | each null hypothesis is true)\\
+= 1 − (1 − 0.05)10 as the 10 tests are independent\\
+= 0.4\\
+
 Comment: a false-positive is very likely with the 10 multiple tests.
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6 Sxx = 5 – 32/3 = 2 , Sxy = y + 4 – 3(y+2)/3 = 2
 So fitted slope = 2/2 = 1
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7 N is Poisson(kλ) with MN(t) = exp[kλ{exp(t) – 1}].
 S has a compound distribution with mgf MS(t) = MN{logMX(t)}
-and MX(t) = exp(μt + σ2t2/2).
-So mgf of S is MN(μt + σ2t2/2) and correct suggestion is A.
+and \[MX(t) = exp(μt + \sigma^2t2/2)]\.
+So mgf of S is MN(μt + \sigma^2t2/2) and correct suggestion is A.
 OR: by using the result quoted in the Formulae and Tables book
-OR: we must have MS(0) = 1, so B is wrong.
+OR: we must have $MS(0) = 1$, so B is wrong.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 8 Let X be the number of forms with incomplete information in a batch of n forms.
 Then X ~ Poisson(0.02n) approximately
-With n = 516, X ~ P(10.32) and P(X ≤ 16) = 0.965 approx, by linear interpolation
-With n = 515, X ~ P(10.3) and P(X ≤ 15) = 0.940 approx, by linear interpolation
-So he requires 516 forms
+\begin{itemize}
+    \item With n = 516, $X \sim P(10.32)$ and $P(X \leq 16) = 0.965$ approx, by linear interpolation
+\item With n = 515, $X \sim P(10.3)$ and $P(X \leq 15) = 0.940$ approx, by linear interpolation
+\item So he requires 516 forms
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Page 5
 OR: the distribution of X can be modelled approximately using a normal distribution
