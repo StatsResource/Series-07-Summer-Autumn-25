@@ -42,27 +42,49 @@ coefficient of skewness of the distribution of X is given by 2/√$\alpha$. [5]
 \item  Let Z be a random variable with mean 0 and variance 1, and let X be a random
 variable independent of Z with mean 5 and variance 4. Let Y = X - Z.
 Calculate the correlation coefficient between X and Y. [5]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item Let X1 , X2 ,..., Xn be a random sample of size n from a distribution with density
-\[ 2
-2
-( ; ) ,0 : 0
-x
-f x \theta = < x < \theta \theta >
-\theta
-.\]
-\begin{enumerate}
-    \item (i) Write down the likelihood function clearly and hence by drawing a rough
-sketch of the likelihood function, show that the maximum likelihood
-estimator of \theta is given by
-\[1 2
-ˆ max{ , ,..., }. n \theta = X X X \]
-\item Without calculating $E(\hat{\theta})$ , explain why $\hat{\theta}$ is a biased estimator of $\theta$. 
-\end{enumerate}
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2000 - September - 11
+\item 
+Let $X_1 , X_2 , \ldots, X_n$ be a random sample of size $n$ from a distribution with density
+\[f ( x ; θ ) = \frac{2x}{\theta^2} , \; 0 <x < \theta, \; \theta >0 \]
+
+\begin{enumerate}[(a)]
+\item Write down the likelihood function clearly and hence by drawing a rough
+sketch of the likelihood function, show that the maximum likelihood
+estimator of $\theta$ is given by $\hat{\theta} = max{ X_1 , X_2 , \ldots, X_n }$.
+\item
+Without calculating $E ( \hat{\theta} )$ , explain why $\hat{\theta}$ is a biased estimator of $\theta$.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% 2000 April Q 11
+Start by writing down the likelihood function
+\[ L(\alpha) = \frac{( \alpha - 1)^n}{\product (1 + x_i )^\alpha}\]
+
+The log-likelihood function is
+\[ l(\alpha)  = \log L(\alpha) = n \log(\alpha - 1) - \alpha \sum \log(1 + x_i ).\]
+
+Differentiating gives
+
+\[ \frac{\partial l(\alpha}{ \partial \alpha} = \frac{n}{\alpha -1} - \sum \log(1 + x_i ) \]
+It is easy to see that the log-likelihood has only one turning point, so this
+can be found by equating the derivative to zero. This gives that the
+maximum likelihood estimate is
+
+\[ \hat{\alpha} = 1 + \frac{n}{ \sum \log(1 + x_i )}\]
+
+The second derivative is
+\[ \frac{\partial^2 l(\alpha}{ \partial \alpha^2} = \frac{-n}{(\alpha -1)^2} \]
+
+So an approximate 95\% confidence interval for $\alpha$ is 
+\[ \hat{\alpha} \pm  1.96 \frac{\hat{\alpha} - 1}{\sqrt{n}} .\]
+
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item A market research company intends to estimate the proportion of the population,
-\theta, who support a certain political party. They intend to poll a sample large
+$\theta$, who support a certain political party. They intend to poll a sample large
 enough so that a 95\% confidence interval for $\theta$ has a width of 0.03 or less. It is
 thought that $\theta$ is approximately equal to 0.4.
 Assuming that everyone questioned will respond to the poll, calculate the
