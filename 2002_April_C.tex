@@ -35,7 +35,7 @@
 \begin{enumerate}
 \item 9 Let X and Y be independent random variables. Let V and W be the random variables
 defined by
-V = max {X, Y}, W = min {X, Y}
+\[V = max {X, Y}, W = min {X, Y}\]
 i.e. V is the larger, and W is the smaller, of the observations of X and Y.
 Let FX , FY , FV , FW denote the distribution functions of X, Y, V, W respectively.
 \begin{enumerate}[(a)]
@@ -75,16 +75,21 @@ by considering expected values conditional on the value of N. [3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 9
+\begin{eqnarray*}
+F_V (t)\\ &=& P(V \leq t)\\ &=& P(max \{X, Y\} \leq t)
+\\ &=& P(X \leq t \mbox{ and } Y \leq t)\\ &=& P(X \leq t) P(Y \leq t)\\ &=& F_X (t)F_Y (t)\mbox{ as X  and  Y are independent} 
+\end{eqnarray*}
+
+\begin{eqnarray*}
+F W (t)\\ &=& P(W \leq t)\\ &=& 1 - P(min{X, Y} > t)
+\\ &=& 1 – P(X > t \mbox{ and } Y > t)\\ &=& 1 - P(X > t) P(Y > t) \mbox{ as X  and  Y are independent} 
+\\ &=& 1 – [1 – P(X \leq t)] [1 – P(Y \leq t)]
+\\ &=& 1 – (1 – F_X (t)) (1 – F_Y (t))
+\\ &=& F_X (t) + F_Y (t) – F_X (t)F_Y (t) .
+\end{eqnarray*}
+
 \begin{itemize}
-\item
-FV(t) = P(V  t) = P(max {X, Y}  t)
-= P(X  t and Y  t) = P(X  t) P(Y  t) = FX(t)FY(t) as X and Y are independent
-\item
-FW(t) = P(W  t) = 1  P(min{X, Y} > t)
-= 1  P(X > t and Y > t) = 1  P(X > t) P(Y > t) as X and Y are independent
-= 1  [1  P(X  t)] [1  P(Y  t)]
-= 1  (1  FX(t)) (1  FY(t))
-= FX(t) + FY(t)  FX(t)FY(t) .
+
 \item
 FX(t) = FY(t) = 1  e4t , so
 FW(t) = 1  e4t + 1  e4t  (1  e4t)2
