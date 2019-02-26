@@ -69,36 +69,55 @@ Calculate the maximum likelihood estimate of  = P(X > 9). [3]
 0.06075 
 2 \item X ~ exponential with  = 1/1000 and density e x 
  .
-P(X > t) = e t  (stated or by integration)
-P(X > 5000) =
-1 5000 5 e 1000 = e 
- = 0.0067
-\item
-1
-2
-1 2
-1 2
-2
-( | ) = ( and ) =
-( )
-t
-t
-P X t X t P X t X t e
-P X t e
 
-P(X > 5000 | X > 1000) =
-5
-4
-1 e = e
-e
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 2002 April Q 2
 
-= 0.0183
+(i) $X \sim \mbox{exponential}(\lambda = 1/1000)$ and density 
+\[ f(x) = \lambda e^{ -\lambda  x} ,\] wher $x > 0 $.
+
+\[P(X > t) = e^{ -\lambda  t} \](stated or by integration)
+
+\begin{eqnarray*} 
+P(X > 5000) &=& e^{ - \frac{1}{1000} 5000} \\
+&=& e^{-5}\\
+&=& 0.0067 \\
+\end{eqnarray*}
+(ii)
+%%%%%%%%%%
+
+with $t_1 > t_2$ we can say
+\begin{eqnarray*} 
+P ( X > t_1 | X > t_2 ) &=& 
+\frac{P ( X > t_1 \mbox{ and } X > t_2 ) }{P ( X > t_2 ) }\\
+&=& \frac{P ( X > t_1  ) }{P ( X > t_2 ) }\\
+&=&  \frac{e^{-\lambda t_1}}{e^{-\lambda t_1}}
+\end{eqnarray*}
+
+% \begin{framed}
+% For two events $A$ and $B$
+% If $ B \subseteq A$ then $A \mbox{ and } B \equiv A$
+% \end{framed}
+
+\begin{eqnarray*} 
+P ( X > 5000| X > 1000 ) 
+&=&  \frac{e^{-\frac{1}{1000} \times 5000}}{e^{-\frac{1}{1000} \times 1000}}\\
+&=&  \frac{e^{-5}}{e^{-1}}\\
+&=&  e^{-4}\\
+&=&  0.00182 \\
+\end{eqnarray*}
+
+
 OR: candidates may refer to the memoryless property of the exponential to
-obtain P(X > 5000 | X > 1000) = P(X > 4000) = e 4  .
+obtain $P(X > 5000 | X > 1000) = P(X > 4000)$ = $e^{-4}$ .
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3 Let X denote the number of magazine readers in the sample of 200 who are students.
-Assuming the magazines claim is correct, X ~ binomial (200, 0.25).
-Using the normal approximation to the binomial distribution,
+3 
+
+\begin{itemize}
+    \item Let X denote the number of magazine readers in the sample of 200 who are students.
+\item Assuming the magazines claim is correct, X ~ binomial (200, 0.25).
+\item Using the normal approximation to the binomial distribution,
 X ~ N(50, 150/4) approximately:
 P(X  42)  42.5 50
 (150 / 4)
@@ -106,6 +125,9 @@ P Z
 
 where Z ~ N(0, 1)
 = P(Z < 1.225) = 0.110 (using continuity correction).
+\end{itemize}
+
+
 4 Data sum = 82; MLE of  is  = x = 82 /10 = 8.2
  = P(X  9) = P(Z  9  ) where Z ~ N(0, 1)
  MLE of  = P(Z  9  ) = P(Z > 9  8.2) = P(Z > 0.8) = 0.212
