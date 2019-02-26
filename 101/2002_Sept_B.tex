@@ -33,10 +33,10 @@
 \begin{document}
 
 \begin{enumerate}
-\item 5 Suppose that a line is fitted by least squares to a set of data $\leq$$\leq$ xi , yi  , i =1, 2,$\leq$, n
-which has sample correlation coefficient r. Let the fitted value at xi be denoted yi .
-Show that the sample correlation coefficient of the data $\leq$$\leq$ yi , yi , i =1, 2,$\leq$, n, that
-is, of the observed and fitted y values, is also equal to r. [3]
+\item 5 Suppose that a line is fitted by least squares to a set of data $\{ ( x_i , y_i ) , i = 1, 2, \ldots , n \}$
+which has sample correlation coefficient $r$. Let the fitted value at $x_i$ be denoted $\hat{y}_i$.
+Show that the sample correlation coefficient of the data $\{ (  y_i, \hat{y}_i ) , i = 1, 2, \ldots , n \}$, that
+is, of the observed and fitted y values, is also equal to $r$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 6 As part of an investigation an insurance company collected data for the year 2000 on
 claims sizes for all claims on a certain type of motor insurance policy. The resulting
@@ -55,28 +55,28 @@ Total 5637
 
 \begin{enumerate}[(a)]
     \item (i) Calculate the cumulative frequencies and draw a graph of the claim size
-distribution function (i.e. the cumulative frequencies against claim size). [3]
+distribution function (i.e. the cumulative frequencies against claim size). 
     \item (ii) You have been asked to determine the proportion of claim sizes which are less
 than £250. Use linear interpolation to approximate this proportion to two
 decimal places. 
     \item (iii) Use linear interpolation to approximate (to the nearest £) the value of the
-median of the claim size distribution. [2]
+median of the claim size distribution. 
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 7 Suppose that X is a continuous random variable uniformly distributed on (0, 1).
+\item 7 Suppose that $X$ is a continuous random variable uniformly distributed on $(0, 1)$.
 \begin{enumerate}[(a)]
-    \item  Show that the moment generating function of Y =  log X is
-MY(t) = 1/(1  t) for $t < 1$. 
-    \item Hence state the distribution of Y. 
+    \item  Show that the moment generating function of $Y = - \log X$ is
+\[M_Y(t) = \frac{1}{1 - t} \mbox{ for } t < 1.\] 
+    \item Hence state the distribution of $Y$. 
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 8 Assume that, for a group of insurance policies, the number of claims on each policy
-can be modelled by a Poisson distribution with the same rate  per year,
+can be modelled by a Poisson distribution with the same rate $\lambda$ per year,
 independently for each policy. Such a group of 1500 policies gave rise to a total of
 183 claims during the last year.
 \begin{enumerate}[(a)]
-    \item (i) State the value of the maximum likelihood estimate of . 
+    \item (i) State the value of the maximum likelihood estimate of $\lambda$.
 \item (ii) Hence obtain estimates of the following quantities:
 (a) The probability that a subset of 10 of these policies results in no claims
 over the next six months.
@@ -143,32 +143,37 @@ F(x)
 Claim size distribution function
 for median
 for P(X<250)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 4
-7 (i) ( ) = ( tY ) = ( t log X )
-MY t E e E e$\leq$
-1 1 1
-0
-0
-= ( )= =
-1
-t
-E X t x tdx x
-t
-$\leq$ 
-$\leq$ $\leq$
-$\leq$ 
- 
-  
-$\leq$
-= 1 , 1.
-1
-t
-t
-$\leq$
-
-(ii) This is the MGF of an exponential distribution with parameter 1, and by
-uniqueness for the MGF this then implies that Y has this distribution.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 2002 September Q 7
+7 
+
+(i)
+\begin{eqnarray*}
+M_Y( t ) &=& E ( e^{tY} ) \\ 
+&=& E ( e^{t\log X} )
+&=& E(X^{-t}) \\
+&=& \int^{1}{0} x^{-t}\\
+&=& \left[ \frac{x^{-t+1}}{1-t}\right]^{1}_{0} \\
+&=& \left(  \frac{1^{-t+1}}{1-t}\right) - \left( \frac{xo{-t+1}}{1-t}\right)
+&=& \frac{1}{1-t}, \mbox{ for } t < 1
+\end{eqnarray*}
+
+This is the MGF of an exponential distribution with parameter 1, and by
+uniqueness for the MGF this then implies that $Y$ has this distribution.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+% Question 8 
+
+$ \hat{\lambda} = \frac{183}{1500} = 0.122$
+(ii) (a)
+Number of claims X for 10 policies in six months is Poisson with
+parameter $10(0.5)(0.122) = 0.61$
+\[P(no claims) = P(X = 0) = exp(-0.61) = 0.543\]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8 (i)  = 183 = 0.122
 1500
