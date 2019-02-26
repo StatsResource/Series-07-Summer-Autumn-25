@@ -49,14 +49,20 @@ subjects one week after the start of chemotherapy treatment. One group of subjec
 (A) received steroids in addition to the chemotherapy treatment and the other group
 (B) received a placebo in addition to the chemotherapy. The subjects were assigned
 to the groups at random.
+\begin{verbatim}
 Group A  Steroid
 WBCC (millions of cells per ml.)
 12.4 15.2 12.7 15.9 12.2 14.2 12.9 14.2 12.4 14.6
 12.7 13.6 12.5 13.3 12.1 13.9 17.1 13.6 17.2 13.1
+\end{verbatim}
+
+\begin{verbatim}
 Group B  Placebo
 WBCC (millions of cells per ml.)
 17.0 13.5 15.4 14.1 15.4 14.8 12.9 14.4 13.2 13.1
-12.9 13.9 13.0 13.6 13.0 13.4 12.9 13.1 14.4 13.8
+12.9 13.9 13.0 13.6 13.0 13.4 12.9 13.1 14.4 13.8  
+\end{verbatim}
+
 \begin{enumerate}[(a)]
 \item Construct stem and leaf diagrams for Group A and Group B separately. 
 \item Comment on the results in the context of investigating an association between
@@ -64,28 +70,18 @@ WBCC and the treatment with or without steroids.
 [Total 4]
 \end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
 8 Consider a negative binomial variable X with probability function given by
-1
-( = ) = k x : = 0,1, 2, ... k x
-P X x p q x
-x
-   
- 
- 
-where 0 < p < 1 and q = 1  p.
+
+\[P(X=x) =  { k+x-1 \choose x} (p) ^k \; (1-p) ^x \]
+where $0 < p < 1$ and $q = 1 - p$.
 \begin{itemize}
 \item Show that the moment generating function is given by
-( ) =
-1
-k
-t
-M t p
-qe
- 
-    
+\[ M ( t ) =  \left( \frac{p}{1-qe^t}\right)\]
 for qet < 1. 
-\item Determine E(X) and E(X2) by expanding M(t) as a power series as far as the
+\item Determine $E(X)$ and $E(X^2)$ by expanding M(t) as a power series as far as the
 term in t2, and hence verify that the mean and variance of X are given by
 kq
 p
@@ -96,30 +92,86 @@ p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-5 Using binomial model, P(90 satisfactory items out of 100) = 100 90 10
-(1 )
-90
-p p
- 
-  
- 
-Therefore the log likelihood for p is given by:
-log L( p) = 90log p 10log(1 p) + constant
-log = 90 10  = 90 = 0.9
-1 100
-d L p
-dp p p
- 
-
-(MLE for p)
+
+\begin{framed}
+Suppose there is a sequence of independent Bernoulli trials. Thus, each trial has two potential outcomes called "success" and "failure". 
+In each trial the probability of success is p and of failure is (1 − p). We are observing this sequence until a predefined number r of failures has occurred. 
+Then the random number of successes we have seen, X, will have the negative binomial (or Pascal) distribution:
+
+\[{\displaystyle X\sim \operatorname {NB} (r,p)}\]
+\end{framed}   
+%% 2002 April Q 8
+\begin{eqnarray*}
+M ( t ) &=& E ( e^{tx} ) \\
+&=& \sum^{\infty}{x=0} e^{tx} { k+x-1 \choose x} p^k \; q^x \\
+&=& \sum^{\infty}{x=0} { k+x-1 \choose x} p^k \; (qe^{t}) ^x \\
+&=& \left( \frac{p}{1-qe^t}\right) \sum^{\infty}_{x=0} { k+x-1 \choose x} (1-qe^{t}) ^k \; (qe^{t}) ^x \\
+&=& \left( \frac{p}{1-qe^t}\right) \times 1\\ 
+&=& \left( \frac{p}{1-qe^t}\right) \\
+\end{eqnarray*}
+ as the sum equals 1, being the sum of a probability 
+distribution.
+
+
+%%%%%%%%
+
+\begin{framed}
+
+With $X \sim \mbox{NB}( r =k+x\;,\;p= qe^{t} )$
+
+\[ \sum^{\infty}_{x=0} { k+x-1 \choose x} (1-qe^{t})^k \; (qe^{t})^x  = 1 \]
+
+\end{framed}
+
+\begin{itemize}
+\item coefficient of t: ${ \displaystyle E ( X ) = k\frac{q}{p} }$
+\item coefficient of ${ \displaystylet^2/2  }$
+: ${ \displaystyle E (X^2 ) = k \frac{q}{p}+ k ( k + 1)(\frac{q}{p} )^2 }$
+\item mean = ${ \displaystyleE ( X ) = \frac{kq}{p}}$
+\end{itemize}
+
+%%%%%%%%%%%
+\begin{eqnarray*}
+\mbox{ variance }&=& E ( X^2 ) - E( X )^2 \\ 
+&=& k\frac{q}{p} + k ( k + 1)(\frac{q}{p} )^2 - \left( k\frac{q}{p} \right)^2\\
+&=& k\frac{q}{p} + k \left( \frac{q}{p} \right)^2 \\
+&=& \frac{kq}{p} \left( 1 + \frac{q}{p} \right) \\
+&=& \frac{kq}{p^2} \\
+\end{eqnarray*}
+
+
+5 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 2002 April Q 5
+
+Using binomial model, P(90 satisfactory items out of 100) = 
+\[ = {100 \choose 90} p^90 \times (1-p)^{10}\]
+
+Therefore the log likelihood for $p$ is given by:
+\[ \log L ( p ) = 90 log p + 10 log(1 - p ) + constant\]
+
+
+\[ \frac{d}{dp} \left(\log L ( p ) \right) = \frac{90}{p} + \frac{ 10 }{1 - p }\]0
+
+\[ \hat{p}= \frac{90}{100} = 0.9\]  MLE for $p$
+
+
 (MLE is sample proportion.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-6 Let n denote the sample size which is determined by the limits of the 99% confidence
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% 2002 April Q 6
+Let n denote the sample size which is determined by the limits of the 99\% confidence
 interval, i.e.
-2.58 6 2
-n
- 
-n  (3 2.58)2 = 59.9. Therefore n should be at least 60.
+
+\[2.58  ́\times \frac{6}{\sqrt{n}} \leq 2\]
+
+
+Therefore
+
+\[ n \geq ( 3 \times 2.58)^2\]
+
+\[ n \geq 59.9 \]
+Therefore n should be at least 60.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7 \item Using leaves with units of 0.1, the stem and leaf diagrams are:
 Group A: 12 1 2 4 4 5 7 7 9
