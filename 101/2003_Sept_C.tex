@@ -48,7 +48,7 @@ change the entries in the second row so that X and Y are independent.
 \item  The number of claims on a portfolio of policies was observed as follows:
 Number of claims per day 0 1 2 3 4 5 Total
 Frequency 48 32 17 2 0 1 100
-Use a 2 goodness-of-fit test to test the hypothesis that the number of claims each day
+Use a $\chi^2$ goodness-of-fit test to test the hypothesis that the number of claims each day
 follows a Poisson distribution. [7]
 \item  The following table contains 10 claim amounts for repair costs arising from a
 particular type of storm damage to private houses, for each of four different postcode
@@ -75,28 +75,28 @@ least significant difference approach with a significance level of 5%.
 \item  Let X denote the number of accidents a manual worker in a particular factory has in a
 year. For a given worker the distribution of X is modelled as a Poisson distribution
 with unknown parameter u that varies across the workforce. U is regarded as a
-random variable which has a gamma distribution with parameters  and , i.e.
+random variable which has a gamma distribution with parameters  $\alpha$ and $\lambda$, i.e.
 X | (U = u) 	 Poisson(u),
-U 	 gamma(, ).
-(i) Show that the marginal distribution of X has mean 
-
-and variance 2
- 
-
- 
-.
+% U 	 gamma(\alpha, \lambda).
+% (i) Show that the marginal distribution of X has mean 
+% 
+% and variance 2
+%   
+% 
+%   
+%.
 
-(ii) A dataset has a sample mean of x and a sample variance of s2 . Show that 
-and  may be estimated by
-2
-2 2
-ˆ x , ˆ x
-s x s x
-   
- 
+% (ii) A dataset has a sample mean of x and a sample variance of s2 . Show that \alpha
+% and \lambda may be estimated by
+% 2
+% 2 2
+% ˆ x , ˆ x
+% s x s x
+%    
+% \lambda \lambda
 using the method of moments. 
 (iii) State the circumstances under which the method of moments produce
-inadmissible estimates of  and . [1]
+inadmissible estimates of $\alpha$ and $\lambda$. 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -107,15 +107,22 @@ Y
 X 2 0.0 0.2 0.0 0.2
 3 0.2 0.0 0.2 0.4
 0.4 0.2 0.4
-E[X] = 0.4 × 1 + 0.2 × 2 + 0.4 × 3 = 2
-E[Y] = 0.4 × 2 + 0.2 × 4 + 0.4 × 6 = 4
-E[XY] = 1 × 2 × 0.2 + 1 × 4 × 0.0 + 1 × 6 × 0.2
-+ 2 × 2 × 0.0 + 2 × 4 × 0.2 + 2 × 6 × 0.0
-+ 3 × 2 × 0.2 + 3 × 4 × 0.0 + 3 × 6 × 0.2 = 8
+\begin{itemize}
+    \item $E[X] = 0.4 \times 1 + 0.2 \times 2 + 0.4 \times 3 = 2$
+\item $E[Y] = 0.4 \times 2 + 0.2 \times 4 + 0.4 \times 6 = 4$
+\end{itemize}
+\begin{eqnarray*}
+E[XY] &=& 1 \times 2 \times 0.2 + 1 \times 4 \times 0.0 + 1 \times 6 \times 0.2
++ \\ & & 2 \times 2 \times 0.0 + 2 \times 4 \times 0.2 + 2 \times 6 \times 0.0
++ \\ & &  3 \times 2 \times 0.2 + 3 \times 4 \times 0.0 + 3 \times 6 \times 0.2 \\
+&=&  8\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%5
+
 E[XY] − E[X]E[Y] = 0 Therefore uncorrelated.
 X and Y are not independent since
 P(X = x and Y = y) ≠ P(X = x) P(Y = y)
-e.g. x = 1 y = 2, 0.2 ≠ 0.4 × 0.4 = 0.16.
+e.g. x = 1 y = 2, $0.2 \neq (0.4 \times 0.4) = 0.16$.
 (ii) X and Y are independent if joint probability is:
 Y
 2 4 6
@@ -124,7 +131,7 @@ X 2 0.1 0.0 0.1 0.2
 3 0.2 0.0 0.2 0.4
 0.5 0.0 0.5
 10 The mean number of claims per day is
-{(32 × 1) + (17 × 2) + (2 × 3) + (0 × 4) + (1 × 5)}/100 = 0.77.
+\[\{(32 \times 1) + (17 \times 2) + (2 \times 3) + (0 \times 4) + (1 \times 5)\}/100 = 0.77.\]
 Use 0.77 as an estimate of the mean of the Poisson distribution. Thus
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 6
@@ -140,10 +147,13 @@ e x P X x
 x
 −
 = = , x = 0, 1, 2, …
-The expected frequencies are given by 100 × P(X = x).
-No. of claims (x) 0 1 2 3 4 ≥5 Total
+The expected frequencies are given by $100 \times P(X = x)$.
+\begin{verbatim}
+  No. of claims (x) 0 1 2 3 4 ≥5 Total
 Obs. frequency (fi) 48 32 17 2 0 1 100
-Exp. frequency (ei) 46.3 35.7 13.7 3.5 0.7 0.1 100.0
+Exp. frequency (ei) 46.3 35.7 13.7 3.5 0.7 0.1 100.0  
+\end{verbatim}
+
 Categories x = 3, 4, and ≥5 are grouped together to ensure that all ei are greater than 1.
 The expected frequency for ≥ 3 is 3.5 + 0.7 + 0.1 = 4.3; the corresponding observed
 frequency is 3.
@@ -155,13 +165,17 @@ data.]
 The probability value =
 ( ) 22
 P χ >1.63 ≅ 1 – 0.557 = 0.443 from the Yellow Tables p164
-There is insufficient evidence to suggest that the number of claims does not follow a
+\begin{itemize}
+    \item There is insufficient evidence to suggest that the number of claims does not follow a
 Poisson distribution (i.e. the model provides a good fit to the data).
-An alternative solution (in this over-conservative approach some information is
+\item An alternative solution (in this over-conservative approach some information is
 thrown away unnecessarily - but it was awarded full marks):
-Grouping categories x = 2, 3, 4 and ≥ 5 and using only 3 cells with observed
+\item Grouping categories x = 2, 3, 4 and ≥ 5 and using only 3 cells with observed
 frequencies 48, 32, and 20 and expected frequencies 46.3, 35.7, and 18.0 gives χ2 =
-0.668 on 1 degree of freedom. The probability value is 0.414. Same conclusion.
+0.668 on 1 degree of freedom. 
+\item The probability value is 0.414. Same conclusion.
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 11 (i) Total sum: 13046 + 12592 + 10965 + 12128 = 48731
 Total sum of squares: 17322090 + 16116822 + 12208021 + 14929994
@@ -199,22 +213,34 @@ the population mean for region C and the population mean for region D do not
 appear to differ.)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 8
-12 (i) E[X ] = E[E(X |U)] = E[U] = α / λ
-V[X ] = E[V (X |U)]+V[E(X |U)] = E[U]+V[U] = α / λ + α / λ2
-(ii) Using the method of moments, α and λ may be estimated by solving the
+12 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2003 September Q12
+\begin{eqnarray*}
+E [ X ] &=& E [ E ( X | U )] \\ &=& E [ U ] &=& \frac{\alpha }{\lambda}\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+V [ X ] &=& E [ V ( X | U )] + V [ E ( X | U )] \\ &=& E [ U ] + V [ U ]  \\ &=& \frac{\alpha }{\lambda} + \frac{\alpha }{\lambda^2}\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%
+(ii)
+Using the method of moments, $\alpha$ and $\lambda$ may be estimated by solving the
 equations
-2
-2 x and s α α α
-= = +
-λ λ λ
+
+\[ \bar{x} = \frac{\alpha}{\lambda} + \frac{\alpha}{\lambda^2}\]
+\[ s^2 = \frac{\alpha}{\lambda} + \frac{\alpha}{\lambda^2}\]
+% \alpha \alpha
+and s 2 = + 2
+
+% \lambda \lambda
 which gives
-2
-2 2
-ˆ x and ˆ x .
-s x s x
-α = λ =
-− −
-(iii) If s2 ≤ x , then the method of moments produces inadmissible estimates as the
-parameters α and λ must be positive and finite.
+
+\[ \hat{alpha} = \frac{ \bar{x} }{s^2 − \bar{x} } \]
+\[ \hat{lambda} = \frac{ \bar{x} }{s^2 − \bar{x} } \]
+.
+%%%%%%%%%%%%%%%%%%
+(iii) If $s^2 \leq \bar{x}$ , then the method of moments produces inadmissible estimates as the
+parameters $\alpha$ and $\lambda$ must be positive and finite.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
