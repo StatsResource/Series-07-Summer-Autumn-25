@@ -38,43 +38,53 @@
 plant a sample of 20 sites is chosen and an observation at each site is made of the
 content (in parts per million) of a particular contaminant. The data recorded are given
 in the table below together with some summaries:
-76 78 76 78 84 79 79 81 85 76
+\begin{verbatim}
+    76 78 76 78 84 79 79 81 85 76
 78 79 75 83 87 80 78 77 81 77
+
+\end{verbatim}
 
 x = 1,587 
 x2 = 126,131
-(i) (a) Present these data graphically using a dotplot and comment briefly on
+\begin{enumerate}
+    \item (i) (a) Present these data graphically using a dotplot and comment briefly on
 the shape of the distribution.
-(b) Calculate a 95% confidence interval for the mean contaminant content
+    \item  (b) Calculate a 95% confidence interval for the mean contaminant content
 for the residential area from which the sites were selected.
-(c) Comment briefly on the validity of this confidence interval in the light
+    \item (c) Comment briefly on the validity of this confidence interval in the light
 of your answer to part (a). [8]
-(ii) After some modifications by the operators of the industrial plant designed to
+    \item  (ii) After some modifications by the operators of the industrial plant designed to
 reduce the level of pollution due to this contaminant, another observation was
 made at each of the same sites. The data recorded are given in the table below
 with the sites in the same order as in the table above:
+\begin{verbatim}
 74 74 76 79 83 76 76 81 84 76
 81 77 74 83 89 78 77 72 79 78
+\end{verbatim}
+
+\end{enumerate}
+
 (a) Calculate the difference (before  after) in contaminant content for
 each site, present these differences graphically and comment briefly on
 the shape of the distribution.
 (b) Perform an appropriate test to investigate whether the modification has
 led to a reduction in the contaminant content.
 (c) Comment briefly on the validity of this test in the light of your answer
-to part (ii)(a). [9]
+to part (ii)(a). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Consider a linear regression model in which responses Yi are uncorrelated and have
 expectations xi and common variance 2 (i 1, ,n)  , i.e. Yi is modelled as a linear
 regression through the origin:
 E(Yi | xi )  xi and V(Yi | xi )  2 (i 1, ,n)  .
-(i) (a) Show that the least squares estimator of  is 2
+\begin{enumerate}[(a)]
+\item (i) (a) Show that the least squares estimator of  is 2
 1 1 1
 ˆ / n n
 i i i i i xY x
  
    .
-(b) Derive the expectation and variance of 1 ˆ under the model. 
-(ii) An alternative to the least squares estimator in this case is:
+\item (b) Derive the expectation and variance of 1 ˆ under the model. 
+\item (ii) An alternative to the least squares estimator in this case is:
 2
 1 1
 ˆ / /
@@ -84,10 +94,10 @@ i i
 Y x Y x
  
     .
-(a) Derive the expectation and variance of 2 ˆ under the model.
-(b) Show that the variance of the estimator 2 ˆ is at least as large as that of
+\item (a) Derive the expectation and variance of 2 ˆ under the model.
+\item (b) Show that the variance of the estimator 2 ˆ is at least as large as that of
 the least squares estimator 1 ˆ . 
-(iii) Now consider an estimator 3 ˆ of  which is a linear function of the
+\item (iii) Now consider an estimator 3 ˆ of  which is a linear function of the
 responses, i.e. an estimator which has the form 3
 1
 ˆ ,
@@ -98,7 +108,7 @@ a Y
 
   where a1, ,an 
 are constants.
-(a) Show that 3 ˆ is unbiased for  if 1 1 n
+\item (a) Show that 3 ˆ is unbiased for  if 1 1 n
 i i i a x
 
   , and that the variance
@@ -108,7 +118,7 @@ n
 i i a
 
   .
-(b) Show that the estimators 1 ˆ and 2 ˆ above may be expressed in the
+\item (b) Show that the estimators 1 ˆ and 2 ˆ above may be expressed in the
 form 3
 1
 ˆ
@@ -119,7 +129,7 @@ a Y
 
   and hence verify that 1 ˆ and 2 ˆ satisfy the
 condition for unbiasedness in (iii)(a).
-(c) It can be shown that, subject to the condition 1 1 n
+\item (c) It can be shown that, subject to the condition 1 1 n
 i i i a x
 
   , the
@@ -134,7 +144,8 @@ x
 
 
 
-Comment on this result. [7]
+Comment on this result. 
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item Let S(0) denote the price of a certain security, and let S(n) denote the price of the
 security at the end of n successive weeks for n = 1, 2, 3, .... A model for the changes
@@ -153,15 +164,20 @@ e 2
  and
 V(Y) = e2 2 (e 2 1)  
  .]
+
 (i) Using the above lognormal model with parameters  = 0.0125 and  = 0.055,
 determine the probability that:
-(a) the price of the security decreases over the next week
-(b) the price of the security decreases over each of the next two weeks
-(c) the price at the end of two weeks is greater than it is at present
-(d) the price at the end of 20 weeks is less than it is at present
+\begin{enumerate}[(i)]
+    \item (a) the price of the security decreases over the next week
+\item (b) the price of the security decreases over each of the next two weeks
+\item (c) the price at the end of two weeks is greater than it is at present
+\item (d) the price at the end of 20 weeks is less than it is at present
+\end{enumerate}
+
 [11]
 (ii) At the start of a period the price is £1,245 and it is then observed for 10 weeks.
 The resulting 10 prices (£) and ratios are given in the following table:
+\begin{verbatim}
 Week Price Ratio(y)
 0 1,245 -
 1 1,230 0.988
@@ -174,7 +190,9 @@ Week Price Ratio(y)
 8 1,265 0.940
 9 1,513 1.196
 10 1,468 0.970
-y = 10.192 y2 = 10.441562
+y = 10.192 y2 = 10.441562    
+\end{verbatim}
+
 (a) Based on the specified model, explain why the 10 ratios constitute a
 random sample from a lognormal distribution.
 (b) Calculate the mean and the standard deviation for the random sample
@@ -211,7 +229,9 @@ This may be doubtful in view of the skewness shown in part (a), but
 the sample size of 20 is perhaps large enough to justify the validity due
 to the robustness of the t analysis.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 9
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (ii) (a) Differences (before − after) are:
 2 4 0 -1 1 3 3 0 1 0
 -3 2 1 0 -2 2 1 5 2 -1
@@ -221,40 +241,47 @@ Dotplot of differences:
 -+---------+---------+---------+---------+---------+-----diff
 -3.0 -1.5 0.0 1.5 3.0 4.5
 Seems quite symmetrical and normal
-(b) Paired t test is appropriate.
-Σd = 20 and Σd2 = 94
-2
-2
-94 20 20 1.0 20 3.895
-20 19
-d s
-−
-= = = =
-Observed 1.0 2.27
-3.895
-20
-t= = on 19 d.f.
-For one-sided test: 5% point = 1.729, 2.5% point = 2.093 and 1% point
-= 2.539
-P-value is approx. 0.020
-So there is some evidence that the modifications have reduced the
-contaminant content.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 2003 September Q12
+(b)
+Paired t test is appropriate.
+$\sum d = 20$ and $\sum d^2 = 94$
+
+$ \bar{d} = \frac{20}{20} = 1.0$
+
+$ s^2 =  \frac{ 94 \; -\; \frac{(20)^2}{20} }{ 19 }  =   3.895 $
+
+\[t_{TS} = \frac{1-0}{  \frac{3.895}{\sqrt{20} } } = 2.27 on 19 d.f. \]
+
+
+
+
+\begin{itemize}
+\item  For one-sided test: 5\% point = 1.729, 2.5\% point = 2.093 and 1\% point = 2.539
+\item $p-$value is approx. 0.020
+\item So there is some evidence that the modifications have reduced the contaminant content.
+\end{itemize}
+
 (c) This t analysis requires normality of the differences and this seems
 reasonable from part (a).
-14 (i) (a) The least squares estimate of β minimises
+14 (i) (a) The least squares estimate of \beta minimises
 2 2 2 2
 1 1 1 1 ( ) 2 . n n n n
-i i i i i i i i i i q y x y xy x = = = = =Σ −β =Σ − βΣ +β Σ
-Differentiating with respect toβ gives
+i i i i i i i i i i q y x y xy x = = = = =Σ −\beta =Σ − \betaΣ +\beta Σ
+Differentiating with respect to\beta gives
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 10
 2
 1 1 2( ). n n
 i i i i i
 dq x x y
-d = = = β −
-β Σ Σ
+d = = = \beta −
+\beta Σ Σ
 Equating to zero gives the least squares estimator as
+\begin{itemize}
+\item 
 1
 1 2
 1
@@ -267,34 +294,34 @@ x Y
 x
 =
 =
-β = Σ
+\beta = Σ
 Σ
 as required.
-(b) Mean and variance of 1 ˆβ :
+\item (b) Mean and variance of $1 \hat{\beta}$ :
 2
 1 1 1
 (ˆ ) ( | ) / n n
-i i i i i i E x E Y x x = = β =Σ Σ
+\[i i i i i i E x E Y x x = = \beta =Σ Σ\]
 2
 1 1 / n n
-i i i i i x x x = = =Σ β Σ = β
+i i i i i x x x = = =Σ \beta Σ = \beta
 2 2 22 2 2
 1 1 1 1
 (ˆ ) /( ) / . n n n
-i i i i i i V x x x = = = β = σ Σ Σ = σ Σ
-(ii) (a) The alternative estimator 2 1 1
+i i i i i i V x x x = = = \beta = σ Σ Σ = σ Σ
+\item (ii) (a) The alternative estimator 2 1 1
 ˆ / n n
-i i i i Y x = = β =Σ Σ has expectation and
+i i i i Y x = = \beta =Σ Σ has expectation and
 variance
 2 1 1 1 1
 (ˆ ) ( | ) / / , n n n n
-i i i i i i i i i E EY x x x x = = = = β =Σ Σ =Σ β Σ = β
+i i i i i i i i i E EY x x x x = = = = \beta =Σ Σ =Σ \beta Σ = \beta
 ( )2
 2 2 2
 2 1
 (ˆ ) / /( ). n
-i i V n x nx = β = σ Σ = σ
-(b) 2 1 V (βˆ ) ≥V (βˆ )
+i i V n x nx = \beta = σ Σ = σ
+\item (b) 2 1 V (\betaˆ ) ≥V (\betaˆ )
 2 2 2 2
 1 / / n
 i i nx x = ⇔ σ ≥ σ Σ
@@ -304,8 +331,8 @@ i ix nx = ⇔Σ − ≥
 2
 1( ) 0 n
 i ix x = ⇔Σ − ≥
-∴ The variance of 2 ˆβ is at least as large as the variance of the least
-squares estimator 1 ˆβ .
+\item The variance of 2 \hat{\beta} is at least as large as the variance of the least
+squares estimator 1 \hat{\beta} .
 (iii) (a) 3
 1 1 1 1
 (ˆ ) ( | )
@@ -313,14 +340,14 @@ n n n n
 i i i i i i i i i
 i i i i
 E E aY aEY x ax ax
-= = = =
-⎛ ⎞
-β = ⎜⎜ ⎟⎟ = = β = β
-⎝ ⎠
-Σ Σ Σ Σ
+% = = = =
+% ⎛ ⎞
+% \beta = ⎜⎜ ⎟⎟ = = \beta = \beta
+% ⎝ ⎠
+% Σ Σ Σ Σ
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 11
-∴E(βˆ3) = β , i.e. unbiased, if
+\item ∴ % E(\betaˆ3) = \beta , i.e. unbiased, if
 1
 1
 n
@@ -336,12 +363,12 @@ n
 i i
 i
 V V aY
-=
-⎛ ⎞
-β = ⎜⎜ ⎟⎟
-⎝ ⎠
-Σ = 2 2
-1
+% =
+% ⎛ ⎞
+% \beta = ⎜⎜ ⎟⎟
+% ⎝ ⎠
+% Σ = 2 2
+% 1
 n
 i
 i
@@ -363,7 +390,7 @@ x Y
 x
 =
 =
-β =
+% \beta =
 Σ
 Σ
 =
@@ -374,7 +401,7 @@ i i
 i
 a Y
 = Σ
-where
+\item where
 2
 1
 i , 1, , .
@@ -409,7 +436,7 @@ x x
 Σ
 Σ Σ
 Σ Σ
-i.e. the condition 1 1 n
+\item i.e. the condition 1 1 n
 i i i a x = Σ = is satisfied.
 1
 2
@@ -429,7 +456,7 @@ x
 =
 =
 =
-β = =
+\item $\beta$ = =
 Σ
 Σ
 Σ
@@ -447,10 +474,12 @@ a x x nx
 Σ =Σ = =
 i.e. the condition 1 1 n
 i i i a x = Σ = is satisfied.
+\end{itemize}
+
 (c) Among estimators of the form 1
 n
 i i i a Y = Σ , the minimum variance
-unbiased estimator of β is
+unbiased estimator of \beta is
 1
 3 1
 1 2
@@ -469,20 +498,22 @@ x
 =
 =
 =
-β = = =β
-Σ
-Σ
-Σ
+% \beta = = =\beta
+% Σ
+% Σ
+% Σ
 i.e. the least squares estimator.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 12
-15 (i) (a) Let Y = ratio for one week, and Y = eX
-P(decrease in one week) = P(Y < 1)
-= P(eX < 1) = P(X < 0)
-= P(Z < 0 0.0125
-0.055
-−
-= − 0.227) = 1 − 0.5898 = 0.41
+15 (i) (a) Let Y = ratio for one week, and $Y = e^X$
+\begin{eqnarray*}
+P(decrease in one week) &=& P(Y < 1)\\
+&=& P(eX < 1) = P(X < 0)\\
+&=& P(Z < \frac{0-0.0125}{0.055})\\
+&=& − 0.227) \\ 
+&=& 1 − 0.5898 \\ &=& 0.41
+\end{eqnarray*}
+
 (b) P(decrease in next two weeks) = (0.41)2 = 0.17
 (c) We require ( (2) 1) ( (2) . (1) 1)
 (0) (1) (0)
@@ -510,13 +541,16 @@ X N
 20(0.055)
 P PZ −
 ∴ = < =− =
-(ii) (a) The ratios are independent and identically distributed lognormal r.v.’s.
-This defines a random sample from a lognormal distribution.
-(b) For the 10 observed ratios y1, . . . , y10:
+\begin{itemize}
+    \item (ii) (a) The ratios are independent and identically distributed lognormal r.v.’s.
+\item This defines a random sample from a lognormal distribution.
+\item (b) For the 10 observed ratios y1, . . . , y10:
 Σy =10.192 ⇒ y =1.0192
 Σy2 =10.441562 ⇒ s2 = 0.005986⇒ s = 0.0774
-(c) For the method of moments:
+\item (c) For the method of moments:
 solve the following equations for μ and σ2
+\end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 1 2
