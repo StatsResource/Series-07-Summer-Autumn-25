@@ -36,20 +36,17 @@
 \item
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9 In order to simulate an observation of a normal random variable it is suggested that
-1
-=
-n
-i
-i
-S X
-is used, where X1, , Xn is a random sample from a continuous uniform distribution
-on the interval ( 1 1
-2 2 , ).
-(i) Determine the approximate distribution of S. [2]
-(ii) Determine the value of n which should be used if S is required to represent a
-standard normal random variable. [1]
-(iii) Explain why S has the same coefficient of skewness as a standard normal
-random variable. [1]
+\[S = \sum^{n}{i=1} X_i\]
+is used, where $X_1, \ldots , X_n$ is a random sample from a continuous uniform distribution
+on the interval $\displaystyle \left( -\frac{1}{2}, \frac{1}{2} \right)$ .
+\begin{enumerate}[(a)]
+    \item (i) Determine the approximate distribution of S. 
+    \item (ii) Determine the value of n which should be used if S is required to represent a
+standard normal random variable. 
+    \item (iii) Explain why S has the same coefficient of skewness as a standard normal
+random variable. 
+\end{enumerate}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 10 The number of claims which arise in a year under a policy of a certain type follows a
 Poisson distribution with mean . It is required to test
@@ -65,6 +62,7 @@ and comment briefly on the results. [5]
 of insurance policies on the contents of private houses for each of four insurance
 companies.
 Company
+\begin{verbatim}
 1 2 3 4
 (y1) (y2) (y3) (y4)
 39 24 21 33
@@ -80,14 +78,17 @@ y1
 2 = 4,703 y3
 2 = 7,125 y4
 2 = 6,916
-(i) Test whether there are any differences between the population means of the
+\end{verbatim}
+
+\begin{enumerate}[(a)]
+\item (i) Test whether there are any differences between the population means of the
 four companies, using one-way analysis of variance.
-[5]
-101 A2004 5 PLEASE TURN OVER
+\item 
 (ii) A plot of the residuals for the fitted one-way analysis of variance model is
 given below:
-Comment on the adequacy of the model. [2]
-[Total 7]
+Comment on the adequacy of the model. 
+\end{enumerate}
+
 1 2 3 4
 -10
 0
@@ -99,7 +100,7 @@ Residuals
 \item 12 For the estimation of a binomial probability p = P(success), a series of n independent
 trials are performed and X represents the number of successes observed.
 \begin{enumerate}[(a)]
-    \item (i) Write down the likelihood function L(p) and show that the maximum
+    \item (i) Write down the likelihood function $L(p)$ and show that the maximum
 likelihood estimator (MLE) of p is =
 X
 p
@@ -142,7 +143,7 @@ N
 p p
 n
 .
-Determine the resulting approximate 95% confidence interval using this. [2]
+Determine the resulting approximate 95\% confidence interval using this. [2]
 \end{enumerate}
 
 
@@ -202,12 +203,14 @@ $\lambda = 0.4$, which is further away from $H_0$ value 0.2
 
 11 (i) n1 = n2 = n3 = n4 = 7 n = 28
 y1 = 227 y2 = 179 y3 = 213 y4 = 218 yij = 837
-y1
-2 = 7501 y2
-2 = 4703 y3
-2 = 7125 y4
-2 = 6916 yij
-2 = 26245
+
+\begin{itemize}
+    \item $\sum y_1^2 = 7501$ 
+\item $\sum y^2_2 = 4703 $
+\item $\sum y_3^2 = 7125 $
+\item $\sum y_4^2 = 6916 $
+\item $\sum yij^2 = 26245 $
+\end{itemize}
 SST = 26245
 8372
 28
@@ -232,16 +235,19 @@ The 10% point of F3,24 distribution is 2.327. Therefore, there is insufficient
 evidence to reject the null hypothesis that the population means for the four
 companies are equal, i.e., the distributions of the sums insured are the same for
 the four companies.
-(ii) The model used in (i) assumes that the sums insured for each company follow
+(ii) 
+\begin{itemize}
+    \item The model used in (i) assumes that the sums insured for each company follow
 a normal distribution, and the population variances are equal.
-The plot of residuals shows:
+\item The plot of residuals shows:
 normality seems appropriate, but observation £51,000 seems to be an
 outlier
-companies have similar sample variances, but one could argue that there is
+companies have similar sample variances. \item However one could argue that there is
 a suggestion that the variance for Company 3 is higher than the variances
 for the other companies.
-Therefore, overall the one-way analysis of variance model seems adequate and
+\item Therefore, overall the one-way analysis of variance model seems adequate and
 the conclusions in (i) are valid.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 12 (i) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
