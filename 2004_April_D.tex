@@ -56,10 +56,10 @@ The researcher wants to examine whether or not the exponential distribution prov
 a good description of the distribution of the payments.
 \begin{enumerate}[(a)]
 \item (a) Calculate the sample mean and standard deviation for the 100 payments, and comment briefly on whether or not you think the exponential distribution will provide an acceptable fit to the data.
-(b) Specify the fitted exponential distribution, giving a brief justification of your approach.
+\item (b) Specify the fitted exponential distribution, giving a brief justification of your approach.
 Note: you are not required to give any mathematical derivation in your justification.
 \item The researcher decides to conduct a formal chi-squared goodness-of-fit test of the exponential distribution to the data, using five equi-probable intervals (i.e. intervals each with associated probability 0.2).
-(a) Show that the value x which is exceeded with probability p by an exponential variable with mean satisfies x = logp.
+(a) Show that the value x which is exceeded with probability p by an exponential variable with mean satisfies $x = \log p$.
 (b) Calculate the values which divide the positive real numbers into five equi-probable intervals for your fitted exponential distribution.
 \item  Conduct the formal goodness-of-fit test outlined in part (ii) above and
 comment on the result. 
@@ -72,7 +72,8 @@ part of the brain.
 In a study of the relationship between post-mortem interval and the concentration of 3-MT, samples of the appropriate part of the brain were taken from coroners cases for which the time of death had been determined from eye-witness accounts. The
 intervals (x; in hours) and concentrations (y; in parts per million) for 18 individuals who were found to have died from organic heart disease are given in the following table. For the last two individuals (numbered 17 and 18 in the table), there was no eye-witness testimony directly available, and the time of death was established on the
 basis of other evidence including knowledge of the individuals activities.
-Observation
+\begin{verbatim}
+  Observation
 number
 Interval
 (x)
@@ -96,7 +97,9 @@ Concentration
 16 26.0 1.94
 17 48.0 1.57
 18 60.0 0.61
-x = 337 x2 = 9854.5 y = 42.98 y2 = 109.7936 xy = 672.8
+x = 337 x2 = 9854.5 y = 42.98 y2 = 109.7936 xy = 672.8  
+\end{verbatim}
+
 In this investigation you are required to explore the relationship between
 concentration (regarded as the response/dependent variable) and interval (regarded as the explanatory/independent variable).
 \begin{enumerate}[(a)]
@@ -151,8 +154,12 @@ exponential distribution as a description it provides a very poor fit to the
 data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 14 (i)
-The concentration of 3-MT in the brain decreases as the post-mortem interval increases from 5.5 hours to 60 hours. There are two points with a much higher post-mortem interval than the other observations.
-The data seem to be appropriate for linear regression, but care should be taken when evaluating the effect for the higher interval values as there are only 2 points in the higher x-range.
+\begin{itemize}
+    \item The concentration of 3-MT in the brain decreases as the post-mortem interval increases from 5.5 hours to 60 hours.
+    \item There are two points with a much higher post-mortem interval than the other observations.
+\item The data seem to be appropriate for linear regression, but care should be taken when evaluating the effect for the higher interval values as there are only 2 points in the higher x-range.
+\end{itemize}
+
 (ii) n = 18
 0 10 20 30 40 50 60
 3
@@ -163,15 +170,18 @@ Concentration (y)
 Plot of Concentration against Interval
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 10
-Sxx = x2 ( x)2/n
+\begin{itemize}
+    \item Sxx = x2 ( x)2/n
 = 9854.5 (337)2/18
 = 3545.1111
-Syy = y2 ( y)2/n
+    \item Syy = y2 ( y)2/n
 = 109.7936 (42.98)2/18
 = 7.1669111
-Sxy = xy ( x)( y)/n
+    \item Sxy = xy ( x)( y)/n
 = 672.8 (337)(42.98)/18
 = 131.88111
+\end{itemize}
+
 Correlation coefficient:
 131.88111
 (3545.1111)(7.1669111)
@@ -216,9 +226,11 @@ y = x
 = 3.0843 0.0372 x
 i.e. Concentration = 3.0843 0.0372 Interval
 (a) At 1 day = 24 hours:
-y = 3.0843 0.0372 x
-= 3.0843 0.0372 (24)
-= 2.19
+\begin{eqnarray*}
+y &=& 3.0843 -  0.0372 x\\
+&=& 3.0843 - 0.0372 (24)\\
+&=& 2.19\\
+\end{eqnarray*}
 (b) At 2 days = 48 hours:
 y = 3.0843 0.0372 x
 = 3.0843 0.0372 (48)
@@ -247,18 +259,19 @@ s.e.( ) =
 Sxx 3545.111
 = 0.00631331
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-99\% confidence interval for slope is tn 2 s.e.( ) df = n 2 = 16
+\begin{itemize}
+\item 99\% confidence interval for slope is tn 2 s.e.( ) df = n 2 = 16
 = 0.0372008 (2.921) (0.00631331)
 = 0.0372 0.0184
 or ( 0.0556, 0.0188)
-= 0 is not within this 99\% confidence interval, therefore we would reject the
+\item  0 is not within this 99\% confidence interval, therefore we would reject the
 null hypothesis = 0, at the 1\% significance level.
-Therefore there does appear to be a (negative) linear relationship between
+\item Therefore there does appear to be a (negative) linear relationship between
 Interval and Concentration.
-This confirms the result in (ii) where the correlation coefficient was shown to
+\item This confirms the result in (ii) where the correlation coefficient was shown to
 not equal zero at the 1\% significance level.
-Note: Plots of data need not be works of graphic art, but should at least be neat and clear
+\item Note: Plots of data need not be works of graphic art, but should at least be neat and clear
 enough (with adequate title and labels) to convey the information.
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
