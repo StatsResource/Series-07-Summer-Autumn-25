@@ -36,16 +36,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 1 Data were collected on 100 consecutive days for the number of claims, x, arising
 from a group of policies. This resulted in the following frequency distribution
-x: 0 1 2 3 4 ≥5
-f: 14 25 26 18 12 5
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|c}
+x: & 0 & 1 & 2 & 3 & 4 & $\geq 5$ \\
+f: & 14 & 25 & 26 & 18 &  12 & 5 \\
+\end{tabular}
+\end{center}
 Calculate the median and interquartile range for these data. 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 2 Let X1 and X2 be independent Poisson random variables with respective means μ1
-and μ2.
-Assuming the moment generating function of a Poisson random variable,
-determine the moment generating function of X1 + X2 and hence state the
-distribution of X1 + X2 . 
+\item 2 Let $X_1$ and $X_2$ be independent Poisson random variables with respective means $\mu_1$ and $\mu_2$.
+Assuming the moment generating function of a Poisson random variable, determine the moment generating function of $X_1 + X_2$ and hence state the distribution of $X_1 + X_2$ . 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 3 Let $X1 , X2 , \ldots , X5$ be independent N(0,1) random variables and let
@@ -70,9 +71,7 @@ P X X X
 % - . 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 4 Let {(xi , yi); i = 1, … , n} denote a set of n pairs of points with
-Assuming the usual expressions for the estimated coefficients, verify that the
-least squares fitted regression line of y on x passes through the point (x, y). 
+\item 4 Let $\{(x_i , y_i); i = 1, \ldots , n\}$ denote a set of n pairs of points with Assuming the usual expressions for the estimated coefficients, verify that the least squares fitted regression line of y on x passes through the point $(x, y)$. 
 \end{enumerate}
 
 \newpage
@@ -93,6 +92,9 @@ Q3 =
 2
 th observation = 3 -IQR = 3 - 1 = 2
 (same answers using alternative definitions)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+\medskip 
 2 As X1 and X2 are independent
 1 2 1 2
 ( ) ( ). ( ) X X X X M t M tM t -
@@ -103,6 +105,7 @@ th observation = 3 -IQR = 3 - 1 = 2
 -
 - X1 + X2 is Poisson with mean $(\lambda_1 + \lambda_2)$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\medskip 
 3 X ~ N with mean 0 so P(X - 0)% \lambda 0.5
 % 4S2/2 ~ 2
 with 4 d.f. i.e. 4S2 ~ % 2
@@ -120,6 +123,8 @@ P X X P
 -
 X and S2 are independent, so probability required = $0.5 \times 0.95 = 0.475$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\medskip 
 4 Fitted regression line:
 % y = - \lambda x
 % But least squares estimate of  is
