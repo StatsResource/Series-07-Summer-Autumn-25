@@ -1,0 +1,152 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+1
+Let X n = Y 1 + Y 2 + ... + Y n be a simple random walk with step distribution
+P[Y j = 1] = p = 1 − P[Y j = −1].
+Derive an expression, for each λ > 0, for the two values of γ such that
+M n = e − λ n + γ X n is a martingale with respect to the natural filtration of X n .
+2
+[4]
+Let X and Y be jointly normal random variables with means μ X , μ Y , variances
+σ 2 X , σ Y 2 and correlation coefficient ρ. Derive an expression for the values of
+the coefficients α and β, given that the conditional expectation E[XY] is of the
+form α + βY.
+[5]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+1
+E[M n+1 1⁄2F n ] = E [ e - l ( n + 1 ) + g X n + 1 1⁄2 F n ]
+= e - l ( n + 1 ) E [ e g ( X n + Y n + 1 ) 1⁄2 F n ] = e - l ( n + 1) e g X n E [ e g Y n + 1 1⁄2 F n ]
+= e - l M n E[ e g Y n + 1 ] = e - l M n ( pe g + ( 1 - p ) e - g ).
+Hence the condition for martingale:
+pe g + (1 - p)e -g = e l .
+Multiply by e g and solve quadratic equation in unknown e g :
+e g =
+2
+e l ± e 2 l - 4 p ( 1 - p )
+.
+2 p
+Assume E[X1⁄2Y] = a + bY and determine a, b using:
+(i) orthogonality condition E{(X - E[X1⁄2Y])Y} = 0.
+(ii) E{E[X1⁄2Y]} = E[X].
+(i) gives E[XY] - aE[Y] -bE[Y 2 ] = 0;
+Since the correlation coefficient r is
+r =
+E [ XY ] - E [ X ] E [ Y ]
+,
+s X s Y
+we have E[XY] = rs X s Y + m X m Y and (i) yields
+am Y + b ( s Y 2 + m Y 2 ) = rs X s Y + m X m Y .
+(ii) gives a + bm Y = m X .
+Solve the two simultaneous equations to get
+b =
+Page 2
+HI X
+,
+I Y
+a = m X -
+rs X
+m Y
+s YSubject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+3
+-0
+l ( t )
+1
+l ( t )
+F - l ( t )
+G
+A(t) = G
+G
+H
+2
+l ( t )
+3
+l ( t )
+- l ( t )
+l ( t )
+- l ( t )
+L .
+I
+J
+.
+O J
+J
+O K
+Forward equations:
+¶
+P(s, t) = P(s, t) A(t),
+¶t
+t 3 s.
+¶
+P 00 (s, t) = -l(t) P 00 (s, t) and P 00 (s, s) = 1 imply that P 00 (s, t) = exp(-
+¶t
+e -m(s,t) .
+z
+t
+s
+l(u)du) =
+¶
+P 0j (s, t) = l(t) P 0, j-1 (s, t) - l(t) P 0j (s, t) with initial
+¶t
+condition P 0j (s, s) = 0.
+For j > 0, we have
+Verify that the form of P 0j (s, t) given in the question satisfies this equation:
+LHS = (jm(s, t) j-1 - m(s, t) j )
+RHS = l(t)
+m ( s , t ) j e - m ( s , t )
+m ( s , t ) j - 1 e - m ( s , t )
+- l ( t )
+j !
+( j - 1 )!
+The observation that
+4
+e - m ( s , t ) ¶
+m ( s , t ),
+j ! ¶ t
+¶
+m ( s , t ) = l(t) is sufficient to finish the verification.
+¶t
+(a) Z is stationary, i.e. I(0), as it is a first-order autoregression;
+X is not stationary but ÑX is just a linear combination of Z and e 1 , so is
+stationary; this implies that X is I(1). The same goes for Y.
+(b) Z satisfies the Markov property on its own; X and Y do not, since they
+depend on values of Z.
+(c) (X, Y, Z) is Markov; indeed, it is a vector autoregression.
+(d) X and Y are not cointegrated. Although both are I(1), any linear
+combination W =aX + bY satisfies W n = W n-1 + q W Z n-1 + e 3,n which does not
+define a stationary process.\end{document}
+\end{document}
