@@ -35,9 +35,7 @@
 \begin{enumerate}
 \item
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-13 A researcher studying the claims experience of a company (in a particular class of
-business) records the payments on 100 recent claims. The payments (in units of
-£1000, and sorted) are given below.
+13 A researcher studying the claims experience of a company (in a particular class of business) records the payments on 100 recent claims. The payments (in units of £1000, and sorted) are given below.
 Payments
 \begin{verbatim}
 0.30 0.89 0.96 1.16 1.67 1.77 1.93 1.98 2.07 2.09 2.30 2.48
@@ -127,14 +125,10 @@ part (ii) above.
 13584.5217 6.75
 99 100
 s
-An exponential distribution has mean = standard deviation so there
-must be some doubt here as to whether such a distribution will be a
-good description of these data.
-(b) The fitted model is an exponential distribution with mean 9.53
+An exponential distribution has mean = standard deviation so there must be some doubt here as to whether such a distribution will be a good description of these data.
+(b) The fitted model is an exponential distribution with mean 9.53 
 (i.e. with parameter 1/9.5275 = 0.105).
-Reason: the maximum likelihood estimate (and the method of
-moments estimate) of the mean of an exponential distribution is the
-sample mean
+Reason: the maximum likelihood estimate (and the method of moments estimate) of the mean of an exponential distribution is the sample mean
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Page 9
 (ii) (a) For X ~ exp(mean = ) we have P(X > x) = exp( x/ )
@@ -144,14 +138,14 @@ we get x = 2.13, 4.87, 8.73, 15.33
 (iii) The numbers of observations in (0,2.13), (2.13,4.87), (4.87,8.73), (8.73,15.33)
 and (15.33, ) are, by inspection from the data, respectively 10, 20, 24, 30,
 and 16.
+\begin{verbatim}
 Interval 0 2.13 2.13 4.87 4.87 8.73 8.73 15.33 15.33
 Observed frequency 10 20 24 30 16
 Expected frequency 20 20 20 20 20
-2 = (102 + 0 + 42 + 102 + 42)/20 = 232/20 = 11.6
+\end{verbatim}
+\[\chi^2 = \frac{(102 + 0 + 42 + 102 + 42)}{20} = 232/20 = 11.6\]
 df = 3
-P-value = P( 2 > 11.6) = 0.009 (from Yellow Tables p164), so we reject the
-exponential distribution as a description it provides a very poor fit to the
-data.
+P-value = P( 2 > 11.6) = 0.009 (from Yellow Tables p164), so we reject the exponential distribution as a description it provides a very poor fit to the data.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 14 (i)
 \begin{itemize}
@@ -204,8 +198,11 @@ r
 ( 0.827)
 1 ( 0.827)
 = 5.89
-t16(2.5\%) = 2.120
-t16(0.5\%) = 2.921
+\begin{itemize}
+\item $t_{16}(2.5\%) = 2.120$
+\item $t_{16}(0.5\%) = 2.921$
+\end{itemize}
+
 t = 5.89 is larger than the critical values at the 5\% and 1\% significance levels. Therefore reject the null hypothesis that the population correlation coefficient is equal to zero, and conclude that there is a linear relationship
 between interval and concentration.
 (iii) Model: y = + x
@@ -224,7 +221,9 @@ y x
 = 3.084259 or 3.0843 (to 4 d.p.)
 y = x
 = 3.0843 0.0372 x
-i.e. Concentration = 3.0843 0.0372 Interval
+i.e. \[\mbox{Concentration} = 3.0843 0.0372 \mbox{Interval}\]
+
+
 (a) At 1 day = 24 hours:
 \begin{eqnarray*}
 y &=& 3.0843 -  0.0372 x\\
@@ -232,9 +231,13 @@ y &=& 3.0843 -  0.0372 x\\
 &=& 2.19\\
 \end{eqnarray*}
 (b) At 2 days = 48 hours:
-y = 3.0843 0.0372 x
-= 3.0843 0.0372 (48)
-= 1.30
+
+
+\begin{eqnarray*}
+y &=& 3.0843 -  0.0372 x\\
+&=& 3.0843 - 0.0372 (48)\\
+&=& 1.30\\
+\end{eqnarray*}
 This data set contains accurate data up to 26 hours, as for observations 17 and 18 (at 48 hours and 60 hours respectively) there was no eye-witness testimony directly available. Predicting 3-MT concentration after 26 hours may not be
 advisable, even though x = 48 is within the range of the x-values (5.5 hours to 60 hours).
 (iv)
