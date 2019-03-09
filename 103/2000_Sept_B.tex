@@ -1,0 +1,104 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+During a long motorway journey a child amuses himself by noting down, at the
+end of each minute, the lane in which the car is travelling. The motorway has
+three lanes and the journey lasts N minutes.
+(i) Describe how to fit a three-state time-homogeneous Markov chain model
+to the data, writing down formulae for the estimates of the transition
+probabilities.
+[2]
+(ii) Describe one test which could be applied to determine whether the process
+possesses the Markov property. [2]
+[Total 4]
+A standard Ornstein-Uhlenbeck process may be defined as a stationary zero-
+mean Gaussian process {U t : t ∈ R} with autocovariance function given by
+Cov(U t , U s ) =
+τ 2 − θ  t − s 
+e
+2 θ
+(s, t ∈ R).
+(i) Show that the process {U n : n = 1, 2, ...}, obtained by observing U only at
+integer times, is a first-order autoregression.
+[2]
+(ii) Derive expressions for the parameters α and σ 2 of the autoregression in
+terms of θ and τ 2 .
+[2]
+[Total 4]
+103—244
+
+3
+(i) Let N ij denote the number of minutes when the car was in lane i at the
+start of the minute and in lane j at the end. The estimate of the
+transition probability p ij is N ij / N i+ , where N i+ = Σ j N ij .
+(ii) The problem here is the alternative hypothesis. It would be possible to
+test whether the distribution of X n+1 conditional on X n = i was really
+independent of X n−1 . Or one might test, using a standard goodness-of-fit
+test, whether the distribution of the number of consecutive minutes spent
+in lane i really was geometrically distributed with parameter determined
+by i.
+(i) Since {U n } is Gaussian and stationary, it is determined uniquely by its
+mean and autocovariance functions. For k > 0 we have γ k = Cov(U n , U n−k )
+=
+(ii)
+τ 2 −θk
+τ 2
+e , so that the ACF is ρ k = e −θk and the variance γ 0 =
+.
+2 θ
+2 θ
+Compare this with the corresponding values for an AR(1): γ 0 =
+σ 2
+and
+1 − α 2
+ρ k = α k for k > 0.
+The two are seen to match as long as α = e −θ and σ 2 = (1 − e − 2 θ )
+Page 2
+τ 2
+.
+2 θSubject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
+4
+(i)
+If X satisfies dX t = Y t dB t + Z t dt, then f(X t ) satisfies
+d[f(X t )] = f ′(X t ) Y t dB t + { f ′(X t ) Z t + 1⁄2 f ′′(X t ) Y t 2 } dt.
+(ii)
+(x 4 )′ = 4x 3 , (x 4 )′′ = 12x 2 .
+d ( B t 4 ) = 4 B t 3 dB t +
+(iii)
+t
+ò 0
+. 12 B t 2 dt = 4 B t 3 dB t + 6 B t 2 dt .
+d ( B s 4 ) = 4 ò t 0 B s 3 dB s + 6 ò t 0 B s 2 ds .
+Therefore\end{document}
