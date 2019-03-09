@@ -1,0 +1,102 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+1
+There are N individuals in a population, some of whom have a certain infection
+that spreads as follows. Contacts between two members of this population occur
+in accordance with a Poisson process having rate λ. When a contact occurs, it is
+equally likely to involve any of the P =
+N
+e 2 j
+pairs of individuals in the population.
+If a contact involves an infected and a non-infected individual, then with
+probability p the noninfected individual becomes infected. Once infected, an
+individual remains infected throughout. Let X(t) denote the number of infected
+members of the population at time t.
+2
+
+3
+(i) State whether X(t), t > 0 is a continuous-time Markov jump process. If so,
+write down its state space and transition rates; if not, explain how it can
+be expressed in terms of a different process which is Markov.
+[2]
+(ii) Derive an expression for the expected time until all members are infected,
+starting from a single infected individual
+[2]
+[Total 4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+(i)
+This is clearly a Markovian birth process. The state space is {0, 1, ..., N}.
+Given that we have m infected and N − m healthy individuals, the
+number of “dangerous” pair contacts is m(N − m). Thus, the rate
+m ( N − m )
+σ m,m+1 = λp
+.
+P
+(ii)
+The expected total infection time is the sum of the reciprocal rates
+N − 1
+P
+1
+.
+m
+=
+1
+m ( N − m )
+λ p
+å
+1
+1 é 1
+1 ù
+=
++
+ê
+ú , this time may also be expressed as
+m ( N − m )
+N ë m N − m û
+N − 1 1
+N − 1
+. )
+m
+= 1 m
+λ p
+(Since
+å
+2
+
+
+
+\end{document}
