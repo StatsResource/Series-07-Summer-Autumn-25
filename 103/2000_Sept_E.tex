@@ -1,0 +1,265 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+eSuppose that the evolution of the price of an asset follows the lognormal model
+log(S t ) = Y t = y + μt + αB t where B t denotes the standard Brownian motion and μ
+is a negative drift. The asset will be liquidated at the stopping time
+T α = inf{t : Y t = a} when its value reduces to e a , where a is some number less than
+y. Consider now the exponential V t = exp(uY t − c(u)t).
+(i) Derive the condition on c(u) under which {V t : t ≥ 0} is a martingale.
+[3]
+(ii) State the optional stopping theorem and explain how it is used.
+[3]
+(iii) Derive the moment generating function f(y, v) = E [ e − vT u Y 0 = y] of the
+bankruptcy time for positive v by applying the optional stopping theorem
+[5]
+to the martingale V t .
+[Total 11]
+103—610
+Consider a survival model with two states “alive” (A) and “dead” (D), with time-
+dependent transition rate from A to D equal to μ(t) = μt. The time parameter, t,
+represents the age of the individual under consideration.
+(i)
+Calculate the transition probability P AA (s, t), defined by
+P AA (s, t) = P(X(t) = AX(s) = A).
+(ii)
+[2]
+Show, by making use of the formula
+E(X) =
+∞
+z 0
+P[X ≥ x] dx
+for a positive random variable X, that the expected future lifespan of an
+individual aged s is
+E[R s ] =
+1 1 − G ( s μ )
+μ
+g ( s μ )
+,
+where G is the standard Gaussian probability distribution function and g
+is its density.
+[4]
+(iii)
+It is desired to calibrate the above model so that the expected future
+lifespan of an individual aged 70 is 6 years. Derive an approximation to
+the corresponding value of μ, using the double inequality
+1
+1 1 − G ( x ) 1
+−
+≤
+≤ .
+x x 3
+g ( x )
+x
+(iv)
+[5]
+A company wishes to test the validity of the above model. They assume
+that the true force of mortality from age 70 onwards is of the form
+μ(t) = a + bt and intend to test whether a = 0. The testing method will be
+to simulate one sample of size 1000 when a = 0 and another when a ≠ 0,
+then to see which most resembles the data which the company has
+collected.
+Explain how to simulate a value from the proposed distribution, for
+arbitrary values of a and b.
+[5]
+[Total 16]
+103—7
+
+%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+(b) The assumptions required are that the rate of becoming ill and
+rate of recovery from illness are constant.
+(c) This will certainly not be true of any individual member but, if
+membership is large and the age and health profiles of the
+members are constant by virtue of a constant influx of new
+members, it may be a reasonable approximation.
+If V t is a martingale, then its expectation must be constant and equal to
+its initial value e uy .
+Therefore E e u ( y +μ t +α B t ) − c ( u ) t = e uy + ( u μ+ u α
+2 2
+/ 2 − c ( u )) t
+= e uy .
+Thus we must have c ( u ) = u μ + u 2 α 2 / 2.
+(ii)
+The optional stopping theorem states that if M t is a martingale, and T is a
+random stopping time, then under some additional technical conditions
+(such as M t∧T being uniformly bounded) we have:
+EM T = M 0 .
+It is frequently used to evaluate the expectation of a function of T , such as
+the moment generating function (as in this instance).
+(iii)
+Applying the optional stopping theorem to the martingale V t we find that
+E V T a = e uy = E e ua − c ( u ) T a .
+The equation c(u) = v has two roots u + , u − , one being negative and the
+other positive (since v is positive).
+Now V t ∧ T a = e u ( v ) Y t − vt and Y t ≥ a for 0 ≤ t ≤ T a . If u(v) < 0, then
+0 < V t ∧ T a ≤ e u ( v ) a for all t, so that the technical condition is satisfied; the
+same cannot be said if u(v) > 0.
+Therefore the positive root is unacceptable and f(y, v) = E y e − vT a = e u − ( v )( y − a ) .
+Comment: For the record, there were two very slight errors in this question, both
+appearing as subscripts. In line 4, first formula: T { α } should have read T { a } , and in part
+(iii) line 1: T { u } should have read T { a } . This was taken into account by the markers, and
+the examiners ensured that no marks were lost by students because of either small error.
+Page 6Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
+10
+t
+(i) P AA (s, t) = e −
+(ii) P[R s ≥ w] = P AA (s, s + w) = e −μ (( s + w )
+ò s
+μ xdx
+= e −μ ( t
+2
+− s 2 ) / 2
+2
+∞
+E[R s ] =
+ò 0
+e −μ sw −μ w
+2
+/2
+− s 2 ) / 2
+= e −μ sw −μ w
+2
+/2
+. Therefore
+dw .
+Complete the square at the exponent to get
+E[R s ] = e μ s
+(iii)
+2
+/2
+∞
+ò 0
+2
+e −μ ( s + w )
+/2
+dw = e μ s
+2
+/2
+ò
+∞
+s μ
+e − x
+2
+/2
+dx
+μ
+=
+1 1 − G ( s μ )
+μ
+g ( s μ )
+.
+From (ii) and the given bound
+E [ R s ] ≤
+E [ R s ] ≥
+1
+1
+μ s μ
+=
+1 æ 1
+μ
+ç
+ç s
+è
+μ
+−
+1
+sμ
+1
+1
+1 ö
+− 3 2 .
+÷ =
+3 3/2 ÷
+s μ s μ
+s μ ø
+The first inequality yields
+μ≤
+1
+1
+=
+= 0.00238 . (year) −2 .
+s E [ R s ]
+420
+The second inequality can be written as
+μ 2 E[R s ] −
+μ 1
++
+≥ 0,
+s s 3
+so μ must lie outside the interval:
+1
+±
+s
+1 4 E [ R s ]
+4 E [ R s ]
+24
+−
+1 ± 1 −
+1 ± 1 −
+2
+3
+s
+70
+s
+s
+=
+=
+= [0.00023, 0.00215]
+2 E [ R s ]
+2 s E [ R s ]
+2 × 6 × 70
+In fact, since clearly μ − 
+1
+we see that μ must lie in the interval
+s E [ R s ]
+[0.00215, 0.00238].
+(iv)
+Use the inverse transform method, X = F − 1 (U).
+x
+[ a + bt ] dt ) = exp{−a(x − 70) − 1⁄2b(x 2 − 70 2 )}.
+In this case 1 − F(x) = exp( − ò 70
+Page 7Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
+Therefore 1⁄2bx 2 + ax = −log(1 − F(x)) + 1⁄270 2 b + 70a. Replace F(x) by u to
+get
+x = F − 1 (u) =
+− a + a 2 + 2 b [ − log(1 − u ) + 1⁄270 2 b + 70 a ]
+b
+= −r + 70 2 + 140 r + r 2 − 2 b − 1 log(1 − u ),
+where r = ab −1 . If u is an observation of a uniform pseudo-random variate,
+then x is an observation from the required distribution.
+
+\end{document}
