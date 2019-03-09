@@ -1,0 +1,294 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%
+
+\begin{enumerate}
+\item 
+[Total 15]9
+A stationary second-order autoregressive process X, which may be assumed to
+be in equilibrium at time 0, is defined by
+X t = μ + α 1 (X t−1 − μ) + α 2 (X t−2 − μ) + e t ,
+where {e t : t ≥ 1} is a sequence of independent, zero-mean Normal random
+variables, each with variance σ 2 e .
+(i)
+(ii)
+(a) Obtain an equation for γ 1 in terms of γ 0 and γ 2 by substituting for
+X t in the equation γ 1 = Cov(X t , X t−1 ).
+(b) Derive similar equations for γ 2 and γ 0 .
+(c) State the autocorrelation function ρ k of X for k = 0, 1, 2.
+[5]
+Suppose that the equations derived in (i) for ρ 1 and ρ 2 are used as the
+basis of an estimation procedure: estimates α $ 1 and α $ 2 are defined to be
+the solutions of those equations when ρ is replaced by a suitably-
+defined sample autocorrelation function r.
+Solve these equations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+10
+(i)
+[3]
+[Total 8]
+(a) Define standard Brownian motion B t , t ≥ 0 and give its transition
+probability density.
+(b) Write down the transition probability density of general
+Brownian motion W t = σB t + μt.
+[4]
+Let S t defined represent a share price at time t.
+(ii)
+Solve the stochastic differential equation
+dS t = μS t dt + σS t dB t .
+[5]
+(iii) Calculate, given the parameters μ = 25% p.a., σ = 20% on an annual
+basis, the probability that the share price will exceed 45 in four months’
+time given that its current price is 38.
+[4]
+(iv) Calculate the probability that the share price will exceed 45 at any
+stage during the next four months given that its current value is 38.
+[You may use the formula
+P[max( B s + λ s ) > y ] = G
+0≤ s ≤ t
+F G λ t − y I J + e
+H t K
+2 λ y
+G
+F G − y − λ t I J ,
+H t K
+where y ≥ 0 and G denotes the normalised Gaussian probability
+distribution function.]
+[4]
+[Total 17]
+103—5
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+1249
+155
++ b
+.
+1404
+1404
+150  ́ 1249 + 600  ́ 155
+= 100.32.
+1404
+(a) g 1 = Cov(X t , X t-1 ) = Cov(a 1 X t-1 + a 2 X t-2 + e t , X t-1 ) = a 1 g 0 + a 2 g 1 + 0, since
+e t is independent of X t-1 .
+(b) Similarly g 2 = a 1 g 1 + a 2 g 0 and g 0 = a 1 g 1 + a 2 g 2 + Cov(X t , e t ). A further
+application of the same technique gives Cov(X t , e t ) = s 2 e .
+Thus g 1 =
+(c)
+(ii)
+r k is found by the relation r k = g k / g 0 .
+We have =  1 = r 1 ( 1 - a  2 ) and a  2 +
+=  1 =
+10
+(i)
+F
+G H
+(a)
+I
+J K
+a 1
+a 12
+g 0 and g 2 = a 2 +
+g 0 .
+1 - a 2
+1 - a 2
+r 1 ( 1 - r 2 )
+,
+1 - r 12
+=  2 =
+a  12
+= r 2 , which are solved by
+1 - a  2
+r 2 - r 12
+.
+1 - r 12
+B t defined by following properties:
+· Independent increments: B t - B s independent of B a , 0 £ a £ s
+whenever s £ t.
+· Stationary Gaussian increments: B t - B s ~ N(0, t - s).
+· Continuous sample paths: t ® B t continuous.
+Page 7Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+Transition density to go from x at time s to y at time t:
+1
+g t-s (y - x) =
+(b)
+2 p( t - s )
+e - ( y - x )
+2
+/ 2 ( t - s )
+.
+{W s = x, W t = y} = {sB s + ms = x, sB t + mt = y} = {B s =
+y - m t
+}. Hence transition density of W is
+s
+1
+g t-s
+I
+(ii)
+F G y - x - m ( t - s ) I J .
+H
+K
+s
+By Itô’s lemma
+d(log S t ) =
+I
+J K
+F
+G H
+1
+1
+1
+dS t +
+- 2 ( dS t ) 2
+2
+S t
+S t
+= μdt + sdB t -
+I 2
+dt.
+2
+Hence
+F
+G H
+log S t = log S 0 + m -
+s 2
+2
+I t + sB ,
+J K
+t
+and finally
+F m - s I t + s B
+G 2 J K
+S e H
+.
+2
+t
+S t =
+(iii)
+0
+L M F s I t > log b O P
+a P Q
+M N G H 2 J K
+L 1 F b F s I t I O P
+= P M B > G log - G m -
+M N s H a H 2 J K J K P Q
+F log b - F m - s I t I
+G a G H 2 J K JJ
+= 1 - G
+J .
+G
+s t
+K
+H
+P[S t > b1⁄2S 0 = a] = P s B t + m -
+2
+2
+t
+2
+Page 8
+x - m s
+, B t =
+sSubject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+Here a = 38, b = 45, m = 0.25, s = 0.2, t =
+1
+3
+year.
+So, above quantity is
+1 - G(0.800) = 1 - 0.7881 = 0.2119.
+(iv)
+L M
+M N
+F
+G H
+F
+G H
+O P
+I I
+J K J K
+P Q
+F F m - s I t + log b I
+G G 2 J K
+a J
+b U G H
+J .
+log V G -
+a W G
+s t
+J K
+G H
+P max S s 3 b 1⁄2 S 0 = a = P max B s + m -
+0 £ s £ t
+0 £ s £ t
+F F m - s I t - log b I
+G G H 2 J K
+a J
+R 2 m - s
+J
+= G
++ exp S
+J T s
+G
+s t
+K
+H
+2
+s 2 s
+b
+1
+3 log
+s
+a
+2 s
+2
+2
+2
+The first term is 0.2119 by (iii).
+F b I
+The second term is the product of G J
+H a K
+2 m - s 2
+s 2
+= 6.9893 with G(-2.128)
+= 1 - G(2.128) = 1 - 0.9833.
+So the result is finally 0.2119 x 0.0167 = 0.3286.
+
+
+\end{document}
+
+\end{document}
