@@ -106,13 +106,16 @@ approximation for a bit $(200, 0.015)$ distribution, which is quite skewed.
 would be awkward. So use Normal approximation
 \end{itemize}
 
-\;-\;X \;-\; N(2000(0.015) , 2000(0.015)(0.985)) = N(30 , 29.55)
-\;-\;P(X > 40)  P(X > 40.5) using continuity correction
-	 P(Z >
-40.5 30
-29.55
-\;-\; = 1.93) = 1 \;-\; 0.973 = 0.027
-7 
+\[X \sim N(2000(0.015) , 2000(0.015)(0.985)) = N(30 , 29.55)\]
+
+\begin{eqnarray*}
+P(X > 40) &=& P(X > 40.5) using continuity correction \\
+	 &=& P\left (Z > \frac{40.5-30}{\sqrt{209.55}}\\
+	 &=& P(Z > 1.93) \\
+	 &=&  1 \;-\; \Phi(1.93) \\
+	 &=& 1 - 0.973 \\ 
+	 &=& 0.027\\
+\end{eqnarray*}	 
 
 \begin{itemize}
     \item 
@@ -132,23 +135,21 @@ would be awkward. So use Normal approximation
 Also \;-\; 
 1 1 3
 0 0
-\item \;-\; f (x)dx =1\;-\;k\;-\; x  ax dx =1
-1
-2 4
-0
-1 1
-2 4
-\;-\;k x  ax \;-\; 
- 
-1 2
-=1 =1 = 1
-2 4 4
-a a
-k k
-   \;-\; 
-  \;-\;    
-   
- k = 4/(2 \;-\; a)
+\item 
+Also
+
+\[ \int^{1}_{0} f ( x ) dx \equiv 1\] therefore 
+
+\begin{eqnarray*}
+\int^{1}_{0} f ( x ) dx &=&  k \int^{1}_{0} ( x - ax^2) dx \\ 
+&=& k \left[ \frac{1}{2}x^2 - \frac{a}{4}x^4\right]^{1}_{0} \\
+&=& k \left[ \left( \frac{1}{2} - \frac{a}{4} \right) - \left( 0 - 0 \right) \right] \\
+&=& k \left( \frac{2-a}{4} \right) \\
+&=& 1 \\
+\end{eqnarray*}
+ 
+\[  k \left( \frac{2-a}{4} \right) = 1 \]
+Re-arranging \[ k = \frac{4}{2 \;-\; a} \]
 
 \item 
 If $a=1$ then necessarily \[ k = \frac{4}{2-(1)} = 4\]
@@ -166,16 +167,18 @@ E(X) &=& \int^{1}{0} 4x^2(1-x^2) dx \\
 %%%%%%%%%%%%%%%%%%%%
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-8 X ~ N(28,22) Y ~ N(25,12)
-\begin{itemize}
-\item Require $P(X \;-\; Y > 5)$ where $X \;-\; Y ~ N(3,5)$
-\end{itemize}
+%% Question 8 
 %---------------%
-i.e.
-5 3
-= ( 0.894) = 0.186.
-5
-P Z P Z
-\;-\;  
-   
+\begin{itemize}
+\item $X \sim N(28,2^2)$
+\item $Y \sim N(25,1^2)$
+\end{itemize}
+
+We require $P(X-Y >5$.
+
+$X-Y \sim N(28-25, (2^2 + 1^2)$, i.e. $X-Y \sim N(3, 5$,
+
+\[P\left( Z > \frac{5-3}{\sqrt{5}} \right) = P(Z > 0.894) = 0.186\]
+
+
 \end{document}
