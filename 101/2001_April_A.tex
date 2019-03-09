@@ -72,8 +72,11 @@ make a claim next year.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1 Ordered data are:
-198 200 203 208 209 210 210 212 215 215
-216 220 221 223 224
+\begin{verbatim}
+ 198 200 203 208 209 210 210 212 
+ 215 215 216 220 221 223 224   
+\end{verbatim}
+
 1
 1
 15 4
@@ -102,7 +105,7 @@ p p
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
 3 Let the number of events in a period of time of length t hours be Xt .
 \begin{itemize}
-\item Then X1 ~ Poisson($\mu$) and Xt ~ Poisson($\mu t$).
+\item Then $X_1 \sim Poisson(\mu)$ and $X_t \sim Poisson(\mu t)$.
 \item Let the time between two consecutive events be T.
 \item Then $P(T > t) = P(\mbox{no events in period of length t}) = P(Xt = 0) = exp(−\mu t)$.
 \item So $P(T < t) = 1 − exp(−\mut)$, and so $f(t) = \mu exp(−\mut) , t >0$
@@ -111,9 +114,12 @@ p p
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4 Binomial (10,000, 0.001) approximated by Poisson with mean of 10.
-Approximate probability of no more than 5 claims:
-Binomial (10,000, 0.001) approximated by Poisson with mean of 10 ($\lambda = np$).
-Approximate probability of no more than 5 claims:
+\begin{itemize}
+    \item Approximate probability of no more than 5 claims:
+\item Binomial (10,000, 0.001) approximated by Poisson with mean of 10 ($\lambda = np$).
+\item Approximate probability of no more than 5 claims:
+
+\end{itemize}
 
 
 \[P(X\leq 5) = e^{-10} \left( 1 + 10 + \frac{10^2}{2!} + \frac{10^3}{3!} + \frac{10^4}{4!} + \frac{10^5}{5!} \right)\]
