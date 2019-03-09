@@ -1,0 +1,141 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%
+5
+Let B t be a standard Brownian motion, and let F t = σ(B s , 0 ≤ s ≤ t) be its natural
+filtration.
+(i)
+Derive the conditional expectations E[ B t 2 F s ] and E[ B t 4 F s ] , where s ≤ t.
+You may assume that the fourth moment of a random variable with
+distribution N(0, σ 2 ) is 3σ 4 .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(ii) Hence construct a martingale out of B t 4 .
+(i) Apply the inverse transform method to generate an observation from
+the density
+f 1 (x) =
+1
+( 1 + x ) 2
+[4]
+[3]
+[Total 7]
+(x > 0)
+using a pseudo-random number u in the range 0 < u < 1. Explain how
+this can be extended to generate an observation from the symmetrised
+form of the same density
+f 2 (x) =
+(ii)
+1
+2 ( 1 + x  ) 2
+(x ∈ R)
+[3]
+The Cauchy distribution has density function
+f(xθ) =
+θ
+π ( x + θ 2 )
+2
+(x ∈ R)
+where θ is a positive parameter.
+Show that
+f(xθ) ≤ Cf 2 (x)
+for all x ∈ R
+2
+(θ + θ −1 ). Hence devise a method based on Acceptance-
+π
+Rejection sampling for generating observations from the Cauchy
+distribution.
+[4]
+[Total 7]
+as long as C ≥
+103—3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 3Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+5
+(i)
+E[ B t 2 1⁄2F s ] = E[(B t - B s + B s ) 2 1⁄2F s ]
+= E[(B t - B s ) 2 + 2(B t -B s ) B s + B s 2 1⁄2F s ]
+= E[(B t - B s ) 2 1⁄2F s ] + 2B s E[B t - B s 1⁄2F s ] + B s 2 ,
+by the property of conditional expectations which allows one to “take out
+what is known”. Moreover, by independence of the increments, the above is
+E[(B t - B s ) 2 ] + B s 2 = t - s + B s 2 .
+Similarly,
+E[ B t 4 1⁄2F s ] = E[(B t - B s + B s ) 4 1⁄2F s ]
+= E[(B t - B s ) 4 + 4(B t - B s ) 3 + 6(B t - B s ) 2 B s 2 + 4(B t - B s ) B s B s 3 + B s 4 1⁄2F s ]
+= E[(B t - B s ) 4 ] + 6 B s 2 E[(B t - B s ) 2 ] + B s 4 ,
+where we used the independence of increments property as well as the fact
+that moments of odd order of N(0, s 2 ) vanish. Finally
+E[ B t 4 1⁄2F s ] = B s 4 + 6(t - s) B s 2 + 3(t - s) 2 .
+(ii)
+From above
+E[ B t 4 - 6 tB t 2 1⁄2F s ] = B s 4 + 6(t - s) B s 2 + 3(t - s) 2 - 6t(t - s + B s 2 )
+= B s 4 + 6 sB s 2 + 3(t - s) 2 - 6t(t - s) = B s 4 - 6 sB s 2 + 3(s 2 - t 2 )
+\ B t 4 - 6 tB t 2 + 3 t 2 is a martingale.
+6
+(i)
+u = F 1 (x) =
+x
+u
+is solved by x = F 1 - 1 ( u ) =
+.
+1 + x
+1 - u
+For the symmetrised version, the simplest thing is to multiply x by a
+variable y which takes ±1 depending on whether another pseudo-random
+uniform number v is in the range (0, 0.5) or (0.5, 1).
+(ii)
+Page 4
+2 q ( 1 + x ) 2
+By symmetry we only need consider x > 0, so we find max x>0
+.
+p ( q 2 + x 2 )
+Differentiating the logarithm of this fraction and setting equal to 0, we get
+2 x
+2
+, with solution x = q 2 . Substituting this value in, we obtain
+= 2
+1 + x
+q + x 2
+the required value of C.Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+f ( x 1⁄2q )
+, which we observe is less than or equal to 1 everywhere.
+Cf 2 ( x )
+The method of Acceptance-Rejection sampling goes as follows: use (i) to
+generate a variable y from density f 2 . We accept y as a valid observation
+from f(x1⁄2q) with probability g(y), otherwise reject it. (Generate a uniform
+variable u, and reject if u > g(y).) If we reject it, go back and generate
+another y from f 2 , and continue to do the same until eventual acceptance.
+Let g(x) =
+\end{document}
