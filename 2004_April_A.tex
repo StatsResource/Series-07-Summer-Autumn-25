@@ -38,54 +38,59 @@
 1 The probability that a claim is made on a certain type of policy in a particular year is
 0.04. Five hundred policies are selected at random.
 Use a suitable normal approximation to calculate the probability that no more than 30
-of these will result in a claim during the year. [3]
-\item 2 The interquartile range of a continuous distribution with distribution function F(x) is
-defined as IQR = x2 x1 where F(x1) = 0.25 and F(x2) = 0.75.
+of these will result in a claim during the year. 
+\item 2 The interquartile range of a continuous distribution with distribution function $F(x)$ is
+defined as IQR = x2 x1 where $F(x1) = 0.25$ and $F(x2) = 0.75$.
 Show that for a normal distribution with variance 2, the interquartile range is
-IQR = 1.349 . [3]
+IQR = 1.349 . 
 \item 3 The cumulant generating function of a random variable X is given by:
-10 CX (t) = logMX (t) = 2 1 t 1
-where MX (t) is the moment generating function.
-Determine the mean and variance of the distribution of X. [3]
+ \[CX (t) = logMX (t) = 2 1 t 1\]
+where $M_X(t)$ is the moment generating function.
+Determine the mean and variance of the distribution of $X$. 
 \item 4 Claim sizes in a certain insurance situation are modelled by an exponential
 distribution with mean \$20,000. The insurer defines a claim to be a large claim if the
 claim size exceeds \$35,000.
-State, with a reason, the expected size of a large claim. [2]
+State, with a reason, the expected size of a large claim. 
 \end{enumerate}
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 1 X = number of policies where a claim is made.
 X bi (500, 0.04)
-X N((500)(0.04), 500(0.04)(0.96)) N(20, 19.2)
+\[X N((500)(0.04), 500(0.04)(0.96))\] \[N(20, 19.2)\]
 P(X 30) P(X 30.5) using continuity correction
 30.5 20 10.5
 (2.40)
 19.2 19.2
 = 0.9918
-2 The required values of x1 and x2, the lower and upper quartiles, are such that:
-F(x1) = 0.25 and F(x2) = 0.75,
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 
+\begin{itemize}
+    \item The required values of x1 and x2, the lower and upper quartiles, are such that:
+$F(x1) = 0.25$ and $F(x2) = 0.75$,
 i.e. 1 0.25
 x
 and 2 0.75,
 x
 where is the standard normal distribution function.
-From the statistical table of the percentage points of the standard normal distribution,
+\item From the statistical table of the percentage points of the standard normal distribution,
 we have
 x1
 = 0.6745 x1 = 0.6745
 x2
 = 0.6745 x2 = + 0.6745
 where is the population mean and is the population standard deviation.
-IQR = x2 x1
+\item IQR = x2 - x1
 = 0.6745 + 0.6745
 = 1.349 .
+\end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 3 C´(t) = 20(1 t) 11 , C´´(t) = 220(1 t) 12
-E[X] = C´(0) = 20
-V[X] = C´´(0) = 220
+\[E[X] = C´(0) = 20\]
+\[V[X] = C´´(0) = 220\]
 [OR as coefficients of t and of t2/2! in expansion of C(t)]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 4 Answer: $35,000 + 20,000 = $55,000
 Reason: the memoryless property of the exponential distribution (the excess above
 35,000 itself has an exponential distribution with mean 20,000).
