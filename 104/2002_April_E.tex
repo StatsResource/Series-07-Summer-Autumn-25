@@ -1,0 +1,142 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 12]
+(i) K 70 is a random variable which measures the curtate future lifetime of a life
+aged exactly 70. Using a mortality basis of English Life Table No. 12 Males
+complete the following table for the probability function of K 70 :
+t
+P K 70 ( t )
+(ii)
+0
+5
+10
+15
+20
+[3]
+Z is a random variable which measures the present value of the benefits of a
+term assurance policy with a 20 year term issued to a life aged exactly 70.
+The sum assured of £1,000 is payable at the end of the policy year of death.
+Basis: Mortality: English Life Table No. 12 Males
+Interest: 5% per annum effective
+104 A2002—6
+(a) Using the results from (i), or otherwise, draw a graph of the probability
+function of Z. Add labels to your graph to explain its important
+features.
+(b) Find P[Z > 500], stating any assumptions that you make in determining
+this value.
+[9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Page 11Subject 104 (Survival Models) — April 2002 — Examiners’ Report
+9
+(i)
+P K 70 ( t ) = t p 70 q 70+t =
+d 70 + t
+l 70
+Using tables we obtain
+t = 0, 1, 2, 3, ...
+l 70 = 54,806
+t 0 5 10 15 20
+d 70 + t
+Value 3,051
+0.05567 3,282
+0.05988 2,923
+0.05333 1,897.4
+0.03462 779.9
+0.01422
+Explicit statements of formulae are not needed provided they are implicit in the
+calculations presented.
+(ii)
+(a)
+ì ï 1, 000(1.05) - t - 1 t = 0, 1, 2, ..., 19
+Z = í
+t 3 20
+î ï 0
+So values for density function are
+t 0 5 10 15 19 3 20
+z 952 746 585 458 377 0
+0.060 0.053 0.035 0.018 l 90
+= 0.056
+l 70
+Height of probability
+function
+0.056
+P Z (z)
+0.05
+ ́
+ ́
+ ́
+ ́
+ ́
+ ́
+458
+377
+500 585
+746
+952
+The graph should be labelled to explain its shape and the “spike” at Z = 0.
+Page 12
+zSubject 104 (Survival Models) — April 2002 — Examiners’ Report
+(b)
+From the results in (ii)(a) we can see that z = 500 will occur between
+t = 10 and t = 15.
+Expanding the tabulation in (ii)(a) gives
+t 11 12 13 14
+z 557 530 505 481
+ALTERNATIVELY
+We can find the “cross-over” point by solving
+1,000(1.05) -t-1 = 500
+(1.05) t+1 =
+t =
+1,000
+= 2
+500
+log e 2
+- 1 = 13.21 years
+log e 1.05
+So t = 13 gives Z > 500 and t = 14 gives Z < 500.
+So Z > 500 corresponds to K 70 £ 13 that the life dies in the interval
+(70, 84). We can write
+P[Z > 500] = P[K 70 £ 13]
+= 1 -
+= 1 -
+l 84
+l 70
+12,306
+54,806
+= 1 - 0.22454
+= 0.775
