@@ -36,28 +36,24 @@
 \item 12 The following data give the invoiced amounts for work carried out on 12 jobs
 performed by a plumber in private customers houses. The durations of the jobs are
 also given.
+\begin{verbatim}
 duration x (hrs) 1 1 2 3 4 4 5 6 7 8 9 10
 amount y (£) 45 65 80 95 100 125 145 180 180 210 330 240
-60, 2 402, 1795, 2 343,725, 11,570 xi  xi  yi  yi  xi yi 
-The plumber claims to calculate his total charge for each job on the basis of a single
-call-out charge plus an hourly rate for the time spent working on the job.
+60, 2 402, 1795, 2 343,725, 11,570 xi  xi  yi  yi  xi yi     
+\end{verbatim}
+
+The plumber claims to calculate his total charge for each job on the basis of a single call-out charge plus an hourly rate for the time spent working on the job.
 \begin{enumerate}
-    \item (i) (a) Draw a scatterplot of the data on graph paper and comment briefly on
-your plot.
-\item (b) The equation of the fitted regression line of y on x is y = 22.4 + 25.4x
-and the coefficient of determination is R2 = 87.8% (you are not asked
+    \item (i) (a) Draw a scatterplot of the data on graph paper and comment briefly on your plot.
+\item (b) The equation of the fitted regression line of y on x is $y = 22.4 + 25.4x$ and the coefficient of determination is $R^2 = 87.8\%$ (you are not asked
 to verify these results).
 Draw the fitted line on your scatterplot. [5]
-\item (ii) (a) Calculate the fitted regression line of invoiced amount on duration of
-job using only the 11 pairs of values remaining after excluding the
+\item (ii) (a) Calculate the fitted regression line of invoiced amount on duration of job using only the 11 pairs of values remaining after excluding the
 invoice for which x = 9 and y = 330.
 (b) Calculate the coefficient of determination of the fit in (ii)(a) above.
-(c) Add the second fitted line to your scatterplot, distinguishing it clearly
-from the first line you added (in part (i)(b) above).
-\item (d) Comment on the effect of omitting the invoice for which x = 9 and
-y = 330.
-(e) Carry out a test to establish whether or not the slope in the model fitted
-in (ii)(a) above is consistent with a rate of £25 per hour for work
+(c) Add the second fitted line to your scatterplot, distinguishing it clearly from the first line you added (in part (i)(b) above).
+\item (d) Comment on the effect of omitting the invoice for which x = 9 and y = 330.
+(e) Carry out a test to establish whether or not the slope in the model fitted in (ii)(a) above is consistent with a rate of £25 per hour for work
 carried out.
 \end{enumerate}
 
@@ -76,38 +72,31 @@ x x
 f x x
 m
   
- 
+ \beta
  
-where m and  are positive constants. This distribution has mean m and variance
-m2. Let x1,  , xn denote a random sample of n observations on X.
+where $m$ and $\beta$ are positive constants. This distribution has mean $m\beta$ and variance
+m2. Let $x_1, \ldots , x_n$ denote a random sample of n observations on X.
 (i) Suppose that m is known.
-(a) Show that the maximum likelihood estimate of  is given by
+(a) Show that the maximum likelihood estimate of $\beta$ is given by
 1
  / . n
 i i x mn
 
  
-(b) Show that 
-is an unbiased estimator of .
-(c) Obtain the Cramer-Rao lower bound for estimators of .
-(d) Show that the maximum likelihood estimator of  has variance equal
-to the lower bound given in (i)(c). [10]
-Suppose now that m is unknown, and is also to be estimated by maximum likelihood.
-It is assumed that m is large enough so that (m) is well approximated by
-g(m) exp( m)m(m 0.5) (2 )0.5 
+(b) Show that $\hat{\beta}$ is an unbiased estimator of $\beta$.
+(c) Obtain the Cramer-Rao lower bound for estimators of $\beta$.
+(d) Show that the maximum likelihood estimator of $\beta$ has variance equal to the lower bound given in (i)(c). 
+Suppose now that m is unknown, and is also to be estimated by maximum likelihood. It is assumed that m is large enough so that $\Gamma(m)$ is well approximated by
+\[g(m) exp( m)m(m 0.5) (2 )0.5 \]
    .
-(ii) Determine the approximate maximum likelihood estimates of  and m,
-substituting g(m) for (m) in the likelihood function. [7]
+(ii) Determine the approximate maximum likelihood estimates of $\beta$ and $m$, substituting g(m) for $\Gamma(m)$ in the likelihood function. 
 (iii) Suppose that the sample values are:
-32 48 51 43 82 155
-Obtain the approximate maximum likelihood estimates for  and m given
-in (ii). [2]
+\[32 48 51 43 82 155\]
+Obtain the approximate maximum likelihood estimates for $\beta$ and $m$ given in (ii). 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item A social researcher is interested in the gender distribution among children in families,
-and has collected data for her investigation as follows.
+\item A social researcher is interested in the gender distribution among children in families, and has collected data for her investigation as follows.
 Three hundred families were selected at random. The table below shows frequency
-distributions of the numbers of girls in families of size 1, 2, 3, and 4, that is with 1, 2,
-3, and 4 children.
+distributions of the numbers of girls in families of size 1, 2, 3, and 4, that is with 1, 2, 3, and 4 children.
 Number of girls in family
 Size of
 family 0 1 2 3 4
@@ -120,19 +109,13 @@ families
 \begin{enumerate}
     \item (i) The researcher wants to investigate whether the proportion of girls within
 families is independent of family size.
-\item (a) Construct a suitable 2  4 contingency table, and calculate the overall
+\item (a) Construct a suitable $2 \times 4$ contingency table, and calculate the overall
 proportion of girls.
 (b) State appropriate hypotheses to use in the researchers investigation.
-(c) Calculate the value of an appropriate test statistic and state whether or
-not its probability value exceeds 0.05.
+(c) Calculate the value of an appropriate test statistic and state whether or not its probability value exceeds 0.05.
 (d) State your conclusion. 
-\item (ii) (a) Suggest a model (with all parameter values stated or estimated) for the
-number of girls in a family, for each family size (1, 2, 3, and 4), using
-your conclusion from part (i).
-\item (b) Suppose the researcher was to test the goodness-of-fit of the models
-you have suggested in part (ii)(a) for family sizes 2, 3, and 4 and that
-the models were rejected as being unsuitable. Discuss briefly how you
-would interpret this lack of fit. 
+\item (ii) (a) Suggest a model (with all parameter values stated or estimated) for the number of girls in a family, for each family size (1, 2, 3, and 4), using your conclusion from part (i).
+\item (b) Suppose the researcher was to test the goodness-of-fit of the models you have suggested in part (ii)(a) for family sizes 2, 3, and 4 and that the models were rejected as being unsuitable. Discuss briefly how you would interpret this lack of fit. 
 \end{enumerate/}
 
 [Total 16]
@@ -145,7 +128,7 @@ strongly linear.
 (b)
 (ii) (a) Now Σx = 51, Σx2 = 321, Σy = 1,465, Σy2 = 234,825, Σxy = 8,600
 Sxx = 84.545, Syy = 39,713.636, Sxy = 1807.727
-  1807.727 /84.545  21.382,  1465 /11(51/11)  34.048
+  1807.727 /84.545  21.382,  1465 /11\beta(51/11)  34.048
 Fitted line is y = 34.0 + 21.4x
 (b) Coefficient of determination R2 = 1807.7272/(84.545  39713.636)
 = 0.973 i.e. 97.3%
@@ -171,9 +154,9 @@ amount
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (c)
 
-(d) Removing the influence of the single point (9,330) results in a fitted
-line with a lower slope and a much better fit for the remaining data (R2
-has increased from 87.8\% to 97.3\%).
+(d) Removing the influence of the single point (9,330) results in a fitted line with a lower slope and a much better fit for the remaining data ($R^2$ has increased from 87.8\% to 97.3\%).
+
+
 (e) The hourly rate corresponds to the slope in the model
 H0: slope = 25 v H1: slope ≠ 25
 Estimate of error variance = 1061.121/9
@@ -193,6 +176,7 @@ amount
 line (outlier omitted)
 original line
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 13
 1 ( ) exp( / ) ( 0)
 ( )
@@ -201,7 +185,7 @@ m
 f x x x x
 m
   
- 
+ \beta
  
 1 1
 1
@@ -218,8 +202,8 @@ m
  
 
 
-  
- 
+ \beta 
+ \Gamma
   	 
  
 
@@ -238,7 +222,7 @@ i
 x
 l L m x mn n m 
 
-      
+      \beta
 
 
 
@@ -273,21 +257,21 @@ i
 i
 x
 l mn  
-  
+  \beta
   
 
 2
 2 3 2 2
 E l 2 nE(X ) mn mn
   
-       
+  \beta  \Gamma \beta  
  	  	 	 	
  CRlb =
 2 1
 2
 E l
-    
- 		 
+    \beta
+\Gamma 		 
 
     
 
@@ -329,7 +313,7 @@ l L m x mn 
 
 
 1 1
-2 2 n m (m ) logm log 2
+2 2 n \Gammam\beta (m ) logm\beta log 2
 1
 2 1
      0 /
@@ -339,7 +323,7 @@ i i
 l x mn x nm 
 
 
-    
+   \beta 
   
 
  (MLE of )
@@ -353,11 +337,11 @@ n
 i i
 l m x n n n n m
 m  m
-   
-     		    
+\beta   
+  \Gamma   		   \beta 
  
 
-Substituting for 
+Substituting for \hat{\beta}
 gives
  
 1
@@ -368,7 +352,7 @@ i i
 n x n x n n m
  m m
  
-     
+ \Gamma  \beta  
  	
 
 2m 1/ log(x / x) where  
@@ -377,7 +361,7 @@ n x n x n n m
 i i i i x x x x n
  
    
- m 1/ log  x / x 2   
+ m \beta1/ log  x / x 2   \Gamma
  (MLE of m)
 There are alternative versions, for example,
  
@@ -398,11 +382,15 @@ recognise that this part was on the hard side).
     \item (a) Suitable table is gender  family size.
 Family size 3: no. of girls = 36 + 43(2) + 12(3) = 158
 so no. of boys = 300  158 = 142, etc.
-family size
-1 2 3 4 total
-no. of girls 27 94 158 92 371
-no. of boys 23 106 142 108 379
-total 50 200 300 200 750
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|c}
+family size & 1 & 2 & 3 & 4 & total \\ \hline
+no. of girls & 27 &  94 & 158 & 92 & 371 \\ \hline
+no. of boys & 23 & 106 & 142 & 108 & 379 \\ \hline
+total & 50 & 200 & 300 & 200 & 750 \\ \hline
+\end{tabular}
+\end{center}
 \item Overall proportion of girls = 371/750 = 0.495
 (b) H0: gender and family size are independent
 H1: gender and family size are not independent
@@ -411,24 +399,24 @@ H1: gender and family size are not independent
 (24.73) (98.93) (148.40) (98.93)
 23 106 142 108
 (25.27) (101.07) (151.60) (101.07)
-2 = (27-24.73)2/24.73 + ..
-= 0.208 + 0.246 + 0.621 + 0.486 +
-0.203 + 0.241 + 0.608 + 0.476 = 3.088
+
+\begin{eqnarray*}\chi^2 &=& (27-24.73)2/24.73 + .. \\
+&=& 0.208 + 0.246 + 0.621 + 0.486 +\\
+& & 0.203 + 0.241 + 0.608 + 0.476 \\
+&=& 3.088\\
+\end{eqnarray*}
+
 df = 3, upper 5% point is 7.815 so P-value exceeds 0.05.
 \item (d) We have no evidence against H0, which can therefore stand, and so we
 conclude that the proportion of girls is independent of family size.
 (ii) (a) Models: no. of girls ~ binomial(n, 0.495) for n = 1, 2, 3, 4
-\item (b) The model assumes that the trials are independent i.e. that the gender
-of each child is independent of that of all other children in the family.
-\item We would interpret the lack of fit as evidence that the genders of
-children in a family are not independently determined.
-\item In addition, the gender of the first child (or the genders of the first and
-second children) may have an influence on  or even decide - the
-family size.
+\item (b) The model assumes that the trials are independent i.e. that the gender of each child is independent of that of all other children in the family.
+\item We would interpret the lack of fit as evidence that the genders of children in a family are not independently determined.
+\item In addition, the gender of the first child (or the genders of the first and second children) may have an influence on  or even decide - the family size.
 Another possible reason is variation in P(girl) across families.
 \end{itemize}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The Examiners did not anticipate that so many candidates would be unable to construct the
-basic 2  4 contingency table appropriate for investigating the matter in question.
+% The Examiners did not anticipate that so many candidates would be unable to construct the
+% basic 2  4 contingency table appropriate for investigating the matter in question.
 
 \end{document}
