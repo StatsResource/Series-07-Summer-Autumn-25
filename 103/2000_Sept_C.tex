@@ -34,20 +34,21 @@
 \begin{document}
 \begin{enumerate}
 5
-(i) State Itô’s lemma as it applies to a stochastic process {X t : t ≥ 0} and a
-function f(X t ) which is not explicitly dependent on t.
+\item 
+\begin{enumerate}[(i)]
+\item (i) State Itô’s lemma as it applies to a stochastic process $\{X_t : t \geq 0\}$ and a
+function $f(X_t)$ which is not explicitly dependent on t.
 [2]
-(ii) Apply Ito’s Lemma with f(x) = x 4 to calculate the stochastic differential
+\item (ii) Apply Ito’s Lemma with f(x) = x 4 to calculate the stochastic differential
 d ( B t 4 ), where B t is standard Brownian motion.
 [3]
-(iii) Hence express the Itô integral
+\item (iii) Hence express the Itô integral
 integral involving B s .
 t
 z 0
 B s 3 dB s in terms of B t and of an ordinary
-[2]
-[Total 7]
-Consider a homogeneous Markov chain with state space S = {1, 2, 3} and
+\end{itemize}
+\item Consider a homogeneous Markov chain with state space $S = \{1, 2, 3\}$ and
 transition matrix
 P =
 F 1⁄4
@@ -58,9 +59,9 @@ H 3⁄4
 0 1⁄2 J .
 J
 1⁄4 0 K
-(i) Calculate the 3-step transition matrix.
-(ii) Calculate, for each of the following initial conditions, the probability that
-the chain will be in state 3 when it is observed at time n = 3 given that:
+\begin{enumerate}[(i)]
+\item (i) Calculate the 3-step transition matrix.
+\item (ii) Calculate, for each of the following initial conditions, the probability that the chain will be in state 3 when it is observed at time n = 3 given that:
 (iii)
 103—3
 [2]
@@ -72,38 +73,36 @@ the chain will be in state 3 when it is observed at time n = 3 given that:
 respectively
 given by 14
 31 31
-[4]
+\end{enumerate}
 How would your answers to (a), (b) and (c) change if the time of the
 observation were n = 300 instead of n = 3?
 [2]
 [Total 8]
-PLEASE TURN OVER
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 6
-The daily closing price of a share is observed every trading day for a year,
-yielding a sequence of values {s 1 , ..., s n }. A model is required for the purposes of
-predicting future variability of the share price. The model suggested is a
+The daily closing price of a share is observed every trading day for a year, yielding a sequence of values ${s_1 , \ldots, s_n }$. A model is required for the purposes of predicting future variability of the share price. The model suggested is a
 Brownian one.
+
 (i)
 Explain briefly, on purely theoretical grounds, which of the two models
-I:
-II:
-S t = μ + αt + σB t
-log(S t ) = μ + αt + σB t
+
+\begin{description}
+\item[I:] S t = μ + αt + σB t
+\item[II:] log(S t ) = μ + αt + σB t
+\end{description}
+%-----------------------------------%
 you would expect to provide a better fit.
 (ii)
-(iii)
+
 Refer to Figures 1 and 2 below.
-(a) Explain briefly whether your chosen model appears to provide a
-good fit to the data.
-(b) State one of the tests you could carry out on the data to ascertain
-whether the model fits adequately.
-[3]
+(a) Explain briefly whether your chosen model appears to provide a good fit to the data.
+(b) State one of the tests you could carry out on the data to ascertain whether the model fits adequately.
+
+(iii)
 (a) Describe how a Lévy process model differs from a Brownian model.
 (b) Outline the difficulties would you encounter in practice if you were
 fitting a Lévy process model to the data provided.
-[3]
-[Total 7]
+%---------------------------------------------%
 Figure 1: the share price S n
 Figure 2: log-transformed share price log S n
 
@@ -181,33 +180,25 @@ P =
 ÷
 è 32 15 17 ø
 3
-By time n = 300 the effects of the starting point have worn off. The
-answer is therefore indistinguishable from the stationary probability π 3 in
-all three cases.
+By time n = 300 the effects of the starting point have worn off. The answer is therefore indistinguishable from the stationary probability π 3 in all three cases.
 It is easily observed that the distribution in (c) is stationary, so that
 8
 π 3 =
 .
 31
+%--------------------------------------------%
 6
-(i) The daily change in value of a share is generally on a scale consistent
-with the value of the share: this tends to indicate that model II is
-preferable.
+(i) The daily change in value of a share is generally on a scale consistent with the value of the share: this tends to indicate that model II is preferable.
 (ii) (a)
-Model II does appear to fit better than model I; the S dataset does
-indeed exhibit large variations when it is at a high level, and
-smaller ones when low.
-However, the fit does not appear all that good, as Brownian
-increments are normally distributed, so are seldom as large as
+Model II does appear to fit better than model I; the S dataset does indeed exhibit large variations when it is at a high level, and smaller ones when low.
+However, the fit does not appear all that good, as Brownian increments are normally distributed, so are seldom as large as
 some of the jumps which appear in this dataset.
-Page 3Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
+
 (b)
-If the Brownian model were accurate, the day-to-day increments
-s n − s n− 1 should be independently normally distributed with
+If the Brownian model were accurate, the day-to-day increments s n − s n− 1 should be independently normally distributed with
 constant mean and variance:
 a test of normality (Anderson-Darling, Kolmogorov-Smirnov, χ 2
-goodness-of-fit) would do fine; a test of independence (based on
-sample ACF, or the Durbin-Watson statistic) would also be a good
+goodness-of-fit) would do fine; a test of independence (based on sample ACF, or the Durbin-Watson statistic) would also be a good
 suggestion.
 (iii)
 \end{document}
