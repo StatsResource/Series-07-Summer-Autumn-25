@@ -1,0 +1,371 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+11
+(i)
+(a)
+An endowment assurance with a term of 20 years is sold to a life aged
+exactly 50. The assurance has a sum assured of £1,000 payable
+immediately on death or on survival to the end of the term. Premiums
+are paid continuously until the end of the term of the policy or until
+earlier death.
+Show that the net level annual premium is £37.16.
+(b)
+Show that the net level annual premium for a term assurance with the
+same sum assured and the same term is £19.06.
+[7]
+Basis: Mortality: English Life Table No. 12 Males
+Interest: 6% per annum effective
+Expenses are ignored
+(ii)
+Using the same basis as in (i), calculate the net premium policy value at
+duration 15 for:
+(a)
+(b)
+the endowment assurance described in (i)(a)
+the term assurance described in (i)(b)
+[7]
+(iii) On the same scale and axes sketch graphs of the net premium policy values of
+each of the endowment assurance and the term assurance against the term of
+the policy.
+[4]
+(iv) Thiele’s equation for the endowment assurance policy is
+¶
+t V ( A 50:20 ) = d t V ( A 50:20 ) + P ( A 50:20 ) - (1 - t V ( A 50:20 )) m x+t
+¶ t
+Write down Thiele’s equation for the term assurance policy.
+(v)
+104 S2002—5
+0 < t < 20
+[2]
+Use the equations from (iv) and the calculations from (i) and (ii) to explain the
+shape at policy duration 15 of the graphs you have drawn in (iii). You should
+provide calculations to support your explanations.
+[6]
+[Total 26]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+(i)
+(a)
+1
+A 50:20
+= A 50 -
+D 70
+A 70
+D 50
+= 0.31675 - (1.06) - 20  ́
+54,806
+ ́ 0.61701
+90, 085
+= 0.31675 - 0.18970  ́ 0.61701
+= 0.19970
+A 50:20 = 0.19970 + 0.18970 = 0.38940
+a 50:20 = a 50 -
+D 70
+a 70
+D 50
+= 11.726 - 0.18970  ́ 6.573
+= 10.47910
+Page 11Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+Then: 1, 000 P ( A 50:20 ) = 1,000  ́
+0.38940
+10.47910
+= £37.16
+(b)
+1
+1, 000 P ( A 50:20
+) = 1,000  ́
+0.19970
+10.47910
+= £19.06
+ALTERNATIVE 1
+(i)
+(a)
+1
+A 50:20
+= 0.19970 as previously
+A 50:20 = 0.38940 as previously
+Then using the premium conversion relationship
+ì ï 1
+ü ï
+1, 000 P ( A 50:20 ) = 1, 000 í
+- d ý
+ï þ
+î ï a 50:20
+ì ï
+ü ï
+d
+= 1, 000 í
+- d ý
+ï þ
+î ï 1 - A 50:20
+ì 0.058269
+ü
+= 1, 000 í
+- 0.058269 ý
+î 1 - 0.38940
+þ
+= £37.16
+(b)
+a 50:20 =
+=
+1 - A 50:20
+d
+1 - 0.38940
+0.058269
+= 10.47899
+1
+1, 000 P ( A 50:20
+) =
+1, 000  ́ 0.19970
+10.47899
+= £19.06
+Page 12Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+ALTERNATIVE 2
+(i)
+(a)
+1
+A 50:20
+= 0.19970 as previously
+A 50:20 = 0.38940 as previously
+a 50:20 =
+1 - A 50:20
+d
+= 10.47899 as previously
+1, 000 P ( A 50:20 ) = 1,000  ́
+0.38940
+10.47899
+= £37.16
+(b)
+1
+1, 000 P ( A 50:20
+) = 1,000  ́
+0.19970
+10.47899
+= £19.06
+ALTERNATIVE 3
+(i)
+(a)
+a 50:20 = 10.47910 as previously
+Then using the premium conversion relationship
+ì ï 1
+ü ï
+1, 000 P ( A 50:20 ) = 1, 000 í
+- d ý
+ï þ
+î ï a 50:20
+1
+ì
+ü
+= 1, 000 í
+- 0.058269 ý
+î 10.47910
+þ
+= £37.16
+(b)
+A 50:20 = 1 - d a 50:20
+= 1 - 0.058269  ́ 10.47910
+= 0.38939
+Page 13Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+1
+A 50:20
+= A 50:20 -
+D 70
+D 50
+= 0.38939 -
+54,806
+ ́ (1.06) - 20
+90, 085
+= 0.19969
+1
+1, 000 P ( A 50:20
+) =
+1, 000  ́ 0.19969
+10.47910
+= £19.06
+(ii)
+(a)
+15 V ( A 50:20
+1
+A 65:5
+) = A 65:5 - P ( A 50:20 ) a 65:5
+= A 65 -
+D 70
+A 70
+D 65
+= 0.54139 - (1.06) - 5  ́
+54,806
+ ́ 0.61701
+68, 490
+= 0.54139 - 0.59796  ́ 0.61701
+= 0.17244
+A 65:5 = 0.17244 + 0.59796 = 0.77040
+a 65:5 = a 65 -
+D 70
+a 70
+D 65
+= 7.871 - 0.59796  ́ 6.573
+= 3.94061
+Then 1,000 15 V ( A 50:20 ) = 1,000  ́ 0.77040 - 37.16  ́ 3.94061
+= £623.97
+(b)
+1
+1
+1, 000 15 V ( A 50:20
+) = 1, 000 A 65:5
+- 19.06 a 65:5
+= 1,000  ́ 0.17244 - 19.06  ́ 3.94061
+= £97.34
+Page 14Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+ALTERNATIVE 1
+(ii)
+(a)
+15 V ( A 50:20
+) = A 65:5 - P ( A 50:20 ) a 65:5
+1
+A 65:5
+= 0.17244 as previously
+A 65:5 = 0.77040 as previously
+a 65:5 =
+=
+1 - A 65:5
+d
+1 - 0.77040
+0.058269
+= 3.94035
+Then 1, 000 15 V ( A 50:20 ) = 1,000  ́ 0.77040 - 37.16  ́ 3.94035
+= £623.98
+(b)
+1
+1
+1, 000 15 V ( A 50:20
+) = 1, 000 A 65:5
+- 19.06  ́ a 65:5
+= 1,000  ́ 0.17244 - 19.06  ́ 3.94035
+= £97.34
+ALTERNATIVE 2
+(ii)
+(a)
+15 V ( A 50:20
+) = A 65:5 - P ( A 50:20 ) a 65:5
+a 65:5 = 3.94061 as previously
+A 65:5 = 1 - d a 65:5
+= 1 - 0.058269  ́ 3.94061
+= 0.77038
+1
+A 65:5
+= A 65:5 -
+D 70
+D 65
+= 0.77038 -
+54,806
+ ́ (1.06) - 5
+68, 490
+Page 15Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+= 0.17242
+Then 1, 000 15 V ( A 50:20 ) = 1,000  ́ 0.77038 - 37.16  ́ 3.94061
+= £623.95
+(b)
+1
+1, 000 15 V ( A 50:20
+) = 1,000  ́ 0.17242 - 19.06  ́ 3.94061
+= £97.31
+ALTERNATIVE 3
+(ii)
+(a)
+15 V ( A 50:20
+) = 1 -
+a 65:5 = a 65 -
+a 65:5
+a 50:20
+D 70
+a 70
+D 65
+= 7.871 - 0.59796  ́ 6.573
+= 3.94061
+3.94061 ü
+ì
+1, 000 15 V ( A 50:20 ) = 1, 000 í 1 -
+ý
+î 10.47910 þ
+(b)
+1
+A 65:5
+= £623.96
+= 0.17244 as previously
+1
+1, 000 15 V ( A 50:20
+) = 1,000  ́ 0.17244 - 19.06  ́ 3.94061
+= £97.34
+Page 16Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+(iii)
+Policy Value
+1,000
+Endowment
+Term
+0
+0
+20
+Term
+(iv) ¶
+1
+1
+1
+1
+t V ( A 50:20 ) = d t V ( A 50:20 ) + P ( A 50:20 ) - (1 - t V ( A 50:20 )) m x + t 0 < t < 20
+¶ t
+(v) At time 15 the components of change in policy value are
++ Investment Return d t V ( )
++ Premium Income
+- Death Strain
+P ( )
+(1 - t V ( )) m x + t
+These are expressed as equivalent annual rates of change measured at policy
+duration 15.
+Here d = log e 1.06 = 0.058269
+So components are
+Endowment Term
++ Investment Return
++ Premium Income
+- Death Strain 0.058269  ́ 623.97 = £36.35
+£37.16
+(1,000-623.97)0.03553 = £13.36 0.058269  ́ 97.34 = £5.67
+£19.06
+(1,000-97.34)0.03553 = £32.07
+Net Annual Rate
+of Change +£60.15 -£7.34
+So at policy duration 15 the endowment assurance is increasing in value and
+the term assurance is decreasing in value.
+Page 17
