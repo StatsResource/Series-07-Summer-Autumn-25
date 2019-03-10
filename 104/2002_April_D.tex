@@ -1,0 +1,364 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+104 A2002—47
+An investigation into the risk factors associated with mortality from lung cancer
+among men was undertaken. The purpose of the investigation was to establish
+whether a new treatment was effective in prolonging survival. Two groups of patients
+were identified. One group was given the “new” treatment and the other was given
+the “existing” treatment. Other factors taken into consideration were the patients’
+general state of health at time of diagnosis (recorded as “able to care for self” or
+“unable to care for self”), and the type of tumour (recorded as “large”, “squamous”,
+“small” or “adeno”).
+A Cox proportional hazards model of the hazard of death was estimated. The table
+below shows an extract from the results.
+Covariate
+General state of health at time of diagnosis
+Able to care for self
+Unable to care for self
+Treatment
+New
+Existing
+Type of tumour
+Large
+Squamous
+Small
+Adeno
+Parameter Standard error
+- 0.60
+0.00 0.05
+0.25
+0.00 0.25
+0.00
+- 0.40
+0.45
+0.75
+0.28
+0.26
+0.28
+(i) Defining all the terms you use, write down a general expression for the Cox
+proportional hazards model in terms of a set of covariates, their associated
+parameters and a baseline hazard function.
+[2]
+(ii) In the context of the investigation described above, state the class of men to
+which the baseline hazard refers.
+[2]
+(iii) Compare the new treatment with the previous one. Does it improve the
+chances of survival, make them worse, or is it not possible to say? Justify
+your answer.
+[4]
+(iv) Calculate the proportion by which the risk of death for men with “adeno” type
+tumours who were “able to care for themselves” at the time of diagnosis is
+greater than that for men with “large” type tumours who were “unable to care
+for themselves” at the time of diagnosis.
+[3]
+[Total 11]
+104 A2002—5
+PLEASE TURN OVER8
+9
+An investigation took place of the mortality of persons between exact ages 60 and 61
+years. The table below gives an extract from the results. For each person it gives the
+age at which they were first observed, the age at which they ceased to be observed,
+and whether their departure from observation was because of their death or
+withdrawal from the investigation.
+Person Age at entry
+years months Age at exit
+years months Died or withdrew
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 60
+60
+60
+60
+60
+60
+60
+60
+60
+60 60
+61
+60
+61
+60
+61
+60
+61
+60
+61 withdrew
+withdrew
+died
+withdrew
+died
+withdrew
+died
+withdrew
+died
+withdrew
+0
+1
+1
+2
+3
+4
+5
+7
+8
+9
+6
+0
+3
+0
+9
+0
+11
+0
+10
+0
+(i) Estimate q 60 using the actuarial estimate, stating any assumptions that you
+make.
+[5]
+(ii) Estimate q 60 using a two-state Markov model, stating any assumptions that
+you make.
+[4]
+(iii) Comment on the differences between the two estimates. Include a statement
+about which estimate you consider to be the more reliable and why.
+[3]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Page 8Subject 104 (Survival Models) — April 2002 — Examiners’ Report
+7
+(i) h(x, t) = h 0 (t)exp( b 1 x 1 + b 2 x 2 + ... + b k x k )
+where h(x, t) is the hazard at duration t, h 0 (t) is some unspecified baseline
+hazard, x 1 ... x k are covariates and b 1 ... b k are their associated parameters.
+(ii) Men who were “unable to care for themselves” at the time of diagnosis, who
+were given the “existing” treatment, and whose tumours were of the “large”
+type.
+(iii) The value of the parameter associated with the new treatment is 0.25. This
+implies that the ratio of the hazards of death for two otherwise identical
+patients, one of whom is given the new treatment and the other the existing
+treatment is exp(0.25) = 1.28. Thus the new treatment appears to increase the
+risk of death.
+However, the standard error associated with the parameter is 0.25. The
+approximate 95% confidence interval is therefore 0.25 ± 1.96(0.25) = ( - 0.24,
+0.74), which includes 0. Therefore, the value of the parameter is not
+significantly different from zero at the 5% level, so it is not possible to say
+with the available data whether the new treatment affects the risk of death.
+(iv)
+The hazard for men with “adeno” type tumours who were “able to care for
+themselves” at the time of diagnosis is h 0 (t)exp( - 0.60 + 0.75).
+The hazard for men with “large” type tumours who were “unable to care for
+themselves” at the time of diagnosis is h 0 (t), since this is the baseline category.
+The ratio is thus
+h 0 ( t ) exp( - 0.60 + 0.75)
+= exp(0.15) = 1.16
+h 0 ( t )
+so the risk of death is 16% greater for men with “adeno” type tumours who
+were “able to care for themselves” at the time of diagnosis.
+8
+(i)
+Let the time individual i enters observation be a i and the time that individual i
+leaves observation be b i . Define an indicator variable d i such that d i = 0 if
+individual i is not observed to die and d i = 1 if individual i dies. Then the
+traditional actuarial estimate of q 60 is
+10
+q ˆ 60 =
+å d i
+10
+i = 1
+.
+å (1 - a i - [(1 - d i )(1 - b i )])
+i = 1
+Page 9Subject 104 (Survival Models) — April 2002 — Examiners’ Report
+The calculations are shown in the table below.
+Person a i b i d i 1 - a i 1 - b i 1 - a i - (1 - d i ) (1 - b i )
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 6/12
+1
+3/12
+1
+9/12
+1
+11/12
+1
+10/12
+1 0
+0
+1
+0
+1
+0
+1
+0
+1
+0 1
+11/12
+11/12
+10/12
+9/12
+8/12
+7/12
+5/12
+4/12
+3/12 6/12
+0
+9/12
+0
+3/12
+0
+1/12
+0
+2/12
+0 6/12
+11/12
+11/12
+10/12
+9/12
+8/12
+7/12
+5/12
+4/12
+3/12
+0
+1/12
+1/12
+2/12
+3/12
+4/12
+5/12
+7/12
+8/12
+9/12
+Totals
+4
+Therefore q ˆ 60 =
+74/12
+4
+= 0.6486.
+74 /12
+ALTERNATIVELY
+The data allow the exact calculation of the initial exposed to risk. The
+approximate calculation using
+E x c + 1⁄2 q x =
+59 1
+83
++  ́ 4 =
+12 2
+12
+makes an unnecessary assumption, giving q̂ 60 = 0.5783.
+The assumption is that the dates of death are uniformly distributed over the
+life year (60, 61).
+10
+(ii)
+In the two-state model we estimate m ˆ 60 =
+is shown in the table below.
+Page 10
+å d i
+10
+i = 1
+å ( b i - a i )
+i = 1
+. The necessary workingSubject 104 (Survival Models) — April 2002 — Examiners’ Report
+Person a i b i b i - a i
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10 0
+1/12
+1/12
+2/12
+3/12
+4/12
+5/12
+7/12
+8/12
+9/12 6/12
+1
+3/12
+1
+9/12
+1
+11/12
+1
+10/12
+1 6/12
+11/12
+2/12
+10/12
+6/12
+8/12
+6/12
+5/12
+2/12
+3/12
+Totals
+So m ˆ 60 =
+59/12
+4
+= 0.81355
+59 /12
+and assuming that the force of mortality is constant over (60, 61)
+q̂ 60 = 1 - exp( -m ) = 0.5567.
+(iii)
+The estimates of q 60 differ, the actuarial estimate being higher than the
+estimate produced by the two-state model.
+The two-state model uses all the information we are given, including that of
+times of death, whereas the actuarial estimate places relatively more weight on
+the number of deaths.
+In this case, m is large, so most of the information is in the times of death
+rather than the number of deaths, and the actuarial estimate does not produce
+acceptable results. The estimate from the two-state model is to be preferred.
+Explicit statements of formulae are not necessary, provided they are implicit in the
+calculations presented. The alternative solution to (i) received partial credit.
