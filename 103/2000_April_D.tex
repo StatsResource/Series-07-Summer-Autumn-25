@@ -36,67 +36,53 @@
 PLEASE TURN OVER7
 (i)
 (a)
-Calculate the autocovariance function {γ k : k ≥ 0} and
-autocorrelation function {ρ k : k ≥ 0} of a first-order Moving
+Calculate the autocovariance function {γ k : k ≥ 0} and autocorrelation function {ρ k : k ≥ 0} of a first-order Moving
 Average process
-X t = μ + e t + β 1 e t−1 ,
+\[X t = μ + e t + β 1 e t−1 ,\]
 where {e t : t ≥ 0} is a sequence of uncorrelated, zero-mean random
-variables with common variance σ 2 e .
+variables with common variance $\sigma^2_e$.
 (b)
 (ii)
-State the conditions on the values of the parameters such that
-the process is invertible.
-[5]
-A sequence of observations x 1 , x 2 , ..., x n has sample variance γ $ 0 = 14.5,
-sample lag-1 autocovariance γ $ 1 = 5.0. Show that there is more than one
-first-order moving average process which can be fitted to these data,
+State the conditions on the values of the parameters such that the process is invertible.
+
+A sequence of observations x 1 , x 2 , ..., x n has sample variance γ $ 0 = 14.5, sample lag-1 autocovariance γ $ 1 = 5.0. Show that there is more than one first-order moving average process which can be fitted to these data,
 but verify that only one of the fitted processes is invertible.
-[4]
-[Total 9]
-8
-The members of a health insurance scheme are classified as contributors or
-beneficiaries; a member who is a contributor in one period becomes a
-beneficiary in the next period if he or she becomes seriously ill, and this
-happens with probability 0.1. The probability of a serious illness continuing
-into the next period is 0.2. The rules of the scheme specify that any member
-who is a beneficiary for three successive periods must become a contributor for
-the next period; if the illness still persists the member may thereafter revert
-to being a beneficiary.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 8
+The members of a health insurance scheme are classified as contributors or beneficiaries; a member who is a contributor in one period becomes a beneficiary in the next period if he or she becomes seriously ill, and this happens with probability 0.1. The probability of a serious illness continuing into the next period is 0.2. The rules of the scheme specify that any member
+who is a beneficiary for three successive periods must become a contributor for the next period; if the illness still persists the member may thereafter revert to being a beneficiary.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[(i)]
 (i)
-(a) Construct a discrete time Markov chain to model this health
-scheme, introducing if necessary various classes of beneficiaries
+(a) Construct a discrete time Markov chain to model this health scheme, introducing if necessary various classes of beneficiaries
 and contributors (a five state model is suggested).
+
 (b) Draw the transition graph.
 (c) Write down the transition matrix of the chain.
-[6]
-(ii) Explain whether the above Markov chain is irreducible, periodic or
-both.
-[2]
-(iii) (a)
+(ii) Explain whether the above Markov chain is irreducible, periodic or both.
+
+\item (iii) (a)
 Calculate the stationary probability distribution of the chain.
 (b)
-Determine the proportion of beneficiaries among the
-membership in the stationary régime.
-(iv)
-103—4
-[4]
-Let b be the average gross payout per beneficiary and c the average
-gross payout per contributor per period; this means that the nett
-payments are b − f and c − f respectively, where f is the membership fee
-per period (assumed to be uniform over members and over time).
-(a) Explain how b, c and f should be related if the scheme is to be
-viable.
-(b) Calculate the average profit per period per member in the
-stationary régime if b = 600, c = 150 and f = 300.
-[3]
+Determine the proportion of beneficiaries among the membership in the stationary régime.
+\item (iv)
+Let b be the average gross payout per beneficiary and c the average gross payout per contributor per period; this means that the nett
+payments are $b − f$ and $c − f$ respectively, where $f$ is the membership fee per period (assumed to be uniform over members and over time).
+(a) Explain how b, c and f should be related if the scheme is to be viable.
+(b) Calculate the average profit per period per member in the stationary régime if b = 600, c = 150 and f = 300.
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
 (i)
 (a)
-g 0 = Var(e t + b 1 e t-1 ) = ( 1 + b 12 ) s e 2 and g 1 = Cov(e t + b 1 e t-1 , e t-1 + b 1 e t-2 )
-= b 1 s 2 e , with g k = 0 for k > 1.
+\[g 0 = Var(e t + b 1 e t-1 ) = ( 1 + b 12 ) s e 2 \]and 
+\[g 1 = Cov(e t + b 1 e t-1 , e t-1 + b 1 e t-2 )
+= b 1 s 2 e , with g k = 0 for k > 1.\]
+
 This gives r 0 = 1, r 1 = b 1 / (1 + > 12 ), r k = 0 otherwise.
 (b)
+%------------------%
 Invertibility requires that 1⁄2b 1 1⁄2 < 1, so that the sum X t - b 1 X t-1 +
 b 12 X t- 2 + ... converges. m and s e are irrelevant.
 We need to solve ( 1 + b 12 ) s e 2 = 14.5, b 1 I 2 e = 5.0. Eliminating s 2 e , we
@@ -106,6 +92,8 @@ b 1 = 2.5 corresponds to I 2 e = 2, whereas b 1 = 0.4 corresponds to I 2 e =
 12.5.
 For invertibility, solve 1 + b 1 z = 0. In the first case, z = -0.4 (no
 good); in the second, z = -2.5 (OK).
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8
 (i)
 (a)
@@ -131,7 +119,7 @@ B 3
 0.2
 C ¢
 0.2
-Page 5Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 (c)
 Transition matrix (states ordered C, C ¢, B 1 , B 2 , B 3 ):
 F 0 . 9
@@ -155,9 +143,7 @@ J
 J
 0 K
 0
-(ii) The chain is irreducible by inspection: every state is accessible from every
-other state. State C is clearly aperiodic because of the one-step loop from C
-to C; because of irreducibility, every other state must be aperiodic too.
+(ii) The chain is irreducible by inspection: every state is accessible from every other state. State C is clearly aperiodic because of the one-step loop from C to C; because of irreducibility, every other state must be aperiodic too.
 (iii) (a)
 p = pP reads
 p c = 0.9p c + 0.8(p c¢ + p 1 + p 2 + p 3 )
@@ -194,7 +180,8 @@ Page 6
 Proportion of beneficiaries:
 125 + 25 + 5
 = 11.04%.
-1404Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+1404
+
 (iv)
 (a)
 Average profit per period per member in stationary régime is
