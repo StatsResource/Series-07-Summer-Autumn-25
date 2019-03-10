@@ -1,0 +1,144 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+ã Institute of Actuaries1
+2
+If K x is a random variable which measures the curtate future lifetime of a life aged x,
+describe the benefits payable under policies that have the present value of their
+benefits expressed as
+(a) a K
+K x = 0, 1, 2, 3, ...
+(b) a && min( K
+x
+x + 1, n + 1)
+- 1
+K x = 0, 1, 2, 3, ...
+[3]
+An endowment assurance issued to a man aged exactly 30 provides the following
+benefits:
+·
+·
+a sum assured of £10,000 payable immediately on death before age 65
+a sum assured of £50,000 on survival to age 65
+Premiums are payable annually in advance for 30 years, or until death if earlier.
+Calculate the level annual premium payable.
+[5]
+Basis: Mortality: A1967–70 Ultimate Males
+Interest: 6% per annum effective throughout
+Expenses are ignored
+
+[3]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+(a)
+K x
+Value
+0
+a 0 1
+a 1 2
+a 2 3
+a 3 ...
+= 0 = v = v + v 2 = v + v 2 + v 3 ...
+Whole of Life immediate annuity of 1 p.a. payable in arrear until the death of
+life now aged x .
+(b)
+K x
+Value
+K x
+Value
+0
+a && 1 - 1 1
+a && 2 - 1 2 ...
+a && 3 - 1 n + 1
+a && n - 1
+= 1 - 1
+= 0 = 1 + v - 1
+= v = 1 + v + v 2 - 1
+= v + v 2 = 1 + v + v n - 1
+= v + v 2 ... + v n
+n + 2
+a && n + 1 - 1
+n + 3
+a && n + 1 - 1
+= 1 + v + v 2 ... + v n - 1
+= v + v 2 + ... + v n
+= 1 + v + v 2 ... + v n - 1
+= v + v 2 ... + v n
+Temporary life annuity of 1 p.a. with term of n years payable in arrear until
+the death of a life now aged x or until the life attains x + n whichever event
+occurs first.
+Only a correct statement was required in each case for full marks.
+2
+Value of premiums = Pa && 30:30 = 14.349P (from tables)
+Value of survival benefit = 50, 000  ́
+l 65
+ ́ 1.06 - 35
+l 30
+= 50, 000  ́
+27, 442.681
+ ́ 1.06 - 35
+33,839.370
+= 50,000  ́ 0.1055113
+= 5,275.5651
+Value of death benefit
+1
+= 10, 000  ́ A 30:35
+1
+= 10, 000  ́ (1.06 1⁄2 )  ́ ( A 30:35 - A 30:35
+)
+= 10,000  ́ (1.06 1⁄2 )  ́ (0.14989 - 0.10551)
+tables
+above
+= 456.9201
+Page 3Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+Equation of value:
+14.349P = 5,275.5651 + 456.9201
+P = £399.50 per annum
+1
+There is very little difference using alternative calculations for A 30:35
+:
+Using 1.03 instead of 1.06 1⁄2 leads to value of death benefit = 457.114 and P = 399.52.
+1
+Alternative calculation of A 30:35
+= A 30 -
+l 65
+ ́ 1.06 - 35  ́ A 65
+l 30
+= 0.09372 -
+27, 442.681
+ ́ 1.06 - 35  ́ 0.46764
+33,839.370
+= 0.09372 - 0.04934
+= 0.04438
