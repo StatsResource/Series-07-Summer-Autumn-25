@@ -1,0 +1,261 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+[Total 12]10
+(i) Show that A x : n = 1 - da && x : n
+(ii) The force of mortality at age x in a special mortality table, m ¢ x , is related to the
+corresponding force of mortality in a standard table, m x , by the relationship:
+m ¢ x + t = m x + t + k
+[3]
+t > 0
+where k is a constant which does not depend on t.
+(a) Show that t p ¢ x = t p x exp{ - kt }
+(b) Hence or otherwise show that the expected present value of an
+immediate temporary annuity-due of 1 per annum issued to a life aged
+x with a term of n years valued using the special mortality table and a
+valuation rate of interest, i per annum is given by:
+t > 0
+a && x : n
+where this function is evaluated using the standard mortality table and
+a valuation rate of interest, j per annum, where:
+j = (1 + i) exp{k} - 1
+(iii)
+[6]
+A 20 year term insurance policy is issued to a life aged exactly 60. The sum
+assured is £10,000 payable at the end of the year of death. Calculate the net
+level annual premium for this policy using a basis of 6% per annum effective
+and a special mortality table where:
+m ¢ x + t = m x + t + 0.018692 .
+The standard mortality table is the a(55) Ultimate Mortality Table for male
+lives.
+[7]
+[Total 16]
+104 A2002—7
+
+Page 13Subject 104 (Survival Models) — April 2002 — Examiners’ Report
+10
+(i)
+a && x : n = E é a && min( K + 1, n ) ù
+x
+ë
+û
+é 1 - v min( K x + 1, n ) ù
+= E ê
+ú
+d
+ë ê
+û ú
+So
+= 1 1 é min( K x + 1, n ) ù
+- E v
+û
+d d ë
+= 1 1
+- A
+d d x : n
+A x : n = 1 - da && x : n
+ALTERNATIVELY
+Let
+C x
+= v x+1 d x
+= v x+1 ( l x - l x+ 1 )
+= v . v x l x - v x + 1 l x + 1
+= vD x - D x+1
+Then
+t =¥
+å C x + t
+= M x
+t = 0
+t =¥ t =¥
+t = 0 t = 0
+= v å D x + t - å D x + t + 1
+= vN x - N x +1
+So
+A x : n =
+=
+Page 14
+M x - M x + n + D x + n
+D x
+vN x - N x + 1 - vN x + n + N x + n + 1 + D x + n
+D xSubject 104 (Survival Models) — April 2002 — Examiners’ Report
+since N x + n +1 + D x + n - N x +1
+= N x + n - (N x - D x )
+= N x + n - N x + D x
+then
+A x : n =
+(1 - d )( N x - N x + n ) - ( N x - N x + n ) + D x
+D x
+= 1 - da && x : n
+ALTERNATIVELY
+A x : n =
+k = n - 1
+å
+v k + 1 . k 1⁄2 q x + v n n p x
+k = 0
+Now k 1⁄2 q x = k p x - k +1 p x
+Substitute
+=
+k = n - 1
+å
+v k + 1 k p x -
+k = 0
+k = n - 1
+å
+k = 0
+v k + 1 k + 1 p x + v n n p x
+Then EITHER
+= va && x : n - ( a && x : n + 1 - 1) + v n n p x
+= va && x : n - a && x : n + 1
+= 1 - (1 - v ) a && x : n
+= 1 - da && x : n
+OR
+= v + v 2 p x ...+ v nn - 1 p x - (vp x + v 22 p x ... + v n - 1 n - 1 p x + v nn p x ) + v n p x
+= 1 - (1 - v)(1 + vp x ... + v n - 1 n - 1 p x )
+= 1 - da && x : n
+Page 15Subject 104 (Survival Models) — April 2002 — Examiners’ Report
+(ii)
+(a)
+t
+ì ï u = t
+ü ï
+p ¢ x = exp í - ò m ¢ x + u . du ý
+ï î u = 0
+ï þ
+ì ï u = t
+ü ï
+= exp í - ò m x + u + k . du ý
+î ï u = 0
+þ ï
+ì ï u = t
+ü ï
+ì ï u = t
+ü ï
+= exp í - ò m x + u . du ý exp í - ò k . du ý
+ï î u = 0
+ï þ
+ï î u = 0
+ï þ
+= t p x .exp( - kt )
+(b)
+a && ¢ x : n =
+=
+t = n - 1
+å
+t p ¢ x . v t
+t p x . e - kt . v t
+t p x ( v . e - k )
+t p x v t j
+t = 0
+t = n - 1
+å
+t = 0
+=
+t = n - 1
+å
+t
+t = 0
+=
+t = n - 1
+å
+t = 0
+= a && x : n j
+where
+1
+1
+1
+=
+. k
+1 + j (1 + i ) e
+i.e. j = (1 + i) e k - 1
+(iii)
+¢ 6% = 1 - d 6% a && 60:20
+¢
+Use (i): A 60:20
+6%
+¢
+Use (ii): a && 60:20
+= a && 60:20 j
+6%
+where j = (1.06)e 0.018692 - 1 = 0.08 i.e. 8%
+Page 16Subject 104 (Survival Models) — April 2002 — Examiners’ Report
+1
+60:20 6%
+Also A ¢
+=
+¢
+D 80
+20
+= v 6%
+¢
+D 60
+= (1.06) - 20 .
+= (1.06) - 20
+¢
+20 p 60
+20 p 60 .
+e - 20  ́ 0.018692
+363,991 - 0.37384
+e
+859,916
+= 0.31180  ́ 0.42329  ́ 0.68809
+= 0.09082
+Alternatively
+D 80
+771.2
+= 0.09081
+@ 8% =
+8, 492.4
+D 60
+¢
+a && 60:20
+= a && 60:20 8%
+6%
+= a && 60 -
+D 80
+a && 80
+D 60
+= (8.432 + 1) - 0.09082  ́ (3.989 + 1)
+= 8.97890 (8.97895 with 0.09081)
+¢ 6% = 1 -
+Then A 60:20
+Then Premium =
+0.06
+ ́ 8.97890 = 0.49176
+1.06
+10, 000(0.49176 - 0.09082)
+8.97890
+= 446.5362
+£446.54 p.a.
+Page 17
