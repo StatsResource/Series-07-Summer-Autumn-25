@@ -33,36 +33,28 @@
 \begin{document}
 
 \begin{enumerate}
-\item 9 Let X and Y be independent random variables. Let V and W be the random variables
-defined by
+\item 9 Let X and Y be independent random variables. Let $V$ and $W$ be the random variables defined by
 \[V = max {X, Y}, W = min {X, Y}\]
 i.e. V is the larger, and W is the smaller, of the observations of X and Y.
 Let FX , FY , FV , FW denote the distribution functions of X, Y, V, W respectively.
 \begin{enumerate}[(a)]
-\item Show that FV(t) = FX(t)FY(t) . 
-\item Show that FW(t) = FX(t) + FY(t)  FX(t)FY(t) . [3]
-\item The random variable X has an exponential distribution with parameter 4 and,
-independently, Y has an exponential distribution with parameter 4. Obtain the
-distribution function of the minimum of X and Y and state its mean. [3]
+\item Show that $FV(t) = FX(t)FY(t)$ . 
+\item Show that $FW(t) = FX(t) + FY(t)  FX(t)FY(t)$ . 
+\item The random variable X has an exponential distribution with parameter 4 and, independently, Y has an exponential distribution with parameter 4. Obtain the distribution function of the minimum of X and Y and state its mean. 
 \end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 10 A company wants to estimate the percentage of its customers who are willing to shop
-on the internet. It decides to do so by calculating a symmetrical 95% two-sided
-confidence interval for the unknown percentage.
+\item 10 A company wants to estimate the percentage of its customers who are willing to shop on the internet. It decides to do so by calculating a symmetrical 95\% two-sided confidence interval for the unknown percentage.
+
 \begin{enumerate}[(a)]
-\item Show that, based on a random sample of 200 of the companys customers, the
-required confidence interval will have a width which is no greater than 13.9%.
-[4]
-\item Calculate the sample size required which will ensure that, whatever the true
-percentage, the width of the confidence interval will be no greater than 10%.
+\item Show that, based on a random sample of 200 of the companys customers, the required confidence interval will have a width which is no greater than 13.9%.
+
+\item Calculate the sample size required which will ensure that, whatever the true percentage, the width of the confidence interval will be no greater than 10\%.
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \item 11 Consider the following model for aggregate claim amounts S:
-S = X1 + X2 + + XN
-where the Xi are independent, identically distributed random variables representing
-individual claim amounts and N is a random variable, independent of the Xi , and
-representing the number of claims. Let X have mean X and let N have mean N and
+\[S = X1 + X2 + + XN\]
+where the Xi are independent, identically distributed random variables representing individual claim amounts and N is a random variable, independent of the $X_i$ , and representing the number of claims. Let X have mean X and let N have mean N and
 variance 2
 N .
 \begin{enumerate}[(a)]
@@ -91,17 +83,17 @@ F W (t)\\ &=& P(W \leq t)\\ &=& 1 - P(min{X, Y} > t)
 \begin{itemize}
 
 \item
-FX(t) = FY(t) = 1  e4t , so
+\[FX(t) = FY(t) = 1  e4t \] , so
 FW(t) = 1  e4t + 1  e4t  (1  e4t)2
 = 2  2e4t  1  e8t + 2e4t
 = 1  e8t
 This is the distribution function of an exponential distribution with parameter 8, and
 therefore the mean is 1/8.
 \end{itemize}
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 10  
 \begin{itemize}
-\item Width of 95% CI = 2  1.96  {P(1  P)/200}0.5 where P is sample
+\item Width of 95\% CI = 2  1.96  {P(1  P)/200}0.5 where P is sample
 proportion
 Max value of P(1  P) is 0.52 = 0.25
  Max width of CI = 2  1.96  (0.25/200)0.5 = 0.139
@@ -110,8 +102,8 @@ In terms of percentages, this is 13.9%.
 \end{itemize}
 11 
 \begin{itemize}
-\item E(SN) = E[E(SN|N)]
-Now, E(SN|N = n) = E[(X1 + + Xn)n|N = n)] = E[n(X1 + + Xn)]
+\item $E(SN) = E[E(SN|N)]$
+Now, \[E(SN|N = n) = E[(X1 + + Xn)n|N = n)] = E[n(X1 + + Xn)]\]
 = n  nX = n2
 X
  E(SN) = E(XN2) = XE(N2)
