@@ -1,0 +1,169 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+10 A00—
+(i) Explain briefly what is meant by a linear trend and by seasonal variation in
+respect of a sequence of observed values {x 1 , x  , ..., x n } forming a time series.
+[]
+(ii) Describe an operation which can be applied to the data in order to remove
+additive seasonal variation of period .
+[]
+(iii) Derive an appropriate operation to perform on the process
+X t = exp(a + bt + Z t ),
+where Z is I(1), in order to obtain a stationary process Y t .
+4
+[]
+[Total 6]
+Consider the second-order autoregressive process
+Y t = -  a Y t - 1 + a  Y t -  + Z t
+where {Z t } is a zero-mean white noise process with Var(Z t ) = s  .
+(i) Determine the range of values of a for which the process Y can be stationary.
+[]
+(ii) Derive the autocovariances γ 1 and γ  of Y in terms of a and s .
+10 A00—
+[6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(i)
+A linear trend means that the line of best fit to the data plotted against time
+would have a non-zero slope or that there is evidence from the observations
+that there is an underlying tendency for the values to increase or decrease with
+time at a constant rate.
+Seasonal variation is another deterministic component of the mean which
+causes E(X t ) to depend on the remainder when t is divided by the period, d; to
+spot it from the data, look for recurring patterns in the data or check the
+sample ACF.
+(ii)
+Either use moving averages: set Y t = 1⁄(X t + X t - 1 ), which has had the seasonal
+variation smoothed out.
+Or use seasonal differencing: set Y t = Ñ  X t = X t - X t -  (from the Box-
+Jenkins armoury)
+Or use any linear filter Y t = å a j X t - j as long as
+j
+å a = å a
+j
+even j
+j
+(any such
+odd j
+filter does answer the question, though it may look very strange)
+Or method of seasonal means: estimate a mean for the even-numbered
+observations and another for the odd-numbered ones, then subtract these from
+the corresponding observations to obtain a set of residuals, which can then be
+analysed.
+(iii)
+Set Y = Ñ (log X ) = Ñ ( a + bt + Z t ) = b + Ñ Z t .
+Since it is stated that Z is I (1) it follows that Ñ Z is stationary.
+Question  was generally well answered.
+Page Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+4
+(i)
+In terms of the backwards shift operator we have
+(1 +  a B - a  B  ) Y = Z .
+We must find the values of a such that the roots of the polynomial
+1 +  a x - a  x  lie outside the unit circle.
+The roots are
+(
+)
+1
+1 ±  , so we require that
+a
+ + 1
+> 1 and
+a
+ - 1
+> 1 , in
+a
+other words that a <  - 1 .
+(ii)
+Y t = - α Y t - 1 + α  Y t -  + Z t
+Cov[ Y t , Y t ] = γ 0 = - αγ 1 + α  γ  + σ  (1)
+Cov[ Y t , Y t - 1 ] = γ 1 = - αγ 0 + α  γ 1 ()
+Cov[ Y t , Y t -  ] = γ  = - αγ 1 + α  γ 0 ()
+From (); γ 1 = -
+ ag 0
+(4)
+1 - a 
+Substitute for γ 1 from (4) into ()
+γ  =  a .
+ ag 0
+1 - a 
+æ 5 a  - a 4 ö
++ α  γ 0 = g 0 . ç
+ç 1 - a  ÷ ÷
+è
+ø
+(5)
+substitute for γ 1 from (4) and γ  from (5) into (1)
+Þ
+γ 0 =
+( )
+)( 1 - 6 a + a )
+s  1 - a 
+(
+1 + a 
+
+4
+substitute for γ 0 from (6) into (4) and (5) to find γ 1 and γ 
+Þ
+γ 1 =
+-as 
+( 1+ a )( 1 - 6 a
+
+Page 4
++ a 4
+)
+( 5 a - a ) . s
+γ =
+( 1 + a )( 1 - 6 a + a )
+
+and
+
+
+
+4
+
+
+4
+(6)Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(Alternative form for the denominator: 1 - 5 a  - 5 a 4 + a 6 .)
+Generally well answered, although the exact range of permitted values for a
+in (i) caused difficulties.

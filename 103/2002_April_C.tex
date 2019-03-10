@@ -1,0 +1,206 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+The ratio of claims to premium income is calculated annually by a division of a large
+insurance company over a period of 0 years. The observed values are plotted against
+time in Figure 1a, with the sample autocorrelation function (ACF) plotted in
+Figure 1b; the dotted lines indicate the cutoff points for significance at the 5% level.
+Figure 1a
+Ratio of claims to premium income
+1.00
+1.100
+1.000
+0.900
+0.800
+15
+0.700
+Year, t
+Figure 1b
+Autocorrelation Function for Ratio
+0.6
+0.4
+0.
+0
+-0.
+0
+1
+
+
+4
+5
+6
+7
+-0.4
+-0.6
+Lag, k
+(i) Explain which feature of the Figures indicates that differencing is not required
+in order to obtain a stationary series.
+[1]
+(ii) On the basis of the sample ACF, r k , the company’s analyst decides to fit a
+first-order autoregressive model to the data. State, with reasons, whether you
+consider this to be a reasonable decision and indicate what additional plot you
+would require in order to make a firmer recommendation.
+[]
+10 A00—4(iii)
+The model is fitted and the residuals calculated. The sample ACF of the
+residuals is shown in Figure 1c. State what conclusions you would draw from
+the plot.
+[1]
+Figure 1c
+Autocorrelation Function for Residuals
+0.6
+0.4
+0.
+0
+-0.
+0
+1
+
+
+4
+5
+6
+7
+-0.4
+-0.6
+Lag, k
+(iv)
+The fitted model is
+X t = 0.49541 + 0.5118X t - 1 + e t .
+6
+(a) Derive forecasts x ˆ 0 (1) and x ˆ 0 () for the next two values in the
+series.
+(b) Comment on the reliability of the forecasts.
+[4]
+[Total 9]
+A disability benefit scheme is modelled in continuous time by a Markov jump process
+with states A (active), T (temporarily disabled), P (permanently disabled) and
+D (dead). The transition rates are as follows:
+A ® T:  l
+A ® P: l
+A ® D: a
+T ® A: 5 l
+T ® P:  l
+T ® D: a
+P ® D:  a
+(i) Write down the generator matrix of the process.
+(ii) Calculate the probability that, having started in state A, the process has visited
+neither T nor P by time t.
+[]
+(iii) Write down the matrix form of the Kolmogorov backward differential
+equations and use this to derive a differential equation for p PD (t), the
+probability that a scheme member in state P at time 0 will be in state D at
+time t.
+[]
+(iv) Solve the equation for p PD (t), the probability that a policyholder, initially
+permanently disabled, is dead by t.
+[]
+[Total 9]
+10 A00—5
+[]
+
+
+5
+(i) If r 1 , r  , r  , ... were all close to 1, that would indicate a need for differencing.
+That is not the case here.
+(ii) The ACF of an AR(1) is geometrically decreasing. That is approximately the
+case here, so AR(1) is not completely unreasonable, but we need a plot of the
+sample PACF to check.
+(iii) There is a fairly significant departure from a white noise process. The model
+does not appear to fit.
+(iv) (a)
+x ˆ 0 (1) = 0.49541 + 0.5118 x 0 ,
+x ˆ 0 () = 0.49541 + 0.5118 x ˆ 0 (1) = 0.74896 + 0.619 x 0 .
+[Numerical values are acceptable here: x 0 is in fact equal to 1.01, so
+the forecasts would be x ˆ 0 (1) = 1.01, x ˆ 0 () = 1.014: a margin of
+error is acceptable, as x 0 must be read off the graph.]
+(b)
+The forecasts are unreliable:
+There are only 0 observations in the series, so the confidence intervals
+would be quite wide in any case.
+In addition, we have seen that the model is inadequate, casting further
+doubt on them.
+Many candidates provided interesting and sensible comments on the
+data provided, though the problems caused by the small sample size
+were not generally recognised.
+6
+(i)
+The generator is
+æ -a - 4 l
+l
+a ö
+ l
+ç
+÷
+-a - 7 l  l
+a ÷
+ç 5 l
+.
+ç 0
+-  a  a ÷
+0
+ç ç
+÷ ÷
+0
+0
+0 ø
+è 0
+Page 5Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(ii)
+The required event is that either no jump out of A has taken place by t or that a
+jump to D has taken place. This has probability
+e - ( a +4 l )t + (1 - e - ( a +4 l )t )
+(iii)
+a
+.
+a + 4 l
+The backward equations state P ¢ ( t ) = AP ( t ).
+We have
+d
+p PD ( t ) = -  a p PD ( t ) +  a
+dt
+(iv)
+The solution to p ¢ PD ( t ) = -  a p PD ( t ) +  a with p PD (0) = 0 is p PD ( t )
+= 1 - e -  a t .
+Well done, on the whole. Where there were difficulties they may have been
+due to practising more with the time-inhomogeneous version of the equation
+rather than the time-homogeneous one.

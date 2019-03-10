@@ -1,0 +1,162 @@
+103 S2001—35
+A motor insurance company assumes that a holder of a provisional driver’s
+licence will make claims according to a Poisson process with rate X per year,
+where X is not fixed but is determined randomly for each driver according to the
+density function
+f(x) = 2e −2x
+6
+(x > 0).
+(i) Describe how to simulate an observation X from the density f using a
+single pseudo-random variable U assumed uniformly distributed on [0, 1].
+[3]
+(ii) Explain how, given the value X generated in (i), you would use a sequence
+U 1 , U 2 , ... of uniform pseudo-random variables to simulate the number of
+claims made in two six-month periods by a provisional driver with mean
+claim rate X per year.
+[4]
+(iii) Describe a simulation-based method for estimating the conditional
+probability that a provisional driver makes 2 or more claims in the second
+six months of driving given that no claim was made in the first six
+months. [Here the value X is to be assumed unknown.]
+
+[Total 9]
+n
+The evolution of a stock price is modelled as a discrete time process S n = Σ i=
+1 X i ,
+where X 1 , X 2 , ... are independent, identically distributed random variables with
+P{X i = 1} = p and P{X i = −1} = q = 1 − p. The investment will be liquidated at
+either the bankruptcy time T 0 (the first time n when the price S n hits 0) or the
+first time T K when the price attains a fixed target K, whichever occurs first.
+Let T = min(T 0 , T K ) denote the liquidation time (the exit time from [0, K]). Let
+A = {T K < T 0 } denote the event that the target is met before bankruptcy and let
+p k = P[AS 0 = k] denote the probability of this event, given that the initial price is
+S 0 = k, where k ∈ {1, ..., K − 1}.
+(i) By conditioning on the price of the stock at time 1, determine a difference
+equation satisfied by p k , k = 1, ..., K − 1.
+
+(ii) Assume that p = q =
+(iii)
+1
+2
+.
+(a) Show that S n is a martingale.
+(b) Derive an expression for p k by applying the optional stopping
+theorem to this martingale stopped at T.
+
+Assume now that p \neq q.
+(a)
+(b)
+103 S2001—4
+Determine a value \theta \neq 1 such that Y n = \theta S n is a martingale.
+[4]
+Derive an expression for p k in this case.
+[Total 11]7
+According to an interest rate model which operates in continuous time, the
+interest rate r(t) may change only by upward jumps of fixed size j u or by
+downward jumps of fixed size j d (where j d < 0), occurring independently according
+to Poisson processes N u (t) (with rate \lambda u ) and N d (t) (with rate \lambda d ).
+Let T u denote the time of the first up jump in the interest rate, T d the time of the
+first down jump, T = min(T u , T d ) the time of the first jump. Further, let I be
+defined as an indicator taking the value 1 if the first jump is an up jump or 0
+otherwise.
+(i) Determine expressions for the probabilities P{T u > t}, P{T d > t} and P{T > t}
+
+(ii) Determine the distribution of I.
+
+(iii) Show, by evaluating P{T > t and I = 1}, that I and T are independent
+random variables.
+[3]
+(iv) Calculate the expectation and variance of the interest rate at time t given
+the current rate r(0).
+Hint: r(t) = r(0) + j u N u (t) + j d N d (t).
+(v)
+Show that {r(t) : t ≥ 0} is a process with stationary, independent
+increments.
+103 S2001—5
+
+[3]
+[Total 12]8
+A company keeps records of quarterly sales figures, {S t : t = 1, 2, ...n} for the most
+recent n quarters. It wishes to analyse the records with the aim of predicting the
+sales figures in the near future.
+The model suggested by the company is:
+log S t = \mu + \betat + \theta Q ( t ) + X t ,
+where {X t : t = 1, 2, ..., n} is a stationary time series, Q(t) takes the value 1, 2, 3 or
+4 depending on whether the tth quarter is the first, second, third or fourth
+quarter of the financial year, and \theta 1 + \theta 2 + \theta 3 + \theta 4 = 0.
+(i) Explain why the company has suggested a linear model for log S t rather
+than a linear model for S t .
+[1]
+(ii) Explain the significance of the parameters \mu, \beta and {\theta q : 1 ≤ q ≤ 4} and give
+[4]
+a reason for the assumption that \theta 1 + \theta 2 + \theta 3 + \theta 4 = 0.
+(iii) Derive a linear filter Y t = Σ + k 2= − 2 a k log S t + k which has the property that the
+filtered series {Y t } does not depend on {\theta q : 1 ≤ q ≤ 4}.
+(iv)
+7
+q k - 1
+q K - 1
+.
+(i) P{T u > t} = e -l u t , P{T d > t} = e -l d t , P{T > t} = P{T u > t} P{T d > t} = e - ( l u +l d ) t
+(ii) P{I = 1} = P{T d > T u } = ò 0 ¥ l u e -l u t P{T d > t} dt =
+(iii) P{T > t Ç I = 1} = ò 0 ¥ l u e -l u t P{T d > t} dt =
+l u
+l u + l d
+l u
+l u + l d
+e - ( l u +l d ) t
+This is the product of P{T > t} and P{I = 1}.
+8
+(iv) Er t = r 0 + (j u l u + j d l d ) t and Var r t = j u 2 l u t + j d 2 l d t
+(v) Take 0 < s < t. Then r t+s - r t = j u (N u (t + s) - N u (t)) + j d (N d (t + s) - N d (t)).
+Now N u (t + s) - N u (t) has a Poisson(l u s) distribution, not depending on t
+and independent of {N u (r) : 0 \leq r \leq s}, and N d (t + s) - N d (t) has a
+Poisson(l d s) distribution, also independent of t and of {N d (r) : 0 \leq r \leq s}, so
+r t+s - r t has the same distribution as r s - r 0 and is independent of r s - r 0 .
+(i) Fluctuations in sales tend to be proportional to sales in the sense that
+Var(S t+1 -S t ) \mu S t 2 , company growth tends to be exponential rather than
+linear. (Either of these explanations is sufficient.)
+(ii) m + bt represents a deterministic linear trend in the main sales volume; b
+is related to the average annual percentage increase in sales, whereas m is
+related to the initial value.
+The q q refer to predictable seasonal fluctuations above and below the
+average from one quarter to another due to the weather, timing of
+Christmas, etc.
+Page 5Subject 103 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+We assume that Sq q = 0 because any non-zero value could be subsumed in
+m; estimation procedures report an indeterminacy if we do not make this
+assumption.
+(ii)
+We need to ensure that each q q has a coefficient of
+1
+4 (assuming that the
+1
+8 X t+2 .
+filter coefficients add to 1).
+The filter
+(iv)
+( 1 8 , 1 4 , 1 4 , 1 4 , 1 8 ) will do.
+We have
+Y t = m + bt +
+1
+8
+X t - 2 +
+1
+4
+X t - 1 +
+1
+4
+X t +
+1
+4
+X t+1 +
+Hence
+ÑY t = Y t - Y t - 1 = b +
+1
+8
+(X t+2 + X t+1 - X t - 2 - X t - 3 ) .
+Clearly Y is not stationary, if only because it has a trend in the mean.
+ÑY, however, does look stationary, so it is reasonable to claim that Y is
+I(1).

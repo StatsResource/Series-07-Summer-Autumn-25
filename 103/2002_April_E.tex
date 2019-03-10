@@ -1,0 +1,240 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+[4]
+[Total 11]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+A motor insurer operates a no claims discount system that has five levels. The
+percentage of the basic premium paid by the insured in each level is as follows:
+Level % premium charged
+5
+4
+
+
+1 100
+90
+80
+70
+60
+Insured motorists move between levels depending on the number of claims in the
+previous year. For each policyholder, the number of claims per year follows a
+Poisson distribution with mean 0.5.
+For those in Levels , , 4 and 5 at the start of the previous year:
+· if no claims are made during the previous year, the insured moves down one
+level (e.g. from Level 4 to Level )
+· if one claim is made during the previous year, the insured moves up one level
+(except those in Level 5 at the start of the previous year, who will remain in
+Level 5)
+· if two claims are made during the previous year, the insured moves up two
+levels (except those in Level 5 at the start of the previous year, who will
+remain in Level 5 and those in Level 4, who will move to Level 5)
+· if three or more claims are made during the previous year, the insured moves
+to Level 5
+For those in Level 1 at the start of the start of the previous year, a no claims discount
+protection policy applies whereby they remain in Level 1 if they make one claim. If
+they make two claims, they move to Level . If they make three or more claims, they
+move to Level 5. If they make no claims, they remain in Level 1.
+(i) Determine the transition matrix for the no claims discount system (assuming
+that all motorists continue their policies).
+[]
+(ii) A policyholder is in Level  for the first year of the policy. Assuming that the
+policy is maintained, calculate the probability that at the start of the third year
+the policyholder will be (a) in Level 1, (b) in Level .
+[]
+(iii) (a)
+State conditions under which the probability of being in a particular
+state after n years converges as n ® ¥ to some limit which is
+independent of the initial state.
+(b)
+Verify that the conditions are satisfied in this instance.
+(c)
+Determine the ultimate probability that the insured will be in Level 1.
+[8]
+10 A00—8(iv)
+10 A00—9
+The insurer suspects that the model used for its calculations may be too
+simplistic. Given annual data listing numbers of claims per policy, broken
+down by discount level, state which test would be most appropriate to test the
+assumption that the distribution of the number of claims per policy per year is
+Poisson with mean 0.5.
+[1]
+[Total 15]
+
+
+
+
+
+
+
+
+
+
+
+9
+(i)
+Level at start of this year after:
+Level at start
+of prev yr 0 claims in
+previous yr 1 claims in
+previous yr  claims in
+previous yr  or more claims
+in previous yr
+5
+4
+
+
+1 4
+
+
+1
+1 5
+5
+4
+
+1 5
+5
+5
+4
+ 5
+5
+5
+5
+5
+For each policyholder, the number of claims in each year has a Poisson (0.5)
+distribution. So
+P (0 claims) = e - 0.5 = 0.7788
+P (1 claim) = 0.5 e - 0.5
+e - 0.5
+= 0.5  .
+ = 0.1947
+P ( claims)
+= 0.04
+P ( or more claims) = 1 – (0.7788 + 0.1947 + 0.04) = 0.00
+0
+0
+0.00 ö
+æ 0.975 0.04
+ç
+÷
+0
+0.1947 0.04 0.00 ÷
+ç 0.7788
+Transition matrix P = ç 0
+0.7788
+0
+0.1947 0.065 ÷
+ç
+÷
+0
+0.7788
+0
+0.1 ÷
+ç 0
+ç 0
+0
+0
+0.7788 0.1 ÷ ø
+è
+(ii)
+Page 8
+In order to be in level 1 in year  the policyholder requires two consecutive
+claim-free years. The probability of this is 0.7788  = 0.6065.Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+A similar argument can be used for the probability of being in level  in
+year , but it may be simpler to calculate the whole vector of probabilities x  .
+x 1 =
+x  =
+x  =
+=
+( 0 0 1 0
+( 0 0 1 0
+( 0 0.7788
+( 0.6065 0
+0 )
+0 ) . P =
+( 0
+0.7788 0 0.1947 0.065 )
+0 0.1947 0.065 ) . P
+0.0 0.096 0.0506 )
+Probability of being in level  is 0.%
+(iii)
+(a) The required conditions are that the chain is irreducible and aperiodic.
+(b) Irreducibility: level i can be reached from level j in | j - i | steps;
+Aperiodicity: p ii > 0 for some i.
+(c) The stationary distribution p will not depend on the starting position.
+Require
+( p 1
+p 
+p 
+p 4
+p 5 ) P =
+( p 1
+p 
+p 
+p 4
+p 5 )
+This gives the following equations:
+0.975 p 1 + 0.7788 p  = p 1 (1)
+0.04 p 1 + 0.7788 p  = p  ()
+0.1947 p  + 0.7788 p 4 = p  ()
+0.04 p  + 0.1947 p  + 0.7788 p 5 = p 4 (4)
+and
+p 1 + p  + p  + p 4 + p 5 = 1
+(5)
+Solving the simultaneous equations:
+from (1) Þ p  = 1 - 0.975 p 1 = 0.040 p 1 ;
+0.7788
+substitute for p  into () Þ p  = 0.040 - 0.04 p 1 = 0.0144 p 1 ;
+0.7788
+substitute for p  and p  into ()
+Þ p 4 = 0.0144 - 0.1947  ́ 0.040 p 1 = 0.00747 p 1 ;
+0.7788
+Page 9Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+substitute for p  , p  and p 4 into (4)
+Þ p 5 = 0.00747 - 0.1947  ́ 0.0144 - 0.04  ́ 0.040 p 1 = 0.00541 p 1
+0.7788
+and substituting for p  , p  , p 4 and p 5 into (5) Þ p 1 = 0.9440
+(and p  = 0.01, p  = 0.0117, p 4 = 0.0071 and p 5 = 0.0051).
+(iv)
+A chi-squared goodness-of-fit test is best here.
+Very good answers on the whole. Some confusion was caused by the fact that
+the states were presented in the reverse of the standard order, but most
+candidates coped with this pretty well.

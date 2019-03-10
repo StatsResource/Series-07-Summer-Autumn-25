@@ -1,0 +1,140 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i) State the Lévy decomposition theorem which describes the constituent parts of
+a Lévy process.
+[]
+(ii) Let M t = exp( - ab + bB t - b  t), where B t is standard Brownian motion and
+where a and b are positive constants. Define T as the first time that M t = 1,
+with the definition T = ¥ if M never hits the point 1. You may assume that
+M t ® 0 as t ® ¥ , so that
+ì if M hits 1
+M T = í 1
+î 0 if M never hits 1
+(a) Show that M is a martingale and that 0 £ M t £ 1 for all 0 £ t £ T.
+(b) State the optional stopping theorem and use it to prove that the
+probability that the Brownian motion B t ever hits the line a + bt is
+e - ab .
+(iii)
+[6]/
+An insurance company earns premium income at a constant rate c per unit
+time. Claims arrive according to a Poisson process with rate l ; each claim
+may be assumed to be of fixed size k. Let X t denote the total value of all
+claims received up until time t and denote by S t the company’s surplus at
+time t,
+\[S t = s 0 + ct - X t ,\]
+where s 0 is a positive constant. Show that {S t : t  0} is a Lévy process and
+identify the components of the Lévy decomposition of S.
+[]
+(iv) Calculate the expectation and variance of S t .
+(v) The company is interested in the probability of ruin, defined as the probability
+that S t ever goes below 0. An investigator proposes using a Brownian model
+[]
+S t * = s 0 + m t + s B t ,
+where B t is a standard Brownian motion, as an approximation to the surplus
+process S t .
+(a) Calculate the appropriate values of m and s .
+(b) State the significance of the condition c > k l in this situation.
+(c) Write down the probability that the approximating process S* ever hits
+0 assuming that c > k l .
+(d) Outline the principal difference between S and S* and state whether
+you consider that the probability obtained in (c) would be an
+acceptable approximation to the probability of ruin.
+[7]
+[Total 0]
+10 A00—10
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i) A Lévy process Y t can be decomposed as Y t = y 0 + m t + s B t + N t , where m t is a
+deterministic component, s B t a continuous random component (Brownian
+motion) and N t a purely discontinuous component which may be regarded as a
+compound Poisson process, independent of the Brownian component.
+(ii) (a)
+E ( M t + s 1⁄F t ) = exp( -  ab -  b  ( t + s ) +  bB t ) E ( e  b ( B t + s - B t ) 1⁄F t ). The
+independent increment property implies that this conditional
+expectation is exp( b  s ).
+Therefore E ( M t + s 1⁄F t ) = exp( -  ab -  b  ( t + s ) +  bB t +  b  s ) = M t .
+Ought to check that E (| M t |) < ¥ . Since M t  0, E (| M t |) = E ( M t ) = e -ab .
+M t  0 by definition. Since B t is continuous, it follows that M t is
+continuous. Further, M 0 < 1. Therefore M t cannot exceed 1 without
+first passing through 1, which does not happen until time T .
+(b)
+The optional stopping theorem states that, for any martingale Y and stopping time T adapted to the same filtration, EY T = Y 0 if T is bounded
+or Y is bounded or Y t Ù T is bounded.
+The last of these conditions holds in this case.
+We conclude that P ( B hits a + bt ) = P ( M hits 1) = E ( M T ) = M 0 = e -  ab .
+(iii) ct is deterministic, - X t is a compound Poisson process with constant jump
+height - k and the multiplier of the Brownian component is s = 0.
+(iv) Since X t / k ~ P ( l ), we have E ( - X t ) = -l kt , Var( - X t ) = k  l t . Therefore
+E ( S t ) = s 0 + ( c - k l ) t , Var( S t ) = k  l t .
+Page 10Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(v)
+(a) In order for the mean and variance to match we require m = c - k l ,
+s = k l .
+(b) c > k l is the condition for premium income to outstrip outgoings on
+average.
+(c) s 0 + m t + s B t = 0 if and only if B t = -
+s 0 m
+- t .
+s s
+From above, the probability that B ever hits the line a + bt is e -  ab .
+Therefore the required approximation to the probability of ruin is
+æ m s ö
+æ ( c - k l ) s 0 ö
+exp ç -   0 ÷ = exp ç - 
+÷ if c > k l .
+s ø
+k  l ø
+è
+è
+(d)
+The difference is that S has a discontinuous component, whereas S *
+approximates this with a continuous one.
+The difference will be significant if s 0 is small and c - k l large, as then
+S * will be much less likely to hit 0 than S ; in the opposite case the
+approximation may be quite reasonable.
+Most candidates were not able to attempt every part of this question.
+Very few made the connection between part (ii)(b) and part (v)(c).
+There seems to be a general lack of confidence when dealing with
+martingales or Lévy processes.
+Page 11

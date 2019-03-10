@@ -1,0 +1,164 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+Demonstrate that the random variable
+X = - 1⁄4log(U)
+has an exponential distribution with mean 1⁄4 when U is uniformly distributed
+over the range (0, 1).
+[]
+(ii)
+8
+(a) Explain how the above can be used to simulate a path of the Poisson
+process with intensity l = 4.
+(b) Derive a method for simulating a Poisson random variable with
+mean 4.
+[4]
+(iii) Describe an alternative method for generating a Poisson random variable with
+mean 4 based on the cumulative distribution function.
+[]
+(iv) State, giving reasons, which of the two methods in (ii) and (iii) would be more
+efficient if a simulation calls for a large number of Poisson random variables
+with mean 4.
+[]
+[Total 10]
+A company is studying the health records of its longest serving employee in order to
+improve its provision for health insurance. Let X(t) = H if the employee is healthy at
+time t, X(t) = S otherwise. The available information includes the value of X(t) for all
+0 £ t £ T.
+(i) Explain the principal stages in the formulation and verification of a stochastic
+model for this process.
+[]
+(ii) The company chooses to model X as a two-state time-homogeneous Markov
+jump process with transition rates s HS = s , s SH = r .
+10 A00—6
+(a) State the distribution of a typical holding time in state H and of a
+typical holding time in state S assuming the model is valid.
+(b) Write down estimates for the parameters s and r of the model in terms
+of quantities which may be derived from the available data.
+(c) Indicate one test which could be used to determine whether the data
+support the assumption that the Markov jump process model is
+suitable.
+[4](iii)
+10 A00—7
+Having fitted the model the company discovers that the observed distribution
+of holding times in state H does not fit the predictions of the time-
+homogeneous Markov model; in particular, the mean holding time in state H
+between visits to state S appears to be decreasing with t.
+(a) Describe the principal difference between a time-inhomogeneous
+model and a time-homogeneous one and indicate whether a time-
+inhomogeneous model might provide a better fit to the observations.
+(b) Explain why the original model could still be used if the company is
+large and has a roughly constant age profile.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i) Either P ( X > x ) = P ( U < e - 4x ) = e - 4x , so that f X ( x ) = 4 e - 4x ,
+Or probability distribution function F ( x ) = 1 - e -l x has inverse
+1
+F - 1 ( y ) = - log(1 - y ). Hence the inversion method reads:
+l
+(1)
+Generate y from U (0, 1).
+1
+()
+Return x = - log(1 - y ).
+l
+1
+1
+- log y is as good as - log(1 - y ) here, since 1 - Y is also U (0, 1).
+l
+l
+(ii) (a)
+Obtain numbers y 1 , y  , ..., y n by the above procedure, being outcomes
+of random variables Y 1 , Y  , ..., Y n independent exponentially
+distributed with parameter l = 4.
+Put t j = y 1 + y  + ... + y j and return
+x t = 0 if t < t 1 ,
+x t = j if t j £ t < t j+1 .
+(b)
+(iii)
+Page 6
+Take the value of the Poisson process at time 1.
+Calculate F ( i ) for each i = 0, 1, .... Then
+(1) Generate u from U (0, 1).
+() Return the smallest i such that u £ F ( i ).Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(iv)
+The method in (ii) requires an average of four uniform r.v.s per Poisson r.v.;
+the method in (iii) requires only one. Since the distribution function needs to
+be calculated only once, (iii) should be much more efficient.
+Very poorly answered, considering that it deals only with simulating standard
+exponential and Poisson random variables. Even the inverse distribution
+function method was largely misunderstood. There must be the suspicion that
+many candidates are not getting as far as Unit 7 in the Core Reading.
+8
+(i)
+First choose a class of model which might be supposed, for physical reasons, to provide a reasonable fit to the data. Identify the parameters of the model.
+Next estimate the values of the parameters from the data.
+See if the observed data match the pattern which would be expected if the model were accurate and if the parameters had the values given by their
+estimates. If not, the model should be revised.
+(ii)
+(a) Exponential distribution in each case, with rate s in H , r in S.
+(b) The time spent in state H before the next visit to S has mean s - 1 .
+Therefore a reasonable estimate for s is the reciprocal of the mean length of each visit: ŝ = (Number of transitions from H to S )/(Total
+time spent in state H up until the last transition from H to S ), although
+it would be equally valid to use the Maximum Likelihood Estimator,
+which is (Number of transitions from H to S )/(Total time spent in state H ).
+Similarly for r̂ .
+(iii)
+(c) Testing whether the successive holding times are independent
+exponential variables would be best, and any procedure which does test this is acceptable. Something like using the c  goodness-of-fit test
+on the even-numbered holding times, then again on the odd-numbered ones, springs to mind, but there may be other, equally reasonable,
+answers.
+(a) For a time-inhomogenous model the transition rates s and r are functions of t .
+It is certainly possible to improve the fit by using a time-inhomogenous model in this instance.
+Page 7Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(b)
+If the age profile is represented by a density function f ( a ); then the
+overall average rate at which a healthy employee falls sick is s =
+ò f ( a ) s ( a ) da , roughly constant for all t . The same of course applies
+to the overall average rate of recovery. (It is not necessary to write
+down the integral to obtain full marks: any explanation which covers the basic principle will suffice.)
+
+Generally good answers. A number of candidates answered part (i) in the
+context of this particular model rather than in general terms and so were only
+awarded a reduced number of marks.

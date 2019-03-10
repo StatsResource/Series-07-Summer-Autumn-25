@@ -1,0 +1,154 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+ã Institute of Actuaries1
+A stock price {S t : t = 1, , 1⁄4} is modelled as
+æ t
+ö
+S t = S 0 exp ç å X j ÷ ,
+ç j = 1 ÷
+è
+ø
+where X 1 , X  , 1⁄4 is a sequence of independent Normal random variables, with
+E(X j ) = m j , Var(X j ) = s  j .
+In order to perform a martingale analysis it is necessary to find a sequence of
+constants a 1 , a  , 1⁄4 such that Y t = a t S t is a martingale.
+(i)
+(ii)
+Derive a recurrence equation satisfied by the constants { a t : t = 1, , 1⁄4 }.
+[You may use the fact that the moment generating function of N( m , s  ) is
+M(s) = exp( m s + 1⁄ s  s  ).]
+[4]
+State, with a brief explanation, whether the same answer would be obtained if
+[1]
+X j had a non-normal distribution with mean m j , variance s  j .
+[Total 5]
+
+An analyst wishes to use a model which is based on Brownian motion, but which does
+not become too large and positive for large t. The model proposed is
+X t = B t e - cB t ,
+where B t is standard Brownian motion, and c is a posi%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1
+(i)
+Y k is a martingale, and the values Y 1 , ..., Y k are determined by X 1 , ....., X k , so
+E[Y k+1 1⁄X 1 , X  , ..., X k ] = E[Y k+1 1⁄Y 1 , Y  , ..., Y k ] = Y k .
+Now
+k + 1
+é
+ù
+E[Y k+1 |X 1 , X  , ....., X k ] = E ê a k + 1 .exp å X j | X 1 , X  ,..., X k ú
+ê ë
+ú û
+j = 1
+k
+é
+ù
+= a k+1 . E ê e X k + 1 .exp å X j | X 1 , X  ,..., X k ú
+ê ë
+ú û
+j = 1
+Y
+= a k + 1 . E é e X k + 1 ù . k
+ë
+û a
+k
+We therefore require
+a k + 1 =
+(ii)
+a k
+1
+é
+ù
+= a k exp ê -m k + 1 - s  k + 1 ú
+
+ë
+û
+E é e X k + 1 ù
+ë
+û
+The solution depends critically on the moment generating function of a
+Normal variable. Non-normal variables have different mgfs, so the answer
+obtained would be different.
+Answers to Question 1 were disappointing considering how straightforward it
+was, suggesting that candidates lacked practice at applications of
+martingales.
+
+(i)
+d
+( be - cb ) = (1 - cb)e - cb = 0 when b = 1/c.
+db
+Check that this is a maximum:
+d 
+
+( be - cb ) = ( -  c + c  b ) e - cb = - ce - 1 when
+db
+b = 1/c. This is negative, so X is indeed maximised at b = 1/c, giving a
+maximum value of e - 1 /c.
+(ii)
+Itô's Lemma has a number of possible forms:
+df ( X t ) = f '( X t ) dX t + 1⁄ f "( X t )( dX t )  , or
+¶ f
+¶ f
+¶  f
+df ( X t , t ) = ( X t , t ) dt + ( X t , t ) dX t + 1⁄  ( X t , t )( dX t ) 
+¶ t
+¶ x
+¶ x
+
+are OK, with ( dX t ) = dt.
+Page Subject 10 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+d 
+db
+
+( be - cb ) = ( - c + c  b)e - cb . Therefore
+dX t = (1 - cB t ) e - cB t dB t + 1⁄( - c + c  B t ) e - cB t dt .
+(iii)
+Quite the reverse. If B is large and negative X takes enormously negative
+values. X is not in the least stationary.
+A common cause of lost marks was failing to check that the turning point was
+a maximum.
+tive constant.
+(i) Verify that there is an upper bound which X never exceeds.
+[]
+(ii) Use Itô’s Lemma to find dX t .
+[]
+(iii) State, with a brief explanation, whether the suggested model is appropriate for
+a process which is asymptotically stationary.
+[1]
+[Total 6]

@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+ã Institute of Actuaries1
+{N(t) : t \geq 0} is a Poisson process with rate \lambda and {. t : t \geq 0} is the filtration
+associated with N.
+(i)
+Write down the conditional distribution of N(t + s) − N(t) given . t , where
+s > 0 and use your answer to find E(θ N(t+s) . t ).
+(ii)
+2
+3
+Find a process of the form M(t) = η(t)θ N(t) which is a martingale.
+[3]
+[2]
+[Total 5]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+An insurance company wishes to test the assumption that claims of a particular
+type arrive according to a Poisson process model. The times of arrival of the next
+20 incoming claims of this type are to be recorded, giving a sequence T 1 , ..., T 20 .
+(i) Give reasons why tests for the goodness of fit should be based on the inter-
+[1]
+arrival times X i = T i − T i−1 rather than on the arrival times T i .
+(ii) Write down the distribution of the inter-arrival times if the Poisson process model is correct and state one statistical test which could be
+applied to determine whether this distribution is realised in practice.
+
+(iii) State the relationship between successive values of the inter-arrival times if the Poisson process model is correct and state one method which could
+be applied to determine whether this relationship holds in practice.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+(i)
+Given . t we know that N(t + s) − N(t) ~ Poisson(\lambdas).
+Hence E(θ N(t+s) . t ) = θ N(t) e (θ−1)\lambdas .
+(ii)
+Now E(η(t + s) θ N(t+s) . t ) = η(t + s) θ N(t) e (θ−1)\lambdas , which needs to be equal to
+M(t) = η(t) θ N(t) . It follows that η(t) = e −(θ−1)\lambdat .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+(i) The inter-arrival times are much more suitable because they are
+independent.
+(ii) They should be exponentially distributed with the same mean.
+Kolmogorov-Smirnov, Anderson-Darling or χ 2 goodness-of-fit test can all
+be used.
+(iii)
+Successive values should be independent.
+Regress X i on X i−1 using ordinary least squares, or fit an AR(1) and test
+the \alpha 1 parameter for significance (equivalent to Durbin-Watson test).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+(i)
+Spectral density f(ω) =
+1
+2 π
+Σ ∞−∞ γ k e ik ω , or equivalent.
+For MA(1), therefore, we have
+f(ω) =
+σ 2 e
+(1 + \beta 2 + 2\beta cos ω).
+2 π
+And for AR(1),
+f(ω) =
+(ii)
+σ 2 e
+1
+.
+2
+2 π 1 + \alpha − 2 \alpha cos ω
+Clearly from (i) the inverse of the MA(1) is an AR(1), with \alpha = −\beta and with
+a different value of σ 2 e .
+The word “invertible” attached to a MA(1) indicates that the inverse is a
+stationary AR(1), whereas a non-“invertible” MA(1) has as inverse an
+AR(1) model which cannot be stationary, such as X t = 2X t − 1 + e t .
+Page 2Subject 103 (Stochastic Modelling) — April 2001 — Examiners’ Report
+4

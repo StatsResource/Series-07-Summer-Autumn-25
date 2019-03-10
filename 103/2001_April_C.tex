@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+5
+(i) State the expectation and variance of dY t = Y t+h − Y t , the increment of the
+process Y t over a small interval of size h, conditional on Y t = y.
+[2]
+(ii) Calculate the expectation and variance of the increment X n+1 − X n of the
+autoregression, conditional on X n = y.
+[2]
+(iii) Find, by equating the first and second moments of the increments in (i)
+and (ii) above, an expression for the drift \mu(y) of the approximating
+diffusion in a form which does not involve the time increment h.
+[2]
+(iv) State a condition under which the approximating process in (iii) is a
+Brownian motion with drift.
+(v) State a condition under which the approximating process in (iii) is an
+Ornstein-Uhlenbeck process.
+[1]
+[Total 8]
+(i) Derive expressions for ρ 1 and ρ 2 , the autocorrelation function of X at lags
+1 and 2, in the case that X is a stationary process satisfying the recursion:
+[1]
+X t = \alphaX t−1 + e t + \betae t−1 ,
+where {e t : t = 1, 2, ...} is a sequence of uncorrelated random variables with
+[5]
+mean 0, variance σ 2 .
+(ii)
+A company’s monthly sales figures, corrected for trend and seasonal
+factors, exhibit sample autocorrelation function at lags 1 and 2 of r 1 = 0.5,
+r 2 = 0.4. Find method of moments estimators of \alpha and \beta for the model
+in (i).
+[3]
+[Total 8]
+103 A2001—3
+PLEASE TURN OVER6
+A motor insurance company has 80,000 policy holders, paying an average annual
+premium of £400. The company receives claims at a rate of 2000 per month, the
+sizes of the claims having mean £1,200, standard deviation σ = £200.
+Let S(t) denote the company’s total surplus at time t, with S(0) equal to the
+initial reserve, set at £20,000,000.
+7
+(i) Calculate the expectation of the total amount paid out in claims in a given
+month and the safety loading employed by the company.
+[2]
+(ii) State, with reasons, whether it would be appropriate to use a diffusion
+approximation to calculate the probability of ruin, that is the probability
+that the process {S(t) : t \geq 0} ever hits 0.
+[3]
+(iii) Describe a simulation-based method for estimating the probability of ruin.
+Indicate why it would be important to use a method of generating pseudo-
+random variables which gives rise to reproducible sequences.
+[4]
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i) E ( dY t | Y t = y ) = \mu ( y ) h + o ( h ) , Var( dY t | Y t = y ) = h + o ( h )
+(ii) E ( X n + 1 − X n | X n = y ) = \theta − \alpha y , Var( X n + 1 − X n | X n = y ) = τ 2 .
+(iii) \mu(y)h = (\theta − \alphay) and h = τ 2 , so \mu(y) = (\theta − \alphay) / τ 2 .
+(iv) The increments of a brownian motion do not depend on its current value,
+i.e. \alpha = 0.
+(v) An OU process drifts towards zero, so that \theta = 0.
+(i) Let γ k denote the autocovariance function of X. Then
+Cov (X t , e t ) = 0 + σ 2 + 0 = σ 2 ;
+Cov (X t , e t − 1 ) = \alphaγ 0 + 0 + \betaσ 2 ;
+γ 2 = \alphaγ 1
+γ 1 = \alphaγ 0 + 0 + \beta Cov (X t − 1 , e t − 1 ) = \alphaγ 0 + \betaσ 2
+γ 0 = \alphaγ 1 + Cov (X t , e t ) + \beta Cov (X t , e t − 1 ) = \alpha 2 γ 0 + (1 + 2\alpha\beta + \beta 2 ) σ 2 ,
+implying that
+(ii)
+γ 0 = σ 2
+(1 + 2 \alpha\beta + \beta 2 ) ,
+2
+1 −\alpha
+ρ 1 = ( \alpha + \beta ) (1 + \alpha\beta )
+, ρ 2 = \alphaρ 1 .
+1 + 2 \alpha\beta + \beta 2
+Estimate of \alpha is r 2 / r 1 = 0.8; estimate of \beta is given by
+1
+2
+(1 + 2\alpha\beta + \beta 2 ) = (\alpha + \beta) (1 + \alpha\beta), or 0.3\beta 2 + 0.84\beta + 0.3 = 0, with solution
+\beta = −1.4 ±
+0.96 .
+In this case we take the positive square root to ensure invertibility.
+Page 3Subject 103 (Stochastic Modelling) — April 2001 — Examiners’ Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+Expectation is £2.4m. Safety loading is
+ρ =
+C − \alpha\mu
+(400 /12) × 80,000 − 2,000 × 1,200
+=
+= 11.11%
+2,000 × 1,200
+\alpha\mu
+where \alpha denotes the mean arrival rate of claims and \mu the mean claim
+size.
+(ii)
+Conditions for validity of diffusion approximation are
+u
+\mu
+large, ρ small,
+ρ u \mu moderate, where u is the reserve.
+In this case
+ρ u \mu =
+u
+is large, ρ is not particularly small and
+\mu
+2 × 10 7 × 11.1 × 10 − 2
+1,200
+= 1,852, clearly too large. We conclude that the
+diffusion approximation is not appropriate.
+(iii)
+Decide on a quantum of time, which may be a month or may be smaller.
+For each time period generate a Poisson variate to indicate the number of
+claims received and, conditional on this, a Normal variate with
+appropriate mean and variance to represent the total sum claimed.
+Subtract this from the total premium income over the period
+(deterministic), using the resulting quantity as the increment of the
+surplus process. Run the simulation for an extended period of time,
+stopping if/when it goes below zero. A large number of simulations should
+be performed, with the probability of ruin being estimated using standard
+techniques based on the Binomial distribution.
+The importance of reproducibility is for sensitivity analysis. The
+estimated probability may depend heavily on the values assumed for
+mean and standard deviation of the claim size, or on other numerical
+parameters. It is necessary to vary the initial assumptions and run the
+simulation again, just to ensure that conclusions are not substantially
+changed if the parameter values used do not adequately reflect the actual
+conditions experienced.

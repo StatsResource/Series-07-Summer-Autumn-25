@@ -1,0 +1,111 @@
+For a given driver, any period j is either accident free (Y j = 0) or gives rise to one
+accident (Y j = 1). The probability of having no accident during the next period is
+estimated using the driver’s past record as follows (all values y j are either 0 or 1):
+P[Y n+1 = 0Y 1 = y 1 , Y 2 = y 2 , ..., Y n = y n ] = pe −\lambda ( y 1 + y 2 + ... + y n ) ,
+where 0 < p < 1, \lambda ≥ 0. The cumulative number of accidents suffered by the
+driver over the time from period 1 up to period n is
+X n =
+n
+å Y .
+j
+j = 1
+(i) Verify that the Markov property holds for the sequence $X 1 , X 2 , ..., X n , ...$
+and explain why the sequence Y 1 , Y 2 , ..., Y n , ... does not form a Markov
+chain.
+[3]
+(ii) Draw the transition graph of the Markov chain X and write down its
+transition matrix.
+(iii) Determine, being careful to explain your reasons in each case:
+(a)
+(b)
+(c)
+(iv)
+(v)
+[4]
+whether the Markov chain X is time-homogeneous
+whether it is irreducible
+whether it admits a stationary probability distribution 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Starting from the state X t = j, calculate the probability of suffering no
+further accident for the next n successive periods. 
+Suppose you are provided with full claims records for a number of a
+company’s policy holders.
+(a) Describe a method for estimating the parameters \lambda and p.
+(b) Explain how to test the assumption that the probability of an accident depends only on the cumulative number of accidents, X n ,
+and does not have a direct dependence on n.
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+There is an explicit dependence on the past behaviour of Y j , j \leq n in the
+probability distribution of Y n+1 ; hence the Markov property does not hold.
+On the other hand
+P[X n+1 = j1⁄2X 1 = i 1 , X 2 = i 2 , ..., X n - 1 = i n - 1 , X n = i]
+= P[Y n+1 = j - i1⁄2Y 1 = i 1 , Y 2 = i 2 - i 1 , ..., Y n - 1 = i n - 1 - i n - 2 , Y n = i - i n - 1 ]
+ì ï pe -l i
+= í
+-l i
+ï
+î 1 - pe
+if j - i = 0,
+if j - i = 1.
+This is independent of i 1 , i 2 , ..., i n - 1 .
+(ii)
+Transition graph
+1 - p
+1 - pe -l
+1 - pe -2l
+0 1 2
+p pe -l pe -2l
+3
+...
+Transition matrix:
+æ p 1 - p
+ö
+ç
+÷
+-l
+-l
+pe
+1 - pe
+0
+ç
+÷ .
+ç
+pe - 2 l
+1 - pe - 2 l ÷
+ç ç
+÷ ÷
+O
+O
+è 0
+ø
+Page 7Subject 103 (Stochastic Modelling) — 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(iii)
+(a) Chain is time-homogeneous since transition probabilities calculated in (i) do not depend on time n.
+(b) It is not irreducible since the number of accidents can never go down.
+(c) There are no recurrent states, hence there can be no stationary distribution. Alternatively, a stationary distribution, p, if it exists,
+must obey
+p 0 p = p 0
+p 0 (1 - p) + p 1 pe -l = p 1
+p 1 (1 - pe -l ) + p 2 pe - 2 l = p 2 .
+M
+Since p < 1 we have p 0 = 0, and then p 1 = 0 etc. Hence no
+stationary probability distribution exists.
+(iv)
+No new accident:
+(pe - j l ) n = p n e - nj l
+(v)
+(a) Maximum likelihood would be very easy in this case: choose l and
+p to maximise P {( pe -l x k ) 1 - y k (1 - pe -l x k ) y k }.
+(b) Change the model to:
+P[Y n +1 = 01⁄2Y 1 = y 1 , Y 2 = y 2 , ..., Y n = y n ] = pe -l ( x n , n ) ,
+then test the hypothesis that l(x, n) o l(x) for all n.
+Page 8
+\end{document}
