@@ -1,0 +1,142 @@
+
+6 A No-Claims Discount system operated by a motor insurer has four levels:
+Level 1: 0% discount
+Level 2: 25% discount
+Level 3: 40% discount
+Level 4: 50% discount
+The rules for moving between these levels are as follows:
+Following a claim-free year, move to the next higher level, or remain at
+level 4.
+Following a year with one or more claims:
+move back one level, or remain at level 1, if, in the year before the
+most recent year, there were no claims;
+move back two levels, or move to level 1 or remain at level 1 if, in the
+year before the most recent year, there was one or more claims.
+For a given policyholder the probability of no claims in a year is 0.8.
+(i) Let X(t) denote the state, either 1, 2, 3 or 4, of the policyholder in year t.
+Explain why 1 { ( )}t X t 
+ is not a Markov chain. [2]
+(ii) (a) By increasing the number of states, define a new stochastic process
+1 { ( )}t Y t 
+ which is Markov and is such that Y(t) indicates the discount
+level for the policyholder in year t.
+(b) Write down the transition matrix for the Markov chain {Y(t)}t 1. 
+
+(c) Calculate the long-run probability that the motorist is in discount
+level 3.
+[8]
+[Total 10]
+103 A20035 PLEASE TURN OVER
+7 The medical insurance division of a large insurance company models each
+policyholders state of health as a three-state Markov jump process, the states being
+H (healthy), S (sick) and D (dead). The instantaneous transition rates between the
+states are HS = , SH = 
+, HD = , SD = .
+(i) Write down the generator matrix of the Markov jump process. [2]
+(ii) The policyholder pays contributions at rate C when in state H and receives
+benefits at rate B when in state S. No death benefit is payable. The company
+uses the model to set the ratio of contributions to benefits. Without doing any
+calculations, explain in general terms how this can be done. [2]
+(iii) A trainee believes that the model is too simplistic. For each of the trainees
+suggestions below, comment on whether following the suggestion would be
+likely to improve the models predictive power:
+(a) The transition rates should depend on the age of the policyholder.
+(b) The transition rates should vary according to the time of year.
+(c) SH and SD should also depend on the duration of the sickness to date.
+[3]
+(iv) Outline the principal difficulty in fitting a model with parameters dependent
+on all the factors in part (iii). [1]
+(v) Assume that several years of quarterly claims data are available. Describe a
+test to determine whether the model with annually time-varying transition
+rates, as in (iii)(b), is a better fit to the data than the model with constant
+transition rates. [2]
+[Total 10]
+103 A20036#
+
+%%%%%%%%%%%%%%%
+6 (i) {X(t)} is not Markov because, for example, P[Xt+1 = 2Xt = 3, Xt1 = 2, ]
+cannot be reduced to P[Xt+1 = 2Xt = 3].
+(ii) (a) Define new states
+3a = Level 3 this year following Level 2 last year
+3b = Level 3 this year following Level 4 last year
+(b) The transition matrix is then
+1 2 3a 4 3b
+1 0.2 0.8 0 0 0
+2 0.2 0 0.8 0 0
+3a 0 0.2 0 0.8 0
+4 0 0 0 0.8 0.2
+3b 0.2 0 0 0.8 0
+(c) We have
+1 = 0.21 + 0.22 + 0.23b  1 = 0.252 + 0.253b
+2 = 0.81 + 0.23a  2 = 0.25(3a + 3b)
+3a = 0.23b + 0.23a  3a = 0.253b
+3b = 0.24
+Applying the condition i = 1, we obtain the solution as
+(1, 2, 3a, 4, 3b) = 1
+441
+(21, 20, 16, 320, 64).
+It follows that the long-run proportion of time spent in Level 3 is
+(16 + 64)/441 = 80/441.
+A large number of candidates fared well on this question. Some committed the mostly
+harmless error of including too many (redundant) states. Most people had a
+reasonable attempt at (ii)(c) too, although there were some errors of arithmetic or
+matrix multiplication.
+7 (i) The generator matrix is
+0 0 0
+    
+    	 	  
+ 
+
+ 
+.
+(ii) Let B and C be the levels of benefits and contributions, and define h
+(respectively s) as the expected time spent by a policyholder in state H
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 7
+(respectively S) before finally entering state D. For solvency the company
+requires Ch  Bs 
+ 0.
+The model allows h and s to be calculated. [The equations are
+h 1 s, s 1 h  
+   
+   
+.]
+(iii) (a) This might improve predictive power as far as the individual
+policyholder is concerned, but in a large population of policyholders
+with constant age profile it is not likely to make much difference.
+(b) Certain kinds of sickness are more likely to strike at particular times of
+year, but they may more or less balance out. If there is a significant
+increase in the incidence of sickness in one season, it should be helpful
+to include this in the model.
+(c) Similarly to (a), the inclusion of duration dependence will significantly
+improve the goodness of fit when only one policyholder is being
+regarded, but in a large population of policyholders it is unlikely to
+make a difference overall.
+(iv) If the population is split up into categories depending on age, duration of
+illness and time of year, it is highly unlikely that there will be sufficient data to
+estimate all the transition rates reliably.
+(v) This can be regarded a Time Series problem: we seek a test for the existence
+of seasonal variation. One suggestion could be to find the best-fitting model
+without seasonal variation and the best-fitting with seasonal variation, then to
+compare the values of the Akaike Information Criterion.
+Alternatively, if the number of policyholders is roughly constant from year to
+year, one could use one-way Analysis of Variance to determine whether
+Season has a significant effect on claims. If the number of policyholders
+varies greatly from year to year, a two-way ANOVA with Year and Season as
+explanatory variables could be fitted.
+A test based on 
+2 would have to be carefully constructed. For example,
+drawing up a contingency table with the quarters as the rows and with column
+titles like Stayed healthy and Fell sick would be a reasonable approach.
+Again done quite well generally.
+Many candidates weren’t clear that they needed to write a formula that characterises
+the company’s policy in part (ii).
+Parts (iii) and (iv) done well  most people seemed to get the general ideas and write
+sensible comments, even if they didn’t quite get full marks. Only a few candidates
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 8
+noticed that in a large stable population of policyholders the trainees suggestions
+would not greatly improve the models predictive power.
+In part (v) many candidates merely mention using the chi-squared test without
+explicitly describing it. The question was carefully written to elicit responses which
+showed whether the candidate understood what was to be tested.
