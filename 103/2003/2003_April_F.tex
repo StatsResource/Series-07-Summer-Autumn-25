@@ -1,0 +1,70 @@
+
+10 The price of a stock through time, {Xt : t  0} is thought to be modelled by the
+following relationship:
+Xt = 1.7Xt1 	 0.4Xt2 	0.3Xt3 + et 	0.7et1 + 0.12et2
+For this model,
+(i) Write the equation in terms of the backward shift operator B in the form
+(B)(1 	 B)d Xt = (B)et,
+where (B) and (B) are polynomials in B. [3]
+(ii) Identify the values of p, d and q for which X is an ARIMA(p, d, q) process. [1]
+(iii) Explain whether the process {Xt : t  0} is stationary. [1]
+(iv) For the value of d from (ii), put Wt = (1 	 B)dXt. Explain why the model can
+be written in the equivalent form
+Wt = iet i  
+and calculate i for i = 0, 1, 2. [3]
+(v) Another representation of the model is
+(B)Wt = et
+where (B) = 1 	 1 i.
+i iB 
+
+  Calculate i for i = 1, 2. [1]
+(vi) Define two vector-valued stochastic processes Y and Z as
+Yt = (Xt, Xt1, Xt2)T, Zt = (Xt, Xt1, Xt2, Xt3, Xt4)T.
+Explain which, if any, of the processes {Xt : t  0}, {Yt : t  0} and {Zt : t  0}
+has the Markov property. [2]
+(vii) Given a set of observations (x1, x2, , xn) from an ARIMA(1, 1, 1) process
+with unknown parameter values, outline the main steps that need to be taken
+so that one can obtain forecasts for future values of the process. [3]
+[Total 14]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+
+10 (i) The model can be written as
+(1  1.7B + 0.4B2 + 0.3B3) Xt = (1  0.7B + 0.12B2) et.
+The term in the brackets on the LHS above is divisible by 1  B. We have
+(1  1.7B + 0.4B2 + 0.3B3) = (1  B)(1  0.7B  0.3B2).
+The last term is also divisible by 1  B, giving
+(1  1.7B + 0.4B2 + 0.3B3) = (1  B)(1  0.7B  0.3B2) = (1  B)2(1 + 0.3B).
+(ii) The model can be identified as an ARIMA(1, 2, 2) process.
+(iii) {Xt : t 
+ 0} is clearly a non-stationary process, as the AR operator
+(1  B)2(1  0.3B) has two roots with modulus one; any ARIMA(p, d, q)
+process with d > 0 is non-stationary.
+(iv) (1 + 0.3B)Wt = (1  0.7B + 0.12B2)et, which can be expressed as
+Wt = (1 + 0.3B)1(1 	0.7B + 0.12B2)et.
+Expanding the first term, Wt = (1  0.3B + 0.09B2  )(1  0.7B + 0.12B2)et
+= (1  B + 0.42B2  )et.
+Therefore 0 = 1, 1 = 1, 2 = 0.42.
+(v) Just invert the previous representation: et = (1  B + 0.42B2  )1 Wt = (1 +
+B  0.42B2 + B2  ) Wt, so that 1 = 1, 2 = 0.58.
+(vi) None of the three processes is Markov; we know that if {Xt : t 
+ 0} is an
+ARIMA(p, d, q) process with q > 0, then any finite collection (Xn, Xn1, ,
+Xnm+1)T is non-Markov.
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 12
+(vii) First transform the data, so that the differenced observations yt = (1  B)xt may
+be thought of as realisations of a stationary ARIMA(1, 1) model.
+Estimate the parameters of the model (by Maximum Likelihood or Method of
+Moments) and obtain forecasts for future values of y.
+Transform these back to obtain forecasts for the x values.
+Part (i) was done very well; of people with the wrong answer, most stopped after
+taking out one (1B) factor rather than trying for the 2nd. (ii) and (iii) were also well
+answered, following on from (i).
+In (iv) there were difficulties with the expansion of the denominator, meaning that few
+candidates did well. Similar problems were encountered with part (v).
+For the verification or otherwise of the Markov property in (vi) it would have helped
+to write out {Yt} and {Zt} explicitly in terms of lagged terms.
+Most candidates who attempted (vii) got at least part of the method, but few wrote
+down all the main steps in the correct sequence.
