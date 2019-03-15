@@ -1,0 +1,112 @@
+
+4 (i) Given a pseudo-random number U uniformly distributed over [0,1], obtain an
+expression in terms of U and  for a non-negative pseudo-random variable X
+which has density function
+f (x) = e x 
+ [2]
+(ii) A sequence of simulated observations is required from the density function
+( )= ( ) , 0
+1
+e x g x k x
+x
+
+ 
+
+where  is a non-negative parameter and k() is a constant of integration not
+involving x.
+(a) Describe a procedure that applies the Acceptance-Rejection method to
+obtain the required observations.
+(b) Derive an expression involving  and k() for the expected number of
+pseudo-random variables required to generate a single observation
+from the density g using this method.
+[6]
+[Total 8]
+103 A20034
+5 (i) Let W(t) be defined by W(t) = 	4B(kt), where B(t) is a standard Brownian
+motion.
+(a) Calculate the value of k which gives W(t) the same expectation and
+covariance function as B(t).
+(b) Prove that, for this value of k, W is a standard Brownian motion.
+[4]
+(ii) Prove that exp[2B(t)	2t] is a martingale. [5]
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+
+4 (i) Let X =  (log U)/. Then, for x > 0,
+P(X > x) = P(log U < x) = exp(x).
+Differentiating, f (x) e x 
+  , as required.
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 4
+Alternatively: use the inverse distribution function method.
+0
+F(x) x e ydy 1 e x    
+    . We need to invert this: set U = F(X) and express
+X as a function of U. This gives X =   1 log (1U).
+(ii) (a) Use f(x) =  exp(x) as the base density. We need to find a constant
+C such that ( )
+1
+x
+k e C e x
+x
+
+
+  
+
+for all x > 0.
+C = k()/ is the best that we can do.
+The procedure is:
+1. Generate a value y from the density f(x) =  exp(x).
+2. Take another Uniform pseudo-random variable U2; if this is less
+than g(y)/(C f(y)) [which is equal to 1/(1 + y)] then we accept the
+value y, otherwise reject it and return to 1.
+(b) On average it takes C repetitions of steps 1 and 2 to generate a value.
+Each such repetition requires two uniform pseudo-random variables.
+So the answer is 2 k()/.
+Most candidates did well here, although a few people inverted the density function
+instead of the distribution function.
+Some experienced real difficulty in providing a clear statement of the algorithm for
+Acceptance-Rejection method. A lot of people answered this part in abstract without
+realising that they should use the density from part (i) as the base density, and hence
+didn’t get the marks for calculating C.
+5 (i) (a) EW(t) = 0, Cov(W(s), W(t)) = 16Cov(B(ks), B(kt)) = 16k min(s, t).
+Thus k = 1/16 is the required value.
+To prove that a process is a BM, it is necessary to check the
+covariance, not just the variance.
+(b) In addition to the expectation and covariance function, we need to
+show
+  that W is Normally distributed. Any linear transformation of a
+Normal random variable is itself Normal.
+  that W has continuous sample paths. For small h, we have
+W(t + h)  W(t) =  4(B(kt + kh)  B(kt)), which clearly tends to 0
+as h approaches 0.
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 5
+  An alternative to proving continuity is to state that the increments
+of W are independent of past values and are also Normally
+distributed.
+(ii) Consider exp[2B(t)2t] with respect to the filtration Ft.
+B(t)  B(s) is independent of Ft and B(s) is Fs-measurable. Then
+ 2B(t) |  =  2[B(t) B(s)] 2B(s) | 
+E e Fs E e e Fs 
+= 2B(s)  2[B(t) B(s)] | 
+e E e Fs 
+= e2B(s)Ee2[B(t) B(s)]  
+The increment B(t)  B(s) has the normal distribution with mean 0 and
+variance t 	s, so the expectation of e2[B(t)  B(s)] is equal to
+M(2) = exp(2(t  s)), where M(
+) is the moment generating function of the
+N(0, t  s) distribution.
+It follows that
+ 2B(t) 2t |  = 2B(s) 2s
+E e Fs e  
+and therefore e2[B(t) t] is a martingale.
+For part (i), in (a) many candidates just checked variance rather than the covariance,
+but got 1/16 correct. Not so many people got part (b)  generally people assumed
+that (a) implied (b), rather than considering other properties of Brownian motion
+Most candidates fared well on part (ii), identifying where necessary the mgf of a
+normal random variable to successfully demonstrate the given process is a
+martingale.
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 6
