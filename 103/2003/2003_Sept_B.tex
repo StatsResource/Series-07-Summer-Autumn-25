@@ -1,0 +1,134 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+103 S2003—3 PLEASE TURN OVER
+4 Assume that the yield rate Yt of a certain stock may either take a high constant value
+yu or a low constant value yd, during alternating random exponential periods with
+respective intensities u, d.
+(i) Write down Kolmogorov’s forward equation for the probability Pu,u(t) that Y
+is in state yu at time t, given that it starts in state yu. [1]
+(ii) Show that
+Pu,u = d u ( u d )t .
+u d u d
+e    
+
+   
+[2]
+(iii) Let Ut denote the total amount of time spent in state yu up until time t. Derive
+and expression for E[UtY(0) = yu], the expected occupation time in state yu
+by time t for the two-state continuous-time Markov chain starting in state yu.
+Hint: Note that Ut =
+0
+t
+ Isds , where Is =
+1 if =
+0 if
+s u
+s u
+Y y
+Y y
+
+ 
+and use the previous
+result. [2]
+(iv) Derive an expression for the expected total yield Xt of the stock by time t.
+Hint: Xt = yuUt + yd(t  Ut). [2]
+[Total 7]
+
+5 Let X1, X2, X3, … be independent, identically distributed random variables with
+P(X1 = +1) = p > ½ and P(X1 = 1) = 1  p < ½. Let S0 = 0, Sn = X1 + X2 + … + Xn
+for n  1 be the associated random walk.
+(i) State a necessary condition which must be satisfied by the constants 	 and c if
+the process
+Mn = e Sn cn  
+is to be a martingale. [1]
+(ii) Use the condition in (i) above to solve for 	 as a function of c. [2]
+(iii) Let T1 be the first time that Sn hits 1, i.e. T1 = min{n : Sn = 1}. State the
+conditions on c and on 	(c) under which it is valid to use the Optional
+Stopping Theorem to evaluate 1 ( ) T E M. [2]
+(iv) Derive the moment generating function E(e cT1 )  for c > 0. [3]
+[Total 8]
+103 S2003—4#
+
+%%%%%%%%%%%%%
+
+
+4 (i) Pu,u (t) uPu,u (t) d Pu,d (t) .
+(ii) Note that Pu,d (t) 1 Pu,u (t) . Therefore we have
+Pu,u (t) d ( u d )Pu,u (t) ,
+implying that
+( ) ( )
+, ( ) u d t u d t
+u u d
+d
+e P t e
+dt
+.
+Together with the boundary condition Pu,u(0) = 1, this gives the required
+solution.
+(iii)
+0 0 0 0 0 0 ,
+| | | ( )
+t t t
+E Ut Y yu E Is Y yu ds P Ys yu Y yu ds Pu u s ds .
+Applying the previous part, this is equal to
+( )
+2 1
+( )
+d u u d t
+u d u d
+t e .
+(iv) E Xt |Y0 yu = ydt ( yu yd )E Ut |Y0 yu
+= ( )
+2
+( )
+( ) (1 ).
+( )
+d u u d u d t
+d u d
+d u u d
+y y
+y y y t e
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 6
+In general candidates were able to score well on the first two parts, although a common mistake here
+was to have the exponential parameters d and u transposed in the Kolmogorov Forward Equations.
+In such cases appropriate credit was given for valid attempts at part (ii).
+5 (i) Mn = e Sn cn will be a martingale if ( Sn 1 c(n 1) ) = Sn cn.
+E e Fn e
+(ii) This will happen if ec = Ee Xn 1 = pe qe , i.e. if pe2 e +c + q = 0.
+Therefore
+=
+2 4
+ln .
+2
+ec e c pq
+p
+(iii) For the OST to hold we require that M is bounded or T1 is bounded or
+n T1 M
+is bounded.
+In this instance, if c 0 and 0 then Mn < e for all n T1. But if c < 0 or
+0 then there is no such upper bound and it is not safe to assume that the
+OST can be applied.
+(iv) When c > 0, one root for is positive, the other negative, since
+pe2 e +c + q < 0 when = 0. We need the positive root.
+Applying the OST, E(MT) = M0 = 1 as long as c 0 and 0. This implies
+that
+1 = ( ST1 cT1 ) E e = e E(e cT1 ).
+Thus
+E(e cT1 ) = e =
+2
+2
+c c 4
+p
+e e pq
+=
+2 4
+.
+2
+ec e c pq
+q
+In a number of cases, candidates covered some of part (ii) under part (i) credit was given in these
+cases. In general candidates were able to score well on the bookwork required for part (iii) although
+candidates were less successful in tackling the final part.
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 7
