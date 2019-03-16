@@ -1,0 +1,130 @@
+4 An investor believes that the price of gold increases when the volatility of the equities
+market is high and decreases when the volatility is low. The investor therefore wishes
+to model the price of gold Xt, as an Itô process defined by dXt = VtdBt + 2
+Vt dt , where
+Bt is standard Brownian motion and Vt is a measure of market volatility calculated
+from the equity price information available at time t.
+(i) Comment briefly on the suitability of this model, mentioning in particular its
+behaviour when Vt is large and when Vt is small. [2]
+(ii) (a) State Itôs Lemma.
+(b) Use Itôs Lemma to find an expression for dMt, where Mt = e 2Xt  .
+(c) Deduce that Mt is a martingale. [5]
+(iii) Jensens Inequality implies that
+e 2E(Xt ) E(e 2Xt ).   
+Show that E(Xt )  X0 whatever the value of X0 and comment briefly again
+on the suitability of the model. [2]
+[Total 9]
+103 S20024
+5 (i) The classification of stochastic models according to discrete or continuous
+time variable, discrete or continuous state space gives rise to a four-way
+classification. Give four examples, one of each type, of stochastic models
+which may be used to model observed processes. [2]
+(ii) For each of the following observed processes, identify a type of model which
+could be used to model the process, stating which features of the process lead
+you to make this choice:
+(a) a monthly index of food prices
+(b) an index of prices of shares on the London Stock Exchange, constantly
+updated
+(c) the status (active, retired, dead) of a member of a pension scheme [3]
+(iii) (a) Discuss briefly the importance of model verification.
+(b) A simple random walk model, whose single parameter  is the
+probability of an upwards jump, is to be fitted to a set of observations
+{x1, x2, , xn} which have the property that |xi+1  xi| = 1 for each 1 
+ i
+< n. Write down the estimate for the parameter of the model and
+describe one test which you would use in the process of model
+verification. [5]
+[Total 10]
+
+
+%%%%%%%%%%%%%%%%%%
+
+4 (i) When volatility is high, dXt is strongly upwards; when volatility is low, dXt is
+close to zero.
+The first of these fits the assumptions, whereas for the second something more
+negative would be preferable. (It looks as though the process X has more
+opportunity to increase than to decrease.)
+(ii) (a) Itô (time-independent case): if dXt = Ytdt + ZtdBt then
+df(Xt) =
+2
+2
+( t t t ) ½ 2 t .
+df Y dt Z dB d f Z dt
+dx dx
+  or simply
+’( ) ½ ’’( )( )2 , t t t t f X dX  f X dX with an explanation of what is meant by (dXt)2.
+Equally acceptable is the time-dependent version:
+df(Xt,t) =
+2
+2
+2 ( t t t ) ½ t .
+f dt f Y dt Z dB f Z dt
+t x x
+  
+  
+  
+(b) Here
+df(Xt) = f (Xt )dXt ½ f (Xt )(dXt )2
+= f (Xt )[YtdBt Yt2dt]½ f (Xt )Yt2dt
+= f (Xt )YtdBt Yt2[ f (Xt ) ½ f (Xt )]dt.
+In this instance, df(Xt) = 2 2Xt .
+e VtdBt 
+
+(c) This is a martingale by the disappearance of the dt term, as E(dBt | Ft) = 0.
+Alternatively,
+e 2XT  = 2 0 2
+0
+2 t ,
+X T X
+e e VtdBt  
+ 
+which is a martingale.
+(iii) 2 0 2 2 ( )
+= ( 0 ) = ( ) = ( t ) t . X X EX
+e E M E Mt E e e     It follows that E(Xt )  X0 ,
+whatever the initial state.
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 6
+This confirms the initial suggestion that downward movements are too
+unlikely in comparison to upward ones.
+The question generally showed good attempts, with a variety of different but correct versions
+of Itô’s Lemma being given. The only real problem evident here was in part (iv), where many
+candidates failed to use the given inequality to prove the point.
+5 (i) Discrete state space, discrete time: Markov chain, simple random walk,
+anything like that;
+Discrete state space, continuous time: Poisson process, Markov jump process;
+Continuous state space, discrete time: time series, general random walk;
+Continuous state space, continuous time: Itô process, Brownian motion, etc.
+(ii) (a) by definition, is monthly. Therefore a continuous time variable is not
+appropriate. Something like a time series would do, containing an element of
+Autoregression.
+(b) functions in continuous time; Brownian motion, Geometric BM or any
+kind of diffusion or Itô process would be a suitable candidate.
+(c) has a discrete state space. It would be possible to review the members
+status only once a year, say in which case a Markov chain would fit, but in the
+absence of a remark about frequency of membership status review a
+continuous-time model would seem more appropriate; a Markov jump process
+is what we might look for.
+(iii) (a) Once a model has been decided upon, parameters may be estimated by
+standard methods. But it is necessary to check that the model, with
+parameters given by their estimated values, has sample paths which
+resemble the data actually observed, otherwise incorrect inferences can
+be drawn.
+(b) Let yi = xi  xi1 = xi and let nu be the number of time yi = 1. The
+parameter,  (or p) is the probability of an up-jump, estimated as
+ = nu / (n 1).
+We need to check that the yi form a sequence of i.i.d. variables. A test
+based on chi-squared is not appropriate except as indicated below.
+The test to apply is one which determines whether there is significant
+clustering of the +1s and the 1s, as opposed to their being randomly
+scattered through the sample: the runs test on the yi, or equivalently the
+turning points test on the xi, would be fine; a test based on the sample
+autocorrelation function or a contingency table (yi = 1 or +1 as the
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 7
+row labels, yi+1 = 1 or +1 as the column labels) would also be
+acceptable.
+In part (i) many candidates gave specific examples of observable processes, rather than
+describing the stochastic models themselves as requested in the question; some credit was
+however given for these cases. Part (ii) and (iii) (a) generally had good answers. In part
+(iii) (b) many candidates incorrectly suggested that a chi-squared test should be used,
