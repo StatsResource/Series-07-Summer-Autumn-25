@@ -1,0 +1,118 @@
+
+10 The ticket office at a train station has a single ticket machine that is used by travellers
+to purchase tickets.
+The machine has a tendency to break down, at which point it must be repaired. The
+time until breakdown and the time required to effect repairs both follow the
+exponential distribution.
+Let P1i(t), i = 0, 1, be the probability that at time t (t > 0) there are i ticket machines
+working at the ticket office, given that the ticket machine is working at time t = 0.
+(i) Derive the Kolmogorov forward differential equations for P1i(t) i = 0, 1 in
+terms of:
+  , where 1/ is the mean time to breakdown for a machine; and
+  ρ, where 1/ρ is the mean time to repair a machine [3]
+(ii) Show that     P10 t = 1 e t    
+
+
+deduce the value of P11(t). [4]
+(iii) The station manager is considering adding a second identical ticket machine,
+though there is only one repair team to work on the machines in the event that
+both are out of action simultaneously. Assuming that a second machine is
+added and operates independently of the first one:
+(a) Write down the generator matrix of the Markov jump process Xt which
+counts the number of working ticket machines at time t.
+(b) Derive the Kolmogorov forward differential equations for pi(t), i = 0,
+1, 2, the probability that i ticket machines are working.
+(c) Given that, for some t,
+2
+0 2 2
+( ) = 2 ,
+2 2
+p t 
+  
+2
+1 2 2 2 2 2
+( ) = 2 and ( ) = ,
+2 2 2 2
+p t p t  
+     
+show that i ( )
+d p t
+dt
+=0 for i = 0, 1, 2.
+(d) State what conclusions you draw from part (c). [6]
+[Total 13]
+
+
+10 (i) P10 t  h = 1 h.P10 t   .h.P11 t 
+ 10   = . 10   . 11   d P t P t P t
+dt   (1)
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 11
+and
+P11 t  h = .h.P10 t   1 .h.P11 t 
+ 11   = . 10   . 11   d P t P t P t
+dt   (2)
+[(2) also follows from the fact that P10 t   P11 t  =1.]
+(ii) P10 t   P11 t  =1
+so from (1) d P10 t   .P10 t  =
+dt   
+
+     
+10 = . d e tP t e t C
+dt
+ 
+ 
+      
+10 = . . P t e t C e t    
+
+
+     P10 t .1 e t    
+ 
+
+since P10(0) = 0.
+[Alternatively, instead of solving the DE, just verify that the function
+proposed as the solution does indeed satisfy the DE and also check that the
+value is correct at t = 0.]
+Therefore
+   
+ 
+11( ) =1 . 1 =
+t
+P t e t e
+ 
+     
+ 
+ 
+.
+(iii) (a) The generator matrix is now
+0
+( )
+0 2 2
+   
+         
+    	 
+
+(b) Hence the Forward Equations are
+0   = . 0   . 1   d p t p t p t
+dt  
+1   = . 0   1   2. . 2 ( ) d p t p p t p t
+dt     
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 12
+2   = . 1   2 . 2   d p t p t p t
+dt   
+(c) Simply substituting in the suggested values gives the required result.
+(d) The implication is that the given distribution is stationary. By the
+standard properties of Markov processes, it follows that it is the
+equilibrium distribution, so that the long-term probabilities of being in
+each of the three states are known.
+Answers to this question were on the whole disappointing.
+Problems in part (i) included transposing the parameters. Marks were available for deriving
+p11 from p10 (using the information given in the question) even where p10 could not be
+correctly identified.
+Only a small proportion of candidates managed to provide a solution for the differential
+equation in part (ii).
+Better answers were given for the generator matrix in part (iii).
+Candidates that gave a generator matrix by and large were able to score marks by applying
+their matrix to produce the forward equations. Very few candidates provided any
+conclusions under part (iv).
