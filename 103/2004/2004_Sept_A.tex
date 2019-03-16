@@ -1,0 +1,160 @@
+
+1 A sequence x1, x2, , xn of observations is provided, each of which takes one of a
+finite set, S, of possible values. A researcher wishes to fit a discrete-time Markov
+chain model to these data.
+(i) Write down estimates of the transition probabilities of the Markov chain. [1]
+(ii) Outline the purpose of model validation. [1]
+(iii) Describe the role of simulation in sensitivity analysis in the given context. [3]
+[Total 5]
+2 A person who catches a particular virus for the first time immediately falls ill with
+Disease A. The illness lasts for a random length of time, whose mean depends on the
+age of the person. Having recovered from Disease A, the person will not fall ill with it
+again. However, if the person catches the same virus again after the age of 18, the
+result will be Disease B, which will affect the person for an average of three months
+regardless of age. After suffering from Disease B the person will not catch the virus
+again.
+It is proposed that a continuous-time Markov model can be used to model the person s
+medical history, with states:
+0: not currently ill with Disease A or Disease B
+1: currently ill with Disease A
+2: currently ill with Disease B
+(i) Explain why the proposed state space is inadequate and suggest an enlarged
+state space which can support a Markov model. [2]
+(ii) Draw a diagram to illustrate the possible transitions. [2]
+(iii) State, with reasons, whether a time-homogeneous or a time-inhomogeneous
+model is more suitable to model the medical history of a single person. [1]
+(iv) Explain why a national medical service might find that a time-homogeneous
+model was just as good as a time-inhomogeneous one for planning the
+provision of treatment for Diseases A and B. [1]
+[Total 6]
+103 S2004 3 PLEASE TURN OVER
+3 You are given a stream of standard identically and independently distributed uniform
+[0,1] random variables U1, U2, U3, ..
+Describe how to use this random variable stream to generate random variates with the
+following distributions:
+(i) The discrete distribution with possible values A, B and C with respective
+probabilities 1/5, 1/4 and 11/20. [2]
+(ii) The continuous distribution with probability density function
+(10 ) /18 for 4 10
+( ) =
+0 otherwise
+x x
+f x [3]
+(iii) The continuous distribution function with probability density function
+2 2
+sin for 0
+( ) =
+0 otherwise
+x x
+f x [3]
+[Hint: Use the Acceptance-Rejection method.]
+[Total 8]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Faculty of Actuaries Institute of Actuaries
+EXAMINATIONS
+September 2004
+Subject 103 Stochastic Modelling
+EXAMINERS REPORT
+Faculty of Actuaries
+Institute of Actuaries
+Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+Page 2
+he examiners were pleased to note that the overall quality of answers on this
+final sitting of subject 103 was high and that many of the candidates
+demonstrated a good knowledge of the principles and practice of stochastic
+modelling. As always, credit was awarded for comments which showed that
+candidates had an understanding of the topic covered in a question, even if the
+calculations gave the wrong answer due to some mathematical error.
+Question 7 was particularly well answered, with Questions 2 and 4 not far
+behind. Questions 6 and 10 had the lowest proportion of good answers; it is
+possible that time pressure played a role in the case of Question 10.
+1 (i) Let nij denote the number of direct transitions from state i to state j, with ni+
+the total number of transitions out of state i. Then pij nij / ni .
+(ii) Model fitting aims to find the best-fitting model in a given class. But it is
+conceivable that even the best-fitting model in the class does not fit very well.
+Model validation is a set of procedures to test the adequacy of the fit.
+(iii) Sensitivity analysis is part of model validation. The purpose is to determine
+whether the behaviour of the fitted model would be substantially different if
+the parameter values were slightly different from the estimates already
+obtained.
+The technique involves simulating the fitted process a large number of times,
+using several simulations for each of a number of slightly different parameter
+values, then examining the output of the simulation to attempt to identify
+systematic differences.
+It is important that the same sequence of random numbers be used in each of
+the sets of simulations to ensure comparability.
+Many candidates failed to mention the importance of using the same sequence
+of pseudo-random numbers. Apart from that, most answers showed good
+knowledge of the principles of modelling.
+2 (i) It is inadequate because someone who has never suffered from disease A or B
+is not in the same position as someone who has suffered from one or both in
+the past but is currently healthy.
+The state space should be extended by splitting state 0 into 3: 0: Has never
+suffered from A or B , A: Has suffered from A but is now healthy ,
+AB: Has suffered both A and B but is now healthy.
+(ii)
+0
+1
+A
+2
+AB
+Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+Page 3
+(iii) Only a time-inhomogeneous model can properly reflect the dependence of
+both the recovery rate for A and the infection rate for B on the age of the
+person.
+(iv) If, in a population taken as a whole, the number of people in each age group is
+roughly constant over time, then the age-dependent transition rates of the
+individuals who make up the population can be averaged out to give a timehomogeneous
+model which works perfectly adequately given that national
+medical services are generally only concerned with total numbers falling ill.
+This question was answered well in general. Where candidates lost marks it
+was often due to mis-specifying the additional states in part (i). Splitting state
+A into Has recovered from Disease A and is aged below 18 and Has
+recovered from Disease A and is aged 18 or more is reasonable when
+modelling an entire population, but does not lead to a time-homogeneous
+Markov model when applied to a single individual, since one s 18th birthday
+does not occur at a random time. However, answers along these lines with
+good explanations were given full marks.
+3 (i) Set Xi as follows:
+if 0 1/ 5
+if 1/ 5 9 / 20
+if 9 / 20
+i
+i i
+i
+A U
+X B U
+C U
+(ii) Use the inverse transformation method.
+The distribution function is
+4
+( ) 10
+18
+x t F x dt
+2 10
+1
+36
+x
+for 4 x 10 .
+Solving the equation gives F 1(u) 10 6 1 u
+So we can set Xi 10 6 1 Ui
+or alternatively we could use Xi 10 6 Ui
+(iii) Use acceptance-rejection method:
+Let V1 = U1 , so that V1 is uniformly distributed on [0, ] and has density
+function g(x) = 1/ over that range.
+We define
+Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+Page 4
+2
+0 0
+sup ( ) / ( ) sup 2sin 2.
+x x
+C f x g x x
+If U2 < sin2 V1 let X1 = V1; otherwise reject this value and select a new pair
+U1, U2. Repeat for other Xi
+Answers to parts (i) and (ii) were generally good. For part (iii) many
+candidates only described the general theory without specifying g(x) or
+calculating the constant C.
