@@ -1,0 +1,110 @@
+10 (i) Define a geometric Brownian motion and write down a stochastic differential
+equation which it satisfies. [2]
+(ii) Using the substitution = t  
+Yt e Xt c 
+ , or otherwise, find a solution for the
+stochastic differential equation
+dXt = (Xt  c)dt  dBt
+with the initial condition X0 = x0, where Bt is standard Brownian motion. [5]
+(iii) Write down a condition satisfied by the stationary density function, 
+(x), of a
+diffusion process, assuming that such a stationary density exists. [2]
+(iv) Verify that the stationary distribution of the diffusion process in (i) is Normal,
+and identify the mean and variance. [2]
+(v) When the equation in (iii) is applied to the geometric Brownian motion, the
+general solution is found to be
+(x) A Bxk ,
+x   
+where k = 2 + 2/2 and A and B are arbitrary constants. Show that there is
+no probability density function 
+(x) which solves the equation in (iii) in the
+case of the geometric Brownian motion and explain the implication of this. [2]
+[Total 13]
+103 S2003—8
+
+
+10 (i) A geometric Brownian motion can be defined as a process
+St S0 exp( t Bt ) , where Bt is a standard Brownian motion.
+It satisfies the SDE dSt Stdt StdBt .
+Alternatively, use the definition St S0 exp( t Bt ) , which satisfies the SDE
+1 2
+t 2 t t t dS S dt S dB .
+(ii) We use the Itô formula (we must have the form where F is a function of t as
+well as x):
+dF t, Xt 1 2
+2 = Ft t, Xt Fx t, Xt dt Fx t, Xt dXt
+Let = t ( ) ,
+Yt e Xt c F t Xt . Then Y(0) = x0 and
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 12
+= t ( )
+dYt d e Xt c
+= t [ ] t [ ] t
+e Xt c e Xt c dt e dBt
+= t
+e dBt
+Hence 0
+0
+=
+t
+s
+s
+s
+Y t x c e dB
+and so 0
+0
+= ( )
+t
+t t s
+t s
+s
+X c e x c e e dB .
+(iii) The required condition for the stationary density of the diffusion Y solving
+dYt (Yt )dt (Yt )dBt , from the Core Reading, is
+d
+dy
+[ (y) (y)] = ½
+2
+2
+d
+dy
+[ 2(y) (y)]
+(iv) Two ways to do this. From (i),
+2
+2 2 ( ) 2
+0 0 0
+~ ( ( ), ) = ( ), 1
+2
+t t t s t t
+Xt N c e x c e ds N c e x c e
+The limiting distribution, as t , is N(c, 2/(2 )). A limiting distribution is
+always stationary.
+Alternatively, in this instance we have (x) = (x c), (x) = , so the
+condition given in (ii) is that
+1 2
+2
+(x) (x c) (x) (x) .
+The solution to this DE is
+2
+2
+( )
+( ) .exp
+x c
+x const ,
+which is the density function of N(c, 2/(2 )).
+(v) A function of the form Axb for all x > 0 cannot integrate to 1, no matter what
+the values of A and b. This means that there is no stationary density function
+for the geometric Brownian motion.
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 13
+It would be surprising if there had been: it is well known that Brownian
+motion is non-stationary, and therefore that geometric Brownian motion is
+also a non-stationary process, so cannot possess a stationary density.
+Marks were poor for Question 10. Candidates should note that the reference in part (iv) of the
+question to "the equation in (i)" was incorrect and should have read "the equation in (ii)". Whilst at
+least some candidates were still able to complete this part of the question, allowance was made in the
+marking of scripts for this error.
+It seemed that candidates had not committed to memory the formula for the equilibrium density of a
+diffusion process, presumably because it had not been asked before.
+
+
