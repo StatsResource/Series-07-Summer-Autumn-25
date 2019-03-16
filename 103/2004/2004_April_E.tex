@@ -1,0 +1,88 @@
+
+9 A water company is developing a time series model to model the supply of water, Xt,
+in its reservoirs at the end of month t. The model takes the form
+Xt = Xt 1 Rt Dt ,
+where Rt represents rainfall in month t and Dt represents demand in month t. Rt and
+Dt are themselves modelled by
+= ( 1 1)
+=
+t t t t t
+t t
+R R e
+D R
+where , , are positive constants, t is a deterministic function of time and
+{et: t = 1, 2, } is a sequence of independent Normal random variables with mean 0
+and variance 2.
+(i) (a) Comment on whether it is reasonable to assume that demand is
+negatively related to rainfall.
+It is suggested that t should be cyclical with period 12, i.e. that
+t+12 = 12 for all t. Comment on whether this suggestion is sensible.
+[2]
+(ii) State, with reasons, whether Rt is stationary. [1]
+(iii) (a) Suppose that R0 is Normally distributed with mean 0 and variance 2
+R.
+Show that Rt is also Normally distributed for each t > 0 and derive an
+expression for its mean.
+(b) Calculate a value of 2
+R which ensures that Var(Rt) = 2
+R for all t. [4]
+(iv) Given a sequence of observations R1, , R120, D1, , D120 covering 10 years
+of data, suggest simple estimators for t (1 t 12), , and . [4]
+(v) Assuming that the values of the parameters are known exactly, and that R120,
+D120 and X120 are known, derive an estimate x120 (1) for the supply of water at
+the end of month 121 and give an expression forVar(X121 x120 (1)) . [3]
+[Total 14]
+103 A2004 8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+9 (i) (a) In one sense it is reasonable, because in the absence of rainfall
+gardeners might increase their demand for water. But the relationship
+does not work in reverse: in particularly rainy weather the demand is
+likely to be no less than in normally rainy weather.
+(b) Yes. It reflects the seasonal pattern of rainfall.
+(ii) No. It satisfies an equation which is explicitly dependent on t, so it will not be
+stationary unless all the t are equal to one another. (Arguments based on
+whether | | > 1 are only relevant if all the t are equal.)
+(iii) (a) Normality: by induction. If Rt 1 and et are Normal, then Rt must be
+Normal, as it is a linear combination of these two. Since R0 is Normal,
+normality follows for all t.
+E(Rt ) t [E(Rt 1) t 1] . This can be iterated backwards to
+zero, showing that E(Rt ) t .
+An alternative approach is to solve explicitly for Rt and read off the
+answers from there.
+1
+0 0
+0
+( )
+t
+t k
+t t t k
+k
+R R e
+Now we can see that Rt is a linear combination of Normal random
+variables with some constants, hence Normally distributed, and that the
+mean is t.
+(b) Var(Rt) is equal to 2 Var(Rt 1) + 2. If Rr has constant variance R
+2
+then R
+2 = 2
+R
+2 + 2, implying that R
+2 = 2 / (1 2).
+If instead the above expression for Rt is used, we can see that
+1 2
+2 2 2 2 2 2 2
+2 2
+0
+1 1
+, so that
+1 1
+t t
+t k
+R R R t
+k
+(iv) t represents the mean rainfall in one particular month of the year. Estimate
+this by calculating the average rainfall in that month over the 10-year period,
+12 24 108
+1
+( )
