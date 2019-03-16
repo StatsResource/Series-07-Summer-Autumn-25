@@ -1,0 +1,169 @@
+
+1 The stochastic differential equation for geometric Brownian motion is given by
+dXt = Xt dt + Xt dBt
+where Bt is a standard Brownian motion. Show that the solution to the differential
+equation which also satisfies
+t0 X x is
+0
+1 2
+2 0 Xt x exp Bt Bt t t
+for t t0. [4]
+2 A Box-Jenkins model-fitting procedure suggests that the best fitting model for a set of
+normalised share price data x1, , xn is ARMA(1,2), with equation
+Xt 0.63Xt 1 et 0.45et 1 0.34et 2 ,
+where {e1, e2, } is a sequence of uncorrelated, zero-mean random variables with
+variance 2.
+(i) Determine whether the model is stationary and invertible. [2]
+(ii) Calculate 0, 1, 2, the autocovariance function of the fitted model at lags 0, 1,
+and 2, in terms of 2. [4]
+[Total 6]
+103 A2004 3 PLEASE TURN OVER
+3 The number, N(t), of members of a pension scheme who are receiving benefits at time
+t, is subject to change of two kinds:
+it increases by 1 when an active member reaches retirement age
+it decreases by 1 when a retired member dies
+Assume that retirements occur according to a Poisson process with rate and that
+each retired member, independently, has a probability dt of dying within the time
+interval (t, t + dt).
+(i) Explain why, under these assumptions, N(t) is a Markov jump process. [1]
+(ii) Write down the transition rates of N(t). [1]
+(iii) Using the notation pn(t) = P(N(t) = n), obtain a differential equation satisfied
+by pn(t). [2]
+(iv) Verify that one solution of the equation in (iii) is given by
+1 /
+( ) = , = 0,1,...
+!
+n
+pn t e n
+n
+[2]
+(v) State what conclusions can be drawn from (iv). [1]
+[Total 7]
+
+%%%%%%%%%%%%%
+Faculty of Actuaries Institute of Actuaries
+EXAMINATIONS
+April 2004
+Subject 103 Stochastic Modelling
+EXAMINERS REPORT
+Faculty of Actuaries
+Institute of Actuaries
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+1 First method (direct method):
+Let f(Xt) = ln Xt . Using Itô s Lemma we have
+df = 1 2 2
+2 f Xtdt XtdBt f ( Xt )dt
+= 1 2 2
+2 2
+1 1 1
+t . t t t
+t t t
+X X dt X dB
+X X X
+= 1 2
+2 dt dBt
+Integrating from t0 to t we have
+0 0
+1 2
+2 0 ln Xt ln Xt t t Bt Bt
+and using the initial condition we get
+0
+1 2
+2 0 Xt x exp Bt Bt t t as required.
+Alternative method (working backwards from the solution)
+Let
+0
+1 2
+2 0 f (t, Bt ) x exp Bt Bt t t . Then
+2
+2 2
+2
+1
+, ,
+2
+f f f
+f f f
+t B B
+, so that
+2 2 1 1
+2 2 t t t t t t t t df f dt f dB f dt f dt f dB
+This implies that Xt = f(t,Bt) satisfies the stochastic differential equation.
+We need to verify that the initial condition holds for this solution. (It clearly does, but
+the check needs to be performed.)
+Considering that this stochastic differential equation is the most frequently used of all,
+this question was on average very poorly answered.
+2 (i) The solution to 1 0.63z 0 is z = 1/0.63, which is greater than 1. Therefore
+the model is stationary.
+For invertibility, we should check that the roots of 1 0.45z 0.34z2 0 are
+outside the unit circle. They are ( 0.45 1.25)/( 2*0.34) = 2.5 or 1.18, both
+OK.
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+Page 3
+(ii) Let 0 = Cov(Xt, et), 1 = Cov(Xt, et 1), 2 = Cov(Xt, et 2). Then
+0 = 0.63 1 + 0 + 0.45 1 0.34 2
+1 = 0.63 0 + 0.45 0 0.34 1
+2 = 0.63 1 0.34 0
+0 = 2 (this may be regarded as obvious and not stated explicitly)
+1 = 0.63 0 + 0.45 2 = 1.08 2
+2 = 0.63 1 0.34 2 = 0.3404 2
+An alternative expression for 0 may be obtained using
+0 1 1 2
+2 2 2 2
+0 0 1
+Var(0.63 0.45 0.34 )
+0.63 (1 0.45 0.34 ) 2 0.63[0.45 0.34 ]
+t t t t X e e e
+which removes the need to calculate 2.
+Having derived the equations, we need to solve them.
+1 = 0.63 0 + 0.0828 2
+0 = 0.63(0.63 0 + 0.0828 2) + 1.370 2 = 0.3969 0 + 1.422 2,
+implying that
+0 = 2.358 2, 1 = 1.5684 2, 2 = 0.6481 2.
+Candidates were often unsure of the procedure required to derive the equations for the k but
+did rather better at solving them. In particular, many candidates did not take correct
+account of the relationship between Xt and past values of et. Marks were awarded for correct
+methodology when deriving the solutions, even if the equations being solved were not the
+right ones.
+3 (i) It is a jump process because it remains in one state for a period of time and
+then jumps to another state, or alternatively because it is a continuous-time
+process with a discrete state space.
+Given the entire past history of the process, the probability of a member
+retiring and beginning to receive benefits in the next dt interval is dt, i.e.
+independent of the past. The same applies to the probability of death between
+times t and t + dt: it is dependent only on the state (the number of retired
+members) at time t, and not on anything which happened before that. Thus the
+Markov property holds.
+(ii) n,n 1 , n,n 1 n
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+(iii) From the Kolomogorov Forward equations we have that
+, 1 , 1 1, 1 1, 1
+1 1
+( )
+( ) ( 1)
+n
+n n n n n n n n n n n
+n n n
+dp
+p p p
+dt
+n p n p p
+,.
+(iv) The suggested form of pn does not depend on t, so its derivative is zero. The
+RHS is
+1 1
+( ) ( 1) 0
+! ( 1)! ( 1)!
+n n n
+n e n e e
+n n n
+,
+where = / .
+(v) The implication is that Poisson( ) is a stationary distribution for the Markov
+jump process. (In this case it is also a limiting distribution, but that is not
+deducible from the Core Reading.)
+Very few candidates suggested that the rate at which deaths take place should be
+proportional to the number of retired scheme members.
+In (iv) examiners awarded marks for correct attempts to carry out the verification procedure
+even when the differential equation in (iii) was wrong.
+In (v), terms such as limiting distribution or equilibrium distribution were given full
+credit.
