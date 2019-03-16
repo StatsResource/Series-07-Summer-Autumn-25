@@ -1,0 +1,212 @@
+
+4 (i) Define a standard Brownian motion {Bt t 0}. [2]
+(ii) Assume that St , the price of a share at time t , satisfies the stochastic
+differential equation
+dSt = St dt St dBt , t 0.
+Solve the equation for St in terms of S0 and Bt . [3]
+(iii) For the values = 20% and =15% on an annual basis, calculate the
+probability that the price of the share will exceed 120 in three months time if
+the current price of the share is 96. [4]
+[Total 9]
+103 S2004 4
+5 A bag contains N balls, all green or red. At each stage a ball is taken out of the bag at
+random and is replaced by a ball of the other colour. Let Xn denote the number of
+green balls in the bag after n stages.
+(i) Explain why Xn, n 0 is a discrete time Markov chain with state space
+S = {0, 1, 2, .., N} and with transition probabilities
+i,i 1 =
+N i
+p
+N
+and i,i 1 =
+i
+p
+N
+[2]
+(ii) Show that the Markov chain Xn, n 0 is irreducible and periodic and state its
+period. [3]
+(iii) Show that for this process the stationary distribution = ( 0, 1, 2, .., N)
+is given by
+1
+=
+2 i N
+N
+i
+for i = 0, 1, 2, ., N. [4]
+(iv) State, with a reason, whether it is the case that
+lim ( n = | 0 = 0) = j .
+n
+P X j X [1]
+[Total 10]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+END OF PAPER
+4 (i) A standard Brownian motion {Bt} is defined by the following properties:
+B(0) 0 and Bt has independent increments; Bt Bs is independent of
+Bu for 0 u s and s t .
+Bt has stationary and Gaussian increments; Bt Bs N(0 t s) .
+Bt has continuous sample paths, i.e. t Bt is continuous.
+(ii) Using Itô s Lemma gives
+2
+2
+2
+1 1 1
+(log ) ( )
+2
+2
+t t
+t t
+t
+d S dS dSt
+S S
+dt dB dt
+This implies that
+2
+log log 0
+2 St S t Bt
+or, finally,
+2
+2
+0
+t Bt
+St S e
+(iii) We have
+Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+Page 5
+2
+2
+0
+2
+2
+log
+2
+1
+log
+2
+log
+1
+t t
+t
+x
+y
+x
+P S x S y P B t
+y
+x
+P B t
+y
+t
+t
+Substituting the values x 120 y 96 0 2 0 15 and t 0 25 years
+above we find that the answer is
+1 (2.3461) 1 0 9905 0 0095.
+The calculations in parts (ii) and (iii) were well done. The definition in part
+(i) caused some problems: it is necessary to mention the stationary,
+independent increments property; then either of the two remaining properties
+(continuous sample paths, normally distributed increments) implies the other.
+5 (i) The Markov property is clear: the chain jumps either up or down by 1, with
+probabilities depending only on the current state, not the past history.
+P(Xn 1 i 1| Xn i) is the probability that the (n+1)th ball selected is red,
+which is just 1/N of the number of red balls at time n, which is N i.
+(ii) From any state i it is possible to reach any other state j in just |j i| steps,
+either all upwards or all downwards. This means that the chain is irreducible.
+Every transition takes the chain from an even state to an odd one or vice versa,
+which implies that the period must be an even number.
+On the other hand, starting from state 0 it is possible to return to 0 in two
+steps. Therefore state 0 has period 2 and, by irreducibility, all states have
+period 2.
+(iii) To find the stationary distribution we can use the relationship suggested by the
+Detailed Balance Equations:
+1
+1
+i i
+N i i
+N N
+for i = 0, 1, 2, ., N 1.
+Thus we get the recursive relationship
+1 1 i i
+N i
+i
+for i = 0, 1, 2, ., N 1
+Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+Page 6
+Starting with i = 0 and working forwards we get
+1 0 1
+N
+2 1
+1
+2
+N
+= 0
+( 1)
+(2)(1)
+N N
+3 2
+2
+3
+N
+= 0
+( 1)( 2)
+(3)(2)(1)
+N N N
+and in general
+i = 0
+( 1)( 2) ( 1)
+( 1)( 2) (2)(1)
+N N N N i
+i i i
+= 0
+!
+( )! !
+N
+N i i
+= 0
+N
+i
+Alternatively, write down the transition matrix P and use the equation TP =
+T to obtain
+1 0 1 0
+1
+N
+N
+0 2 1 2 0
+2 ( 1)
+2
+N N
+N
+1 3 2 3 0
+1 3 ( 1)( 2)
+,
+3!
+N N N N
+N N
+etc.
+To find 0, we use the fact that 0 + 1 + 2 + ..+ N = 1
+i.e.
+1 1
+1
+0
+1 0
+! ! 1
+1 2
+( )! ! ! 2
+N N
+N
+N
+i i
+N N
+N i i i
+Therefore the stationary distribution = ( 0, 1, 2, .., N) is given by
+1
+2 i N
+N
+i
+for i = 0, 1, 2, ., N
+(iv) P(Xn j | X0 0) does not converge, being alternately zero and non-zero,
+since X is periodic.
+The derivation of the stationary distribution in part (iii) caused difficulties
+with many candidates, but otherwise candidates showed a good understanding
+of discrete-time Markov chains.
+Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+Page 7
