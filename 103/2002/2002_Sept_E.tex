@@ -1,0 +1,69 @@
+
+9 Let {xt: 1 
+ t 
+ n} be a time series to which an ARMA(1, 1) model is to be fitted.
+(i) Write down the defining equation of an ARMA(1, 1) process, identifying the
+parameters. [2]
+(ii) (a) Outline the Method of Moments parameter estimation technique.
+(b) State the assumptions underlying the Maximum Likelihood parameter
+estimation technique.
+(c) Describe briefly the technique known as backforecasting and explain
+why it, or something similar, is necessary in this case. [5]
+(iii) The model fitted to the data is
+xt = 5.67 + 0.61xt1 + et 0.23et1
+The most recently observed value in the series is x20 = 8.2, with estimated
+residual e20 = 1.38.
+(a) Evaluate estimates x20 (1) and x20 (2) for x21 and x22.
+(b) The simplest form of the method of exponential smoothing used at
+time 19 gave a forecast for x20 of 8.37. Assuming the smoothing
+parameter is equal to 0.2, find the forecast of x21.
+(c) Give an example of a circumstance in which a form of exponential
+smoothing might be expected to outperform Box-Jenkins forecasting in
+the prediction of future values of the time series. [5]
+[Total 12]
+103 S20028
+
+
+
+
+
+9 (i) Xt =  + 
+(Xt1  ) + et + et1 is the equation.
+The parameters are 
+ (the autoregressive parameter),  (the moving average
+parameter),  (the mean level) and 	 (the innovation standard deviation).
+(ii) (a) Calculate theoretical ACF 
+1, 
+2 of ARMA(1, 1) in terms of 
+ and .
+Find sample ACF r1, r2 from the data. The required estimates are the
+values of 
+ and  which ensure that 
+1 = r1 and 
+2 = r2.
+The value of 	
+2 is estimated using for example the calculated value of
+0 and the sample variance.
+(b) The assumptions are that the en are independent and Normally
+distributed.
+(c) MLE in this case tries to minimise 2
+et . Now et can be expressed as
+a function of xt, xt1 and et1. et1 is unknown, but can be expressed as
+a function of xt1, xt2 and et2, etc. We need to estimate a suitable
+value of e0.
+This is done iteratively: assume that e0 = 0 and estimate parameters on
+that basis; then use forecasting techniques on the time-reversed process
+{xn, xn1, , x1} to gain a more accurate estimate of e0; repeat this
+process until everything converges.
+(iii) (a) x20 (1) = 5.67 + 0.61(8.2) + 0  0.23(1.38) = 10.99.
+x20 (2) = 5.67 + 0.61(10.99) + 0  0 = 12.37.
+(b) For exponential smoothing the equation is
+x20 (1) = x19 (1)  (x20  x19 (1)) = 8.37 + 0.2(0.17) = 8.34.
+(c) A variety of exponential smoothing might be better if the mean
+changes by some means other than a linear trend, or if there is
+multiplicative seasonal variation.
+In part (i) a number of candidates omitted σ from the list of parameters. Part (ii) (a) showed
+some good answers, however in most cases insufficient details was provided to earn full
+marks. Part (ii) (c) was very poorly answered, with very few candidates showing that they
+understood the concept of backforecasting. In part (iii) most candidates understood what
+was generally required, though in some cases there were errors in applying the formulae.
