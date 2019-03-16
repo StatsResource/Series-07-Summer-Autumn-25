@@ -1,0 +1,67 @@
+
+
+8 An analyst is investigating the extent to which the price of a stock at the beginning
+and end of a time interval can be used to provide information about its price during
+the interval. The model used is
+St = S0 + t + Bt,
+where Bt is a standard Brownian motion. The analyst wishes to investigate the
+difference between St and the price St which would be predicted given only S0 and
+ST, given by
+St = (T t)S0 tST , 0 t T.
+T
+ 
+ 
+(i) Write down E(St  S0 ), Var(St  S0), E(ST St ),  Var(ST St) and
+Cov(St  S0, ST  St), for 0 
+ t 
+ T. [3]
+(ii) Calculate the expectation and variance of St  St . [4]
+(iii) Find the value of t  [0, T] where Var(St  St ) is greatest. Comment on your
+answer. [2]
+(iv) Give two reasons why the model
+St = S0exp(t + Bt)
+might be more suitable than the one used by the analyst and discuss whether
+the results of (iii) might have been substantially different if the analyst had
+used this model in the first place. [3]
+[Total 12]
+103 S20027 PLEASE TURN OVER
+
+
+%%%%%%%%%%%%
+
+8 (i) E(St  S0 ) = t, Var(St  S0 ) =	
+2t.
+E(ST St )  = (T  t), Var(ST St )  = 	2(T  t).
+Cov(St  S0, ST  St) = 0, because of the independent increment property of
+Brownian motion.
+(ii) The expectation is t  (t/T)T = 0.
+Var(St  St ) = Var ( t 0 ) ( T t )
+T t S S t S S
+T T
+    
+      
+   
+=
+2 2 2
+T t 2t t 2 (T t) = t(T t) .
+T T T
+      
+       
+ 	  	
+(iii) The maximum of t(T  t) is attained at t = ½T.
+This is not surprising. The graph of St  St against t is tied down at the ends,
+as the function is constrained to be equal to zero. The greatest scope for
+variation is bound to be in the middle.
+(iv) Two possible reasons might be that a Brownian motion can become negative,
+which a stock price cannot, and that fluctuations in the value of a stock price
+are usually proportional to the price. Other reasons could also apply.
+Under the revised model ln(St) has the same structure as St in the original
+model, so ln(St) will have its greatest variability at ½T. The result will not
+differ greatly from the result above.
+Candidates generally gave good answers for part (i). However, answers to part (ii) and (iii)
+were disappointing, particularly for part (iii) where the answer can be derived very simply
+from general reasoning. Part (iv) in general showed better answers, although many
+candidates failed to get full marks because they did not discuss how their response to (iii)
+would differ under the new model.
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 10
