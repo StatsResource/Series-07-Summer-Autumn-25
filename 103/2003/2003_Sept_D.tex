@@ -1,0 +1,170 @@
+
+
+8 A no-claims discount scheme has six classes of discount numbered from 0 (no
+discount) to 5 (maximum discount). A claim-free year results in a move to the next
+higher discount status (or in the retention of the maximum discount status); similarly a
+year with one or more claims results in a move to the next lower discount class (or in
+the retention of the no-discount status).
+(i) Assuming that the probability of a claim-free period is , where 0 <  < ½,
+write down the transition graph and the transition matrix of the discrete-time
+Markov chain which models this scheme. [3]
+(ii) (a) Write down the equations obeyed by the stationary probability
+distribution 
+ = (
+0, 
+1, …, 
+5) of the Markov chain.
+(b) Solve successively for 
+1, 
+2, 
+3, …, 
+5 in terms of 
+0.
+(c) Derive an expression, in terms of  only, for the value of 
+0.
+[5]
+(iii) Explain how this analysis can be used to help the insurance company to set its
+premium levels. [2]
+[Total 10]
+9 A model of mortality after retirement suggests that the age at death, T, of an
+individual aged 65 at retirement is a random variable satisfying
+65
+( )=exp () ,
+P T t  t x dx     
+ 	 
+where (x), the force of mortality, is given by (x) = a + bx, and a and b are positive
+parameters whose values are known.
+(i) Determine a formula involving a uniform pseudo-random variable U for
+simulating the age at death, T, of a single individual currently aged 65. [5]
+(ii) As part of a simulation exercise, a trainee is required to consider a sample of
+10 individuals now aged 65 and to generate a single observation of Y, the
+number of individuals in that sample who will still be alive at age 75.
+(a) Describe a method for doing this which does not involve 10 repetitions
+of the method in (i).
+(b) Explain the main advantages of the method in (a) when a large number
+of simulated copies of the random variable Y are needed. [4]
+(iii) The trainee is asked to investigate the effect of a reduction in the mortality rate
+by repeating the whole simulation for different values of a and b. State with
+reasons whether the trainee should use the same sequence of pseudo-random
+numbers as before or whether a different sequence would be preferable. [1]
+[Total 10]
+103 S2003—7 PLEASE TURN OVER
+
+%%%%%%%%%%%%%%%%%%5
+8 (i) Transition graph:
+(Transition probabilities are to the right and 1 to the left.)
+The transition matrix is
+P =
+1 0 0 0 0
+1 0 0 0 0
+0 1 0 0 0
+0 0 1 0 0
+0 0 0 1 0
+0 0 0 0 1
+(ii) (a) The equations P = read
+0(1 ) + 1(1 ) = 0
+0 + 2(1 ) = 1
+1 + 3(1 ) = 2
+2 + 4(1 ) = 3
+3 + 5(1 ) = 4
+4 + 5 = 5
+(b) Discard last equation and solve first one in terms of 0:
+1(1 ) = 0(1 (1 ))
+1 = 1 0
+2(1 ) =
+2
+0 = 0
+1 1
+2 =
+2
+1 0
+In general j = 0.
+1
+j
+(c) Find 0 by normalisation:
+0 1 2 3 4 5
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 10
+1 =
+6
+5
+0 0 0 0
+1
+1
+= =
+1 1
+1
+j
+n
+j j j
+0 = 6
+1
+1 .
+1
+1
+(iii) For a consistent profit the company requires that min0< 0.5 P( ) > 0, where
+P( ) is the expected profit when annual claim rate is .
+Expected long-term annual income from one customer is 5
+0
+j j , j
+P where Pj
+is the premium payable in discount level j, and expected annual claims
+= C(1 ), so expected profit is
+P( ) = 5
+0 6
+1
+(1 ),
+1
+j
+j j
+P C where = .
+1
+Candidates showed a good understanding of Markov chains here, with many candidates achieving a
+high score. For the final part of the question, a large number of candidates only gave a cursory
+explanation and were unable to score the full marks.
+9 (i) Use the inverse distribution function method.
+F(t) = 1 P(T > t), so that
+2 2
+65
+( ) = 1 exp ( ) = 1 exp 0.5 ( 65 ) ( 65) .
+t
+F t a bx dx b t a t
+Rearranging,
+2 652 65 log(1 ( )) = 0,
+2 2
+b b
+t at a F t
+or, in other words,
+2 2
+1 (65 ) 2 65 log(1 )
+( ) = .
+a a b b a u
+F u
+b
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 11
+Since the simulated variable must be positive, the positive root is required.
+The method, then, is to generate a pseudo-uniform random variable U in the
+range [0,1] and to set
+2 (65 )2 2 65 log(1 )
+= .
+a a b b a U
+T
+b
+(ii) (a) Y is a Binomial random variable, with parameters n = 10 and
+75
+65
+p exp (a bx)dx exp( 700b 10a).
+Let G(y) be the distribution function of Y and let U be a single uniform
+pseudo-random variable on [0,1]. Then set Y min y :G( y) U .
+(b) Although this method requires a certain amount of computing time to
+evaluate the distribution function G, this only has to be done once;
+thereafter, only one value of U is needed to generate each value of Y,
+as opposed to the ten values of U which are required in the other
+method.
+(iii) It is important to use the same sequence of pseudo-random numbers in each
+case, otherwise we are not comparing like with like.
+Many candidates correctly identified that the inverse transformation method was required, although
+in a surprisingly high proportion of cases marks were lost because of errors in the algebra /
+integration. The later parts of this question, dealing with the comparison of two methods of
+generating discrete random variables, were in general less well done.
