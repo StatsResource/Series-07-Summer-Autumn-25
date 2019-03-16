@@ -1,0 +1,170 @@
+
+6 (i) Describe a method for generating a sequence U1 U2 of pseudo-random
+numbers uniformly distributed in the interval (0 1) and from this a pseudorandom
+sequence of numbers uniformly distributed over an arbitrary
+range (a b) , where a b . [3]
+(ii) Explain the main advantage of using pseudo-random, as opposed to purely
+random numbers, for testing the suitability of a model. [1]
+(iii) Given a sequence {Un n 1 2 } as in (i), explain how you would simulate
+(a) an observation from the Pareto density
+1 ( ) = 1 0
+(1 )a
+a
+f x a x
+x
+(b) a discrete random variable X with probability function given by
+1 2
+( = ) = for 1 2 ( = 0) =
+2 2
+P X i i n P X
+n n
+[4]
+(iv) The Pareto distribution in (iii) is often referred to as a heavy-tailed
+distribution . Explain the use of this term and discuss under what
+circumstances it might offer a suitable model for modelling sizes of claims
+arriving at an insurance company. [2]
+[Total 10]
+103 A2004 5 PLEASE TURN OVER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7 (i) Suppose that {Xt : t 0} is a time-homogeneous Markov jump process with
+generator matrix A and transition matrix P(t). Let be a (column) vector of
+probabilities such that TA = 0T, where 0 is a (column) vector whose
+components are all equal to zero.
+(a) Prove that
+T ( ) = T. d
+P t
+dt
+0
+(b) Explain why is known as the stationary distribution for X.
+[4]
+(ii) A telephone call centre receives calls from customers at an average rate of 0.5
+per minute. Each call has a random duration which is exponentially
+distributed with mean 3 minutes, independently of the number or duration of
+any other calls. Two operators are assigned to handle calls. If a call arrives
+when both operators are busy, the call is put on hold unless there are already
+two calls on hold, in which case the new call is lost. When a call ends, one of
+the calls on hold is immediately put through to the newly free operator.
+(a) Identify the five states which are required if this system is to be
+modelled as a Markov jump process.
+(b) Draw the transition diagram for this system.
+(c) Write down the generator matrix for the process.
+(d) Evaluate the stationary distribution of the system.
+[8]
+[Total 12]
+103 A2004 6
+
+
+6 (i) Use a linear congruential generator (LCG). Specify three positive integers
+a c m with m a m c and an initial value x0 , then generate a sequence of
+x1 x2 xn in the range {0 1 2 m 1} by the recursive rule
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+Page 7
+xn (axn 1 c) (modm) n 1 2 N
+Then un xn m is a sequence of pseudo-random numbers in [0 1].
+To generate a sequence over the range (a b) , a linear transformation
+vn (b a)un a is needed. Thus the procedure is: generate a variable
+U U(0 1) using a LCG as above; return V (b a)U a .
+(ii) The main advantage of using pseudo-random numbers is reproducibility.
+When testing a model, this almost certainly depends on a number of
+parameters and assumptions, so it is very often desirable to examine the
+sensitivity of the model to these assumptions and the values of the parameters
+used. It is thus necessary to reduce the random element to a minimum and
+rerun the experiment using the same data .
+(iii) (a) We use the inverse transform method. The cdf of the Pareto is
+0 1
+1
+( ) 1
+(1 ) (1 )
+x
+a a
+a
+F x
+x x
+so the inverse is
+F 1( y) (1 y) 1 a 1
+Thus the procedure is
+Generate an observation U from the Uniform (0,1) distribution.
+Return X (1 U) 1 a 1 (or, equally good, X U 1 a 1) as an
+observation from the Pareto.
+(b) Since the number of possible values for X is n 1, we need to split
+the interval (0 1) into n 1 subintervals, the length of which has to be
+proportional to the corresponding probabilities. Given a uniform
+variable U , one such procedure is:
+For i 1 2 n , if (i 1) (n 2) U i (n 2) , then set X i
+If U n (n 2) , then set X 0 .
+(iv) From (iii), we see that the tail of the Pareto distribution is 1 F(x) (1 x) a ,
+which decreases to zero much more slowly than e.g. the exponential or normal
+distributions.
+Alternatively, it is called fat-tailed because of the relatively high probability
+of producing values which are a long way from the mean/median.
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+In general, the Pareto offers a suitable choice for portfolios where there is a
+non-negligible chance of very large claims, which is reasonable in various
+forms of general insurance, in particular insurance that deals with natural
+catastrophes (floods, earthquakes, hurricanes etc).
+This question was generally well answered and caused few difficulties.
+7 (i) (a) We will use the matrix form of the Kolmogorov DE, which states that
+P'(t) AP(t) .
+It follows that T ( ) T T ( ) 0T ( ) 0T. d dP
+P t AP t P t
+dt dt
+[The other Kolmogorov DE, P'(t) P(t)A, cannot be used to complete the proof]
+(b) If X0 is random with distribution , then the distribution of Xt is given
+by TP(t).
+The fact that the differential of this is equal to zero implies that TP(t)
+= TP(0) = T for all t, in other words Xt has the same distribution for
+all t.
+For an irreducible Markov chain on a finite state space, the stationary
+distribution is also the limiting (equilibrium, long-term, steady state)
+distribution.
+(ii) (a) The states can be labelled as 0, 1, 2:0, 2:1, 2:2, where 0 and 1 represent
+the number of operators occupied and 2:j means that both operators are
+occupied and j calls are on hold.
+Candidates with a different collection of states can earn 0.5 marks, as
+long as their states are states. For example, Call arrives is not a
+state, but an event triggering a transition from one state to another.
+(b)
+The labels on the arcs represent the transition rates.
+(c) From the transition diagram, the generator matrix is as below.
+0 1 2:0 2:1 2:2
+1/2 1/2 1/2 1/2
+1/3 2/3 2/3 2/3
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+Page 9
+1/ 2 1/ 2 0 0 0
+1/ 3 5 / 6 1/ 2 0 0
+0 2 / 3 7 / 6 1/ 2 0
+0 0 2 / 3 7 / 6 1/ 2
+0 0 0 2 / 3 2 / 3
+A
+(d) We have
+0 1
+1 1
+2 3 1 0
+3
+2
+1 0 2:0
+5 1 2
+6 2 3 2:0 0
+9
+8
+2:0 1 2:1
+7 1 2
+6 2 3 2:1 0
+27
+32
+2:1 2:0 2:2
+7 1 2
+6 2 3 2:2 0
+81
+128
+To solve this we add the condition that the i must sum to 1.
+Therefore the stationary distribution is
+128 192 144 108 81
+653 653 653 653 653
+(in decimal form this is
+0.1960 0.2940 0.2205 0.1654 0.1240 )
+Many candidates made a good attempt at part (i), though not many scored full marks. In part
+(ii) a surprising number of candidates were unable to distinguish between states in which
+the process stays for a certain length of time and events, which occur instantaneously and
+trigger transitions from one state to another.
