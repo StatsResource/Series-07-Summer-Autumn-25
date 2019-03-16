@@ -1,0 +1,168 @@
+6 (i) Calculate the autocovariance function {
+k : k  0} and the autocorrelation
+function {k : k  0} for the mth order Moving Average process
+Xt =  + 1
+m1
+(et + et + … + etm),
+where {et : t  0} is a sequence of uncorrelated, zero-mean random variables
+with common variance e2. [4]
+(ii) Explain whether or not the process is invertible in the case where m = 2. [4]
+[Total 8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+7 The data set plotted in Figure 1a represents the number of applications, xt, for travel
+insurance received by an insurance company’s web site, measured for a total of 60
+consecutive months. Figure 1b displays the logarithm of the same data set, yt = ln(xt).
+(i) A statistician decides, on the basis of these plots, to fit a linear time series
+model to yt rather than to xt. State, giving reasons for your answer, whether
+you agree with this decision. [2]
+(ii) Explain what is meant by the terms “seasonal variation” and “linear trend”.
+Outline one method of compensating for seasonal variation and linear trend in
+a data set which exhibits both. [3]
+(iii) The data set zt is a seasonally adjusted, detrended version of yt. Figures 2a and
+2b below display respectively the sample autocorrelation function and sample
+partial autocorrelation function of zt.
+(a) Explain what feature of the graphs enables you to conclude that it is
+reasonable to fit a stationary model to the data.
+(b) Suggest values of p, d and q such that an ARIMA(p, d, q) model is
+likely to provide a good fit to the data set zt. Give reasons for your
+suggestion. [3]
+(iv) Explain how to produce a forecast xˆ60 (1) for the value of x61 given the Box-
+Jenkins forecast zˆ60 (1) for the value of z61. [2]
+[Total 10]
+103 S2003—5 PLEASE TURN OVER
+Figure 1a Figure 1b
+Figure 2a
+Figure 2b
+Partial autocorrelation function of z t
+-0.5
+-0.4
+-0.3
+-0.2
+-0.1
+0
+0.1
+0.2
+0.3
+0 1 2 3 4 5 6 7 8 9 10 11
+Lag, k
+PACF
+Volume of travel insurance, x t
+0 10 20 30 40 50 60
+Month, t
+Log(Volume), y t = ln(x t )
+0 10 20 30 40 50 60
+Month, t
+Autocorrelation function of z t
+-0.6
+-0.4
+-0.2
+0
+0.2
+0.4
+0.6
+0 1 2 3 4 5 6 7 8 9 10 11
+Lag, k
+ACF, r k
+103 S2003—6
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+6 (i) We have
+k = Cov(Xt, Xt k) = 2
+0 0
+1
+Cov ,
+( 1)
+m m
+t r t k r
+r r
+e e
+m
+= 2
+0 0
+1
+Cov( , ).
+( 1)
+m m
+t r t k r
+r r
+e e
+m
+Clearly if k > m, all terms are zero, so that k = 0.
+For 0 k m, there are exactly (m k + 1) non-zero terms, and each of these
+covariance terms equals 2e . Thus
+k =
+2
+1 2
+( 1)
+0
+m k 0,1, 2,..., .
+m e
+k m
+k m
+The autocorrelation function is
+k = 1
+1
+1 0
+1,2,...,
+0
+m k
+m
+k
+k m
+k m
+(ii) For the process to be invertible, we require that the roots of the characteristic
+equation should be greater than 1 in absolute value.
+We can rewrite the MA model with the aid of the backward shift operator B as
+follows:
+Xt =
+1
+3
+(1 + B + B2) et.
+The roots of the characteristic equation
+1 + B + B2 = 0
+are B = ½ + ½i 3 , B = ½ ½i 3 .
+In both cases B = 1. Thus the process is not invertible.
+In general candidates made reasonable attempts along the right lines, although this did not always
+result in the correct autocorrelation function being calculated. Where possible, some credit was
+given for attempts at the second part based on an incorrect part (i).
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 8
+7 (i) The original data are clearly subject to seasonal variation, and the size of the
+seasonal fluctuations is increasing in line with the value of the underlying
+quantity. This suggests that the seasonal variation is multiplicative rather than
+additive, in which case taking the logarithm is the sensible thing to do. In
+addition to this, a look at the plot of yt against time confirms that the variation
+is much more regular.
+(ii) Seasonal variation is a predictable pattern of deterministic variation in the
+mean of the process which is cyclic, i.e it repeats after a fixed number of time
+periods, usually corresponding to a year of elapsed time.
+A linear trend is a deterministic pattern of variation in the mean of the process
+which is linearly dependent on the time variable, i.e. is of the form a + bt.
+There are various possible answers. Possible methods include:
+(a) Estimate the trend by linear regression and remove it, then, for each
+month, calculate the sample mean value for that particular month over
+all five years. From every detrended observation subtract off the
+appropriate seasonal mean to obtain seasonally adjusted data.
+(b) Remove the linear trend by differencing the data once, then remove the
+seasonal variation by seasonal differencing. In other words,
+= (1 12 )(1 ) zt B B yt .
+(iii) (a) The fact that the sample ACF is not near 1 for small lags is the most
+obvious pointer to the stationarity of the adjusted data set.
+(b) The clue here is the highest lag for which the ACF or PACF is
+significantly different from 0. Looking at the sample ACF we might
+suggest that a MA(3) might fit, as the sample ACF is roughly zero for
+k > 3. Similarly, a look at the sample PACF seems to indicate an
+AR(3). But it might well be possible to find an ARMA(1,1) which
+would fit adequately. In other words, d = 0 and either p = 0, q = 3 or
+p = 3, q = 0 or p = 1, q = 1.
+(iv) We have yt = mt + zt, where mt represents deterministic variation and zt is a
+purely random component. The process of seasonal adjustment and
+detrending has produced an estimate mt for mt which can be extrapolated into
+the future. Thus we have y60 (1) m61 z60 (1) , which in turn leads to
+x60 (1) exp( y60 (1)).
+Neither the discussion of how to deal with seasonal variation nor the practical part to do with model
+identification was especially well tackled.
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 9
