@@ -1,0 +1,132 @@
+
+1 A wheel is divided into 37 equal sections, labelled from 0 to 36. A ball is rolled
+repeatedly around the wheel, landing in sections X1, X2, … Let Mn be the highest
+outcome achieved from the first n rolls, i.e. Mn = max1in Xi.
+(i) Show by general reasoning that Mn is a Markov chain. [1]
+(ii) Derive the transition probabilities for Mn. [2]
+(iii) Determine whether Mn is irreducible and aperiodic. [1]
+(iv) Determine the equilibrium probability distribution of Mn. [1]
+[Total 5]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+2 (i) Calculate the covariance between the values X(t), X(t + s) taken by a Poisson
+process X(t) with constant rate  at the two times t and t + s, where s > 0. [2]
+(ii) Calculate the covariance between the values B(t), B(t + s) taken by a standard
+Brownian motion B(t) at the two times t and t + s, where s > 0. [1]
+(iii) A share price, St, is modelled as St = exp(Y(t)), where
+Y(t) = Y(0) + B(t) + (X1(t)  X2(t)).
+Here B(t) is a standard Brownian motion, X1 and X2 are rate  Poisson
+processes, independent of each other and of B(t), and  and  are constants.
+(a) Give a definition of a Lévy process.
+(b) Show that Y(t) is a Lévy process.
+(c) Calculate the covariance of Y(t) and Y(t + s) for s > 0. [4]
+[Total 7]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 An ARIMA process X satisfies the recursion
+Xt = 1Xt 1 2Xt 2 et et 1        ,
+where et is white noise with variance σ2.
+(i) (a) Write down a condition in terms of the roots of an equation for X to be
+stationary.
+(b) Show, in the case where 2 = 0.5, that X is stationary as long as
+1< 1.5.
+[4]
+(ii) Derive the spectral density function of X. [3]
+[Total 7]
+%%%%%%%%%%%%%%%%%
+
+1 (i) Suppose that Mn = i. Then the value of Mn+1 depends entirely on the outcome
+of the next spin of the roulette wheel (this being independent of Mn) and the
+value of Mn. Hence Mn is a Markov chain.
+(ii) Let Xn be the winning number from the nth spin of the roulette wheel. Then
+P(Xn = i) = 1/37 for all i = 0, 1, 2, .,36.
+If j > i then P(Mn+1 = j | Mn = i) = P(Xn+1 = j) = 1/37;
+If j < i then P(Mn+1 = j | Mn = i) = 0;
+If j = i then P(Mn+1 = j | Mn = i) = P(Xn+1 i) = (i + 1)/37.
+i.e. pij =
+1
+37
+( 1)
+37
+if
+if
+0 if
+i
+j i
+j i
+j i
+(iii) M is aperiodic, as it can stay in the same state with positive probability. It is
+not, however, irreducible, since it is not possible to return to state j from any
+state k > j.
+(iv) State 36 is absorbing, so the only stationary distribution, which is also the
+limiting distribution, is 36 = 1, i = 0 for all other i.
+The general reasoning type answers required for parts (i), (iii) and (iv) were quite well done in
+general. There were some difficulties with part (ii) However candidates fared less well on part (ii),
+and in many cases candidates struggling on part (ii) then failed to attempt the later parts.
+2 (i) The Poisson process and the standard Brownian motion both possess the
+independent increments property.
+Cov(X(t), X(t + s)) = Cov(X(t), X(t)) + Cov(X(t), X(t + s) X(t)) = t + 0, by
+the independent increments property.
+(ii) Cov(B(t), B(t + s)) = Cov(B(t), B(t)) + Cov(B(t), B(t + s) B(t) = t.
+(iii) (a) A Lévy process is a continuous-time process with stationary,
+independent increments. Alternatively, a Lévy process can be defined
+as a sum of three (indpendent) components: a constant drift, a multiple
+of Brownian motion and a purely discontinuous random component
+such as a compound Poisson process.
+(b) The increments of Y are the weighted sum of the increments of B, X1
+and X2, so are stationary and independent.
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 4
+(c) Cov(Y(t), Y(t + s)) = 2Cov(B(t), B(t), B(t + s)) + 2Cov(X1(t),
+X1(t + s)) + 2Cov(X2(t), X2(t + s)) = ( 2 + 2 2 )t. All other terms
+vanish by independence.
+The question demanded straightforward manipulation of the independent increments
+property and the covariance function.
+3 (i) (a) The condition for X to be stationary is that the roots of the equation
+2
+1 1z 2z = 0
+should lie outside the unit circle.
+(b) The roots are
+2
+1 1 2
+2
+4
+2
+.
+In the given instance these are 2
+1 1 2 .
+If 1
+2 > 2 then we require that
+2
+1 1 2 1 and 2
+1 1 2 1
+which is equivalent to
+2 2
+1 2 1 1
+implying that 1 1.5.
+If, on the other hand, 1
+2 < 2, then the roots are imaginary and satisfy
+2 2 2
+z = 1 (2 1 ) = 2
+so that the condition is automatically satisfied.
+(ii) The spectral density satisfies
+H1( ) fX = H2 ( ) fe ( ),
+where H1 is the transfer function associated with (1 1B 2B2), H2 the
+transfer function associated with (1 + B), fX( ) is the spectral density of X
+and fe( ) is the spectral density of e.
+Subject 103 (Stochastic Modelling) September 2003 Examiners Report
+Page 5
+We have
+H1( ) = |1 1ei
+2e2i |2, H2( ) = |1 + ei |2 and fe( ) = 2/(2 ).
+Therefore
+2 2
+2 2
+1 2 1 1 2 2
+1 2 cos( )
+=
+2 1 2 cos 2 cos 2
+fX
+There was good understanding of the ARIMA process, which meant that candidates
+successfully derived the quadratic equation in part (i), though some were let down by their
+knowledge of complex numbers. Part (ii) was a straightforward application of the transfer
+function: the fact that marks were on average slightly lower seems to indicate that it had not
+been learned especially well.
