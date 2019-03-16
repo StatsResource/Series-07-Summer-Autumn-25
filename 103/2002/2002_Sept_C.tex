@@ -1,0 +1,146 @@
+6 The members of a disability insurance scheme are classified as active (A),
+temporarily disabled (T), permanently disabled (P) or dead (D). Members are
+entitled to benefits when they are in state T or P. For the purpose of analysis the state
+of each member is recorded on 1 April each year. It is found that the history of a
+typical member evolves in time as a discrete-time Markov chain with transition matrix
+A
+T
+P
+D
+0.75 0.1 0.05 0.1
+0.5 0.3 0.1 0.1
+0 0 0.8 0.2
+0 0 0 1
+A T P D
+ 
+ 
+ 
+ 
+ 
+ 
+.
+(i) Draw the transition graph of the chain and find its stationary probability
+distribution. [3]
+(ii) Calculate the mean duration (in years) of a permanent disability benefit. [2]
+(iii) Calculate the probability that a member, initially active, is either temporarily
+or permanently disabled three years after the start of the scheme. [3]
+(iv) Calculate the probability that a member, initially active, will never draw any
+benefit from the scheme. [2]
+[Total 10]
+103 S20025 PLEASE TURN OVER
+7 (i) Describe the three elements of a linear congruential generator, and set out the
+recursive relationship used to generate the pseudo-random number sequence.
+[3]
+(ii) The first three numbers produced by a linear congruential generator are 0.954,
+0.462 and 0.628. Use these to generate three pseudo-random numbers from
+the Pareto distribution with  = 2 and  = 1.
+[The density of the Pareto distribution is f(x) = 1 ( 0).]
+( )
+x
+x
+
+
+
+
+ 
+[4]
+(iii) An exponential random variable T with rate parameter  may be simulated
+using the formula
+T =  1 logU
+
+where U is uniformly distributed on [0, 1]. Explain how this can be used to
+simulate a path of a Markov jump process {Xt: t  0} which has two states,
+H (healthy) and S (sick), with transition rates  from H to S and 	 from S to H.
+Assume X0 = H. [4]
+[Total 11]
+103 S20026
+
+
+
+6 (i)
+(For full credit the probabilities should all be included on the diagram.)
+Stationary distribution A = T = P = 0, D = 1. Derivation not required: the
+answer is obvious to anyone who understands.
+(ii) The duration of a permanent disability benefit is a geometric r.v., T.
+Since P[Xn 1 = P Xn = P]   = 0.8, the parameter is 0.2:
+P[T = n] = (0.8)n10.2. Accordingly its mean is 1
+1 0.8 
+= 5.
+(iii) The required probability is obtained from (1 0 0 0)P3.
+(1 0 0 0)P = (.75 .1 .05 .1); (1 0 0 0)P2 = (.6125 .105 .0875 .195);
+(1 0 0 0)P3 = (.511875 .09275 .111125 .28425).
+The solution is .09275 + .111125 = .203875.
+(The summation does not have to be performed to earn the mark: giving the
+two probabilities separately is a reasonable interpretation of the question.)
+(iv) The probability of never visiting T or P starting from A is
+0.1 + 0.75  0.1 + (0.75)2  0.1 + 
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 8
+=
+0
+0.1 (0.75) = 0.1 = 0.4.
+1 0.75
+n
+n
+
+
+
+
+Most candidates correctly gave the transition graph in part (i), although there were a few
+cases where the transition probabilities were not included in the solution. Part (iii) was well
+answered. Solutions to (ii) and (iv) were mixed, with perhaps less than a third of students
+immediately recognising the required approach and thereby gaining full marks.
+7 (i) The three elements are:
+  the multiplier  usually denoted a
+  the increment  usually denoted c; the increment is often set to zero
+(without any loss in the quality of the pseudo-random sequence) to speed
+up the generation process
+  the modulus  usually denoted m  where m > a and m > c; the
+generator will produce a series of pseudo-random numbers with period no
+more than m, so the modulus is usually set to as high a number as possible.
+The recursive relationship is: Xn+1 = (aXn + c) (mod m) for n = 0, 1, 2, ,
+N  1. We then set xk = Xk/m for each k = 1, 2, , N.
+(ii) Use the inverse transform method:
+f(x) = 1 3
+= 2
+( x) (1 x)
+
+
+
+ 
+, so that F(x) = 1 
+1 2
+1 x
+ 
+    
+ x = 1 1.
+1 F(x) 
+
+, so
+  if F(x) = 0.954, then x = 3.6625
+  if F(x) = 0.462, then x = 0.3634
+  if F(x) = 0.628, then x = 0.6396
+(iii) The structure of a Markov jump process implies that the time until the next
+jump has exponential distribution, with rate 	 if the current state is H, 
+ if S.
+The even-numbered inter-jump times will have one distribution, the oddnumbered
+ones a different one.
+Obtain numbers y0, y2, y4, , y2n by the above procedure, being simulated
+outcomes of independent random variables Y0, Y2, Y4, , Y2n exponentially
+distributed with parameter 	. Similarly, obtain y1, y3, , y2n1 using a
+parameter 
+ instead of 	.
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 9
+Put tj = y0 + y1 +  + yj. Find j such that tj1  t < tj and return
+xt =
+if is even
+if is odd
+H j
+S j
+
+Candidates made reasonable attempts at part (i), although in many cases insufficient detail
+was provided to score full marks. Part (ii) was generally well answered, the only problem
+here being simple algebraic errors. Part (iii) was not answered well, with candidates on the
+whole failing to recognise that the transitions from healthy to sick and from sick to healthy
+should be modelled separately and then combined to provide the required process.
