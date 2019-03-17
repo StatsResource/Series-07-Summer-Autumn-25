@@ -1,10 +1,39 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
 
+%\usepackage{bigints}
+\usepackage{vmargin}
 
-10 An insurance company has an initial capital of u and receives premium income at
-constant rate c per unit time. Claims, for one unit each, occur according to a Poisson
-process {Nt, t 0} with rate . The company s surplus at time t is defined as
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%--- Question 10 
+\item An insurance company has an initial capital of u and receives premium income at constant rate c per unit time. Claims, for one unit each, occur according to a Poisson process {Nt, t 0} with rate . The company s surplus at time t is defined as
 St = u ct Nt .
 (i) A Lévy process is defined as a stochastic process with stationary, independent
 increments. Verify that St satisfies this definition. [2]
@@ -13,16 +42,12 @@ increments. Verify that St satisfies this definition. [2]
 Yt e .
 (a) Derive an equation which must be satisfied by if Yt is to be a
 martingale.
-(b) Show, by means of a sketch or otherwise, that the equation derived in
-(a) has a negative solution as long as c > and a positive solution
+(b) Show, by means of a sketch or otherwise, that the equation derived in (a) has a negative solution as long as c > and a positive solution
 if c < .
-(c) Comment on whether the condition c > is likely to be satisfied in
-practice. [6]
-(iv) LetT = inf{t 0 : St 0 or St K}, where K is a positive constant and assume
-that c > .
+(c) Comment on whether the condition c > is likely to be satisfied in practice. [6]
+(iv) LetT = inf{t 0 : St 0 or St K}, where K is a positive constant and assume that c > .
 (a) Explain why either ST = K or 1 ST < 0.
-(b) Verify that the conditions of the optional stopping theorem apply to the
-stopped martingaleYmin(t,T ) .
+(b) Verify that the conditions of the optional stopping theorem apply to the stopped martingaleYmin(t,T ) .
 (c) Define to be the probability that S goes below zero before it hits K,
 that is, the probability that ST < 0. Prove that
 ( ) (1 ) K
@@ -66,10 +91,8 @@ t
 t
 r r d d
 r r
-, although in fact a better estimate would be obtained
-if account was taken of the variable mean of the Rt.
-(Less appropriate is using the fact that Var(Dt ) 2 Var(Rt ) to suggest
-2 / 2 sD sR , since the sign of is lost in this operation.)
+, although in fact a better estimate would be obtained if account was taken of the variable mean of the Rt.
+(Less appropriate is using the fact that Var(Dt ) 2 Var(Rt ) to suggest 2 / 2 sD sR , since the sign of is lost in this operation.)
 Now we have an estimate for , we can use Rt Dt .
 (v) X121 X120 R121 D121 . In addition, R121 1 (R120 0 ) e121 and
 D121 R121 .
@@ -77,8 +100,7 @@ Therefore X121 X120 (1 )[ 1 (R120 0 )] (1 )e121 , which
 implies that x120 (1) X120 (1 )[ 1 (R120 0 )]
 and 2 2
 Var(X121 x120 (1)) (1 ) .
-Most candidates made encouraging progress with this question, though part (iv) proved
-difficult for most. In part (v), as well, the relationships between the variables were not
+Most candidates made encouraging progress with this question, though part (iv) proved difficult for most. In part (v), as well, the relationships between the variables were not
 always well understood.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 10 (i) The increment St+s St is equal to cs (Nt+s Nt), which is independent of
@@ -96,19 +118,17 @@ the jumps of the compound Poisson process all have size 1.
 E Yt s Ft e E e Ft e .
 This is equal to Yt if c [1 e ] .
 (b) If c < , the line y = c increases slowly from 0 as increases,
-whereas [1 e ] increases more rapidly to start with, but never
-Subject 103 (Stochastic Modelling) April 2004 Examiners Report
-Page 13
+whereas [1 e ] increases more rapidly to start with, but never 
+%% Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+%%Page 13
 exceeds . Therefore there must be a crossing point at a positive value
 of .
 If, on the other hand, c > , then there is no positive crossing point; the
 line y = c goes slowly to as , whereas [1 e ] tends to
 exponentially fast as .
 (c) Yes; this is the condition for the company to remain solvent.
-(iv) (a) If S hits K first, then ST = K exactly, since increases in S occur
-continuously. But if S becomes negative before hitting K, then the
-negative movement must have been caused by a downward jump;
-jumps are of magnitude 1, so in this case ST can be no less than 1.
+(iv) (a) If S hits K first, then ST = K exactly, since increases in S occur continuously. But if S becomes negative before hitting K, then the
+negative movement must have been caused by a downward jump; jumps are of magnitude 1, so in this case ST can be no less than 1.
 (b) Since St is between 1 and K for all 0 t T, it follows that Ymin(t,T ) is
 bounded above and below, from which we deduce that the optional
 stopping theorem applies.
@@ -127,10 +147,6 @@ e e
 .
 As K becomes larger, the fact that < 0 means that e K 0, so in the
 limit we have e u.
-There was an error in the final part of the question; where the question asked for a lower
-bound, the quantity which could be derived from the previous part of the question was in fact
-an upper bound. Candidates who reached the last part and were confused by the error were
-treated generously.
-It appeared that many candidates tried this question when they were short on time. Those
-candidates who attempted part (iv) often did quite well on it, even if they had omitted earlier
-parts of the question.
+There was an error in the final part of the question; where the question asked for a lower bound, the quantity which could be derived from the previous part of the question was in fact an upper bound. Candidates who reached the last part and were confused by the error were treated generously.
+It appeared that many candidates tried this question when they were short on time. Those candidates who attempted part (iv) often did quite well on it, even if they had omitted earlier parts of the question.
+\end{document}
