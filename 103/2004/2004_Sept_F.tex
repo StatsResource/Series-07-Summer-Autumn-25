@@ -1,5 +1,40 @@
+%%- Subject 103 (Stochastic Modelling) September 2004 Examiners Report\documentclass[a4paper,12pt]{article}
 
-10 Assume that the spot rate of interest at time t , S(t) , can be modelled by
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item 
+%%--10 
+Assume that the spot rate of interest at time t , S(t) , can be modelled by
 S(t) = e 2 W(t ) , where W(t) is a Wiener process with drift coefficient and
 diffusion coefficient 1 such that W(0) = 0.
 (i) Write down an expression for W(t) in terms of a standard Brownian motion
@@ -16,11 +51,12 @@ optional stopping theorem.
 (b) Apply the optional stopping theorem to find P Ta .
 [4]
 [Total 14]
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% - solution
+%% - Subject 103 (Stochastic Modelling) September 2004 Examiners Report
 10 (i) The Wiener process can be defined as Wt t Bt . In this case 1.
 (ii) We need to show that
-Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+
 Page 12
 E St Ss Ss 0 s t
 as well as proving that E[ St ] .
@@ -90,11 +126,7 @@ We may deduce that
 1
 1 S(0) aP[Ta ] i e that P[Ta ]
 a
-In part (ii) a large number of candidates did not even attempt to prove that
-(| |) t E S : this condition is a requirement for S to be a martingale and
-should not be omitted. However, most candidates had a good idea of how to
-prove that S satisfied the conditional expectation condition.
-Parts (iii) and (iv) attracted at best sketchy answers. The examiners were
-unsure whether this was due to pressure of time or to lack of familiarity with
-applications of the optional stopping theorem.
-END OF EXAMINERS REPORT
+In part (ii) a large number of candidates did not even attempt to prove that (| |) t E S : this condition is a requirement for S to be a martingale and should not be omitted. However, most candidates had a good idea of how to prove that S satisfied the conditional expectation condition.
+
+Parts (iii) and (iv) attracted at best sketchy answers. The examiners were unsure whether this was due to pressure of time or to lack of familiarity with applications of the optional stopping theorem.
+\end{document}
