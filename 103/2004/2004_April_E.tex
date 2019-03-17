@@ -1,9 +1,42 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 
 9 A water company is developing a time series model to model the supply of water, Xt,
 in its reservoirs at the end of month t. The model takes the form
 Xt = Xt 1 Rt Dt ,
-where Rt represents rainfall in month t and Dt represents demand in month t. Rt and
-Dt are themselves modelled by
+where Rt represents rainfall in month t and Dt represents demand in month t. Rt and Dt are themselves modelled by
 = ( 1 1)
 =
 t t t t t
@@ -32,7 +65,7 @@ of data, suggest simple estimators for t (1 t 12), , and . [4]
 D120 and X120 are known, derive an estimate x120 (1) for the supply of water at
 the end of month 121 and give an expression forVar(X121 x120 (1)) . [3]
 [Total 14]
-103 A2004 8
+%%-- 103 A2004 8
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 9 (i) (a) In one sense it is reasonable, because in the absence of rainfall
