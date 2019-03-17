@@ -1,3 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 
 6 A No-Claims Discount system operated by a motor insurer has four levels:
 Level 1: 0% discount
@@ -33,22 +67,16 @@ H (healthy), S (sick) and D (dead). The instantaneous transition rates between t
 states are HS = , SH = 
 , HD = , SD = .
 (i) Write down the generator matrix of the Markov jump process. [2]
-(ii) The policyholder pays contributions at rate C when in state H and receives
-benefits at rate B when in state S. No death benefit is payable. The company
-uses the model to set the ratio of contributions to benefits. Without doing any
-calculations, explain in general terms how this can be done. [2]
+(ii) The policyholder pays contributions at rate C when in state H and receives benefits at rate B when in state S. No death benefit is payable. The company uses the model to set the ratio of contributions to benefits. Without doing any calculations, explain in general terms how this can be done. [2]
+
 (iii) A trainee believes that the model is too simplistic. For each of the trainees
-suggestions below, comment on whether following the suggestion would be
-likely to improve the models predictive power:
+suggestions below, comment on whether following the suggestion would be likely to improve the models predictive power:
 (a) The transition rates should depend on the age of the policyholder.
 (b) The transition rates should vary according to the time of year.
 (c) SH and SD should also depend on the duration of the sickness to date.
 [3]
-(iv) Outline the principal difficulty in fitting a model with parameters dependent
-on all the factors in part (iii). [1]
-(v) Assume that several years of quarterly claims data are available. Describe a
-test to determine whether the model with annually time-varying transition
-rates, as in (iii)(b), is a better fit to the data than the model with constant
+(iv) Outline the principal difficulty in fitting a model with parameters dependent on all the factors in part (iii). [1]
+(v) Assume that several years of quarterly claims data are available. Describe a test to determine whether the model with annually time-varying transition rates, as in (iii)(b), is a better fit to the data than the model with constant
 transition rates. [2]
 [Total 10]
 103 A20036#
@@ -77,10 +105,10 @@ Applying the condition i = 1, we obtain the solution as
 (21, 20, 16, 320, 64).
 It follows that the long-run proportion of time spent in Level 3 is
 (16 + 64)/441 = 80/441.
-A large number of candidates fared well on this question. Some committed the mostly
-harmless error of including too many (redundant) states. Most people had a
-reasonable attempt at (ii)(c) too, although there were some errors of arithmetic or
-matrix multiplication.
+% A large number of candidates fared well on this question. Some committed the mostly harmless error of including too many (redundant) states. Most people had a reasonable attempt at (ii)(c) too, although there were some errors of arithmetic or
+% matrix multiplication.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 7 (i) The generator matrix is
 0 0 0
     
@@ -101,9 +129,7 @@ h 1 s, s 1 h  
    
    
 .]
-(iii) (a) This might improve predictive power as far as the individual
-policyholder is concerned, but in a large population of policyholders
-with constant age profile it is not likely to make much difference.
+(iii) (a) This might improve predictive power as far as the individual policyholder is concerned, but in a large population of policyholders with constant age profile it is not likely to make much difference.
 (b) Certain kinds of sickness are more likely to strike at particular times of
 year, but they may more or less balance out. If there is a significant
 increase in the incidence of sickness in one season, it should be helpful
