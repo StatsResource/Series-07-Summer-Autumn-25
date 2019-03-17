@@ -1,28 +1,61 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8 A restorer of historic sites travels between Bath, Warwick, Stratford and Caernarvon.
 Having arrived at a site, the restorer stays there for a random number of days, then
-moves on to one of the others. The restorer s diary for the last two months shows the
-following time spent in each place:
+moves on to one of the others. The restorer s diary for the last two months shows the following time spent in each place:
 Bath (5 days), Warwick (3 days), Caernarvon (7 days), Bath (3 days),
 Stratford (7 days), Warwick (5 days), Bath (3 days), Stratford (3 days)
 Caernarvon (8 days), Bath (2 days)
-A researcher suggests that the path taken by the restorer forms a Markov chain with
-state space {Bath, Caernarvon, Stratford, Warwick}.
-(i) Suppose {Xt: t = 0, 1, 2, } is a Markov chain with transition matrix P and let
-Di,n denote the duration of the nth visit to state i, that is, the number of
+A researcher suggests that the path taken by the restorer forms a Markov chain with state space {Bath, Caernarvon, Stratford, Warwick}.
+
+\begin{enumerate}[(i)]
+\item (i) Suppose {Xt: t = 0, 1, 2, } is a Markov chain with transition matrix P and let Di,n denote the duration of the nth visit to state i, that is, the number of
 consecutive steps spent by the chain in state i. Show that Di,n is a geometric
 random variable and is independent of Di,m for m < n. [3]
-(ii) Discuss, in the light of the data, whether it is likely that this suggestion is
+\item (ii) Discuss, in the light of the data, whether it is likely that this suggestion is
 satisfied. [2]
-(iii) Assuming that the researcher s suggestion is correct, write down an estimate
+\item (iii) Assuming that the researcher s suggestion is correct, write down an estimate
 of the transition matrix P of the Markov chain. [2]
-(iv) State, giving reasons for your answers, whether the Markov chain model is
+\item (iv) State, giving reasons for your answers, whether the Markov chain model is
 (a) irreducible, and (b) aperiodic. [2]
 (v) The restorer arrives in Warwick on day t0. Use the estimated transition matrix
 to calculate the probability that he is in Warwick on day t0 + 3. [3]
-[Total 12]
-103 A2004 7 PLEASE TURN OVER#
+%% [Total 12]
+%% 103 A2004 7 PLEASE TURN OVER#
+\end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%
 8 (i) Suppose at time t X has just arrived in state i. The probability that X remains
 in state i until time t + k and then leaves, giving a duration of k + 1 steps in
@@ -39,7 +72,7 @@ likely to produce 1 more often than any other value. The durations of the
 restorer s stays in the various locations are always at least 2 days and often
 much more. There is an indication that the geometric distribution is
 inappropriate for the data set provided.
-Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+%%---- Subject 103 (Stochastic Modelling) April 2004 Examiners Report
 An alternative indication that the Markov property is dubious is the fact that
 the restorer appears to return to Bath at regular intervals, i.e. regardless of the
 time spent in each state, the path taken appears to lack randomness.
@@ -79,5 +112,5 @@ P , so the required answer is
 Each part of this question attracted some unexpected answers as well as some good
 ones. The answers to part (i) were on the whole disappointing, but the final parts were
 rather better answered in general.
-Subject 103 (Stochastic Modelling) April 2004 Examiners Report
-Page 11
+%%--Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+\end{document}
