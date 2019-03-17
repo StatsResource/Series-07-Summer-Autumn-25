@@ -32,13 +32,13 @@
 
 \begin{document}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\enumerate}
+\begin{enumerate}
 \item The discrete random variable X has the following probability function:
 \[P(X = i) = 0.2 + ai : i = \{-2, -1, 0, 1, 2.\}\]
 
 \begin{enumerate}[(a)]
 \item (i) State the possible values that a can take. 
-\item (ii) Given a random sample x1 , x2 , ..., xn from this distribution, determine
+\item (ii) Given a random sample $x_1 , x_2 , \ldots , x_n$ from this distribution, determine
 the method of moments estimate of a and show that this can result in
 inadmissible estimates (i.e. estimates outside the range of possible
 values of a). 
@@ -46,6 +46,18 @@ values of a).
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 9 
 
+
+\begin{center}
+\begin{tabular}{|c|r|}
+i & P(X = i) = 0.2 + ai  \\ \hline
+−2 &   0.2 -2a\\ \hline
+−1 &   0.2 -a\\ \hline
+0  &  0.2 \\ \hline
+1  &  0.2  + a\\ \hline
+2  &  0.2 + 2a\\ \hline \hline
+$\sum$ & 1 \\ \hline
+\end{tabular}
+\end{center}
 \begin{itemize} 
 \item (i) This will be a probability function provided the specified probabilities are
 non-negative; i.e. if and only if $-0.1 < a < 0.1$.
@@ -53,6 +65,19 @@ non-negative; i.e. if and only if $-0.1 < a < 0.1$.
 mean to the population mean. 
 
 \end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Question 9
+
+\begin{eqnarray*} 
+\mu &=& \sum^{2}_{-2} i(0.2 + ai) \\
+&=& a \sum^{2}_{-2} i^2 \\
+&=& 10a \\
+\end{eqnarray*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 To do this note that
  = 2
 2
