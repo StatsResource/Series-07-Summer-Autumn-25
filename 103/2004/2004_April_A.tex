@@ -1,4 +1,37 @@
+\documentclass[a4paper,12pt]{article}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
 1 The stochastic differential equation for geometric Brownian motion is given by
 dXt = Xt dt + Xt dBt
 where Bt is a standard Brownian motion. Show that the solution to the differential
@@ -8,6 +41,8 @@ t0 X x is
 1 2
 2 0 Xt x exp Bt Bt t t
 for t t0. [4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2 A Box-Jenkins model-fitting procedure suggests that the best fitting model for a set of
 normalised share price data x1, , xn is ARMA(1,2), with equation
 Xt 0.63Xt 1 et 0.45et 1 0.34et 2 ,
@@ -17,7 +52,8 @@ variance 2.
 (ii) Calculate 0, 1, 2, the autocovariance function of the fitted model at lags 0, 1,
 and 2, in terms of 2. [4]
 [Total 6]
-103 A2004 3 PLEASE TURN OVER
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3 The number, N(t), of members of a pension scheme who are receiving benefits at time
 t, is subject to change of two kinds:
 it increases by 1 when an active member reaches retirement age
@@ -38,17 +74,8 @@ pn t e n
 n
 [2]
 (v) State what conclusions can be drawn from (iv). [1]
-[Total 7]
 
-%%%%%%%%%%%%%
-Faculty of Actuaries Institute of Actuaries
-EXAMINATIONS
-April 2004
-Subject 103 Stochastic Modelling
-EXAMINERS REPORT
-Faculty of Actuaries
-Institute of Actuaries
-Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1 First method (direct method):
 Let f(Xt) = ln Xt . Using Itô s Lemma we have
 df = 1 2 2
@@ -92,6 +119,8 @@ We need to verify that the initial condition holds for this solution. (It clearl
 the check needs to be performed.)
 Considering that this stochastic differential equation is the most frequently used of all,
 this question was on average very poorly answered.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2 (i) The solution to 1 0.63z 0 is z = 1/0.63, which is greater than 1. Therefore
 the model is stationary.
 For invertibility, we should check that the roots of 1 0.45z 0.34z2 0 are
@@ -124,6 +153,8 @@ did rather better at solving them. In particular, many candidates did not take c
 account of the relationship between Xt and past values of et. Marks were awarded for correct
 methodology when deriving the solutions, even if the equations being solved were not the
 right ones.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3 (i) It is a jump process because it remains in one state for a period of time and
 then jumps to another state, or alternatively because it is a continuous-time
 process with a discrete state space.
