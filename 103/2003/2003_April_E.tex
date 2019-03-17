@@ -1,6 +1,39 @@
+\documentclass[a4paper,12pt]{article}
 
-9 In a simple discrete-time model for the price of a share, the change in price at time t,
-Xt, is assumed to be independent of anything that has happened before time t and to
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+9 In a simple discrete-time model for the price of a share, the change in price at time t, Xt, is assumed to be independent of anything that has happened before time t and to
 have distribution:
 Xt =
 1 with probability
@@ -28,8 +61,7 @@ Yn
   C for n  T, for some constant C.
 (b) Write down an expression for E(YT).
 [2]
-(iii) Assuming that p  q, calculate the probability that, starting from m, the share
-price reaches 0 before it reaches N, i.e. P(ST = 0 
+(iii) Assuming that p  q, calculate the probability that, starting from m, the share price reaches 0 before it reaches N, i.e. P(ST = 0 
 S0 = m). [3]
 (iv) In the case p = q you may assume that P(ST = 0 
 S0 = m) = (Nm)/N. Now
@@ -59,8 +91,7 @@ Page 10
 = ( / )Sn ( ( / ) ( / ) 1 (1 )) ,
 q p p q p q q p p q Yn      
 which shows that Yn is a martingale.
-By taking expectations, we obtain that E(Yn+1) = E(Yn), and this in turn implies
-that E(Yn) = E(Y0) = (q/p)m.
+By taking expectations, we obtain that E(Yn+1) = E(Yn), and this in turn implies that E(Yn) = E(Y0) = (q/p)m.
 (ii) (a) It is clear that T is a stopping time with respect to this martingale, since
 the event that the share has reached 0 or N by time n depends only on
 X1, X2, , Xn and m.]
@@ -101,10 +132,8 @@ Sn 2(n 1) p 2SnE(Xn 1) E(Xn 1).  
    
 But E(Xn+1) = 0, 2
 E(Xn 1)  = p + q = 2p, and the last equation gives
-E(Zn+1X1, X2, , Xn) = Sn2  2np = Zn , so that {Zn} is a martingale.
-(b) The conditions of the optional stopping theorem are not satisfied, since
-2 2 Sn np  is not bounded below for 0  n  T. But we can work with a
-truncated stopping time TK = min(T, K), for which the conditions of the
+E(Zn+1X1, X2, , Xn) = Sn2  2np = Zn , so that {Zn} is a martingale. (b) The conditions of the optional stopping theorem are not satisfied, since
+2 2 Sn np  is not bounded below for 0  n  T. But we can work with a truncated stopping time TK = min(T, K), for which the conditions of the
 OST are satisfied, then let K  .
 Applying the optional stopping theorem we get
 E(ZT) = E(Z0) = m2.
@@ -119,3 +148,4 @@ just some; the main problem with (b) was that many did not mention the Optional
 Stopping Theorem as justification for claiming that E(YT) = E(Y0).
 Of the candidates who attempted (iv)(b), very few noticed that the stopping time did
 not meet the requirements of the OST, so needs to be truncated.
+\end{document}
