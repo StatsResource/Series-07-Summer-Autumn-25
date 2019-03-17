@@ -74,7 +74,7 @@ P(X \leq 3) &=& \sum^{3}_{i=0} e^{-7} \frac{7^i}{i!}\\
 is to be modelled as a Poisson(l) random variable. A random sample of 600
 such policies gave rise to a total of 72 claims in 1999.
 Determine the approximate probability value of this result in a test of
-H0 : l = 0.14 v H1 : l < 0.14 .
+$H0 : l = 0.14$ v $H1 : l < 0.14$ .
 \item 6 
 Total number of claims $X \sim \mbox{ Poisson}(600\lambda)$
 
@@ -89,26 +89,60 @@ Prob. value &=& P(X \leq 72) \\
 \item 7 ( ) ( , ) ( | ) ( ) ( | ) ( ) Y Y E X xf x y dxdy xf x y dx f y dy E X Y y f y dy
 
 \item Suppose that X and Y are continuous random variables.
-Prove that E(X ) E(X|Y y)fY( y)dy .
+Prove that $E(X ) E(X|Y y)fY( y)dy$ .
 %%%%%
 Solution: 
 \begin{eqnarray*}
-E(X)&=&  \int^{infty}_{-\infty} \int^{infty}_{-\infty} x f(x,y) dx dy\\
-&=&  \int^{infty}_{-\infty} \left( \int^{infty}_{-\infty} x f(x|y) dx \right) f_Y(y) dy\\
-
-&=&  \int^{infty}_{-\infty} E(X|Y=y) f(x|y) dx dy\\
+E(X)&=&  \int^{infty}_{-\infty} \int^{infty}_{-\infty} x f(x,y) dx dy\\
+&=&  \int^{infty}_{-\infty} \left( \int^{infty}_{-\infty} x f(x|y) dx \right) f_Y(y) dy\\
+&=&  \int^{infty}_{-\infty} E(X|Y=y) f(x|y) dx dy\\
 \end{eqnarray*}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Question 7
+
+\begin{eqnarray*} 
+E(X) &=& \int^{infty}_{-infty} \int^{infty}_{-infty}x f(x,y) dx dy \\
+&=& \int^{infty}_{-infty} \left[ \int^{infty}_{-infty}x f(x|y) dx \right] f_Y{y} dy \\
+&=& \int^{infty}_{-infty} E(X|Y=y) f_Y{y} dy \\
+\end{eqnarray*}
 \newpage
-\item 8 A device contains an electronic component which has a lifetime modelled by a
-distribution with mean 3.6 hours and standard deviation 2.6 hours. On failure
-a new component is automatically and instantaneously inserted as a
-replacement.
+\item 8 A device contains an electronic component which has a lifetime modelled by a distribution with mean 3.6 hours and standard deviation 2.6 hours. On failure a new component is automatically and instantaneously inserted as a replacement.
+
+
 Consider the operation of the device with 100 such components used one after
 the other. Determine the approximate probability that the resulting total
 lifetime of the device will be greater than 400 hours. 
 
 \end{enumerate}
+
+%%% Question 6
+
+
+$T \sim \mbox{Poisson}(84)$ is approximated by $T \sim \mbox{N}(84,84)$ 
+\begin{eqnarray*}
+P(X \leq 73) &=& P(Z \frac{72.5-84}{\sqrt{84}} \mbox{ using continuity correction } \\
+&=& P(Z \leq -1.255)\\
+&=& \Phi(-1.255) \\
+&=& 0.105  \mbox{ from tables }\\
+\end{eqnarray*}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% Question 8 
+
+\begin{eqnarray*}
+P(T > 400) &=& P(Z \frac{400-360}{26} \\
+&=& P(Z > 1.54)\\
+&=& 1 - \Phi(1.54) \\
+&=& 1 - 0.93822  \mbox{ from tables }\\
+&=& 0.062 \\
+\end{eqnarray*}
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 8
 $T = \sum^{100}_{i=1} X_i$ has mean 100(3.6) = 360 hours
