@@ -1,0 +1,153 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item  An engineer is interested in estimating the probability that a particular
+electrical component will last at least 12 hours before failing. In order to do
+this, a random sample of n components is tested to destruction and their
+failure times, , ,..., , 1 2 n x x x are recorded. The engineer models failure times by
+assuming that they come from a distribution with distribution function, F, and
+probability density function, f, given below.
+\[F(x) = 1 − \frac{1}{(1+x)^{\alpha − 1}}, \qquad \mbox{and} \qquad  f(x) = \frac{\alpha − 1}{( 1 + x )^\alpha}\]
+$\alpha > 1, x > 0$.
+(i) Determine aˆ , the maximum likelihood estimator of a, and, assuming n
+is large, use asymptotic theory to show that an approximate 95%
+confidence interval for a is given by
+\[ˆ 1 ˆ 1.96
+n
+a -
+a ± . \]
+(ii) A sample of size n = 80 leads to a maximum likelihood estimate of a of
+1.56. Use this figure to
+%------------------------%
+\begin{enumerate}[(a)]
+\item estimate the probability a component will fail before 12 hours,
+\item determine an approximate upper 95\% one-sided confidence
+interval for a, and
+\item hence determine an approximate 95\% one-sided confidence
+interval which provides an upper bound for the probability in
+part (ii) above. 
+\end{enumerate}
+%------------------------%
+(iii) Sixty-one of the eighty components tested in part (ii) failed before 12
+hours, so a second engineer estimates the failure probability by
+61/80 = 0.7625, and constructs an upper 95\% confidence interval based
+on the binomial distribution.
+\begin{enumerate}[(a)]
+\item Construct this interval, and
+\item comment on the advantages and disadvantages of this method
+when compared to the method of part (ii). 
+\end{enumerate}
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item (i) Start by writing down the likelihood function
+\[L(\lambda) =
+( 1)
+(1 )
+n
+i x\]
+
+ 
+ 
+.
+\begin{itemize}
+    \item The log-likelihood function is
+\[l(\lambda) = log L(\lambda) = n log(\lambda -1)  \lambda log(1 + xi).\]
+\item Differentiating gives
+
+\[l=1n \log(1 + xi).\]
+\item It is easy to see that the log-likelihood has only one turning point, so this
+can be found by equating the derivative to zero. This gives that the
+maximum likelihood estimate is
+% \[ˆ
+% = 1 + .
+% log(1 ) i
+% n
+%   x\]
+\item The second derivative is
+2
+2
+ l
+
+= 2 .
+( 1)
+n
+ 
+\item So an approximate 95% confidence interval for \lambda is
+ˆ 1
+ˆ 1.96 .
+n
+ 
+\end{itemize}
+
+ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item (ii) (a) The probability a component will last less than 12 hours before
+failing can be estimated by the point estimate
+\[1  ˆ 1
+1
+13
+= 1  0.56
+1
+13
+= 0.762.\]
+(b) An approximate 95\% confidence upper bound for  is
+\[ ˆ 1 ˆ 1.645 n  = 1.56 + 1.645 0.56 80 = 1.663.\]
+\item (c) This gives an upper bound for the failure probability of
+0.663
+1
+1
+13
+ = 0.817.
+\item (iii) (a) The endpoint of the binomial confidence interval is
+0.7625 + 1.645 
+0.7625 (1 0.7625)
+80
+ 
+= 0.841.
+\item (b) There is no single answer to this part. The main points are:
+The second engineer’s (binomial) method will be valid and doesn’t
+need any parametric assumptions about the data.
+\item The first engineer’s method needs the data to follow the
+distribution specified, but in that case it will be more powerful
+than the binomial method, which does not use the data efficiently.
+\item This is illustrated in this data as the two point estimates are very
+close, but the first engineer’s confidence interval is narrower.
+
+
+\end{itemize}
+\end{document}
