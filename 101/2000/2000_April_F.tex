@@ -1,0 +1,138 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+\item\item  The table below contains measurements on the strengths of beams. The width
+and height of each beam was fixed but the lengths varied. Data are available
+on the length (cm) and strength (Newtons) of each beam.
+Length l x = log l Strength
+p
+
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c|}
+y  &  =  &  log  &  p  &  Fitted  &  value  &  Residual\\ \hline
+7  &  1.946  &  11775  &  9.374  &  9.379  &  -0.005\\ \hline
+7  &  1.946  &  11275  &  9.330  &  9.379  &  -0.049\\ \hline
+9  &  2.197  &  8400  &  9.036  &  9.055  &  -0.019 \\ \hline
+9  &  2.197  &  8200  &  9.012  &  9.055  &  -0.043 \\ \hline
+12  &  2.485  &  6100  &  8.716  &  8.684  &  0.032 \\ \hline
+12  &  2.485  &  6050  &  8.708  &  8.684  &  0.024 \\ \hline
+14  &  2.639  &  5200  &  8.556  &  8.486  &  0.070 \\ \hline
+18  &  2.890  &  3750  &  8.230  &  8.162  &  0.068 \\ \hline
+18  &  2.890  &  3650  &  8.202  &  8.162  &  0.040 \\ \hline
+20  &  2.996  &  3275  &  8.094  &  8.026  &  0.068 \\ \hline
+20  &  2.996  &  3175  &  8.063  &  8.026  &  0.037 \\ \hline
+24  &  3.178  &  2200  &  7.696  &  7.791  &  -0.095 \\ \hline
+24  &  3.178  &  2125  &  7.662  &  7.791  &  -0.129 \\ \hline
+\end{tabular}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Sx = 34.023, Sx2 = 91.3978, Sy = 110.679, Sxy = 286.6299
+It is thought that P and L satisfy the law P = k/L where k is a constant, so
+log P = log k - log L, i.e. Y = log k - X.
+A graph of log P against log L is included.
+The simple linear regression model y = a + bx has been fitted to the data, and
+the fitted values and residuals are recorded in the table above.
+(i) Use the data summaries above to calculate the least squares estimates
+% $ a of a and ˆb of b . 
+(ii) Assuming the usual normal linear regression model
+
+\begin{enumerate}
+\item estimate the error variance $s^2$,
+\item calculate a 95\% confidence interval for b, and
+\item discuss briefly whether the data are consistent with the
+relationship P = k L . 
+\end{enumerate}
+
+(iii) Plot the residuals of the model against X and comment on the
+information contained in the plot. 
+[Total 13]
+7.5
+7.7
+7.9
+8.1
+8.3
+8.5
+8.7
+8.9
+9.1
+9.3
+9.5
+1.9 2.1 2.3 2.5 2.7 2.9 3.1 3.3
+x = log l
+y = log p
+
+\newpage
+
+16 (i) Sxx = 91.3978 
+2 34.023
+13
+= 2.354, and
+Sxy = 286.6299 
+110.679 34.023
+13
+
+= 3.0341.
+The least squares estimates are \[ˆ =
+\frac{3.0341}{2.354}= 1.289\] and
+ˆ
+= ˆ
+y  x = 11.887.
+\begin{itemize}
+    \item (ii) (a) The sum of squares of the residuals is 0.049019, so 2 is estimated
+by the residual mean square 0.049019
+11 = 0.004456.
+\item (b) The estimated variance of ˆ is 0.004456
+2.3544 = 0.00189.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 9
+This leads to the following 95\% confidence interval for :
+1.289  2.201 0.00189 = (1.384, 1.193).
+\item (c) If the relationship P = k/L is correct the slope parameter of the
+regression line should be –1. As the upper end of the interval is
+less than –1, the data do not support the suggested relationship.
+\item (iii)
+The residuals show that the line underfits in the centre. A straight line
+doesn’t fit the data very well.
+\end{itemize}
+-0.15
+-0.10
+-0.05
+0.00
+0.05
+0.10
+1.9 2.1 2.3 2.5 2.7 2.9 3.1 3.3
+log L
