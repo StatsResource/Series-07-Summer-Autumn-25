@@ -1,17 +1,44 @@
+\documentclass[a4paper,12pt]{article}
 
-9 Vehicles in a certain country are required to be assessed every year for roadworthiness.
-At one vehicle assessment centre, drivers wait for an average of 15
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+9 Vehicles in a certain country are required to be assessed every year for roadworthiness. At one vehicle assessment centre, drivers wait for an average of 15
 minutes before the road-worthiness assessment of their vehicle commences. The
-assessment takes on average 20 minutes to complete. Following the assessment, 80%
-of vehicles are passed as road-worthy allowing the driver to drive home. A further
-15% of vehicles are categorised as a minor fail ; these vehicles require on average
-30 minutes of repair work before the driver is allowed to drive home. The remaining
-5% of vehicles are categorised as a significant fail ; these vehicles require on
-average three hours of repair work before the driver can go home.
-A continuous-time Markov model is to be used to model the operation of the vehicle
-assessment centre, with states W (waiting for assessment), A (assessment taking
-place), M (minor repair taking place), S (significant repair taking place) and H
+assessment takes on average 20 minutes to complete. Following the assessment, 80\%of vehicles are passed as road-worthy allowing the driver to drive home. A further 15% of vehicles are categorised as a minor fail ; these vehicles require on average 30 minutes of repair work before the driver is allowed to drive home. The remaining 5% of vehicles are categorised as a significant fail ; these vehicles require on average three hours of repair work before the driver can go home.
+A continuous-time Markov model is to be used to model the operation of the vehicle assessment centre, with states W (waiting for assessment), A (assessment taking place), M (minor repair taking place), S (significant repair taking place) and H
 (travelling home).
+
 (i) Explain what assumption must be made about the distribution of the time
 spent in each state. [1]
 (ii) Write down the generator matrix for this process. [2]
@@ -29,7 +56,9 @@ driven home given that the assessment process is currently in state i.
 (b) Derive corresponding equations for TA, TM and TS.
 (c) Calculate TW.
 [4]
-[Total 14]
+\newpage
+
+%%---- [Total 14]
 
 
 9 (i) The Markov model implies that holding times are exponentially distributed.
@@ -91,8 +120,8 @@ dt
 d
 p t p t p t
 dt
-Subject 103 (Stochastic Modelling) September 2004 Examiners Report
-Page 11
+%%%---- Subject 103 (Stochastic Modelling) September 2004 Examiners Report
+%%%---- Page 11
 (b) First note that pWW(t) = e t/15. Then try inserting the given formula in
 the second equation above:
 / 20 /15 1 4
@@ -124,19 +153,16 @@ implies that t /30 ( ) 0.9 1.8 t / 60 0.9 t /30
 e pWM t e e , which simplifies
 to ( ) 0.9 t /30 1.8 t / 20 0.9 t /15
 pWM t e e e .
-(iii) (a) The expected length of time spent in state W is 15 mins, after which
-there is a transition to state A with probability 1.
+(iii) (a) The expected length of time spent in state W is 15 mins, after which there is a transition to state A with probability 1.
 (b) The other equations are:
 TA = 20 + 0.15 TM + 0.05 TS
 TM = 30
 TS = 180
-(c) Solving these equations gives TA = 20 + 4.5 + 9 = 33.5 and TW = 48.5
-mins
-A number of students suggested that ( ) 1 ( ) WW WA p t p t , which works in the
-two-state case. In this example, however, it is only possible to state that
-( ) ( ) ( ) ( ) ( ) 1, WW WA WM WS WH p t p t p t p t p t which is not the same.
-It was disappointing that not many candidates made substantial progress with
-solving the differential equations, but the last part of the question was in
-general well done.
+(c) Solving these equations gives TA = 20 + 4.5 + 9 = 33.5 and TW = 48.5 mins
 
+A number of students suggested that ( ) 1 ( ) WW WA p t p t , which works in the two-state case. In this example, however, it is only possible to state that
+( ) ( ) ( ) ( ) ( ) 1, WW WA WM WS WH p t p t p t p t p t which is not the same.
+
+It was disappointing that not many candidates made substantial progress with solving the differential equations, but the last part of the question was in general well done.
+\end{document}
 
