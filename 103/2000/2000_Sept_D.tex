@@ -54,7 +54,7 @@ can be re-used if necessary.
 [4]
 (ii) State why neither of the suggested models is suitable.
 (iii) (a)
-[1]
+
 Derive the lag-1 and lag-2 autocorrelations, ρ 1 and ρ 2 , of a second-
 order autoregressive process
 X t = μ + α 1 (X t − 1 − μ) + α 2 (X t − 2 − μ) + e t .
@@ -64,7 +64,9 @@ Find values of the parameters α 1 and α 2 which would provide a
 suitable AR(2) model for {X t : t = 0, 1, 2, ...}.
 [5]
 [Total 10]
-PLEASE TURN OVER8
+%%PLEASE TURN OVER
+%%--Question 8
+\item 
 Consider a time-homogeneous Markov jump process {X(t) : t ≥ 0} with two states
 denoted by 0, 1, and transition rates σ 0,1 = λ, σ 1,0 = μ.
 (i) State Kolmogorov’s forward equation for the probability P 0,0 (t) that X is in
@@ -82,60 +84,48 @@ e − ( λ + μ ) t .
 I s ds , where I s = í
 . Derive,
 î 0 if X s ≠ 0
-using the result in part (ii), an expression for E[O t X(0) = 0], the expected
-occupation time in state 0 by time t for the two-state continuous-time
-Markov chain starting in state 0.
+using the result in part (ii), an expression for E[O t X(0) = 0], the expected occupation time in state 0 by time t for the two-state continuous-time Markov chain starting in state 0.
 [2]
 which may be expressed as O t =
 9
 t
 z 0
-(iv) Write down the expected occupation time in state 1 by time t for the two-
-state continuous-time Markov chain starting in state 0.
+(iv) Write down the expected occupation time in state 1 by time t for the two-state continuous-time Markov chain starting in state 0.
 [1]
-(v) A health insurance scheme labels members as “healthy” (state 0) or
-“unhealthy” (state 1) at any time. When in state 0, members pay
+(v) A health insurance scheme labels members as “healthy” (state 0) or “unhealthy” (state 1) at any time. When in state 0, members pay
 contributions at rate α; when in state 1 they receive benefit at rate β.
 Expenses amount to a constant γ per member per unit time.
-(a) Explain how the above model can be used to calculate α in terms
-of β and γ.
+(a) Explain how the above model can be used to calculate α in terms of β and γ.
 (b) State the assumptions which you make in applying the model.
 (c) Discuss whether they are likely to be satisfied in practice.
-[4]
-[Total 11]
+%%-- [4]
+%%--- [Total 11]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
 (i)
-(a) A Lévy process is the sum of three independent components: a
-deterministic part of the form μ + αt, a Brownian part of the form
-σB t and a pure jump part which may be thought of as a compound
-Poisson process.
-(b) One problem would be in estimating the distribution of the jump
-sizes, particularly with only 250 observations. Even if a family
-were assumed for the distribution (e.g. double exponential), there
-would be the additional difficulty that small jumps would not be
-detectable against the background of the Gaussian noise.
-(a) First the u k need to be transformed so that their distribution is
-something suitable for the white noise sequence of a time series,
+(a) A Lévy process is the sum of three independent components: a deterministic part of the form $\mu + \alpha t$, a Brownian part of the form
+σB t and a pure jump part which may be thought of as a compound Poisson process.
+(b) One problem would be in estimating the distribution of the jump sizes, particularly with only 250 observations. Even if a family were assumed for the distribution (e.g. double exponential), there would be the additional difficulty that small jumps would not be detectable against the background of the Gaussian noise.
+(a) First the u k need to be transformed so that their distribution is something suitable for the white noise sequence of a time series,
 since at the very least the mean of the sequence needs to be zero.
 N (0, σ 2 e ) is the standard choice: one method of achieving this is to
 define, for each integer t,
 e 2 t
 = σ e − 2 log u 2 t sin(2 π u 2 t + 1 )
 e 2 t +1 = σ e − 2log u 2 t cos(2 π u 2 t + 1 ),
-but there are others, such as the polar method, inverse transform
-method or acceptance-rejection sampling.
-The values of the e t can now be fed into the formula to give the
-values of the X t , whichever model is in use.
+but there are others, such as the polar method, inverse transform method or acceptance-rejection sampling.
+The values of the e t can now be fed into the formula to give the values of the X t , whichever model is in use.
 (b)
 (ii)
-Page 4
-The ability to re-use a pseudo-random number sequence is
-important when comparing the ability of different mechanisms to
-control a process which is affected by randomness: in order to
-ensure fair comparison of the mechanisms, the must be subjected
+%%Page 4
+\begin{itemize}
+\item The ability to re-use a pseudo-random number sequence is important when comparing the ability of different mechanisms to
+control a process which is affected by randomness: in order to ensure fair comparison of the mechanisms, the must be subjected
 to the same degree of “random” input.
-The models do not possess the correct correlation structure.Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
+\item 
+The models do not possess the correct correlation structure.
+\end{itemize}
+%%--- Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
 (iii)
 (a)
 ρ 1 = Corr(X t ,X t − 1 ) = α 1 Corr(X t − 1 ,X t − 1 ) + α 2 Corr (X t − 2 ,X t − 1 ) = α 1 + α 2 ρ 1 .
@@ -225,7 +215,8 @@ t +
 ø
 æ
 α ç
-Page 5Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
+%%Page 5Subject 103 (Stochastic Modelling) — September 2000 — Examiners’ Report
 In the long run, then, as t → ∞, we require αμ = βλ + γ(λ + μ) to
-break even.%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+break even.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
