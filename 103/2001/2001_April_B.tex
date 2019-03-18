@@ -21,11 +21,9 @@
 \usepackage{vmargin}
 
 % left top textwidth textheight headheight
-
 % headsep footheight footskip
 
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
-
 \renewcommand{\baselinestretch}{1.3}
 
 \setcounter{MaxMatrixCols}{10}
@@ -34,21 +32,23 @@
 \begin{enumerate}
 %%-- [2]
 \item [Total 5]
-(i) Give a definition of the spectral density of a stationary time series, expressed in terms of the autocovariance function {γ k : k ∈ Z} of the
+\begin{enumerate}[(i)]
+\item (i) Give a definition of the spectral density of a stationary time series, expressed in terms of the autocovariance function {γ k : k ∈ Z} of the
 process. Use this definition to derive the spectral density of a first-order moving average process and of a first-order autoregression.
-[5]
-(ii) Suppose the “inverse” of a time series model with spectral density f(ω) is 1
+
+\item (ii) Suppose the “inverse” of a time series model with spectral density f(ω) is 1
 . Using part (i), state
 defined to be the model with spectral density
 f ( ω )
 the form of the inverse of a first-order moving average and state the way in which the inverse of an invertible MA(1) differs from the inverse of a non-invertible MA(1).
 [2]
+\end{enumerate}
 %-- [Total 7]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %-- 103 A2001—24
-Let X n denote an autoregressive high frequency time series modelled by:
-X n+1 = (1 − \alpha) X n + θ + τe n ,
-where e n = ±1 with equal probabilities and \alpha, θ, τ are constant parameters. An analyst wishes to investigate whether this series may be approximated by some continuous time diffusion, i.e. X n ≈ Y nh , where Y t satisfies a stochastic differential
+\item Let $X$ n denote an autoregressive high frequency time series modelled by:
+\[X n+1 = (1 − \alpha) X n + θ + τe n ,\]
+where $e_n = \pm 1$ with equal probabilities and \alpha, θ, τ are constant parameters. An analyst wishes to investigate whether this series may be approximated by some continuous time diffusion, i.e. X n ≈ Y nh , where $Y_t$ satisfies a stochastic differential
 equation
 \[dY t = \mu(Y t ) dt + dB t\]
 and B t denotes standard Brownian motion.
