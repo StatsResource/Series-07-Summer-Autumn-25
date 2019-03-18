@@ -33,19 +33,18 @@
 
 \begin{document}
 \begin{enumerate}
-1
-Let X n = Y 1 + Y 2 + ... + Y n be a simple random walk with step distribution
-P[Y j = 1] = p = 1 − P[Y j = −1].
+%%--Question 1
+\item Let X n = Y 1 + Y 2 + ... + Y n be a simple random walk with step distribution
+\[P[Y j = 1] = p = 1 − P[Y j = −1].\]
 Derive an expression, for each λ > 0, for the two values of γ such that
-M n = e − λ n + γ X n is a martingale with respect to the natural filtration of X n .
+M n = e − λ n + γ X n is a martingale with respect to the natural filtration of $X_n$ .
 2
 [4]
-Let X and Y be jointly normal random variables with means μ X , μ Y , variances
-σ 2 X , σ Y 2 and correlation coefficient ρ. Derive an expression for the values of
-the coefficients α and β, given that the conditional expectation E[XY] is of the
-form α + βY.
+\item Let X and Y be jointly normal random variables with means $\mu_X , \mu_Y$ , variances σ 2 X , σ Y 2 and correlation coefficient ρ. Derive an expression for the values of the coefficients $\alpha$ and β, given that the conditional expectation E[XY] is of the
+form $\alpha + \beta Y$.
 [5]
-
+\end{enumerate}
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 1
@@ -60,7 +59,7 @@ e g =
 e l ± e 2 l - 4 p ( 1 - p )
 .
 2 p
-Assume E[X1⁄2Y] = a + bY and determine a, b using:
+Assume $E[X1⁄2Y] = a + bY$ and determine a, b using:
 (i) orthogonality condition E{(X - E[X1⁄2Y])Y} = 0.
 (ii) E{E[X1⁄2Y]} = E[X].
 (i) gives E[XY] - aE[Y] -bE[Y 2 ] = 0;
@@ -106,6 +105,7 @@ J
 O J
 J
 O K
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Forward equations:
 ¶
 P(s, t) = P(s, t) A(t),
@@ -141,12 +141,12 @@ j ! ¶ t
 m ( s , t ) = l(t) is sufficient to finish the verification.
 ¶t
 (a) Z is stationary, i.e. I(0), as it is a first-order autoregression;
-X is not stationary but ÑX is just a linear combination of Z and e 1 , so is
-stationary; this implies that X is I(1). The same goes for Y.
-(b) Z satisfies the Markov property on its own; X and Y do not, since they
-depend on values of Z.
+X is not stationary but ÑX is just a linear combination of Z and e 1 , so is stationary; this implies that X is I(1). The same goes for Y.
+(b) Z satisfies the Markov property on its own; X and Y do not, since they depend on values of Z.
 (c) (X, Y, Z) is Markov; indeed, it is a vector autoregression.
 (d) X and Y are not cointegrated. Although both are I(1), any linear
-combination W =aX + bY satisfies W n = W n-1 + q W Z n-1 + e 3,n which does not
-define a stationary process.\end{document}
+combination $W =aX + bY$ satisfies W n = W n-1 + q W Z n-1 + e 3,n which does not
+define a stationary process.
+
+
 \end{document}
