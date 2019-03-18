@@ -36,10 +36,8 @@
 %%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 3
-The total number of claims received by an insurance company is described by
-an inhomogeneous Poisson process with rate λ(t).
-Write down the Kolmogorov forward equations for this process and show that,
-as in the homogeneous case, the solution is of the form
+\item The total number of claims received by an insurance company is described by an inhomogeneous Poisson process with rate $\lambda(t)$.
+Write down the Kolmogorov forward equations for this process and show that, as in the homogeneous case, the solution is of the form
 P 0j (s, t) =
 where m(s, t) =
 4
@@ -51,10 +49,13 @@ s
 [5]
 According to a model used in econometrics, three economic time series, X, Y
 and Z, are related to one another by the equations
-X n = X n−1 + θ X Z n−1 + e 1,n
-Y n = Y n−1 + θ Y Z n−1 + e 2,n
-Z n =
-θ Z Z n−1 + e 3,n
+%%%%%%%%%% 
+
+\begin{eqnarray*}
+X_N &=& X_{n-1} + \theta_X Z_{n-1} + e_{1,n) \\
+Y_N &=& Y_{n-1} + \theta_Y Z_{n-1}+ e_{2,n) \\
+Z_n &=& \theta_Z Z_{n-1} + + e_{3,n) \\
+\end{eqnarray*}
 where each of θ X , θ Y and θ Z lies in the interval (−1, +1) and the random
 variables {e i,n : n ≥ 1, i = 1, 2, 3} may be assumed to be uncorrelated and to have
 mean zero.
