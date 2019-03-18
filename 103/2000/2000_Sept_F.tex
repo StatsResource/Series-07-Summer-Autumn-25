@@ -34,50 +34,36 @@
 \begin{document}
 \begin{enumerate}
 
-PLEASE TURN OVER11
-The movements of a consumer price index are to be subjected to time series
-analysis with the aim of forecasting future behaviour. The index is calculated
-monthly.
+\item 
+%%-- Question 11
+The movements of a consumer price index are to be subjected to time series analysis with the aim of forecasting future behaviour. The index is calculated monthly.
 (i)
-Explain whether you would expect to fit a model which included (a) a
-trend term, (b) a seasonal effect.
+Explain whether you would expect to fit a model which included (a) a trend term, (b) a seasonal effect.
 [3]
-The values {x t : 1 ≤ t ≤ n} are the residuals which remain once any trend or
-seasonal variations have been removed. An ARIMA(1, 1, 1) model is to be fitted
-to the {x t }.
+The values {x t : 1 ≤ t ≤ n} are the residuals which remain once any trend or seasonal variations have been removed. An ARIMA(1, 1, 1) model is to be fitted to the {x t }.
 (ii)
 (iii)
-(a) Assuming the ARIMA(1, 1, 1) model is correct, write down an
-equation for X n +1 in terms of the white noise process
-{e t : 1 ≤ t ≤ n + 1} and the observations {x t : 1 ≤ t ≤ n}.
+(a) Assuming the ARIMA(1, 1, 1) model is correct, write down an equation for X n +1 in terms of the white noise process
+{e t : 1 ≤ t ≤ n + 1} and the observations ${x_t : 1 \leq t \leq n}$.
 (b) State the parameters of the model.
-[2]
-The Box-Jenkins procedure defines the k-step-ahead forecast for X to be
-x  n ( k ) = E (X n + k  x n , x n − 1 , ..., x 1 ).
+The Box-Jenkins procedure defines the k-step-ahead forecast for X to be x  n ( k ) = E (X n + k  x n , x n − 1 , ..., x 1 ).
 (iv)
-(a) Derive the 1-step-ahead and 2-step-ahead forecasts for X for the
-ARIMA(1, 1, 1) model, assuming that the values of the parameters
+(a) Derive the 1-step-ahead and 2-step-ahead forecasts for X for the ARIMA(1, 1, 1) model, assuming that the values of the parameters
 and the value of e 0 are known exactly.
-(b) Evaluate the prediction variance Var(X n +1 − x ˆ n (1)) , again assuming
-that the values of the parameters are known.
+(b) Evaluate the prediction variance Var(X n +1 − x ˆ n (1)) , again assuming that the values of the parameters are known.
 [5]
-The most elementary form of the technique known as exponential
-smoothing produces at time n a 1-step-ahead forecast x n * defined by
-x n * = x n + ξ( x n * − 1 − x n ),
+
+
+The most elementary form of the technique known as exponential smoothing produces at time n a 1-step-ahead forecast x n * defined by x n * = x n + ξ( x n * − 1 − x n ),
 for some ξ ∈ (0, 1) which may be chosen by the user.
-Show that, for particular values of the autoregressive and moving average
-parameters, the Box-Jenkins forecasts above coincide with the forecasts
-produced by exponential smoothing.
+Show that, for particular values of the autoregressive and moving average parameters, the Box-Jenkins forecasts above coincide with the forecasts produced by exponential smoothing.
 [2]
 (v)
 (vi)
 103—8
 (a) State whether the ARIMA(1, 1, 1) model is I(0), I(1) or neither.
-(b) Discuss whether there is a difference between an I(0) model and an
-I(1) model in terms of the conditional distribution of X n + k given {x t :
-1 ≤ t ≤ n} for large values of k. [3]
-It is suggested that a salaries index might be cointegrated with the
-consumer price index.
+(b) Discuss whether there is a difference between an I(0) model and an I(1) model in terms of the conditional distribution of X n + k given {x t : 1 ≤ t ≤ n} for large values of k. [3]
+It is suggested that a salaries index might be cointegrated with the consumer price index.
 (a) Explain what is meant by the suggestion.
 (b) Comment on whether it is a reasonable suggestion.
 [3]
