@@ -24,23 +24,19 @@
 % left top textwidth textheight headheight
 
 % headsep footheight footskip
-
 \setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
-
 \renewcommand{\baselinestretch}{1.3}
-
 \setcounter{MaxMatrixCols}{10}
-
 \begin{document}
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%
-5
-Let B t be a standard Brownian motion, and let F t = σ(B s , 0 ≤ s ≤ t) be its natural
+%%-- Question 5
+\item Let $B_t$ be a standard Brownian motion, and let F t = σ(B s , 0 ≤ s ≤ t) be its natural
 filtration.
 (i)
-Derive the conditional expectations E[ B t 2 F s ] and E[ B t 4 F s ] , where s ≤ t.
+Derive the conditional expectations $E[ B t 2 F s ]$ and $E[ B t 4 F s ]$ , where $s \leq t$.
 You may assume that the fourth moment of a random variable with
-distribution N(0, σ 2 ) is 3σ 4 .
+distribution $N(0, \sigma^2 )$ is 3σ 4 .
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 6
 (ii) Hence construct a martingale out of B t 4 .
@@ -53,8 +49,7 @@ f 1 (x) =
 [3]
 [Total 7]
 (x > 0)
-using a pseudo-random number u in the range 0 < u < 1. Explain how
-this can be extended to generate an observation from the symmetrised
+using a pseudo-random number u in the range $0 < u < 1$. Explain how this can be extended to generate an observation from the symmetrised
 form of the same density
 f 2 (x) =
 (ii)
@@ -82,19 +77,23 @@ distribution.
 as long as C ≥
 103—3
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 3Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+Page 3
+%%---Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
 5
 (i)
-E[ B t 2 1⁄2F s ] = E[(B t - B s + B s ) 2 1⁄2F s ]
-= E[(B t - B s ) 2 + 2(B t -B s ) B s + B s 2 1⁄2F s ]
-= E[(B t - B s ) 2 1⁄2F s ] + 2B s E[B t - B s 1⁄2F s ] + B s 2 ,
-by the property of conditional expectations which allows one to “take out
-what is known”. Moreover, by independence of the increments, the above is
+\begin{eqnarray*}
+E[ B t 2 1⁄2F s ] &=& E[(B t - B s + B s ) 2 1⁄2F s ]\\
+&=& E[(B t - B s ) 2 + 2(B t -B s ) B s + B s 2 1⁄2F s ]\\
+&=& E[(B t - B s ) 2 1⁄2F s ] + 2B s E[B t - B s 1⁄2F s ] + B s 2 ,\\
+\end{eqnarray}*
+by the property of conditional expectations which allows one to “take out what is known”. Moreover, by independence of the increments, the above is
 E[(B t - B s ) 2 ] + B s 2 = t - s + B s 2 .
 Similarly,
-E[ B t 4 1⁄2F s ] = E[(B t - B s + B s ) 4 1⁄2F s ]
-= E[(B t - B s ) 4 + 4(B t - B s ) 3 + 6(B t - B s ) 2 B s 2 + 4(B t - B s ) B s B s 3 + B s 4 1⁄2F s ]
-= E[(B t - B s ) 4 ] + 6 B s 2 E[(B t - B s ) 2 ] + B s 4 ,
+\begin{eqnarray*}
+E[ B t 4 1⁄2F s ] &=& E[(B t - B s + B s ) 4 1⁄2F s ]\\
+&=& E[(B t - B s ) 4 + 4(B t - B s ) 3 + 6(B t - B s ) 2 B s 2 + 4(B t - B s ) B s B s 3 + B s 4 1⁄2F s ]\\
+&=& E[(B t - B s ) 4 ] + 6 B s 2 E[(B t - B s ) 2 ] + B s 4 ,\\
+\end{eqnarray*}
 where we used the independence of increments property as well as the fact
 that moments of odd order of N(0, s 2 ) vanish. Finally
 E[ B t 4 1⁄2F s ] = B s 4 + 6(t - s) B s 2 + 3(t - s) 2 .
@@ -112,8 +111,7 @@ is solved by x = F 1 - 1 ( u ) =
 .
 1 + x
 1 - u
-For the symmetrised version, the simplest thing is to multiply x by a
-variable y which takes ±1 depending on whether another pseudo-random
+For the symmetrised version, the simplest thing is to multiply x by a variable y which takes ±1 depending on whether another pseudo-random
 uniform number v is in the range (0, 0.5) or (0.5, 1).
 (ii)
 Page 4
@@ -128,14 +126,15 @@ Differentiating the logarithm of this fraction and setting equal to 0, we get
 = 2
 1 + x
 q + x 2
-the required value of C.Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
+the required value of C.
+%%--- Subject 103 (Stochastic Modelling) — April 2000 — Examiners’ Report
 f ( x 1⁄2q )
 , which we observe is less than or equal to 1 everywhere.
 Cf 2 ( x )
-The method of Acceptance-Rejection sampling goes as follows: use (i) to
-generate a variable y from density f 2 . We accept y as a valid observation
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The method of Acceptance-Rejection sampling goes as follows: use (i) to generate a variable y from density f 2 . We accept y as a valid observation
 from f(x1⁄2q) with probability g(y), otherwise reject it. (Generate a uniform
-variable u, and reject if u > g(y).) If we reject it, go back and generate
+variable u, and reject if $u > g(y)$.) If we reject it, go back and generate
 another y from f 2 , and continue to do the same until eventual acceptance.
 Let g(x) =
 \end{document}
