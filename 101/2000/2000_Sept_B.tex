@@ -70,7 +70,7 @@ Past experience has shown that:
 \end{itemize}
 
 Calculate the mean and the standard deviation of the claim amounts on this
-class of policy. [6]
+class of policy. 
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 6 (a) £
@@ -111,8 +111,8 @@ An alternative approach is to use Fisher’s transformation of r. The
 statistic is
 \[ t_{TS} = \frac{1}{2} \log \frac{1+r}{1-r}, \]
 
-which, under $H_0$, has, approximately, a N(0,1/7) distribution.
-This approach gives r = 0.630 .
+which, under $H_0$, has, approximately, a $N(0,1/7)$ distribution.
+This approach gives $r = 0.630$ .
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -120,45 +120,50 @@ This approach gives r = 0.630 .
 8 Let Y = amount
 \begin{itemize}
     \item Let X = 1, 2 for types I, II
-∴ P(X = 1) = 0.25, P(X = 2) = 0.75
-\item E(YX = 1) = 500, Var(YX = 1) = 1002
+Therefore P(X = 1) = 0.25, P(X = 2) = 0.75
+\item $E(Y|X = 1) = 500$, $Var(Y|X = 1) = 100^2$
 all given
-\item E(YX = 2) = 300, Var(YX = 2) = 702
-\item E(Y) = E(E(YX)) = 500(0.25) + 300(0.75)
-= 125 + 225 = £350
-
+\item $E(Y|X = 2) = 300, Var(Y|X = 2) = 70^2$
+\item \begin{eqnarray*}
+E(Y) &=& E(E(Y|X)) \\ &=& 500(0.25) + 300(0.75)\\
+&=& 125 + 225 \\ &=& \$350\\
+\end{eqnarray*}
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 4
+%%--- Page 4
 \begin{itemize}
-    \item V(Y) = E(V(YX)) + V(E(YX))
-\item E(V(YX)) = 1002(0.25) + 702(0.75)
-= 2500 + 3675 = 6175
-\item V(E(YX)) = 5002(0.25) + 3002(0.75) − 3502
-= 62500 + 67500 − 122500 = 7500
-∴ V(Y) = 6175 + 7500 = 13675
-∴ s.d.(Y) = £116.9
-\item OR: V(E(YX)) = 0.25(500 − 350)2 + 0.75(300 − 350)2 = 7500
-alternative method for V(Y):
-\item E(Y2X = 1) = 1002 + 5002 = 260000
-E(Y2X=2) = 702 + 3002 = 94900
-∴ E(Y2) = 0.25(260000) + 0.75(94900)
-= 136175
-\item ∴ V(Y) = 136175 − 3502 = 13675
-∴ s.d.(Y) = 116.9
+    \item $V(Y) = E(V(Y|X)) + V(E(Y|X))$
+\item \begin{eqnarray*}
+E(V(Y|X)) &=& 100^2(0.25) + 70^2(0.75)\\
+&=& 2500 + 3675\\ &=& 6175\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \begin{eqnarray*}V(E(Y|X)) &=& 500^2(0.25) + 300^2(0.75) − 350^2\\
+&=& 62500 + 67500 − 122500 \\ &=& 7500\\
+\end{eqnarray*}
+Therefore $V(Y) = 6175 + 7500 = 13675$
+Therefore $s.d.(Y) = \$116.9$
+\item OR: $V(E(Y|X)) = 0.25(500 − 350)^2 + 0.75(300 − 350)^2 = 7500$
+alternative method for $V(Y)$:
+\item E(Y2|X = 1) = 1002 + 5002 = 260000
+\[E(Y2|X=2) = 70^2 + 300^2 = 94900\]
+Therefore $E(Y^2) = 0.25(260000) + 0.75(94900)
+= 136175$
+\item Therefore V(Y) = 136175 − 3502 = 13675
+Therefore $s.d.(Y) = 116.9$
 \end{itemize}
 
-Q8 Comment: Very few candidates seemed to be aware of the result V(Y) = E[V(Y|X)]
-+ V[E(Y|X)] and how and when it should be used.
+Q8 Comment: Very few candidates seemed to be aware of the result \[V(Y) = E[V(Y|X)]
++ V[E(Y|X)] \]and how and when it should be used.
 
 
 %%%%%%% Question 9
 
-C(t) = \log M(t) = −\alpha \log(1− \theta t)
-C^{\prime}(t) = \alpha\theta (1 − \theta t)^{−1} , 
-C^{\prime}^{\prime}(t) = \alpha\theta 2(1 − \theta t)^{−2} , C^{\prime}^{\prime}^{\prime}(t) = 2\alpha\theta 3(1 − \theta t)^{−3}
-∴ 
+$C(t) = \log M(t) = −\alpha \log(1− \theta t)$
+$C^{\prime}(t) = \alpha\theta (1 − \theta t)^{−1}$ , 
+C^{\prime}^{\prime}(t) = \alpha\theta 2(1 − \theta t)^{−2} , C^{\prime}^{\prime}^{\prime}(t) = 2\alpha\theta $3(1 − \theta t)^{−3}$
+% Therefore 
 
 \begin{itemize}
 \item $\kappa_2 = C^{\prime}^{\prime}(0) = \alpha\theta 2$ , 
@@ -175,8 +180,8 @@ so coefficient is
 \newpage
 
 13 ( ) i E Y⋅ = μ + τi and E(Y⋅⋅ ) = μ
-( ) i E Y⋅ E(μˆ ) = E(Y⋅⋅ ) = μ ∴ unbiased
-(ˆ ) i E τ = ( ) i E Y⋅ −Y⋅⋅ = μ + τi − μ = τi ∴ unbiased
+( ) i E Y⋅ E(μˆ ) = E(Y⋅⋅ ) = μ Therefore unbiased
+(ˆ ) i E τ = ( ) i E Y⋅ −Y⋅⋅ = μ + τi − μ = τi Therefore unbiased
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Q13 Comment: This material was unfamiliar to most candidates.
