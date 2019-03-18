@@ -32,33 +32,28 @@
 
 \begin{document}
 \begin{enumerate}
-5
-(i) State the expectation and variance of dY t = Y t+h − Y t , the increment of the
-process Y t over a small interval of size h, conditional on Y t = y.
+%%--Question 5
+\begin{enumerate}[(i)]
+\item (i) State the expectation and variance of $dY t = Y t+h − Y t$ , the increment of the process Y t over a small interval of size h, conditional on Y t = y.
+
+\item (ii) Calculate the expectation and variance of the increment X n+1 − X n of the autoregression, conditional on X n = y.
 [2]
-(ii) Calculate the expectation and variance of the increment X n+1 − X n of the
-autoregression, conditional on X n = y.
-[2]
-(iii) Find, by equating the first and second moments of the increments in (i)
-and (ii) above, an expression for the drift \mu(y) of the approximating
-diffusion in a form which does not involve the time increment h.
-[2]
-(iv) State a condition under which the approximating process in (iii) is a
-Brownian motion with drift.
-(v) State a condition under which the approximating process in (iii) is an
-Ornstein-Uhlenbeck process.
-[1]
-[Total 8]
+\item (iii) Find, by equating the first and second moments of the increments in (i) and (ii) above, an expression for the drift \mu(y) of the approximating diffusion in a form which does not involve the time increment h.
+\item 
+(iv) State a condition under which the approximating process in (iii) is a Brownian motion with drift.
+\item 
+(v) State a condition under which the approximating process in (iii) is an Ornstein-Uhlenbeck process.
+\end{enumerate}
+%%%%%%%%%%%%%%%%
 (i) Derive expressions for ρ 1 and ρ 2 , the autocorrelation function of X at lags
 1 and 2, in the case that X is a stationary process satisfying the recursion:
 [1]
-X t = \alphaX t−1 + e t + \betae t−1 ,
+X t = \alphaX t−1 + e t + \beta e t−1 ,
 where {e t : t = 1, 2, ...} is a sequence of uncorrelated random variables with
 [5]
 mean 0, variance σ 2 .
 (ii)
-A company’s monthly sales figures, corrected for trend and seasonal
-factors, exhibit sample autocorrelation function at lags 1 and 2 of r 1 = 0.5,
+A company’s monthly sales figures, corrected for trend and seasonal factors, exhibit sample autocorrelation function at lags 1 and 2 of r 1 = 0.5,
 r 2 = 0.4. Find method of moments estimators of \alpha and \beta for the model
 in (i).
 [3]
@@ -66,24 +61,20 @@ in (i).
 103 A2001—3
 PLEASE TURN OVER6
 A motor insurance company has 80,000 policy holders, paying an average annual
-premium of £400. The company receives claims at a rate of 2000 per month, the
-sizes of the claims having mean £1,200, standard deviation σ = £200.
-Let S(t) denote the company’s total surplus at time t, with S(0) equal to the
-initial reserve, set at £20,000,000.
+premium of £400. The company receives claims at a rate of 2000 per month, the sizes of the claims having mean £1,200, standard deviation σ = £200.
+Let $S(t)$ denote the company’s total surplus at time t, with $S(0)$ equal to the initial reserve, set at £20,000,000.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 7
-(i) Calculate the expectation of the total amount paid out in claims in a given
-month and the safety loading employed by the company.
+(i) Calculate the expectation of the total amount paid out in claims in a given month and the safety loading employed by the company.
 [2]
-(ii) State, with reasons, whether it would be appropriate to use a diffusion
-approximation to calculate the probability of ruin, that is the probability
-that the process {S(t) : t \geq 0} ever hits 0.
+(ii) State, with reasons, whether it would be appropriate to use a diffusion approximation to calculate the probability of ruin, that is the probability
+that the process ${S(t) : t \geq 0}$ ever hits 0.
 [3]
 (iii) Describe a simulation-based method for estimating the probability of ruin.
-Indicate why it would be important to use a method of generating pseudo-
-random variables which gives rise to reproducible sequences.
+Indicate why it would be important to use a method of generating pseudo-random variables which gives rise to reproducible sequences.
 [4]
 [Total 9]
-
+\newpage
 %%%%%%%%%%%%%%%%%%%%%%%%
 5
 (i) E ( dY t | Y t = y ) = \mu ( y ) h + o ( h ) , Var( dY t | Y t = y ) = h + o ( h )
