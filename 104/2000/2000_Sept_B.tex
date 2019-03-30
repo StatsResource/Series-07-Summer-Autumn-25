@@ -1,0 +1,169 @@
+5
+A life insurance company prices its long-term sickness policies using the following
+3-state continuous-time Markov model, in which the forces of transition \sigma, \rho, \mu
+and υ are assumed to be constant:
+\sigma
+State 1
+(healthy)
+\mu
+State 2
+(sick)
+\rho
+υ
+State 3
+(dead)
+For a group of policyholders observed over a 1-year period, there are:
+10 transitions from state 1 to state 2;
+7 transitions from state 2 to state 1;
+2 deaths from state 1;
+3 deaths from state 2.
+The total time spent in state 1 is 512 years, and in state 2 is 20 years.
+(i) Write down the likelihood function for these data. 
+(ii) Hence derive the maximum likelihood estimate of \sigma. 
+(iii) Calculate an estimate of the standard error of \sigmâ , where \sigmâ is the
+maximum likelihood estimator of \sigma .
+104(S)—3
+
+[Total 6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+6
+Suppose you have fitted the following proportional hazards regression model to
+the mortality data for a sample of life-assurance policyholders:
+h i ( t ) = h 0 ( t ) exp { 0 . 01 ( x i − 30 ) + 0 . 2 y i − 0 . 05 z i } ,
+where:
+h i (t ) denotes the hazard function for life i at duration t ;
+h 0 ( t ) denotes the baseline hazard function at duration t ;
+x i denotes the age at entry of life i ;
+y i = 1 if life i is a smoker, otherwise zero; and
+z i = 1 if life i is female, zero if male.
+(i)
+Describe the class of lives to which the baseline hazard function applies.
+
+7
+(ii) What does the model (if correct) tell you about the survival function of a
+male smoker aged 30 at entry, relative to that of a female smoker aged 40
+at entry?
+
+(iii) What does the model (if correct) tell you about the survival function of a
+female smoker aged 30 at entry, relative to that of a male non-smoker
+aged 40 at entry?
+
+[Total 7]
+(i) Consider an annuity payable continuously during the lifetime of ( x ), but
+for at most 20 years. The rate of payment at time t is £2,000 per annum
+for 0 \leq t \leq 5, and £10,000 per annum for 5 < t \leq 20. The force of mortality
+to which ( x ) is subject is assumed to be constant at 0.01.
+Calculate the expected present value of this annuity at a force of interest
+of 0.06.
+
+(ii)
+104(S)—4
+Calculate the expected present value of the benefits of an endowment
+assurance issued to the same life as in part (i), paying a sum assured of
+£20,000 at the end of five years or immediately on earlier death. The
+mortality and interest assumptions are the same as in part (i).
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+5
+(i)
+(ii)
+L = exp ( − 512 ( \sigma + \mu ) ) exp ( − 20 ( \rho + υ ) ) \sigma 10 \rho 7 \mu 2 υ 3
+l = ln L = − 512 \sigma + 10 ln \sigma + const . ( w . r . t . \sigma )
+∂ l
+10
+10
+0 =
+= − 512 +
+\sigma ˆ =
+= 0 . 0195 p.a.
+∂ \sigma
+\sigma
+512
+Þ
+A derivation was required.
+(iii)
+−
+10
+∂ 2 l
+= 2 , hence we can estimate Var \sigma ˆ by
+2
+∂ \sigma
+\sigma
+æ 10 ö
+ç 2 ÷
+è \sigma ø
+− 1
+\sigma ˆ 2
+, hence by
+10
+æ
+ç =
+ç
+è
+\sigmâ ö
+÷
+512 ÷ ø
+Hence estimated standard deviation of \sigmâ is \sigma ˆ
+6
+(i)
+(ii)
+10 = 0 . 00618 .
+male non-smokers aged 30 at entry.
+h j ( t )
+h i ( t )
+=
+exp( 0 + 0 . 2 + 0 )
+= e − 0 . 05 = 0 . 9512
+exp( 0 . 1 + 0 . 2 − 0 . 05 )
+where life j is a male smoker aged 30 at entry, and
+life i is a female smoker aged 40 at entry.
+t
+But S ( t ) = exp æ ç − ò h ( s ) ds ö ÷ , hence
+S j ( t ) = ( S i ( t ) )
+è
+0 . 9512
+ø
+0
+, which implies that
+S j ( t ) > S i ( t ) for all t > 0.
+(iii)
+h j ( t )
+h i ( t )
+=
+exp( 0 + 0 . 2 − 0 . 05 )
+= e 0 . 05 = 1 . 0513 ,
+exp( 0 . 1 + 0 + 0 )
+where life j is a female smoker aged 30 at entry, and
+life i is a male non-smoker aged 40 at entry.
+Hence S j ( t ) = ( S i ( t ) )
+1 . 0513
+, which implies that
+S j ( t ) < S i ( t ) for all t > 0.
+5
+7
+(i)
+EPV = ò 2000 e
+20
+− 0 . 06 s
+e
+− 0 . 01 s
+ds + ò 10000 e − 0 . 07 s ds
+0
+5
+= 2000a 5 | (at a force of 0.07) + 10000 e − 0 . 35 a 15 | (at force of 0.07)
+= 2000 × 4.21874158 + 10000 × e − 0.35 × 9.28660358 = 73879.07
+(ii)
+Page 6
+(
+EPV = 20,000 1 − δ . a x :5
+)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+From (i), a x :5 = 4.2187
+Hence EPV = 20,000 (1 − 0.06 × 4.2187) = £14,937.56
+Other expressions will lead to the same numerical results in (i) and (ii).
