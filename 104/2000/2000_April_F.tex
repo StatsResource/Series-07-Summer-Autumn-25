@@ -1,0 +1,187 @@
+A life insurance company issues only annual premium life assurance policies.
+The company keeps records of its life assurance policies in two files: an in-
+force file and a claims file.
+For each policy paying premiums the in-force file includes the following
+information:
+• age last birthday at the date of policy issue
+• smoking status (smoker or non-smoker)
+• sex
+• type of policy (temporary assurance, whole life assurance or endowment
+assurance)
+On 1 January each year the company tabulates summary statistics from this
+file. For each age x where:
+x = age last birthday at date of policy issue
++ number of annual premiums paid since policy issue
+a count of the number of policies sub-divided by smoking status, sex and type
+of policy is tabulated.
+For each policy for which a death claim has been paid the claims file includes
+the same information as the in-force file.
+On 1 January each year the company tabulates summary statistics from this
+file for death claims paid in the previous calendar year. For each age x where:
+x = age last birthday at date of policy issue
++ number of annual premiums paid up to the date of death
+a count of the number of policies divided by smoking status, sex and type of
+policy is tabulated.
+The company wishes to investigate the recent mortality experience of its life
+assurance policies.
+104—7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%(i)
+(a) Explain why the subdivisions of data by smoking status, sex and
+type of policy are important for the company’s mortality analysis.
+(b) Describe the statistical problems that can arise when data are
+sub-divided in this way.
+
+(ii) Defining suitable symbols, derive a formula for the estimation of the
+force of mortality using the data for an age group x according to the
+definitions given. State any assumptions that are required for your
+formula. State, with reasons, the age to which your estimate of the
+force of mortality applies.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii) The company proposes to graduate the crude estimates obtained from
+its investigations before using them for determining premiums.
+Describe an appropriate method of graduation indicating how the
+suitability of the graduated rates would be assessed. Detailed
+descriptions of graduation tests are not required.
+[6]
+[Total 17]
+104—8
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+12
+(i)
+11
+12
+= 1 p 12
+60 + 1 p 60 . 1 p 61
+.25
+(1 - e -.342 ) = .2117
+.342
+1 p 12
+60 =
+1 -.342
+p 11
+= .7103
+60 = e
+1 p 12
+61 =
+2 p 12
+60 = .2117 + .7103  ́ .0927 = .2775
+.10
+(1 - e -.154 ) = .0927
+.154
+(a) There is considerable evidence from other studies that mortality
+rates vary with smoking status (smokers have higher rates at all
+ages),
+sex (males have higher mortality at all ages)
+and policy class (permanent assurances i.e. whole life and
+endowment have different mortality than temporary
+assurances).
+To ensure homogeneity policies should be divided so that those of
+the same smoking status, sex and policy class fall in one group.
+All of the statistical models of mortality which might be
+parameterised from the data require the data to be
+homogeneous.
+(b) Too many subdivisions of data can make sample sizes very
+small.
+·
+·
+·
+so that the estimates will have large standard errors
+and hence little meaningful interpretation can be made
+may lead to identification of spurious selection
+Other relevant comments given credit.
+(ii)
+Choose a period of investigation from time 0 to time T, where T is a whole
+number of calendar years (say about 4) and 0 corresponds to the start of a
+calendar year.
+The x = age next birthday on policy anniversary before death.
+Let Sq x be total deaths labelled x in all calendar years during period of
+investigation.
+%%---- Page 13Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Let P x (t) be a census at time t after start of period of investigation of those
+lives having age label x at time t. Then
+E x c =
+t = T
+ò
+P x ( t ) . dt
+t = 0
+; 1⁄2P x (o) +
+t = T - 1
+å P ( t ) + 1⁄2P (T)
+t = 1
+x
+x
+assuming P x (t) varies linearly with t over each calendar year.
+Then: m ˆ x =
+5G x
+E x c
+estimates m x
+Policy year rate interval, average x - 1⁄2 at start assuming
+birthdays are uniformly distributed over the policy year, and that the
+force of mortality is constant over each year of age.
+(iii)
+The investigations are for widely sold classes of business, so graduation
+with reference to a standard mortality table for similar classes of business
+would be appropriate,
+e.g. using a published table for male permanent (whole life and
+endowment) assurances.
+Separate graduations would probably be necessary by type of policy, sex,
+and smoking status.
+The standard table should be chosen so that the characteristics of the
+company’s business are similar to those of the standard table, e.g.
+geographical regions in which the business is sold, policy terms and
+conditions.
+Plots of the standard table and the observed experience should be
+compared for “shape”. It is important that the shapes are similar.
+Graphical investigations should find a suitable relationship f ( q x s ), f ( m s x ),
+between the standard table rates and the current experience, e.g.
+o
+q x = a + bq x s reflects and approximate straight line relationship when q ˆ x
+is plotted against q x s . A perfect fit is not expected particularly at ages
+o
+where the data are scanty. [ q x is graduated rate, q ˆ x is crude estimate].
+%%---- Page 14
+%%-- Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+A best fitting line should be fitted. Weighted least squares provides a
+satisfactory fitting method, e.g. choose a and b to minimise
+å w ( q
+x
+x
+o
+x
+- q ˆ x ) 2 =
+where w x = [Var( q  x )] - 1
+å w ( a + bq
+x
+s
+x
+- q ˆ x ) 2
+q  x is estimator of q ˆ x
+The resulting graduated rates are tested for adherence to the crude
+estimates.
+o
+Smoothness of q n will be ensured by the method of graduation, since
+smoothness is “borrowed” from the standard table.
+Tests for “adherence to data” should include a test for overall fit (c 2 test)
+o
+and tests for the pattern of residuals ( q x - q ˆ x )
+by size (sign test, standardised deviations test)
+and by pattern with age (cumulative deviations test, serial correlation
+test.
+If satisfactory adherence to data cannot be obtained then the chosen
+relationship should be reassessed, i.e. choose new f ( q x s ) or f ( m sx ) and
+repeat fitting and testing.
+If a satisfactory relationship cannot be found, then the choice of standard
+table should be reassessed and the fitting procedure repeated.
+Similar description of fitting parametric formula also acceptable.
+Graphical methods not acceptable.
+o
+ˆ s can be tabulated with sufficient
+The graduated rates, e.g. q x = a ˆ + bq
+x
+significant figures to facilitate their use in premium rate calculations.
+%%---- Page 15
