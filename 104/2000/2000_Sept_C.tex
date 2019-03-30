@@ -1,0 +1,128 @@
+[Total 7]8
+In a mortality investigation the total number of deaths at age x during the period
+of investigation is θ x . Age x is defined as:
+x = [age next birthday at the start of the policy]
++ [curtate duration at the date of death]
+(i) State, precisely, the rate interval implied by this definition.
+(ii) Describe, precisely, the central exposed to risk E x c that would correspond
+to this definition.
+
+(iii) Give the age, x + f , for which the estimate ç ç \mu o ( x ) =
+æ
+è
+θ x
+E x c
+ö
+÷
+÷
+ø
+estimates \mu x + f .
+State and explain any assumptions you make in determining f .
+(iv)
+9
+
+
+Explain how your answer to (iii) above would change if an investigation
+showed that, on average, lives purchased their policies two months before
+a birthday.
+
+[Total 8]
+Life insurance companies, investigating the mortality experience of their
+policyholders, usually count the number of policies in force and the number of
+policies giving rise to death claims, rather than the number of lives assured in
+force and the number of lives who die during the period of investigation.
+(i) Explain why this is done. Describe the statistical problems that might
+arise from an investigation based on policies rather than on the lives
+assured.
+
+(ii) If N identical and independent lives aged x exact are observed until age
+x + 1 (or until earlier death), and π i is the proportion of those lives having
+exactly i policies ( i = 1, 2, 3, ...), then show algebraically how the
+statistical problems you described in part (i) arise.
+
+[Total 8]
+104(S)—5
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+(i) Policy year rate interval starting (for deaths classified x) on the policy
+anniversary on which lives were x next birthday.
+(iii) The total number of life years for which lives were exposed to the risk of
+dying while aged x next birthday on the immediately preceding policy
+anniversary.
+or
+Let P x ( t ) be a census at time t after the start of the period of investigation of those
+lives aged x next birthday on the policy anniversary immediately prior to t, then
+central exposed to risk is
+t = T
+ò P x ( t ). dt
+t = 0
+where the period of investigation is (0,T).
+(iii) x+f = average age of lives half-way through the rate interval
+Thus, if birthdays uniformly distributed over the policy year, lives will be
+on average x-1⁄2 at the start of the rate interval and x+f = x.
+(iv) The assumption of uniform birthdays over the policy year is violated.
+o
+Lives now x − 1 6 on average at the start of the rate interval and hence \mu x
+estimates \mu x + 1 3 .
+9
+(i) Done because life assurance companies have data in this form (and hence
+far easier than working with lives) and because the result is an unbiased
+estimate of the rate, provided there is no correlation between deaths and
+the number of policies covering a life. However, the variance of the
+estimate is increased. Graduation tests etc will therefore need to be
+adjusted to allow for this.
+(ii) Let D i be the number of deaths among the π i N lives each with i polices,
+and let C i be the number of claims among the same lives (i.e. C i = i D i ).
+We can say that:
+D i
+~
+Binomial( π i N, q x )
+Page 7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+because we have independence of deaths . Therefore:
+å C ]
+Var[ å i D ]
+å i Var[ D ]
+å i π Nq (1 − q ) .
+Var[ C ] =
+Var[
+i
+i
+=
+i
+i
+2
+=
+i
+(independence of deaths)
+i
+2
+=
+i
+x
+x
+å i π N independent lives (or policies) we would have:
+E[ C ] = å i π Nq
+Var[C] = å i π Nq ( 1 − q ) .
+i
+If we observed
+i
+i
+i
+x
+i
+i
+x
+x
+i
+So, the effect of duplicate policies is to increase the variance of the number of
+claims, in the ratio
+å i π
+r =
+å i π
+2
+i
+i
+i
+i
+ˆ ( t) =
+The Nelson-Aalen estimator is Λ
