@@ -1,0 +1,229 @@
+5
+Thiele’s equation for the policy value at duration t, t V , of an immediate life
+annuity payable continuously at a rate of £1 per annum from age x is:
+∂
+t V = \mu x+t . t V − 1 + δ . t V
+∂ t
+(i) Derive this result algebraically showing all the steps in your
+argument.
+(ii) Explain this result by general reasoning.
+104—2
+
+
+
+[Total 8]6
+In a mortality investigation the actual number of deaths at age x last birthday
+is d x . The goodness of fit between the data and the force of mortality, \mu x+1⁄2 ,
+over the age range x 1 , x 1 + 1, x 1 + 2 ..., x 1 + m − 1 can be tested using the
+statistic
+x = x 1 + m − 1
+∑
+x = x 1
+( d
+x
+− E x c \mu x + 1⁄2
+E x c \mu x + 1⁄2
+)
+2
+where E x c is the central exposed to risk which corresponds to d x .
+For each of the following cases state the null hypothesis being tested, and give
+the sampling distribution of this statistic as precisely as you can from the
+given information:
+(a) if \mu x+1⁄2 are taken from a standard mortality table;
+(b) if \mu x+1⁄2 are the graduated rates obtained from the crude estimates using
+the Gompertz-Makeham formula
+g(x) = a 0 + exp{b 0 + b 1 x + b 2 x 2 };
+(c)
+if \mu x+1⁄2 are the graduated rates obtained from the crude estimates using
+the formula
+g(x) = \mu sx + k
+where \mu sx are taken from a standard mortality table and k is a constant;
+and
+(d)
+if \mu x+1⁄2 are the graduated rates obtained from a graphical graduation of
+the crude estimates d x / E x c .
+104—3
+[8]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%7
+Let X be a random variable representing the present value of the benefits of a
+whole of life assurance, and Y be a random variable representing the present
+value of the benefits of a temporary assurance with a term of n years. Both
+assurances have a sum assured of 1 payable at the end of the year of death and
+were issued to the same life aged x.
+(i) Describe the benefits provided by the contract which has a present
+value represented by the random variable X − Y.
+(ii) Show that
+
+Cov(X, Y) = 2 A x 1 : n − A x A 1 x : n
+and hence or otherwise that
+Var(X − Y) = 2 A x − ( n  A x ) 2 − 2 A x 1: n
+where the functions A are determined using an interest rate of i, and
+functions 2 A are determined using an interest rate of i 2 + 2i.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[Total 8]
+
+
+5
+(i)
+The life annuity will be secured by a single payment at age x and so the
+policy value at duration t will be
+t V
+= a x + t
+s =¥
+t V
+= a x + t =
+ò
+e -d s . s p x+t . ds
+s = 0
+So:
+¶
+t V
+¶ t
+=
+¶
+¶ t
+s =¥
+=
+ò
+s = 0
+Now
+s =¥
+ò
+e -d s s p x+t . ds
+s = 0
+e -d s
+¶
+s p x+t . ds
+¶ t
+¶
+¶ æ l x + t + s ö
+ç
+÷
+s p x+t =
+¶ t
+¶ t è l x + t ø
+=
+l x + t ( -m x + t + s . l x + t + s ) - l x + t + s ( -m x + t l x + t )
+l x 2 + t
+= s p x+t (m x+t - m x+t+s )
+\
+¶
+t V
+¶ t
+s =¥
+=
+ò
+e -d s . s p x + t (m x+t - m x+t+s ) ds
+s = 0
+s =¥
+= m x + t a x + t -
+ò
+s = 0
+%%---- Page 4
+e -d s s p x + t m x + t + s . dsSubject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+= m x + t a x + t
+ì
+ï
+- í - e -d s . s p x + t
+ï
+î
+¥
+0
+ü
+ï
+e -d s s p x + t . ds ý
+ï
+s = 0
+þ
+s =¥
+- ( -d )
+ò
+= m x + t a x + t - 1 + d a x + t
+= m x + t . t V - 1 + d . t V
+A derivation is required for (i). Alternative “steps” are possible.
+(ii)
+If we consider the short time interval (t, t + dt) then equation implies
+t + dt V
+- t V = t V . d dt - 1 . dt + t V m x + t dt + o ( dt )
+where
+t V @ dt Interest earned on the reserve over (t, t + dt)
+- 1 . dt Annuity payments made in (t, t + dt)
++ t V m x + t . dt Reserves “released” as a result of deaths
+in (t, t + dt)
+and these are all the “changes” that can happen over (t, t + dt).
+[Note: the candidates may write the expression as:
+t V (1
++ d . dt ) =
+t + dt V
++ 1 . dt - dt . m x + t . t V + o ( dt )
+which might be easier to interpret as [income] = [outgo]]
+6
+(a)
+H 0 : the observed transition rates m ˆ x + 1⁄2 come from a population in which
+the standard table rates are the true rates.
+c 2 with m degrees of freedom
+(b)
+H 0 : the observed transition rates m ˆ x + 1⁄2 come from a population in which
+the graduated transition rates are the true rates
+In the graduation process four parameters have been estimated so
+sampling distribution is c 2 with m - 4 degrees of freedom.
+%%---- Page 5Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(c)
+H 0 : same as in (b).
+1 degree of freedom is lost for each parameter estimated, plus an
+unknown additional number for each constraint imposed by the standard
+table; say p degrees of freedom, so:
+c 2 with m - 1 - p degrees of freedom.
+(d)
+H 0 : same as in (b)
+The best fitting curve will usually be drawn as a series of curved segments
+joined smoothly.
+Each segment imposes a constraint of height, slope and curvature; so lose
+2 or 3 degrees of freedom for each section of about 10 ages drawn; so in 2
+sections for example we have
+c 2 with say m - 5 degrees of freedom.
+7
+(i) X - Y is the present value of a deferred whole of life assurance with a sum
+assured of 1 payable at the end of the year of death of a life now aged x
+provided the life dies after age x + n.
+(ii) X = v k+1
+all k
+Cov(X, Y)
+= E[XY] - E[X] E[Y]
+k = n - 1
+Now E[XY] =
+å
+k = 0
+k + 1
+ì
+ï v
+Y = í
+ï
+î 0
+k 3 n
+( v k + 1 ) 2 P [ K x = k ] +
+k = n - 1
+=
+0 £ k < n
+å ( v
+k = 0
+2 k + 1
+)
+k =¥
+å v
+k = n
+k + 1
+ ́ 0  ́ P [ K x = k ]
+P [ K x = k ]
+= 2 A x 1: n
+Where 2 A is determined using a discount function v 2 , i.e. using an interest
+rate
+i* = (1 + i) 2 - 1 = 2i + i 2
+Then: Cov(X, Y) = 2 A x 1 : n - A x . A 1 x : n
+%%---- Page 6Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Now: Var(X - Y) = Var(X) + Var(Y) - 2 Cov(X, Y)
+= ( 2 A x - ( A x ) 2 ) + ( 2 A x 1 : n - ( A x 1 : n ) 2 ) - 2( 2 A x 1 : n - A x . A x 1 : n )
+= ( 2 A x + 2 A x 1 : n | - 2 2 A x 1 : n | ) - (( A x ) 2 + ( A 1 x : n | ) 2 - 2 A 1 x : n | A x )
+= 2 A x - 2 A x 1 : n - ( A x - A 1 x : n ) 2
+= 2 A x - 2 A x 1 : n - ( n 1⁄2 A x ) 2
+Alternative approaches are possible.
