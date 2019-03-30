@@ -1,0 +1,285 @@
+104(S)—7
+12
+The following data have been taken from a mortality investigation of a life
+insurance company’s male whole of life policyholders aged between 25 and 65.
+The graduated rates were obtained by fitting a mathematical formula to the
+data. The formula has four parameters, which were estimated using the method
+of maximum likelihood.
+Age
+(x)
+Initial
+exposed
+to risk
+E x
+Observed
+deaths
+θ x
+Graduated
+rate
+Q x
+Expected
+deaths
+E x q x
+E x q x p x
+Standar-
+dised
+deviations
+θ x − E x q x
+E x q x p x
+35
+36
+37
+38
+39
+40
+41
+14 211
+12 381
+11 704
+11 038
+10 947
+13 885
+11 507
+85 673
+17
+21
+27
+24
+29
+21
+30
+169
+0.001998
+0.002061
+0.002124
+0.002187
+0.002250
+0.002314
+0.002378
+28.39
+25.52
+24.86
+24.14
+24.63
+32.13
+27.36
+187.03
+28.33
+25.47
+24.81
+24.09
+24.57
+32.06
+27.29
+186.62
+−2.14
+−0.89
+−0.43
+−0.03
++0.88
+−1.97
++0.51
+(i) Perform the Chi-squared test, and two other appropriate tests for the
+adherence of this graduation to the data. Comment on the results of the
+tests.
+[8]
+(ii) Describe the statistical rationale underlying the cumulative deviations
+test, a test which is often used to assess adherence to data in a
+graduation. State an important limitation of the test when used for this
+purpose, and explain how you could overcome this limitation.
+
+[Total 12]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12
+(i)
+For all tests we assume H 0 : the graduated rates of mortality are the true
+underlying mortality rates of the experience.
+Chi-squared test: χ 2 = 10.5 with 3 degrees of freedom.
+Significant at the 5% level since greater than 7.815.
+Candidates who pointed out that the data given was only a sample from
+the data used to fit the mathematical formula and thus argued that the
+degrees of freedom should be >3 were also given credit.
+NOW any two of
+Range
+Observed
+Expected
+-∞,-3
+0
+0
+-3,-2
+1
+0.15
+-2,-1
+1
+0.96
+-1,0
+3
+2.39
+0,+1
+2
+2.39
++1,+3
+0
+0.96
++2,+3
+0
+0.15
++3,∞
+0
+0
+Individual standardized deviations: −2.14 and −1.97 (just) outside ±1.96
+2 out of 7 lie outside ±1.960, the upper and lower 2.5% points of standard
+normal, and both are negative
+There are 2 positive and 5 negative deviations, when are equal number of
+each and are expected if this is true.
+There are 3 absolute deviations < 0.67 and 4 greater than 0.67, when an
+equal number of each expected if H 0 is true.
+These results cast some doubt on whether the individual standardized
+deviations are approximately standard normal, and this whether H 0 is
+true.
+These results cast some doubt on whether the individual standardized
+deviations are approximately standard normal, and thus whether H 0 is
+true.
+Group signs of deviations (stevens Test)L with n 1 =2 positive and n 2 =5
+negative deviations , these are 2 groups of +ve signs.
+Page 10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+å
+2
+Prob (number of groups less than or equal to 2) =
+t = 1
+=
+=
+æ 1 ö æ 6 ö
+ç ÷ ç ÷
+è 0 ø è 1 ø
+æ 7 ö
+ç ÷
+è 2 ø
++
+æ n 1 − 1 ö æ n 2 + 1 ö
+ç
+÷ç
+÷
+è t − 1 øè t ø
+æ n ö
+ç ÷
+è n 1 ø
+æ 1 ö æ 6 ö
+ç ÷ ç ÷
+è 1 ø è 2 ø
+æ 7 ö
+ç ÷
+è 2 ø
+6 15
++
+21 21
+=1
+Under null hypothesis, the probability of 2 or fewer groups of positive
+signs is 1 so no reason to reject null hypothesis.
+Serial Correlation Test:
+4.07
+= − 0.5814
+7
+Then
+z =−
+I
+z i − z
+z i + 1 − z
+1
+-1.56
+-0.31
+2
+-0.31
+0.15
+And r 1 =
+− 2.2219
+6 × 8.1065
+7
+3
+0.15
+0.55
+4
+0.55
+1.46
+5
+1.46
+-1.39
+6
+-1.39
+1.09
+7
+1.09
+= − 0.3198
+Then standardised r 1 = − 0.3198 7 = − 0.8460
+which is standard normal if H 0 is true, so no reason to reject null
+hypothesis.
+Cumulative deviations:
+169 − 187.03
+186.62
+= − 1.32 , which is standard normal if H 0 is true
+Not significant at 5% level, or even at 10%.
+Signs of deviations: 3 out of 7 positive.
+Page 11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+If H 0 is true
+7
+7!
+1
+(
+2 )
+k !(7 − k !)
+giving
+K
+Probability
+0
+0.00781
+1
+0.05469
+2
+0.16406
+3
+0.27344
+So not significant at 5% level.
+Credit was not given for both the grouping of signs and serial correlations
+test
+Comments: The graduated rates are apparently too high over this age
+range (see individual standardized deviations) but otherwise appear
+adequate.
+There was a misprint in the question. The standardised deviation of –0.43
+should be +0.43. The majority of candidates used the standardised
+deviations as given. Any candidate who recalculated the standardised
+deviation and used +0.43 in subsequent tests received full credit. An upper
+case Q in place of the correct lower case q in the column headings caused no
+confusion to those who noticed it.
+(ii)
+H 0 :
+the graduated rates = true underlying rates
+Under H 0 , approx. ~ N ( E x q x , E x q x p x ) .
+If independence can be assumed then
+å ( θ
+x
+− E x q x ) ~ N (0,
+x
+approx. and
+z =
+å E q p )
+x
+x
+x
+å ( θ − E q ) ~ N (0,1) approx.
+å E q p
+x
+x
+x
+x
+x
+x
+Reject H 0 at 5% level of significance if z > 1.96
+But independence assumption is highly dubious. Negative dependence is
+very likely if one considers the whole age range (because graduation
+θ x and
+E x q x ). Can be
+attempts to achieve approximate equality of
+å
+å
+overcome by splitting the range into two or three equal ranges and testing
+each separately.
