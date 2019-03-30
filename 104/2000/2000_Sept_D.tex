@@ -1,0 +1,333 @@
+
+
+104(S)—611                               10
+The following data relate to 12 patients who had an operation which was
+intended to correct a life-threatening condition, where time 0 is the start of the
+period of the investigation:
+Patient number Time of operation
+(in weeks) Time observation
+ended (in weeks) Reason observation
+ended
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12 0
+0
+0
+4
+5
+10
+20
+44
+50
+63
+70
+80 120
+68
+40
+120
+35
+40
+120
+115
+90
+98
+120
+110 Censored
+Death
+Death
+Censored
+Censored
+Death
+Censored
+Death
+Death
+Death
+Death
+Death
+You can assume that censoring was non-informative with regard to the survival
+of any individual patient.
+(i) Compute the Nelson-Aalen estimate of the cumulative hazard function,
+Λ ( t ) , where t is the time since having the operation.
+
+(ii) Using the results of part (i), deduce an estimate of the survival function
+for patients who have had this operation.
+
+(iii) Estimate the probability of a patient surviving for at least 70 weeks after
+undergoing the operation.
+
+[Total 9]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+Consider the following multiple-decrement model, in which S ( t ), the state
+occupied at time t of a life initially aged x , is assumed to follow a continuous-time
+Markov process.
+State 1
+\mu 01
+\mu 02
+State 0
+\mu 03
+State 2
+State 3
+The usual notation t p x ab = P ( S ( t ) = b  S (0) = a ) is used, and the forces of
+transition (\mu 0 k , k = 1, 2, 3) are assumed to be constant.
+(i) Derive differential equations for t p x 00 and t p x 01 , and state the relevant
+boundary condition for each equation.
+
+(ii) Hence find simple explicit expressions for t p x 00 and t p x 01 .
+(Your final answers should be expressed in terms of \mu 0 k , k = 1, 2, 3 only.)
+
+[Total 10]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+T
+n j
+d j
+å d n
+j
+, where:
+j
+(i)
+d j n j
+ˆ ( t) =
+Λ
+0 \leq t < 30
+30 \leq t < 35
+35 \leq t < 40
+40 \leq t < 50
+50 \leq t < 68
+68 \leq t < 71
+71 \leq t < 120
+(iii)
+Page 8
+12
+12
+9
+8
+6
+5
+4
+S ˆ ( 70 ) = 0 . 4088
+0
+2
+1
+2
+1
+1
+1
+0
+2/12
+1/9
+2/8
+1/6
+1/5
+1/4
+å
+(ii)
+d j
+0
+0.1667
+0.2778
+0.5278
+0.6944
+0.8944
+1.1444
+n j
+ˆ ( t ))
+S ˆ ( t ) = exp( − Λ
+1
+0.8465
+0.7575
+0.5899
+0.4994
+0.4088
+0.3184%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+11
+(i) (a)
+t + h
+p x 00 =
+å
+3
+æ
+t
+k = 0
+p x 0 k h p x k + 0 t = t p x 00 h p x 00 + t = t p x 00 ç 1 −
+è
+å
+3
+k = 1
+ö
+h
+p x 0 + kt ÷
+ø
+making Markov assumption, all other transitions have zero probability,
+by law of total probability
+å h \mu
+3
+æ
+= t p x 00 ç 1 −
+è
+0 k
+ö
++ o ( h ) ÷ using definitions of \mu ok k = 1,2,3
+ø
+k = 1
+then
+Þ
+t + h
+å
+3
+p x 00 − t p x 00
+=− t p x 00 \mu 0 k + o ( h ) h
+h
+k = 1
+taking limits
+hence
+(b)
+t + h
+∂
+∂ t
+p x 01 =
+(
+)
+t
+å
+3
+k = 0
+æ
+p x 00 = lim ç ç
+t
+h → 0 +
+t + h
+è
+å
+p x 00 − t p x 00 ö
+æ 3
+ö
+÷ = − ç
+\mu 0 k ÷ t p x 00 , and 0 p x 00 = 1 .
+÷
+h
+è k = 1
+ø
+ø
+00
+01
+p x 0 k h p x k + 1 t = t p x 00 h p x 01 + t + t p x 01 h p 11
++ o ( h )) + t p x 01 × 1
+x + t = t p x ( h \mu
+Then
+Þ
+p x 01 − t p x 01
+= \mu 01 t p x 00 + o ( h ) h ,
+h
+∂
+hence
+( t p x 01 ) = \mu 01 t p x 00 , and 0 p x 01 = 0 .
+∂ t
+(ii)
+t + h
+(a)
+å
+3
+∂
+ln t p x 00 = − \mu 0 k
+∂ t
+k = 1
+(
+)
+then
+00
+Þ t p x
+0
+æ
+= const × exp ç − t
+è
+p x 00 = 1
+å \mu
+0 k
+k
+ö
+÷
+ø
+Þ const = 1 .
+(b)
+∂
+∂ t
+(
+t
+p
+01
+x
+) = \mu
+01
+t
+p
+00
+x
+Þ p
+t
+t
+01
+x
+− 0 p
+01
+x
+= \mu
+01
+ò
+s
+p x 00 ds ,
+0
+Page 9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+Now
+t
+p
+01
+x
+0
+p x 01 = 0 so
+= \mu
+01 æ
+å
+3
+\mu
+ç
+è k = 1
+0 k
+ö
+÷
+ø
+− 1
+[ − e
+− s å \mu 0 k
+]
+t
+s = 0
+=
+\mu 01
+å \mu
+3
+0 k
+3
+æ
+− t å \mu 0 k
+ç
+1 − e k = 1
+ç
+ç
+è
+ö
+÷
+÷
+÷
+ø
+k = 1
