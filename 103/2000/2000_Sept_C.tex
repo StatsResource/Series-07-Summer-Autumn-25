@@ -33,13 +33,13 @@
 
 \begin{document}
 \begin{enumerate}
-5
+%%-- Question 5
 \item 
 \begin{enumerate}[(i)]
 \item (i) State Itô’s lemma as it applies to a stochastic process $\{X_t : t \geq 0\}$ and a
 function $f(X_t)$ which is not explicitly dependent on t.
-[2]
-\item (ii) Apply Ito’s Lemma with f(x) = x 4 to calculate the stochastic differential
+
+\item (ii) Apply Ito’s Lemma with $f(x) = x_4$ to calculate the stochastic differential
 d ( B t 4 ), where B t is standard Brownian motion.
 [3]
 \item (iii) Hence express the Itô integral
@@ -50,6 +50,8 @@ B s 3 dB s in terms of B t and of an ordinary
 \end{itemize}
 \item Consider a homogeneous Markov chain with state space $S = \{1, 2, 3\}$ and
 transition matrix
+
+%\begin{pmatrix}
 P =
 F 1⁄4
 G 1⁄2
@@ -64,22 +66,18 @@ J
 \item (ii) Calculate, for each of the following initial conditions, the probability that the chain will be in state 3 when it is observed at time n = 3 given that:
 (iii)
 103—3
-[2]
+
 (a) the chain is in state 1 at time zero
 (b) the chain is in state 1 at time zero and in state 2 at time 1
-(c) the probabilities of being in states 1, 2, and 3 at time zero are
-8
-, 9 and 31
+(c) the probabilities of being in states 1, 2, and 3 at time zero are 8 , 9 and 31
 respectively
 given by 14
 31 31
 \end{enumerate}
-How would your answers to (a), (b) and (c) change if the time of the
-observation were n = 300 instead of n = 3?
-[2]
-[Total 8]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
-6
+How would your answers to (a), (b) and (c) change if the time of the observation were $n = 300$ instead of $n = 3$?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55%%
+%%- Question 6
 The daily closing price of a share is observed every trading day for a year, yielding a sequence of values ${s_1 , \ldots, s_n }$. A model is required for the purposes of predicting future variability of the share price. The model suggested is a
 Brownian one.
 
@@ -87,8 +85,8 @@ Brownian one.
 Explain briefly, on purely theoretical grounds, which of the two models
 
 \begin{description}
-\item[I:] S t = μ + αt + σB t
-\item[II:] log(S t ) = μ + αt + σB t
+\item[I:] S t = \mu + \alpha t + σB t
+\item[II:] log(S t ) = \mu + \alpha t + σB t
 \end{description}
 %-----------------------------------%
 you would expect to provide a better fit.
