@@ -33,33 +33,30 @@
 
 \begin{document}
 1
-There are N individuals in a population, some of whom have a certain infection
-that spreads as follows. Contacts between two members of this population occur
-in accordance with a Poisson process having rate λ. When a contact occurs, it is
+There are N individuals in a population, some of whom have a certain infection that spreads as follows. Contacts between two members of this population occur in accordance with a Poisson process having rate $\lambda$. When a contact occurs, it is
 equally likely to involve any of the P =
 N
 e 2 j
 pairs of individuals in the population.
-If a contact involves an infected and a non-infected individual, then with
-probability p the noninfected individual becomes infected. Once infected, an
-individual remains infected throughout. Let X(t) denote the number of infected
-members of the population at time t.
+If a contact involves an infected and a non-infected individual, then with probability $p$ the noninfected individual becomes infected. Once infected, an individual remains infected throughout. Let $X(t)$ denote the number of infected members of the population at time t.
 2
 
+
+%%%%%%%%%%%%%%%%%%%%%%
 3
-(i) State whether X(t), t > 0 is a continuous-time Markov jump process. If so,
-write down its state space and transition rates; if not, explain how it can
-be expressed in terms of a different process which is Markov.
-[2]
-(ii) Derive an expression for the expected time until all members are infected,
-starting from a single infected individual
-[2]
-[Total 4]
+
+\begin{enumerate}[(i)]
+\item %(i) 
+State whether X(t), t > 0 is a continuous-time Markov jump process. If so, write down its state space and transition rates; if not, explain how it can be expressed in terms of a different process which is Markov.
+
+\item %(ii) 
+Derive an expression for the expected time until all members are infected, starting from a single infected individual
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1
 (i)
-This is clearly a Markovian birth process. The state space is {0, 1, ..., N}.
+This is clearly a Markovian birth process. The state space is $\{0, 1, \ldots , N\}$.
 Given that we have m infected and N − m healthy individuals, the
 number of “dangerous” pair contacts is m(N − m). Thus, the rate
 m ( N − m )
