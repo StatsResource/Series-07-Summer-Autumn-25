@@ -32,28 +32,21 @@
 
 \begin{document}
 \begin{enumerate}
-\item The size of a claim, X, which arises under a certain type of insurance contract, is
-to be modelled using a gamma random variable with parameters $\alpha$ and $\theta$
-(both > 0) such that the moment generating function of X is given by
+\item The size of a claim, X, which arises under a certain type of insurance contract, is to be modelled using a gamma random variable with parameters $\alpha$ and $\theta$ (both > 0) such that the moment generating function of X is given by
 \[M(t) = (1 - \theta t)-$\alpha$ , t < 1/\theta .\]
-By using the cumulant generating function of X, or otherwise, show that the
-coefficient of skewness of the distribution of X is given by %2/√$\alpha$. [5]
+By using the cumulant generating function of X, or otherwise, show that the coefficient of skewness of the distribution of X is given by %2/√$\alpha$. [5]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item  Let $Z$ be a random variable with mean 0 and variance 1, and let X be a random
-variable independent of $Z$ with mean 5 and variance 4. Let Y = X - Z.
+\item  Let $Z$ be a random variable with mean 0 and variance 1, and let X be a random variable independent of $Z$ with mean 5 and variance 4. Let Y = X - Z.
 Calculate the correlation coefficient between X and Y. %[5]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 2000 - September - 11
 \item 
-Let $X_1 , X_2 , \ldots, X_n$ be a random sample of size $n$ from a distribution with density
-\[f ( x ; θ ) = \frac{2x}{\theta^2} , \; 0 <x < \theta, \; \theta >0 \]
+Let $X_1 , X_2 , \ldots, X_n$ be a random sample of size $n$ from a distribution with density \[f ( x ; θ ) = \frac{2x}{\theta^2} , \; 0 <x < \theta, \; \theta >0 \]
 
 \begin{enumerate}[(a)]
-\item Write down the likelihood function clearly and hence by drawing a rough
-sketch of the likelihood function, show that the maximum likelihood
-estimator of $\theta$ is given by $\hat{\theta} = max{ X_1 , X_2 , \ldots, X_n }$.
+\item Write down the likelihood function clearly and hence by drawing a rough sketch of the likelihood function, show that the maximum likelihood estimator of $\theta$ is given by $\hat{\theta} = max{ X_1 , X_2 , \ldots, X_n }$.
 \item
 Without calculating $E ( \hat{\theta} )$ , explain why $\hat{\theta}$ is a biased estimator of $\theta$.
 \end{enumerate}
@@ -69,9 +62,7 @@ The log-likelihood function is
 Differentiating gives
 
 \[ \frac{\partial l(\alpha}{ \partial \alpha} = \frac{n}{\alpha -1} - \sum \log(1 + x_i ) \]
-It is easy to see that the log-likelihood has only one turning point, so this
-can be found by equating the derivative to zero. This gives that the
-maximum likelihood estimate is
+It is easy to see that the log-likelihood has only one turning point, so this can be found by equating the derivative to zero. This gives that the maximum likelihood estimate is
 
 \[ \hat{\alpha} = 1 + \frac{n}{ \sum \log(1 + x_i )}\]
 
@@ -83,12 +74,8 @@ So an approximate 95\% confidence interval for $\alpha$ is
 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item A market research company intends to estimate the proportion of the population,
-$\theta$, who support a certain political party. They intend to poll a sample large
-enough so that a 95\% confidence interval for $\theta$ has a width of 0.03 or less. It is
-thought that $\theta$ is approximately equal to 0.4.
-Assuming that everyone questioned will respond to the poll, calculate the
-minimum size of sample which the company should take. 
+\item A market research company intends to estimate the proportion of the population, $\theta$, who support a certain political party. They intend to poll a sample large enough so that a 95\% confidence interval for $\theta$ has a width of 0.03 or less. It is thought that $\theta$ is approximately equal to 0.4.
+Assuming that everyone questioned will respond to the poll, calculate the minimum size of sample which the company should take. 
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 Q9 Comment: Many candidates used the MGF directly (and encountered some
@@ -117,8 +104,7 @@ Var X Var Y
 4 5
 E X X - Z -
 ×
-\item The independence of X and Z implies that E(XZ) = 0, and as
-E(X2) = Var(X) + 52 = 29, we obtain that the correlation is
+\item The independence of X and Z implies that E(XZ) = 0, and as E(X2) = Var(X) + 52 = 29, we obtain that the correlation is
 29 0 25
 20
 - - =
@@ -160,9 +146,7 @@ Page 6
 (ii) Since $X_i < \theta$ for all i
 then $max(Xi) < \theta$ always
 ∴ $E( \hat{\theta}) < \theta$ ∴$\hat{\theta}$ is biased
-Q11 Comment: Few candidates appreciated the significance of the fact that the range of the
-variable included the unknown parameter $\theta$ and therefore the likelihood $L(\theta)$ has a
-discontinuity (above which it is decreasing).
+Q11 Comment: Few candidates appreciated the significance of the fact that the range of the variable included the unknown parameter $\theta$ and therefore the likelihood $L(\theta)$ has a discontinuity (above which it is decreasing).
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
 \newpage
 12 Assuming n will be large enough to make a normal approximation to the
@@ -171,8 +155,7 @@ binomial acceptable, the confidence interval will be
 % n
 % \theta - \theta \theta ± where ˆ\theta
 is the proportion of the sample who support the party.
-Although $\hat{\theta}$ is unknown, it can be estimated as 0.4, so the width of the interval
-will be approximately
+Although $\hat{\theta}$ is unknown, it can be estimated as 0.4, so the width of the interval will be approximately
 0.4 0.6
 2 1.96
 n
