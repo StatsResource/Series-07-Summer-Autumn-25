@@ -1,0 +1,127 @@
+10
+The population of elderly people in a prison is observed during the period
+1 January 1994 to 31 December 1996. The duration of residence (measured to
+the nearest number of months) is recorded for those who die during the
+period, for those who are released from the prison during the period and for
+those who are still in residence on 31 December 1996.
+The recorded data measured in months are
+6 † 6 6 6 7 9 †
+10 † 10 11 † 13 16 17 †
+20 23 †
+where † indicates those who were released from the prison during the period
+or who were still in residence on 31 December 1996.
+(i) State the type(s) of censoring present in these data.
+(ii) Calculate the product-limit (Kaplan-Meier) estimate of the survival
+function, S(t), where t is the duration of residence in the prison.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii) State the assumptions underlying the estimate in (ii), and explain how
+each of these assumptions would apply to these data.
+
+[Total 13]
+104—5
+
+\newpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%---- Page 9Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+10
+(i)
+Those lives who are released from prison during the period of
+investigation or who are still alive and resident in the prison at the end of
+the period of investigation are right censored.
+Duration is recorded to the nearest month so there is interval censoring.
+Being released from prison is a form of random censoring.
+(ii)
+We can summarise the data to obtain the statistics necessary to complete
+the estimation.
+j t j
+months R j
+Risk set
+= R j-1 - d j-1 - C j-1 C j
+# censored
+in [t j , t j+1 ] d j
+# of deaths
+1
+2
+3
+4
+5
+6 6
+7
+10
+13
+16
+20 14
+10
+8
+5
+4
+2 1
+1
+2
+0
+1
+1 3
+1
+1
+1
+1
+1
+Then estimates of survival probabilities are
+j t j
+1
+2
+3
+4
+5
+6
+7 6
+7
+10
+13
+16
+20
+23
+s j = s j-1  ́
+( R j - 1 - d j - 1 )
+1
+1  ́ (14 - 3) / 14
+= .7857
+.7857  ́ (10 - 1) / 10 = .7071
+.7071  ́ (8 - 1) / 8 = .6188
+.6188  ́ (5 - 1) / 5 = .4950
+.4950  ́ (4 - 1) / 4 = .3712
+.3712  ́ (2 - 1) / 2 = .1856
+So estimates of the survival function is:
+ì 1
+ï
+ï .79
+ï .71
+ï
+S(t) = í .62
+ï .50
+ï
+ï .37
+ï
+î .19
+%%---- Page 10
+R j - 1
+0 £ t £ 6
+6 < t £ 7
+7 < t £ 10
+10 < t £ 13
+13 < t £ 16
+16 < t £ 20
+20 < t £ 23Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iii)
+Non-informative censoring: Time to censoring i.e. leaving for reasons
+other than death is independent of Time to death.
+If we believe that more healthy lives will tend to leave and thus
+have lighter mortality, this assumption is violated. [OR could say
+less healthy lives may tend to leave — same conclusion.]
+However if we believe that being released is unrelated to state of
+health, then assumption is OK.
+Lives are independent i.e. time to censoring, i.e. being released, or time to
+death determined independently for each life.
+Other relevant comments received credit.
