@@ -1,0 +1,316 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%11
+A pension scheme is to be modelled using the following four-state model:
+(1)
+ACTIVE MEMBER
+(2)
+RETIRED MEMBER
+(3)
+WITHDRAWN
+(4)
+DEAD
+The following functions are defined for integer x:
+\mu 1j
+x + t = force of transition from state 1 to state j at exact age x + t,
+(j = 2, 3, 4), for 0 \leq t < 1.
+t
+(i)
+p 1 x j = probability that a life in state 1 at exact age x is in state j at
+exact age x + t, (j = 1, 2, 3, 4), for t > 0.
+Derive from first principles a differential equation for t p x 11 , and show
+that the solution to this equation is:
+ t
+11
+p
+=
+exp
+ −
+t x
+
+ 0
+4
+∫ ∑ \mu
+j = 2
+1 j
+x + s
+
+. ds 
+
+
+stating all assumptions made.
+(ii)
+[6]
+State, or otherwise obtain, the differential equation for t p 1 x j (j \neq 1), and
+show that the solution to this equation is:
+t
+1 j
+t p x =
+∫
+r
+1 j
+p 11
+x . \mu x + r dr ;
+for j \neq 1.
+
+0
+(iii)
+Assuming that the forces of transition \mu 1j
+x + t have a constant value
+\mu 1 x j + 1⁄2 for 0 \leq t < 1, show that:
+1
+p 1 x j =
+\mu 1 x j + 1⁄2
+4
+∑
+k = 2
+104—6
+\mu 1 x k + 1⁄2
+
+ 4
+ 
+  1 − exp  − \mu 1 x k + 1⁄2   
+ k = 2
+ 
+
+∑
+The values of \mu 1 x j + 1⁄2 are:
+(iv)
+x \mu 12
+x + 1⁄2 \mu 13
+x + 1⁄2 \mu 14
+x + 1⁄2
+60
+61 .25
+.10 .08
+.04 .012
+.014
+Calculate
+12
+2
+p 12
+60 .
+
+[Total 14]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\new%%---- Page
+
+11
+(i)
+t + h
+11
+11
+p 11
+x = t p x . h p x + t
+assuming probabilities of transition are dependent upon age and the
+current state only (Markov assumption).
+Using 1 =
+h
+12
+13
+14
+p 11
+x + t + h p x + t + h p x + t + h p x + t
+i.e. law of total probability
+t + h
+11
+12
+13
+14
+p 11
+x = t p x (1 - [ h p x + t + h p x + t + h p x + t ])
+Now
+h
+p 1 x + j t = h . m 1 x j + t + o ( h )
+for j 1 1
+where o(h) is such that lim
+h ® 0 +
+\
+\
+t + h
+t + h
+o ( h )
+= 0
+h
+11
+11
+12
+13
+14
+p 11
+x - t p x = - t p x . h . ( m x + t + m x + t + m x + t ) + o ( h )
+11
+p 11
+x - t p x
+= - t p 11
+x .
+h
+4
+å m
+j = 2
+1 j
+x + t
++
+o ( h )
+h
+æ
+ö
+p 11 - t p 11
+¶ t p 11
+x
+x
+\ lim ç ç t + h x
+= - t p 11
+÷ ÷ =
+x .
+h ® 0 +
+h
+¶ t
+è
+ø
+Hence
+\
+¶ log e t p 11
+x
+= -
+¶ t
+log e t p 11
+x
+-
+log e o p 11
+x
+4
+4
+å m
+2
+1 j
+x + t
+å m
+1 j
+x + t
+2
+t
+=
+4
+ò å m
+-
+0
+2
+1 j
+x + s ds
+%%---- Page 11Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+As 0 p 11
+x = 1
+then
+t
+log e t p 11
+x
+4
+ò å m
+-
+=
+2
+0
+æ
+and t p 11
+x = exp ç -
+ç
+è
+(ii)
+1 j
+x + s ds
+t 4
+0 2
+ò å m
+1 j
+x + s
+¶ 1 j
+11
+1 j
+t p x = t p x . m x + t
+¶ t
+ö
+ds ÷
+÷
+ø
+j 1 1
+t
+ò
+Hence t p 1 x j - o p 1 x j =
+r
+1 j
+p 11
+x . m x + r dr
+0
+As o p 1 x j = 0
+then t p 1 x j =
+t
+ò
+r
+1 j
+p 11
+x . m x + r dr
+0
+(iii)
+Substituting 1 for t, assuming constant forces, and putting (i) into (ii) we
+get:
+1 j
+1 p x
+1
+=
+-
+ò
+e
+r 4
+ò 0 å 2 m x + 1⁄2 ds
+1 k
+. m 1 x j + 1⁄2 dr
+0
+1
+ò
+= m 1 x j + 1⁄2 . e
+- r .
+4
+å m 1 x k + 1⁄2
+2
+dr
+0
+1
+m 1 x j + 1⁄2
+4
+m 1 x k + 1⁄2
+2
+=
+å
+-
+=
+m 1 x j + 1⁄2
+4
+å m
+2
+%%---- Page 12
+1 k
+x + 1⁄2
+4
+é - r . å
+m 1 x k + 1⁄2 ù
+ê e 2
+ú
+ê
+ú
+ë ê
+û ú 0
+4
+é
+- å m 1 x k + 1⁄2 ù
+ê 1 - e 2
+ú
+ê
+ú
+ê ë
+ú ûSubject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(iv)
+2
+p 12
+60
+Now
