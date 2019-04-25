@@ -1,0 +1,190 @@
+%-ACT 101 2000 April Q15
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%===================================%
+\item 14
+Consider the following data, which comprise four groups of claim sizes (y), each
+comprising four observations. In scenario I, information is also given on the sum
+assured under the policy concerned the sum assured is the same for all four
+policies in a group. In scenario II, we regard the policies in the different groups as
+having been issued by four different companies
+the policies in a group are all
+issued by the same company.
+All monetary amounts are in units of £10,000. Summaries of the claim sizes in each
+group are given in a second table.
+Group
+Claim sizes y
+I: Sum assured x
+II: Company
+1
+0.11 0.46
+0.71 1.45
+1
+A
+2
+0.52 1.43
+1.84 2.47
+2
+B
+3
+1.48 2.05
+2.38 3.31
+3
+C
+4
+1.52 2.36
+2.95 4.08
+4
+D
+Summaries of claim sizes:
+Group
+y
+y 2
+(i)
+1
+2.73
+2.8303
+2
+6.26
+11.8018
+3
+9.22
+23.0134
+4
+10.91
+33.2289
+In scenario I, suppose we adopt the linear regression model
+Y i =
++ x i + e i
+where Y i is the i th claim size and x i is the corresponding sum assured,
+i = 1, , 16.
+\begin{enumerate}[(i)]
+\item calculate the total sum of squares and its partition into the regression
+(model) sum of squares and the residual (error) sum of squares.
+\item (b) Fit the model and calculate the fitted values for the first claim size of
+group 1 (namely 0.11) and the last claim size of group 4 (namely 4.08).
+\item (c) Consider a test of the hypothesis H 0 : = 0 against a two-sided
+alternative. By performing appropriate calculations, assess the strength
+of the evidence against this no linear relationship hypothesis.
+\end{enumerate}
+(ii)
+In scenario II, suppose we adopt the analysis of variance model
+Y ij =
++
+i
++ e ij
+where Y ij is the j th claim size for company i and
+j = 1, 2, 3, 4 and i = A, B, C, D.
+is the i th company effect,
+(a) Calculate the partition of the total sum of squares into the between
+companies (model) sum of squares and the within companies
+(residual/error) sum of squares.
+(b) Fit the model.
+(c) Calculate the fitted values for the first claim size of group 1 and the
+last claim size of group 4.
+(d) Consider a test of the hypothesis H 0 : i 0 , i = A, B, C, D against a
+general alternative. By performing appropriate calculations, assess the
+strength of the evidence against this no company effects hypothesis.
+\end{enumerate}
+\newpage
+
+
+%=============================================================%
+
+14
+(i)
+(a)
+(b)
+y = 29.12, y 2 = 70.8744
+SS TOT = 70.8744 29.12 2 /16 = 17.8760
+x = 4 10 = 40, x 2 = 4 30 = 120
+S xx = 120 40 2 /16 = 20
+xy = 1 2.73 + 2 6.26 + 3 9.22 + 4 10.91 = 86.55
+S xy = 86.55 40 29.12/16 = 13.75
+Regression sum of squares SS REG = 13.75 2 /20 = 9.4531
+Residual sum of squares SS RES = 17.8760 9.4531 = 8.4229
+13.75 / 20 0.6875
+29.12 /16 0.6875 (40 /16) 0.1012
+Fitted model is y 0.1012 0.6875 x
+y = 0.11, x = 1 fitted value = 0.7887
+Page 9Subject 101 (Statistical Modelling)
+y = 4.08, x = 4
+(c)
+s . e .
+%------------------------------------------------------%
+fitted value = 2.8512
+8.4229 /14
+20
+Under H 0 , P
+September 2004
+0.5
+0.6875
+0.1734
+P t 14
+0.6875 / 0.1734
+P t 14
+3.965
+which is very much lower than 0.005, so P-value of test statistic is very
+much lower than 0.01.
+We have strong evidence against the no linear relationship
+hypothesis (p << 0.01)
+(ii)
+\begin{itemize}
+    \item (a)
+SS TOT = 17.8760
+Between companies sum of squares
+SS B = (2.73 2 + 6.26 2 + 9.22 2 + 10.91 2 )/4
+29.12 2 /16 = 9.6709
+Residual sum of squares SS RES = 17.8760
+    \item (b)
+1
+3
+9.6709 = 8.205
+29.12 /16 1.82
+2.73 / 4 1.82
+1.1375 , 2 6.26 / 4 1.82
+0.255
+9.22 / 4 1.82 0.485 , 4 10.91/ 4 1.82 0.9075
+    \item (c) y = 0.11, company A
+y = 4.08, company D
+fitted value = 2.73/4 = 0.6825
+fitted value = 10.91/4 = 2.7275
+    \item (d) Observed F statistic is (9.6709/3) / (8.2051/12) = 4.715 on 3,12 df
+P-value of test statistic is lower than 0.05 (but higher than 0.01)
+\end{itemize}
+
+We have some evidence against the no company effects hypothesis
+(0.01 < p < 0.05)
+\end{document}
