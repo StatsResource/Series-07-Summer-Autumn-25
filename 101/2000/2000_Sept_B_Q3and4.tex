@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+\item 3 The number of claims arising in a period of one month from a group of policies
+can be modelled by a Poisson distribution with mean 24.
+Determine the probability that fewer than 20 claims arise in a particular month.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+3 Can get answer directly from Green tables:
+\[P(X < 20) = P(X \leq 19) = 0.18026 = 0.18\]
+OR: use normal approximation with continuity correction.
+$X \sim  N(24, \sqrt{24}^2 )$
+
+$P(X < 20) \rightarrow P(X < 19.5)$
+
+\begin{eqnarray*}
+P(X < 19.5) &=& P \left( Z < \frac{19.5-24}{\sqrt{24}} \right) \\ 
+&=& P\left(Z \leq -0.92 \right) \\
+&=&  1 − 0.82 \\
+&=&  0.18.\\
+\end{eqnarray*}
+(Note: without continuity correction answer is 0.15)
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+4 Suppose that a random sample of nine observations is taken from a normal
+distribution with mean $\mu = 0$. \begin{itemize}
+    \item Let $X$ and $S^2$ denote the sample mean and
+variance respectively.
+\item Determine (to 2 decimal places) the probability that the value of X exceeds that of $S$, i.e. determine $P( X > S)$ . 
+\end{itemize}
+
+4 $\mu = 0$, n = 9 so $X / (S / 3) \sim t_8$ so $P( X > S) = P(t_8 > 3) $,
+which, from tables, is just less than 0.01
+(actually 0.0085, but not needed for the marks)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 3
+5 x
+x
+\pm 196
+500
+. i.e. $0.168 \pm (1.96 \times 0.01833) \mbox{ i.e. } 0.168 \pm 0.036$
+
+\end{document}
