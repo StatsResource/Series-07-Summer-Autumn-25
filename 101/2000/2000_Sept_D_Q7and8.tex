@@ -1,0 +1,132 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%-Question 7 
+In a correlation analysis based on a random sample of 10 values from a bivariate
+normal distribution, a t-test of
+$H0 : \rho = 0 v. H1 : \rho > 0$
+results in a probability-value of 0.025.
+Calculate the value of the sample correlation coefficient. 
+\newpage
+
+
+7 
+
+%%%%%%% Question 7
+
+The $t-$test is based on
+\[ t_{TS} = \frac{r\sqrt{n-2}}{\sqrt{1-r^2}} \sim t_{n-2}\]
+
+here $n − 2 = 8$
+If $p-$value for this one-sided test is 0.025 then observed t = 2.306 (t0.025,8 from
+Green tables)
+
+
+\[ t_{TS} = 2.306 = \frac{r\sqrt{8}}{\sqrt{1-r^2}} \sim t_{n-2}\]
+
+Also  $r > 0$
+
+Squaring both sides, and algebraically re-arranging
+
+\[5.318 (1 − r^2) = 8r^2\]
+Therefore
+
+\[r^2 = \frac{5.318}{13.318}=  0.3993\]
+
+\[r = 0.632\]
+
+
+
+
+An alternative approach is to use Fisher’s transformation of r. The
+statistic is
+\[ t_{TS} = \frac{1}{2} \log \frac{1+r}{1-r}, \]
+
+which, under $H_0$, has, approximately, a $N(0,1/7)$ distribution.
+This approach gives $r = 0.630$ .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage Claims on a certain class of policy are classified as being of two types, I and II.
+Past experience has shown that:
+25\% of claims are of type I and 75\% are of type II;
+\begin{itemize}
+    \item Type I claim amounts have mean £500 and standard deviation £100;
+\item Type II claim amounts have mean £300 and standard deviation £70.
+\end{itemize}
+
+Calculate the mean and the standard deviation of the claim amounts on this
+class of policy. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+%%- Question 8 
+
+Let Y = amount
+\begin{itemize}
+    \item Let X = 1, 2 for types I, II
+Therefore P(X = 1) = 0.25, P(X = 2) = 0.75
+\item $E(Y|X = 1) = 500$, $Var(Y|X = 1) = 100^2$
+all given
+\item $E(Y|X = 2) = 300, Var(Y|X = 2) = 70^2$
+\item \begin{eqnarray*}
+E(Y) &=& E(E(Y|X)) \\ &=& 500(0.25) + 300(0.75)\\
+&=& 125 + 225 \\ &=& \$350\\
+\end{eqnarray*}
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%--- Page 4
+\begin{itemize}
+    \item $V(Y) = E(V(Y|X)) + V(E(Y|X))$
+\item \begin{eqnarray*}
+E(V(Y|X)) &=& 100^2(0.25) + 70^2(0.75)\\
+&=& 2500 + 3675\\ &=& 6175\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \begin{eqnarray*}V(E(Y|X)) &=& 500^2(0.25) + 300^2(0.75) − 350^2\\
+&=& 62500 + 67500 − 122500 \\ &=& 7500\\
+\end{eqnarray*}
+Therefore $V(Y) = 6175 + 7500 = 13675$
+Therefore $s.d.(Y) = \$116.9$
+\item OR: $V(E(Y|X)) = 0.25(500 − 350)^2 + 0.75(300 − 350)^2 = 7500$
+alternative method for $V(Y)$:
+\item E(Y2|X = 1) = 1002 + 5002 = 260000
+\[E(Y2|X=2) = 70^2 + 300^2 = 94900\]
+Therefore $E(Y^2) = 0.25(260000) + 0.75(94900)
+= 136175$
+\item Therefore V(Y) = 136175 − 3502 = 13675
+Therefore $s.d.(Y) = 116.9$
+\end{itemize}
+
+Q8 Comment: Very few candidates seemed to be aware of the result \[V(Y) = E[V(Y|X)]
++ V[E(Y|X)] \]and how and when it should be used.
+
+\end{document}
