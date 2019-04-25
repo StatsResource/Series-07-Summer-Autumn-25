@@ -1,0 +1,111 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%% EXAMINATIONS
+%% 17 April 2000 (pm)
+%% Subject 101 — Statistical Modelling
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  An insurance company’s records suggest that experienced drivers (those aged
+over 21) submit claims at a rate of 0.1 per year, and inexperienced drivers (those 21 years old or younger) submit claims at a rate of 0.15 per year. 
+\begin{itemize}
+\item A driver can submit more than one claim a year. The company has 40 experienced and 20 inexperienced drivers insured with it.
+\item The number of claims for each driver can be modelled by a Poisson distribution, and claims are independent of each other.
+\end{itemize}
+ Calculate the
+probability the company will receive three or fewer claims in a year. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{itemize}
+\item  As claims are independent the number of claims by inexperienced drivers will
+follow a Poisson distribution with mean $20 \times 0.15 = 3$, and the number of claims
+made by experienced drivers will follow a Poisson distribution with mean
+$40 \times 0.1 = 4$. Again using the independence assumption, the total number of
+claims, $X$, is Poisson with mean 7.
+\item Thus, 
+\begin{eqnarray*}
+P(X \leq 3) &=& \sum^{3}_{i=0} e^{-7} \frac{7^i}{i!}\\
+& & \\
+&=& P(X \leq 0) + P(X \leq 1) + P(X \leq 2) + P(X \leq 3)\\
+&=& \left(e^{-7} \frac{7^0}{0!} \right) + \left(e^{-7} \frac{7^1}{1!}\right) + \\
+& & \left(e^{-7} \frac{7^2}{2!}\right) + \left(e^{-7} \frac{7^3}{3!}\right)\\
+& & \\
+&=& 0.082.
+\end{eqnarray*}
+\item (The answer can also be taken directly from the Green Book, which gives
+0.08177.)
+\end{itemize}
+
+\newpage
+
+\item The number of claims which arise under a policy of a particular type in a year
+is to be modelled as a Poisson(l) random variable. A random sample of 600
+such policies gave rise to a total of 72 claims in 1999.
+Determine the approximate probability value of this result in a test of
+$H0 : l = 0.14$ v $H1 : l < 0.14$ .
+\end{enumerate}
+\begin{itemize}
+\item 6 
+Total number of claims $X \sim \mbox{ Poisson}(600\lambda)$
+
+Under H0: $X \sim \mbox{ Poisson}(84) \sim N(84,84)$ approximately
+
+\begin{eqnarray*}
+Prob. value &=& P(X \leq 72) \\
+&=& P(Z < \frac{(72.5 - 84)}{\sqrt{84}} \\
+&=& P(Z < -1.255) \\ 
+&=& 0.105\\
+\end{eqnarray*}
+
+
+\end{enumerate}
+
+%%% Question 6
+
+
+$T \sim \mbox{Poisson}(84)$ is approximated by $T \sim \mbox{N}(84,84)$ 
+\begin{eqnarray*}
+P(X \leq 73) &=& P(Z \frac{72.5-84}{\sqrt{84}} \mbox{ using continuity correction } \\
+&=& P(Z \leq -1.255)\\
+&=& \Phi(-1.255) \\
+&=& 0.105  \mbox{ from tables }\\
+\end{eqnarray*}
+
+
+\end{itemize}
+
+
+
+\end{document}
