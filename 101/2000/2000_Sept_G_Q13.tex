@@ -1,0 +1,104 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+% Faculty of Actuaries Institute of Actuaries
+% EXAMINATIONS
+% 18 September 2000 (pm)
+% Subject 101 — Statistical Modelling
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\item 13 Consider a one-way analysis of variance for comparing k treatments using the
+same number ni = r responses for each treatment. The model is
+\[Yij = \mu + τi + e_{ij} : i = 1, 2, ..., k; j = 1,2, ..., r\]
+where the errors eij are independent $N(0, \sigma 2)$ random variables and where $\sum τi = 0$.
+Show that the parameter estimates $\hat{\mu}$ = Y⋅⋅ and ˆi τ = i Y⋅ −Y⋅⋅ are unbiased and
+that their variances are given by
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpge 
+\item 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+$V(\hat{\mu} ) = V(\bar{Y}_{\ldot \ldot} ) =
+
+\frac{\sigma^2}{kr}$
+
+
+as $\bar{Y}_{\ldot \ldot}$ is mean of kr r.v.’s each with $var(\sigma2)$.
+
+\begin{eqnarray*}
+V( \hat{\tau}}_i) 
+&=& V(\bar{Y}_{i \ldot} −\bar{Y}_{\ldot \ldot}) \\
+&=& V(\bar{Y}_{i \ldot}) + V (\bar{Y}_{\ldot \ldot}) − Cov (\bar{Y}_{\ldot}, \bar{Y}_{\ldot \ldot}) \\
+&=& \frac{\sigma^2}{r} + \frac{\sigma^2}{kr} - 2 \frac{1}{r} \frac{1}{kr} r \sigma^2 \\
+&=& \frac{\sigma^2}{r} + \frac{\sigma^2}{kr} - 2 \left(\frac{\sigma^2}{kr} \right) \\
+&=& \frac{\sigma^2}{r} - \frac{\sigma^2}{kr} \\
+&=& \frac{(k-1)\sigma^2}{kr} \\
+\end{eqnarray}
+
+%%%%%%%%%%%%%%
+
+Alternative method:
+( ) i V \bar{Y}_{\ldot} −\bar{Y}_{\ldot \ldot} =
+
+
+V\left(  \left( 1 - \frac{1}{k}  \right) \bar{Y}_{i}  - \frac{1}{k} \sum_{j \neq i} \bar{Y}_{j} \right)
+&=& \left(1 - \frac{1}{k} \right) \frac{\sigma^2}{r}  + \left(- \frac{1}{k} \right)^2 \frac{(k-1)\sigma^2}{r} \\
+
+&=& \frac{\sigma^2}{k^2r} \left[  (k-1)^2 + (k-1) \right] \\
+&=& \frac{(k-1)\sigma^2}{kr} \\
+\end{eqnarray}
+
+
+\newpage
+
+13 ( ) i E Y⋅ = μ + τi and E(Y⋅⋅ ) = μ
+( ) i E Y⋅ E(μˆ ) = E(Y⋅⋅ ) = μ Therefore unbiased
+(ˆ ) i E τ = ( ) i E Y⋅ −Y⋅⋅ = μ + τi − μ = τi Therefore unbiased
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Q13 Comment: This material was unfamiliar to most candidates.
+
+
+
+
+
+\end{document}
