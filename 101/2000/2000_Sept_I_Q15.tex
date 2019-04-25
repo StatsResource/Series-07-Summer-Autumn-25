@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+
+\item  A manufacturer uses a certain type of electrical component from supplier A in high quality computing equipment and uses similar components from supplier B in inexpensive playstations. Previous investigations have shown that supplier A
+produces components whose resistances are normally distributed about a mean of 100 units and with a standard deviation of 0.1 units. Similarly, the resistances of supplier B’s components are normally distributed about a mean of 100.5 units
+and with a standard deviation of 0.5. Components are supplied in large batches and are externally identical.
+A batch known to come entirely from one supplier has no labels. The value of X , the mean resistance from a random sample of components, is to be used to decide whether the batch has come from supplier A.
+The hypotheses to be tested are:
+H0 : components come from supplier A i.e. X ~ N(100, 0.12)
+v. H1 : components come from supplier B i.e. X ~ N(100.5, 0.52) .
+
+\begin{enumerate}
+    \item  (a) If the manufacturer insists that the probabilities of the type I and
+type II errors are each to be restricted to at most 5\%, show that at
+least 4 components from the batch have to be examined.
+(b) Using a sample size of 4, calculate the power of the test if the
+probability of the type I error is reduced to 1\%. 
+\item  Suppose that a sample of 10 components from a batch has mean
+resistance x = 100.1.
+Calculate the probability-value of this observed mean. 
+\end{enumerate}
+
+\newpage
+
+15 (i) (a) Let critical value be c, such that we reject H0 for X > c for a
+sample of size n.
+\begin{itemize}
+    \item P(type I error) = P( X > c ) where X ~ N(100, 0.12 / n)
+∴ $(c − 100) / (0.1 / \sqrt{n}) = 1.645$ …… (*)
+    \item P(type II error) = P( X < c ) where X ~ N(100.5, 0.52 / n)
+∴ $(c − 100.5) / (0.5 / \sqrt{n}) = −1.645$ …… (**)
+\end{itemize}
+
+Solving (*) and (**) for n gives $100 + 1.645(0.1/\sqrt{n})$ = $100.5 − 1.645(0.5 / \sqrt{n})$
+ $\sqrt{n} = 1.645 × 0.6/0.5 = 1.974$ $n = 3.9$
+∴ sample of size n = 4 should be examined
+\begin{itemize}
+    \item (b) Let critical value be c
+\item P(type I error) = 0.01  (c − 100) / (0.1 / √4) = 2.326
+∴ c = 100 + 2.326(0.1 / √4) = 100.1163
+\item Power = 1 − P(type II error) = 1 − P[Z < (100.1163 − 100.5) / (0.5 / √4)]
+= 1 − P(Z < −1.535) = P(Z < 1.535) = 0.9376 i.e. Power = 93.8%
+\item (ii) P-value = P( X > 1001. ) where X ~ N(100, 0.12 / 10)
+= P[ Z > (100.1 − 100) / (0.1 / √10)] = P(Z > 3.162) = 1 − 0.9992
+= 0.0008 i.e. 0.08%
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 9
+Q15 Comment: Most candidates understood the concepts of testing errors, but
+were unable to apply that knowledge.
+
+\end{document}
