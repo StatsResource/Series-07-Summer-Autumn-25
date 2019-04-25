@@ -1,0 +1,128 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+A claim size distribution is modelled using a simple distribution with density of the
+form
+(100 ) , 0 100
+( )
+0 , otherwise
+k x x
+f x
+\begin{enumerate}[(a)]
+\item (i) Verify that k = 0.0002. [1]
+\item (ii) Determine the mean of this claim size distribution. [2]
+\item (iii) Calculate the probability that an individual claim size is greater than 50. [1]
+\item (iv) Calculate the probability that an individual claim size is less than 60 given that
+it is greater than 50. 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7 (i) We require k such that
+100
+0
+k(100 x)dx 1
+100 2 100
+0 0
+10000
+(100 ) 100 10000 5000
+2 2
+x
+k x dx k x k k
+1
+0.0002
+5000
+k
+[or could be argued geometrically]
+(ii) Mean =
+100 3 100
+2
+0 0
+(0.0002)(100 ) 0.0002 50
+3
+x
+x x dx x
+=
+1000000
+0.0002{500000 }
+3
+= 33.33
+(iii) P(X > 50) =
+100 2 100
+50 50
+0.0002(100 ) 0.0002 100
+2
+x
+x dx x
+1002 502
+0.0002{100(50) } 0.25
+2
+[or could be argued geometrically]
+(iv)
+(50 60)
+( 60 | 50)
+( 50)
+P X
+P X X
+P X
+2 60
+50
+(50 60) 0.0002 100
+2
+x
+P X x
+602 502
+0.0002{100(10) } 0.09
+2
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 4
+0.09
+( 60 | 50) 0.36
+0.25
+P X X
+[or could be argued geometrically]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 
+Let X1, X2 , , X100 be independent random variables, each having a gamma(4,1)
+distribution (and hence with mean 4 and variance 4).
+Calculate an approximate value for the probability that the sum of the variables
+assumes a value which exceeds 425. [3]
+
+8
+100
+1
+i
+i
+S X has mean 400 and variance 400
+By CLT, S ~ N(400,400) approximately
+P(S > 425) P[Z > (425 400)/20] = P(Z > 1.25) = 0.106
+
+\end{document}
