@@ -1,0 +1,225 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+12
+The following data refer to an outbreak of botulism, a form of food poisoning that
+may be fatal. Each subject is a person who contracted botulism in the outbreak. The
+variables recorded are the subject s age in years, the time in hours between eating the
+infected food and the first signs of illness (incubation period) and whether the subject
+survived (denoted by survival category Y) or died (denoted by survival category N).
+\begin{verbatim}
+    Subject
+Age ( x )
+Incubation
+period ( y )
+Survival
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18
+29 39 44 37 42 17 38 43 51 30 32 59 33 31 32 32 36 50
+13 46 43 34 20 20 18 72 19 36 48 44 21 32 86 48 28 16
+N Y Y N N Y N Y N N N Y N N Y N Y N
+Died: x = 405; y = 305; x 2 = 15517; y 2 = 10035
+Survived: x = 270; y = 339; x 2 = 11396; y 2 = 19665
+\end{verbatim}
+
+\begin{enumerate}[(a)]
+\item (i)
+A scatterplot of incubation period against age is given below, in which
+different symbols are used for subjects who died and for subjects who
+survived.
+A Plot of Incubation Period against Age
+90
+Died
+Survived
+80
+70
+60
+50
+40
+30
+20
+10
+20
+30
+40
+50
+60
+Age
+Comment briefly on any relationships between age and incubation period for
+those subjects who died and for those subjects who survived.
+\item  (ii)
+Construct suitable dotplots to investigate any relationship between:
+(a) age and survival, and
+(b) incubation period and survival
+and make a brief informal comparison of the died and survived groups based
+on these dotplots.
+\item (iii)
+Construct 95% and 99% confidence intervals for the mean difference between
+the incubation period for subjects who survived and subjects who died (i.e.
+take the mean incubation period for subjects who survived minus the mean
+incubation period for subjects who died).
+Comment briefly on these confidence intervals.
+\item  (iv)
+%---------------------%
+7
+[6]
+(a) Conduct a test to investigate whether the variances of the incubation
+periods for subjects who died and subjects who survived are equal.
+(b) Comment on the validity of the assumptions that are required for the
+confidence intervals given in part (iii) to be appropriate.
+\end{enumerate}
+
+
+12
+
+(i) There does not seem to be a clear relationship between age and incubation
+period either for those subjects who died or for those subjects who survived.
+(ii) (a)
+Dotplots of age for died and survived subjects.
+Died:
+. ..:.
+. .
+.
+..
+-+---------+---------+---------+---------+---------+-----Age
+Survived:
+.
+.
+.
+.
+..
+.
+-+---------+---------+---------+---------+---------+-----Age
+16.0
+24.0
+32.0
+40.0
+48.0
+56.0
+(b)
+Dotplots of incubation period for died and survived subjects.
+Died:
+. ..:.
+. ..
+:
+-----+---------+---------+---------+---------+---------+-IncubP
+Survived:
+.
+.
+: .
+.
+.
+-----+---------+---------+---------+---------+---------+-IncubP
+15
+30
+45
+60
+75
+90
+The dotplots suggest an association between survival and incubation period
+(the people who survived tended to have longer incubation periods), but do not
+suggest an association between survival and age.
+(iii)
+Survived: n 1
+7 , y 1
+Died: n 2 11 , y 2
+339 / 7 48 . 429 , s 1
+305 / 11
+27 . 727 , s 2
+3247 . 71 / 6 23 . 266
+1578 . 18 / 10 12 . 563
+Pooled variance and standard deviation:
+s 2 p (n 1 - 1 )s 1 2 (n 2 - 1 )s 2 2
+n 1 n 2 - 2
+s p 17 . 37
+6 ( 23 . 266 ) 2 10 ( 12 . 563 ) 2
+16
+301 . 633
+95% confidence interval:
+y 1
+y 2 t 0.025, n 1
+n 2 2 s p
+48.429 27.727
+Page 6
+1
+n 1
+1
+n 2
+(2.120)(17.37)
+1 1
+7 11
+%--------------------------------------%
+Examiners Report
+i.e. ( 2.9, 38.5) hours.
+99% confidence interval:
+y 1
+y 2 t 0.005, n 1
+n 2 2 s p
+1
+n 1
+1
+n 2
+48.429 27.727 (2.921)(17.37)
+1 1
+7 11
+20.702 24.531
+i.e. ( 3.8, 45.2) hours.
+\begin{itemize}
+    \item The 95\% confidence interval does not contain zero, therefore a two-sided, two
+sample t-test conducted at the 5\% significance level would conclude that there
+is a difference between the means of the two populations.
+\item However, as the 99\% confidence interval does contain zero, conducting a
+more stringent 1\% level t-test would not reject the null hypothesis that the
+population means are the same.
+\end{itemize}
+
+(iv)
+(a)
+Assuming that the variances of the two populations are equal,
+S 1 2 / S 2 2 ~ F n 1 1, n 2 1 .
+s 1 2 / s 2 2
+23.266 2 /12.563 2
+3.430
+The value of the test statistic is below the 5% significance level critical
+value of F 6,10 (2.5%) = 4.072. This indicates that there is insufficient
+evidence to reject the null hypothesis that the two populations have
+equal variances.
+(b)
+In part (iii) an assumption of normality of each sample was required.
+The dotplots suggest that this assumption is valid.
+Also, the assumption of equal variances of the two groups seems valid
+from the result of the test conducted in part (iv)(a).
+
+\end{document}
