@@ -32,7 +32,7 @@
 
 \begin{document}
 \begin{enumerate}
-\item 1 A random sample of fifty claim amounts (£) arising in a particular section of an
+\item A random sample of fifty claim amounts (£) arising in a particular section of an
 insurance company's business are displayed below in a stem and leaf plot:
 
 \begin{verbatim}
@@ -69,7 +69,12 @@ Leaf unit = 10
 
 The sum of the fifty amounts (before rounding) is £92780.
 Calculate the mean and median claim amounts. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{solution}
+1 Mean = 92780/50 = £1855.60
+25.5th value in order = (17.3 + 17.4)/2 = 17.35 so median amount = £1735
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 \item Consider a random sample of 47 white-collar workers and a random sample of 24 blue-collar workers from the workforce of a large company. \begin{itemize}
     \item The mean salary for
 the sample of white-collar workers is £28,470 and the standard deviation is £4,270; \item whereas the mean salary for the sample of blue-collar workers is £21,420
@@ -77,18 +82,9 @@ and the standard deviation is £3,020.
 \end{itemize}
 Calculate the mean and the standard deviation of the salaries in the combined
 sample of 71 employees. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\item 3 The number of claims arising in a period of one month from a group of policies
-can be modelled by a Poisson distribution with mean 24.
-Determine the probability that fewer than 20 claims arise in a particular month.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-1 Mean = 92780/50 = £1855.60
-25.5th value in order = (17.3 + 17.4)/2 = 17.35 so median amount = £1735
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 2 For simplicity change the units into thousands. 
@@ -105,44 +101,7 @@ Determine the probability that fewer than 20 claims arise in a particular month.
 −
 = 5.124, or £5,124.
 \end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3 Can get answer directly from Green tables:
-\[P(X < 20) = P(X \leq 19) = 0.18026 = 0.18\]
-OR: use normal approximation with continuity correction.
-$X \sim  N(24, \sqrt{24}^2 )$
-
-$P(X < 20) \rightarrow P(X < 19.5)$
-
-\begin{eqnarray*}
-P(X < 19.5) &=& P \left( Z < \frac{19.5-24}{\sqrt{24}} \right) \\ 
-&=& P\left(Z \leq -0.92 \right) \\
-&=&  1 − 0.82 \\
-&=&  0.18.\\
-\end{eqnarray*}
-(Note: without continuity correction answer is 0.15)
 
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newpage
-
-
-4 Suppose that a random sample of nine observations is taken from a normal
-distribution with mean $\mu = 0$. \begin{itemize}
-    \item Let $X$ and $S^2$ denote the sample mean and
-variance respectively.
-\item Determine (to 2 decimal places) the probability that the value of X exceeds that of $S$, i.e. determine $P( X > S)$ . 
-\end{itemize}
-
-4 $\mu = 0$, n = 9 so $X / (S / 3) \sim t_8$ so $P( X > S) = P(t_8 > 3) $,
-which, from tables, is just less than 0.01
-(actually 0.0085, but not needed for the marks)
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Page 3
-5 x
-x
-\pm 196
-500
-. i.e. $0.168 \pm (1.96 \times 0.01833) \mbox{ i.e. } 0.168 \pm 0.036$
 
 \end{document}
