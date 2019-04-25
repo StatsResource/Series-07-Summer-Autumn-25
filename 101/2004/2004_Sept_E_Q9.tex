@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+
+9 A statistician suggests that, since a t variable with k degrees of freedom is
+symmetrical with mean 0 and variance
+2
+k
+k
+for $k > 2$, one can approximate the
+distribution using the normal variable 0,
+2
+k
+N
+k
+.
+\begin{enumerate}[(a)]
+\item (i) Use this to obtain an approximation for the upper 5\% percentage points for a
+t variable with:
+(a) 4 degrees of freedom, and
+(b) 40 degrees of freedom
+\item 
+(ii) Compare your answers with the exact values from tables and comment briefly
+on the result. 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+
+%%- Question 9 
+
+\begin{itemize}
+    \item (i) (a) k = 4 using N(0, 4/2) = N(0, 2)
+    \item 5% point = 0 + 1.6449 2 = 2.326
+    \item (b) k = 40 using N(0, 40/38) = N(0, 1.0526)
+    \item 5% point = 0 + 1.6449 1.0526 = 1.688
+    \item (ii) Exact values are: (a) 2.132 and (b) 1.684
+for small df approximation is poor, but for large df it is quite good.
+\end{itemize}
+
+\end{document}
