@@ -1,0 +1,63 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}
+%%--[Total 3]
+\item A random sample of 25 observations from X ~ N( , 4) has sample mean x = 15.6.
+Calculate a symmetrical 90\% confidence interval for . 
+\item The following test concerning the mean claim amount ( ) for a certain class of policy
+\[H0: = £200 v. H1 : £200\]
+is to be performed. A random sample of 50 claims is examined and yields a mean
+amount of £207 and standard deviation £42.
+Calculate the approximate probability-value for the test. 
+\end{enumerate}
+\newpage
+3 CI is 15.6 {z ( / n)}
+For a symmetrical 90% interval, z = 1.6449
+i.e. 15.6 {1.6449 (2/5)} i.e. 15.6 0.66 i.e. 14.94 to 16.26
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 n = 50 is large, so Central Limit theorem allows the use of normality
+P-value
+207 200
+2
+42
+50
+P Z
+= 2 P(Z > 1.18) = 2(1 0.88) = 0.24
+
+% Examiners Comment: Some candidates assumed that the claim amounts have a normal distribution. This was not justifiable or necessary. What is required is the approximate normality of the distribution of the sample mean, which is justified for large samples by the central limit theorem.
+
+\end{document}
