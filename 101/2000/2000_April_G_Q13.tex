@@ -1,0 +1,99 @@
+%-ACT 101 2000 April Q15
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}Suppose that the distribution of a physical coefficient, X, can be modelled
+using a uniform distribution on (0, 1). A researcher is interested in the
+distribution of Y, an adjusted form of the reciprocal of the coefficient, where Y
+= (1 / X) - 1.
+\begin{enumerate}[(a)]
+\item Show that the probability density function of Y is given by
+fY(y) = 1/(1 + y)2 , y > 0 
+\item Show that the mean of Y does not exist. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%- Question 13
+
+
+\begin{eqnarray*}
+F_Y(y) &=& P(Y < y) \\
+&=& P( \frac{1}{x} < y+1 )\\
+&=& P(X > \frac{1}{y+1}) \\
+&=& 1 - \frac{1}{y+1}\\
+\end{eqnarray*}
+
+\begin{eqnarray*}
+E(Y) &=& \int^{\infty}_{0} y(1+y)^{-2} dy \\
+&=& \int^{\infty}_{0} (1+y)^{-1} dy  -  \int^{\infty}_{0} (1+y)^{-2} dy \\
+\end{eqnarray*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+% 2000 - April - 13
+13
+(i) 
+\begin{eqnarray*} F Y (y) &=& P(Y < y) \\ 
+&=& P(\frac{1}{X} < y + 1) \\ 
+&=& P[X > \frac{1}{(y + 1)}] \\ 
+&=& 1 - \frac{1}{y + 1}\\ 
+\end{eqnarray*}
+
+so 
+\begin{eqnarray*}
+f_Y (y) 
+&=& \frac{d}{dy} \left( F_Y  \right) \\ 
+&=& \frac{1}{(y + 1)^2} , \mbox{ where } y > 0\\
+\end{eqnarray*}
+
+(ii) \[E(Y) = \int^{\infty}_{0} y(1+y)^{-2} dy \]
+
+\begin{framed}
+\begin{itemize}
+\item Let $y+1 = u$ and consequently $y = u-1$
+\item $du = dy$
+\end{itemize}
+\[\int\frac{u-1}{u^2} dy = \int\frac{1}{u} dy + \int\frac{1}{u^2} dy\]
+
+\end{framed}
+
+\[E(Y) = \int^{\infty}_{0} (1+y)^{-1} dy  + \int^{\infty}_{0} (1+y)^{-2} dy  \]
+
+\[E(Y) = \left[ \log(1+y) - \frac{1}{1+y} \right]^{\infty}_{0}\]
+
+
+
+The integral of $(1 + y)^{-1}$ gives $\log(1 + y)$ which approaches infty as y approaches infinity so this
+integral is not finite. So $E(Y)$ does not exist.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
