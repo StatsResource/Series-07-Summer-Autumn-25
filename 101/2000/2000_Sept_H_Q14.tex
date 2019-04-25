@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+14 Let X be a random variable with cumulative distribution function
+\[FX(x) = P(X < x) = 1 − exp(−x2/\theta) , x > 0 , FX(x) = 0 , x ≤ 0\]
+and let $(X1, X2, … , Xn)$ be a random sample from $X$.
+\begin{enumerate}[(i)]
+\item (i) By considering $P(Y < y)$, show that $Y = X2$ has an exponential distribution.
+
+\item (ii) (a) Show that the maximum likelihood estimator of $\theta$ is given by
+\[\hat{\theta}
+= 1 2
+Xi
+n
+\sum \]
+(b) Show that $\hat{\theta}$ is an unbiased estimator of $\theta$ which attains the
+Cramer-Rao lower bound on variance.
+(c) Using moment generating functions, show that 22
+2 ˆ ~ n
+n \theta χ
+\theta
+. [11]
+\item (iii) The above distribution of X is to be used as a model for claim amounts in
+a particular situation. A random sample of 50 such claim amounts (in
+appropriate units) gives the following summary:
+$\sum x2 = 485.7518$
+(a) Calculate the maximum likelihood estimate of $\theta$.
+(b) Using the result of (ii)(c) above, calculate an exact 95\% confidence interval for $\theta$.
+
+\end{enumerate}
+
+\newpage
+
+14 
+
+\begin{itemize}
+    \item (i) \[FY(y) = P(Y < y) = P(X2 < y) = P(X < √y) = 1 − exp(−y/\theta)\]
+which is the cdf of an exponential r.v. with mean $\theta$.
+\item (ii) (a) fX(x) = 2(x / \theta)exp(−x2 / \theta)
+\item So \[L(\theta) = k1 \theta−n exp[−(\sum x2) / \theta \] so \[logL = k2 − nlog \theta − (\sum x2) / \theta\]
+\[dlog L / d\theta = −n/\theta + (\sum x2)/\theta2 = 0  \hat{\theta} = 2 1
+i X
+n
+\sum \]
+\item (b) From (i) E(X2) = E(Y) = \theta and V(X2) = V(Y) = \theta2
+So 
+\begin{eqnarray*}E(\hat{\theta} ) &=& (1 / n) ( 2 ) i \sum E X \\ &=& (1 / n) n\theta \\ &=& \theta\\ 
+\end{eqnarray*}, and
+
+\end{itemize}
+\begin{eqnarray*}
+V(\hat{\theta} ) &=& (1 / n2) ( 2 ) i \sum V X \\ &=& (1 / n2) n\theta^2 \\ &=& \theta^2 / n
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 8
+\begin{itemize}
+    \item 
+
+Now,\[ d2log L / d\theta2 = n\theta−2 − 2(\sum x2) \theta−3\]
+so \[ −E(d2log L / d\theta2) = −n\theta−2 + 2\theta−3(n\theta) = n / \theta2 = 1/V\]
+\item So $\hat{\theta}$ is unbiased and attains the C–R bound.
+(c) Y = X2 has mgf $(1 − \theta t)−1 so n\hat{\theta} = \sum Yi has mgf (1 − \thetat)−n$
+\item So $2n\hat{\theta} / \theta$ has mgf $[1 − \theta(2t / \theta)]−n = (1 − 2t)−n$
+which is mgf of χ2 with 2n d.f.
+\item (iii) (a) $\hat{\theta} = 485.9028/50 = 9.718$
+(b) $P(74.22 < 100\hat{\theta} / \theta < 129.6) = 0.95$ from tables of χ2 with 100 d.f.
+
+\item 95\% CI for \theta is $(100\hat{\theta} / 129.6 , 100\hat{\theta} / 74.22)$
+
+i.e. (971.8056 / 129.6 , 971.8056 / 74.22) i.e. (7.50,13.1)
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
