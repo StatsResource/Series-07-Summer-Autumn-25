@@ -47,21 +47,7 @@ simultaneously.
 Determine the minimum number of components required to ensure that the
 probability the motor fails is less than one in a billion (i.e. less than 109), assuming
 that components fail independently. 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
-\item A random variable X which can be used in certain circumstances as a model for claim
-sizes has cumulative distribution function
-\[F(x) = \begin{cases}
-0 & \mbox{ where }  x < 0 \\ 
-1 - \left(\frac{2}{(2+x)}\right)^2 & \mbox{ where }  x > 0 \\ 
-\end{cases}
-\]
-
-Calculate the value of the conditional probability $P(X > 3|X > 1)$. 
-\item Suppose that the sums assured under policies of a certain type are modelled by a
-distribution with mean £8,000 and standard deviation £3,000. Consider a group of
-100 independent policies of this type.
-Calculate the approximate probability that the total sum assured under this group of
-policies exceeds £845,000. 
+ 
 \end{enumerate}
 \newpage
 
@@ -81,22 +67,5 @@ P(motor fails) = P(n independent components fail) = 0.02n
 This is less than 109 if n log(0.02)  log(109)  n  log(109)/log(0.02) = 5.30
 Therefore the minimum number of components is 6.
 [OR: by trial and error]
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 2002 September Q 3
-3 
-\begin{eqnarray*}
-P(X > 3| X > 1) &=& \frac{P(X > 3 \mbox{and }X > 1)}{P(X > 1)}\\
-&=& \frac{P(X > 3 )}{P(X > 1)}\\
-&=& \frac{(2/5)^5 }{(2/3)^3 }\\
-&=& 0.216\\
-\end{eqnarray*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-4 Using units of £1000:
-Total sum assured S  N(100  8, 100  9) i.e. S  N(800, 900) approximately, by
-Central Limit Theorem.
-P(S > 845)  P[Z > (845  800)/30] = P(Z > 1.5) where Z  N(0, 1)
-= 0.067
 
 \end{document}
