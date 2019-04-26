@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 7 Claims arise through time on a portfolio of policies one after another, at random, and
+at a constant rate per week. Claim sizes are to be modelled as a N(\mu, \sigma^2) random
+variable, independent of the times of occurrence and the accumulated numbers of
+claims.
+The moment generating function of S, the total size of all claims which occur in a
+period of $k$ weeks (where $k$ is a positive integer), is to be used in a theoretical report
+being written by two students.
+\begin{itemize}
+    \item One student (A) suggests that the moment generating function of $S$ is given by:
+Suggestion A :
+\[
+M_S ( t ) = exp \left( k\;\lambda \left{ exp \left[ \mu\;t + s 2 t 2 \right] - 1 \right} \; \right)
+\]
+
+\item The other (B) disagrees and suggests that it is in fact given by:
+Suggestion B :
+
+\[M_S ( t ) = exp \left( k\;\lambda exp \left[ \mu\;t + s 2 t 2 \right] - 1 \right)  \]
+\end{itemize}
+
+One of the students is correct. Determine which one this is.
+
+7
+\begin{itemize}
+    \item N is Poisson(k\lambda) with $MN(t) = exp[k\lambda{exp(t) – 1}]$.
+\item S has a compound distribution with mgf \[MS(t) = MN{logMX(t)}\]
+and \[MX(t) = exp(\mut + \sigma^2t2/2)]\.
+\item So mgf of S is $MN(\mut + \sigma^2t2/2)$ and correct suggestion is A.
+\item OR: by using the result quoted in the Formulae and Tables book
+\item OR: we must have $MS(0) = 1$, so B is wrong.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+ 8 A student actuary is about to collect data from a batch of insurance proposal forms. It
+is known that on average one in every fifty such forms contains incomplete
+information, and the student wants to be 95\% sure of having at least 500 forms which
+are complete.
+Show that he must use a batch of at least 516 forms. (Use a suitable model and
+appropriate tables for the distribution of the number of forms containing incomplete
+information.) 
+
+\medskip
+
+8 Let X be the number of forms with incomplete information in a batch of n forms.
+Then X ~ Poisson(0.02n) approximately
+\begin{itemize}
+    \item With n = 516, $X \sim P(10.32)$ and $P(X \leq 16) = 0.965$ approx, by linear interpolation
+\item With n = 515, $X \sim P(10.3)$ and $P(X \leq 15) = 0.940$ approx, by linear interpolation
+\item So he requires 516 forms
+\end{itemize}
+
+
+\end{document}
