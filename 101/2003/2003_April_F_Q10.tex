@@ -1,0 +1,86 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+10 In an investigation into the comparison of claim amounts between three different
+regions, a random sample of 10 independent claim amounts was taken from each
+region and an analysis of variance was performed. The resulting ANOVA table is
+given below with some entries omitted:
+\begin{verbatim}
+Source of variation d.f. SS MSS
+Between regions 2 4439.7 2219.9
+Residual * * *
+Total 29 15153.2    
+\end{verbatim}
+
+\begin{enumerate}[(a)]
+    \item (i) Calculate the missing entries in this table and perform the appropriate F-test to
+determine whether there are significant differences between the mean claim
+amounts for the three regions. 
+    \item (ii) The three sample means were given by:
+Region A B C
+Sample mean 147.47 154.56 125.95
+Given that it was of particular interest to compare regions A and B, calculate a
+95\% confidence interval for the difference in their means and comment on
+your answer in the light of the F-test performed in part (i). 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+10 (i) Missing entries are:
+\begin{itemize}
+    \item d.f. = 27 by subtraction
+    \item SS = 10713.5 by subtraction
+    \item MS = 396.8 being 10713.5/27.
+    \item Observed F = 5.59 on 2 and 27 d.f.
+    \item From tables the 1\% critical point is 5.488
+    \item Significant at 1\%, so there is quite strong evidence of a difference in the mean
+claim amounts for the three regions.
+\end{itemize}
+
+(ii) 95% confidence interval for (A  B ) , or equivalently (A  B ) , is
+0.025,27
+( )  1 1
+A B 10 10 y  y  t  
+giving
+(147.47 154.56) 2.052 396.8 1 1
+10 10
+  
+	7.09  18.28 or (	25.37, 11.19)
+	\begin{itemize}
+    \item
+This comfortably contains zero indicating no difference between the
+underlying means for regions A and B.
+\item The significant result of the F-test clearly comes from region C mean being
+much lower than the region A and B means.
+\end{itemize}
