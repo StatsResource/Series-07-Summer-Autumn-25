@@ -1,0 +1,127 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+11 
+The following table gives the sums insured (in units of £1,000) for a random sample
+of insurance policies on the contents of private houses for each of four insurance
+companies.
+Company
+\begin{verbatim}
+1 2 3 4
+(y1) (y2) (y3) (y4)
+39 24 21 33
+29 28 30 26
+33 33 30 28
+36 22 51 30
+27 29 23 27
+36 20 23 37
+27 23 35 37
+y1 = 227 y2 = 179 y3 = 213 y4 = 218
+y1
+2 = 7,501 y2
+2 = 4,703 y3
+2 = 7,125 y4
+2 = 6,916
+\end{verbatim}
+
+\begin{enumerate}[(a)]
+\item (i) Test whether there are any differences between the population means of the
+four companies, using one-way analysis of variance.
+\item 
+(ii) A plot of the residuals for the fitted one-way analysis of variance model is
+given below:
+Comment on the adequacy of the model. 
+\end{enumerate}
+
+1 2 3 4
+-10
+0
+10
+20
+Company
+Residuals
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+11 (i) n1 = n2 = n3 = n4 = 7 n = 28
+y1 = 227 y2 = 179 y3 = 213 y4 = 218 yij = 837
+
+\begin{itemize}
+    \item $\sum y_1^2 = 7501$ 
+\item $\sum y^2_2 = 4703 $
+\item $\sum y_3^2 = 7125 $
+\item $\sum y_4^2 = 6916 $
+\item $\sum yij^2 = 26245 $
+\end{itemize}
+SST = 26245
+8372
+28
+= 26245 25020.321 = 1224.7
+SSB =
+1
+7
+(2272 + 1792 + 2132 + 2182) 25020.321
+= 25209 25020.321 = 188.7
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 6
+\begin{verbatim}
+ SSR = SST SSB = 1224.7 188.7 = 1036.0
+Source of variation d.f. SS MSS
+Companies 3 188.7 62.9
+Residual 24 1036.0 43.2
+Total 27 1224.7
+F =
+62.9
+43.2
+= 1.46 on (3,24) degrees of freedom.   
+\end{verbatim}
+
+The 10\% point of F3,24 distribution is 2.327. Therefore, there is insufficient
+evidence to reject the null hypothesis that the population means for the four
+companies are equal, i.e., the distributions of the sums insured are the same for
+the four companies.
+(ii) 
+\begin{itemize}
+    \item The model used in (i) assumes that the sums insured for each company follow
+a normal distribution, and the population variances are equal.
+\item The plot of residuals shows:
+normality seems appropriate, but observation £51,000 seems to be an
+outlier
+companies have similar sample variances. \item However one could argue that there is
+a suggestion that the variance for Company 3 is higher than the variances
+for the other companies.
+\item Therefore, overall the one-way analysis of variance model seems adequate and
+the conclusions in (i) are valid.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
