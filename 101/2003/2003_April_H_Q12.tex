@@ -1,0 +1,118 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item 12 The following data give the invoiced amounts for work carried out on 12 jobs
+performed by a plumber in private customers houses. The durations of the jobs are
+also given.
+\begin{verbatim}
+duration x (hrs) 1 1 2 3 4 4 5 6 7 8 9 10
+amount y (£) 45 65 80 95 100 125 145 180 180 210 330 240
+60, 2 402, 1795, 2 343,725, 11,570 xi  xi  yi  yi  xi yi     
+\end{verbatim}
+
+The plumber claims to calculate his total charge for each job on the basis of a single call-out charge plus an hourly rate for the time spent working on the job.
+\begin{enumerate}
+    \item (i) (a) Draw a scatterplot of the data on graph paper and comment briefly on your plot.
+\item (b) The equation of the fitted regression line of y on x is $y = 22.4 + 25.4x$ and the coefficient of determination is $R^2 = 87.8\%$ (you are not asked
+to verify these results).
+Draw the fitted line on your scatterplot. [5]
+\item (ii) (a) Calculate the fitted regression line of invoiced amount on duration of job using only the 11 pairs of values remaining after excluding the
+invoice for which x = 9 and y = 330.
+(b) Calculate the coefficient of determination of the fit in (ii)(a) above.
+(c) Add the second fitted line to your scatterplot, distinguishing it clearly from the first line you added (in part (i)(b) above).
+\item (d) Comment on the effect of omitting the invoice for which x = 9 and y = 330.
+(e) Carry out a test to establish whether or not the slope in the model fitted in (ii)(a) above is consistent with a rate of £25 per hour for work
+carried out.
+\end{enumerate}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+12 (i) (a)
+The point (9,330) is an outlier from the general pattern, which is
+strongly linear.
+(b)
+(ii) (a) Now Σx = 51, Σx2 = 321, Σy = 1,465, Σy2 = 234,825, Σxy = 8,600
+Sxx = 84.545, Syy = 39,713.636, Sxy = 1807.727
+  1807.727 /84.545  21.382,  1465 /11\beta(51/11)  34.048
+Fitted line is y = 34.0 + 21.4x
+(b) Coefficient of determination R2 = 1807.7272/(84.545  39713.636)
+= 0.973 i.e. 97.3%
+(or find these by first calculating the three sums of squares SSTOT
+= 39,713.636 as above, SSREG = 1807.7272/84.545 = 38652.515, and
+so SSRES = 1061.121)
+0 1 2 3 4 5 6 7 8 9 10
+400
+300
+200
+100
+0
+duration
+amount
+0 1 2 3 4 5 6 7 8 9 10
+0
+100
+200
+300
+400
+duration
+amount
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(c)
+
+(d) Removing the influence of the single point (9,330) results in a fitted line with a lower slope and a much better fit for the remaining data ($R^2$ has increased from 87.8\% to 97.3\%).
+
+
+(e) The hourly rate corresponds to the slope in the model
+H0: slope = 25 v H1: slope ≠ 25
+Estimate of error variance = 1061.121/9
+ standard error of slope estimate = [(1061.121/9)/84.545]1/2 = 1.181
+t = (21.382  25)/1.181 = 	3.06 on 9 df
+Upper tail probability is between 0.005 and 0.01 so P-value is between
+0.01 and 0.02, so we have quite strong evidence against H0. We
+conclude that the data are not consistent with an hourly rate of £25.
+0 1 2 3 4 5 6 7 8 9 10
+0
+100
+200
+300
+400
+duration
+amount
+line (outlier omitted)
+original line
+
+
+\end{document}
