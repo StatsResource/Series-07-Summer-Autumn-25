@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+5 Ten independent hypothesis tests are to be conducted, each at the 5\% significance
+level.
+Calculate the probability that at least one of the tests produces a significant result,
+assuming that the null hypothesis for each of the 10 tests is true, and comment briefly
+on the value. 
+\item 
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+5 P(at least one test is significant | each null hypothesis is true)\\
+= 1 − P(no test is significant | each null hypothesis is true)\\
+= 1 − (1 − 0.05)10 as the 10 tests are independent\\
+= 0.4\\
+
+Comment: a false-positive is very likely with the 10 multiple tests.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 Show that the slope of the regression line fitted by least squares to the three points
+$(0,0) , (1,y) , (2,2)$
+is 1 for all values of $y$. 
+
+6 Sxx = 5 – 32/3 = 2 , Sxy = y + 4 – 3(y+2)/3 = 2
+So fitted slope = 2/2 = 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Page 5
+OR: the distribution of X can be modelled approximately using a normal distribution
+with mean 0.02n and variance 0.0196n; we require P(X ≤ n − 500) to be at least 0.95;
+the analysis is more awkward, but solving a quadratic in n gives n ≥ 515
+
+\end{document}
