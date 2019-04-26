@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+1 In a large corporation 50 new employees joined the company’s pension scheme
+during the last year. It is assumed that each new employee has a probability of 0.40
+of remaining in the scheme for at least 10 years, independently for each new
+employee.
+Calculate an approximate value for the probability that more than half of last year’s
+50 new employees remain in the pension scheme for at least 10 years. 
+\newpage
+%%
+1 
+
+\begin{itemize}
+    \item Let X be the number remaining in the scheme for at least 10 years.
+X ~ binomial(50, 0.4)
+\item So, approximately $X \sim N(20, 12)$
+\item We require $P(X > 25)$.
+\item Using a continuity correction,
+\end{itemize}
+
+\begin{eqnarray*}
+P(X > 25.5) &=& P ( Z > \frac{25.5 − 20}{\sqrt{12}}\\
+&=& P ( Z > 1.59) \\
+&=& 1 − 0.944 \\
+&=& 0.056\\
+\end{eqnarray*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 2 Let $(X_1, X_2, … , X_9)$ be a random sample from a N(0,2) distribution. Let X and
+S2 denote the sample mean and variance respectively.
+Find the approximate value of P X  S  by referring to an appropriate statistical
+table. 
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 3
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Q2
+
+\[ P(\bar{X} > S) = P( \frac{\bar{3X}}{S} > 3) = P(t_8 > 3)\] 
+%%%%%%%%%%%%%
+S
+⎛ ⎞
+> = ⎜ > ⎟ = >
+⎝ ⎠
+which is between 0.005 and 0.01.
+
+\end{document}
