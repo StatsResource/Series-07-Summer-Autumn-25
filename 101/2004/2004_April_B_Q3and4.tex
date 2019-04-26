@@ -1,0 +1,57 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+3 The cumulant generating function of a random variable X is given by:
+ \[CX (t) = logMX (t) = 2 1 t 1\]
+where $M_X(t)$ is the moment generating function.
+Determine the mean and variance of the distribution of $X$. 
+
+\newpage
+3 C´(t) = 20(1 t) 11 , C´´(t) = 220(1 t) 12
+\[E[X] = C´(0) = 20\]
+\[V[X] = C´´(0) = 220\]
+[OR as coefficients of t and of t2/2! in expansion of C(t)]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 4 Claim sizes in a certain insurance situation are modelled by an exponential
+distribution with mean \$20,000. The insurer defines a claim to be a large claim if the
+claim size exceeds \$35,000.
+State, with a reason, the expected size of a large claim. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+4 Answer: $35,000 + 20,000 = $55,000
+\begin{itemize}
+    \item Reason: the memoryless property of the exponential distribution (the excess above
+35,000 itself has an exponential distribution with mean 20,000).
+\item Note: relatively few candidates were able to exploit the memoryless property of the
+exponential distribution to advantage.
+\end{itemize}
+\end{document}
