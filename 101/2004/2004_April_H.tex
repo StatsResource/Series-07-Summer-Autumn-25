@@ -1,0 +1,222 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+12 For the estimation of a binomial probability p = P(success), a series of n independent
+trials are performed and X represents the number of successes observed.
+\begin{enumerate}[(a)]
+    \item (i) Write down the likelihood function $L(p)$ and show that the maximum
+likelihood estimator (MLE) of p is =
+X
+p
+n
+.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%5
+    \item (ii) (a) Determine the Cramer-Rao lower bound for the estimation of p.
+(b) Show that the variance of the MLE is equal to the Cramer-Rao lower
+bound.
+    \item (c) Write down an approximate sampling distribution for p valid for
+large n.
+%%%%%%%%%%%%%%%%%%%%%%%%%%5
+    \item (iii) In order to develop an approximate 95\% confidence interval for $p$ for large $n$,
+the following pivotal quantity is to be used
+(0,1)
+(1 )
+p p
+N
+p p
+n
+.
+Assuming that this pivotal quantity is monotonic in p, show that rearrangement
+of the inequality
+1.96 1.96
+(1 )
+p p
+p p
+n
+leads to a quadratic inequality in p, and hence determine an approximate 95%
+confidence interval for p of the form pL ( p) p pU ( p) .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%5
+    \item (iv) A simpler and more widely used approximate confidence interval is obtained
+by using the following pivotal quantity
+(0,1)
+(1 )
+p p
+N
+p p
+n
+.
+Determine the resulting approximate 95\% confidence interval using this. 
+\end{enumerate}
+
+
+(v) In two separate applications the following data were observed:
+(a) 4 successes out of 10 trials
+(b) 80 successes out of 200 trials
+In each case calculate the two approximate confidence intervals from parts
+(iii) and (iv) and comment briefly on your answers.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+12 (i) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%- April 2004 Question 12
+
+\[L ( p ) = {n \choose x} p^x (1-p)^{n-x}\]
+
+\[ \log L ( p )  = \log {n \choose x} + x \log p + (n-x) \log(1-p)\]
+
+\[ \frac{\partial}{\partial p} \left( \log L ( p ) \right)  =  0 +  \frac{x}{p} +  \frac{n-x}{1-p} \]
+
+
+equate to zero. \[ \frac{x}{p} +  \frac{n-x}{1-p} = 0\]
+
+i.e. 
+\[\frac{x}{p} =  \frac{n-x}{1-p}
+
+\[ x(1-p) = (n-x)p\]
+
+\[p = \frac{x}{n}\]
+clearly maximises $L(p)$
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{framed}
+
+\[ \log( A \times B \times C) = \log(A) + \log(B) + \log(C) \]
+
+\[\frac{d}{dx} \left( \log x \right) = \frac{1}{x} \]
+
+\end{framed}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 7
+MLE is
+X
+p
+n
+(ii) 
+
+\[ \frac{\partial^2}{\partial p^2} \left( \log L ( p ) \right)  =  -\frac{x}{p^2} -  \frac{n-x}{(1-p)^2} \]
+
+\begin{eqnarray} 
+E\left[\frac{\partial^2}{\partial p^2} \left( \log L ( p ) \right) \right] 
+&=& -\frac{np}{p^2} -  \frac{n-np}{(1-p)^2} \\
+&=& -\frac{n}{p} -  \frac{n}{1-p} \\
+&=& - \frac{n}{p(1-p)}\\
+\end{eqnarray*}
+
+
+CRlb
+n n
+p p
+(b) Var( p ) = 2
+np(1 p) p(1 p)
+CRlb
+n n
+(c)
+(1 )
+( , ) ( , )
+p p
+p N p CRlb N p
+n
+(iii) 1.96 1.96
+(1 )
+p p
+p p
+n
+2
+( ) 2
+1.96
+(1 )
+p p
+p p
+n
+2
+2 2 1.96 2
+p 2 pp p ( p p )
+n
+2 2
+1.96 2 1.96 2
+(1 ) p (2 p ) p p 0
+n n
+\begin{itemize}
+    \item This is a quadratic and will be negative between its two roots.
+So, pL , pU will be the two roots:
+2 2 2
+2 2
+2
+1.96 1.96 1.96
+(2 ) (2 ) 4 (1 )
+1.96
+2(1 )
+p p p
+n n n
+n
+with pL from the " " sign, and pU from the "+" sign.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item (iv) 1.96 1.96
+(1 )
+p p
+p p
+n
+(1 ) (1 )
+1.96 1.96
+p p p p
+p p p
+n n
+giving pL and pU .
+\item (v) (a) x = 4, n = 10
+quadratic from (iii) is 1.38416 p2 1.18416 p 0.16
+roots give pL = 0.168 and pU = 0.687.
+from (iv) pL = 0.096 and pU = 0.704.
+quite a difference, especially in pL , but n = 10 is small.
+\end{itemize}
+(b) x = 80, n = 200
+quadratic from (iii) is 1.019208 p2 0.819208 p 0.16
+roots give pL = 0.335 and pU = 0.469.
+from (iv) pL = 0.332 and pU = 0.468.
+very similar ( and much narrower than (a)) with n = 200 being large.
+In (i) many candidates wanted to write the likelihood as a product this is OK using
+Bernoulli probabilities as the individual components, as in
+1
+1
+( ) 1 i i
+n
+x x
+i
+L p p p
+where xi = 1 or 0, but not as a product of binomial(n,p) components.
+\end{document}
