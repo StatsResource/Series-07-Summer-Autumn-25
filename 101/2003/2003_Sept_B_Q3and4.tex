@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 3 A random sample of size 200 is taken from a large group of motor policies. The
+proportion of policies on which claims arose during the last year is ˆ  0.16 .
+Calculate approximate 95\% confidence limits for the true proportion  for the whole
+group of policies. 
+\item 4 A random sample of 16 values, $x_1, x_2, \ldots , x_{16}$, was drawn from a normal population
+and gave the following summary statistics:
+16 16
+2
+1 1
+i 51.2, i 243.19.
+i i
+x x
+ 
+   
+Calculate a 95\% confidence interval for the population mean. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 ˆ(1 ˆ) 1.96
+200
+\theta −\theta
+\pm where \hat{\theta} = 0.16
+1.96 (0.16)(0.84) 1.96(0.026) 0.051
+200
+⇒ \pm ⇒ \pm ⇒ \pm
+or, as an interval: 0.16 \pm 0.051⇒(0.109,0.211)
+%% Q4
+
+\begin{itemize}
+
+\item $n=16$
+
+\item ${  \displaystyle  \sum^{16}_{i=1} x_i = 51.2 }$ and ${  \displaystyle  \sum^{16}_{i=1} x_i^2 = 243.19 }$
+
+\item $\bar{x} =3.20 $
+
+\item ${  \displaystyle s^2  = \frac{243.19 - \frac{(51.2)^2}{16}}{16-1}   = \frac{79.35}{15} = 5.29 }$
+
+\item $ s = \sqrt{5.29} = 2.3$.
+
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 4
+The 95\% confidence interval is given by:
+0.025, 1
+3.2 2.131 2.3 3.2 1.23
+n 4
+x t s
+n \pm − = \pm = \pm
+i.e. (1.97, 4.43)
+\end{document}
