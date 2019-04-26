@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1 The probability that a claim is made on a certain type of policy in a particular year is
+0.04. Five hundred policies are selected at random.
+Use a suitable normal approximation to calculate the probability that no more than 30
+of these will result in a claim during the year. 
+
+
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1 X = number of policies where a claim is made.
+X bi (500, 0.04)
+\[X N((500)(0.04), 500(0.04)(0.96))\] \[N(20, 19.2)\]
+P(X 30) P(X 30.5) using continuity correction
+30.5 20 10.5
+(2.40)
+19.2 19.2
+= 0.9918
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+%- Question 2 
+
+The interquartile range of a continuous distribution with distribution function $F(x)$ is
+defined as IQR = x2 x1 where $F(x1) = 0.25$ and $F(x2) = 0.75$.
+Show that for a normal distribution with variance 2, the interquartile range is
+IQR = 1.349 . 
+\newpage
+2 
+\begin{itemize}
+    \item The required values of $x_1$ and $x_2$, the lower and upper quartiles, are such that:
+$F(x1) = 0.25$ and $F(x2) = 0.75$,
+i.e. 1 0.25
+x
+and 2 0.75,
+x
+where is the standard normal distribution function.
+\item From the statistical table of the percentage points of the standard normal distribution,
+we have
+x1
+= 0.6745 x1 = 0.6745
+x2
+= 0.6745 x2 = + 0.6745
+where is the population mean and is the population standard deviation.
+\item 
+\begin{eqnarray*}
+IQR &=& x_2 - x_1 \\
+&=& 0.6745 + 0.6745\\
+&=& 1.349 .
+\end{eqnarray*}
+
+
+\end{document}
