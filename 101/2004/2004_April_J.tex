@@ -1,0 +1,226 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Forensic scientists use various methods for determining the likely time of death from
+post-mortem examination of human bodies.
+
+\begin{itemize}
+\item 
+A recently suggested objective method uses the concentration of a compound (3-methoxytyramine or 3-MT) in a particular part of the brain.
+\item In a study of the relationship between post-mortem interval and the concentration of 3-MT, samples of the appropriate part of the brain were taken from coroners cases for which the time of death had been determined from eye-witness accounts. 
+\item The
+intervals (x; in hours) and concentrations (y; in parts per million) for 18 individuals who were found to have died from organic heart disease are given in the following table. 
+\item For the last two individuals (numbered 17 and 18 in the table), there was no eye-witness testimony directly available, and the time of death was established on the
+basis of other evidence including knowledge of the individuals activities.
+\end{itemize}
+
+\begin{verbatim}
+  Observation
+number
+Interval
+(x)
+Concentration
+(y)
+1 5.5 3.26
+2 6.0 2.67
+3 6.5 2.82
+4 7.0 2.80
+5 8.0 3.29
+6 12.0 2.28
+7 12.0 2.34
+8 14.0 2.18
+9 15.0 1.97
+10 15.5 2.56
+11 17.5 2.09
+12 17.5 2.69
+13 20.0 2.56
+14 21.0 3.17
+15 25.5 2.18
+16 26.0 1.94
+17 48.0 1.57
+18 60.0 0.61
+x = 337 x2 = 9854.5 y = 42.98 y2 = 109.7936 xy = 672.8  
+\end{verbatim}
+
+In this investigation you are required to explore the relationship between
+concentration (regarded as the response/dependent variable) and interval (regarded as the explanatory/independent variable).
+\begin{enumerate}[(a)]
+    \item  Construct a scatterplot of the data. Comment on any interesting features of the data and discuss briefly whether linear regression is appropriate to model the relationship between concentration of 3-MT and the interval from death.
+
+    \item Calculate the correlation coefficient for the data, and use it to test the null
+hypothesis that the population correlation coefficient is equal to zero.
+
+    \item  Calculate the equation of the least-squares fitted regression line, and use it to
+estimate the concentrations of 3-MT:
+(a) after 1 day and
+(b) after 2 days
+Comment briefly on the reliability of these estimates. [5]
+    \item Calculate a 99\% confidence interval for the slope of the regression line. Using this confidence interval, test the hypothesis that the slope of the regression line is equal to zero. Comment on your answer in relation to the answer given in
+part (ii) above.
+\end{enumerate}
+
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+14 (i)
+\begin{itemize}
+    \item The concentration of 3-MT in the brain decreases as the post-mortem interval increases from 5.5 hours to 60 hours.
+    \item There are two points with a much higher post-mortem interval than the other observations.
+\item The data seem to be appropriate for linear regression, but care should be taken when evaluating the effect for the higher interval values as there are only 2 points in the higher x-range.
+\end{itemize}
+
+(ii) n = 18
+0 10 20 30 40 50 60
+3
+2
+1
+Interval (x)
+Concentration (y)
+Plot of Concentration against Interval
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 10
+\begin{itemize}
+    \item Sxx = x2 ( x)2/n
+= 9854.5 (337)2/18
+= 3545.1111
+    \item Syy = y2 ( y)2/n
+= 109.7936 (42.98)2/18
+= 7.1669111
+    \item Sxy = xy ( x)( y)/n
+= 672.8 (337)(42.98)/18
+= 131.88111
+\end{itemize}
+
+Correlation coefficient:
+131.88111
+(3545.1111)(7.1669111)
+xy
+xx yy
+S
+r
+S S
+= 0.827
+Test H0: = 0 vs H1: 0
+2
+2
+1
+n
+t r
+r
+~ tn 2
+= 2
+16
+( 0.827)
+1 ( 0.827)
+= 5.89
+\begin{itemize}
+\item $t_{16}(2.5\%) = 2.120$
+\item $t_{16}(0.5\%) = 2.921$
+\end{itemize}
+
+t = 5.89 is larger than the critical values at the 5\% and 1\% significance levels. Therefore reject the null hypothesis that the population correlation coefficient is equal to zero, and conclude that there is a linear relationship
+between interval and concentration.
+(iii) Model: y = + x
+Slope:
+131.88111
+3545.1111
+xy
+xx
+S
+S
+= 0.0372008 or 0.0372 (to 4 d.p.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Intercept:
+y x
+= 42.98/18 ( 0.0372008)(337/18)
+= 3.084259 or 3.0843 (to 4 d.p.)
+y = x
+= 3.0843 0.0372 x
+i.e. \[\mbox{Concentration} = 3.0843 0.0372 \mbox{Interval}\]
+
+
+(a) At 1 day = 24 hours:
+\begin{eqnarray*}
+y &=& 3.0843 -  0.0372 x\\
+&=& 3.0843 - 0.0372 (24)\\
+&=& 2.19\\
+\end{eqnarray*}
+(b) At 2 days = 48 hours:
+
+
+\begin{eqnarray*}
+y &=& 3.0843 -  0.0372 x\\
+&=& 3.0843 - 0.0372 (48)\\
+&=& 1.30\\
+\end{eqnarray*}
+This data set contains accurate data up to 26 hours, as for observations 17 and 18 (at 48 hours and 60 hours respectively) there was no eye-witness testimony directly available. Predicting 3-MT concentration after 26 hours may not be
+advisable, even though x = 48 is within the range of the x-values (5.5 hours to 60 hours).
+(iv)
+2
+2 1
+2
+xy
+yy
+xx
+S
+S
+n S
+1 ( 131.88111)2
+7.1669111
+16 3545.1111
+2.2608231
+16
+= 0.1413014
+0.3759
+s.e.( ) =
+2 0.3759
+Sxx 3545.111
+= 0.00631331
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 99\% confidence interval for slope is tn 2 s.e.( ) df = n 2 = 16
+= 0.0372008 (2.921) (0.00631331)
+= 0.0372 0.0184
+or ( 0.0556, 0.0188)
+\item  0 is not within this 99\% confidence interval, therefore we would reject the
+null hypothesis = 0, at the 1\% significance level.
+\item Therefore there does appear to be a (negative) linear relationship between
+Interval and Concentration.
+\item This confirms the result in (ii) where the correlation coefficient was shown to
+not equal zero at the 1\% significance level.
+\item Note: Plots of data need not be works of graphic art, but should at least be neat and clear
+enough (with adequate title and labels) to convey the information.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
