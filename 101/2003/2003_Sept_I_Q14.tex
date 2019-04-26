@@ -1,0 +1,352 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+\item Consider a linear regression model in which responses Yi are uncorrelated and have
+expectations \beta xi and common variance $\sigma^2$ (i 1, ,n) \sigma , i.e. Yi is modelled as a linear
+regression through the origin:
+\[ E(Yi | xi )  \beta xi and V(Yi | xi ) \sigma 2 (i \sigma1, ,n) \sigma .\]
+\begin{enumerate}[(a)]
+\item (i) (a) Show that the least squares estimator of $\sigma$ is 2
+1 1 1
+ˆ / n n
+i i i i i xY x
+\sigma \sigma
+\sigma \sigma \sigma .
+\item (b) Derive the expectation and variance of $\hat{\beta}_1$ under the model. 
+\item (ii) An alternative to the least squares estimator in this case is:
+2
+1 1
+ˆ / /
+n n
+i i
+i i
+Y x Y x
+\sigma \sigma
+\sigma \sigma \sigma  .
+\item (a) Derive the expectation and variance of $\hat{\beta}_2$ under the model.
+\item (b) Show that the variance of the estimator $\hat{\beta}_2$ is at least as large as that of
+the least squares estimator $\hat{\beta}_1$. 
+\item (iii) Now consider an estimator 3 \hat{\sigma} of $\sigma$ which is a linear function of the
+responses, i.e. an estimator which has the form 3
+1
+ˆ ,
+n
+i i
+i
+a Y
+\sigma
+\sigma \sigma where a1, ,an \sigma
+are constants.
+\item (a) Show that 3 \hat{\sigma} is unbiased for \sigma if 1 1 n
+i i i a x
+\sigma
+\sigma \sigma , and that the variance
+of 3 \hat{\sigma} is 2 2
+1
+n
+i i a
+\sigma
+\sigma  .
+\item (b) Show that the estimators $\hat{\beta}_1$ and $\hat{\beta}_2$ above may be expressed in the
+form 3
+1
+ˆ
+n
+i i
+i
+a Y
+\sigma
+\sigma \sigma and hence verify that $\hat{\beta}_1$ and $\hat{\beta}_2$ satisfy the
+condition for unbiasedness in (iii)(a).
+\item (c) It can be shown that, subject to the condition 1 1 n
+i i i a x
+\sigma
+\sigma \sigma , the
+variance of 3 \hat{\sigma} is minimised by setting
+2
+1
+i .
+i n
+i i
+a x
+x
+\sigma
+\sigma
+\sigma
+Comment on this result. 
+\end{enumerate}
+
+\newpage
+
+14 (i) (a) The least squares estimate of \beta minimises
+2 2 2 2
+1 1 1 1 ( ) 2 . n n n n
+i i i i i i i i i i q y x y xy x = = = = =\sum −\beta =\sum − \beta\sum +\beta \sum
+Differentiating with respect to\beta gives
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 10
+2
+1 1 2( ). n n
+i i i i i
+dq x x y
+d = = = \beta −
+\beta \sum \sum
+Equating to zero gives the least squares estimator as
+\begin{itemize}
+\item 
+1
+1 2
+1
+ˆ
+n
+i i i
+n
+i i
+x Y
+x
+=
+=
+\beta = \sum
+\sum
+as required.
+\item (b) Mean and variance of $1 \hat{\beta}$ :
+2
+1 1 1
+(ˆ ) ( | ) / n n
+\[i i i i i i E x E Y x x = = \beta =\sum \sum\]
+2
+1 1 / n n
+i i i i i x x x = = =\sum \beta \sum = \beta
+2 2 22 2 2
+1 1 1 1
+(ˆ ) /( ) / . n n n
+i i i i i i V x x x = = = \beta = \sum \sum \sum = \sum \sum
+\item (ii) (a) The alternative estimator 2 1 1
+ˆ / n n
+i i i i Y x = = \beta =\sum \sum has expectation and
+variance
+2 1 1 1 1
+(ˆ ) ( | ) / / , n n n n
+i i i i i i i i i E EY x x x x = = = = \beta =\sum \sum =\sum \beta \sum = \beta
+( )2
+2 2 2
+2 1
+(ˆ ) / /( ). n
+i i V n x nx = \beta = \sum \sum = \sum
+\item (b) 2 1 V (\betaˆ ) ≥V (\betaˆ )
+2 2 2 2
+1 / / n
+i i nx x = ⇔ \sum ≥ \sum \sum
+2 2
+1 0 n
+i ix nx = ⇔\sum − ≥
+2
+1( ) 0 n
+i ix x = ⇔\sum − ≥
+\item The variance of 2 \hat{\beta} is at least as large as the variance of the least
+squares estimator 1 \hat{\beta} .
+(iii) (a) 3
+1 1 1 1
+(ˆ ) ( | )
+n n n n
+i i i i i i i i i
+i i i i
+E E aY aEY x ax ax
+% = = = =
+% ⎛ ⎞
+% \beta = ⎜⎜ ⎟⎟ = = \beta = \beta
+% ⎝ ⎠
+% \sum \sum \sum \sum
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 11
+\item ∴ % E(\betaˆ3) = \beta , i.e. unbiased, if
+1
+1
+n
+i i
+i
+a x
+=
+\sum =
+3
+1
+(ˆ )
+n
+i i
+i
+V V aY
+% =
+% ⎛ ⎞
+% \beta = ⎜⎜ ⎟⎟
+% ⎝ ⎠
+% \sum = 2 2
+% 1
+n
+i
+i
+a
+=
+\sum \sum
+(b) 1
+1
+2
+1
+ˆ
+n
+i i
+i
+n
+i
+i
+x Y
+x
+=
+=
+% \beta =
+\sum
+\sum
+=
+1
+,
+n
+i i
+i
+a Y
+= \sum
+\item where
+2
+1
+i , 1, , .
+i n
+i
+i
+a x i n
+x
+=
+= =
+\sum
+…
+2
+1
+1 1 2 2
+1 1
+1
+n
+n n i
+i i
+i i n i n
+i i
+i i
+i i
+x
+a x x x
+x x
+=
+= =
+= =
+∴ = = =
+\sum
+\sum \sum
+\sum \sum
+\item i.e. the condition 1 1 n
+i i i a x = \sum = is satisfied.
+1
+2
+1
+1
+ˆ ,
+n
+i n
+i
+n i i
+i
+i
+i
+Y
+a Y
+x
+=
+=
+=
+\item $\beta$ = =
+\sum
+\sum
+\sum
+where ai 1 , i 1, ,n.
+nx
+= = …
+∴
+1 1
+1 1
+n n
+i i i
+i i
+a x x nx
+= = nx nx
+\sum =\sum = =
+i.e. the condition 1 1 n
+i i i a x = \sum = is satisfied.
+\end{itemize}
+
+(c) Among estimators of the form 1
+n
+i i i a Y = \sum , the minimum variance
+unbiased estimator of \beta is
+1
+3 1
+1 2
+1
+ˆ ˆ
+n
+n i i
+i
+i i n
+i
+i
+i
+x Y
+a Y
+x
+=
+=
+=
+% \beta = = =\beta
+% \sum
+% \sum
+% \sum
+i.e. the least squares estimator.
+
+\end{document}
