@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+ Let S(0) denote the price of a certain security, and let S(n) denote the price of the
+security at the end of n successive weeks for n = 1, 2, 3, .... A model for the changes
+in these prices is such that the price ratios ( )
+( 1)
+S n
+S n\mu
+for n \mu1 are independent
+identically distributed random variables with a lognormal distribution.
+[Note: The random variable Y is lognormal with parameters \mu and \sigma 2 if log(Y) is
+normal N(\mu,\sigma 2), that is, Y is lognormal if it can be expressed as Y \mu eX where
+X ~ N(\mu,\sigma 2). The mean and variance of Y are given by E(Y) =
+2
+e 2
+\mu
+\sigma  and
+V(Y) = e2 2 (e 2 1) \mu\sigma  
+\mu .]
+
+(i) Using the above lognormal model with parameters $\mu = 0.0125$ and $\sigma  = 0.055$,
+determine the probability that:
+\begin{enumerate}[(i)]
+    \item (a) the price of the security decreases over the next week
+\item (b) the price of the security decreases over each of the next two weeks
+\item (c) the price at the end of two weeks is greater than it is at present
+\item (d) the price at the end of 20 weeks is less than it is at present
+\end{enumerate}
+
+[11]
+(ii) At the start of a period the price is £1,245 and it is then observed for 10 weeks.
+The resulting 10 prices (£) and ratios are given in the following table:
+\begin{verbatim}
+Week Price Ratio(y)
+0 1,245 -
+1 1,230 0.988
+2 1,280 1.041
+3 1,392 1.088
+4 1,431 1.028
+5 1,428 0.998
+6 1,439 1.008
+7 1,346 0.935
+8 1,265 0.940
+9 1,513 1.196
+10 1,468 0.970
+y = 10.192 y2 = 10.441562    
+\end{verbatim}
+
+(a) Based on the specified model, explain why the 10 ratios constitute a
+random sample from a lognormal distribution.
+(b) Calculate the mean and the standard deviation for the random sample
+of 10 ratios.
+(c) Hence determine the method of moments estimates of the parameters \mu
+and \sigma  for the lognormal model. 
+\end{enumerate}
+\newpage
+15 (i) (a) Let Y = ratio for one week, and $Y = e^X$
+\begin{eqnarray*}
+P(decrease in one week) &=& P(Y < 1)\\
+&=& P(eX < 1) = P(X < 0)\\
+&=& P(Z < \frac{0-0.0125}{0.055})\\
+&=& − 0.227) \\ 
+&=& 1 − 0.5898 \\ &=& 0.41
+\end{eqnarray*}
+
+(b) P(decrease in next two weeks) = (0.41)2 = 0.17
+(c) We require ( (2) 1) ( (2) . (1) 1)
+(0) (1) (0)
+P S P S S
+S S S
+> = >
+= P(Y2 .Y1 > 1) = P(X2 + X1 > 0)
+where X2, X1 are independent N(\mu,\sum2)
+2
+∴X2 + X1 ~ N(2\mu,2\sum )
+( 0 2(0.0125) 0.321) 0.63
+2(0.055)
+P PZ −
+∴ = > =− = from tables.
+(d) Extending the method of part (c):
+20
+2
+1
+i ~ (20 , 20 )
+i
+X N
+=
+\sum \mu \sum
+( 0 20(0.0125) 1.016) 0.155
+20(0.055)
+P PZ −
+∴ = < =− =
+\begin{itemize}
+    \item (ii) (a) The ratios are independent and identically distributed lognormal r.v.’s.
+\item This defines a random sample from a lognormal distribution.
+\item (b) For the 10 observed ratios y1, . . . , y10:
+\sum y =10.192 ⇒ y =1.0192
+\sum y2 =10.441562 ⇒ s2 = 0.005986⇒ s = 0.0774
+\item (c) For the method of moments:
+solve the following equations for \mu and \sum2
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1 2
+e 2 1.0192
+\mu+ \sum
+= (1)
+2 2 2 e \mu+\sum (e\sum −1) = 0.005986 (2)
+2 2 (2) ÷ (1) ⇒e\sum −1 = 0.0057625
+∴\sum2 = 0.005746 ∴\sum = 0.0758
+(1) log(1.0192) 1 2 0.0161
+2
+⇒ \mu = − \sum =
+[Note: in MME candidates could use \sumˆ 2 =0.005388 with divisor n not
+(n−1) to obtain \sum = 0.0719 and \mu = 0.0164 ]
+
+\end{document}
