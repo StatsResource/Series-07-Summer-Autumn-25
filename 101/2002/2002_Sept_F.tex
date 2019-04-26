@@ -1,0 +1,97 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 9 Thirty employees working in the call centre of a bank were chosen at random from
+the workforce and agreed to assist in the assessment of two different training
+programmes (A and B).
+Ten of the selected employees were randomly assigned to each of the two training
+programmes, while the other ten were to receive no additional training and act as
+controls.
+Shortly after the training began, one of the employees on training programme B and
+two of the control group left the employment of the bank.
+At the end of the training period each of the twenty-seven employees still involved
+was observed at work over a period of time by performance assessors. Each
+employee was then given a performance score (measuring a range of aspects of their
+work) expressed as a mark out of a possible maximum of 100.
+The results were as follows:
+\begin{verbatim}
+    Performance scores Totals
+Control 55 74 64 62 37 78 50 44   464
+Training programme A 63 79 60 75 89 58 75 72 84 69 724
+Training programme B 64 55 57 73 51 60 62 78 68  568
+
+\end{verbatim}
+xij
+2 = 118,128 .
+\begin{enumerate}[(a)]
+\item Plot the data in a simple and informative way which displays both the within
+treatment and between treatment variation. [2]
+\item  Conduct an analysis of variance to investigate whether differences exist
+among the three treatments and comment briefly on your findings. [7]
+\end{enumerate}
+
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9 (i)
+^ indicates treatment means : helpful but not required for the marks
+Within treatment variation is the spread within each set of points, between
+treatment variation is the spread among the 3 treatment means.
+(ii) SST = 118128  17562/27 = 3923.0
+SSB = (4642/8 + 7242/10 + 5682/9)  17562/27 = 971.67
+ SSR = 3923.0  971.67 = 2951.3
+Source of variation df SS MSS
+Between treatments 2 971.67 485.84
+Residual 24 2951.3 122.97
+Total 26 3923.0
+Under H0 : no treatment effects F = 485.84/122.97 = 3.95 on 2,24 df
+P-value is < 0.05, so we have some evidence against H0.
+0 10 20 30 40 50 60 70 80 90 100
+^
+^
+^
+score
+control
+prog A
+prog B
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 6
+We conclude that there is evidence of differences among the treatments. The
+data suggest that training programme A gives a higher mean score than the
+others.
+
+\end{document}
