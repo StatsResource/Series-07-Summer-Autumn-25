@@ -1,0 +1,128 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item The table below gives the numbers of deaths nx in a year in groups of women aged x
+years. The exposures of the groups, denoted Ex , are also given (the exposure is
+essentially the number of women alive for the year in question). The values of the
+death rates yx , where yx = nx/Ex , and the log(death rates), denoted wx , are also given.
+age x number of deaths nx exposure Ex yx = nx/Ex wx = logyx
+% 70 30 426 0.07042 2.6532
+% 71 38 471 0.08068 2.5173
+% 72 38 454 0.08370 2.4805
+% 73 53 482 0.10996 2.2077
+% 74 59 445 0.13258 2.0205
+% 75 61 423 0.14421 1.9365
+% 76 82 468 0.17521 1.7417
+% 77 96 430 0.22326 1.4994
+% x = 588 x2 = 43260 w = 17.0568 w2 = 37.5173 xw = 1246.7879
+\begin{enumerate}[(a)]
+\item A scatter plot of yx against x is shown below.
+Draw a scatter plot of wx against x and comment briefly on the two scatter
+plots and the relationships displayed. 
+\item (a) Calculate the least squares fit regression line in which wx is modelled
+as the response and x as the explanatory variable.
+(b) Draw the fitted line on your scatter plot of wx against x.
+(c) Calculate a 95\% confidence interval for the slope coefficient of the
+regression model of wx on x, adopting the assumptions of the usual
+normal regression model.
+(d) Calculate the fitted values for the number of deaths for the group aged
+71 years and the group aged 76 years. 
+\item Explain briefly the relationship between the fitting procedure used in part \item
+and a model which states that the number of deaths Nx is a random variable
+with mean Exbcx for some constants b and c. 
+\end{enumerate}
+0.00
+0.05
+0.10
+0.15
+0.20
+0.25
+69 70 71 72 73 74 75 76 77 78
+x
+y x
+
+
+14 
+
+\begin{itemize}
+\item Plot
+Comments: yx v x relationship is not linear
+wx v x relationship appears to be linear, strong
+\item (a) Sxx = 43260  5882/8 = 42
+% Sxw = 1246.7879  (588  17.0568)/8 = 6.8869
+%  slope = 6.8869/42 = 0.1640
+% so intercept = 17.0568/8  (6.8869/42)  (588/8) = 14.1842
+% Fitted line is wx = 14.184 + 0.1640x
+(b) Line on plot
+-3.0
+-2.5
+-2.0
+-1.5
+-1.0
+70 71 72 73 74 75 76 77
+x
+w x
+-3.0
+-2.5
+-2.0
+-1.5
+-1.0
+70 71 72 73 74 75 76 77
+x
+w x
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% (c) Sww = 37.5173  ((17.0568)2/8) = 1.1505
+% estimate of error variance = [1.1505  6.88692/42]/6 = 0.003538
+%  standard error of slope coefficient = (0.003538/42)0.5 = 0.00918
+% t6 (0.975) = 2.447
+%  95\% CI for slope coefficient is 0.1640  (2.447  0.00918)
+% i.e. 0.1640  0.0225 or (0.141, 0.187)
+% (d) Fitted value of w71 = 2.5421  fitted value of
+% y71 = exp(2.5421) = 0.0787
+%  fitted value of n71 = 471  0.0787 = 37.1
+% Fitted value of w76 = 1.7222  fitted value of
+% y71 = exp(1.7222) = 0.1787
+%  fitted value of n76 = 468  0.1787 = 83.6
+% \item E(Nx) = Exbcx  E(Nx/Ex) = bcx  E(Yx) = bcx
+%  logE(Yx) = 
+% x where 
+% = logb ,  = logc.
+The procedure above is a linear regression analysis of wx = logyx on x , which
+is a simple and approximate approach to fitting the stated model .
+Note: The method used in  is based on E(Wx) = E(logYx) = c + d x, whereas
+the model stated in (Q) is based on logE(Yx) = c + dx.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \item 
+\end{itemize}
+\end{document}
