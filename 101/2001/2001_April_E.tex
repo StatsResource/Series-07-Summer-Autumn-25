@@ -1,0 +1,117 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+\item 9 The movement of a stock price is modelled as follows:
+In each time period, the stock either goes up 1 with probability 0.35 , stays the
+same with probability 0.35, or goes down 1 with probability 0.30.
+The change in the stock price after 500 time periods is being considered.
+\begin{enumerate}[(a)]
+\item Assuming that changes in successive time periods are independent,
+explain why the normal distribution can be used as an approximate
+model. 
+\item  Calculate an approximate value for the probability that, after 500 time periods, the stock will be up by more than 20 from where it started. 
+\end{enumerate}
+\item 10 Claim amounts of a certain type are modelled using a normal distribution with an unknown mean and a known standard deviation σ = £20.
+For a random sample of 20 claim amounts all that is known is that 5 of them are
+greater than £200.
+\begin{enumerate}[(a)]
+\item  Let θ be the probability that a claim amount is greater than £200. Write
+down the maximum likelihood estimate of θ. [1]
+\item Determine θ in terms of μ and hence calculate the maximum likelihood
+estimate of μ. 
+\end{enumerate}
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9 (i) The change after a large number of time periods equals the sum of i.i.d.
+r.v.s.
+
+\begin{itemize}
+    \item The Central Limit theorem leads to an approximate normal distribution.
+(ii)
+x : +1 0 −1
+p : 0.35 0.35 0.30
+\item E(X) = 0.35 − 0.30 = 0.05
+\item E(X2) = 0.35 + 0.30 = 0.65
+\item ∴Var(X) = 0.65 − (0.05)2 = 0.6475 ∴s.d.(X) = 0.8047
+\item Let Y = price change after 500 periods
+\item ∴Y has mean 500(0.05) = 25 and s.d. 500(0.8047) =17.99
+\item P(Y > 20)
+20 25
+( = 0.28) 0.61
+17.99
+≈ P Z > − − =
+\item [Continuity correction can be used if desired]
+\end{itemize}
+
+
+\newpage
+
+
+%%%% 2001 April Question 10 
+
+(i) Using the basic binomial result
+
+
+\[  \hat{\theta} = \frac{x}{n} = \frac{5}{20} = 0.25\]
+
+
+(ii) 
+\[X \sim N(\mu , 20^2)\]
+
+\begin{eqnarray*} 
+\theta 
+&=& P(X > 200) \\
+&=& P \left( Z > \frac{200 -\mu}{20} \right) \\
+&=& 1 - \Phi\left(  \frac{200 -\mu}{20} \right)\\
+\end{eqnarray*}
+
+where $\Phi(.)$ is the cdf of N(0,1).
+
+Using the invariance property of MLE’s, we get $\mu$ from the equation
+
+\[ \hat{\theta} = 1 - \Phi\left(  \frac{200 -\mu}{20} \right)\]
+So with $\hat{\theta} = 0.25$, we get $\hat{\mu}$ from
+
+\[\Phi\left(  \frac{200 -\hat{\mu}{20} \right) = 0.75\]
+
+\[\left(  \frac{200 -\hat{\mu}{20} \right)
+= 0.674\] from tables
+∴
+\[\hat{\mu} = 200 − 20(0.674) = \$186.52\]
+
+
+\end{document}
