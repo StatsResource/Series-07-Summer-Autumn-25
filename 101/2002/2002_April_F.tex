@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 10 A company wants to estimate the percentage of its customers who are willing to shop on the internet. It decides to do so by calculating a symmetrical 95\% two-sided confidence interval for the unknown percentage.
+\begin{enumerate}[(a)]
+\item Show that, based on a random sample of 200 of the company's customers, the required confidence interval will have a width which is no greater than 13.9\%.
+
+\item Calculate the sample size required which will ensure that, whatever the true percentage, the width of the confidence interval will be no greater than 10\%.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+10  
+\begin{itemize}
+\item Width of 95\% CI = 2  1.96  {P(1 - P)/200}0.5 where P is sample
+proportion
+Max value of P(1 - P) is 0.52 = 0.25
+ Max width of CI = 2  1.96  (0.25/200)0.5 = 0.139
+In terms of percentages, this is 13.9%.
+\item 2  1.96  (0.25/n)0.5  0.1  n  385
+\end{itemize}
+11 
+\begin{itemize}
+\item E(SN) = E[E(SN|N)]
+Now, $E(SN|N = n) = E[(X1 + \ldots+ Xn)n|N = n)] = E[n(X1 + \ldots+ Xn)]$
+= n  nX = n2
+X
+ E(SN) = E(XN2) = XE(N2)
+= X
+( 2 2 ) N  N
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item E(S) = E(NX) = NX
+\begin{eqnarray*}
+\operatornmae{Cov}(S,N) &=& E(SN) - E(S)E(N)\\
+&=& \mu_x (\mu^2_N + \sigma^2_N) \;-\; (\mu_N \mu_X)\mu_N \\
+&=& \mu_X \sigma^2_N
+\end{eqnarray*}
+
+\end{itemize}
+\end{document}
