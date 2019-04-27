@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item 5 Show that the probability generating function for a binomial (n, p) distribution is
+\[ G_X (t) = (1 − p + pt)^n .\]
+Deduce the moment generating function. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 6 Let $X$ have a normal distribution with mean $\mu$ and standard deviation $\sigma$, and let
+the ith cumulant of the distribution of X be denoted $\kappa_i$ .
+Assuming the moment generating function of X, determine the values of $\kappa_2$ , $\kappa_3$ ,
+and $\kappa_4$ . 
+
+
+\end{enumerate}
+\newpage
+\[PGF	G ( z ) = {\displaystyle G(z)=[(1-p)+pz]^{n}} \]
+5 PGF for binomial (n,p)
+%%%% 2001 April Question 5
+
+
+PGF for binomial (n,p)
+
+
+\begin{eqnarray*}
+G_X(t) 
+&=& E(t^X) \\ 
+&=& \sum^{n}_{x=0} t^x P(X = x)  \\
+&=& \sum^{n}_{x=0} t^x  {n \choose x} p^x \;(1-p)^{n-x} \\
+&=& \sum^{n}_{x=0} {n \choose x} pt^x \;(1-p)^{n-x}\\
+&=& (1 - p + pt)^{n}
+\end{eqnarray*}
+
+
+\begin{framed}
+ Using summation notation, the binomial formula can be written as 
+\[ {\displaystyle (x+y)^{n}=\sum _{k=0}^{n}{n \choose k}x^{n-k}y^{k}=\sum _{k=0}^{n}{n \choose k}x^{k}y^{n-k}.} \]
+\end{framed}
+
+MGF obtained by replacing $t$ by $e^t$ , i.e. $ { \displaystyle M_X ( t ) = (1 − p + pe^t )^n}$ .
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 \[C(t) = logM(t) = log[exp(μt + σ2t2/2)] \]from Green Book
+= μt + σ2t2/2
+\kappa_r is the coefficient of tr/r! , r = 2,3,
+∴ \kappa_2 = σ2, \kappa_3 = \kappa_4 = 0
+
+
+\end{document}
