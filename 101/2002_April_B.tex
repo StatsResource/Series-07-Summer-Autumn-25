@@ -34,270 +34,40 @@
 
 \begin{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 5 In a quality control test, a random sample of 100 items is selected, of which 90 are
-found to be satisfactory. The value of p, the probability of an item being satisfactory,
-is unknown.
-Write down the probability of observing 90 satisfactory items out of 100 as a function
-of p, and thus derive the maximum likelihood estimate of p. [3]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 6 A national survey research company has past data which indicate that the interview
-time for a consumer opinion study has a standard deviation of 6 minutes.
-Calculate the size of the sample that should be taken if the company requires a 99%
-confidence interval for the mean interview time to be within 2 minutes. 
-\item 7 The following information on white blood cell count (WBCC) was collected from
-subjects one week after the start of chemotherapy treatment. One group of subjects
-(A) received steroids in addition to the chemotherapy treatment and the other group
-(B) received a placebo in addition to the chemotherapy. The subjects were assigned
-to the groups at random.
-\begin{verbatim}
-Group A  Steroid
-WBCC (millions of cells per ml.)
-12.4 15.2 12.7 15.9 12.2 14.2 12.9 14.2 12.4 14.6
-12.7 13.6 12.5 13.3 12.1 13.9 17.1 13.6 17.2 13.1
-\end{verbatim}
+\begin{enumerate}
 
-\begin{verbatim}
-Group B  Placebo
-WBCC (millions of cells per ml.)
-17.0 13.5 15.4 14.1 15.4 14.8 12.9 14.4 13.2 13.1
-12.9 13.9 13.0 13.6 13.0 13.4 12.9 13.1 14.4 13.8  
-\end{verbatim}
-
-\begin{enumerate}[(a)]
-\item Construct stem and leaf diagrams for Group A and Group B separately. 
-\item Comment on the results in the context of investigating an association between
-WBCC and the treatment with or without steroids. 
-[Total 4]
+\item  A magazine claims that 25% of its readers are students. A random sample of 200
+readers is taken and is found to contain 42 students.
+Calculate the probability of obtaining 42 or fewer student readers, assuming that the magazines claim is correct. [3]
+\item  The percentage return on an investment of a particular type over a period of one year is to be modelled as a normal random variable X with mean  and variance 1. A
+potential investor is interested in the chance that the return on such an investment will
+exceed 9%.
+A random sample of ten such returns have values
+7.3, 8.9, 8.3, 6.2, 9.8, 7.7, 9.4 , 7.9, 9.1, and 7.4 .
+Calculate the maximum likelihood estimate of  = P(X > 9). [3]
 \end{enumerate}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\newpage
-8 Consider a negative binomial variable X with probability function given by
-
-\[P(X=x) =  { k+x-1 \choose x} (p) ^k \; (1-p) ^x \]
-where $0 < p < 1$ and $q = 1 - p$.
-\begin{itemize}
-\item Show that the moment generating function is given by
-\[ M ( t ) =  \left( \frac{p}{1-qe^t}\right)\]
-for qet < 1. 
-\item Determine $E(X)$ and $E(X^2)$ by expanding M(t) as a power series as far as the
-term in t2, and hence verify that the mean and variance of X are given by
-kq
-p
-and 2
-kq
-p
-, respectively. [3]
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-\begin{framed}
-Suppose there is a sequence of independent Bernoulli trials. Thus, each trial has two potential outcomes called "success" and "failure". 
-In each trial the probability of success is p and of failure is (1 − p). We are observing this sequence until a predefined number r of failures has occurred. 
-Then the random number of successes we have seen, X, will have the negative binomial (or Pascal) distribution:
-
-\[{\displaystyle X\sim \operatorname {NB} (r,p)}\]
-\end{framed}   
-%% 2002 April Q 8
-\begin{eqnarray*}
-M ( t ) &=& E ( e^{tx} ) \\
-&=& \sum^{\infty}{x=0} e^{tx} { k+x-1 \choose x} p^k \; q^x \\
-&=& \sum^{\infty}{x=0} { k+x-1 \choose x} p^k \; (qe^{t}) ^x \\
-&=& \left( \frac{p}{1-qe^t}\right) \sum^{\infty}_{x=0} { k+x-1 \choose x} (1-qe^{t}) ^k \; (qe^{t}) ^x \\
-&=& \left( \frac{p}{1-qe^t}\right) \times 1\\ 
-&=& \left( \frac{p}{1-qe^t}\right) \\
-\end{eqnarray*}
- as the sum equals 1, being the sum of a probability 
-distribution.
-
-
-%%%%%%%%
-
-\begin{framed}
-
-With $X \sim \mbox{NB}( r =k+x\;,\;p= qe^{t} )$
-
-\[ \sum^{\infty}_{x=0} { k+x-1 \choose x} (1-qe^{t})^k \; (qe^{t})^x  = 1 \]
-
-\end{framed}
+3 
 
 \begin{itemize}
-\item coefficient of t: ${ \displaystyle E ( X ) = k\frac{q}{p} }$
-\item coefficient of ${ \displaystylet^2/2  }$
-: ${ \displaystyle E (X^2 ) = k \frac{q}{p}+ k ( k + 1)(\frac{q}{p} )^2 }$
-\item mean = ${ \displaystyleE ( X ) = \frac{kq}{p}}$
+    \item Let X denote the number of magazine readers in the sample of 200 who are students.
+\item Assuming the magazines claim is correct, X ~ binomial (200, 0.25).
+\item Using the normal approximation to the binomial distribution,
+X ~ N(50, 150/4) approximately:
+P(X  42)  42.5 50
+(150 / 4)
+P Z
+
+where Z ~ N(0, 1)
+= P(Z < 1.225) = 0.110 (using continuity correction).
 \end{itemize}
 
-%%%%%%%%%%%
-\begin{eqnarray*}
-\mbox{ variance }&=& E ( X^2 ) - E( X )^2 \\ 
-&=& k\frac{q}{p} + k ( k + 1)(\frac{q}{p} )^2 - \left( k\frac{q}{p} \right)^2\\
-&=& k\frac{q}{p} + k \left( \frac{q}{p} \right)^2 \\
-&=& \frac{kq}{p} \left( 1 + \frac{q}{p} \right) \\
-&=& \frac{kq}{p^2} \\
-\end{eqnarray*}
 
-
-5 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 2002 April Q 5
-
-Using binomial model, P(90 satisfactory items out of 100) = 
-\[ = {100 \choose 90} p^90 \times (1-p)^{10}\]
-
-Therefore the log likelihood for $p$ is given by:
-\[ \log L ( p ) = 90 log p + 10 log(1 - p ) + constant\]
-
-
-\[ \frac{d}{dp} \left(\log L ( p ) \right) = \frac{90}{p} + \frac{ 10 }{1 - p }\]0
-
-\[ \hat{p}= \frac{90}{100} = 0.9\]  MLE for $p$
-
-
-(MLE is sample proportion.)
+4 Data sum = 82; MLE of  is  = x = 82 /10 = 8.2
+ = P(X  9) = P(Z  9  ) where Z ~ N(0, 1)
+ MLE of  = P(Z  9  ) = P(Z > 9  8.2) = P(Z > 0.8) = 0.212
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% 2002 April Q 6
-Let n denote the sample size which is determined by the limits of the 99\% confidence
-interval, i.e.
 
-\[2.58  ́\times \frac{6}{\sqrt{n}} \leq 2\]
-
-
-Therefore
-
-\[ n \geq ( 3 \times 2.58)^2\]
-
-\[ n \geq 59.9 \]
-Therefore n should be at least 60.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-7 \item Using leaves with units of 0.1, the stem and leaf diagrams are:
-Group A: 12 1 2 4 4 5 7 7 9
-(Steroid) 13 1 3 6 6 9
-14 2 2 6
-15 2 9
-16
-17 1 2
-Group B: 12 9 9 9
-(Placebo) 13 0 0 1 1 2 4 5 6 8 9
-14 1 4 4 8
-15 4 4
-16
-17 0
-\item The distribution of WBCC is similar for both groups in that the medians are
-similar (Group A median = (13.3 + 13.6)/2 = 13.45; Group B median = (13.5
-+ 13.6)/2 = 13.55), and both distributions are slightly positively skewed.
-There is a slightly greater variability in the steroid group compared to the
-placebo group. It appears that the steroid treatment has no difference in effect
-from the placebo.
-Subject 101 (Statistical Modelling)  April 2002  Examiners Report
-Page 4
-8 \item
-0
-1
-( ) = ( tx ) = tx k x
-x
-k x
-M t Ee e pq
-x
-
-
-   
- 
- 
-
-0
-1
-= k ( t )x
-x
-k x
-p qe
-x
-
-
-   
- 
- 
-
-0
-1
-= (1 ) ( )
-1
-k
-t k t x
-t
-x
-p k x qe qe
-qe x
-
-
-     
-         
-
-=
-1
-k
-t
-p
-qe
- 
-    
-as the sum equals 1, being the sum of a probability
-distribution.
-Alternative:
-2
-0
-1 ( 1) ( ) = 1 . .( ) ...
-2
-k t x k t t
-x
-k x k k p qe p kqe qe
-x
-
-
-      
-      
-   
- = 1 
-k t k p qe 
-
-\item
-2
-2 ( ) = = 1 ( ...)
-2
-1 (1 ...)
-2
-k
-k
-M t p q t t
-t p q t
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-2
-=1 ( ...) ( 1) ( )2 ( ...)2 ...
-2 2
-k q t t k k q t
-p p
-
-     
-coefficient of t: E(X ) = k q
-p
-coefficient of
-2
-2!
-t : E(X 2 ) = k q k(k 1)( q )2
-p p
- 
-mean = E(X ) = kq
-p
-variance = E(X 2 ) E2 (X ) = k q k(k 1)( q )2 (k q )2
-p p p
-   
-2
-2 = k q k( q ) = kq (1 q ) = kq
-p p p p p
-
-    \item 
-\end{itemize}
 \end{document}
