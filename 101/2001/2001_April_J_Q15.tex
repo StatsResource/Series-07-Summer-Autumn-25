@@ -1,0 +1,305 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+15 It has been decided to model a claim amount distribution using a gamma
+distribution with parameters $\alpha = 4$ and $\lambda$ (unknown), that is, with density
+\[f(x; \lambda ) =
+1
+6
+λ4 x3 e−λx: 0 < x < ∞.\]
+\begin{enumerate}
+    \item (i) A random sample of n claim amounts, X1, X2,\ldots , Xn, is selected and it is
+required to estimate the parameter λ.
+(a) (1) Determine the method of moments estimator of $\lambda$.
+\item (2) Show that the maximum likelihood estimator of $\lambda$ is the same as the method of moments estimator.
+\item (b) (1) Write down the moment generating function of Xi and
+derive the moment generating function of Y = 2nλX , where X is the sample mean. Explain why the distribution of Y
+is 28
+χ n .
+\item (2) Using Y = 2nλX as a pivotal quantity, derive a 95\% confidence interval for λ. 
+(ii) A random sample of 10 claim amounts yields a sample mean of x = £242
+and a standard deviation of s = £112.
+(a) Using part (i), calculate a 95% confidence interval for λ.
+\item (b) (1) Use the Central Limit theorem to obtain an approximate
+95% confidence interval for the population mean.
+\item (2) Calculate this confidence interval and convert it into an
+approximate confidence interval for $\lambda$.
+\item (3) Comment briefly on the comparison of this interval with
+that obtained in part (ii)(a). 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  The table below gives data on the lean body mass (the weight without fat) and
+resting metabolic rate for twelve women who were the subjects in a study of
+obesity. The researchers suspected that metabolic rate is related to lean body
+mass.
+Lean body mass (kg)
+x
+Resting metabolic rate
+y
+36.1 995
+54.6 1425
+48.5 1396
+42.0 1418
+50.6 1502
+42.0 1256
+40.3 1189
+33.1 913
+42.4 1124
+34.5 1052
+51.1 1347
+41.2 1204
+% x = 516.4, x2 = 22741.34
+% y = 14821, y2 = 18695125
+% xy = 650264.8
+\begin{enumerate}[(a)]
+    \item (i) Draw a scatter plot of the resting metabolic rate against lean body mass and comment briefly on any relationship.
+   \item (ii) Calculate the least squares fit regression line in which resting metabolic rate is modelled as the response and the lean body mass as the explanatory variable. 
+   \item (iii) Determine a 95\% confidence interval for the slope coefficient of the model.
+State any assumptions made. 
+   \item (iv) Use the fitted model to construct 95\% confidence intervals for the mean resting metabolic rate when:
+(a) the lean body mass is 50kg
+(b) the lean body mass is 75kg 
+   \item (v) Comment on the appropriateness of each of the confidence intervals given
+in (iv). 
+\end{enumerate}
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+15 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+15 mean $\mu = \frac{4}{\lambda}$
+
+$\bar{X} = \frac{4}{\lambda}$
+
+$\tilde{\lambda} = \frac{4}{\bar{X}}$
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(2) 
+
+\[ L (\lambda) = const.\lambda^{4n} (\product x_i)^3 e{−\lambda \sum x_i} \]
+
+\[ \log L = const. + 4n \log (\lambda) + 3 \log(\product x_i) - \lambda \sum x_i \]
+
+
+\[ \frac{\partial (\log L)}{\partial \lambda} = \frac{4n}{\lambda} - \sum x_i = 0\]
+
+\[ \hat{\lambda} = \frac{4n}{\sum X_i} = \frac{4}{\bar{X}} \]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(b)
+(1) 
+
+\[M_{X(t)} = E(e^{Xt} = \left( 1- \frac{t}{\lambda}\right)^{-4}\]
+
+
+from Green book
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\[M_{\sum X_i(t)} = E(e^{\sum X_i(t)} =  \product^n_{i=1}E(e^{\sum X_i(t)} = \left(1 - \frac{t}{\lambda})^{-4n}
+
+
+\[Y = 2n\lambda \bar{X} = 2 \lambda \sum X_i\]
+
+( )2 2 4 4
+( ) = ( Xi t ) = (1 ) n = (1 2 ) n
+Y
+t
+M t E e Σ λ − λ − − t −
+λ
+28
+2 ~ n ∴ nλX χ being gamma(4n, 1/2)
+(2) 2 2
+0.975,8 0.025,8 ( 2 ) = 0.95 n n P χ < nλX < χ
+95\% confidence interval for λ is
+2 2
+( 0.975,8 , 0.025,8 )
+2 2
+n n
+nX nX
+χ χ
+
+\begin{itemize}
+    \item (ii) (a) n =10,x = 242 2nx = 4840
+2 2
+0.975,80 0.025,80 χ = 57.15 ,χ =106.6
+\item 95\% confidence interval for λ is
+57.15 106.6
+( , )
+4840 4840
+= (0.0118, 0.0220)
+(b)
+\end{itemize}
+
+(1) Approx. 95% confidence interval for μ is 1.96
+s
+x
+n
+±
+%--------------------------%
+(2)
+112
+242 1.96 = 242 69.4 = (172.6,311.4)
+10
+± ±
+but
+4
+μ =
+λ
+Conversion gives
+4 4
+( , )
+311.4 172.6
+= (0.0128, 0.0232)
+\begin{itemize}
+    \item (3) This is quite close to the exact CI.
+    \item So the CLT approximation is quite good even though n=10 is not
+very large.
+    \item [Note: allow use of t in (ii)(b)
+\end{itemize}
+
+112
+242 2.262 = (161.9,322.1) (0.0124,0.0247)
+10
+% ±  ]
+16 
+
+\begin{itemize}
+    \item (i) x = lean body mass
+y = resting metabolic rate
+35 45 55
+1500
+1400
+1300
+1200
+1100
+1000
+900
+Lean body mass (kg)
+Resting metabolic rate
+Rate against mass
+%--------------------------%
+Linear relationship between x and y.
+% x = 516.4 , y =14821
+( )
+( )
+( )( )
+2 2
+2 2
+= / = 518.927
+= / = 389954.92
+= / =12467.767
+xx
+yy
+xy
+S x x n
+S y y n
+S xy x y n
+−
+−
+−
+
+%--------------------------%
+    \item (ii) Model: y = α + βx
+The least squares estimates of α and β:
+ 12467.8 = = = 24.03
+518.927
+xy
+xx
+S
+S
+β
+  14821 516.4 = = (24.03) = 201.2
+12 12
+α y − βx −
+y = 201.2 + 24.03x.
+%--------------------------%
+    \item (iii) 95\% confidence interval for β: ( ) 10
+β ± t (2.5%)s.e. β
+2 2
+s.e.(  ) =  ,  2 = xy /( 2) = 9040.4
+yy
+xx xx
+S
+S n
+S S
+% σ   β σ  −  −  
+%  
+∴s.e.(β ) = 4.17
+24.03 ± 2.228(4.17) = 24.03 ± 9.299 = (14.7, 33.3)
+Assuming normal errors with a constant variance.
+%---------------------------%
+    \item (iv) 95\% confidence intervals:
+( )2
+2
+10
+ 1 (2.5%) 
+12 xx
+x x
+y t
+S
+%  −  ± σ  + 
+%  
+%  
+(a) For x = 50 kg:
+( )2 1 50 43.03
+1402.5 2.228 9040.4
+12 518.927
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1402.5 ± 2.228 × 40.0
+= (1313, 1492)
+(b) For x = 75 kg:
+1 (75 43.03)2
+2003.1 2.228 9040.4
+12 518.927
+
+= 2003.1 ± 2.228 × 136.2
+= (1700, 2307)
+    \item (v) The confidence interval for x = 50 kg seems OK.
+However, the confidence interval at x = 75 kg involves extrapolation. Care
+needed!
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
