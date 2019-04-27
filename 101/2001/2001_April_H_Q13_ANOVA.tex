@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item A random sample of insurance policies on the contents of private houses written
+by each of three companies was examined and the sum insured (y) under each
+policy noted. The results are summarised below (in units of £100).
+Company
+i
+Sample size
+ni
+Sample mean
+i y
+Sample variance
+2
+i s
+1 15 115.13 196.41
+2 10 95.00 341.33
+3 12 135.42 609.36
+For all 37 observations: Σy = 4302 , Σy2 = 521662 .
+Consider the model
+= , =1,2,3 Yij μ + τi + eij i ; j =1,2,...,ni
+
+where Yij is the jth sum insured for company i, ni is the number of responses
+available for company i, the ij e are independent normal variables, each with zero
+mean and variance σ2, and 0 i i
+% i
+% n τ = .
+
+\begin{enumerate}[(a)]
+    \item (i) Calculate the values of the least squares/maximum likelihood estimates of
+μ and τi , i = 1, 2, 3. 
+\item Perform an analysis of variance to investigate whether real differences
+exist among the means of the sums insured under such policies issued by
+the three companies. [5]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+13 
+%%(i) Estimate of μ = 4302/37 = 116.27
+
+\begin{itemize}
+\item Estimate of $\mu = 4302/37 = 116.27$
+\item Estimate of $\tau_1 = 115.13 − 116.27 = −1.14$;
+\item estimate of $\tau_2 = 95.00 − 116.27 = −21.27$;
+\item estimate of $\tau_3 = 135.42 − 116.27 = 19.15$
+\end{itemize}
+
+(ii) Total SS = 521662 − 43022/37 = 21467.3
+Model (Explained) SS = 15(115.132) + 10(952) + 12(135.422) − 43022/37
+= 8942.0 **
+∴Error SS = 21467.3 − 8942.0 = 12525.3 **
+\begin{itemize}
+    \item F = (8942.0/2)/(12525.3/34) = 12.1 on 2,34 degrees of freedom
+\item Upper 1% point for F2,34 ≈ 5.3 so here P-value << 0.01
+\item Overwhelming evidence against hypothesis H0 : τi = 0 , i = 1,2,3.
+\item We conclude that real differences do exist : there is a company effect.
+\item [** OR: Error SS = (14 × 196.41) + (9 × 341.33) + (11 × 609.36) = 12524.7
+\item therefore Model SS = 21467.3 − 12524.7 = 8942.6]
+\end{itemize}
+
+
+\end{document}
