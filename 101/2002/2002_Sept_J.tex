@@ -1,0 +1,163 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}  11 Consider a group of n males each aged 30 years living in a particular society. The
+lives may be assumed to be independent.
+Suppose that x of the n men die by the end of a subsequent period of duration t0 years
+and that n  x survive the period.
+Suppose that the lifetime of these men from age 30 is to be modelled as a random
+variable with an exponential distribution with mean 1/ hours.
+\begin{enumerate}[(a)]
+    \item 
+(i) State the distribution of the random variable X whose value x, the number of
+men who die within t0 years, has been observed. 
+\item (ii) (a) Verify that the log-likelihood of the observation x is given by:
+\[  = log L( ) = x log(1 e t0 ) (n x) t0 
+       + constant\]
+(b) Determine , the maximum likelihood estimator of .
+\item (iii) Show that
+\[0
+0
+2 2
+0
+2 =
+1
+t
+t
+E nt e
+e
+
+
+  
+        	
+ [4]\]
+\item (iv) (a) Consider the case n = 1,000, t0 = 20 years, and x = 320.
+Evaluate , and show that the value of its standard error is
+approximately 0.00108.
+\item (b) Hence, calculate an approximate 95% confidence interval for the mean
+lifetime from age 30 of such men. [7]
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item 11 (i) P(T < x) = 1 	 exp(	
+x) so X ~ bi(n, 1 	 exp(	
+t0))
+\item (ii) (a) L(
+)  (1 	 exp(	
+t0))x [exp(	
+t0) ]nx
+(
+) = xlog(1 	 exp(	
+t0)) + (n 	 x)log[exp(	
+t0)] + constant
+= xlog(1 	 exp(	
+t0)) 	 (n 	 x)
+t0 + constant
+(b) 
+
+ = xt0 exp(	
+t0) /(1 	 exp(	
+t0)) 	 (n 	 x)t0
+= xt0[1 + exp(	
+t0) /(1 	 exp(	
+t0))] 	 nt0
+= xt0/[(1 	 exp(	
+t0)] 	 nt0
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 7
+Setting 0 
+
+
+  exp(	
+t0) = 1 	 x/n 
+0
+ 1 log(1 x)
+t n
+   
+\item [OR: direct from MLE of P(survive) = exp(	
+t0) is observed
+proportion which survive, namely 1  x/n ; hence MLE of 
+.]
+\item (iii) From (ii) (b)
+2
+2
+
+
+ = 	xt0(1 	 exp(	
+t0))2(t0 exp(	
+t0))
+= 	 xt0
+2 exp(	
+t0) (1 	exp(	
+t0))2
+
+2
+2 E( ) 
+
+
+ = t0
+2 exp(	
+t0)(1 	 exp(	
+t0))2E(X)
+= t0
+2exp(	
+t0)(1 	 exp(	
+t0))2 n(1 	 exp(	
+t0))
+[using mean of binomial distribution from part (i)]
+= n t0
+2 exp(	
+t0) /[1 	 exp(	
+t0)]
+\item (iv) (a)  = 	 (1/20) log(0.68) = 0.019283
+\item Estimate of $exp(	
+t0)$ is 0.68,
+so
+2
+2 E( ) 
+
+
+  1000  202  0.68/0.32 = 850000
+ s.e.(  ) 850000 1/ 2 0.0010847  0.00108     
+\item (b) 0.019283 
+ (1.96  0.0010847)
+i.e. 0.019283 
+ 0.002126 i.e. 0.01716 to 0.02141
+95% CI for mean lifetime 1/
+ is (1/0.02141, 1/0.01716)
+i.e. 46.7 years to 58.3 years
+
+\item There was a slight error in line 6 of Question 11: the last word should have appeared as
+years instead of hours. The examiners took this into account, and gave full credit to
+any candidates who provided an alternative answer because of this.
+\end{itemize}
+\end{document}
