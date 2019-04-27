@@ -1,0 +1,88 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 3 Suppose that the occurrence of events which give rise to claims in a portfolio of
+motor policies can be modelled as follows: the events occur through time at
+random, at rate $\mu$ per hour. Then the number of events which occur in a given
+period of time has a Poisson distribution (you are given this).
+Show that the time between two consecutive events occurring has an exponential
+distribution with mean $1/\mu$ hours. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 4 For a certain type of policy the probability that a policyholder will make a claim
+in a year is 0.001. If a random sample of 10,000 policyholders is selected,
+calculate an approximate value for the probability that not more than 5 will
+make a claim next year. 
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%555
+3 Let the number of events in a period of time of length t hours be Xt .
+\begin{itemize}
+\item Then $X_1 \sim Poisson(\mu)$ and $X_t \sim Poisson(\mu t)$.
+\item Let the time between two consecutive events be T.
+\item Then $P(T > t) = P(\mbox{no events in period of length t}) = P(Xt = 0) = exp(−\mu t)$.
+\item So $P(T < t) = 1 − exp(−\mut)$, and so $f(t) = \mu exp(−\mu t) , t >0$
+\item Hence T ~ exponential with mean $1/\mu$ hours.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4 Binomial (10,000, 0.001) approximated by Poisson with mean of 10.
+\begin{itemize}
+    \item Approximate probability of no more than 5 claims:
+\item Binomial (10,000, 0.001) approximated by Poisson with mean of 10 ($\lambda = np$).
+\item Approximate probability of no more than 5 claims:
+
+\end{itemize}
+
+%%% April 2001 - Question 4
+
+
+
+\begin{eqnarray*}
+P( X \leq 5) &=& \sum^{5}_{i=0} P(X=i) \\
+& & \\
+&=& \sum^{5}_{i=0} e^{\lambda=} \frac{\lambda^i }{(i)!} \\
+& & \\
+&=& e^{-10} \left( 1 + 10 + 
+\frac{10^2}{2!} +  \frac{10^3}{3!} + 
+\frac{10^4}{4!} +  \frac{10^5}{5!} \right) \\
+& & \\
+&=& 0.0671.\\
+\end{eqnarray*}
+
+[OR: 0.06709 using Green Book]
+[OR: Use normal approximation with continuity correction]
+
+
+\end{document}
