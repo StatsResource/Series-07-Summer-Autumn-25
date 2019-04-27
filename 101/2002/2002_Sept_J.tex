@@ -1,0 +1,227 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document} 
+
+%%- Question 13 
+
+The table below gives the frequency of coronary heart disease by age group. The
+table also gives the age group midpoint (x) and
+
+= log 1 
+y
+  
+     
+, where  denotes the
+proportion in an age group with coronary heart disease.
+Coronary Heart
+Disease
+\begin{verbatim}
+   Age group x Yes No n y
+2029 25 1 9 10 2.19722
+3034 32.5 2 13 15 1.87180
+3539 37.5 3 9 12 1.09861
+4044 42.5 5 10 15 0.69315
+4549 47.5 6 7 13 0.15415
+5054 52.5 5 3 8 0.51083
+5559 57.5 13 4 17 1.17865
+6069 65 8 2 10 1.38629 
+\end{verbatim}
+
+x = 360; x2 =17437.5;y =  2.9392; y2 =13.615; xy =  9.0429
+\begin{enumerate}[(a)]
+\item (i) (a) Calculate an estimate of the probability of having coronary heart
+disease under the assumption that the probability does not differ over
+the age groups.
+\item (b) Construct an 8 	 2 contingency table with marginal totals and conduct
+a 2
+ test for differences in the probability of having coronary heart
+disease for the different age groups. [8]
+\item (ii) Consider the regression model y =  x .
+
+\begin{enumerate}
+    \item (a) Draw a scatterplot of y against x, and comment on the appropriateness
+of the suggested model.
+    \item (b) Calculate the least squares fitted regression line of y on x.
+    \item (c) Calculate a 99\% confidence interval for the slope parameter.
+    \item (d) Interpret the result obtained in (i)(b) with reference to the confidence
+interval obtained in (ii)(c). 
+\end{enumerate}
+
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+13 
+\begin{itemize}
+    \item (i) ni = number in group i , ri = number with coronary heart disease in group i.
+(a) ri = 43 ni =100
+Estimate of the probability of having coronary heart disease is given by
+ = = 43 = 0.43.
+100
+i
+i
+r
+n
+
+
+
+(Assuming constant probability of having coronary heart disease over
+age groups.)
+\item (b)
+Coronary heart
+disease
+Yes No Total
+Age groups 2029 1
+(4.30)
+9
+(5.70)
+10
+3034 2
+(6.45)
+13
+(8.55)
+15
+3539 3
+(5.16)
+9
+(6.84)
+12
+4044 5
+(6.45)
+10
+(8.55)
+15
+4549 6
+(5.59)
+7
+(7.41)
+13
+5054 5
+(3.44)
+3
+(4.56)
+8
+5559 13
+(7.31)
+4
+(9.69)
+17
+6069 8
+(4.30)
+2
+(5.70)
+10
+Total 43 57 100
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item The expected values assuming a constant probability of having coronary heart disease
+are given in parentheses (= row total  ).
+2 2 2
+2 = ( ) = (1 4.30) ... (2 5.7)
+4.30 5.7
+i i
+i
+f e
+e
+  
+    = 26.6 on 7 d.f.
+2
+7 (0.01) 18.48.
+\item Strongly reject null hypothesis of constant probability over the
+different age groups. [Note: If one decides to combine cells to
+safeguard against very low expected frequencies, one should combine
+adjacent cells.]
+\item (ii) (a)
+Linear model seems appropriate, but extremes (x = 25 and x = 65) are
+not as good as 32.557.5 age range.
+\item (b) Sxx = 17437.5
+3602
+8  = 1237.5
+Syy =
+( 2.9392)2 13.615
+8
+
+ = 12.535
+Sxy = 9.0429 (360)( 2.9392)
+8
+
+  = 123.22
+Least squares estimates:
+ = = 123.22 = 0.09957
+1237.5
+xy
+xx
+S
+S 
+25 35 45 55 65
+1
+0
+-1
+-2
+x
+y
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 11
+ = y  x =  0.3674  0.09957(45) =  4.85
+\item (c)
+2
+ 2 = xy /( 2)
+yy
+xx
+S
+S n
+S
+ 
+    
+ 
+ 
+(123.22)2 = 12.535 / 6
+1237.5
+ 
+    
+ 
+= 0.04430
+  = 0.210 on 6 d.f.
+s.e.(
+) =
+ 0.210
+Sxx 1237.5
+
+ = 0.0060
+99% CI for 6   : (0.005) t   s.e. (
+)
+= 0.0996  3.707 (0.0060)
+= 0.0996  0.0222 i.e. (0.0774, 0.1218)
+\item (d) In (i)(b), the probability of having coronary heart disease was found to vary with age. The 99\% confidence interval for the slope parameter in the regression obtained in (ii)(c) also shows that the probability of having coronary heart disease depends (linearly) on age as zero is not within the interval.
+\end{itemize}
+\end[document}
