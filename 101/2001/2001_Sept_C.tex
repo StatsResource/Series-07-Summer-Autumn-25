@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 5 The number of claims, X, to be processed in a day by an employee of an insurance company is modelled as X ~ Poisson with mean 10. The time (minutes) the
+employee takes, Y, to process x claims is modelled as having a distribution with conditional mean and variance given by
+\[E(Y|X = x) = 15x + 20 , V(Y|X = x) = x + 12.\]
+Calculate the unconditional variance of the time the employee takes to process
+claims in a day. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \item The occurrence of claims in a group of 200 policies is modelled such that
+the probability of a claim arising in the next year is 0.015 independently for each policy. Each policy can give rise to a maximum of one claim.
+Calculate an approximate value for the probability that more than 10 claims arise from this group of policies in the next year. 
+\item The occurrence of claims in a group of 2000 policies is modelled such that
+the probability of a claim arising in the next year is 0.015 independently for each policy. Each policy can give rise to a maximum of one claim. Calculate an approximate value for the probability that more than 40
+claims arise from this group of policies in the next year. 
+
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{eqnarray*}
+V(Y) 
+&=& E[V(Y|X)] + V[E(Y|X)]\\
+& & \\
+&=&  E(X + 12) + V(15X + 20)\\
+& & \\
+&=& E(X) + 12 + [15^2   \times V(X)]\\
+& & \\
+&=& 10 + 12 + 225(10) \\
+& & \\
+&=& 2272\\
+\end{eqnarray*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+6  X = number of claims arising
+
+\begin{itemize}
+\item \;-\;X ~ binomial with n = 200, p = 0.015
+Use Poisson approximation
+\item \;-\;X \;-\; Poisson with  = 200(0.015) = 3
+Using Green book tables (or otherwise)
+
+\item 
+\begin{eqnarrray*} 
+P(X > 10) &=& 1 \;-\; P(X \leq 10) \\  
+&=& 1 \;-\; 0.99971 \\
+&=& 0.00029\\
+\end{eqnarray*}
+The normal approximation is not as appropriate as the Poisson
+approximation for a bit $(200, 0.015)$ distribution, which is quite skewed.
+\end{itemize}
+\bigskip X = number of claims arising \;-\;X ~ binomial with n = 2000, p = 0.015
+\begin{itemize}
+    \item Could use Poisson approximation \;-\;X \;-\; Poisson with  = 2000(0.015) = 30
+\item This is beyond the scope of the Green Book tables, and direct calculation
+would be awkward. So use Normal approximation
+\end{itemize}
+
+\[X \sim N(2000(0.015) , 2000(0.015)(0.985)) = N(30 , 29.55)\]
+
+\begin{eqnarray*}
+P(X > 40) &=& P(X > 40.5) using continuity correction \\
+	 &=& P\left (Z > \frac{40.5-30}{\sqrt{209.55}}\\
+	 &=& P(Z > 1.93) \\
+	 &=&  1 \;-\; \Phi(1.93) \\
+	 &=& 1 - 0.973 \\ 
+	 &=& 0.027\\
+\end{eqnarray*}	 
+
+\end{document}
