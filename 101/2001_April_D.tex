@@ -31,395 +31,66 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-\item A random sample of insurance policies on the contents of private houses written
-by each of three companies was examined and the sum insured (y) under each
-policy noted. The results are summarised below (in units of £100).
-Company
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 7 The number of policies (N) in a portfolio at any one time is modelled as a Poisson
+random variable with mean 10.
+The number of claims ($X_i$) arising on a policy is also modelled as a Poisson
+random variable with mean 2, independently for each policy and independent
+of N.
+Determine the moment generating function for the total number of claims,
+\[1
+N
 i
-Sample size
-ni
-Sample mean
-i y
-Sample variance
-2
-i s
-1 15 115.13 196.41
-2 10 95.00 341.33
-3 12 135.42 609.36
-For all 37 observations: Σy = 4302 , Σy2 = 521662 .
-Consider the model
-= , =1,2,3 Yij μ + τi + eij i ; j =1,2,...,ni
-
-where Yij is the jth sum insured for company i, ni is the number of responses
-available for company i, the ij e are independent normal variables, each with zero
-mean and variance σ2, and 0 i i
-% i
-% n τ = .
-
+i
+X
+= 
+,\]
+arising for the portfolio of policies. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Consider two independent lives A and B. The probabilities that A and B die
+within a specified period are 0.1 and 0.2 respectively. If A dies you lose £50,000,
+whether or not B dies. If B dies you lose £30,000, whether or not A dies.
 \begin{enumerate}[(a)]
-    \item (i) Calculate the values of the least squares/maximum likelihood estimates of
-μ and τi , i = 1, 2, 3. 
-\item Perform an analysis of variance to investigate whether real differences
-exist among the means of the sums insured under such policies issued by
-the three companies. [5]
+    \item (i) Calculate the mean and standard deviation of your total losses in the
+period.
+\item Calculate your expected loss within the period, given that one, and only
+one, of A and B dies. 
 \end{enumerate}
-\item 
-14 Consider a group of 1000 policyholders, all of the same age, and each of whose
-lives is insured under one or more policies. The following frequency distribution
-gives the number of claims per policyholder in 1999 for this group.
-Number of claims per policyholder (i) 0 1 2 3 ≥4
-Number of policyholders (fi ) 826 128 39 7 0
-A statistician argues that an appropriate model for the distribution of X, the
-number of claims per policyholder, is X ~ Poisson. Under this proposal, the
-frequencies expected are as follows (you are not required to verify these):
-Number of claims per policyholder 0 1 2 3 ≥4
-Expected number of policyholders 796.9 180.9 20.5 1.6 0.1
-A second statistician argues that a more appropriate model for the distribution of
-X is given by:
-\[P(X = x) = p(1 − p)x , x = 0, 1, 2,\ldots\]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{enumerate}[(a)]
-    \item (i) Without doing any further calculations, comment on the first statisticians
-proposed model for the data. [2]
-Consider the second statistician's proposed model.
-\item (ii) Verify that the mean of the distribution of X is (1 \;-\; p)/p and hence
-calculate the method of moments estimate of p. [4]
-(Note: this estimate is also the maximum likelihood estimate.)
-\item (iii) Verify that the frequencies expected under the second statistician's
-proposed model are as follows:
-Number of claims per policyholder 0 1 2 3 ≥4
-Expected number of policyholders 815.0 150.8 27.9 5.2 1.2
-
-\item (iv) (a) Test the goodness-of-fit of the second statisticians proposed model
-to the data, quoting the p-value of your test statistic and your
-conclusion.
-(b) Assuming that you had been asked to test the goodness-of-fit at
-the 1\% level, state your conclusion.
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 
-15 It has been decided to model a claim amount distribution using a gamma
-distribution with parameters α = 4 and λ (unknown), that is, with density
-f(x; λ) =
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7 Using formulae from the Green book
+mgf of N is exp(10(et − 1)) and mgf of Xi  is exp(2(et − 1))
+mgf of
 1
-6
-λ4 x3 e−λx: 0 < x < ∞.
-(i) A random sample of n claim amounts, X1, X2,, Xn, is selected and it is
-required to estimate the parameter λ.
-(a) (1) Determine the method of moments estimator of λ.
-(2) Show that the maximum likelihood estimator of λ is the
-same as the method of moments estimator.
-(b) (1) Write down the moment generating function of Xi and
-derive the moment generating function of Y = 2nλX , where
-X is the sample mean. Explain why the distribution of Y
-is 28
-χ n .
-(2) Using Y = 2nλX as a pivotal quantity, derive a 95%
-confidence interval for λ. [12]
-(ii) A random sample of 10 claim amounts yields a sample mean of x = £242
-and a standard deviation of s = £112.
-(a) Using part (i), calculate a 95% confidence interval for λ.
-(b) (1) Use the Central Limit theorem to obtain an approximate
-95% confidence interval for the population mean.
-(2) Calculate this confidence interval and convert it into an
-approximate confidence interval for λ.
-(3) Comment briefly on the comparison of this interval with
-that obtained in part (ii)(a). [6]
+N
+i
+i
+X
+= 
+is exp{10[exp(2(et − 1)) − 1]}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item  The table below gives data on the lean body mass (the weight without fat) and
-resting metabolic rate for twelve women who were the subjects in a study of
-obesity. The researchers suspected that metabolic rate is related to lean body
-mass.
-Lean body mass (kg)
-x
-Resting metabolic rate
-y
-36.1 995
-54.6 1425
-48.5 1396
-42.0 1418
-50.6 1502
-42.0 1256
-40.3 1189
-33.1 913
-42.4 1124
-34.5 1052
-51.1 1347
-41.2 1204
-% x = 516.4, x2 = 22741.34
-% y = 14821, y2 = 18695125
-% xy = 650264.8
-\begin{enumerate}[(a)]
-    \item (i) Draw a scatter plot of the resting metabolic rate against lean body mass and comment briefly on any relationship.
-   \item (ii) Calculate the least squares fit regression line in which resting metabolic rate is modelled as the response and the lean body mass as the explanatory variable. 
-   \item (iii) Determine a 95\% confidence interval for the slope coefficient of the model.
-State any assumptions made. 
-   \item (iv) Use the fitted model to construct 95\% confidence intervals for the mean resting metabolic rate when:
-(a) the lean body mass is 50kg
-(b) the lean body mass is 75kg 
-   \item (v) Comment on the appropriateness of each of the confidence intervals given
-in (iv). 
-\end{enumerate}
-
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-13 (i) Estimate of μ = 4302/37 = 116.27
-
+8 (i) Let XA = 1 if A dies and 0 if not. Similarly XB for life B.
 \begin{itemize}
-\item Estimate of $\tau_1 = 115.13 − 116.27 = −1.14$;
-\item estimate of $\tau_2 = 95.00 − 116.27 = −21.27$;
-\item estimate of $\tau_3 = 135.42 − 116.27 = 19.15$
+    \item E(XA) = 0.1, V(XA) = 0.1 × 0.9 = 0.09;
+\item E(XB) = 0.2, V(XB) = 0.2 × 0.8 = 0.16
+\item Total losses T = 5XA + 3XB (units of £10,000)
+\item so E(T) = (5 × 0.1) + (3 × 0.2) = 1.1 i.e. £11,000
+and V(T) = (25 × 0.09) + (9 × 0.16) = 3.69 so SD(T) = 1.921
+i.e. £19,210
+\item [OR: T takes values 0, 3, 5, and 8 with probabilities 0.9 × 0.8 = 0.72, 0.2 ×
+0.9 = 0.18, 0.1 × 0.8 = 0.08, and 0.1 × 0.2 = 0.02 respectively; hence find
+E(T), E(T2), and V(T).]
 \end{itemize}
 
-(ii) Total SS = 521662 − 43022/37 = 21467.3
-Model (Explained) SS = 15(115.132) + 10(952) + 12(135.422) − 43022/37
-= 8942.0 **
-∴Error SS = 21467.3 − 8942.0 = 12525.3 **
-\begin{itemize}
-    \item F = (8942.0/2)/(12525.3/34) = 12.1 on 2,34 degrees of freedom
-\item Upper 1% point for F2,34 ≈ 5.3 so here P-value << 0.01
-\item Overwhelming evidence against hypothesis H0 : τi = 0 , i = 1,2,3.
-\item We conclude that real differences do exist : there is a company effect.
-\item [** OR: Error SS = (14 × 196.41) + (9 × 341.33) + (11 × 609.36) = 12524.7
-\item therefore Model SS = 21467.3 − 12524.7 = 8942.6]
-\end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{itemize}
-    \item 14 (i) The model greatly overestimates the number of policyholders who give
-rise to exactly one claim, and greatly underestimates the number who give
-rise to multiple claims.
-\item (ii) E(X) = 1 × p(1−p) + 2 × p(1−p)2 + 3 × p(1−p)3 + 
-= p(1−p)[1 + 2(1−p) + 3(1−p)2 + ] = p(1−p)[1 \;-\; (1−p)]−2 = (1−p)/p
-Data mean is (128 + 78 + 21)/1000 = 0.227
-so the method of moments estimate * of p is given by solving
-(1−p)/p = 0.227, which gives estimate of p = 0.81500.
-* it is also in fact the MLE
-\item (iii) Estimates of probabilities for 0,1,2, and 3 claims are then 0.815,
-0.815 × 0.185 = 0.15078, 0.815 × 0.1852 = 0.02789, and
-0.815 × 0.1853 = 0.00516
-So, for 4 or more claims, estimate is 1 \;-\; 0.99883 = 0.00117.
-Hence expected frequencies are as follows:
-\begin{tabular}{c|c|c|c|c|c|}
-Number of claims per policyholder  & 0 & 1 & 2 & 3 & $\geq 4$ \\
-Expected number of policyholders &  815.0 & 150.8 & 27.9 & 5.2&  1.2 \\ 
-\end{tabular}
-
-\item (iv) (a) Using 5 cells:
-\[ χ2 = (826\;-\;815)2/815+(128\;-\;150.8)2/150.8+(39\;-\;27.9)2/27.9 +(7\;-\;5.2)2/5.2\]
-+ 1.22/1.2 = 9.84 on 3 df
-P-value is between 0.025 and 0.01
-There is quite strong evidence against the null hypothesis (that the
-second statisticians model describes the data) and we conclude that
-the model does not provide a good fit to the data.
-\item [Alternative solution: Using 4 cells (for 0 , 1 , 2 , and ≥ 3) the χ2 value
-is 8.07 on 2df. P-value is again between 0.025 and 0.01.]
-  (b) The P-value exceeds 0.01 so we cannot reject the hypothesis.
-The hypothesis that the model describes the data stands.
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-15 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-15 mean $\mu = \frac{4}{\lambda}$
-
-$\bar{X} = \frac{4}{\lambda}$
-
-$\tilde{\lambda} = \frac{4}{\bar{X}}$
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-(2) 
-
-\[ L (\lambda) = const.\lambda^{4n} (\product x_i)^3 e{−\lambda \sum x_i} \]
-
-\[ \log L = const. + 4n \log (\lambda) + 3 \log(\product x_i) - \lambda \sum x_i \]
-
-
-\[ \frac{\partial (\log L)}{\partial \lambda} = \frac{4n}{\lambda} - \sum x_i = 0\]
-
-\[ \hat{\lambda} = \frac{4n}{\sum X_i} = \frac{4}{\bar{X}} \]
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-(b)
-(1) 
-
-\[M_{X(t)} = E(e^{Xt} = \left( 1- \frac{t}{\lambda}\right)^{-4}\]
-
-
-from Green book
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\[M_{\sum X_i(t)} = E(e^{\sum X_i(t)} =  \product^n_{i=1}E(e^{\sum X_i(t)} = \left(1 - \frac{t}{\lambda})^{-4n}
-
-
-\[Y = 2n\lambda \bar{X} = 2 \lambda \sum X_i\]
-
-( )2 2 4 4
-( ) = ( Xi t ) = (1 ) n = (1 2 ) n
-Y
-t
-M t E e Σ λ − λ − − t −
-λ
-28
-2 ~ n ∴ nλX χ being gamma(4n, 1/2)
-(2) 2 2
-0.975,8 0.025,8 ( 2 ) = 0.95 n n P χ < nλX < χ
-95\% confidence interval for λ is
-2 2
-( 0.975,8 , 0.025,8 )
-2 2
-n n
-nX nX
-χ χ
+(ii) 
 
 \begin{itemize}
-    \item (ii) (a) n =10,x = 242 2nx = 4840
-2 2
-0.975,80 0.025,80 χ = 57.15 ,χ =106.6
-\item 95\% confidence interval for λ is
-57.15 106.6
-( , )
-4840 4840
-= (0.0118, 0.0220)
-(b)
+    \item P(exactly one of A, B dies) = 0.18 + 0.08 = 0.26
+\item P(A dies|exactly one dies) = P(A dies and B does not die) / P(exactly one dies)
+= 0.08/0.26 = 4/13 ; so P(B dies|exactly one dies) = 9/13
+\item So E(loss|exactly one dies) = 5(4/13) + 3(9/13) = 47/13 = 3.615
+i.e. £36,150
 \end{itemize}
-
-(1) Approx. 95% confidence interval for μ is 1.96
-s
-x
-n
-±
-%--------------------------%
-(2)
-112
-242 1.96 = 242 69.4 = (172.6,311.4)
-10
-± ±
-but
-4
-μ =
-λ
-Conversion gives
-4 4
-( , )
-311.4 172.6
-= (0.0128, 0.0232)
-\begin{itemize}
-    \item (3) This is quite close to the exact CI.
-    \item So the CLT approximation is quite good even though n=10 is not
-very large.
-    \item [Note: allow use of t in (ii)(b)
-\end{itemize}
-
-112
-242 2.262 = (161.9,322.1) (0.0124,0.0247)
-10
-% ±  ]
-16 
-
-\begin{itemize}
-    \item (i) x = lean body mass
-y = resting metabolic rate
-35 45 55
-1500
-1400
-1300
-1200
-1100
-1000
-900
-Lean body mass (kg)
-Resting metabolic rate
-Rate against mass
-%--------------------------%
-Linear relationship between x and y.
-% x = 516.4 , y =14821
-( )
-( )
-( )( )
-2 2
-2 2
-= / = 518.927
-= / = 389954.92
-= / =12467.767
-xx
-yy
-xy
-S x x n
-S y y n
-S xy x y n
-−
-−
-−
-
-%--------------------------%
-    \item (ii) Model: y = α + βx
-The least squares estimates of α and β:
- 12467.8 = = = 24.03
-518.927
-xy
-xx
-S
-S
-β
-  14821 516.4 = = (24.03) = 201.2
-12 12
-α y − βx −
-y = 201.2 + 24.03x.
-%--------------------------%
-    \item (iii) 95\% confidence interval for β: ( ) 10
-β ± t (2.5%)s.e. β
-2 2
-s.e.(  ) =  ,  2 = xy /( 2) = 9040.4
-yy
-xx xx
-S
-S n
-S S
-% σ   β σ  −  −  
-%  
-∴s.e.(β ) = 4.17
-24.03 ± 2.228(4.17) = 24.03 ± 9.299 = (14.7, 33.3)
-Assuming normal errors with a constant variance.
-%---------------------------%
-    \item (iv) 95\% confidence intervals:
-( )2
-2
-10
- 1 (2.5%) 
-12 xx
-x x
-y t
-S
-%  −  ± σ  + 
-%  
-%  
-(a) For x = 50 kg:
-( )2 1 50 43.03
-1402.5 2.228 9040.4
-12 518.927
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-1402.5 ± 2.228 × 40.0
-= (1313, 1492)
-(b) For x = 75 kg:
-1 (75 43.03)2
-2003.1 2.228 9040.4
-12 518.927
-
-= 2003.1 ± 2.228 × 136.2
-= (1700, 2307)
-    \item (v) The confidence interval for x = 50 kg seems OK.
-However, the confidence interval at x = 75 kg involves extrapolation. Care
-needed!
-\end{itemize}
-
 \end{document}
