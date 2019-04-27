@@ -51,15 +51,7 @@ exactly one life survives ten years. [1]
 \item Calculate the probability that a claim amount is greater than £5,000 given that
 it is greater than £1,000. 
 \end{enumerate}
-\item  A magazine claims that 25% of its readers are students. A random sample of 200
-readers is taken and is found to contain 42 students.
-Calculate the probability of obtaining 42 or fewer student readers, assuming that the magazines claim is correct. [3]
-\item  The percentage return on an investment of a particular type over a period of one year is to be modelled as a normal random variable X with mean  and variance 1. A
-potential investor is interested in the chance that the return on such an investment will
-exceed 9%.
-A random sample of ten such returns have values
-7.3, 8.9, 8.3, 6.2, 9.8, 7.7, 9.4 , 7.9, 9.1, and 7.4 .
-Calculate the maximum likelihood estimate of  = P(X > 9). [3]
+
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 1 
@@ -111,26 +103,6 @@ P ( X > 5000| X > 1000 )
 OR: candidates may refer to the memoryless property of the exponential to
 obtain $P(X > 5000 | X > 1000) = P(X > 4000)$ = $e^{-4}$ .
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3 
-
-\begin{itemize}
-    \item Let X denote the number of magazine readers in the sample of 200 who are students.
-\item Assuming the magazines claim is correct, X ~ binomial (200, 0.25).
-\item Using the normal approximation to the binomial distribution,
-X ~ N(50, 150/4) approximately:
-P(X  42)  42.5 50
-(150 / 4)
-P Z
-
-where Z ~ N(0, 1)
-= P(Z < 1.225) = 0.110 (using continuity correction).
-\end{itemize}
-
-
-4 Data sum = 82; MLE of  is  = x = 82 /10 = 8.2
- = P(X  9) = P(Z  9  ) where Z ~ N(0, 1)
- MLE of  = P(Z  9  ) = P(Z > 9  8.2) = P(Z > 0.8) = 0.212
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
