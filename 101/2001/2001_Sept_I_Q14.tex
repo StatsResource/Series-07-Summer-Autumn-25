@@ -1,0 +1,143 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 12 Twenty overweight executives take part in an experiment to compare the
+effectiveness of two exercise methods, A (isometric), and B (isotonic). They are
+allocated at random to the two methods, ten to isometric, ten to isotonic methods.
+After several weeks, the reductions in abdomen measurements are recorded in
+centimetres with the following results:
+A (isometric method) 3.1 2.1 3.3 2.7 3.4 2.7 2.7 3.0 3.0 1.6
+B (isotonic method) 4.5 4.1 2.7 2.2 4.7 2.2 3.6 3.0 3.3 3.4
+\begin{enumerate}[(a)]
+\item (a) Plot the data for the two exercise methods on a single diagram.
+Comment on whether the response values for each exercise method
+are well modelled by normal random variables.
+(b) Perform a test to investigate whether the assumption of equal
+variability for the responses for the two exercise methods is
+reasonable.
+(c) Perform a t-test to investigate whether these data support the
+claim that the isotonic method is more effective than the other
+method. [9]
+\item (a) Determine a two-sided 95\% confidence interval for the difference in
+the means for the two exercise methods.
+(b) Assuming that the two sets of 10 measurements are taken from
+normal populations with the same variance, determine a 95%
+confidence interval for the common standard deviation. [7]
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 14 In a medical study on hypertension amongst young male athletes the researchers
+were interested in the effects of the use of a particular (legal) stimulant on systolic
+blood pressure (bp).
+Ten young male athletes from a larger group who had agreed to take part in the
+study were selected at random  none of those in the group were currently users of
+the stimulant. The initial bp of each of the sample was measured in controlled
+conditions. Each sample member was then exposed to the use of the stimulant in a
+controlled manner for a fixed period of time. Each sample member was subject to a
+similar exercise regime, and at the end of the period the bp of each of the sample
+was again measured in the same controlled conditions as initially, giving the followup
+bp.
+The data obtained were as follows:
+Athlete 1 2 3 4 5 6 7 8 9 10
+Initial bp 116 107 129 119 116 113 135 121 112 123
+Follow-up bp 123 111 140 129 130 118 143 128 110 132
+Summaries: Initial Σx = 1191, Σx2 = 142471 Follow-up Σx = 1264, Σx2 = 160872
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The following models are proposed as possible bases for the analysis:
+(M1) The initial bp of the ith athlete, Xi , is distributed as Xi ~ N(μ, σ1
+2) and the
+follow-up bp, Yi , is distributed such that $Yi|Xi = x ~ N(x + \alpha, \sigma^2
+2)$.
+(M2) The initial bp of the ith athlete, Xi , is distributed as $Xi ~ N(μi , σ1
+2)$ and the
+follow-up bp, Yi , is distributed such that $Yi|Xi = x ~ N(x + \alpha, \sigma^2
+2)$.
+(M3) The initial bp of the ith athlete, Xi , is distributed as Xi ~ N(μi , σ1
+2) and the
+follow-up bp, Yi , is distributed such that $Yi|Xi = x ~ N(x + \alpha_i , \sigma^2
+2)$.
+\begin{enumerate}
+\item (a) Explain briefly the differences between the physical assumptions
+underlying the three models proposed above.
+(b) Explain briefly why model (M3) above could not be used in the
+analysis of the data as given. [7]
+\item Adopting model (M1) above
+(a) Using the initial bp data, calculate a symmetrical, two-sided, 95%
+confidence interval for μ, and
+(b) Calculate a point estimate of $\alpha$. [6]
+\item Adopting model (M2) above, calculate a one-sided 95% confidence interval
+for $\alpha$ which brings out the minimum realistic value for the mean increase
+in bp attributable to taking the stimulant.
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+14 
+\begin{itemize}
+\item (a) In Model M1 we have a basic model for the initial bp of the whole population of young male athletes, with mean , and the mean bp
+increases by%   after using the stimulant.
+(Note: E(follow-up bp) = $E(Y) = E[E(Y|X)] = E[X + ] =  + )
+Model M2 extends M1 by allowing for a different initial mean for
+each athlete % (i).
+Model M3 extends M2 by allowing for a different mean increase in bp for each athlete % (i).
+(Note: In all three models we have a single population variance for
+initial bp and a single, but different, variance for follow-up bp.)
+(Note: V(follow-up bp) = V(Y) = V[E(Y|X)] + E[V(Y|X)] = 1
+2 + $ 2
+2)
+(b) For 10 athletes, M3 has 22 unknown parameters  but we only have 20 data points. So estimation of parameters is impossible.
+\item (a) Initial bp: % x = 1191, x2 = 142471 so x = 119.1 , s2 = 69.211
+t9(0.025) = 2.262
+95% CI for  is 119.1  {2.262  (69.211/10)½} i.e. 119.1  5.95
+i.e. (113.15 , 125.05)
+(b) Follow-up bp : x = 1264 x = 126.4 so  = 126.4  119.1 = 7.3
+\item Use the differences (follow-up less initial) for each athlete:
+di : 7, 4, 11, 10, 14, 5, 8, 7, 2, 9
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% d = 73, d2 = 705 so d = 7.3 , s2 = 19.122
+t9(0.05) = 1.833
+%  95% CI (one-sided) for  is (7.3  1.833(19.122/10)½, ) i.e. (4.77, )
+The early part of this question (on comparing models) looked hard, but,
+pleasingly, was generally well-attempted.
+
+\end{document}
