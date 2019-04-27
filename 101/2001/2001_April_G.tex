@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 12 In 1998 a market research organisation conducted a survey in a large city. A
+random sample of 400 households showed that 68 were such that at least one
+person in the household was a member of a health/fitness club.
+\begin{enumerate}[(a)]
+\item  An estimate of the true proportion of households in the city with at least
+one person being a member of a health/fitness club is therefore
+68
+400
+= 0.17. Calculate 95\% confidence limits for the true proportion.
+\item A similar survey was conducted in 1999 and a random sample of 400
+households showed that 80 were such that at least one person in the
+household was a member of a health/fitness club.
+Perform a one-sided test to investigate whether the true proportion
+increased from 1998 to 1999. In particular determine the p-value of the
+test and state your conclusion. 
+\end{enumerate}
+
+%%%%%%%%%%%%%
+12 (i) p = 0.17
+95\% confidence interval for the true proportion p is
+ (1  )  1.96
+400
+p p
+p ± −
+(0.17)(0.83)
+0.17 1.96 = 0.17 0.037 or (0.133,0.207)
+400
+ ± ±
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii) p1 = 0.17 , 2 p = 0.2
+common
+ 68 80 = =0.185
+800
+p +
+H0 : p2 = p1 v. H1 : p2 > p1
+0.2 0.17 0.03
+= = =1.09
+1 1 0.0275
+(0.185)(0.815)( )
+400 400
+z −
++
+P-value = P(Z > 1.09) = 1 − 0.862 = 0.14
+There is not sufficient evidence to conclude that there is an increase in the
+true proportion. The observed difference could have occurred by chance.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
