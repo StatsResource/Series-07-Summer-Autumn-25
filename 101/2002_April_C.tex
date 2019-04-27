@@ -31,94 +31,51 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-
 \begin{enumerate}
-\item 9 Let X and Y be independent random variables. Let V and W be the random variables
-defined by
-\[V = max {X, Y}, W = min {X, Y}\]
-i.e. $V$ is the larger, and $W$ is the smaller, of the observations of $X$ and $Y$.
-Let $F_X$ , $F_Y$ , $F_V$ , $F_W$ denote the distribution functions of $X$, $Y$, $V$, $W$ respectively.
-\begin{enumerate}[(a)]
-\item Show that $F_V(t) = F_X(t)F_Y(t)$ . 
-\item Show that $F_W(t) = F_X(t) + F_Y(t)  FX(t)FY(t)$ . [3]
-\item The random variable X has an exponential distribution with parameter 4 and, independently, Y has an exponential distribution with parameter 4. Obtain the distribution function of the minimum of X and Y and state its mean. 
-\end{enumerate}
+\item 5 Show that the probability generating function for a binomial (n, p) distribution is
+\[ G_X (t) = (1 − p + pt)^n .\]
+Deduce the moment generating function. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 6 Let $X$ have a normal distribution with mean μ and standard deviation σ, and let
+the ith cumulant of the distribution of X be denoted $\kappa_i$ .
+Assuming the moment generating function of X, determine the values of $\kappa_2$ , $\kappa_3$ ,
+and $\kappa_4$ . 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 10 A company wants to estimate the percentage of its customers who are willing to shop on the internet. It decides to do so by calculating a symmetrical 95\% two-sided confidence interval for the unknown percentage.
-\begin{enumerate}[(a)]
-\item Show that, based on a random sample of 200 of the company's customers, the required confidence interval will have a width which is no greater than 13.9\%.
 
-\item Calculate the sample size required which will ensure that, whatever the true percentage, the width of the confidence interval will be no greater than 10\%.
 \end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item 11 Consider the following model for aggregate claim amounts S:
-\[S = X1 + X2 + \ldots+ XN\]
-where the Xi are independent, identically distributed random variables representing individual claim amounts and N is a random variable, independent of the $X_i$ , and representing the number of claims. Let $X$ have mean $\mu_X$ and let $N$ have mean $\mu_N$ and
-variance $\sigma^2_N$.
-\begin{enumerate}[(a)]
-\item Show that
-\[E(SN) = X (2N  2N )\]
-by considering expected values conditional on the value of N. 
-\item Hence derive an expression for the covariance between $S$ and $N$. 
-\end{enumerate}
-\end{enumerate}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\[PGF	G ( z ) = {\displaystyle G(z)=[(1-p)+pz]^{n}} \]
+5 PGF for binomial (n,p)
+%%%% 2001 April Question 5
 
-9
-\begin{eqnarray*}
-F_V (t)\\ &=& P(V \leq t)\\ &=& P(max \{X, Y\} \leq t)
-\\ &=& P(X \leq t \mbox{ and } Y \leq t)\\ &=& P(X \leq t) P(Y \leq t)\\ &=& F_X (t)F_Y (t)\mbox{ as X  and  Y are independent} 
-\end{eqnarray*}
+
+PGF for binomial (n,p)
+
 
 \begin{eqnarray*}
-F W (t)\\ &=& P(W \leq t)\\ &=& 1 - P(min{X, Y} > t)
-\\ &=& 1 – P(X > t \mbox{ and } Y > t)\\ &=& 1 - P(X > t) P(Y > t) \mbox{ as X  and  Y are independent} 
-\\ &=& 1 – [1 – P(X \leq t)] [1 – P(Y \leq t)]
-\\ &=& 1 – (1 – F_X (t)) (1 – F_Y (t))
-\\ &=& F_X (t) + F_Y (t) – F_X (t)F_Y (t) .
+G_X(t) 
+&=& E(t^X) \\ 
+&=& \sum^{n}_{x=0} t^x P(X = x)  \\
+&=& \sum^{n}_{x=0} t^x  {n \choose x} p^x \;(1-p)^{n-x} \\
+&=& \sum^{n}_{x=0} {n \choose x} pt^x \;(1-p)^{n-x}\\
+&=& (1 - p + pt)^{n}
 \end{eqnarray*}
 
-\begin{itemize}
 
-\item
-$FX(t) = FY(t) = 1 - e^{-4t}$ , so
+\begin{framed}
+ Using summation notation, the binomial formula can be written as 
+\[ {\displaystyle (x+y)^{n}=\sum _{k=0}^{n}{n \choose k}x^{n-k}y^{k}=\sum _{k=0}^{n}{n \choose k}x^{k}y^{n-k}.} \]
+\end{framed}
 
-\begin{eqnarray*}
-F_W(t) &=& 1 - e^{-4t} + 1 - e^{-4t} - (1 - e^{-4t})2\\
-&=& 2 - 2e^{-4t} - 1 - e^{-8t} + 2e^{-4t}\\
-&=& 1 - e^{-8t}\\
-\end{eqnarray*}
-This is the distribution function of an exponential distribution with parameter 8, and
-therefore the mean is 1/8.
-\end{itemize}
+MGF obtained by replacing $t$ by $e^t$, i.e. $M_X(t) = (1 - p + pe^t)^{n}$
+MGF obtained by replacing t by et, i.e. ( ) (1 t )n.
+X M t = − p + pe
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6 \[C(t) = logM(t) = log[exp(μt + σ2t2/2)] \]from Green Book
+= μt + σ2t2/2
+\kappa_r is the coefficient of tr/r! , r = 2,3,
+∴ \kappa_2 = σ2, \kappa_3 = \kappa_4 = 0
 
-10  
-\begin{itemize}
-\item Width of 95\% CI = 2  1.96  {P(1 - P)/200}0.5 where P is sample
-proportion
-Max value of P(1 - P) is 0.52 = 0.25
- Max width of CI = 2  1.96  (0.25/200)0.5 = 0.139
-In terms of percentages, this is 13.9%.
-\item 2  1.96  (0.25/n)0.5  0.1  n  385
-\end{itemize}
-11 
-\begin{itemize}
-\item E(SN) = E[E(SN|N)]
-Now, $E(SN|N = n) = E[(X1 + \ldots+ Xn)n|N = n)] = E[n(X1 + \ldots+ Xn)]$
-= n  nX = n2
-X
- E(SN) = E(XN2) = XE(N2)
-= X
-( 2 2 ) N  N
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\item E(S) = E(NX) = NX
-\begin{eqnarray*}
-\operatornmae{Cov}(S,N) &=& E(SN) - E(S)E(N)\\
-&=& \mu_x (\mu^2_N + \sigma^2_N) \;-\; (\mu_N \mu_X)\mu_N \\
-&=& \mu_X \sigma^2_N
-\end{eqnarray*}
 
-\end{itemize}
 \end{document}
