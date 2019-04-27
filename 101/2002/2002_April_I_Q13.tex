@@ -1,0 +1,149 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item  Six insurance companies were being compared with regard to premiums being
+charged for house contents insurance for houses in a particular postcode region.
+Independent random samples of five policies from each company are examined and
+the premiums (in £) were recorded.
+
+\begin{verbatim}
+Company A B C D E F
+151 152 175 149 123 145
+168 141 155 148 132 131
+128 129 162 137 142 155
+167 120 186 138 161 172
+134 115 148 169 152 141
+Totals 748 657 826 741 710 744
+% yij = 4, 426 ; yi2j = 661,796
+\end{verbatim}
+
+
+\begin{enumerate}[(a)]
+\item Compute an ANOVA table for these data, and show that there are no
+significant differences, at the 5\% level, between mean premiums being
+charged by each company. 
+\item State the assumptions required for the above analysis of variance, and, by
+drawing a suitable diagram of these data, comment briefly on the validity of
+these assumptions. 
+\item Calculate a 95\% confidence interval for the underlying common standard
+deviation % , using 2
+SSR
+
+as a pivotal quantity with a %  2  distribution. 
+\item A colleague points out that company C has the largest mean premium of
+£165.20 and that Company B has the smallest mean premium of £131.40 and
+suggests performing a t-test to compare these two companies.
+(a) Perform this t-test, using the estimate of variance from the ANOVA
+table, and in particular show that there is a significant difference at the
+1\% level.
+(b) Your colleague states that there is therefore a significant difference
+between the six companies.
+Discuss the apparent contradiction with your conclusion and
+explain the flaw in your colleagues argument. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+13 
+\begin{itemize}
+
+\item SST =
+44262 661796 = 8813.47
+30 
+SSB =
+2
+1 (7482 6572 8262 7412 7102 7442 ) 4426 = 3046.67
+5 30
+
+%  SSR = 8813.47  3046.67 = 5766.80
+Source df SS MS F
+Treatments 5 3046.7 609.3 2.54
+Residual 24 5766.8 240.3
+Total 29 8813.5
+From tables F5,24(5%) = 2.621
+Observed F < 2.621. Therefore not significant at 5% level.
+\item Assumptions are that, for each company, such premiums are normally
+distributed with the same variance.
+              .   .           .         ..
+  -------+---------+---------+---------+---------+---------
+A
+      .  .     .       .      .
+  -------+---------+---------+---------+---------+---------
+B
+                            .   .    .        .      .
+  -------+---------+---------+---------+---------+---------
+C
+                    ..      :             .
+  -------+---------+---------+---------+---------+---------
+D
+           .     .      .     .     .
+  -------+---------+---------+---------+---------+---------
+E
+                .      .  .     .           .
+  -------+---------+---------+---------+---------+---------
+F
+       120       135       150       165       180       195
+normality and equality of variance both seem reasonable.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item Here 2
+2 30 6 24 SSR ~
+
+
+% 2 P(12.40  SSR  39.36) = 0.95
+% 
+%  95% CI for 2 is 2
+% 39.36 12.40
+% SSR SSR
+%   
+Data gives SSR = 5766.8
+%  146.51 < 2 < 465.06
+and so 95% CI for  is 12.1 <  < 21.6
+\item (a) Using  2 = 240.3 from the ANOVA
+For comparing B and C: = 165.2 131.4 = 33.8 = 3.45
+1 1 9.80 240.3( )
+5 5
+t 
+% 
+t24(0.5%) = 2.797 from tables.
+Observed t > 2.797. Therefore significant at 1% level (two-sided).
+(b) There is no contradiction.
+It is wrong to pick out the largest and the smallest of a set of treatment
+means, test for significance, and then draw conclusions about the set.
+% Even if H0 : is all equal is true, the largest and smallest sample
+means would, of course, differ.
+\end{itemize}
+\end{itemize}
+\end{document}
