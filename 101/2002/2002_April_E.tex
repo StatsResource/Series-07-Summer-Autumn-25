@@ -1,0 +1,84 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+\begin{enumerate}
+\item 9 Let X and Y be independent random variables. Let V and W be the random variables
+defined by
+\[V = max {X, Y}, W = min {X, Y}\]
+i.e. $V$ is the larger, and $W$ is the smaller, of the observations of $X$ and $Y$.
+Let $F_X$ , $F_Y$ , $F_V$ , $F_W$ denote the distribution functions of $X$, $Y$, $V$, $W$ respectively.
+\begin{enumerate}[(a)]
+\item Show that $F_V(t) = F_X(t)F_Y(t)$ . 
+\item Show that $F_W(t) = F_X(t) + F_Y(t)  FX(t)FY(t)$ . [3]
+\item The random variable X has an exponential distribution with parameter 4 and, independently, Y has an exponential distribution with parameter 4. Obtain the distribution function of the minimum of X and Y and state its mean. 
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+9
+\begin{eqnarray*}
+F_V (t) &=& P(V \leq  t) \\ 
+&=& P(max {X, Y} \leq  t)\\
+&=& P(X \leq  t \mbox{ and } Y \leq  t) \\ 
+&=& P(X \leq  t) P(Y \leq  t) \\ 
+&=& F_X (t)F_Y (t)  \mbox{ as } X \mbox{ and } Y \mbox{ are independent} \\
+\end{eqnarray*}
+(ii)
+
+\begin{eqnarray*}
+F_W (t) &=& P(W \leq  t) \\
+&=& 1 - P(min{X, Y} > t)\\
+&=& 1 \; - \; P(X > t \mbox{ and } Y > t)\\
+&=& 1 - P(X > t) P(Y > t) \mbox{ as } X \mbox{ and } Y \mbox{ are independent} \\
+&=& 1 \; - \; [1 \; - \; P(X \leq  t)] [1 \; - \; P(Y \leq  t)]\\
+&=& 1 \; - \; (1 \; - \; F_X (t)) (1 \; - \; F_Y (t))\\
+&=& F_X (t) + F_Y (t) \; - \; F_X (t)F_Y (t) .\\
+\end{eqnarray*}
+(iii)
+\[F_X (t) = F_Y (t) = 1 \; - \; e^{-4t} ,\] so
+\begin{eqnarray*}
+F_W (t) &=& 1 \; - \; e^{-4t} + 1 \; - \; e^{-4t} \; - \; (1 \; - \; e^{-4t} )^2\\
+&=& 2 \; - \; 2e^{-4t} \; - \; 1 \; - \; e^{-8t} + 2e^{-4t}\\
+&=& 1 \; - \; e^{-8t}\\
+\end{eqnarray*}
+\begin{itemize}
+
+\item
+
+This is the distribution function of an exponential distribution with parameter 8, and
+therefore the mean is 1/8.
+\end{itemize}
+
+\end{document}
