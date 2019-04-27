@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item 11 A random sample of 11 policies on the contents of private houses was examined
+for each of three insurance companies and the sum insured under each policy
+noted. The observations were rounded to the nearest $$\$100$ and expressed in units
+of $\$1,000$.
+The sums and sums of squares of the observations are as follows:
+\begin{center}
+\begin{tabular}{ccc}
+& Sum & Sum of squares\\
+Company 1 & 129.1 & 1,534.37\\
+Company 2 & 109.8 & 1,109.88\\
+Company 3 & 123.5 & 1,401.73\\
+\end{tabular}
+\end{center}
+The data are to be analysed under the one-way analysis of variance model to
+examine whether company effects are present.
+The ANOVA table is given below, with three entries deleted.
+\begin{verbatim}
+Source of variation d.f. SS MSS
+Between companies 2 *** ***
+Residual 30 48.24 1.61
+32 ***
+\end{verbatim}
+
+\begin{enumerate}[(i)]
+\item Copy the table into your answer book, filling in the three values which
+have been deleted. 
+\item Test the null hypothesis of no company effects and state your conclusion.
+
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11 
+
+129.1 + 109.8 + 123.5 = 362.4 , 1,534.37 + 1,109.88 + 1,401.73 = 4,045.98
+% SST = 4,045.98  362.42/33 = 66.17
+% So SSB = 66.17  48.24 = 17.93 **
+Table is:
+\begin{verbatim}
+    Source of variation d.f. SS MSS
+Between companies 2 17.93 8.97
+Residual 30 48.24 1.61
+32 66.17
+\end{verbatim}
+
+
+
+F = 8.97/1.61 = 5.57 on 2,30 d.f.
+P-value is less than 0.01, so reject null hypothesis.
+There is strong evidence that there are differences among the (population)
+means of the sums insured for the three companies.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+** OR: Calculate SSB directly as
+SSB = (129.12 + 109.82 + 123.52) / 11  362.42/33 = 17.93
+12 H0 : this years pattern is the same as last years v. H1 : not the same
+\begin{itemize}
+    \item Under H0 , the expected frequencies are:
+% 120  0.184 ; 0.703 ; 0.113 = 22.08 ; 84.36 ; 13.56
+% oi ei (o 
+e)2/e
+15 22.08 2.270
+87 84.36 0.083
+18 13.56 1.454
+3.807 on 2 df
+5% point from 22
+ is 5.991. So cannot reject H0 at 5% level.
+\item These data provide no evidence to suggest that this year’s pattern differs from
+that of last year.
+\item A few candidates worked with percentages of claims instead of numbers of claims
+(when using the chi-squared goodness-of-fit statistic, one must work with observed
+and expected frequencies). Such work received few if any marks.
+\end{itemize}
+
+\end{document}
