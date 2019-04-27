@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\item 
+14 Consider a group of 1000 policyholders, all of the same age, and each of whose
+lives is insured under one or more policies. The following frequency distribution
+gives the number of claims per policyholder in 1999 for this group.
+Number of claims per policyholder (i) 0 1 2 3 ≥4
+Number of policyholders (fi ) 826 128 39 7 0
+A statistician argues that an appropriate model for the distribution of X, the
+number of claims per policyholder, is X ~ Poisson. Under this proposal, the
+frequencies expected are as follows (you are not required to verify these):
+Number of claims per policyholder 0 1 2 3 ≥4
+Expected number of policyholders 796.9 180.9 20.5 1.6 0.1
+A second statistician argues that a more appropriate model for the distribution of
+X is given by:
+\[P(X = x) = p(1 − p)x , x = 0, 1, 2,\ldots\]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{enumerate}[(a)]
+    \item (i) Without doing any further calculations, comment on the first statisticians
+proposed model for the data. 
+Consider the second statistician's proposed model.
+\item (ii) Verify that the mean of the distribution of X is (1 \;-\; p)/p and hence
+calculate the method of moments estimate of p. 
+(Note: this estimate is also the maximum likelihood estimate.)
+\item (iii) Verify that the frequencies expected under the second statistician's
+proposed model are as follows:
+Number of claims per policyholder 0 1 2 3 ≥4
+Expected number of policyholders 815.0 150.8 27.9 5.2 1.2
+
+\item (iv) (a) Test the goodness-of-fit of the second statisticians proposed model
+to the data, quoting the p-value of your test statistic and your
+conclusion.
+(b) Assuming that you had been asked to test the goodness-of-fit at
+the 1\% level, state your conclusion.
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+    \item 14 (i) The model greatly overestimates the number of policyholders who give
+rise to exactly one claim, and greatly underestimates the number who give
+rise to multiple claims.
+\item (ii) E(X) = 1 × p(1−p) + 2 × p(1−p)2 + 3 × p(1−p)3 + 
+= p(1−p)[1 + 2(1−p) + 3(1−p)2 + ] = p(1−p)[1 \;-\; (1−p)]−2 = (1−p)/p
+Data mean is (128 + 78 + 21)/1000 = 0.227
+so the method of moments estimate * of p is given by solving
+(1−p)/p = 0.227, which gives estimate of p = 0.81500.
+* it is also in fact the MLE
+\item (iii) Estimates of probabilities for 0,1,2, and 3 claims are then 0.815,
+0.815 × 0.185 = 0.15078, 0.815 × 0.1852 = 0.02789, and
+0.815 × 0.1853 = 0.00516
+So, for 4 or more claims, estimate is 1 \;-\; 0.99883 = 0.00117.
+Hence expected frequencies are as follows:
+\begin{tabular}{c|c|c|c|c|c|}
+Number of claims per policyholder  & 0 & 1 & 2 & 3 & $\geq 4$ \\
+Expected number of policyholders &  815.0 & 150.8 & 27.9 & 5.2&  1.2 \\ 
+\end{tabular}
+
+\item (iv) (a) Using 5 cells:
+\[ χ2 = (826\;-\;815)2/815+(128\;-\;150.8)2/150.8+(39\;-\;27.9)2/27.9 +(7\;-\;5.2)2/5.2\]
++ 1.22/1.2 = 9.84 on 3 df
+P-value is between 0.025 and 0.01
+\item There is quite strong evidence against the null hypothesis (that the
+second statisticians model describes the data) and we conclude that
+the model does not provide a good fit to the data.
+\item [Alternative solution: Using 4 cells (for 0 , 1 , 2 , and ≥ 3) the χ2 value
+is 8.07 on 2df. P-value is again between 0.025 and 0.01.]
+\item (b) The P-value exceeds 0.01 so we cannot reject the hypothesis.
+The hypothesis that the model describes the data stands.
+\end{itemize}
+\end{document}
