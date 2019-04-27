@@ -84,27 +84,39 @@ estimators of $\lambda$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-% 9 2 2 2
-% 1 2 ( )= ( ) (1 ) ( ) W E S E S    E S
-% = \sigma^2 + (1  )\sigma^2 = \sigma^2 
-(using unbiasedness of sample variance)
-Therefore 2
-W S is unbiased for $\sigma^2$. MSE = ( 2 ) W Var S since unbiased.
-MSE = ( 2 ) W Var S 2 2 2 2
-% 1 2 =  Var(S )  (1  ) Var(S )
-%  2 2 4
-4 2
-1 2
-1 2
-= 2 using ( ) = ; 1,2
-1 1 1 i
-i
-Var S i
-n n n
 
-% \item 4
-1 2
-2 2(1 )
+
+%%% September 2001 - Question 9
+
+9
+(i)
+\begin{eqnarray*}
+E ( S_W^2 ) \\
+&=& \alpha E ( S^2_1 ) + (1 - \alpha ) E ( S^2 )\\
+&=& \alpha \sigma^2 + (1 - \alpha)\sigma^2 \\
+&=& \sigma^2(using unbiasedness of sample variance)\\
+\end{eqnarray*}
+
+Therefore $S^2_W$ is unbiased for $\sigma^2$ . 
+
+$MSE = Var ( S_W )$ since unbiased.
+
+\begin{eqnarray*}
+\operatorname{MSE} &=& Var ( S^2_W ) \\
+&=& \alpha^2 Var ( S^2_1 ) + (1 - \alpha )^2 \operatorname{Var} ( S^2 )\\
+&=& 2\sigma^4 \left(  \frac{\alpha^2}{n_1 \;-\;1}  + \frac{(1 - \alpha )^2}{n_2-1} \right)\\
+\end{eqnarray*}
+
+using \[ \operatorname{Var}(S^2_i) \;=\; \frac{2\sigma^4 }{n_1 \;-\;1} , i= 1,2 \]
+
+%------------------------%
+
+\[
+\frac{ d\operatorname{MSE}}{d \alpha} 
+\;=\; 2\sigma^4 \left(  \frac{2\alpha}{n_1 \;-\;1}  + \frac{-2(1 - \alpha )}{n_2-1} \right)\\
+\]
+%------------------------%
+
 = 2
 1 1
 dMSE
