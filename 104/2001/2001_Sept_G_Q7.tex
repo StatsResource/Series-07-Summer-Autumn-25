@@ -1,0 +1,131 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%---  Question 7
+On 1 January 1995 an office issued a number of level annual premium policies to
+independent lives, each of whom was aged exactly 40. The sum assured for each
+policy was \$10,000. There were two types:
+• whole-life assurances, with the sum assured being payable at the end of
+the year of death
+• pure endowments with a term of 20 years, under which the only benefit
+was the payment of the sum assured on survival to the maturity date
+On 1 January 2000 there were 600 of the whole-life assurances and 400 of the
+pure endowments in force. During the calendar year 2000, 2 whole-life
+policyholders and 1 pure endowment policyholder died. There were no exits
+other than by death.
+The premium and policy value bases used were A1967–70 ultimate mortality, 4%
+interest p.a. and expenses can be ignored.
+\item  Show that the annual premiums payable were approximately \$144.65 for
+a whole-life policy and \$296.96 for a pure endowment policy.
+
+\item  Find the total policy value in respect of each class of policy, at the
+beginning and at the end of the calendar year 2000.
+
+\item  Find the mortality profit or loss for the calendar year 2000.
+
+\item  If on 1 January 2000 the office held funds equal to the total of the policy
+values of all in force policies, what rate of interest would the office have
+had to earn on its funds during the calendar year 2000 for there to be
+neither a profit nor a loss on this business in that year?
+
+[Total 13]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+1 p̂ 1 = exp{-0.010353} = 0.989700
+1 p̂ 2 = exp{-0.004805} = 0.995207
+p̂ 0 = 0.951654  ́ 0.989700  ́ 0.995207
+= 0.937338
+So 3
+and 3 q̂ 0
+= 0.062662
+Whole-life policies: 10,000(1 / a && 40 - d ) = 144.653166
+Pure endowments:
+10,000D 60
+10,000  ́ 2,855.5942
+=
+= 296.960725
+132,001.93 - 35,841.261
+N 40 - N 60
+(ii)
+Policy values, per policy:
+Whole-life, time 5: 10,000 (1 - a && 45 / a && 40 ) = 719.805229
+6: 10,000 (1 - a && 46 / a && 40 ) = 874.880915
+Pure endowment, time 5: 10,000(D 60 / D 45 ) - 296.96a && 45:15
+= 10,000  ́ 0.501934 - 296.96  ́ 11.235 = 1,682.998848
+time 6: 10,000(D 60 / D 46 ) - 296.96a 46:14
+= 10,000  ́ (0.523392) -296.96  ́ 10.672 = 2,064.76288
+Page 9 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+Hence totals:
+Whole-life
+time 5
+(beginning of
+CY 2000)
+time 6
+(end of CY 2000)
+(iii)
+PE All
+431,883 673,200 1,105,083
+523,179 823,840 1,347,019
+Alternatively 6 V can be calculated from 5 V.
+Policy values, time 5
++ premiums
++4% interest
+- death claims
+- policy values reqd
+at time 6
+431,883
+86,790
+518,673
+20,747
+20,000 673,200
+118,784
+791,984
+31,679
+0 1,105,083
+205,574
+1,310,657
+52,426
+20,000
+523,179
+-3,759 823,840
+-177 1,347,019
+-3,936
+Mortality loss of approximately \$3,936
+Alternatively Expected and Actual Death Strain can be calculated to
+determine mortality profit. Numercial answers will not usually agree
+exactly because of rounding errors.
+(iv)
+(1,105,083 + 205,574) (i + i) = 1,347,019 + 2,000
+1 + i = 1.043002
