@@ -1,0 +1,218 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%% ---- 104 A2001—610
+The table gives the data for a small sample of employees in a factory. It shows
+the time in months until the first absence from work. Observations marked +
+show the time of leaving for those employees who left employment without being
+absent from work.
+Male employees
+Female employees
+6+
+2+
+11
+4
+13+
+7
+15
+8+
+16+
+10+
+19+
+12+
+20
+17
+21+
+A Cox Proportional Hazards Model
+\lambda(tx) = \lambda_0(t) exp(\beta x)
+is to be fitted to these data where t is the time until the first absence from work,
+\lambda_0(t) is the baseline hazard and x = 0 for males, = 1 for females.
+\item 
+Show that the partial log-likelihood for these data can be written
+l(\beta) = 3\beta − 4 \log_{e}(1 + e \beta ) − 2 \log_{e}(2 + e \beta ) + c
+where c is a constant that does not depend on \beta.
+
+\item  Calculate the maximum partial likelihood estimate of \beta.
+
+\item  Calculate the asymptotic standard error of this estimate.
+
+\item  Test the hypothesis that female employees experience higher first absence
+rates than male employees. Explain the steps in your argument and state
+your conclusions.
+
+[Total 17]
+%% ---- 104 A2001—7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+10
+(i)
+Write times in rank order, label groups and label first absences from
+work.
+Determine cumulative probabilities and contributions to partial likelihood
+from first absences.
+2+ F e \beta 7 + 8e \beta
+4 F e \beta 7 + 7e \beta
+6+ M 1 7 + 6e \beta
+7 F e \beta 6 + 6e \beta
+8+ F e \beta 6 + 5e \beta
+10+ F e \beta 6 + 4e \beta
+11 M 1 6 + 3e \beta
+12+ F e \beta 5 + 3e \beta
+13+ M 1 5 + 2e \beta
+15 M 1 4 + 2e \beta
+16+ M 1 3 + 2e \beta
+17 F e \beta 2 + 2e \beta
+19+ M 1 2 + e \beta
+20 M 1 1 + e \beta
+21+ F e \beta e \beta
+e \beta
+7 + 7 e \beta
+e \beta
+6 + 6 e \beta
+1
+6 + 3 e \beta
+1
+4 + 2 e \beta
+e \beta
+2 + 2 e \beta
+1
+1 + e \beta
+Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+Partial Likelihood, L
+e \beta
+e \beta
+1
+1
+e \beta
+1
+.
+.
+.
+.
+.
+\beta
+\beta
+\beta
+\beta
+\beta
+7(1 + e ) 6(1 + e ) 3(2 + e ) 2(2 + e ) 2(1 + e ) 1 + e \beta
+=
+e 3 \beta
+84(1 + e \beta ) 4 6(2 + e \beta ) 2
+So \log_{e}L = l (\beta) = 3\beta − 4 \log_{e}(1 + e \beta ) − 2 \log_{e}(2 + e \beta ) + c
+(ii)
+Then
+∂ l
+4 e \beta
+2 e \beta
+= 3 −
+−
+∂\beta
+1 + e \beta 2 + e \beta
+Let x = e \beta then x̂ is given by
+3 −
+4 x ˆ
+2 x ˆ
+= 0
+−
+1 + x ˆ 2 + x ˆ
+3(1 + x ˆ )(2 + x ˆ ) − 4 x ˆ (2 + x ˆ ) − 2 x ˆ (1 + x ˆ ) = 0
+6 + 9 x ˆ + 3 x ˆ 2 − 8 x ˆ − 4 x ˆ 2 − 2 x ˆ − 2 x ˆ 2 = 0
+3 x ˆ 2 + x ˆ − 6 = 0
+x̂ =
+=
+− 1 \pm  1 − 4 ( − 6.3)
+6
+− 1 \pm  73
+6
+Estimate must be +ve, so
+73 − 1
+= 1.25733
+6
+So \betâ = \log_{e}1.25733 = 0.2290
+(iii)
+Now
+æ − 4 e \beta . e \beta + (1 + e \beta ) . 4 e \beta ö æ − 2 e \beta . e \beta + (2 + e \beta ) . 2 e \beta ö
+∂ 2 l
+=
+−
+ç
+÷ − ç
+÷
+(1 + e \beta ) 2
+(2 + e \beta ) 2
+∂\beta 2
+è
+ø è
+ø
+æ 4 e \beta
+4 e \beta ö
+= − ç
++
+÷
+\beta 2
+(2 + e \beta ) 2 ø
+è (1 + e )
+ˆ
+At e \beta = 1.25733, this has value − (0.98700 + 0.47401) = −1.46101
+Page 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+So asymptotic standard error = +
+1
+1.46101
+= 0.8273
+(iv)
+95\% Confidence Interval for \betâ is approximately
+0.2290 \pm  2 × 0.8273
+i.e.
+(−1.43, 1.88)
+This interval includes \beta = 0, so the model
+\lambda(tx) = \lambda_0(t) exp{0 × x} = \lambda_0(t)
+is compatible with the observed data i.e. same model applies to males and
+females. There is no significant difference between rates.
+OR
+Using a one sided alternative hypothesis and testing
+H 0 : \beta = 0 against H 1 : \beta > 0 we have:
+Under the Null hypothesis
+0.2290 − 0
+= 0.28
+0.8273
+should be N(0, 1).
+This value is not in the critical region (1.64, ∞) and so there is no reason to
+reject the null hypothesis. Conclusions as above.
+OR
+A likelihood test can be used
+− 2( l (0) − l ( \beta ˆ )) = − 2( − 4.9698 + 4.9315) = 0.0765
+which is χ 1 2 if H 0 : \beta=0 is true. This value is not in the critical region so
+there is no reason to reject H 0 .
+Page 15
