@@ -1,0 +1,213 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%---  Question 8
+The main activity of a certain charity is training and providing guide dogs for blind
+people. The charity wishes to estimate the lifetime of the dogs it provides, and has
+therefore attempted to keep track of 100 dogs that were all born in 1990. Of these 100
+dogs, 81 remained in service on reaching age 10 years. Of the remaining dogs, some
+died and some left active guide service for other reasons.
+The ages of the deaths and other exits were recorded as follows:
+Age
+(years)
+0.25
+0.5
+1
+2.25
+3.5
+4
+4.5
+6
+7.5
+9
+\item 
+Number
+of deaths
+Number
+of other exits
+2
+1
+3
+3
+2
+2
+1
+1
+2
+2
+Calculate the Nelson-Aalen estimate of the integrated hazard for these guide
+dogs.
+
+Guide dogs undergo an initial period of one year s training, which costs \$3,000
+payable continuously over the year. They then work for up to 9 years. The charity
+undertakes to provide food, medical expenses, equipment and so on throughout the
+ten years of the dog s working life. This is estimated to cost \$2,000 per year, payable
+continuously over the year. If the dog reaches age 10, the charity will find it a new
+home for its retirement, the expense of this resettlement being \$300.
+\item 
+Using the integrated hazard calculated in \item , calculate the capital cost to the
+charity of supporting a single guide dog.
+[10]
+The charity has two principal sources of finance. The first is a new scheme whereby
+members of the public commit to make regular payments for ten years (but ceasing on
+death) to the charity. Payments are to be made annually in advance. The total annual
+income from this scheme at the outset is \$125,000. The average age of the
+contributors is now exactly 50.
+The second source of income is a commitment to leave the charity a legacy when the
+benefactor dies. The charity has commitments to legacies worth a total of \$900,000
+from benefactors, the average age of whom is now exactly 70. Due to delays in
+settling estates, the charity generally receives these legacies one year after the death of
+the benefactor.
+104 A2004
+6\item 
+Calculate the expected present value of the current commitments to the
+charity. Hence estimate the number of guide dogs that the charity can
+undertake to provide.
+
+Basis: Mortality of humans: PFA92C20
+Interest:
+4% per annum throughout
+[Total 23]
+104 A2004
+7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%8
+(i)
+The relevant calculations are:
+Time
+t j Number of
+deaths
+d j Number of
+other exits
+c j Lives
+exposed
+n j
+0
+0.5
+4
+6 0
+1
+2
+1 2
+8
+1
+4 100
+98
+89
+86
+j
+0
+1/98
+2/89
+1/86
+j
+0
+0.0102
+0.03268
+0.0443
+Thus the Nelson-Aalen estimate of the integrated hazard is:
+t
+0 t < 0.5
+0.5 t < 4
+4 t < 6
+6 t
+(ii)
+Page 12
+t
+0
+0.0102
+0.03268
+0.0443
+The values given for the integrated hazard mean that the survival function is
+given by t p x = exp{ t }
+t p 0 1 0 t
+t p 0 0.9899 0.5 t
+t p 0 0.9678 4 t
+t p 0 0.9567 6 t
+0.5
+4
+6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+And so the cost of training is given by
+V
+\$3, 000
+\$3, 000
+1
+0 t
+a 0.5
+p 0 exp(
+t ) dt
+0.9899 v 0.5 a 0.5
+\$3, 000 (0.49513 0.9899 0.98058 0.49513)
+\$2,927
+Similarly, the cost of the food etc is calculated as:
+F \$2, 000 ( a 0.5 v 0.5 0.9899 a 3.5 0.9678 v 4 a 2
+0.9567 v 6 a 4 )
+\$2, 000 (0.49513 0.9899 0.98058 3.27040 0.9678 0.85480
+1.92357 0.9567 0.79031 3.70202)
+\$16,120
+and finally, the value of the retirement benefit is
+\$300 10 p 0 v 10 \$300 0.9567 0.67556 \$194
+so the capital cost of providing a guide dog is
+\$194 + \$16,120 + \$2,927 = \$19,241.
+(iii)
+The value can be calculated in 2 parts. Firstly, annual commitments are
+worth:
+\$125, 000 a 50:10
+Now a 50:10
+a 50
+10
+p 50 v 10 a 60 19.539
+9848.431
+1.04
+9952.697
+so the annual commitments are worth \$125,000
+10
+16.652 8.407
+8.407 = \$1,050,875.
+The values of the legacies are
+\$900, 000 v A 70 \$900, 000 v 1.04 1⁄2 A 70
+and we can calculate the assurances via premium conversion:
+A 70 1 da 70 1 0.04 /1.04 (12.934) 0.5025
+So the value of the legacies is \$900,000
+1.04
+1⁄2
+0.5025 = \$443,468.
+The total value of the benefactions is
+\$1,050,875 + \$443,468 = \$1,494,343
+and the number of guide dogs that can be provided is
+1,494,343 / 19,241 = 77.
+
+\end{document}
