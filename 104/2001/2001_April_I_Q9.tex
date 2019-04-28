@@ -1,0 +1,196 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%---  Question 9
+\item 
+(a)
+Show that at age x if 0 \leq  a < b \leq  1 then
+b − a q x + a
+(b)
+p x
+a p x
+b
+Hence, or otherwise, show that if deaths are uniformly distributed
+over the year of age (x, x + 1) then
+b − a q x + a
+\item 
+= 1 −
+=
+( b − a ) q x
+1 − aq x
+
+In a mortality investigation, the following data have been recorded for six
+independent lives observed between exact age 70 and exact age 71.
+a i the time in years after exact age 70 when the ith life came under
+observation;
+b i the time in years after exact age 70 when ith life was censored;
+d i = 1 if the ith life died before x + b i ;
+= 0 if the ith life survived to x + b i ;
+t i if d i = 1, then x + t i is the age at which the ith life died.
+(a)
+Life i a i b i d i t i
+1
+2
+3
+4
+5
+6 0
+0.3
+0.5
+0
+0
+0 1
+0.9
+1
+0.4
+0.9
+1 0
+0
+1
+0
+1
+1 –
+−
+0.9
+–
+0.7
+0.8
+Using the Binomial Model of Mortality write down the likelihood of
+these observations.
+If deaths are assumed to be uniformly distributed over (70, 71)
+express this likelihood as a function of q 70 .
+(b)
+Using the Poisson Model of Mortality and assuming a constant
+force of mortality, \mu 70 , over (70, 71) write down the likelihood of
+these observations.
+Calculate the maximum likelihood estimate of \mu 70 and hence
+
+obtain the maximum likelihood estimate of q 70 .
+[Total 14]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+9
+(i)
+(a)
+b − a q x+a
+= 1 − b − a p x+a
+Now b p x = a p x b − a p x+a
+p x
+a p x
+b
+So b − a q x+a = 1 −
+(b)
+If deaths are uniformly distributed over (x, x + 1) then
+t q x
+(ii)
+(a)
+= t . q x
+So t
+p x = 1 − t . q x
+Then b − a q x+a
+= 1 −
+1 − bq x
+( b − a ) q x
+=
+1 − aq x
+1 − aq x
+The likelihood for each life is
+Life i
+Likelihood
+1
+p 70
+2
+p
+0.6 70.3
+3
+q
+0.5 70.5
+4
+0.4 p 70
+5
+0.9 q 70
+6
+q 70
+And the total likelihood is the product
+(1 − q 70 ) (1 − 0.6 q 70.3 ) 0.5 q 70.5 (1 − 0.4 q 70 ) 0.9 q 70 q 70
+Using (i)(b) we can write
+æ
+0.6 q 70 ö æ 0.5 q 70 ö
+(1 − q 70 ) ç 1 −
+÷ç
+÷ (1 − 0.4 q 70 ) 0.9 q 70 q 70
+1 − 0.3 q 70 ø è 1 − 0.5 q 70 ø
+è
+=
+(b)
+3
+(1 − q 70 )(1 − 0.9 q 70 ) (1 − 0.4 q 70 ) 0.45 q 70
+(1 − 0.3 q 70 )(1 − 0.5 q 70 )
+The likelihood for each life is proportional to (assuming constant
+force \mu 70 ) .
+Life i
+Likelihood
+e
+1 2
+−\mu 70 − 0.6 \mu 70
+e
+3
+e
+− 0.4 \mu 70
+4
+\mu 70
+e
+− 0.4 \mu 70
+And the total likelihood is the product
+L ∝ e − 3.9 \mu 70 ( \mu 70 ) 3
+Then
+Page 12
+∂ L
+2
+= − 3.9 e − 3.9 \mu 70 ( \mu 70 ) 3 + e − 3.9 \mu 70 3 \mu 70
+∂\mu 70
+5
+e
+− 0.7 \mu 70
+6
+\mu 70
+e
+− 0.8 \mu 70
+\mu 70 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+Then − 3.9 \hat{\mu} 70 + 3 = 0
+\hat{\mu} 70 =
+3
+= 0.7692
+3.9
+The same result can be obtained using the log likelihood.
+Then ML estimator of q 70 ; q̂ 70 = 1 − e − 0.7692 = 0.5366
