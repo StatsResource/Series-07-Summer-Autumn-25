@@ -1,0 +1,133 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%---  Question 
+[Total 10]4
+A cash-flow is payable continuously at a rate of ρ(t) per annum at time t provided
+a life who is aged x at time 0 is still alive. T x is a random variable which
+measures the complete future lifetime in years of a life aged x.
+\item  Write down an expression, in terms of T x , for the present value at time 0
+of this cash-flow, at a constant force of interest δ p.a.
+%%---  Question 
+\item  Hence or otherwise show that the expected present value at time 0 of this
+cash-flow is equal to:
+∞
+ò e
+−δ s
+ρ(s) s p x ds.
+
+0
+\item 
+An annuity is payable continuously during the lifetime of a life now
+aged 30, but for at most 10 years. The rate of payment at all times t
+during the first 5 years is \$5,000 p.a., and thereafter it is \$10,000 p.a.
+The force of mortality to which this life is subject is assumed to be
+0.01 p.a. at all ages between 30 and 35, and 0.02 p.a. between 35 and 40.
+Find the expected present value of this annuity at a force of interest of
+0.05 p.a.
+
+\item 
+If the mortality and interest assumptions are as in \item , find the expected
+present value of the benefits of a term assurance, issued to the life in \item ,
+which pays \$40,000 immediately on death within 10 years.
+
+[Total 12]
+104 S2001—3
+(i) The present value =
+n ®¥
+n ®¥
+T x
+ò r ( s ) e
+-d s
+ds
+0
+(ii)
+The expected present value
+é T x
+ù ¥
+= E ê r ( s ) e -d s ds ú = æ ç
+ê ë 0
+ú û 0 è
+ò
+ò ò
+t
+0
+r ( s ) e -d s ds ö ÷ f ( t ) dt
+ø
+where f denotes the probability density function of T x .
+¥
+Hence EPV =
+5
+(iii)
+EPV =
+ò
+0
+r ( s ) e -d s æ ç
+è
+0
+ò
+ò
+¥
+s
+f ( t ) dt ö ÷ ds =
+ø
+¥
+ò r ( s ) e
+-d s
+s
+p x ds .
+0
+5
+ò
+e - 0.05 s 5,000 e - 0.01 s ds + e - 5  ́ 0.05 . e - 5  ́ 0.01 e - 0.05 s 10,000 e - 0.02 s ds
+0
+= 5,000a 5 @ force of 0.06 + 10,000e - 5(0.06) a 5 @ 0.07 = 52,851.69
+Page 4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+(iv)
+10
+æ 5
+ö
+40,000 ç e - 0.05 t 0.01 e - 0.01 t dt + e - 0.05 t 0.02 e - 0.01  ́ 5 e - 0.02( t - 5) dt ÷
+ç
+÷
+5
+è 0
+ø
+ò
+ò
+(
+)
+= 0.01 a 5 d= 0.06 + 0.02 e - 5(0.06) a 5 d= 0.07  ́ 40,000
+= 4,228.14
+Other approaches are possible, in particular the use of premium conversion
+relationships in (iv).
