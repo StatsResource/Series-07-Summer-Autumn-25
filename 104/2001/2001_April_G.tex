@@ -1,0 +1,153 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 8]
+A life insurance company wishes to test if the recent mortality experience of its
+annuitants is consistent with the mortality basis used in the calculation of the
+annuity rates.
+If q o x and q x p denote the mortality rates for the experience and the premium basis
+respectively:
+\item  State the null hypothesis for the investigation.
+\item  For each of
+•
+•
+%%---  Question 
+the Chi-Squared Test
+the Grouping of Signs Test
+(a) State the test statistic.
+(b) Derive the sampling distribution of the test statistic, when the null
+hypothesis is true.
+(c) Indicate the observed values of the test statistic that would lead to
+the rejection of the null hypothesis.
+Define clearly all the symbols that you use.
+%% ---- 104 A2001—4
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 7 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+7
+(i)
+H 0 : The observed rates q o x are consistent with coming from a population in
+which the premium rate basis q x p are the true rates.
+(ii)
+E x initial exposed to risk at age x in the investigation
+Chi-squared
+(a)
+The test statistic is
+å
+(
+E x q o x − E x q x p
+E x q x p
+x
+)
+2
+where E x is the initial exposed to risk at age x.
+(b)
+If H 0 is true, then
+E x q o x − E x q x p
+E x q x p
+~
+approx.
+N (0,1)
+for each age x using the Central Limit Theorem and assuming that
+1 − q x p @ 1.
+Then if the observations at each of the n ages are independent
+å
+x
+(c)
+( E x q o x − E x q x p ) 2
+E x q x p
+~
+approx.
+χ n 2
+Reject H 0 if the Observed Value of the test statistic > χ 2 n (1 − α) at
+α% level of significance. This is a one-tailed test.
+Grouping of Signs
+(a)
+The test statistic is G, the observed number of positive groups of
+signs among n 1 positive and n 2 negative deviations, where the
+deviation at age x = E q o − E q p .
+x
+(b)
+x
+x
+x
+If H 0 is true, then the deviations will be allocated randomly to
+groups.
+Then n 1 positive deviations can be divided into g groups in
+æ n 1 − 1 ö
+ç
+÷ ways
+è g − 1 ø
+Page 8 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+These g groups of positive signs can be allocated amongst the n 2
+negative deviations in
+æ n 2 + 1 ö
+ç
+÷ ways
+è g ø
+The unrestricted number of ways of arranging n 1 + n 2 positive and
+negative deviations is
+æ n 1 + n 2 ö
+ç
+÷
+è n 1 ø
+So the sampling distribution of the test statistic, G, is
+æ n 2 + 1 ö æ n 1 − 1 ö
+ç
+÷ç
+÷
+g ø è g − 1 ø
+è
+P[G = g] =
+g = 1, 2, 3, ...n 2 − 1
+æ n 1 + n 2 ö
+ç
+÷
+è n 1 ø
+Alternatively, if n 1 + n 2 > 20 (approx.) then
+G
+æ n ( n + 1) ( n 1 n 2 ) 2 ö
+N ç 1 2
+,
+3 ÷
+approx.
+è ( n 1 + n 2 ) ( n 1 + n 2 ) ø
+~
+using the Central Limit Theorem and E[G] and Var[G].
+(c)
+Reject H 0 if the Observed Value of the test statistic, G \leq  k* where
+k* is smallest integer such that
+P[G \leq  k*] ≥ 0.05
+(or as similar statement based on the N(0, 1) distribution). This is
+a one-tailed test.
+\end{document}
