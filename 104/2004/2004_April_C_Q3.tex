@@ -1,0 +1,84 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+3
+A particularly morbid actuarial student is considering the mortality of the population
+of the village in which she lives. The village graveyard contains tombstones which
+bear inscriptions of the form A N Other beloved mother of . , Born 1903,
+Died 1976 .
+\begin{itemize}
+\item  If the student were to use the inscriptions as a source of death data, state the
+exact age to which the calculated mortality rate would apply assuming a
+Binomial model was used.
+
+\item  Comment on the difficulties the student is likely to face in attempting to
+calculate mortality rates in this way.
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3
+
+(i)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+The death data will be classified as age = calendar year of death calendar
+year of birth. This is the same as age at the birthday in the calendar year of
+death.
+This is a calendar year rate interval, and the range of exact ages for a life
+labelled x at the start of the rate interval is ( x 1, x).
+So the average age at the start of the rate interval is x 0.5 and
+because we are using a binomial model, this is the age to which the calculated
+rate would apply.
+\item (ii)
+Some of the difficulties will be:
+low volume of death data
+deaths will cover maybe 200+ years, during which time mortality
+patterns will have changed greatly
+there could be selection issues
+what about people too poor to have a
+tombstone?
+it will be almost impossible to estimate a corresponding exposed to
+risk
+due to lack of data, migration etc.
+some tombstones could be more weathered than others (and so
+illegible)
+people may have been buried in the graveyard who did not live in the
+village. It may not be possible to identify this and eliminate them from
+the analysis
+For the older tombstones in particular, the data might be incorrect (e.g.
+the correct date of birth might not have been known)
+Credit was given for other valid comments concerning the particular
+circumstances
+\end{itemize}
+\end{document}
