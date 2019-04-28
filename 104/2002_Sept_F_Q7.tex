@@ -1,0 +1,87 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}7
+(i) Derive a formula to estimate the constant force of mortality for lives aged x
+nearest birthday. State any assumptions you make in deriving your formula.
+[5]
+(ii) Use your formula in (i) to calculate numerical estimates of m 41 and m 42 .
+[2]
+[Total 7]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i) Essential data is:
+· date of birth (or date of x th birthday or exact age)
+· multiple policy indicator
+Either
+· date of purchase of term assurance policy (*)
+· date of policy lapse, date of policy expiry or date of death (*)
+· if occurred between 1.1.95 and 31.12.98
+Or
+· Date of entry into investigation
+· Date of exit from investigation
+· Reason for exit
+(ii) Data for all lives that had died during the Period of Investigation (1.1.95 to
+31.12.98) would be tabulated by age last birthday, x at date of death. Counts
+of the number of deaths at each age x, q x would be recorded for all x .
+For each age x and for each life two dates would be calculated.
+START DATE
+The latest date of
+1 January 1995
+date of purchase of policy
+date of xth birthday
+END DATE
+The earliest date of
+31 December 1998
+date of death or date of leaving (if any)
+date of x + 1th birthday
+Then calculate END DATE - START DATE (if this is > 0) and total these
+values for all lives. Record this answer in years. This is the Central Exposed
+to Risk at age, x, E x c .
+Tabulate these values for all x.
+Then: m ˆ x =
+q x
+is an estimate of the force of mortality at age x + 1⁄2, assuming
+E x c
+that the force is constant over the year of age x to x + 1.
+ALTERNATIVELY
+Tabulations could be produced for age nearest birthday, in which
+START DATE must be amended to use “date of attaining x nearest birthday”,
+and END DATE to use “date of attaining x + 1 nearest birthday”.
+Page 7Subject 104 (Survival Models) — September 2002 — Examiners’ Report
+Then: m ˆ x =
+q x
+is an estimate of the force of mortality at age x, assuming that
+E x c
+the force is constant over the year of age (x - 1⁄2, x + 1⁄2).
