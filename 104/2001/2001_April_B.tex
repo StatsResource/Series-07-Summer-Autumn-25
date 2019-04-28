@@ -1,0 +1,76 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+A special endowment assurance with a term of n years is issued to lives aged x.
+It is special because the death benefit at time t (where 0 < t < n) is restricted to
+the net premium policy value at that time t V, payable immediately on death. The
+net premium is P p.a., payable continuously. The survival benefit at time n is S.
+\item  Write down Thiele’s differential equation for this policy.
+\item  Show that the solution to the equation in \item  is t V = Ps t at the appropriate
+rate of interest.
+\item 
+
+Suppose that x = 45, n = 20, the rate of interest at all times is 4% p.a., and
+the survival benefit S is sufficient to purchase an annuity, payable
+annually in arrear, of \$20,000 p.a. Find P.
+Mortality basis: a(55) Ultimate Mortality Table (males).
+3
+%%---  Question 
+
+[Total 9]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+2
+(i)
+In this model the probabilities are equal because there is no way of
+returning to state I once a life has left this state.
+∂ ( t V )
+= δ t V + P − \mu x + t ( t V − t V) = δ t V + P
+∂ t
+i.e. t V ′ − δ t V = P.
+(ii)
+To solve, multiply by e −δ t to get:
+( e
+−δ t
+t V
+) ′ = Pe
+−δ t
+,
+e −δ t t V = (−P/δ) e −δ t + c
+and 0 V = 0 Þ c = P/δ
+Hence t V = e δ t (P/δ) (1 − e −δ t )
+= P(e δ t − 1) / δ = Ps t i , with 1 + i = e δ .
+(Alternatively verify directly that Ps t i , satisfies the equation and the
+initial condition, 0 V = 0.)
+(iii)
+Ps 20 0.04 = S = 20,000a 65 = 20,000 × 9.790902
+Þ P = 6,447.80
