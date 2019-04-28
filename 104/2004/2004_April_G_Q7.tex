@@ -1,0 +1,230 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%- Question 7
+A Company is modelling its workforce using the multiple state model shown below.
+Working
+Left Company
+voluntarily
+Left Company
+involuntarily
+Dead
+The Company is interested in how many of its employees leave employment
+voluntarily each year and so wishes to estimate the transition intensity from the
+working state to the left company voluntarily state. Consider employees aged
+between ages 30 and 31 exact and suppose that the ith individual spends time W i
+employed by the Company between those ages.
+\item  Derive the maximum likelihood estimate
+of .
+of
+and write down the variance
+
+\item  Suppose the Company has available data on the number of employees who left
+service voluntarily in 2002, classified by age last birthday on the previous
+anniversary of the date they started employment.
+The Company also has census data P(x, t) for t = 0 and t = 1 where P(x, t)
+represents the number of employees aged x nearest birthday on 1 January in
+year 2002 + t.
+Assuming that the dates on which employment began are distributed
+uniformly across both calendar years and life years:
+\item 
+104 A2004
+(a) Derive a formula to approximate the exposed to risk in the year 2002
+for lives classified as age 30.
+(b) If you use the exposed to risk in (a) to estimate , state the exact age to
+which your formula applies.
+
+You subsequently discover that, actually, all workers begin employment with
+the Company on their 16 th birthdays. Write down the revised estimate of the
+exposed to risk based on the data available.
+
+[Total 14]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%7
+(i)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{itemize}
+\item Suppose there are N voluntary leavers, M involuntary leavers and D deaths.
+Then if we let W
+W i be the total waiting time in the working state, the
+i
+likelihood function can be written as:
+L = K exp( W (
+))
+N
+D
+M
+where K is some constant. The log-likelihood function is therefore
+l = log L = K
+N log
+W
+where K is another constant, independent of . Differentiating with respect
+to gives
+dl N
+=
+W
+d
+and equating this expression to 0 gives
+N
+W = 0 i.e.
+=
+N
+W
+\item To check we have a maximum, note that
+dl 2
+d
+2
+=
+N
+2
+0 .
+\item The formula for the variance of the estimator is
+Var ( ) =
+E ( W )
+.
+Page 9 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+(a)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item The age classification of the exit data is age last birthday on
+employment anniversary prior to exit . By the principle of
+correspondence, we must estimate the exposure on the same basis. If
+we knew P (30, t) which is defined as the population aged 30 last
+birthday at employment anniversary prior to t then the exposure would
+be:
+1
+c
+E 30
+= P (30, t ) dt
+0
+and assuming the population varies approximately linearly over the
+year, we could approximate this by
+c
+E 30
+= 0.5 ( P (30, 0) P (30,1)) .
+The range of exact ages that could apply to a life aged 30 last birthday
+on employment anniversary prior to leaving is (30, 32).
+The uniformity assumptions mean that the time elapsing between the
+previous employment anniversary and the date of death is uniformly
+distributed, as is the time between the previous employment
+anniversary and the birthday before that. Therefore the time between
+the birthday before the previous employment anniversary and the date
+of death is distributed as the sum of two independent identical uniform
+distributions and
+P (30, t ) =
+1
+( P (30, t ) 6 P (31, t ) P (32, t ))
+8
+A diagram may be used to demonstrate this:
+Age 32
+nearest
+1/8 th here
+Age 31
+nearest
+Age 30
+nearest
+0.5
+1.0
+employment anniversary to census date
+Page 10 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+and substituting into the approximation above, we have
+c
+E 30
+1
+P (30, 0) 6 P (31, 0) P (32, 0)
+1 8
+2 1
+P (30,1) 6 P (31,1) P (32,1)
+8
+ie,
+c
+E 30
+1
+P (30, 0) 6 P (31, 0) P (32, 0) P (30,1) 6 P (31,1) P (32,1)
+16
+\item Credit was also given for the following approximation (although it
+should be noted that the majority of the marks for this part of the
+question were available for the derivation rather than the final
+answer):
+Assuming employment anniversaries are uniformly distributed across
+calendar years, then the average anniversary prior to 1 January 2002
+will be 1 July 2001. A life aged 30 last birthday on 1 July 2001 is aged
+between 30 and 31 on that date and so will be aged between 30.5 and
+31.5 on 1 January 2002. So, we can approximate
+$P (30, t )$
+on average, the number of employees on 1 January 2002
+aged between 30.5 and 31.5
+the number of employees on 1 January 2002 aged 31
+nearest
+P 31, 0)
+and substituting into the approximation above, we have
+c
+E 30
+(b)
+1
+2
+P (31, 0) P (31,1)
+If we denote the number of voluntary exits in 2002 by employees aged
+30 last birthday on last employment anniversary by N 30 then the
+estimator is
+30
+c
+= N 30 / E 30
+.
+This is a central rate, applying to ages at the middle of the rate interval.
+Since the age range at the start of the rate interval (crossing an
+employment anniversary) is (30, 31) the average age at the start of the
+rate interval is 30.5 and the average age in the middle is 31.
+Page 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+In this case, the age definition is the same as age last birthday so that the
+census formula would have to be adapted (indeed simplified) accordingly.
+If we define P ' ' ( 30 , t ) as the population aged 30 last birthday at time t then the
+exposure would be:
+P ' ' ( 30 , t ) 0 . 5 P 30 , t P 31 , t
+And, using (as before)
+E 30 c 0 . 5 P ' ' 30 , 0 P ' ' 30 , 1
+The relevant formula is then
+c
+E 30
+0.25( P (30, 0) P (31, 0) P (30,1) P (31,1))
+with the calculated rate applying at age 30.5.
+\end{itemize}
+\end{document}
