@@ -1,0 +1,143 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\item  If T x and K_x are random variables measuring the complete and curtate
+length of life for a life aged x, define a x : n and a  x : n as expected values of
+functions of T x and K_x respectively.
+\item 
+Using the definition in \item  derive the following result
+a x : n =
+ò
+n
+0
+v t t p x dt ,
+and state the corresponding result for a  x : n .
+\item 
+
+Hence or otherwise show that a x : n can be approximated using the formula
+(
+a x : n ≈ a  x : n − 1⁄2 1 − v n
+\item 
+
+n
+)
+p x .
+Hence or otherwise find a simple approximation for a x .
+104 S2001—2
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%3
+(i)
+å
+ö
+m
+÷
+( t i - a i ) ÷ ø
+a x : n = E ( a S ) where S = min(T x , n)
+a && x : n = E ( a && U ) where U = min(K_x + 1, n)
+n
+(ii)
+ò
+E ( a S ) =
+¥
+ò
+a t f x ( t ) dt + a n f x ( t ) dt
+n
+0
+where f x (t) = t p x m x + t
+The second term = a n
+n p x
+n t
+òò
+n
+v s ds f x ( t ) dt =
+0 0
+n
+=
+ò
+0
+, and the first term is:
+n
+ò ò
+v s f x ( t ) dtds
+0
+s
+n
+ò
+v s ( s p x - n p x ) ds = v s s p x ds - a n n p x
+0
+Page 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+Hence result.
+n - 1
+å v
+Also a && x : n =
+(iii)
+a x : n =
+n - 1
+= 1⁄2 +
+k
+p x
+k = 0
+å ò
+k = 0
+k
+k + 1
+k
+n - 1
+å 1⁄2( v
+v s s p x ds »
+k
+k
+k = 0
+n - 1
+å v
+k
+k
+p x + v k + 1 k + 1 p x )
+p x + 1⁄2 v n n p x
+k = 1
+= - 1⁄2 +
+n - 1
+å v
+k
+k
+p x + 1⁄2 v n n p x
+k = 0
+= a && x : n - 1⁄2(1 - v n n p x )
+4
+(iv) a x = lim a x : n ¦ lim a && x : n - 1⁄2(1 - 0) = a && x - 1⁄2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\end{document}
