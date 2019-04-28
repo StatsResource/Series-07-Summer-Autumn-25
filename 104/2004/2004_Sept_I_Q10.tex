@@ -1,0 +1,207 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+104 S2004
+610
+A medium-sized UK pension scheme has carried out an investigation of the mortality
+of its pensioners over the period 2000 2002.
+\item  Explain why the crude rates will require graduation, and suggest with reasons
+an appropriate method of graduation in this case.
+
+\item  The data used to produce the crude rates, and the proposed graduated rates, are
+shown below.
+Age
+x Central
+Exposed to
+Risk
+E x c
+60 64
+65 69
+70 74
+75 79
+80 84
+85 89
+90 94
+95 99
+100+ 1,388.9
+1,188.8
+880.5
+841.6
+402.8
+123.9
+27.9
+10.0
+7.5
+Number
+of Deaths
+d x
+10
+17
+28
+34
+41
+19
+7
+3
+2
+Crude
+Force of
+Mortality
+x 1⁄2
+0.0072
+0.0143
+0.0318
+0.0404
+0.1018
+0.1533
+0.2509
+0.3000
+0.2666
+Graduated
+Force of
+Mortality
+x 1⁄2 Standardised
+Deviation
+z x
+0.0061
+0.0131
+0.0262
+0.0487
+0.0839
+0.1338
+0.1975
+0.2706
+0.3455 0.5249
+0.3615
+1.0266
+1.0912
+1.2394
+0.5949
+0.6346
+0.1787
+0.3673
+Test the proposed graduation for:
+(a)
+(b)
+overall goodness of fit; and
+bias
+
+\item 
+104 S2004
+Comment on the use of the graduated rates to value the benefits payable from
+the scheme.
+
+[Total 14]
+7
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+\item 
+Reasons why crude rates will require graduation:
+low data volumes at older ages
+graduation means
+data at nearby ages can be used to improve estimates
+overall low data volumes mean that crude rates are likely to be subject to
+relatively large sampling errors and therefore will not progress smoothly
+with age, as we assume that the underlying rates do
+Volume of data will be too small to attempt a direct graduation, ruling out use
+of parametric formula.
+Also, large sampling errors would make graphical graduation imprecise, and
+in any case computationally inefficient. So suggest we graduate via some
+simple relationship to a standard table, many of which exist based on large
+volumes of data relating to similar lives. This approach also allows us to
+compare our population with the population underlying the standard table.
+\item 
+H 0 : The crude rates come from a population in which the true underlying rates
+of mortality are the graduated rates.
+(a)
+Test for overall goodness of fit (Chi-squared)
+z i 2 ,
+The test statistic is X
+i
+which under H 0 has a
+2
+distribution.
+The degrees of freedom will be the number of age groups less some
+allowance for the method of graduation, so at most 9 in this case.
+The observed value of the test statistic
+z i 2 is 5.11.
+This is a one-sided test, so we wish to compare this to the upper 5%
+point of the 2 distribution.
+But 5.11 is below the upper 5% point for all degrees of freedom
+except 1.
+Hence we conclude there is insufficient evidence to reject H 0 .
+Page 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(b)
+September 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Test for Bias
+ALTERNATIVE 1
+Test statistic is P = number of age groups for which the graduated rate
+is below the crude rate = number of positive standardised deviations.
+Under H 0 P ~ Bin(9, 0.5)
+The observed value of P is 7.
+Pr(P >= 7) = 0.5 9 (1 + 9 + 9 * 8 / 2) = 0.0898
+This is a 2-sided test, so we would reject H 0 if this probability is below
+0.025.
+Since it is not, we conclude that we do not have significant evidence of
+bias in the graduation.
+ALTERNATIVE 2 (cumulative deviations)
+d x E x c x 1⁄2
+The test statistic is Z =
+E x c x 1⁄2
+Under H 0 , Z ~ N(0, 1)
+Observed value of Z is
+11 . 7192
+= 0.9592
+149 . 2808
+This is a two-sided test so we would reject H 0 if |Z| > 1.96
+Since it is not, we accept H 0 and conclude that we do not have
+significant evidence of bias.
+\item 
+Use of graduated rates to value benefits
+Areas for consideration:
+Do we expect the experience of 2000 2002 to be typical for the scheme as
+a whole?
+Is there any reason why rates might have been higher / lower (e.g. harsh
+winter?)
+These rates would be used to value benefits payable many years into the
+future.
+Mortality rates have fallen consistently in the past, so we should make
+Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+September 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+some allowance for future changes also. If we do not there is a danger that
+we will undervalue the benefits.
+\end{document}
