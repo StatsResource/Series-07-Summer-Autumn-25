@@ -1,0 +1,144 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%---  Question 6
+A life office issues a special 3 year term assurance policy to a man aged exactly 65.
+The benefit payable at the end of the year of death is \$10,000 if death occurs in the
+first year, \$15,000 if death occurs in the second year and \$30,000 if death occurs in
+the third year. Premiums of \$400 per year are payable annually in advance for 3 years
+or until earlier death. The random variable L is defined as the present value of the
+loss under this policy calculated at the date of issue, so that:
+L = present value of benefit outgo
+\item 
+present value of premium income
+Calculate all the possible values that L can take, and hence find the mean and
+standard deviation of L.
+
+The office issues an endowment assurance contract to an identical life; death benefits
+are the same as under the term assurance policy described above. In addition an
+endowment benefit of \$30,000 is payable on survival to the end of the 3 year term.
+Premiums of \$9,500 are payable annually in advance for three years or until earlier
+death. The loss under this policy is denoted L*.
+\item  Calculate the mean and standard deviation of L*. 
+\item  Comment on your results. 
+Basis: Mortality: AM92 Ultimate
+Interest: 3% per annum throughout
+Expenses are ignored
+[Total 14]
+104 A2004
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The relevant calculations are:
+Age at
+death Probability
+65
+66
+67
+>67 0.01424
+0.01571
+0.01729
+0.95275
+PV
+Benefits PV
+Premiums L L x Prob L 2 x Prob
+\$9,708.74
+\$14,138.94
+\$27,454.25
+\$0.00 \$400.00
+\$788.35
+\$1,165.39
+\$1,165.39 \$9,308.74
+\$13,350.59
+\$26,288.86
+\$1,165.39 \$132.58
+\$209.78
+\$454.54
+\$1,110.33 \$1,234,193
+\$2,800,651
+\$11,949,237
+\$1,293,963
+\$313.43 \$17,278,044
+Therefore E(L) = \$313
+and
+Var(L) = 17,278, 044 313.43 2
+= 17,179,806
+so the standard deviation of L is \$4,145.
+(ii)
+The relevant calculations are:
+Age at
+death Probability
+65
+66
+67
+>67 0.01424
+0.01571
+0.01729
+0.95275
+PV
+Benefits PV
+Premiums L* (L*) x Prob (L*) 2 x Prob
+\$9,708.74
+\$14,138.94
+\$27,454.25
+\$27,454.25 \$9,500.00
+\$18,723.30
+\$27,677.96
+\$27,677.96 \$208.74
+\$4,584.36
+\$223.71
+\$223.71 \$2.97
+\$72.03
+\$3.87
+\$213.14 \$621
+\$330,230
+\$865
+\$47,683
+\$286.07 \$379,399
+So E(L*) = \$286
+and
+Var(L*) = 379, 399 286.07 2
+= 297,563
+so the standard deviation of L* is \$545.
+(iii)
+Page 8
+Although the means are more or less unchanged, the introduction of the
+endowment element has greatly reduced the variance of the loss. This is
+because there is much more certainty over the amount of the benefit that will
+be paid
+only the timing remains uncertain. %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
