@@ -1,0 +1,97 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%% ---- 104 A2001—24
+A life insurance company has investigated the recent mortality experience of its
+male term assurance policy holders by estimating the initial rate of mortality q x .
+The crude estimates q ˆ x , of these rates will be graduated by reference to a
+standard mortality table for male permanent assurance policy holders with rates
+q s so that the graduated rates q o are given by
+x
+x
+q o x = a + bq x s
+(A)
+where a and b are constants. The estimates of a and b will be determined by
+minimising
+å w ( q ˆ
+x
+x
+x
+− a − bq x s
+)
+2
+(B)
+where w x is a suitably chosen weighting function.
+5
+\item  Describe how the suitability of the formula (A) could be investigated.
+%%---  Question 
+\item  Explain why it is important to use the weighting function, w x , in
+formula (B). Determine an expression for a suitable choice of function for
+w x .
+
+\item  
+Explain how the smoothness of the graduated rates, q o x , is ensured.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4
+(i) Plot q ˆ x against q x s and look for an approximate straight line fit.
+(ii) At each age there will be a different sample size/exposed to risk, E x . This
+will usually be largest at ages where many term assurances are sold e.g.
+25 to 50 and smaller at other ages.
+The estimation procedure should pay more attention to ages where there
+are lots of data. These ages should have a greater influence on the choice
+of a and b than other ages.
+Other relevant comments also received marks.
+So weights w x α E x
+Suitable choice is w x = é ë Var ( q ˆ x ) ù û
+− 1
+= E x
+q x (1 − q x )
+; E x
+as q x ; 10 −2
+q x
+These weights can be estimated by
+E 2
+E x
+= x
+q ˆ x
+\theta x
+Page 5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+(iii)
+The graduated rates q o x are a linear function of the rates in the standard
+table q x s . The standard table rates will already be smooth.
+Smoothness is based on the size of the third differences of the graduated
+rates ∆ 3 q o , which because the relationship is linear will be equal to
+x
+b∆ 3 q x s . ∆ 3 q x s will already be acceptably small because the standard table
+rates will already be smooth.
