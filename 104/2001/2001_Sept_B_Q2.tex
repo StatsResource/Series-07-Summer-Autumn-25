@@ -1,0 +1,157 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+2 A total of N independent lives are observed during a finite period of observation.
+Between the ages of x and x + 1, x + a i is the age at which observation of the ith
+life starts, and x + t i is the age at which observation of the ith life ceases. For
+each life, an indicator variable D i indicates whether life i is observed to die.
+ì 1 if life i dies at x + t i
+D i = í
+î 0 otherwise
+\item 
+3
+i = 1, 2, ... N
+If the force of mortality at age x + t, \mu x + t = \mu (0 \leq  t < 1), derive the
+maximum likelihood estimate of \mu.
+
+\item  State the asymptotic sampling distribution of the maximum likelihood
+estimator, \hat{\mu} .
+
+[Total 8]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+2 (i)
+If the ith life dies the contribution to the likelihood is
+t i - a i
+p x + a i m x + t i
+= e -m ( t i - a i ) m with assumption of constant force, m
+If the ith life survives to x + t i the contribution to the likelihood is
+t i - a i
+p x + a i = e -m ( t i - a i ) with assumption of constant force, m.
+So the overall contribution for the ith life can be written
+e -m ( t i - a i ) m d i
+where d i = 1 for a death
+d i = 0 for a survivor
+So for N independent lives we have:
+L
+=
+i = N
+Õ e
+-m ( t i - a i )
+m d i
+i = 1
+i = N
+= e
+-m å ( t i - a i )
+i = 1
+Then \log_{e}L = - m
+i = N
+å ( t
+i
+i = N
+å d i
+m i = 1
+- a i ) +
+i = 1
+i = N
+å d
+i
+\log_{e}m
+i = 1
+i = N
+i = N
+¶ \log_{e}L
+So
+= -
+( t i - a i ) +
+¶m
+i = 1
+å
+å d
+i
+i = 1
+m
+And the maximum likelihood estimator is
+i = N
+å d
+i
+m̂ =
+i = N
+i = 1
+å ( t
+i
+i = 1
+Page 2
+- a i ) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+i = N
+Now
+(ii)
+å
+d i
+¶ \log_{e}L
+i = 1
+= -
+< 0 so solution is a maximum
+m 2
+¶m 2
+2
+Asymptotic Sampling Variance is given by
+-
+1
+é ¶ 2 \log_{e}L ù
+E ê
+ú
+2
+ë ¶m
+û
+=
+m 2
+E [ D ]
+which can be estimated by
+m 2
+= i = N
+m ( t i - a i )
+å
+i = 1
+=
+m
+i = N
+å ( t
+i
+- a i )
+i = 1
+æ
+So m̂ ~ N ç m ,
+ç
+è
