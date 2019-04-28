@@ -1,0 +1,199 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[10]
+[Total 11]8
+\item  If K_x is a random variable representing the curtate future lifetime of a life
+now aged x, and W is a random variable which represents the present
+value of the benefits payable from a temporary immediate annuity with a
+term of 20 years sold to a life aged 40, write down an expression for W in
+
+terms of K_x .
+\item  Using as a basis the A67–70 Ultimate Mortality Table and an effective
+rate of interest of 5% p.a. calculate
+\item 
+(a) P[W < E[W]]
+(b) Using suitable diagrams or otherwise, explain why the solution to
+(a) is not 0.5.
+
+Show that the variance of W is
+(
+(
+′
+441 A 40:21
+− A 40:21
+)
+2
+)
+State the rates of interest that should be used to evaluate A ′ and A
+respectively.
+
+[Total 15]
+%% ---- 104 A2001—5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Page 9 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+8
+(i)
+W = a min( K
+or
+W = a K
+40 ,20)
+40
+= a 20
+(ii)
+(a)
+K 40 ≥ 0
+K 40 = 0, 1, 2, ...20
+K 40 > 20
+E[W] = a 40:20 A67/70 ultimate 5%
+= a && 40:20 +
+l 60 v 20
+− 1
+l 40
+= 12.760 +
+30,039.787 (1.05) − 20
+− 1
+33,542.311
+= 12.0975
+5% tables give: a 19 = 12.0853 a 20 = 12.4622
+So W < 12.0975 if life dies in (40, 60)
+= 1 −
+l 60
+30,039.787
+= 1 −
+33,542.311
+l 40
+= 1 − 0.89558 = 0.10442
+(b)
+The probability function of the discrete random variable W is very
+skew so P[W < E[W]] = the very small “left hand tail area”.
+f W (w)
+E[W]
+a 1 a 2
+Page 10
+a 18 a 19 a 20
+W %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
+(iii)
+ï a  K + 1 − 1 K 40 = 0,1, 2, ... 20
+Now W = í 40
+K 40 > 20
+ï
+î a  21 − 1
+ì 1 − v K 40 + 1
+− 1 K 40 = 0,1, 2, ...19, 20
+ï
+ï
+d
+= í
+21
+ï 1 − v − 1
+K 40 > 20
+ï
+î d
+ì 1
+− 1 −
+ï
+ï d
+= í
+ï 1 − 1 −
+ï
+î d
+1 K 40 + 1
+v
+d
+1 21
+v
+d
+K 40 > 20
+1
+Var(Y) where
+d 2
+So Var(W) =
+ï v K 40 + 1
+Y = í 21
+ï
+î v
+Now E[Y] =
+K 40 = 0,1, 2, ...19, 20
+20
+å
+K 40 = 0,1, 2, ...,19, 20
+K 40 > 20
+k =∞
+v k + 1 k  q 40 +
+k = 0
+å v
+21
+k  q 40
+k = 21
+= A 40:21
+Where A is determined at 5% p.a.
+E[Y 2 ] =
+20
+å ( v
+k + 1 2
+) k  q 40 +
+k = 0
+k =∞
+å ( v
+21 2
+) k  q 40
+k = 21
+′
+= A 40:21
+Where A ′ is determined at (1.05) 2 − 1 = 10.25% p.a.
+æ 1.05 ö
+So Var(W) = ç
+÷
+è 0.05 ø
+2
+{ A ′
+40:21
+(
+2
+− A 40:21
+2
+′
+= 441 A 40:21
+− A 40:21
+0.05
+} where d = 1.05
+)
+The result can be derived in a similar way using
+a min( K
+40 ,20)
+= a  min( K
+40 + 1,
+21)
+− 1
+Page 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — April 2001 — Examiners’ Report
