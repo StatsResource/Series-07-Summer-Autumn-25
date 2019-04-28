@@ -1,0 +1,182 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%---  Question 5
+The following diagram represents a 3-state continuous-time Markov Model, in
+which states 1 and 2 represent the two stages of a terminal disease and
+transitions from state 2 to state 1 are not possible.
+\sigma  x + t
+1: Healthy
+2: Ill
+v x + t
+\mu x + t
+3: Dead
+The symbols \sigma  x+t , \mu x+t and v x+t represent the forces of transition. The probability
+t
+p x ab is defined as
+t
+p x ab = P(S(t) = bS(0) = a),
+where S(t) is the state of the life at time t, and x is the age at time 0.
+\item  For a = 1, 2 and 3, write down expressions for t p x aa in terms of the forces of
+transition.
+
+\item  Determine an expression for t p x 23 in terms of the forces of transition.
+\item  Derive, from first principles, the Kolmogorov forward differential equation
+12
+for t p 12
+x , and state the relevant initial condition, i.e. the value of 0 p x . 
+\item  If the forces of transition are assumed constant, show that:
+t
+p 12
+x =
+\sigma 
+e − ( \sigma +\mu ) t − e − vt
+v −\sigma −\mu
+(
+)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i)
+t æ
+p 11
+x = exp ç -
+è
+t p x 22 = exp æ ç -
+è
+t
+(ii)
+t
+ò
+t
+( s x + s + m x + s ) ds ö ÷ ;
+0
+ø
+ò
+t
+0
+v x + s ds ö ÷ ;
+ø
+p x 33 = 1.
+p x 23 = 1 - t p x 22 = 1 - exp æ ç -
+è
+ò
+t
+0
+v x + s . ds ö ÷
+ø
+Other expressions are possible.
+(iii)
+12
+=
+t + h p x
+3
+å
+k = 1
+t
+p 1 x k h p x k + 2 t with Markov assumption
+12
+12
+22
+= t p 11
+x h p x + t + t p x h p x + t model constraints
+We know that
+h p 12
+= hs x+t + o(h)
+x + t definition
+h p x 23 + t = hv x+t + o(h) definition
+h p x 21 + t + h p x 22 + t + h p x 23 + t = 1 law of total probability
+Substituting and using model constraints we obtain
+t + h
+11
+12
+p 12
+x = t p x ( h s x + t + o ( h )) + t p x (1 - hv x + t + o ( h ))
+Page 5 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
+Then
+Lim
+12
+p 12
+¶
+x - t p x
+=
+h
+¶ t
+t + h
+h ® 0
+0
+(iv)
+(
+t
+)
+12
+p 12
+= s x + t t p 11
+x
+x - v x + t t p x
+p 12
+x = 0
+Differential equation is
+Hence
+(
+t
+vt
+p 12
+x e
+(
+t
+p 12
+x
+) ¢ + v
+12
+t p x
+= s exp(-(s + m)t)
+) ¢ = s × exp((v - s - m)t)
+ù
+s
+- vt é
+exp{( v - s - m ) t } + c ú ,
+Þ t p 12
+x = e
+ê
+ë v - s - m
+û
+and 0 p 12
+x = 0 Þ c =
+-s
+. Hence result.
+v -s-m
+[Direct verification is a satisfactory alternative, but the solution must
+verify also that 0 p 12
+x = 0.]
