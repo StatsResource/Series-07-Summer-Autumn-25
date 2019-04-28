@@ -1,0 +1,624 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%---  Question 9
+An investigation into the mortality of young adult males in a developed country has
+been undertaken. The table below shows an extract from the results.
+\item 
+Age Exposed-to-risk Observed deaths Standardised deviation
+z x
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27 34,000
+33,000
+29,500
+30,000
+25,500
+24,000
+17,000
+23,500
+18,000
+14,000 40
+35
+27
+26
+22
+19
+13
+20
+12
+11 1.9159
+1.4541
+0.4460
+0.0394
+0.1469
+0.5106
+0.5067
+0.0467
+0.8437
+0.2609
+Someone suggests to you that the underlying mortality of these young men is
+the same as that in English Life Table 15 (Males) and that you should test this
+using the chi-squared test.
+(a)
+(b)
+(c)
+(d)
+Define the standardised deviation.
+State the null hypothesis to be tested.
+State the test statistic and its distribution under the null hypothesis.
+Carry out the test.
+
+\item 
+(a) Describe two possible differences between the underlying mortality of
+the men in the sample and English Life Table 15 (Males) which the
+chi-squared test might fail to detect.
+(b) For each of the differences you describe, carry out a different test to
+see if the observed experience is significantly different from that of
+English Life Table 15 (Males). For each test you carry out, state
+explicitly what the test is designed to detect, and state your
+conclusions.
+
+\item  Comment on your results in \item  and \item  above.
+\item  Explain how you would graduate the observed experience by reference to a
+standard mortality table.
+
+[Total 24]
+END OF PAPER
+104 A2004
+8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+Page 13 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+(a)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+If the observed number of deaths at age x is x , the exposed-to-risk at
+age x is E x , and the mortality rate in English Life Table 15 (Males) at
+age x is q x , then the standardised deviation in age-group x, z x , is given
+by the formula
+z x =
+E x q x
+x
+,
+E x q x
+using the approximation E x q x
+E x q x (1 q x ) ,
+Alternatively, if the observed number of deaths at age x is
+x ,
+the
+central exposed-to-risk at age x is E x c , and the force of mortality in
+English Life Table 15 (Males) at age x is x 0.5 , then the standardised
+deviation in age-group x, z x , is given by the formula
+x
+z x =
+E x c
+x 0.5
+c
+E x x 0.5
+.
+(b) The null hypothesis is that the underlying mortality of the lives in the
+investigation is that of English Life Table 15 (Males).
+(c) The test statistic is
+z x 2
+2
+m ,
+x
+where m is the number of age groups (m = 10 in our case), because we
+are comparing an experience with a standard table.
+(d)
+The calculations are shown in the table below
+Age x E
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+Sums 34,000
+33,000
+29,500
+30,000
+25,500
+24,000
+17,000
+23,500
+18,000
+14,000
+x
+40
+35
+27
+26
+22
+19
+13
+20
+12
+11
+q x E x q x z x z x 2
+0.00087
+0.00083
+0.00084
+0.00086
+0.00089
+0.00089
+0.00088
+0.00086
+0.00085
+0.00085 29.58
+27.39
+24.78
+25.80
+22.70
+21.36
+14.96
+20.21
+15.30
+11.90
+213.98 1.9159
+1.4541
+0.4460
+0.0394
+0.1469
+0.5106
+0.5067
+0.0467
+0.8437
+0.2609
+1.5399 3.6707
+2.1144
+0.1989
+0.0016
+0.0216
+0.2607
+0.2567
+0.0022
+0.7118
+0.0681
+7.3067
+z x 2 = 7.3067 .
+Using the data in the table above,
+x
+Page 14 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2
+The critical value of the 10
+distribution at the 5% level is 18.31,
+which is much greater than the calculated value.
+So we accept the null hypothesis.
+On the basis of this test, we conclude that the underlying mortality of
+the lives in our investigation is represented by English Life Table 15
+(Males), and that the suggestion seems to be true.
+(ii)
+(a)
+(1) There could be a few large deviations offset by a lot of very small
+deviations. The chi-squared test will be satisfied, but the data do
+not satisfy the distributional assumptions which underlie it.
+(2) The graduation might be biased above or below the data by a
+smallish amount at all ages.
+(3) Even if the graduation is not biased as a whole, there could be
+significant groups of consecutive ages (runs or clumps) over
+which it is biased up or down.
+Full marks were available for any two of these.
+(b)
+The appropriate tests are as follows.
+For difference (1) (few large deviations): standardised deviations test.
+For difference (2) (overall bias): signs test; cumulative deviations test
+over whole age range.
+For difference (3) (runs or clumps): grouping of signs (Stevens ) test;
+serial correlation test.
+Candidates were expected to perform one test for each of the
+difference they identified in part (a).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\newpage
+STANDARDISED DEVIATIONS TEST
+This tests for the possibility that there are a small number of age
+groups with large differences between the mortality rates in the
+investigation and the standard table.
+The z x s comprise m independent samples from a Normal (0,1)
+distribution. We can compare the expected and actual number of z x in
+the following intervals
+Interval
+Expected number
+Actual number
+(- , -3)
+0
+0
+(-3, -2)
+0.2
+0
+(-2, -1)
+1.4
+0
+(-1, 0)
+3.4
+6
+(0, 1)
+3.4
+2
+(1, 2)
+1.4
+2
+(2, 3)
+0.2
+0
+(3, )
+0
+0
+Therefore under the null hypothesis we should expect fewer than 1 in
+20 to be > 2 in absolute magnitude.
+In this case none of the z x s exceeds 2 in absolute value.
+Page 15 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+So we accept the null hypothesis.
+SIGNS TEST
+This tests for the possibility of the mortality rates in the investigation
+being systematically lower or higher than those in the standard table.
+Let P be the number of z x s that are positive.
+Then under the null hypothesis, P ~ Binomial(10, 0.5).
+We have 4 positive signs. The probability of getting 4 or fewer
+positive signs if the null hypothesis is true is
+10
+10
+1
+10
+1
+10
+4 2
+3 2
+10! 1
+10! 1
+=
+10
+4!6! 2
+3!7! 2 10
+= (210 120 45 10
+10
+1
+10
+10
+1
+10
+2 2
+1 2
+10! 1
+10! 1
+10
+2!8! 2
+1!9! 2 10
+1)0.0009765625
+10
+1
+0 2 10
+1
+2 10
+= 0.37695
+[Alternatively, candidates could just evaluate the probability of getting
+exactly 4 positive deviations, which is 0.205].
+This is greater than 0.025 (2-tailed test)
+We accept the null hypothesis.
+CUMULATIVE DEVIATIONS TEST
+When using the whole age range, this tests for the possibility of the
+mortality rates in the investigation being systematically lower or higher
+than those in the standard table.
+Under the null hypothesis,
+m
+(
+x
+E x q x s )
+x 1
+m
+Normal(0,1)
+E x q x s
+x 1
+Using the data in the table, we have
+Page 16 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+m
+(
+x
+E x q x s )
+x 1
+m
+April 2004
+=
+E x q x s
+11.025
+213.98
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+0.75369
+x 1
+Since both positive and negative cumulative deviations are of interest
+we use a two-tailed test.
+Since |0.75369|<1.96,
+we accept the null hypothesis.
+GROUPING OF SIGNS TEST
+This tests for runs of deviations of the same sign, that is for subsections
+of the age range for which the mortality rates of lives in the
+investigation are systematically lower or higher than the rates in the
+standard table.
+Let G be the number of groups of positive z x s, n 1 be the number of
+positive z x s and n 2 be the number of negative z x s.
+In our case G = 1, n 1 = 4 and n 2 = 6.
+Then the probability of getting 1 group of positive signs is
+3
+7
+7!
+0 1
+7
+= 1!6! =
+= 0.0333
+10! 210
+10
+4!6!
+4
+Using a one-tailed test, since only small values of G are of interest, we
+find that 0.0333 < 0.05.
+We reject the null hypothesis.
+SERIAL CORRELATIONS TEST
+This tests for runs of deviations of the same sign, that is for subsections
+of the age range for which the mortality rates of lives in the
+investigation are systematically lower or higher than the rates in the
+standard table.
+The correlation coefficient at lag 1 is
+Page 17 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+m 1
+( z x
+r 1 =
+x 1
+m 1
+April 2004
+z * )( z x
+z * )
+( z x
+1
+z ** )
+.
+m 1
+x 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+( z x
+1
+z ** )
+x 1
+The calculations are shown in the table below.
+z x
+Age
+x
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+z x
+1.9159
+1.4541
+0.4460
+0.0394
+0.1469
+0.5106
+0.5067
+0.0467
+0.8437
+0.2609
+z *
+z x
+1.7158
+1.2540
+0.2459
+0.1607
+0.3470
+0.7107
+0.7068
+0.2468
+1.0438
+0.4610
+z **
+1.4959
+0.4878
+0.0812
+-0.1051
+-0.4688
+-0.4649
+-0.0049
+-0.8019
+-0.2191
+z * = 0.2001
+z ** =
+0.0418
+Age
+x
+18
+19
+20
+21
+22
+23
+24
+25
+26
+Total
+Page 18
+( z x
+z * ) 2
+( z x
+1
+z ** ) 2
+( z x
+z * )( z x
+1
+2.9440
+1.5725
+0.0605
+0.0258
+0.1204
+0.5051
+0.4996
+0.0609
+1.0895 2.2377
+0.2379
+0.0066
+0.0111
+0.2198
+0.2162
+0.0000
+0.6431
+0.0480 2.5666
+0.6117
+0.0200
+0.0169
+0.1627
+0.3304
+0.0035
+0.1979
+0.2287
+6.8783 3.6203 4.1384
+z ** ) %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Hence
+m 1
+( z x
+r 1 =
+x 1
+m 1
+( z x
+x 1
+z * )( z x
+z * )
+z ** )
+1
+=
+m 1
+( z x
+1
+z ** )
+4.1383
+(6.8783)(3.6203)
+= 0.8293.
+x 1
+Now r 1 m ~ Normal(0, 1).
+Since m = 10, we have r 1 m = 3.1623 x 0.8293 = 2.6225.
+Using a one-tailed test (since we are only interested in positive serial
+correlations), the probability of getting a value as high as 2.6225 is
+(1 0.9957) = 0.0043
+Therefore we have evidence to reject the null hypothesis at the 5%
+level.
+(iii)
+The results of the tests suggest that the underlying mortality of the lives in the
+investigation is, overall, not significantly different from ELT 15 (Males).
+There are no individual ages with suspiciously large deviations.
+Neither does there appear to be any overall bias.
+However, although, overall, the experience fits ELT 15 well, there is a
+problem with the shape of the mortality curve. At younger ages the observed
+mortality is systematically higher than that of ELT 15 (Males), whereas at all
+ages above 21 years it is lower.
+The serial correlations and grouping of signs (Stevens ) tests, which are
+designed to pick up this kind of difference, thus lead us to reject the null
+hypothesis that the underlying mortality is the same as ELT 15 (Males).
+It seems that the observed experience has a much more pronounced accident
+hump in it than ELT 15 (Males).
+Therefore, ELT 15 (Males) is probably not a good standard table to use for
+graduating this experience.
+In fact, ELT 14 (Males), which is based on 1980-82 data, might be better,
+since the accident hump is more obvious in ELT 14 than ELT 15.
+Page 19 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv)
+April 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Choose an appropriate standard table.
+Seek a simple function relating the observed experience to that of the standard
+table.
+o
+o
+If, for example, q x and
+s
+x
+x refer
+to the observed mortality at age x, and q x s and
+refer to the corresponding mortality in the standard table, we might choose
+o
+q x = a bq x s ,
+or
+o
+x
+=
+s
+x
+k
+where a, b and k are parameters.
+o
+To find a suitable function we can plot q x against q x s to check for a linear
+o
+log(1 q x ) against log(1 q x s ) to check for a
+relationship in the q x s , or
+linear relationship in the
+x s.
+If a simple function cannot be found, then a different standard table should be
+chosen and the procedure repeated.
+Once a possible relationship has been identified, the best-fitting parameters
+may be found using maximum likelihood or weighted least squares methods.
+In weighted least squares, natural weights would be the exposed-to-risk at
+o
+each age, as we wish to give more emphasis to those ages where the q x s or
+o
+x s
+are based on abundant data.
+The resulting graduation needs to be tested for goodness-of-fit, but not for
+smoothness, since the standard table should already be smooth.
+If the graduation fails the goodness-of-fit tests, then either a new function or a
+new standard table should be sought and the graduation repeated.
+END OF REPORT
+Page 20
+\end{document}
