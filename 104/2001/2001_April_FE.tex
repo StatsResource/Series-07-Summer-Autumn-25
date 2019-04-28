@@ -1,0 +1,79 @@
+\documentclass[a4paper,1pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{.0cm}{.5cm}{16 cm}{cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%---  Question 6
+A mortality investigation has been carried out over the three calendar years;
+1997, 1998 and 1999.
+Deaths during the Period of Investigation, \theta x have been classified by age x at the
+date of death, where
+x = calendar year of death − calendar year of birth
+\item  State the rate year implied by this classification, and give the age range of
+the lives at the beginning of the rate year.
+
+\item  Censuses of the numbers alive on 1 July 1997, 1 July 1998 and 1 July
+1999 have been tabulated and denoted by P x (1⁄2), P x (11⁄2) and P x (21⁄2)
+respectively, where x is the age determined at the date of each census.
+The force of mortality at age x + f is to be estimated using the formula
+\hat{\mu} x + f =
+7
+\theta x
+P x (1⁄2) + P x (11⁄2) + P x (21⁄2)
+(a) Determine the age definition x in P x (t), t = 1⁄2, 11⁄2, 21⁄2 if this
+formula is correct.
+(b) Determine the value of f stating clearly all the assumptions you
+have made.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+6
+(i)
+x = CY of death − CY of birth
+= age, x, on birthday in CY of death
+= age next, x, on 1 January in CY of death
+= age next, x, on 1 January before date of death
+So Calendar Year Rate Interval starting, for lives classified x, on
+1 January on which the life is aged x next birthday.
+Age range at start of calendar year x − 1 to x.
+(ii)
+(a)
+P x (t) census at t of those x next on previous 1 January would
+correspond to the classification of deaths
+but ages in the censuses used are ages on 1 July
+So (x − 1, x) on 1 January
+is (x − 1⁄2, x + 1⁄2) on 1 July = date of census
+So required x in P x (1⁄2), P x (11⁄2), P x (21⁄2) is x nearest birthday at date
+of census
+(b)
+Need Birthdays uniform over calendar year
+to get average age at start of rate interval, x − 1⁄2
+Need force constant over (x − 1⁄2, x + 1⁄2)
+So \hat{\mu} x + f will be x + 0, f = 0
