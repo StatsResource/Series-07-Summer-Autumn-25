@@ -1,0 +1,80 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+8
+On 1 January 2002 a pension scheme has 100 members aged exactly 75, each in
+receipt of an annual pension of \$10,000 payable in arrears. In addition, the scheme
+pays a lump sum of \$2,000 on the death of a member, the lump sum being payable at
+the end of the year of death. No further premiums are payable in respect of these
+benefits.
+Of these members, 7 die during 2002. Calculate the mortality profit or loss to the
+scheme for 2002.
+Basis: Mortality: PMA92C20
+Interest: 4% per annum throughout
+Expenses are ignored
+104 S2004
+5
+[10]
+
+\newpage
+\begin{itemize}
+\item We need to calculate the reserve V needed for each life who survives to age 76. This
+is just the value of the future benefits.
+The value of the survival benefits is
+\$10, 000 a 76 = \$10, 000 (9.049 1)
+= \$80, 490
+The value of the death benefits can be calculated via premium conversion:
+\$2, 000 A 76 = \$2, 000(1 da 76 )
+= \$2, 000(1 0.04 /1.04 9.049)
+= \$1,304
+\item The total reserve required is therefore \$80,490 + \$1,304 = \$81,794.
+The death strain at risk is equal to
+S - (V t + R)
+\$2,000 - (\$81,794 + \$10,000) = -\$89,794
+The expected number of deaths during 2002 is 100 x q 75
+= 100 x 0.028121 = 2.8121
+The mortality profit is therefore equal to
+Expected death strain - Actual death strain
+= (Expected deaths - actual deaths) x DSAR
+= (2.8121 - 7) x (-\$89,794)
+= \$376,048.
+\item An alternative method provided by a number of candidates used
+Mortality profit =
+reserve at beginning of year plus interest
+- actual payments on death and in pensions
+- end of year reserves
+\end{itemize}
+This method was given full credit.
+Page 12 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
