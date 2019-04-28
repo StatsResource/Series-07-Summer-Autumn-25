@@ -1,0 +1,107 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 8]7
+A life insurance company is investigating the mortality of a group of policyholders.
+The possible definitions of age by which deaths may be grouped are as follows:
+(a)
+(b)
+(c)
+age at birthday in calendar year of death
+age last birthday at entry plus curtate duration
+age next birthday at policy anniversary in calendar year of death
+The force of mortality for lives labelled aged x is to be estimated as
+x
+=
+number of deaths aged x
+Central exposed to risk for age x
+x estimates
+the force of mortality
+x f
+.
+For each of the possible age definitions, state the type of rate interval and determine
+the value of f. State any assumptions that you make.
+[10]
+%%%%%%%%%%%%%%%%%%%%
+x + f is the average age of the lives half-way through the rate interval.
+(a)
+Age changes on 1 January each year, so calendar year rate interval starting on
+1 January.
+The age range at the start of the interval is (x - 1, x).
+Assuming birthdays are uniformly distributed throughout the year,
+1
+the average age at the start of the interval is x
+2
+1 1
+So, average age half-way through interval is x
+x
+2 2
+So, f = 0
+(b)
+Age x = [Age last birthday at entry] + [curtate duration]
+Age changes on a policy anniversary, so policy year rate interval.
+The age range at the start of the interval is (x, x + 1).
+Assuming birthdays are uniformly distributed throughout the policy year,
+1
+the average age at the start of the interval is x
+2
+1 1
+So, average age half-way through interval is x
+x 1
+2 2
+So, f = 1
+(c)
+Age x = Age next birthday at anniversary in calendar year of death
+Age changes at start of calendar year, so calendar year rate interval starting on
+1 January.
+The age range at the start of the interval is (x - 2, x).
+Assuming birthdays and policy anniversaries are uniformly distributed
+throughout the calendar year, the average age at the start of the interval is x 1
+1
+1
+So, average age half-way through interval is x 1
+x
+2
+2
+Page 11 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+So, f
+8
+September 2004
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+2
+
+
+\end{document}
