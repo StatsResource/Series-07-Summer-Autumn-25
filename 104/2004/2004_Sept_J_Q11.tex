@@ -1,0 +1,292 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%---  Question 11
+In a certain country, people finance their retirement by purchasing deferred annuities
+and pure endowment policies. According to the law in this country, these policies
+must both be purchased on the birthday nearest age a years, where a is the age at
+which a person s complete expectation of life is equal to his or her current age: e a a .
+The value of a is calculated, for each person, on the basis of a set of life tables
+published for different classes of life by the Government Actuary.
+Both types of policy are funded by a single premium paid by the life on the birthday
+nearest age a. The deferred annuity pays a level weekly amount from the
+policyholder s 65th birthday until the birthday nearest the age 2a, or until death (if
+earlier). If the policyholder survives to the birthday nearest age 2a the pure
+endowment provides a sum assured at that time.
+\item  The Government Actuary publishes life tables for different classes of lives.
+List some relevant factors the Government Actuary might wish to use to
+classify lives for this purpose.
+
+\item  The mortality experience of one class of lives in this country is the same as
+that described in AM92 Ultimate. Show that at age 39.778 the complete
+expectation of life is 39.778 (to 3 decimal places) and that, therefore, the
+birthday nearest age a is the 40 th birthday. You should assume a uniform
+distribution of deaths within each year of age and may use the approximation
+e x = e x 0.5.
+
+\item  A member of this class of lives who is aged exactly 40 wishes to purchase one
+of each of these policies. The weekly annuity payable will be a sum
+equivalent to \$10,000 per year from the 65 th birthday to the birthday nearest
+exact age 2a. The pure endowment lump sum will be \$100,000 on survival to
+the birthday nearest exact age 2a. Calculate the total premium.
+Basis: Mortality: AM92 Ultimate
+Interest: 4% per annum throughout
+Expenses are ignored
+
+\item 
+Discuss the factors that companies selling these annuities and pure
+endowments might wish to take into account when pricing them.
+END OF PAPER
+104 S2004
+8
+
+[Total 18]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+11
+(i) Sex
+Smoker/non-smoker status
+Occupation
+Known impairments
+Geographical location
+(ii) ALTERNATIVE 1
+Using AM92, we find that e 39
+39 and e 40
+40
+so 39 < a < 40.
+If
+e a
+a , then
+l x dx
+a
+a
+. (*)
+l a
+Assuming a uniform distribution of deaths (UDD) between ages 39 and 40,
+then
+l a l 39 ( a 39) d 39
+So that, substituting into (*) we obtain
+l x dx
+a
+a
+(**)
+l 39 ( a 39) d 39
+To evaluate l x dx , note that
+a
+40
+l x dx
+a
+40
+l x dx
+a
+l x dx
+40
+l x dx e 40 l 40 ,
+a
+and that, assuming UDD,
+40
+l x dx
+a
+40 a
+( l a l 40 ) e 40 l 40
+2
+w
+Therefore, substituting for
+l x dx in (**) we obtain
+a
+Page 16Subject 104 (Survival Models)
+September 2004
+Examiners Report
+40 a
+( l 39 ( a 39) d 39 l 40 ) e 40 l 40
+2
+a =
+l 39 ( a 39) d 39
+From the tables, e 40 = 39.064, so using the approximation given e 40 = 39.064
++ 0.5 = 39.564. Inserting this, the tabulated values for l 39 , l 40 and d 39 and the
+value 39.778 for a into the equation, the right hand side becomes:
+40 a
+(9,864.8688 (8.5824)(0.778) 9,856.2863) (39.564)(9,856.2863)
+2
+9,864.8688 (0.778)(8.5824)
+0.222
+(9,858.1917 9,856.2863) 389,954.1112
+= 2
+9,858.1917
+= 39.778 (to 3 decimal places)
+ALTERNATIVE 2
+Using AM92, we find that e 39
+39 and e 40
+40
+so 39 < a < 40.
+To evaluate e x t (0
+t
+1) assuming UDD between exact ages
+x and x+1
+consider that e x t is a weighted average of the complete expectations of life of
+those who survive to exact age x+1 and those who die between x+t and exact
+age x+1.
+The proportion of those alive at age x+t who survive to
+1 t p x t .
+exact age x+1 is
+o
+These lives will have a complete expectation of life equal to 1 t e x 1 .
+The proportion of those alive at age x+t who die before exact age x+1 is
+1- 1 t p x t .
+1
+These lives will live, on average, 1 t more years.
+2
+Therefore
+o
+e x
+t
+1
+1 t 1
+2
+o
+1 t
+p x
+t
+1 t e x
+1 1 t
+p x t . (*)
+Page 17Subject 104 (Survival Models)
+September 2004
+Examiners Report
+In our case, we have t = 0.778, and x = 39. From the tables, e 40 = 39.064,
+so using the approximation given, e 40 = 39.064 + 0.5 = 39.564.
+Note also that under UDD,
+1 t
+p x
+1
+t
+1 t
+q x
+t
+1
+(1 t ) q x
+1 tq x
+1 q x
+.
+1 tq x
+From the tables, q 39 = 0.00087. Therefore
+1 0.00087
+0.99981
+1 t p x t =
+1 (0.00087)(0.778)
+Substituting into (*) above, therefore, produces
+o
+e 39.778
+=
+1
+1 0.778 (1 0.99981)
+2
+1 0.778 39.564 (0.99981)
+1
+(0.222)(0.00019) (39.786)(0.99981)
+2
+= 39.778 (to 3 d.p.)
+Therefore we have shown that a = 0.778.
+(iii)
+In this case, 2a = 79.556, so the birthday nearest to this age is the 80 th .
+An annuity paid weekly can be treated as being paid continuously, so the
+premium for the annuity, P a , is given by the equation
+P a 10, 000( a 40:40 a 40:25 )
+Evaluation proceeds as follows: for the first term we have
+a 40:40 a 40:40 0.5(1 40 40 p 40 )
+a 40
+D 80
+a 80 0.5(1
+D 40
+40 l 80
+l 40
+)
+and, from the AM92 tables this is evaluated as
+228.48
+5266.4604
+20.005
+(6.818) 0.5 1 (0.20829)
+2052.96
+9856.2863
+20.005 (0.111293)(6.818) 0.5[1 (0.20829)(0.534325)]
+= 20.005 0.75880 0.44435
+= 18.80185.
+For the second term we have
+a 40:25
+Page 18
+a 40:25
+0.5(1
+25 l 65
+l 40
+) .Subject 104 (Survival Models)
+September 2004
+Examiners Report
+From tables, this is evaluated as
+8821.2612
+)
+9856.2863
+15.884 0.5[1 (0.37512)(0.89499)]
+15.884 0.5(1 0.37512
+15.884 0.33214
+15.5519
+Therefore
+P a
+10, 000(18.80185 15.5519)
+£32,500.
+For the pure endowment, the premium, P e , is given by
+P e
+100, 000 v 40 40 p 40
+which, using the figures in the previous evaluation, is
+5266.4604
+100,000 x (0.20829)
+= £11,129.
+9856.2863
+So the total single premium payable is
+£11,129 + £32,500 = £43,629.
+(iv)
+When pricing these annuities and pure endowments, companies will need to
+consider the likely risk of future mortality improvements.
+If mortality improves, then the expected outgo will increase. Premiums
+should be set to take this into account, for otherwise the office might become
+insolvent.
+In addition, offices might wish to use a mortality basis that takes into account
+factors other than those listed in the solution to part (i), such as the policy size,
+the level of underwriting and the sales channel.
+If an office does not take these factors into account, and if mortality is related
+to them, then the premiums charged will be too high for the low risks (who
+will take their business elsewhere to other offices who do take these factors
+into account) and too low for the high risks (resulting in the possibility of
+insolvency).
+END OF EXAMINERS REPORT
+Page 19
