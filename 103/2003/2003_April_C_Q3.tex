@@ -1,0 +1,83 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+3 
+
+\begin{enumerate}
+    \item (i) Let Yt denote Brownian motion with drift \mu and variance rate $\sigma^2$, starting at 0.
+Write down the expectation $E(Y_t)$ and variance Var(Yt) of this process. [1]
+\item (ii) Let Xt denote a biased random walk which moves up or down by D at time
+intervals of size h, i.e.
+Xt = 1
+t
+h
+i i Z
+ 
+ 
+  ,
+where Z1, Z2,  are independent random variables, each with distribution $P[Z_i = D] = p$, P[Zi = 	D] = 1 	 p. Calculate the expectation and variance of Xnh and derive an expression for the expectation and variance of $X_t$. 
+[Notation: x denotes the integer part of x.]
+\item (iii) (a) Use the approximation x  x to derive conditions on p and D such
+that the expectation and variance of the process $X_t$ approximate for
+large t those of a Brownian motion with drift $\mu$ and variance rate $\sigma^2$.
+(b) Comment on the values of h for which such an approximation might be
+appropriate.
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+3 (i) E(Yt) = t, Var(Yt) = 2t.
+(ii) E(Xnh) = n(2p  1) D, Var(Xnh) = nD2  4p(1  p).
+Therefore E(Xt) = (2p  1)D t ,
+h
+ 
+ 
+Var(Xt) = 4p(1  p)D2 t .
+h
+ 
+ 
+(iii) (a) We require  = (2p 1)D/h and 2 = 4p(1  p)D2/h.
+(b) This implies that p = 1 1
+2
+h
+D
+     
+\mu \sigma
+, D2 = 2 22.  h   h
+This applies only when 0  |h| < 1. Small values of h should be used
+because the random walk model converges to Brownian motion /
+diffusion as h \mu 0.
+
+%% Parts (i) and (ii) were well answered  maybe half the people successfully equated the random walk moments with the Brownian motion ones  although many candidates failed to see the derivation of the conditions on p and D through to completion. The biggest problem was the last part: "h small" is on the whole a bit too vague to get the full credit.
+
+\end{document}
