@@ -1,0 +1,76 @@
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 11]7
+According to an interest rate model which operates in continuous time, the
+interest rate r(t) may change only by upward jumps of fixed size j u or by
+downward jumps of fixed size j d (where j d < 0), occurring independently according
+to Poisson processes N u (t) (with rate \lambda u ) and N d (t) (with rate \lambda d ).
+Let T u denote the time of the first up jump in the interest rate, T d the time of the
+first down jump, T = min(T u , T d ) the time of the first jump. Further, let I be
+defined as an indicator taking the value 1 if the first jump is an up jump or 0
+otherwise.
+\begin{enumerate}
+\item (i) Determine expressions for the probabilities P{T u > t}, P{T d > t} and P{T > t}
+\item 
+(ii) Determine the distribution of I.
+\item 
+(iii) Show, by evaluating P{T > t and I = 1}, that I and T are independent
+random variables.
+\item 
+(iv) Calculate the expectation and variance of the interest rate at time t given
+the current rate r(0).
+Hint: r(t) = r(0) + j u N u (t) + j d N d (t).
+\item 
+Show that {r(t) : t ≥ 0} is a process with stationary, independent
+increments.
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+q k - 1
+q K - 1
+.
+(i) P{T u > t} = e -l u t , P{T d > t} = e -l d t , P{T > t} = P{T u > t} P{T d > t} = e - ( l u +l d ) t
+(ii) P{I = 1} = P{T d > T u } = ò 0 ¥ l u e -l u t P{T d > t} dt =
+(iii) P{T > t Ç I = 1} = ò 0 ¥ l u e -l u t P{T d > t} dt =
+l u
+l u + l d
+l u
+l u + l d
+e - ( l u +l d ) t
+This is the product of P{T > t} and P{I = 1}.
+8
+(iv) Er t = r 0 + (j u l u + j d l d ) t and Var r t = j u 2 l u t + j d 2 l d t
+(v) Take 0 < s < t. Then r t+s - r t = j u (N u (t + s) - N u (t)) + j d (N d (t + s) - N d (t)).
+Now N u (t + s) - N u (t) has a Poisson(l u s) distribution, not depending on t
+and independent of {N u (r) : 0 \leq r \leq s}, and N d (t + s) - N d (t) has a
+Poisson(l d s) distribution, also independent of t and of {N d (r) : 0 \leq r \leq s}, so
+r t+s - r t has the same distribution as r s - r 0 and is independent of r s - r 0 .
+\end{document}
