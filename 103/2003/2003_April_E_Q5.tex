@@ -1,0 +1,82 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[Total 8]
+\begin{enumerate}
+\item 5 (i) Let W(t) be defined by W(t) = 	4B(kt), where B(t) is a standard Brownian
+motion.
+(a) Calculate the value of k which gives W(t) the same expectation and
+covariance function as B(t).
+(b) Prove that, for this value of k, W is a standard Brownian motion.
+
+\item 
+(ii) Prove that exp[2B(t)	2t] is a martingale. 
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+5
+\begin{itemize}
+\item (i) (a) EW(t) = 0, Cov(W(s), W(t)) = 16Cov(B(ks), B(kt)) = 16k min(s, t).
+Thus k = 1/16 is the required value.
+To prove that a process is a BM, it is necessary to check the
+covariance, not just the variance.
+\item (b) In addition to the expectation and covariance function, we need to show
+  that W is Normally distributed. Any linear transformation of a Normal random variable is itself Normal.
+  that W has continuous sample paths. For small h, we have W(t + h)  W(t) =  4(B(kt + kh)  B(kt)), which clearly tends to 0
+as h approaches 0.
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 5
+  An alternative to proving continuity is to state that the increments
+of W are independent of past values and are also Normally
+distributed.
+\item (ii) Consider exp[2B(t)2t] with respect to the filtration Ft.
+B(t)  B(s) is independent of Ft and B(s) is Fs-measurable. Then  2B(t) |  =  2[B(t) B(s)] 2B(s) | 
+E e Fs E e e Fs 
+= 2B(s)  2[B(t) B(s)] | 
+e E e Fs 
+= e2B(s)Ee2[B(t) B(s)]  
+\item The increment B(t)  B(s) has the normal distribution with mean 0 and
+variance t 	s, so the expectation of e2[B(t)  B(s)] is equal to M(2) = exp(2(t  s)), where M(
+) is the moment generating function of the N(0, t  s) distribution.
+\item It follows that
+ 2B(t) 2t |  = 2B(s) 2s
+E e Fs e  
+and therefore e2[B(t) t] is a martingale.
+\end{itemize}
+% For part (i), in (a) many candidates just checked variance rather than the covariance, but got 1/16 correct. Not so many people got part (b)  generally people assumed that (a) implied (b), rather than considering other properties of Brownian motion
+% Most candidates fared well on part (ii), identifying where necessary the mgf of a normal random variable to successfully demonstrate the given process is a martingale.
+% Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+% Page 6
+\end{document}
