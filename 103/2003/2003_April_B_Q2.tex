@@ -1,0 +1,110 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 An index of salaries, St, and an index of prices, Pt, are modelled as being related to
+each other in the following way:
+1 1 2 1 ,
+1 1 2 1 ,
+ln ln ln
+ln ln ln
+t S t t St
+t P t t Pt
+S S P e
+P S P e
+ 
+ 
+    
+    
+where eS,t and eP,t are two independent zero-mean white noise processes, with
+variances 2
+1 and 22
+ respectively, and S and P are constants.
+\begin{enumerate}[(a)]
+\item (i) Explain why the above model is written in terms of ln P and ln S instead of
+just P and S. [2]
+\item (ii) Comment on whether it is reasonable that ln St should be affected by
+ln Pt1 and that ln Pt should be affected by ln St1. 
+\item (iii) Use matrix notation to express (ln St, ln Pt)T as a Vector Autoregression
+and identify the order p of the VAR(p) process. 
+\item (iv) Suppose the parameters of the model have been estimated. Describe the use of
+sensitivity analysis in determining the validity of the model. 
+\end{enumerate}
+%%-- 103 A20033 PLEASE TURN OVER
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage 2 (i) Prices and salaries are notoriously non-stationary processes, having a tendency
+to increase rather than a tendency to stay in the vicinity of some central value.
+What is more, the increase is more likely to be geometric than linear. There is
+some hope that {ln Pt}, which is equal to {ln (Pt/Pt1}, may be a stationary
+process, and similarly for S.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+(ii) If prices have recently increased, it is reasonable that workers will demand salary increases; if salaries have recently increased, there is more money in the economy, generating a tendency for prices to rise. The dependences are reasonable.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii) 1 2 1 ,
+1 2 1 ,
+ln ln
+= .
+ln ln
+t t S S t
+t t P P t
+S S e
+P P e
+
+
+This is a first-order VAR.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv) Sensitivity analysis comes after model verification. In model verification you
+check that simulations of the process (with parameter values equal to the
+1 2 4
+3 6 5
+0.5 0.5
+0.5 0.5
+0.5
+0.5 0.5 0.5
+0.5 0.5
+0.5 0.5
+
+%%--- Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 3
+values estimated from data) look similar to what has actually been observed.
+For sensitivity analysis you check that this still works when the parameter
+values used for the simulation are a little bit different from the estimates. The
+purpose is to guard against the possibility that you have by chance used
+parameter values with untypical properties.
+
+% Parts (i) and (ii) were done quite well. In part (i) a lot of people concentrated just on the logs or just on the differences rather than both. In part (ii) quite a few people gave answers such as "both are linked to inflation" rather than explaining why, or only considered one way (eg why should salaries be related to prices, but not the other way around).
+% Most people got part (iii). In part (iv) most people mentioned varying the parameters slightly, but not many conveyed the idea of then studying the simulated output of the model and assessing whether it still looked similar to real life.
+\end{document}
