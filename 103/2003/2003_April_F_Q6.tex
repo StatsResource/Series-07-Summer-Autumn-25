@@ -1,0 +1,93 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+6 A No-Claims Discount system operated by a motor insurer has four levels:
+\begin{itemize}
+    \item Level 1: 0% discount
+    \item Level 2: 25% discount
+    \item Level 3: 40% discount
+    \item Level 4: 50% discount
+\end{itemize}
+The rules for moving between these levels are as follows:
+Following a claim-free year, move to the next higher level, or remain at level 4.
+Following a year with one or more claims:
+move back one level, or remain at level 1, if, in the year before the
+most recent year, there were no claims;
+move back two levels, or move to level 1 or remain at level 1 if, in the year before the most recent year, there was one or more claims.
+For a given policyholder the probability of no claims in a year is 0.8.
+\begin{enumerate}
+\item (i) Let X(t) denote the state, either 1, 2, 3 or 4, of the policyholder in year t.
+Explain why 1 { ( )}t X t 
+ is not a Markov chain. 
+\item (ii) (a) By increasing the number of states, define a new stochastic process
+1 { ( )}t Y t 
+ which is Markov and is such that Y(t) indicates the discount
+level for the policyholder in year t.
+(b) Write down the transition matrix for the Markov chain {Y(t)}t 1. 
+
+(c) Calculate the long-run probability that the motorist is in discount
+level 3.
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%
+6 (i) {X(t)} is not Markov because, for example, P[Xt+1 = 2Xt = 3, Xt1 = 2, ]
+cannot be reduced to P[Xt+1 = 2Xt = 3].
+(ii) (a) Define new states
+3a = Level 3 this year following Level 2 last year
+3b = Level 3 this year following Level 4 last year
+(b) The transition matrix is then
+1 2 3a 4 3b
+1 0.2 0.8 0 0 0
+2 0.2 0 0.8 0 0
+3a 0 0.2 0 0.8 0
+4 0 0 0 0.8 0.2
+3b 0.2 0 0 0.8 0
+(c) We have
+\begin{eqnarray*}
+\pi_1 &=& 0.2\pi_1 + 0.2\pi_2 + 0.2\pi_3b = \pi_1 = 0.25\pi_2 + 0.25\pi_3b\\
+\pi_2 &=& 0.8\pi_1 + 0.2\pi_3a  \pi_2 = 0.25(\pi_3a + \pi_3b)\\
+\pi_3a &=& 0.2\pi_3b + 0.2\pi_3a  \pi_3a = 0.25\pi_3b\\
+\pi_3b &=& 0.2\pi_4\\
+\end{eqnarray*}
+Applying the condition i = 1, we obtain the solution as
+(\pi_1, \pi_2, \pi_3a, \pi_4, \pi_3b) = 1
+441
+(21, 20, 16, 320, 64).
+It follows that the long-run proportion of time spent in Level 3 is
+(16 + 64)/441 = 80/441.
+% A large number of candidates fared well on this question. Some committed the mostly harmless error of including too many (redundant) states. Most people had a reasonable attempt at (ii)(c) too, although there were some errors of arithmetic or
+% matrix multiplication.
+
+\end{document}
