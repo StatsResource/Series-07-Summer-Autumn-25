@@ -1,0 +1,160 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%103 A2001—48
+%%--Question 8 
+\begin{enumerate}
+
+\item A company assesses the credit-worthiness of various firms every quarter; the ratings are, in order of decreasing merit, A, B, C and D (default). Historical data support the view that the credit rating of a typical firm evolves as a Markov
+chain with transition matrix
+æ 1 − \alpha − \alpha 2
+\alpha
+\alpha 2
+ç
+\alpha
+1 − 2 \alpha − \alpha 2
+\alpha
+P = ç
+2
+ç
+\alpha
+\alpha
+1 − 2 \alpha − \alpha 2
+ç ç
+0
+0
+0
+è
+0 ö
+÷
+\alpha 2 ÷
+\alpha ÷
+÷
+1 ÷ ø
+for some parameter \alpha
+\end{itemize}
+
+\begin{enumerate}[(i)]
+\item (i) Draw the transition graph of the chain. [2]
+\item (ii) Determine the range of values of \alpha for which the matrix P is a valid
+transition matrix. [2]
+\item (iii) State, with reasons, whether the chain is irreducible and aperiodic.
+\item (iv) Derive a stationary probability distribution for the chain and establish
+whether it is unique.
+[4]
+\item (v) For the value \alpha = 0.1, calculate the probability that the company’s rating
+in the third quarter, X 3 , is in the default state D:
+[2]
+(a) in the case where the company’s rating in the first quarter, X 1 , is
+equal to A
+(b) in the case X 1 = B
+(c) in the case X 1 = C
+(d) in the case X 1 = D
+\end{enumerate}
+\newpage
+
+
+8
+(i)
+Transition Graph
+1 − \alpha − \alpha 2
+1 − 2\alpha − \alpha 2
+\alpha
+A
+B
+\alpha
+\alpha 2
+\alpha 2
+\alpha 2
+\alpha
+\alpha
+C
+D
+\alpha
+1
+1 − 2\alpha − \alpha 2
+(ii) All transition probabilities must lie in [0,1].
+Now 1 − 2\alpha − \alpha 2 ≤ 1 − \alpha − \alpha 2 ≤ 1 for \alpha \geq 0, so it suffices to ensure that 1 − 2\alpha − \alpha 2 \geq 0 i.e. \alpha ≤ 2 − 1. So the range of possible values of
+\alpha is [0, 2 − 1].
+(iii) The chain is not irreducible since D is a trap state.
+The chain is aperiodic by inspection.
+(iv) A stationary probability distribution, if it exists, must obey
+(1 − \alpha − \alpha 2 ) \pi A + \alpha\pi B + \alpha 2 \pi C
+\alpha\pi A + (1 − 2\alpha − \alpha 2 ) \pi B + \alpha\pi C
+\alpha 2 \pi A + \alpha\pi B + (1 − 2\alpha − \alpha 2 ) \pi C
+\alpha 2 \pi B + \alpha\pi C + \pi D
+=
+=
+=
+=
+\pi A
+\pi B
+\pi C
+\pi D
+The last equation implies \pi B = \pi C = 0, and this in turn shows that \pi A = 0.
+Hence the stationary probability distribution is \pi = (0, 0, 0, 1) T .
+%%Page 5
+%%Subject 103 (Stochastic Modelling) — April 2001 — Examiners’ Report
+It is unique: there is just one recurrent class and it is aperiodic. (Or point out that there is no other solutions to the equations.)
+(v)
+With \alpha = 0.1, the transition matrix is
+0 ö
+æ 0.89 0.1 0.01
+ç
+÷
+ç 0.1 0.79 0.1 0.01 ÷
+ç 0.01 0.1 0.79 0.1 ÷
+ç ç
+÷
+0
+0
+1 ÷ ø
+è 0
+Its square is
+æ 0.8022 0.169 0.0268 0.002 ö
+ç
+÷
+ç 0.169 0.6441 0.159 0.0279 ÷
+ç 0.0268 0.159 0.6342 0.18 ÷
+ç ç
+÷
+0
+0
+1 ÷ ø
+è 0
+the relevant entries being the last column.
+
+\end{document}
