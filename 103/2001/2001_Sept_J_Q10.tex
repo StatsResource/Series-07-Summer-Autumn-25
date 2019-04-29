@@ -42,13 +42,17 @@ n
 å Y .
 j
 j = 1
-(i) Verify that the Markov property holds for the sequence $X 1 , X 2 , ..., X n , ...$
+
+\begin{enumerate}[(a)]
+
+\item (i) Verify that the Markov property holds for the sequence $X 1 , X 2 , ..., X n , ...$
 and explain why the sequence Y 1 , Y 2 , ..., Y n , ... does not form a Markov
 chain.
-[3]
+\item 
 (ii) Draw the transition graph of the Markov chain X and write down its
 transition matrix.
-(iii) Determine, being careful to explain your reasons in each case:
+
+\item (iii) Determine, being careful to explain your reasons in each case:
 (a)
 (b)
 (c)
@@ -59,9 +63,7 @@ whether the Markov chain X is time-homogeneous
 whether it is irreducible
 whether it admits a stationary probability distribution 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Starting from the state X t = j, calculate the probability of suffering no
+\item Starting from the state X t = j, calculate the probability of suffering no
 further accident for the next n successive periods. 
 Suppose you are provided with full claims records for a number of a
 company’s policy holders.
@@ -69,12 +71,14 @@ company’s policy holders.
 (b) Explain how to test the assumption that the probability of an accident depends only on the cumulative number of accidents, X n ,
 and does not have a direct dependence on n.
 
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 10
 (i)
-There is an explicit dependence on the past behaviour of Y j , j \leq n in the
+\begin{itemize}
+\item There is an explicit dependence on the past behaviour of Y j , j \leq n in the
 probability distribution of Y n+1 ; hence the Markov property does not hold.
 On the other hand
 P[X n+1 = j1⁄2X 1 = i 1 , X 2 = i 2 , ..., X n - 1 = i n - 1 , X n = i]
@@ -87,7 +91,7 @@ P[X n+1 = j1⁄2X 1 = i 1 , X 2 = i 2 , ..., X n - 1 = i n - 1 , X n = i]
 if j - i = 0,
 if j - i = 1.
 This is independent of i 1 , i 2 , ..., i n - 1 .
-(ii)
+\item (ii)
 Transition graph
 1 - p
 1 - pe -l
@@ -120,7 +124,7 @@ O
 Page 7Subject 103 (Stochastic Modelling) — 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-(iii)
+\item (iii)
 (a) Chain is time-homogeneous since transition probabilities calculated in (i) do not depend on time n.
 (b) It is not irreducible since the number of accidents can never go down.
 (c) There are no recurrent states, hence there can be no stationary distribution. Alternatively, a stationary distribution, p, if it exists,
@@ -140,5 +144,5 @@ p to maximise P {( pe -l x k ) 1 - y k (1 - pe -l x k ) y k }.
 (b) Change the model to:
 P[Y n +1 = 01⁄2Y 1 = y 1 , Y 2 = y 2 , ..., Y n = y n ] = pe -l ( x n , n ) ,
 then test the hypothesis that l(x, n) o l(x) for all n.
-Page 8
+\end{itemize}
 \end{document}
