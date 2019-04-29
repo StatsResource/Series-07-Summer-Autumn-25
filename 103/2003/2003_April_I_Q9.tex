@@ -1,0 +1,157 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+9 In a simple discrete-time model for the price of a share, the change in price at time t, Xt, is assumed to be independent of anything that has happened before time t and to
+have distribution:
+Xt =
+1 with probability
+1 with probability ,
+0 with probability = 1
+p
+q
+r p q
+
+ 
+  
+where p, q, r > 0.
+Let S0 = m (where m is a positive integer) be the original price of the share,
+Sn = S0 + 1
+n
+t t X
+  be the price after n time units and define
+Yn = (q / p)Sn
+\begin{enumerate}
+\item (i)  Show that {Yn : n  1} is a martingale and that for any positive integer n,
+E(Yn) = (q/p)m [4]
+\item (ii)  Let T be the time until the share price reaches either 0 or N for the first time,
+where N is an integer greater than m.
+(a) Show that 
+Yn
+  C for n  T, for some constant C.
+(b) Write down an expression for E(YT).
+\item 
+(iii) Assuming that p  q, calculate the probability that, starting from m, the share price reaches 0 before it reaches N, i.e. P(ST = 0 
+S0 = m). [3]
+(iv) In the case p = q you may assume that P(ST = 0 
+S0 = m) = (Nm)/N. Now
+define Zn = Sn2  2np.
+(a) Prove that {Zn : n  1} is a martingale.
+(b) Show that the expected value of the time until absorption, T, is given
+by
+E(T
+S0 = m) = ( ).
+2
+m N m
+p
+
+[5]
+[Total 14]
+103 A20038
+\end{enumerate}
+\newpage
+9 (i) We need to prove that E(Yn+1X1, X2, Xn) = Yn.
+We have
+E(Yn+1X1, X2, Xn) = 1 (( / ) n n 1, 2,... ) S X
+E q p  X X Xn
+ 
+= 1 ( / ) n (( / ) n 1, 2,... ) S X
+q p E q p  X X Xn
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 10
+= ( / )Sn ( ( / ) ( / ) 1 (1 )) ,
+q p p q p q q p p q Yn      
+which shows that Yn is a martingale.
+By taking expectations, we obtain that E(Yn+1) = E(Yn), and this in turn implies that E(Yn) = E(Y0) = (q/p)m.
+(ii) (a) It is clear that T is a stopping time with respect to this martingale, since
+the event that the share has reached 0 or N by time n depends only on
+X1, X2, , Xn and m.]
+For n  T, we have 0  Sn  N,
+Yn = (q / p)Sn  (q / p)N if q > p, or Yn  1 if q  p.
+(b) The conditions of the optional stopping theorem are satisfied. It
+follows that E(YT) = E(Y0) = (q/p)m.
+(iii)
+0
+= ( )= ( = ) ( =0) 1 1 ( = ).
+m N N
+T T T T
+q E Y q P S N q P S q P S N
+p p p p
+         
+               	  	  	   	   	
+Thus ( = ) = 1 ( / )
+1 ( / )
+m
+T N
+P S N q p
+q p
+
+
+so that ( = 0) = ( / ) ( / ) .
+1 ( / )
+m N
+T N
+P S q p q p
+q p
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv) (a) We have
+E(Zn+1X1, X2, , Xn) = 2 2
+E(Sn 2SnXn 1 Xn 1 2(n 1) p X1, X2,..., Xn )       
+= 2 2
+Sn 2(n 1) p 2SnE(Xn 1) E(Xn 1).  
+   
+But E(Xn+1) = 0, 2
+E(Xn 1)  = p + q = 2p, and the last equation gives
+E(Zn+1X1, X2, , Xn) = Sn2  2np = Zn , so that {Zn} is a martingale. (b) The conditions of the optional stopping theorem are not satisfied, since
+2 2 Sn np  is not bounded below for 0  n  T. But we can work with a truncated stopping time TK = min(T, K), for which the conditions of the
+OST are satisfied, then let K  .
+Applying the optional stopping theorem we get
+E(ZT) = E(Z0) = m2.
+
+%% Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+%% Page 11
+But E(ZT) = E(ST2 ) 	2pE(T) = N2P(ST = N)  2p E(T) and we are
+given that P(ST = N) = m/N. Thus m2 = E(ZT) = Nm  2pE(T), which
+implies that E(T) = m(N  m)/(2p), as required.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+Parts (i) and (iv)(a) were generally answered successfully.
+Part (ii): in (a), the bounds on (q/p)Sn must be shown to apply for any p and q, not
+just some; the main problem with (b) was that many did not mention the Optional
+Stopping Theorem as justification for claiming that E(YT) = E(Y0).
+Of the candidates who attempted (iv)(b), very few noticed that the stopping time did
+not meet the requirements of the OST, so needs to be truncated.
+\end{document}
