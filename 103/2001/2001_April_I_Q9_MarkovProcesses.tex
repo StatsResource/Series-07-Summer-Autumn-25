@@ -31,28 +31,27 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
-9
+%% \begin{enumerate}
+%% Question 9
 A continuous-time Markov sickness and death model has four states: H (healthy),
 S (sick), T (terminally ill) and D (dead). From a healthy state transitions are possible to states S and D, each at rate 0.05 per year. A sick person recovers his health at rate 1.0 per year; other possible transitions are to D and T, each with
 rate 0.1 per year. Only one transition is possible from the terminally ill state, and that is to state D with transition rate 0.4 per year.
-\begin{enumerate}
-\item (i) Draw the transition graph for this process.
-\item (ii) Define P(t) = {p ij (t) : i, j ∈ H, S, T, D} where p ij (t) denotes the probability of being in state j at time t given that the individual was in state i at time 0.
+\begin{enumerate}[(a)]
+\item Draw the transition graph for this process.
+\item Define $P(t) = {p ij (t) : i, j \in H, S, T, D}$ where p ij (t) denotes the probability of being in state j at time t given that the individual was in state $i$ at time 0.
 State the Kolmogorov forward equation satisfied by the matrix P(t), making sure that you specify the entries of the matrix A which appears.
 
-\item (iii) Calculate the probability of being healthy for at least 10 uninterrupted years given that you are healthy now.
+\item Calculate the probability of being healthy for at least 10 uninterrupted years given that you are healthy now.
 
-\item (iv) Let d j denote the probability that a life which is currently in state j will never suffer a terminal illness. By considering the first transition from
+\item Let d j denote the probability that a life which is currently in state j will never suffer a terminal illness. By considering the first transition from
 1
 state H, show that d H = 1 2 + 1 2 d S and deduce similarly that d S = 12
 + 5 6 d H .
 \end{enumerate}
+
 Hence evaluate d H and d S .
 (v)
 10
-[2]
-[5]
 Write down the expected duration of a terminal illness, starting from the moment of the first transition into state T. Use the result of (iv) to deduce
 the expectation of the future time spent terminally ill by an individual
 who is currently healthy.
@@ -60,7 +59,8 @@ who is currently healthy.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
 9
-(i)
+\begin{itemize}
+\item (i)
 Transition Graph:
 0.05
 H
@@ -72,7 +72,7 @@ T
 0.1
 0.4
 D
-(ii)
+\item (ii)
 KFE: P ′ ( t ) = P(t) A,
 0
 0.05 ö
@@ -92,13 +92,14 @@ A =
 0
 0 ÷ ø
 è 0
-(iii)
+
+\item (iii)
 Page 6
 ∞
 0.1e − 0.1 x dx = e − 1 .
 The probability of staying in state H for 10 years is ò 10
 %%-- Subject 103 (Stochastic Modelling) — April 2001 — Examiners’ Report
-(iv)
+\item (iv)
 First transition from H must be to S or D, each equally likely. If to D, then it is certain that no terminal illness will occur; otherwise, the probability
 of avoiding a terminal illness is d S .
 
@@ -134,76 +135,6 @@ hit T X 0 = H) × 2.5 years =
 10
 2.5
 14
-(i) (1 − B) Y = \betaB (1 − B) I,
-with solution Y = \betaBI + const
-(ii) We have the vector equation
-years.
-æ X n ö æ 0 (1 + π ) \beta ö æ X n − 1 ö æ const ö æ e n (1) ö
-ç
-÷ = ç
-÷ + ç
-÷ ç
-÷ + ç ç (2) ÷ ÷ ,
-è I n ø è 0 1 + \alpha ø è I n − 1 ø è 0 ø è e n ø
-which clearly represents a vector AR(1).
-(iii)
-I is not stationary: the condition for an AR(1) to be stationary is that the
-autoregressive parameter is less than 1 in absolute value.
-I is not I(1), either, since ∇I = e (2) + \alphaBI which, as already stated, is not
-stationary.
-Z is therefore neither I(0) nor I(1).
-(iv)
-The equation for the sum of squares is
-SS =
-n
-å
-( e t (2) ) 2 =
-t = 2
-n
-å ( I
-t = 2
-t
-− (1 + \alpha ) I t − 1 ) 2 .
-Differentiating,
-0 = − 2
-n
-å I
-t = 2
-t − 1 ( I t
-− (1 + \alpha ) I t − 1 ),
-Page 7Subject 103 (Stochastic Modelling) — April 2001 — Examiners’ Report
-implying that
-\alphâ =
-(v)
-(a)
-Σ nt = 2 I t − 1 ( I t − I t − 1 )
-Σ t n = 2 I t 2 − 1
-.
-First we need to obtain N(0,1) variates Z 1 and Z 2 . The core reading
-mentions two methods: either
-Z 1 =
-− 2 lnU 1 sin(2πU 2 ),
-Z 2 =
-− 2 lnU 1 cos(2πU 2 )
-or
-Z 1 = V 1
-− 2 ln S
-,
-S
-where V i = 2U i − 1, S =
-Z 2 = V 2
-− 2 ln S
-,
-S
-V 1 2 + V 2 2 and any values of U 1 and U 2
-which give S > 1 are rejected.
-Now define E 1 = σ 1 Z 1 , E 2 = ρσ 2 Z 1 +
-(b)
-(vi)
-Page 8
-1 − ρ 2 σ 2 Z 2 .
-Sensitivity analysis applies mostly to the initial assumptions.
-Values for the parameters \alpha, \beta, π, σ 1 , σ 2 and ρ must be assumed, but may not correspond exactly to the actual situation. The head
-of household should investigate whether making small changes to the values used will make large differences to the conclusions.
-The revised model still meets the requirements set down at the start of the problem. It is likely to prove more tractable in that ln I is now a
-simple random walk with drift, and is therefore I(1).
+
+\end{itemize}
+\end{document}
