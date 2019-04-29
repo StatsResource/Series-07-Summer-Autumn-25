@@ -1,0 +1,154 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+\item A family agrees an expenditure target, $Y_n$ , for year n, in such a way that the annual increase in the expenditure target is proportional to the increase in the
+family income over the previous year. The actual expenditure during the year, X n , is assumed to be related to the expenditure target, but incorporating an element of randomness and a factor accounting for the family’s propensity to
+overspend. The family income, $I_n$ , is assumed to grow at a constant annual rate,
+before randomness is taken into account.
+
+The head of the household believes that the following three equations form an
+appropriate representation of the above information:
+\begin{eqnarray*}
+Y n &=& Y n − 1 + \beta(I n − 1 − I n − 2 )\\
+X n &=& (1 + \pi) Y n + e n (1)\\
+I n &=& (1 + \alpha) I n − 1 + e n (2)\\
+\end{eqnarray*}
+where ${( e n (1) , e n (2) ) : n = 1, 2, ...}$ is a sequence of zero-mean bivariate Normal random variables and $\alpha$, $\beta$ and $\pi$ are positive parameters (with \beta < 1).
+103 A2001—6
+\begin{enumerate}
+\item (i) Express the first of the equations in terms of the backshift operator, B, and deduce that a linear relationship exists between Y n and I n − 1 .
+\item (ii) Show that the process Z n = (X n , I n ) is a first-order multivariate autoregressive process.
+\item (iii) State, with reasons, whether ${I n : n \geq 1}$ is a stationary time series, and hence determine whether {Z n : n \geq 1} is I(0), I(1) or neither.
+\item (iv) Find an estimator for the parameter \alpha by minimising the quantity
+\[Σ t n = 2 ( e t (2) ) 2 .\]
+\item (v)
+The head of the household wishes to perform a simulation to investigate whether the propensity to overspend will result in negative net savings.
+It is assumed that Var( e n (1) ) = σ 1 2 , Var( e n (2) ) = σ 22 and Cov( e n (1) , e n (2) ) = ρσ 1 σ 2 , where $−1 < ρ < 1$.
+\item (vi)
+(a) Describe a method of simulating an observation of the pair
+( e n (1) , e n (2) ) starting from two uniformly distributed pseudo-random variables U 1 , U 2 .
+(b) Describe the role of sensitivity analysis in drawing conclusions from the simulation.
+\end{enumerate}
+An alternative model is proposed, involving the logarithms of the
+quantities I n , X n and Y n :
+\begin{eqnarray*}
+ln Y n &=& ln Y n−1 + ln I n−1 − ln I n−2\\
+ln X n &=& θ + ln Y n + e n (1)\\
+ln I n &=& φ + ln I n−1 + e n (2)\\
+\end{eqnarray*}
+
+Discuss whether this model is more suitable than the original model. [2]
+[Total 19]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%55
+\newpage
+\begin{itemize}
+\item 
+(i) $(1 − B) Y = \beta B (1 − B) I$,
+with solution Y = \beta BI + const
+\item (ii) We have the vector equation
+years.
+æ X n ö æ 0 (1 + \pi ) \beta ö æ X n − 1 ö æ const ö æ e n (1) ö
+ç
+÷ = ç
+÷ + ç
+÷ ç
+÷ + ç ç (2) ÷ ÷ ,
+è I n ø è 0 1 + \alpha ø è I n − 1 ø è 0 ø è e n ø
+which clearly represents a vector AR(1).
+\item (iii)
+I is not stationary: the condition for an AR(1) to be stationary is that the
+autoregressive parameter is less than 1 in absolute value.
+I is not I(1), either, since ∇I = e (2) + \alpha BI which, as already stated, is not
+stationary.
+Z is therefore neither I(0) nor I(1).
+\item (iv)
+The equation for the sum of squares is
+SS =
+n
+å
+( e t (2) ) 2 =
+t = 2
+n
+å ( I
+t = 2
+t
+− (1 + \alpha ) I t − 1 ) 2 .
+\item Differentiating,
+0 = − 2
+n
+å I
+t = 2
+t − 1 ( I t
+− (1 + \alpha ) I t − 1 ),
+%%-- Page 7Subject 103 (Stochastic Modelling) — April 2001 — Examiners’ Report
+implying that
+\alphâ =
+(v)
+(a)
+Σ nt = 2 I t − 1 ( I t − I t − 1 )
+Σ t n = 2 I t 2 − 1
+.
+\item First we need to obtain N(0,1) variates Z 1 and Z 2 . The core reading
+mentions two methods: either
+Z 1 =
+− 2 lnU 1 sin(2\piU 2 ),
+Z 2 =
+− 2 lnU 1 cos(2\piU 2 )
+or
+Z 1 = V 1
+− 2 ln S
+,
+S
+where V i = 2U i − 1, S =
+Z 2 = V 2
+− 2 ln S
+,
+S
+V 1 2 + V 2 2 and any values of U 1 and U 2
+which give S > 1 are rejected.
+Now define E 1 = σ 1 Z 1 , E 2 = ρσ 2 Z 1 +
+(b)
+(vi)
+%%-Page 8
+1 − ρ 2 σ 2 Z 2 .
+\item Sensitivity analysis applies mostly to the initial assumptions.
+Values for the parameters \alpha, \beta, \pi, σ 1 , σ 2 and ρ must be assumed,
+but may not correspond exactly to the actual situation. The head
+of household should investigate whether making small changes to
+the values used will make large differences to the conclusions.
+The revised model still meets the requirements set down at the start of
+the problem. It is likely to prove more tractable in that ln I is now a
+simple random walk with drift, and is therefore I(1).
+\end{itemize}
+\end{document}
