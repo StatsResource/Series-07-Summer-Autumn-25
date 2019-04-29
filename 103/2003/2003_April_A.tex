@@ -31,7 +31,7 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 
 1 A science student is observing a mouse in the following simple maze:
 4
@@ -42,67 +42,18 @@
 During each period under observation, the mouse moves to any adjacent, accessible
 compartment with equal probability. Successive moves have the Markov property.
 Let Xt be the compartment number that the mouse is in at time t.
-(i) Draw a transition diagram, including on your diagram the probabilities of the
-possible transitions. [2]
-(ii) Evaluate the probability that a mouse which starts in compartment 1 at time 0
-is also in compartment 1 (a) at time 1, (b) at time 2, and (c) at time 3. [2]
-(iii) State with reasons whether:
+\begin{enumerate}
+    \item (i) Draw a transition diagram, including on your diagram the probabilities of the
+possible transitions. 
+    \item (ii) Evaluate the probability that a mouse which starts in compartment 1 at time 0
+is also in compartment 1 (a) at time 1, (b) at time 2, and (c) at time 3. 
+    \item (iii) State with reasons whether:
 (a) the Markov chain X possesses a stationary distribution
-(b) P(Xt = j | X0 = i) converges to some limit j as t   [2]
+(b) P(Xt = j | X0 = i) converges to some limit j as t   
 [Total 6]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-2 An index of salaries, St, and an index of prices, Pt, are modelled as being related to
-each other in the following way:
-1 1 2 1 ,
-1 1 2 1 ,
-ln ln ln
-ln ln ln
-t S t t St
-t P t t Pt
-S S P e
-P S P e
- 
- 
-    
-    
-where eS,t and eP,t are two independent zero-mean white noise processes, with
-variances 2
-1 and 22
- respectively, and S and P are constants.
-(i) Explain why the above model is written in terms of ln P and ln S instead of
-just P and S. [2]
-(ii) Comment on whether it is reasonable that ln St should be affected by
-ln Pt1 and that ln Pt should be affected by ln St1. [1]
-(iii) Use matrix notation to express (ln St, ln Pt)T as a Vector Autoregression
-and identify the order p of the VAR(p) process. [2]
-(iv) Suppose the parameters of the model have been estimated. Describe the use of
-sensitivity analysis in determining the validity of the model. [2]
-[Total 7]
-103 A20033 PLEASE TURN OVER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-3 (i) Let Yt denote Brownian motion with drift  and variance rate 2, starting at 0.
-Write down the expectation E(Yt) and variance Var(Yt) of this process. [1]
-(ii) Let Xt denote a biased random walk which moves up or down by D at time
-intervals of size h, i.e.
-Xt = 1
-t
-h
-i i Z
- 
- 
-  ,
-where Z1, Z2,  are independent random variables, each with distribution
-P[Zi = D] = p, P[Zi = 	D] = 1 	 p. Calculate the expectation and variance of
-Xnh and derive an expression for the expectation and variance of Xt. [3]
-[Notation: x denotes the integer part of x.]
-(iii) (a) Use the approximation x  x to derive conditions on p and D such
-that the expectation and variance of the process Xt approximate for
-large t those of a Brownian motion with drift  and variance rate 2.
-(b) Comment on the values of h for which such an approximation might be
-appropriate.
-[4]
-[Total 8]
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{enumerate}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 1 (i) Transition diagram:
@@ -115,91 +66,9 @@ For (b): (2)
 p p p  p p 
 (iii) (a) Yes every chain with finite state space has a stationary distribution.
 (b) No. The chain is periodic, so the probabilities do not converge.
-It was possible to read the question as implying the possibility that the mouse could
-stay where it was: candidates who did this were still able to obtain full marks for the
-question.
-Every candidate was able to draw the diagram correctly and most of them correctly
-evaluated the required probabilities.
-Some candidates were not clear about the distinction between a stationary
-distribution and a limiting distribution.
-2 (i) Prices and salaries are notoriously non-stationary processes, having a tendency
-to increase rather than a tendency to stay in the vicinity of some central value.
-What is more, the increase is more likely to be geometric than linear. There is
-some hope that {ln Pt}, which is equal to {ln (Pt/Pt1}, may be a stationary
-process, and similarly for S.
-(ii) If prices have recently increased, it is reasonable that workers will demand
-salary increases; if salaries have recently increased, there is more money in
-the economy, generating a tendency for prices to rise. The dependences are
-reasonable.
-(iii) 1 2 1 ,
-1 2 1 ,
-ln ln
-= .
-ln ln
-t t S S t
-t t P P t
-S S e
-P P e
-
-
-           
-            
-  
- 	 	  
-  
-   
- 
-This is a first-order VAR.
-(iv) Sensitivity analysis comes after model verification. In model verification you
-check that simulations of the process (with parameter values equal to the
-1 2 4
-3 6 5
-0.5 0.5
-0.5 0.5
-0.5
-0.5 0.5 0.5
-0.5 0.5
-0.5 0.5
-Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
-Page 3
-values estimated from data) look similar to what has actually been observed.
-For sensitivity analysis you check that this still works when the parameter
-values used for the simulation are a little bit different from the estimates. The
-purpose is to guard against the possibility that you have by chance used
-parameter values with untypical properties.
-Parts (i) and (ii) were done quite well. In part (i) a lot of people concentrated just on
-the logs or just on the differences rather than both. In part (ii) quite a few people gave
-answers such as "both are linked to inflation" rather than explaining why, or only
-considered one way (eg why should salaries be related to prices, but not the other
-way around).
-Most people got part (iii). In part (iv) most people mentioned varying the parameters
-slightly, but not many conveyed the idea of then studying the simulated output of the
-model and assessing whether it still looked similar to real life.
-3 (i) E(Yt) = t, Var(Yt) = 2t.
-(ii) E(Xnh) = n(2p  1) D, Var(Xnh) = nD2  4p(1  p).
-Therefore E(Xt) = (2p  1)D t ,
-h
- 
- 
-Var(Xt) = 4p(1  p)D2 t .
-h
- 
- 
-(iii) (a) We require  = (2p 1)D/h and 2 = 4p(1  p)D2/h.
-(b) This implies that p = 1 1
-2
-h
-D
-     
- 
-, D2 = 2 22.  h   h
-This applies only when 0  |h| < 1. Small values of h should be used
-because the random walk model converges to Brownian motion /
-diffusion as h  0.
-Parts (i) and (ii) were well answered  maybe half the people successfully equated
-the random walk moments with the Brownian motion ones  although many
-candidates failed to see the derivation of the conditions on p and D through to
-completion.
-The biggest problem was the last part: "h small" is on the whole a bit too vague to get
-the full credit.
+
+% It was possible to read the question as implying the possibility that the mouse could stay where it was: candidates who did this were still able to obtain full marks for the question.
+% Every candidate was able to draw the diagram correctly and most of them correctly evaluated the required probabilities.
+% Some candidates were not clear about the distinction between a stationary distribution and a limiting distribution.
+
 \end{document}
