@@ -1,0 +1,188 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+8 A branch of a bank has three cash dispensers. If at time t a cash dispenser is working,
+the probability that it will break down in (t, t + dt) is independent of the state of the
+other cash dispensers and is equal to
+\[\alpha dt + o(dt).\]
+When a cash dispenser breaks down, repair work begins immediately. The time taken
+to repair a broken machine is exponentially distributed with mean 1/\beta. There are
+enough repair teams to repair all three cash dispensers at the same time, if necessary.
+Define Xt as the number of machines not working at time t.
+\begin{enumerate}
+\item (i) Write down the state space for Xt. [1]
+\item (ii) (a) If a cash dispenser is working at time 0, prove that the time until its
+first breakdown is exponentially distributed with mean 1/α.
+(b) If all three cash dispensers are working at time 0, derive the
+distribution of the time until the first breakdown. [5]
+\item (iii) Define Pm(t) as the probability that m machines are not working at time t.
+Show that the forward equations for the process X imply that:
+P0(t) = 3P0 (t) P1(t)
+P3(t) =  3P3(t)  P2 (t)
+and for m = 1, 2,
+Pm(t) = ((3 m) m )Pm(t) (4 m) Pm 1(t) (m 1) Pm 1(t)              .
+\item 
+(iv) At time 0 all three cash dispensers are working. Show that the forward
+equations have a solution
+3 3
+( ) = ( )m[1 ( )] m, = 0,1, 2,3
+Pm t t t m
+m
+
+ 
+   
+ 
+where (t) satisfies a differential equation which you should identify. [5]
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%
+8 (i) State space for Xt is {0, 1, 2, 3}.
+(ii) (a) Let T be the time taken for a cash dispenser to break down. From the
+question:
+PT t,t  dt  | T  t  = dt  o(dt)
+or in other words
+   
+ 
+,
+= ()
+P T t t dt
+dt o dt
+P T t
+ 
+ 
+
+If we set F(t) = P(T ≤ t), then
+ 
+ 
+= ()
+1
+F t dt
+dt o dt
+F t
+
+ 
+
+and letting dt → 0,
+ 
+ 
+=
+1
+F t
+F t
+
+
+
+Integrate this to get ln 1 F t  =  t  const
+\begin{itemize}
+\item Since F(0) = 0, we can set const = 0, and hence F(t) = 1  eαt
+That is, T has an exponential distribution with mean 1/α.
+(b) P(no breakdowns by time t) = (et)3 = e3t. Thus the time until the
+first breakdown is exponentially distributed with parameter 3.
+\item (iii) P(X(t + h) = m) = P(X(t) = m, X(t + h) = m) + P(X(t) = m  1, X(t + h) = m)
++ P(X(t) = m + 1, X(t + h) = m) + o(h).
+Thus in general
+1 0
+1 3
+( ) = ( )[1 ((3 ) ) ] ( )(4 ) 1
+( )( 1) 1 ( ),
+m m m m
+m m
+P t h P t m m h P t m h
+P t m h oh
+ 
+ 
+        
+   
+%% Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+%%  Page 9
+where 1A is the indicator function of event A.
+\item Rearranging and letting h → 0 gives the required equations.
+\item (iv) First look at the LHS: if Pm has the given form, then
+’ 3 1 2
+( ) = ( )m (1 ( )) m ’( )[ (1 ( )) (3 ) ( )]
+Pm t t t t m t m t
+m
+   
+
+ 	  	 	  	   	
+ 
+
+On the other hand, the RHS is equal to
+3  
+1 4 1 2
+3
+( ) (1 ( )) (3 )
+3 3
+(4 ) ( ) (1 ( )) ( 1) ( ) (1 ( ))
+1 1
+m m
+m m m m
+t t m m
+m
+m t t m t t
+m m
+
+   
+ 
+ 	      
+
+ 
+   
+  	      	   
+   
+  
+  1 2 2 2 3
+= (t)m (1 (t)) m [m (3 m) ] (1 ) m (1 ) (3 m)
+m
+   
+
+ 	  	     	  	    	   	
+ 
+
+1 2   3
+= (t)m (1 (t)) m(m 3 ) (1 )
+m
+   
+         
+	 
+
+Thus the LHS and RHS are equal as long as ’ (t)    ( )(t) .
+
+% Almost everyone got part (i). In part (ii), stating the time until first breakdown is exponential in (a) is not sufficient: it was necessary to derive this from first principles.
+% Similarly, a reasonable number got the answer to (b) without deriving it properly.
+% The most successful strategy for part (iii) was writing the generator matrix and getting the equations from there.
+Only the exceptional candidate attempted (iv); the algebra was tough, but did not involve any tricks.
+\end{itemize}
+\end{document}
