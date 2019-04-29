@@ -1,0 +1,101 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%103 A20035 PLEASE TURN OVER
+7 The medical insurance division of a large insurance company models each
+policyholders state of health as a three-state Markov jump process, the states being
+H (healthy), S (sick) and D (dead). The instantaneous transition rates between the
+states are HS = , SH = 
+, HD = , SD = .
+
+\begin{enumerate}
+\item (i) Write down the generator matrix of the Markov jump process. 
+\item (ii) The policyholder pays contributions at rate C when in state H and receives benefits at rate B when in state S. No death benefit is payable. The company uses the model to set the ratio of contributions to benefits. Without doing any calculations, explain in general terms how this can be done. 
+
+\item (iii) A trainee believes that the model is too simplistic. For each of the trainees
+suggestions below, comment on whether following the suggestion would be likely to improve the models predictive power:
+(a) The transition rates should depend on the age of the policyholder.
+(b) The transition rates should vary according to the time of year.
+(c) SH and SD should also depend on the duration of the sickness to date.
+[3]
+\item (iv) Outline the principal difficulty in fitting a model with parameters dependent on all the factors in part (iii). [1]
+\item (v) Assume that several years of quarterly claims data are available. Describe a test to determine whether the model with annually time-varying transition rates, as in (iii)(b), is a better fit to the data than the model with constant
+transition rates.
+\end{enumerate}
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+7 (i) The generator matrix is
+0 0 0
+    
+    	 	  
+ 
+
+ 
+.
+(ii) Let B and C be the levels of benefits and contributions, and define h
+(respectively s) as the expected time spent by a policyholder in state H
+Subject 103 (Stochastic Modelling)  April 2003  Examiners Report
+Page 7
+(respectively S) before finally entering state D. For solvency the company
+requires Ch  Bs 
+ 0.
+The model allows h and s to be calculated. [The equations are
+h 1 s, s 1 h  
+   
+   
+.]
+\begin{itemize}
+\item (iii) (a) This might improve predictive power as far as the individual policyholder is concerned, but in a large population of policyholders with constant age profile it is not likely to make much difference.
+\item (b) Certain kinds of sickness are more likely to strike at particular times of year, but they may more or less balance out. If there is a significant
+increase in the incidence of sickness in one season, it should be helpful to include this in the model.
+\item (c) Similarly to (a), the inclusion of duration dependence will significantly
+improve the goodness of fit when only one policyholder is being
+regarded, but in a large population of policyholders it is unlikely to
+make a difference overall.
+\item (iv) If the population is split up into categories depending on age, duration of illness and time of year, it is highly unlikely that there will be sufficient data to estimate all the transition rates reliably.
+\item (v) This can be regarded a Time Series problem: we seek a test for the existence of seasonal variation. One suggestion could be to find the best-fitting model without seasonal variation and the best-fitting with seasonal variation, then to compare the values of the Akaike Information Criterion.
+\end{itemize}
+Alternatively, if the number of policyholders is roughly constant from year to year, one could use one-way Analysis of Variance to determine whether Season has a significant effect on claims. If the number of policyholders varies greatly from year to year, a two-way ANOVA with Year and Season as explanatory variables could be fitted.
+A test based on 
+2 would have to be carefully constructed. For example,
+drawing up a contingency table with the quarters as the rows and with column
+titles like Stayed healthy and Fell sick would be a reasonable approach.
+Again done quite well generally.
+
+% Many candidates weren’t clear that they needed to write a formula that characterises the company’s policy in part (ii).
+% Parts (iii) and (iv) done well  most people seemed to get the general ideas and write sensible comments, even if they didn’t quite get full marks. Only a few candidates
+
+% noticed that in a large stable population of policyholders the trainees suggestions would not greatly improve the models predictive power.
+% In part (v) many candidates merely mention using the chi-squared test without explicitly describing it. The question was carefully written to elicit responses which showed whether the candidate understood what was to be tested.
+\end{document}
