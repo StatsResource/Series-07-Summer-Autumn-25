@@ -1,0 +1,90 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%7
+8
+9
+In a mortality investigation spanning N + 1 years, information is available on the
+calendar year of birth and the calendar year of death of each life dying in each year K,
+K + 1, ..., K + N. In addition, information is available on the number of lives,
+classified by age x last birthday, on 1 January in each of years K, K + 1, ..., K + N + 1.
+(i) In terms of the available data, derive an approximation for the central exposed
+to risk which corresponds to the deaths data.
+
+(ii) The initial rates of mortality for deaths having age label x in this investigation
+
+estimate q x+f . Determine f, stating any assumptions you make.
+[Total 7]
+A life office wishes to compare the mortality of its male term assurance policyholders
+with the standard table AM92. A Chi-squared test has been carried out to test the null
+hypothesis that the true underlying mortality rates of the policyholders are those of the
+standard table. Based on the results of this test, the null hypothesis has been accepted.
+(i) State three possible defects that the Chi-squared test may have failed to detect
+and explain why these are not detected.
+
+(ii) Describe how you would carry out a suitable test to check for one of the above
+defects. You should state which defect you are checking for.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+(i)
+Since the age label will change at the end of the calendar year, we have a
+calendar year rate interval.
+Given the data we have, a person dying in calendar year t and born in year
+t - x will be classified as aged x at death, OR age x next birthday at previous
+or coincident 1 January. 1
+This person will be aged between exact ages x - 1 and x at the start of the
+year.
+So, at the end of the year the person would (had he or she not died during the
+year) have been aged between exact ages x and x + 1.
+P x,t is the number of persons aged x last birthday on 1 January in year t.
+We want the central exposed to risk at age x during year t corresponding to the
+definition of the deaths data (principle of correspondence).
+Assuming P x,t varies linearly over the calendar year, this consists of the
+average of the number of persons aged x - 1 last birthday at the start of year t
+and the number of persons aged x last birthday at the start of year
+t + 1, ie 0.5 (P x - 1,t + P x,t+1 ).
+Summing this over the whole period of the investigation produces
+K + N
+å 0.5( P x - 1, t + P x , t + 1 ) .
+K
+(ii)
+At the start of the rate interval, ages range from x - 1 to x exact.
+Thus, assuming birthdays are distributed evenly over the calendar year, the
+average age at the start of the rate interval is x - 1⁄2,
+so q estimates q x - 1
+2
+Thus f = - 1⁄2.
+%% ---  12%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
