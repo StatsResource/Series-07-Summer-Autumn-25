@@ -1,0 +1,172 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+
+13
+A 20 year endowment assurance policy was issued to a man aged exactly 40 on
+1 January 1991. The sum assured of \$10,000 is payable immediately on death or on
+survival to the end of the term.
+Premiums of \$300 per annum are payable annually in advance for the term of the
+policy, ceasing on earlier death.
+(i) Explain why the life insurance company will hold reserves for this policy. 
+(ii) (a)
+(b)
+(iii) Calculate the prospective policy value at the end of 2003.
+(iv) Calculate the mortality profit for this policy for 2003 if the policyholder dies
+during 2003.
+
+[Total 14]
+Define the prospective and retrospective policy values for the policy.
+Explain why the two policy values may be different.
+
+Basis: Mortality: AM92 ultimate
+Interest: 6% per annum throughout
+Expenses are ignored
+%%%%%%%%%%%%%%%%%%%%%%%%—7
+
+13
+(i)
+For this policy, the expected cost of paying benefits increases over the term,
+but the premiums paid are level.
+This means that the premiums paid in the early years will be more than the
+expected cost of the benefits, but those in later years will be less.
+It is prudent for the insurance company to set aside (or reserve) the premiums
+not required in the early years to cover the shortfall in later years. If the
+company spent all the premiums received in the early years it may not be able
+to find the money required to pay the benefit later in the contract — ultimately
+the company could become insolvent.
+(ii)
+(a)
+Prospective policy value
+= Expected present value of future outgo
+less
+Expected present value of future
+income
+Retrospective policy value = Accumulated value of premiums
+received to date, allowing for interest
+and survivorship
+less
+Accumulated value of benefits (and
+expenses) paid to date, allowing for
+interest and survivorship
+Alternatively
+At time t:
+Prospective policy value
+= 10000 A 40 + t :20 - t - 300  ́ a && 40 + t :20 - t
+Retrospective policy value =
+(b)
+300  ́ s && 40: t - 10000  ́
+(1.06) t
+ ́ A 1
+40: t
+p
+t 40
+The two values will be equal if:
+1 they are calculated on the same basis and
+2 the same basis was used to calculate the premiums in the policy
+value calculations
+The assumptions used to calculate the retrospective value will be based
+on the experienced conditions to date.
+For the prospective calculation, the assumptions will be those
+considered appropriate for the future remaining term.
+%% ---  27%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+These two sets of assumptions will not generally be the same.
+Further the assumptions used to calculate the premiums, whilst
+appropriate at the time, may not be considered appropriate for either
+policy value calculation.
+(iii)
+The prospective policy value at the end of 2003 is given by the formula:
+t V x : t
+So,
+= 10000  ́ A x + t : n - t - P  ́ a && x + t : n - t
+13 V 40:20
+= 10000  ́ A 53:7 - P  ́ a && 53:7
+= 10000  ́ A 53:7 - 300  ́ 5.847
+But,
+A 53:7 = A 1
+53:7
+1
+53:7
++ A
+= (1.06)
+1
+53:7
+A
+=
+1
+v 60 l 60
+v 53 l 53
+2 A 1
+53:7
+=
+1
+53:7
++ A
+= (1.06)
+1
+2  ́
+1.06 - 60  ́ 9287.2164
+1.06 - 53  ́ 9630.0522
+( A
+53:7
+1
+53:7
+- A
+) + A
+1
+53:7
+= 0.64138
+A 53:7 = 0.66904(from tables)
+(iv)
+So, A 53:7 = 1.06
+So, 13 V 40:20
+1
+2  ́ (0.66904 - 0.64138) + 0.64138 = 0.66986
+= 10, 000  ́ 0.66986 - 300  ́ 5.847 = \$4,944.50
+Mortality profit = Expected Death Strain – Actual Death Strain
+Expected Death Strain = q x + t (S - t +1 V) = q 52 (10000 – 13 V)
+= 0.003152 (10000 – 4944.50)
+= \$15.93
+Actual Death Strain = 1  ́ (S - t +1 V) = 10000 – 13 V
+= 10000 – 4944.50
+= \$5,055.50
+Mortality Profit = 15.93 – 5055.50 = - \$5,039.57 (i.e. a loss)
+This answer assumes the death benefit is paid at the end of year of death. The
+alternative, assuming payment on average half-way through the year was
+given full credit.
+%% ---  28
+
+\end{document}
