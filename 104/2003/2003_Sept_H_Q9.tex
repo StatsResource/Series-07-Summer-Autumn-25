@@ -1,0 +1,144 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+9
+On 1 June 2001 an insurer issued a 20 year level temporary annuity to a life then aged
+exactly 60. The single premium was paid on 1 June 2001.
+Let V t denote the prospective policy value held after t years (t = 0, 1, ..., 20)
+calculated using a constant force of interest d and assuming the member is subject to
+force of mortality m 60+t .
+(i) If the benefit is \$1 paid annually in arrears (so the first payment was made on
+31 May 2002), write down and explain a recurrence relation between V t and
+
+V t+1 for t = 0, 1, ..., 19.
+(ii) Suppose the benefit is \$h payable in arrears every h years, where h < 1. Write
+
+down a recurrence relation between V t and V t+h for t = 0, h, 2h, 3h...
+(iii) By considering the limit as h ® 0 show that Thiele’s equation for the policy
+value if the benefit is paid continuously is
+¶ V t
+= ( m 60 + t + d ) V t - 1
+¶ t
+and state the boundary condition for V 20 .
+(iv)
+Assuming that m 60+t is a constant m , solve Thiele’s equation for the policy
+value in (iii). [Hint: use an integrating factor.]
+
+Basis: Expenses are ignored
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+9
+(i)
+e \delta \; (V t + P) = p 60 +t ( V t +1 + 1)
+e \delta \; V t = p 60 +t ( V t +1 + 1)
+t = 0
+t > 0
+Explanation: LHS = reserve at time t plus one year’s interest. This must equal
+the reserve needed at time t + 1, plus the benefit payment then due, allowing
+for the probability that the policyholder survives from time t to time t + 1,
+which is the RHS.
+(ii) e \delta \;h V t = h p 60+ t ( V t + h + h ).
+(iii) Using e \delta \;h = 1 + \delta \; h + o ( h )
+%% ---  13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+and h p 60+ t = 1 − h q 60+ t = 1 − h \mu 60+ t + o ( h )
+Rewriting the above gives
+[1 + \delta \; h + o ( h )] V t = (1 − h \mu 60+ t + o ( h )) ( V t + h + h )
+so V t + h − V t = \delta \; hV t − h + h \mu 60+ t V t + h + o ( h )
+so V t + h − V t
+= \delta \; V t + \mu 60 + t V t + h − 1 + o ( h ) / h
+h
+Taking the limit as h → 0 gives
+\frac{\partial}{\partial } V t
+= (\delta \; + \mu 60+ t ) V t − 1
+\frac{\partial}{\partial } t
+as required. The boundary condition is
+V 20 = 0.
+(iv)
+We have
+\frac{\partial}{\partial } V t
+= (\delta \; + \mu) V t − 1
+\frac{\partial}{\partial } t
+so \frac{\partial}{\partial } V t
+− (\delta \; + \mu) V t = −1
+\frac{\partial}{\partial } t
+so e − ( \delta \;+\mu ) t
+\frac{\partial}{\partial } V t
+− ( \delta \; + \mu ) e − ( \delta \;+\mu ) t V t = − e − ( \delta \;+\mu ) t .
+\frac{\partial}{\partial } t
+This means that
+\frac{\partial}{\partial } − ( \delta \;+\mu ) t
+[ e
+V t ] = − e − ( \delta \;+\mu ) t
+\frac{\partial}{\partial } t
+so
+e − ( \delta \;+\mu ) t V t = ∫ − e − ( \delta \;+\mu ) t dt
+=
+1 − ( \delta \;+\mu ) t
+e
++ C
+\delta \;+\mu
+Hence
+V t =
+%% ---  14
+1
++ Ce ( \delta \;+\mu ) t .
+\delta \;+\mu
+(1)
+(2)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Using the boundary condition V 20 = 0 we have
+0 =
+1
++ Ce ( \delta \;+\mu )20
+\delta \;+\mu
+e − ( \delta \;+\mu )20
+C = −
+.
+so
+\delta \;+\mu
+So the solution is
+V t =
+=
+1
+[1 − e − ( \delta \;+\mu )20 e ( \delta \;+\mu ) t ] (3)
+\delta \;+\mu
+1
+[1 − e − ( \delta \;+\mu )(20 − t ) ]
+\delta \;+\mu
+= a 20 − t
+(4)
+(5)
+where the annuity is calculated using an effective force of interest of \delta \; + \mu.
+%% ---  15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
