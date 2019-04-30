@@ -1,0 +1,180 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+(i) State the age ranges over which Gompertz’ Law is an appropriate model for
+human mortality.
+
+(ii) Show that, under Gompertz’ Law, the probability of survival from age x to age
+x + t is equal to:
+é
+æ
+B ö ù
+ê exp ç -
+÷ ú
+è log c ø û
+ë
+(iii)
+%%%%%%%%%%%%%%%%%%%%%%%%—3
+c x ( c t - 1)
+.
+
+Describe a method of estimating the parameters, B and c, when graduating a
+set of crude mortality rates using Gompertz’ Law.
+
+[Total 7]
+
+6
+(i)
+Gompertz’ Law is a suitable model for human mortality for middle to older
+ages, say 35 and over.
+There is evidence that the Gompertz’ Law breaks down at very advanced ages
+and therefore 35 to 90 years is acceptable.
+(ii)
+t
+Since t p x = exp é ê - ò m x + s ds ù ú ,
+ë 0
+û
+putting \mu x = Bc x produces
+t
+t
+p x = exp é ê - ò Bc x + s ds ù ú .
+ë 0
+û
+Evaluating the integral, we obtain
+æ é x s ù t ö
+ç Bc c ú ÷ ,
+t p x = exp - ê
+ç ê ë log c ú û ÷
+0 ø
+è
+æ é Bc x c t - Bc x ù ö
+= exp ç - ê
+ú ÷ ÷
+ç ê
+log
+c
+ë
+û ú ø
+è
+æ - B ö
+= exp ç
+÷
+è log c ø
+(iii)
+c x ( c t - 1)
+.
+Suppose that a Poisson model is used in the investigation.
+Then the likelihood for the age interval x to x + 1 is
+K æ ç m x + 1 ö ÷
+2 ø
+è
+dx
+exp æ ç -m x + 1 E x c ö ÷ ,
+2
+è
+ø
+where K is a constant, m x + 1 is the force of mortality between exact ages x
+2
+and x + 1, d x is the number of deaths between exact ages x and x + 1 and E x c is
+the central exposed to risk at age x.
+Gompertz’ Law implies that m x + 1 = Bc
+2
+x + 1
+2 .
+Substituting this expression into the likelihood produces
+%% ---  10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+æ x + 1 ö
+K ç Bc 2 ÷
+è
+ø
+dx
+x + 1
+æ
+ö
+exp ç - Bc 2 E x c ÷ .
+è
+ø
+Over all ages in the investigation the likelihood is then proportional to
+æ x + 1 ö
+Õ ç è Bc 2 ÷ ø
+x
+dx
+x + 1
+æ
+ö
+exp ç - Bc 2 E x c ÷ ,
+è
+ø
+and B and c can be obtained by numerical maximisation of this expression.
+Alternatively,
+If, between exact ages x and x + 1, the force of mortality is
+m x + 1 , then Gompertz’ Law implies that
+2
+m x + 1 = Bc
+2
+x + 1
+2 .
+Taking logarithms of this equation produces
+log m x + 1 = log B + ( x + 1 ) log c ,
+2
+2
+and B and c can be estimated from the crude estimates
+of m x + 1 by a linear regression of log m x + 1 against x + 1⁄2.
+2
+2
+Alternative solutions such as these using weighted squares were also given credit.
+Calculate the crude mortality rates q̂ x
+Calculate
+å w ( q ˆ
+x
+- q x ) = S 2
+2
+x
+where w x = E x or w x \mu
+1
+Var ( E x )
+c x ( c - 1 )
+é æ - b ö ù
+÷ ÷ ú
+and q x = 1 - ê exp ç ç
+log
+c
+ø û
+è
+ë
+Choose B and c to minimise S 2
+Or similarly, but using the crude values m̂ x and m x = Bc x
+%% ---  11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
