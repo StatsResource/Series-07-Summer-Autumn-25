@@ -1,0 +1,118 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[Total 8]5
+A life insurance company has carried out an investigation, over N years, of the
+mortality of its term assurance policyholders. Premiums for these contracts are based
+on the policyholder’s age last birthday at the date of issue.
+The following data are available from the investigation:
+d x
+= number of deaths during the investigation aged x
+P x , t = number of lives under observation aged x at time t (t = 0, 1, ... N)
+where x is the policyholder’s age last birthday at date of issue plus the number of
+policy anniversaries passed.
+(i)
+(ii)
+(a) State the type of rate interval.
+(b) Write down an expression that may be used to evaluate the central
+exposed to risk using the available data for P x , t . State any assumptions
+made.
+
+The following is an extract from the data:
+x d x P x , t P x , t +1
+59
+60
+61 75
+67
+80 6,276
+6,551
+6,689 6,824
+6,340
+6,750
+Calculate an estimate of \mu 60 , stating any further assumptions made.
+(iii)
+104 S2003—3
+Give an example of why the assumptions you have made may not be
+appropriate in this particular investigation.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% ---  7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i)
+(a)
+The age definition of the death data is:
+x = age last birthday at date of issue plus number of complete years
+since issue
+= age last birthday at previous policy anniversary
+Age changes from x to x + 1 on a policy anniversary.
+This is therefore a policy year rate interval.
+(b)
+E x c =
+N N − 1
+0 t = 0
+∫ P x , t dt =
+1
+\sum  2 ( P x , t + P x , t + 1 )
+Assuming policy anniversaries are uniformly spread over the calendar
+year.
+(ii)
+\hat{\mu} x =
+d x
+estimates \mu at the mean age halfway through the interval.
+E x c
+Assuming birthdays are uniformly distributed over policy years,
+the mean age at the start of the interval is x + 1⁄2.
+The mean age halfway though is then x + 1.
+So, \hat{\mu} x estimates \mu x +1
+So, \hat{\mu} 59 =
+(iii)
+d 59
+c
+E 59
+=
+75
+1
+( 6276 + 6824 )
+2
+= 0.01145 estimates \mu 60 .
+Premiums are based on age last birthday. There could be a tendency for
+policyholders to take out policies just before their birthday to benefit from
+lower premiums. The assumption that birthdays are uniformly distributed
+would then be invalid.
+Other plausible reasons why assumptions made may not be valid were given
+credit.
