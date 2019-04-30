@@ -1,0 +1,158 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+8
+An insurance company offers different annuity rates to smokers and non-smokers.
+The premium rates are calculated using the following forces of mortality:
+non-smokers: m NS
+x + t = m x + t
+smokers: m Sx + t = m x + t + 0.019048
+m x + t is from the standard mortality table AM92 ultimate.
+An annuity is issued to a life aged exactly 50. The annuity is deferred for 15 years
+and is then payable continuously for life. A single premium of \$20,000 is paid at the
+date the policy is issued.
+(i)
+Calculate the level annual annuity that would be paid assuming the
+policyholder is:
+(a)
+(b)
+a non-smoker
+a smoker
+
+(ii)
+A policyholder fails to declare the fact that he is a smoker and is sold a non-
+smoker policy. Calculate the expected present value of the profit that the
+insurance company will make.
+
+Basis: 4% per annum interest throughout
+Expenses are ignored
+[Total 10]
+104 S2003—5
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+8
+(i)
+(a)
+Equation of value: P = X ⋅ 15 a 50 = X ⋅
+⇒ 20000 = X ⋅
+D 65
+D
+a 65 = X ⋅ 65 ( a  65 − 0.5 )
+D 50
+D 50
+689.23
+⋅ ( 12.276 − 0.5 ) = 5.939055 X
+1366.61
+⇒ X = \$3,367.54 per annum
+(b)
+Using the special mortality rates,
+S
+t p x
+⎧ ⎪ t
+⎫ ⎪
+= exp ⎨ − ∫ ( \mu x + s + 0.019048 ) ds ⎬
+⎪ ⎩ 0
+⎪ ⎭
+t
+⎧ ⎪
+⎫ ⎪
+= exp ⎨ − 0.019048 t − ∫ \mu x + s ds ⎬ = e − 0.019048 t ⋅ t p x
+⎪ ⎩
+⎪ ⎭
+0
+So,
+D x S + t
+D x S
+= v t ⋅ t p x s = v t ⋅ e − 0.019048 t ⋅ t p x =
+D x + t
+calculated at rate of
+D x
+interest j such that (1 + j) − 1 = v.e − 0.019048 => j = 6%.
+Or
+and
+%% ---  12
+D x S + t
+D x S
+= e − 0.019048 t ⋅
+D x + t
+calculated at 4%
+D x%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\infty
+a x S
+=
+∫ v
+\infty
+t
+⋅ t p x S dt
+=
+0
+(
+∫ v e
+t
+− 0.19048 t
+)
+⋅ t p x dt =
+0
+\infty
+∫ (
+)
+t
+v ⋅ e − 0.19048 ⋅ t p x dt
+0
+= a x calculated at rate of interest 6%
+So, 20000 = X ⋅
+1.06 − 65 \int 8821.2612
+1.06 − 50 \int 9712.0728
+⋅ ( 10.569 − 0.5 ) = 3.81608 X
+⇒ X = \$5,240.98 per annum
+Or 20000 = X ⋅ e − 0.28572 ⋅
+689.23
+⋅ ( 10.569 − 0.5 ) = 3.81610 X
+1366.61
+⇒ X = \$5,240.96 per annum
+(ii)
+EPV Profit = EPV of income – EPV of outgo
+= 20000 − 3367.54 \int
+S
+D 65
+S
+D 50
+\int a 65
+= 20000 − 3367.54 \int 3.81610
+= \$7,149.20
