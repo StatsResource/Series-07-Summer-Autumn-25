@@ -1,0 +1,190 @@
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+10
+
+[Total 13]
+On 1 September 2003 a man aged exactly 60 takes out a 5 year temporary annuity of
+\$1,000 per year payable annually in arrears. The annuity is deferred for 5 years. The
+annuity is purchased by a single premium paid on 1 September 2003.
+(i) Give the dates of the first and last annuity payments to be made (assuming the
+man is still alive).
+
+(ii) Let X represent the present value of the benefits payable under this annuity
+and K x the man’s curtate future lifetime. Calculate and plot the value of X for
+
+K x = 0, 1, ........
+(iii) P[X = x] denotes the probability that the random variable X has a value of x.
+Calculate P[X = x] for all possible values of x and plot a graph of P[X = x]
+against x.
+
+(iv)
+Calculate the premium.
+Basis: Mortality: AM92 ultimate
+5% per annum interest throughout
+Expenses are ignored
+104 S2003—6
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+10
+(i)
+First payment is on 31 August 2009 (1 September 2009 acceptable).
+Last payment is on 31 August 2013 (1 September 2013 acceptable).
+(ii)
+For K x - 5, present value (PV) = 0.
+K x
+For 6 - K x - 10, PV = 1000 \sum  v k .
+k = 6
+10
+For K x > 10, PV = 1000 \sum  v k .
+k = 6
+Hence, using v =
+1
+we have
+1.05
+K x present value
+0 - 5 0
+6
+7
+8
+9
+. 10 746.22
+1,456.90
+2,133.74
+2,778.35
+3,392.26
+The plot is shown below.
+4000
+3500
+3000
+2500
+2000
+1500
+1000
+500
+0
+0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15
+Kx
+Credit was also given to candidates who used the approximation given in the Gold book .
+%% ---  16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+The calculations are shown below, using AM92 ultimate mortality.
+P[ X = 0] = 6 q 60 = 1 −
+l 66
+8695.6199
+= 0.06370
+= 1 −
+9287.2164
+l 60
+P[ X = 746.22] = 6 p 60 . q 66 = l 66 − l 67 d 66 138.6082
+=
+=
+= 0.01492
+l 60
+l 60 9287.2164
+P[ X = 1,456.90] = = l 67 − l 68 d 67 152.5202
+=
+=
+= 0.01642
+l 60
+l 60 9287.2164
+P[ X = 2,133.73] = 8 p 60 . q 68 = l 68 − l 69 d 68 167.3586
+=
+=
+= 0.01802
+l 60
+l 60 9287.2164
+P[ X = 2,778.35] = 9 p 60 . q 69 = l 69 − l 70 d 69 183.0785
+=
+=
+= 0.01971
+l 60
+l 60 9287.2164
+P[ X = 3,392.26] =
+7 p 60 . q 67
+10 p 60
+=
+l 70 8054.0544
+=
+= 0.86722
+l 60 9287.2164
+%% ---  17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+The plot is shown below.
+1
+0.9
+0.8
+0.7
+0.6
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+1000
+2000
+3000
+4000
+X
+%--------------------------%
+(iv)
+Single premium = expected present value of benefits
+Using the data from part (iii) we have
+EPV benefits =
+\sum  x .(P[X = x ])
+The calculations are shown in the table below
+x Pr[ X = x ] x . Pr[ X = x ]
+0
+746.22
+1,456.90
+2,133.74
+2,778.35
+3,392.26 0.06370
+0.01492
+0.01642
+0.01802
+0.01971
+0.86722 0
+11.1336
+23.9223
+38.4500
+54.7613
+2941.8357
+sum
+Therefore the premium required is \$3,070.10.
+%% ---  18
+3,070.1029%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
