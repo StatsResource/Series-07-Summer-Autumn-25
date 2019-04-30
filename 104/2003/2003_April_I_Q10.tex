@@ -1,0 +1,152 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 7]10
+An illness-death model has three states:
+1 = healthy
+2 = sick
+3 = dead
+(i)
+(ii)
+11
+Draw and label a diagram showing the three states and the transition
+intensities between them.
+Show, from first principles, that in this illness-death model
+¶ 12
+11 12
+12 21
+12 23
+t p x = t p x m x + t - t p x m x + t - t p x m x + t .
+¶ t
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+10
+(i)
+m 12
+x
+1 Healthy
+2 Sick
+m 21
+x
+m 13
+x
+(ii)
+m 23
+x
+3 Dead
+By the Markov assumption, consider the survival probability
+condition on the state occupied at t .
+t + dt
+p 12
+x and
+We have
+t + dt
+11
+12
+12
+22
+13
+32
+p 12
+x = t p x dt p x + t + t p x dt p x + t + t p x dt p x + t . (*)
+But the last term in this equation is zero, since
+dt
+p 32
+x + t = 0.
+By the law of total probability,
+p x 22 + t = 1 - dt p x 21 + t - dt p x 23 + t ,
+and, substituting in (*), this produces
+dt
+11
+12
+12
+21
+23
+p 12
+x = t p x dt p x + t + t p x (1 - dt p x + t - dt p x + t ) .
+t + dt
+We now assume that, for small dt ,
+dt 12
+p 12
+x + t = m x + t dt + o ( dt ) ,
+dt p x 21 + t = m 21
+x + t dt + o ( dt ) , and
+dt p x 23 + t = m 23
+x + t dt + o ( dt ) ,
+where o ( dt ) is the probability that a life makes two or more transitions
+in the time interval dt , and
+o ( dt )
+= 0 .
+dt ® 0 dt
+lim
+Substituting for
+t + dt
+dt
+21
+p 12
+x + t , dt p x + t and
+dt
+p x 23 + t gives
+11 12
+12
+21
+23
+p 12
+x = t p x m x + t dt + t p x ( 1 - m x + t dt - m x + t dt ) + o ( dt )
+%% ---  20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Thus
+t + dt
+12
+11 12
+12 21
+12 23
+p 12
+x - t p x = t p x m x + t dt - t p x m x + t dt - t p x m x + t dt + o ( dt )
+and
+¶ 12
+t p x = lim +
+¶ t
+dt ® 0
+t + dt
+12
+p 12
+12
+12 21
+12 23
+x - t p x
+= t p 11
+x m x + t - t p x m x + t - t p x m x + t
+dt
+%% ---  21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
