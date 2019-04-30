@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%
+(i) Explain why crude mortality rates will be graduated before being used for
+premium calculations.
+
+(ii) (a)
+Describe how you would graduate crude rates by reference to a
+standard mortality table.
+(b)
+Comment on any further considerations that an insurance company
+would take into account before using these graduated rates for
+premium calculations for annuity policies.
+
+[Total 6]
+
+%%%%%%%%%%%%%%%%%%%
+4
+(i)
+It is generally assumed that the true mortality of the population progresses
+smoothly with age.
+The crude rates at each age will be estimated independently of the data at other
+ages. The data will not be spread evenly across ages and at some ages may be
+sparse. For these reasons the rates will not necessarily progress smoothly.
+Graduation allows us to use the information from adjacent ages to smooth the
+rates.
+Insurance companies prefer to use smooth rates for its premium calculations
+— any irregularities in the premium rates will be hard to justify to customers
+or would leave the company open to the risk of anti-selection or lapse/re-entry.
+%% ---  6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(ii)
+(a)
+The first step is to select a suitable standard table, based on a similar
+group of lives.
+We then plot the crude rates q x against q x s from the standard table to
+identify any simple relationship (logs may be plotted rather than q x ).
+Having selected a suitable relationship, we find the best-fit parameters,
+for example by maximum likelihood or least squares estimates.
+We then test the graduation for goodness of fit using statistical tests; if
+the fit is not adequate the process is repeated.
+(b)
+The rates will be used for annuity premiums. It is important for the
+company not to overestimate mortality (as the premiums charged
+would then be inadequate).
+In addition, as the company is using the rates as an estimate of future
+mortality, it should take into account any trends — particularly any
+likely reduction in future mortality rates.
+The company should also consider premium rates charged by
+competitors — if rates are out of line either too little business or too
+much (unprofitable) business may be attracted.
