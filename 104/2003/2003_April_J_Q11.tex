@@ -1,0 +1,160 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+[Total 8]
+A man aged exactly 45 has decided to invest some money to purchase a deferred
+annuity from an insurance company. The man plans to invest \$1,500 per annum for
+20 years; the first payment being made now, with subsequent payments made
+annually if he is alive. In addition he will have lump sums of \$3,000 to invest in 5
+and 10 years’ time, if he is then alive.
+The man has to choose between a standard whole life annuity and an annuity where
+the benefits are guaranteed to be paid for at least 10 years and for life thereafter. Both
+annuities are level, commence at age 65 and are payable annually in arrears.
+(i) Write down the equations of value for the standard whole life annuity \$X and
+the guaranteed annuity \$X* that can be bought.
+
+(ii) Show that by choosing the guaranteed annuity option, the annuity payable is
+\$155 per annum lower than under the standard option.
+
+(iii)
+The policyholder chooses to take the standard annuity option. He pays the
+premiums and reaches age 65. Calculate the probability that the policyholder
+survives long enough that he receives annuity payments whose nominal
+amount exceeds the total premiums paid.
+
+[Total 9]
+Basis: Mortality before age 65: AM92 ultimate
+Mortality from age 65: PMA92C20
+Interest: 4% per annum throughout
+Expenses are ignored
+%%%%%%%%%%%%%%%%%%%%%%%%—5
+
+
+
+11
+(i)
+The equations of value are, for the standard annuity:
+Either
+(
+¢  ́ v 20 20 p 45 = 1500 a && 45:20 + 3000  ́ v 5 5 p 45 + v 10 10 p 45
+X  ́ a 65
+)
+Or
+¢  ́
+X  ́ a 65
+æ D
+D 65
+( N - N 65 )
+D ö
++ 3000 ç 50 + 55 ÷
+= 1500  ́ 45
+D 45
+D 45
+è D 45 D 45 ø
+and for the guaranteed annuity
+Either
+(
+)
+(
+¢  ́ a 75
+¢  ́ v 20 20 p 45 = 1500 a && 45:20 + 3000  ́ v 5 5 p 45 + v 10 10 p 45
+X * a 10 + v 10  ́ 10 p 65
+Or
+X *  ́ a ¢
+65:10
+(
+ ́ v 20 20 p 45 = 1500 a && 45:20 + 3000  ́ v 5 5 p 45 + v 10 10 p 45
+)
+where p ¢ and a ¢ denote PMA92C20 mortality.
+(ii)
+Present value of premiums is given by
+æ D
+D ö
+1500 a && 45:20 + 3000  ́ ç 50 + 55 ÷ @ 4%
+è D 45 D 45 ø
+æ 1366.61 + 1105.41 ö
+= 1500  ́ 13.780 + 3000  ́ ç
+÷ (from tables)
+1677.97
+è
+ø
+= 25089.66
+The present value of the standard annuity is
+D 65
+689.23
+¢ =
+ ́ a 65
+ ́ (13.666 - 1) (from tables)
+1677.97
+D 45
+=
+5.2026
+and the standard annual annuity is
+%% ---  22
+)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+25089.66
+= 4822.52
+5.2026
+The present value of the guaranteed annuity is
+689.23 æ
+8405.16
+ö
+ ́ 1.04 - 10  ́ (9.456 - 1) ÷ (from tables)
+ç 8.1109 +
+1677.97 è
+9647.797
+ø
+= 5.3758
+and the guaranteed annuity is therefore
+25089.66
+= 4667.15
+5.3758
+so the difference is
+4822.52 - 4667.15 = 155.37, i.e. \$155 to nearest \$
+(iii)
+We must solve
+4822.52  ́ n = 1500  ́ 20 + 3000  ́ 2
+The solution is n = 7.46. So the purchaser must survive 8 years. The
+probability of doing so is
+¢
+8 p 65
+= ¢
+l 73
+¢
+l 65
+= 8803.265
+(using PMA92C20 mortality)
+9647.797
+= 0.9125
+%% ---  23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
