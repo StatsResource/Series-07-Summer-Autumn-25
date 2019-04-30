@@ -1,0 +1,66 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+3
+(i) List the data required for the exact calculation of the central exposed to risk of
+lives aged x last birthday in a mortality investigation over the two year period
+from 1 January 2001 to 1 January 2003.
+
+(ii) In an investigation of mortality during the period 1 January 2001 to 1 January
+2003, data are available on the number of lives under observation, aged x last
+birthday, on 1 January 2001, 1 July 2001 and 1 January 2003.
+Derive an approximation for the central exposed to risk at age x last birthday
+over the period in terms of the populations recorded on each of these three
+dates.
+
+3
+(i)
+For each life in the investigation we require:
+date of birth (or date of xth birthday);
+date of entry into observation;
+date of exit from observation.
+(ii)
+The central exposed to risk, E x c is given by the formula
+2
+E x c = ∫ P x , t dt ,
+0
+where P x , t is the number of lives under observation aged x last birthday at time
+t, measured as the duration since the start of the investigation.
+To estimate this, we use the trapezium rule (assuming P x,t is linear between
+census dates).
+Let the population aged x last birthday on 1 January 2001 be P x,0 ; and the
+corresponding populations on 1 July 2001 and 1 January 2003 be P x,0.5 and
+P x,2 .
