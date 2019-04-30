@@ -1,0 +1,236 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+Let X be a random variable representing the present value of the benefits of a 20 year
+term assurance issued to a life aged exactly 45, the benefit being payable at the end of
+the year of death.
+Let Y be a random variable representing the present value of the benefits of a 20 year
+pure endowment policy issued to a (different, independent) life also aged exactly 45.
+Finally, let Z denote the present value of the benefits of a 20 year endowment
+assurance issued to a third independent life aged exactly 45, the death benefit being
+payable at the end of the year of death.
+The benefit payable under each policy is \$1.
+(i) Calculate the variances of X and Y.
+(ii) Without carrying out any further calculations explain why
+Var(Z) < Var(X) + Var(Y).
+Basis: Mortality: AM92 ultimate
+Interest: 4% per annum throughout
+Expenses are ignored
+%%%%%%%%%%%%%%%%%%%%%%%%—4
+8
+(i)
+A few large deviations can be offset by a lot of small deviations. This is not
+detected as the information is summarised into just one figure.
+The true mortality may be consistently slightly lighter or heavier than the
+standard table. As the test statistic is based on squared deviations, the test will
+miss this. (Note that large differences should be detected.)
+Even if the true mortality is not biased as a whole, there could be significant
+runs or clumps of ages for which it is biased. Again because of the use of
+squared deviations and a single figure, this will not be detected.
+(ii)
+Standardised deviations test
+This is used to test for a small number of large deviations.
+Calculate the standardised deviations at each age x, z x =
+d x - E x q x s
+E x q x s (1 - q x s )
+where
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Under the null hypothesis, the z x are independent samples from N(0, 1)
+distribution.
+We can calculate the expected number of z x in various intervals (for example
+we expect fewer than 1 in 20 to be greater than 2 or less than - 2) and compare
+with the observed number in each interval.
+The comparison can be formalised by using a c 2 -statistic equal to
+å
+( Actual number
+all intervals
+- Expected number )
+2
+Expected number
+provided the number of intervals is large (such that the expected number in
+each interval is not less that five (as a rule of thumb).
+Signs test
+This tests for the true mortality being lighter or heavier than the standard table.
+Either
+%% ---  13%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Calculate the standardised deviations at each age x, z x =
+d x - E x q x s
+E x q x s (1 - q x s )
+where
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Or
+Calculate the sign of the deviation at each age x, d x - E x q x s .
+where
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Then
+The test statistic is P, the number of positive deviations.
+Under the null hypothesis P ~ Bin(m, 1⁄2) where m is the number of ages.
+This is a two-tailed test as too many positive or negative deviations is a defect.
+Then either
+Find k*, the smallest k such that
+k
+m
+æ m öæ 1 ö
+å ç è j ÷ç
+÷ 3 0.025 (available in tables).
+2
+è
+ø
+ø
+j = 0
+At the 5% level, we would accept the null hypothesis if k* < P < m - k*.
+Or
+Find the p-value for the test statistic P.
+If this p-value is greater than 0.025, we would accept the null hypothesis (at
+the 5% level.
+Or
+If the number of age groups is large, use the approximation
+%% ---  14%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+P : Normal( m , m ).
+2 4
+Cumulative deviations
+This tests for the true mortality being lighter or heavier than the standard table
+either over the whole age range or over subsections.
+Calculate the deviations at each age x, d x - E x q x s .
+where
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Sum these over all ages and standardise, to give our test statistic:
+å d x - E x q x s
+all x
+å ( E x q x s ( 1 - q x s ) )
+all x
+Under the null hypothesis this is distributed N(0, 1).
+We use a two-tailed test as both positive and negative cumulative deviations
+are of interest.
+At the 5% level, we will accept the null hypothesis if the absolute value of the
+statistic is less than 1.96.
+Grouping of signs
+This tests for runs of deviations of the same sign.
+Either
+Calculate the standardised deviations at each age x, z x =
+d x - E x q x s
+E x q x s (1 - q x s )
+where
+%% ---  15%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Or
+Calculate the sign of the deviation at each age x, d x - E x q x s .
+where
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Then
+Calculate n 1 = number of positive deviations
+n 2 = number of negative deviations
+G = number of groups of positive deviations
+Under the null hypothesis
+æ n 1 - 1 ö æ n 2 + 1 ö
+ç
+÷ç
+÷
+t - 1 ø è t ø
+è
+.
+P(G = t) =
+æ n 1 + n 2 ö
+ç
+÷
+è n 1 ø
+This is a one-tailed test as we are only interested in small values of G.
+Then either
+Find k*, the smallest k such that
+æ n 1 - 1 ö æ n 2 + 1 ö
+ç
+÷ç
+÷
+è t - 1 ø è t ø 3 .05
+å æ n 1 + n 2 ö
+t = 1
+ç
+÷
+è n 1 ø
+k
+At the 5% level, we accept the null hypothesis if G > k*.
+Or
+Calculate
+%% ---  16%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+æ n 1 - 1 ö æ n 2 + 1 ö
+ç
+÷ç
+÷
+G - 1 ø è G ø
+Pr[exactly G positive groups] = è
+æ n 1 + n 2 ö
+ç
+÷
+è n 1 ø
+and if this is greater than 0.05, accept the null hypothesis.
+Or
+If the number of age groups is large (> about 20)
+use a normal approximation as follows:
+æ n ( n + 1) ( n 1 n 2 ) 2 ö
+G : Normal ç 1 2
+,
+.
+3 ÷
+è n 1 + n 2 ( n 1 + n 2 ) ø
+Serial correlations
+This tests for runs of deviations of the same sign.
+Calculate the standardised deviations at each age x, z x =
+d x - E x q x s
+E x q x s (1 - q x s )
+where
+d x = observed number of deaths at age x
+E x = exposed to risk at age x
+q x s = mortality rate for age x from standard table
+Calculate the correlation coefficient of the jth lagged sequence, r j using the
+formula in the Gold Book.
+Under the null hypothesis, r j is distributed N(0, 1/m).
+This is a one-tailed test as we are only interested in high values of r j (which
+indicates a tendency for z x to cluster).
+Calculate m  ́ r j
+At the 5% level, we will accept the null hypothesis if
+m  ́ r j is less than
+1.645.
+%% ---  17%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
