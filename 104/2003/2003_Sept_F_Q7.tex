@@ -1,0 +1,204 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+7
+A very large employer is considering the simple three state Markov model of its
+pension scheme shown below:
+Employed (E)
+v x
+r x
+Retired (R)
+m x
+Dead (D)
+(i) Define t p x RD .
+(ii) Suppose we observe a large number N of employees aged x. The ith life is
+observed from age x+ a i to age x + b i where 0 \$ a i < b i \$ 1. Suppose that of
+the employees observed, K retire and M die.
+104 S2003—4
+
+(a) Assuming the transition intensities are constant between ages x and
+x + 1, write down the likelihood function for this data.
+(b) Derive an expression for the maximum likelihood estimate r ˆ x of r x .
+(iii)
+The employer has observed that retired people are living longer than
+anticipated and therefore increasing the cost of the pension scheme. Annual
+records are kept of numbers of retired people at each age, and a summary is
+given below.
+Age last
+birthday Number
+of retired people
+at 1 January 2001 Number
+of retired people
+at 1 January 2002 Number
+of deaths
+in 2001
+70
+71
+72
+73 8,143
+7,592
+6,811
+7,249 8,741
+8,062
+7,493
+6,693 103
+76
+107
+94
+Use this data to estimate q 71 and q 72 stating clearly any assumptions you
+make.
+
+
+7
+(i) p x RD is the probability that a life aged x and in the retired state at time 0 will
+be in the dead state at time t.
+(ii) (a)
+t
+Omitting the x subscripts for clarity, the likelihood function is given by
+L = Const \int
+N
+∏ e − ( v +ρ )( b − a ) \int v M ρ K .
+i
+i
+i = 1
+This solution assumes (as was intended by the question) that
+employees ceased to be observed when they retired. Credit was also
+given if candidates assumed observation continued into retirement, so
+that deaths after retirement were taken into account.
+(b)
+The log-likelihood is then given by
+N
+\sum  − ( v + ρ )( b i − a i ) + M log v + K log ρ .
+logL = const +
+i = 1
+Differentiating to find the maximum gives
+N
+d
+K
+log L = − \sum  ( b i − a i ) + .
+d ρ
+ρ
+i = 1
+To find the maximum likelihood estimate, we set this equal to zero so
+N
+K
+= \sum  ( b i − a i )
+ρ ˆ i = 1
+so
+ρ ˆ =
+K
+N
+\sum  ( b i − a i )
+.
+i = 1
+We check this is a maximum by finding the second derivative:
+d 2
+d ρ
+2
+log L = −
+K
+ρ 2
+< 0
+so indeed we have a maximum.
+%% ---  10%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iii)
+c
+E 71
+ 0.5 \int ( P 71 (2001) + P 71 (2002))
+≈ 0.5 \int (7592 + 8062) = 7827
+so \hat{\mu} 71 =
+d 71
+c
+E 71
+=
+76
+= 0.009710
+7827
+and q 71 ≈ 1 − e −\hat{\mu} 71
+= 0.009663.
+Similarly
+c
+E 72
+≈ 0.5 \int (6811 + 7493) = 7152
+and
+\hat{\mu} 72 =
+107
+= 0.01496.
+7152
+and hence
+q 72 ≈ 1 − e −\hat{\mu} 72 = 0.01485.
+Assumptions
+- \mu is constant over year of age
+- population varies linearly between census dates.
+ALTERNATIVELY
+(iii)
+C
+E 71
+ 0.5 \int (7592 + 8062) = 7827 as above
+E 71
+c
+= E 71
++
+d 71
+2
+= 7827 +
+so q 71 =
+=
+76
+= 7865
+2
+d 71
+E 71
+76
+= 0.009663
+7865
+%% ---  11%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Similarly,
+c
+E 72
+ 0.5 \int (6811 + 7493) = 7152
+E 72 = 7152 +
+q 72 =
+107
+2
+107
+7205.5
+= 7205.5
+= 0.01485
+Assumptions
+- birthdays are distributed uniformly over calendar years
+- deaths are distributed uniformly over calendar years
