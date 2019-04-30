@@ -1,0 +1,165 @@
+
+
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%—25
+The Cox proportional hazards model is to be used to model the rate at which students
+leave a certain profession before qualification. Assuming they stay in the profession,
+students will qualify three years after joining the profession. In the fitted model, the
+hazard depends on the time, t, since joining the profession and three covariates. The
+covariates, their categories and the fitted parameters for each category are shown in
+the table below:
+Covariate
+6
+Possibility
+Parameter
+Size of employer large
+small
+0
+0.4
+Degree studied none
+Science
+Arts
+other 0.3
+-0.1
+0.2
+0
+Location London
+other UK
+overseas 0
+-0.3
+0.4
+(i) Defining clearly all the terms you use, write down an expression for the hazard
+function in this model.
+
+(ii) State the class of students which is most likely to proceed to qualification
+under this model, and that which is least likely.
+
+(iii) A student who has been in the profession for one year moves from a “small”
+employer to a “large” employer. Express the probability that he will qualify
+with the “large” employer P L in terms of the probability that he would have
+qualified if he had stayed with the “small” employer P S , all other factors being
+equal.
+
+[Total 7]%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+5
+l ( t ; z i ) = l 0 ( t ) exp( b z i T )
+(i)
+where l ( t ; z i ) is the hazard at duration t ,
+b = (0.4, 0.3, - 0.1, 0.2, - 0.3, 0.4)
+and
+z i = ( z 1 , z 2 , z 3 , z 4 , z 5 , z 6 )
+where
+ì 1 : small employer
+z 1 = í
+î 0 : otherwise
+ì 1 : no degree
+z 2 = í
+î 0 : otherwise
+%% ---  7%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ì 1 : Science degree
+z 3 = í
+î 0 : otherwise
+ì 1 : Arts degree
+z 4 = í
+î 0 : otherwise
+ì 1 : other UK location
+z 5 = í
+î 0 : otherwise
+ì 1 : overseas location
+z 6 = í
+î 0 : otherwise
+l 0 ( t ) = baseline hazard at duration t
+Alternatively
+l ( t ; z i ) = l 0 ( t ) exp(0.4 z 1 + 0.3 z 2 - 0.1 z 3 + 0.2 z 4 - 0.3 z 5 + 0.4 z 6 )
+where l ( t ; z i ) is the hazard at duration t ,
+l 0 ( t ) = baseline hazard at duration t
+and
+where
+ì 1 : small employer
+z 1 = í
+î 0 : otherwise
+ì 1 : no degree
+z 2 = í
+î 0 : otherwise
+ì 1 : Science degree
+z 3 = í
+î 0 : otherwise
+ì 1 : Arts degree
+z 4 = í
+î 0 : otherwise
+ì 1 : other UK location
+z 5 = í
+î 0 : otherwise
+ì 1 : overseas location
+z 6 = í
+î 0 : otherwise
+%% ---  8%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Alternative solutions for β and z were acceptable, but the important point was that the
+vector β is a constant. One possible alternative given was:
+β = (0.4, 0.1, 0.1)
+z1 = 0 (large); 1(small)
+z2 = 3 (none); -1 (science); 2 (arts); 0 (other)
+z3 = -3 (other UK); 0 (London); 4 (overseas)
+(ii)
+Most likely corresponds to lowest hazard, so large employer, Science degree,
+other UK location.
+Least likely is highest hazard, so small employer, no degree, overseas location.
+(iii)
+We have
+P L = e
+- ò 1 3 l L ( t ; z i ) dt
+where l L ( t ; z i ) is the hazard rate for a large employer
+We know that
+l L ( t ; z i )
+e 0
+= 0.4 = 0.6703
+l s ( t ; z i )
+e
+3
+- l ( t ; z ) dt
+so, P L = e ò 1 L i
+3
+- 0.6703 l s ( t ; z i ) dt
+= e ò 1
+æ - 3 l ( t ; z ) dt ö
+= ç e ò 1 s i ÷
+è
+ø
+0.6703
+= (P S ) 0.6703 .
+%% ---  9%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
