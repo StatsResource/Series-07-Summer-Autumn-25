@@ -1,0 +1,430 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+[Total 15]11
+A large investigation has been carried out into mortality among people of working
+age. It is suggested that the underlying mortality rates among the lives in the
+investigation are the same as those tabulated in a well-known standard table.
+(i) Describe three possible features of the mortality data in the investigation that
+might lead you to reject the suggestion.
+
+(ii) The actual number of deaths of people in the investigation, together with the
+exposed to risk, are tabulated below. The expected number of deaths which
+would arise if we applied the rates in the standard table to the exposed to risk
+in the investigation, and the standardised deviations, are also shown below.
+Age
+Exposed to risk Actual deaths E x d x Expected
+deaths from
+rates in
+standard table
+E x q x s
+35,000
+33,000
+30,000
+30,000
+31,000
+28,000
+25,000
+23,000
+20,000 35
+30
+31
+45
+84
+138
+229
+360
+522 34
+29
+35
+52
+80
+130
+213
+348
+505
+20–24
+25–29
+30–34
+35–39
+40–44
+45–49
+50–54
+55–59
+60–64
+Standardised
+deviations
+z x
+0.17150
+0.18569
+- 0.67612
+- 0.97072
+0.44721
+0.70165
+1.09630
+0.64327
+0.75649
+Using 3 appropriate statistical tests, compare the observed mortality rates with
+those in the standard table.
+For each test you perform, state the possible differences between the data and
+the standard table that it is designed to detect, perform the test and clearly state
+your conclusions.
+Note: the standardised deviations, z x , are given by the formula:
+z x =
+d x - E x q x s
+E x q x s
+using the approximation E x q x s ; E x q x s (1 - q x s ) . You should use this
+approximation in your calculations.
+(iii)
+104 S2003—7
+[10]
+Comment on your results. Include in your comments an observation on the
+consequences for a life office which used the standard table mortality rates
+when calculating premiums for a class of lives that experienced the mortality
+rates underlying those observed in the investigation.
+
+[Total 16]
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+11
+(i)
+On average, the underlying mortality of the lives in the investigation could be
+systematically heavier or lighter than that represented by the standard table.
+Even if, overall, the mortality in the investigation is not significantly different
+from that in the standard table, there could be individual age-groups where
+large differences exist.
+Even if, overall, the mortality in the investigation is not significantly different
+from that in the standard table, there could be significant sections of the age
+range (i.e. runs of consecutive age groups) over which it is heavier or lighter.
+Reasons as to why these points might be the case (for example discussions
+about homogeneity) were given credit if valid in the context of the question.
+(ii)
+The null hypothesis for all the tests is that the underlying mortality of the lives
+in the investigation is that of the standard table.
+CHI SQUARED TEST
+The Chi-squared test is based on z x 2 , the calculation of which is shown below
+Age group Actual
+deaths Expected
+deaths z x z x2
+20–24
+25–29
+30–34
+35–39
+40–44
+45–49
+50–54
+55–59
+60–64 35
+30
+31
+45
+84
+138
+229
+360
+522 34
+29
+35
+52
+80
+130
+213
+348
+505 0.17150
+0.18569
+−0.67612
+−0.97072
+0.44721
+0.70165
+1.09630
+0.64327
+0.75649 0.02941
+0.03448
+0.45714
+0.94231
+0.20000
+0.49231
+1.20188
+0.41379
+0.57228
+Using the data in the table above,
+\sum  z x 2 = 4.34360 .
+x
+This is a test of overall adherence of the data to the standard table.
+The test statistic is
+\sum  z x 2 ~ \chi^2 2 m ,
+x
+where m is the number of age groups ( m = 9 in our case), because we are
+comparing an experience with a standard table.
+%% ---  19%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+This is less than the critical value of the \chi^2 9 2 distribution at the 5% level.
+We accept the null hypothesis.
+STANDARDISED DEVIATIONS TEST
+This tests for the possibility that there are a small number of age groups with
+large differences between the mortality rates in the investigation and the
+standard table.
+The z x s comprise m independent samples from a Normal (0,1) distribution.
+We can compare the expected and actual number of deviations in the
+following ranges:
+Range
+(-3,-2) (2,-1) (-1,0) (0,1) (1,2) (2,3)
+Expected
+0.18 1.26 3.06 3.06 1.26 0.18
+Actual
+0
+0
+2
+6
+1
+0
+Therefore under the null hypothesis we should expect fewer than 1 in 20 to be
+> 2 in absolute magnitude. In this case none of the z x s exceeds 2 in absolute
+value, so we accept the null hypothesis.
+Also, under the null hypothesis about half the deviations will lie between -2/3
+and +2/3. In this case 4 out of 9 do, which is consistent with the null
+hypothesis.
+SIGNS TEST
+This tests for the possibility of the mortality rates in the investigation being
+systematically lower or higher than those in the standard table.
+Let P be the number of z x s that are positive.
+Then under the null hypothesis, P ~ Binomial(9, 0.5).
+We have 7 positive signs. The probability of getting 7 or more positive signs
+if the null hypothesis is true is (also available from tables in Gold book):
+⎛ 9 ⎞ 1 ⎛ 9 ⎞ 1 ⎛ 9 ⎞ 1
+⎜ ⎟ 9 + ⎜ ⎟ 9 + ⎜ ⎟ 9
+⎝ 7 ⎠ 2 ⎝ 8 ⎠ 2 ⎝ 9 ⎠ 2
+9! 1
+9! 1
+1
+=
++
++ 9
+9
+9
+7!2! 2 8!1! 2
+2
+= (36 + 9 + 1)0.001953125
+= 0.08984375.
+%% ---  20%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Or in this case, it is sufficient to look at the probability of getting just 7 signs
+(= 0.0703).
+This is greater than 0.025 (2-tailed test)
+We accept the null hypothesis.
+CUMULATIVE DEVIATIONS TEST
+When using the whole age range, this tests for the possibility of the mortality
+rates in the investigation being systematically lower or higher than those in the
+standard table.
+Under the null hypothesis,
+m
+\sum  ( d x − E x q x s )
+x = 1
+m
+~ Normal(0,1)
+\sum  E x q x s
+x = 1
+Using the data in the table, we have
+m
+\sum  ( d x − E x q x s )
+x = 1
+m
+\sum  E x q x s
+=
+48
+= 1.271.
+1,426
+x = 1
+Since both positive and negative cumulative deviations are of interest we use a
+two-tailed test.
+Since |1.271|<1.96 we accept the null hypothesis.
+GROUPING OF SIGNS TEST
+This tests for runs of deviations of the same sign, that is for subsections of the
+age range for which the mortality rates of lives in the investigation are
+systematically lower or higher than the rates in the standard table.
+Let G be the number of groups of positive z x s.
+Let n 1 be the number of positive z x s and n 2 be the number of negative z x s.
+In our case G = 2, n 1 = 7 and n 2 = 2.
+Then the probability of getting 2 or fewer groups of positive signs is
+%% ---  21%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+⎛ 6 ⎞ ⎛ 3 ⎞ ⎛ 6 ⎞ ⎛ 3 ⎞
+6! 3!
+3!
+⎜ ⎟⎜ ⎟ ⎜ ⎟⎜ ⎟
++
+⎝ 1 ⎠ ⎝ 2 ⎠ + ⎝ 0 ⎠ ⎝ 1 ⎠ = 1!5!1!2! 2!1! = 21 = 0.58333
+9!
+36
+⎛ 9 ⎞
+⎛ 9 ⎞
+⎜ ⎟
+⎜ ⎟
+7!2!
+⎝ 7 ⎠
+⎝ 7 ⎠
+Using a one-tailed test, since only small values of
+that 0.58333 > 0.05.
+We accept the null hypothesis.
+%% ---  22
+G are of interest, we find%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+SERIAL CORRELATIONS TEST
+This tests for runs of deviations of the same sign, that is for subsections of the
+age range for which the mortality rates of lives in the investigation are
+systematically lower or higher than the rates in the standard table.
+The correlation coefficient at lag 1 is
+m − 1
+r 1 =
+\sum  ( z x − z * )( z x + 1 − z ** )
+x − 1
+m − 1 m − 1
+x = 1 x = 1
++1⁄2
+.
+\sum  ( z x − z * ) 2 \sum  ( z x + 1 − z ** ) 2
+where z * is the mean of the standard deviations from ages 1 to m − 1 and
+z ** is the mean of the standard deviations from ages 2 to m .
+The calculations are shown in the table below.
+Age
+group z x
+20–24
+25–29
+30–34
+35–39
+40–44
+45–49
+50–54
+55–59
+60–64 0.17150
+0.18569
+−0.67612
+−0.97072
+0.44721
+0.70165
+1.09630
+0.64327
+0.75649
+z x − z *
+−0.028348
+−0.014158
+−0.875968
+−1.170568
+0.247363
+0.501803
+0.896453
+0.443423
+0.55664
+z x − z **
+−0.10147
+−0.08728
+−0.94909
+−1.24369
+0.17424
+0.42868
+0.82333
+0.3703
+0.48352
+z * = 0.19985
+z ** = 0.27297
+%% ---  23%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Age
+group ( z x − z * ) 2 ( z x − z ** ) 2
+20–24
+25–29
+30–34
+35–39
+40–44
+45–49
+50–54
+55–59
+60–64 0.000804
+0.000200
+0.767319
+1.370228
+0.061188
+0.251806
+0.803627
+0.196624
+0.309848 0.010296
+0.007618
+0.90077
+1.546765
+0.030360
+0.183767
+0.67787
+0.137122
+0.23379
+( z x − z * )( z x + 1 − z ** )
+0.00247
+0.013437
+1.089433/
+−0.203960
+0.106040
+0.413149
+0.331957
+0.214404
+Hence
+m − 1
+r 1 =
+\sum  ( z x − z * )( z x + 1 − z ** )
+x − 1
+m − 1 m − 1
+x = 1 x = 1
+\sum  ( z x − z * ) 2 \sum  ( z x + 1 − z ** ) 2
+=
+1.96693
+= 0.549045.
+(3.451796)(3.718062)
+Now r 1 e m ~ Normal(0,1).
+Since m = 9, we have r 1 e m = 3 \int 0.549045 = 1.64714.
+Using a one-tailed test (since we are only interested in positive serial
+correlations), the probability of getting a value as high as 1.64714 is 0.05.
+Therefore we have just sufficient evidence to reject the null hypothesis.
+This test uses the exact formula, as given in the Core Reading. Credit was
+also given to candidates who used the approximation given in the Gold book.
+(iii)
+There is little evidence here to suggest that the mortality of the lives in the
+investigation is significantly different from that represented by the standard
+table.
+The experience passes all the tests except the serial correlations test (and only
+fails that marginally).
+However, there is a suggestion that at ages over 40, mortality is consistently
+heavier than that in the standard table.
+Moreover it is at ages over 40 that most deaths occur.
+%% ---  24%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+Therefore life offices using the standard table to represent the mortality
+experience of lives such as those in the investigation might find their
+profitability impaired, as they would tend to charge premiums which are too
+low.
+%% ---  25
