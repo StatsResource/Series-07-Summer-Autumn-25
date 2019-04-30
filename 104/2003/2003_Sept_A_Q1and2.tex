@@ -1,0 +1,91 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+1 State the reasons why crude mortality rates are graduated before they are used in
+financial calculations.
+
+2 An investigation into mortality by an insurer follows N independent and identical
+lives over the year of age from x to x + 1. Each life holds one or more term assurance
+policies. The proportion of the N lives holding i policies is p i for i = 1, 2, ...
+Let C denote the total number of claims made on all policies, and let D be the number
+of deaths among the N policyholders. Show that
+i 2 p i
+å
+Var( C )
+= i
+.
+Var( D )
+å p i
+
+i
+%% ---  4%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— September 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+1
+It is normally assumed that the true mortality rates in the population under
+investigation are smooth functions of age.
+Crude mortality rates are typically estimated separately at each integer age, and
+therefore may not progress smoothly.
+Graduation allows information from adjacent ages to be used to improve the estimate
+at each age, thus reducing sampling errors.
+It is desirable that financial quantities progress smoothly with age, as irregularities are
+hard to justify in practice. If the underlying mortality rates are smooth, then financial
+quantities calculated using them will also be smooth.
+2
+Let D i denote the number of deaths among the π i N lives with i policies, and let C i
+denote the number of claims among the same group. Then C i = iD i and
+D =
+\sum  D i
+i
+C =
+\sum  C i = \sum  iD i .
+i
+i
+Now D i ~ B (π i N , q x ) since lives are genuinely independent and
+Var( C )
+= Var ⎛ ⎜ \sum  iD i ⎞ ⎟
+⎝ i
+⎠
+=
+\sum  i 2 Var( D i )
+i
+=
+\sum  i 2 π i Nq x (1 − q x )
+i
+and
+Var(D)
+= Var ⎛ ⎜ \sum  D i ⎞ ⎟
+⎝ i
+⎠
+=
+\sum  π i Nq x (1 − q x )
+i
