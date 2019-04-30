@@ -1,0 +1,277 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%12
+A manufacturer of computer chips is attempting to estimate the useful working
+lifetime of its products. To do so, it has been tracking 20 chips sold on 1 January
+1997. The purchaser of each chip was contacted at three-monthly intervals up to
+1 January 2002 to check whether the chip was still functioning correctly. The results
+are summarised below (where B means observation ceased because the chip stopped
+functioning and O means observation ceased for some other reason).
+Date observation ceased Reason
+1 April 1997
+1 July 1997
+1 October 1997
+1 October 1997
+1 October 1997
+1 January 1998
+1 January 1998
+1 July 1998
+1 July 1998
+1 October 1998
+1 July 1999
+1 July 1999
+1 July 1999
+1 October 1999
+1 April 2000
+1 July 2000
+1 October 2000
+1 January 2001
+1 January 2002
+1 January 2002 B
+B
+O
+O
+O
+B
+B
+O
+O
+O
+O
+O
+O
+B
+O
+O
+B
+B
+O
+O
+(i) Explain how the manufacturer’s tracking method introduces censoring into the
+study.
+
+(ii) Calculate the Nelson-Aalen estimate of the integrated hazard for these
+computer chips. State any assumptions that you make about the exact time
+each chip stopped functioning.
+
+(iii) Use this to approximate the Kaplan-Meier estimate of the survival function
+and sketch the survival function.
+
+(iv) Suggest two ways in which the breakdown rate for computer chips is similar
+to typical patterns for human mortality.
+
+[Total 14]
+%%%%%%%%%%%%%%%%%%%%%%%%—6
+
+12
+(i)
+We only know during which three month period the chip broke down, not the
+actual date of breakdown.
+The investigation is cut short at 1 January 2002.
+We don’t have any information on the chips where observation ceased for
+some other reason.
+(ii)
+Either
+Assuming that the chips break down or are censored at the dates given in the
+question, and measuring time in months, we have
+t j n j c j d j
+0
+3
+6
+12
+33
+45
+48 20
+20
+19
+15
+7
+4
+3 0
+0
+3
+6
+2
+0
+2 0
+1
+1
+2
+1
+1
+1
+d j
+n j
+0
+1/20
+1/19
+2/15
+1/7
+1/4
+1/3
+L t = å
+d j
+n j
+0
+0.05
+0.1026
+0.2360
+0.3788
+0.6288
+0.9622
+Or
+Assuming that the chips break down or are censored mid-way between the
+three-monthly checks (i.e. that a chip reported as breaking down or being
+censored on 1 April 1997 actually broke down or was censored mid-way
+between 1 January 1997 – when it was known to be working – and 1 April
+1997), we have
+d j
+d j
+n j
+c j
+d j
+L t = å
+t j
+n j
+n j
+0
+1.5
+4.5
+10.5
+31.5
+43.5
+46.5
+20
+20
+19
+15
+7
+4
+3
+0
+0
+3
+6
+2
+0
+2
+0
+1
+1
+2
+1
+1
+1
+0
+1/20
+1/19
+2/15
+1/7
+1/4
+1/3
+0
+0.05
+0.1026
+0.2360
+0.3788
+0.6288
+0.9622
+%% ---  24%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+S(t) = exp( -L t ),
+so, depending on which assumption is made about the exact dates of
+breakdowns and censorings
+Either
+t S(t)
+0 \$ t < 3
+3 \$ t < 6
+6 \$ t < 12
+12 \$ t < 33
+33 \$ t < 45
+45 \$ t < 48
+48 \$ t 1
+0.9512
+0.9025
+0.7898
+0.6847
+0.5332
+0.3821
+or
+t S(t)
+0 \$ t < 1.5
+1.5 \$ t < 4.5
+4.5 \$ t < 10.5
+10.5 \$ t < 31.5
+31.5 \$ t < 43.5
+43.5 \$ t < 46.5
+46.5 \$ t 1
+0.9512
+0.9025
+0.7898
+0.6847
+0.5332
+0.3821
+1
+0.9
+0.8
+0.7
+0.6
+(iii)
+0.5
+0.4
+0.3
+0.2
+0.1
+0
+0
+12
+24
+36
+48
+60
+Duration (months)
+%% ---  25%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+(iv)
+Two similarities:
+High initial levels of failure, similar to high infant mortality in humans.
+Increasing failure for older chips, similar to rising mortality in old age for
+humans.
+Note that the diagram shown above in the solution to part (iii) assumes that
+breakdowns and censorings take place at the dates given in the question. The
+alternative assumption implies that the steps in the step function should all be shifted
+1.5 months to the left.
+The two alternative assumptions given about when breakdowns and censorings take
+place are the only plausible ones. Other assumptions (for example, that breakdowns
+and censorings are uniformly distributed within each interval) are wrong and did not
+receive credit
+%% ---  26%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%— April 2003 — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
