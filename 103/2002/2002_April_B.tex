@@ -35,38 +35,37 @@
 \begin{enumerate}
 \item
 10 A00—
-(i) Explain briefly what is meant by a linear trend and by seasonal variation in
+\begin{enumerate}
+\item (i) Explain briefly what is meant by a linear trend and by seasonal variation in
 respect of a sequence of observed values {x 1 , x  , ..., x n } forming a time series.
-[]
+\item 
 (ii) Describe an operation which can be applied to the data in order to remove
 additive seasonal variation of period .
-[]
+\item 
 (iii) Derive an appropriate operation to perform on the process
-X t = exp(a + bt + Z t ),
-where Z is I(1), in order to obtain a stationary process Y t .
-4
-[]
-[Total 6]
+\[X_t = exp(a + bt + Z_t ),\]
+where $Z$ is $I(1)$, in order to obtain a stationary process Y t .
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+%%  - Question 4
+\item 
 Consider the second-order autoregressive process
-Y t = -  a Y t - 1 + a  Y t -  + Z t
+\[Y t = -  a Y t - 1 + a  Y t -  + Z t\]
 where {Z t } is a zero-mean white noise process with Var(Z t ) = s  .
-(i) Determine the range of values of a for which the process Y can be stationary.
-[]
+\begin{enumerate}
+\item (i) Determine the range of values of a for which the process Y can be stationary.
+\item 
 (ii) Derive the autocovariances γ 1 and γ  of Y in terms of a and s .
-10 A00—
-[6]
+\end{enumerate}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 (i)
-A linear trend means that the line of best fit to the data plotted against time
-would have a non-zero slope or that there is evidence from the observations
-that there is an underlying tendency for the values to increase or decrease with
+A linear trend means that the line of best fit to the data plotted against time would have a non-zero slope or that there is evidence from the observations that there is an underlying tendency for the values to increase or decrease with
 time at a constant rate.
 Seasonal variation is another deterministic component of the mean which
-causes E(X t ) to depend on the remainder when t is divided by the period, d; to
-spot it from the data, look for recurring patterns in the data or check the
-sample ACF.
+causes E(X t ) to depend on the remainder when t is divided by the period, d; to spot it from the data, look for recurring patterns in the data or check the sample ACF.
 (ii)
 Either use moving averages: set Y t = 1⁄(X t + X t - 1 ), which has had the seasonal
 variation smoothed out.
