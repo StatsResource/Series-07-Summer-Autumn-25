@@ -42,30 +42,31 @@ S t = S 0 exp ç å X j ÷ ,
 ç j = 1 ÷
 è
 ø
-where X 1 , X  , 1⁄4 is a sequence of independent Normal random variables, with E(X j ) = m j , Var(X j ) = s  j .
+where X 1 , X  , 1⁄4 is a sequence of independent Normal random variables, with $E(X j ) = m j , Var(X j ) = s  j$ .
 In order to perform a martingale analysis it is necessary to find a sequence of constants a 1 , a  , 1⁄4 such that Y t = a t S t is a martingale.
-(i)
-(ii)
+\begin{enumerte}[(a)]
+\item 
 Derive a recurrence equation satisfied by the constants { a t : t = 1, , 1⁄4 }.
 [You may use the fact that the moment generating function of N( m , s  ) is
 M(s) = exp( m s + 1⁄ s  s  ).]
-[4]
-State, with a brief explanation, whether the same answer would be obtained if
-[1]
+
+\item State, with a brief explanation, whether the same answer would be obtained if
+
 X j had a non-normal distribution with mean m j , variance s  j .
-[Total 5]
+\end{enumerate}
 
 An analyst wishes to use a model which is based on Brownian motion, but which does not become too large and positive for large t. The model proposed is
-X t = B t e - cB t ,
-where B t is standard Brownian motion, and c is a posi
+\[X t = B t e - cB t ,\\]
+where $B_t$ is standard Brownian motion, and c is a posi
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
 1
 (i)
-Y k is a martingale, and the values Y 1 , ..., Y k are determined by X 1 , ....., X k , so
-E[Y k+1 1⁄X 1 , X  , ..., X k ] = E[Y k+1 1⁄Y 1 , Y  , ..., Y k ] = Y k .
-Now
+\begin{itemize}
+\item Y k is a martingale, and the values Y 1 , ..., Y k are determined by X 1 , ....., X k , so
+\[E[Y k+1 1⁄X 1 , X  , ..., X k ] = E[Y k+1 1⁄Y 1 , Y  , ..., Y k ] = Y k .\]
+\item Now
 k + 1
 é
 ù
@@ -85,6 +86,7 @@ Y
 ë
 û a
 k
+\item 
 We therefore require
 a k + 1 =
 (ii)
@@ -93,6 +95,8 @@ a k
 é
 ù
 = a k exp ê -m k + 1 - s  k + 1 ú
+\end{itemize}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
 
 ë
 û
@@ -136,7 +140,7 @@ d
 db
 
 ( be - cb ) = ( - c + c  b)e - cb . Therefore
-dX t = (1 - cB t ) e - cB t dB t + 1⁄( - c + c  B t ) e - cB t dt .
+\[dX t = (1 - cB t ) e - cB t dB t + 1⁄( - c + c  B t ) e - cB t dt .\]
 (iii)
 Quite the reverse. If B is large and negative X takes enormously negative values. X is not in the least stationary.
 A common cause of lost marks was failing to check that the turning point was a maximum. tive constant.
