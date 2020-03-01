@@ -1,0 +1,145 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+
+5
+Thiele’s equation for the policy value at duration t, t V , of an immediate life
+annuity payable continuously at a rate of £1 per annum from age x is:
+∂
+t V = \mu x+t . t V − 1 + δ . t V
+∂ t
+(i) Derive this result algebraically showing all the steps in your
+argument.
+(ii) Explain this result by general reasoning.
+104—2
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+5
+(i)
+The life annuity will be secured by a single payment at age x and so the
+policy value at duration t will be
+t V
+= a x + t
+s =¥
+t V
+= a x + t =
+ò
+e -d s . s p x+t . ds
+s = 0
+So:
+¶
+t V
+¶ t
+=
+¶
+¶ t
+s =¥
+=
+ò
+s = 0
+Now
+s =¥
+ò
+e -d s s p x+t . ds
+s = 0
+e -d s
+¶
+s p x+t . ds
+¶ t
+¶
+¶ æ l x + t + s ö
+ç
+÷
+s p x+t =
+¶ t
+¶ t è l x + t ø
+=
+l x + t ( -m x + t + s . l x + t + s ) - l x + t + s ( -m x + t l x + t )
+l x 2 + t
+= s p x+t (m x+t - m x+t+s )
+\
+¶
+t V
+¶ t
+s =¥
+=
+ò
+e -d s . s p x + t (m x+t - m x+t+s ) ds
+s = 0
+s =¥
+= m x + t a x + t -
+ò
+s = 0
+%%---- Page 4
+e -d s s p x + t m x + t + s . ds
+
+%%%%%%%%%%%% Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+= m x + t a x + t
+ì
+ï
+- í - e -d s . s p x + t
+ï
+î
+¥
+0
+ü
+ï
+e -d s s p x + t . ds ý
+ï
+s = 0
+þ
+s =¥
+- ( -d )
+ò
+= m x + t a x + t - 1 + d a x + t
+= m x + t . t V - 1 + d . t V
+A derivation is required for (i). Alternative “steps” are possible.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+(ii)
+If we consider the short time interval (t, t + dt) then equation implies
+t + dt V
+- t V = t V . d dt - 1 . dt + t V m x + t dt + o ( dt )
+where
+t V @ dt Interest earned on the reserve over (t, t + dt)
+- 1 . dt Annuity payments made in (t, t + dt)
++ t V m x + t . dt Reserves “released” as a result of deaths
+in (t, t + dt)
+and these are all the “changes” that can happen over (t, t + dt).
+[Note: the candidates may write the expression as:
+t V (1
++ d . dt ) =
+t + dt V
++ 1 . dt - dt . m x + t . t V + o ( dt )
+which might be easier to interpret as [income] = [outgo]]
+
+
+\end{document}
