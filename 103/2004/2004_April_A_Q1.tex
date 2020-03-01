@@ -1,0 +1,78 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 A Box-Jenkins model-fitting procedure suggests that the best fitting model for a set of
+normalised share price data x1, , xn is ARMA(1,2), with equation
+Xt 0.63Xt 1 et 0.45et 1 0.34et 2 ,
+where {e1, e2, } is a sequence of uncorrelated, zero-mean random variables with
+variance 2.
+(i) Determine whether the model is stationary and invertible. [2]
+(ii) Calculate 0, 1, 2, the autocovariance function of the fitted model at lags 0, 1,
+and 2, in terms of 2. [4]
+[Total 6]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+2 (i) The solution to 1 0.63z 0 is z = 1/0.63, which is greater than 1. Therefore
+the model is stationary.
+For invertibility, we should check that the roots of 1 0.45z 0.34z2 0 are
+outside the unit circle. They are ( 0.45 1.25)/( 2*0.34) = 2.5 or 1.18, both
+OK.
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+Page 3
+(ii) Let 0 = Cov(Xt, et), 1 = Cov(Xt, et 1), 2 = Cov(Xt, et 2). Then
+0 = 0.63 1 + 0 + 0.45 1 0.34 2
+1 = 0.63 0 + 0.45 0 0.34 1
+2 = 0.63 1 0.34 0
+0 = 2 (this may be regarded as obvious and not stated explicitly)
+1 = 0.63 0 + 0.45 2 = 1.08 2
+2 = 0.63 1 0.34 2 = 0.3404 2
+An alternative expression for 0 may be obtained using
+0 1 1 2
+2 2 2 2
+0 0 1
+Var(0.63 0.45 0.34 )
+0.63 (1 0.45 0.34 ) 2 0.63[0.45 0.34 ]
+t t t t X e e e
+which removes the need to calculate 2.
+Having derived the equations, we need to solve them.
+1 = 0.63 0 + 0.0828 2
+0 = 0.63(0.63 0 + 0.0828 2) + 1.370 2 = 0.3969 0 + 1.422 2,
+implying that
+0 = 2.358 2, 1 = 1.5684 2, 2 = 0.6481 2.
+Candidates were often unsure of the procedure required to derive the equations for the k but
+did rather better at solving them. In particular, many candidates did not take correct
+account of the relationship between Xt and past values of et. Marks were awarded for correct
+methodology when deriving the solutions, even if the equations being solved were not the
+right ones.
