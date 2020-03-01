@@ -42,93 +42,34 @@ they withdrew from the investigation while still alive, or they celebrated their
 Use these data to calculate the Kaplan-Meier estimate of the survival
 function. Determine an approximate 95\% confidence interval for your
 estimate.
-Person number
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-Last age at which person
-was observed
-(years and months)
-40
-40
-41
-41
-41
-42
-42
-42
-42
-43
-43
-43
-44
-44
-44
-45
-45
-45
-45
-45
-6
-6
-0
-0
-6
-3
-3
-3
-6
-0
-3
-3
-3
-6
-9
-0
-0
-0
-0
-0
 
-Outcome
-Died
-Withdrew
-Died
-Died
-Withdrew
-Died
-Withdrew
-Died
-Withdrew
-Withdrew
-Died
-Withdrew
-Withdrew
-Withdrew
-Died
-Survived
-Survived
-Survived
-Survived
-Survived
-[10]
+\begin{center}
+\begin{tabular}{ccc}
+Person number	&	Last age at which person		&	Outcome	\\	
+	&	was observed		&		\\	 \hline
+		(years and months)					
+1	&	40	6	&	Died	\\	 \hline
+2	&	40	6	&	Withdrew	\\	 \hline
+3	&	41	0	&	Died	\\	 \hline
+4	&	41	0	&	Died	\\	 \hline
+5	&	41	6	&	Withdrew	\\	 \hline
+6	&	42	3	&	Died	\\	 \hline
+7	&	42	3	&	Withdrew	\\	 \hline
+8	&	42	3	&	Died	\\	 \hline
+9	&	42	6	&	Withdrew	\\	 \hline
+10	&	43	0	&	Withdrew	\\	 \hline
+11	&	43	3	&	Died	\\	 \hline
+12	&	43	3	&	Withdrew	\\	 \hline
+13	&	44	3	&	Withdrew	\\	 \hline
+14	&	44	6	&	Withdrew	\\	 \hline
+15	&	44	9	&	Died	\\	 \hline
+16	&	45	0	&	Survived	\\	 \hline
+17	&	45	0	&	Survived	\\	 \hline
+18	&	45	0	&	Survived	\\	 \hline
+19	&	45	0	&	Survived	\\	 \hline
+20	&	45	0	&	Survived	\\	 \hline
+\end{tabular}
+\end{center}
 \item 
 Plot clearly on a suitably labelled graph the Kaplan-Meier estimate of the
 survival function and its associated 95\% confidence band.
@@ -291,37 +232,14 @@ error
 Then maximum likelihood estimate of Survival Function with
 approximate 95\% confidence intervals:
 \hat{S}(t)
-0 \$ t < 6
-6 \$ t < 12
-12 \$ t < 27
-27 \$ t < 39
-39 \$ 4 < 57
-57 \$ t
-1.000
-0.950
-0.844
-0.732
-0.659
-0.549
-Approx. 95\% Confidence Interval
-1 \pm  0
-0.950 \pm  0.096
-0.844 \pm  0.162
-0.732 \pm  0.202
-0.659 \pm  0.227
-0.549 \pm  0.273
-=
-=
-=
-=
-=
-=
-1
-0.854, 1*
-0.682, 1*
-0.530, 0.934
-0.432, 0.886
-0.276, 0.822
+	&		&		Approx. 95\% Confidence Interval	&		\\ \hline
+0 \$ t < 6	&	1	&		1 \pm  0	&	1	\\ \hline
+6 \$ t < 12	&	0.95	&		0.950 \pm  0.096	&	0.854, 1*	\\ \hline
+12 \$ t < 27	&	0.844	&		0.844 \pm  0.162	&	0.682, 1*	\\ \hline
+27 \$ t < 39	&	0.732	&		0.732 \pm  0.202	&	0.530, 0.934	\\ \hline
+39 \$ 4 < 57	&	0.659	&		0.659 \pm  0.227	&	0.432, 0.886	\\ \hline
+57 \$ t	&	0.549	&		0.549 \pm  0.273	&	0.276, 0.822	\\ \hline
+
 * Since \hat{S}(t) cannot exceed 1.
 Page 17 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% — 
 Examiners’ Comment: Confidence intervals calculated on log or log-log of
