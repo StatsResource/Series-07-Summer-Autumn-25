@@ -58,17 +58,13 @@ to calculate the probability that he is in Warwick on day t0 + 3. [3]
 \end{enumerate}
 %%%%%%%%%%%%%%%%%%%%%%%%
 8 (i) Suppose at time t X has just arrived in state i. The probability that X remains
-in state i until time t + k and then leaves, giving a duration of k + 1 steps in
-state i, is k (1 )
+in state i until time t + k and then leaves, giving a duration of k + 1 steps in state i, is k (1 )
 pii pii . In other words, 1
 ( , ) (1 ) d
 P Di n d pii pii , which is
 the probability function of a geometric random variable.
-The fact that Di,n is independent of previous durations follows from the
-Markov property: What happens to X after arriving in state i is independent of
-anything that happened before that moment.
-(ii) A sequence of successive observations of a geometric random variable is
-likely to produce 1 more often than any other value. The durations of the
+The fact that Di,n is independent of previous durations follows from the Markov property: What happens to X after arriving in state i is independent of anything that happened before that moment.
+(ii) A sequence of successive observations of a geometric random variable is likely to produce 1 more often than any other value. The durations of the
 restorer s stays in the various locations are always at least 2 days and often
 much more. There is an indication that the geometric distribution is
 inappropriate for the data set provided.
@@ -76,9 +72,7 @@ inappropriate for the data set provided.
 An alternative indication that the Markov property is dubious is the fact that
 the restorer appears to return to Bath at regular intervals, i.e. regardless of the
 time spent in each state, the path taken appears to lack randomness.
-(iii) pij nij / ni , where nij is the number of transitions from state i to state j and
-ni+ is the total number of transitions out of state i. For example, of the 8 days
-spent in Warwick, one is followed by a trip to Caernarvon, one by a trip to
+(iii) pij nij / ni , where nij is the number of transitions from state i to state j and ni+ is the total number of transitions out of state i. For example, of the 8 days spent in Warwick, one is followed by a trip to Caernarvon, one by a trip to
 Bath and the remaining 6 are followed by another day in Warwick, so that nWC
 = 1, nWB = 1 and nWW = 6. We therefore have (using the order B, C, S, W)
 9 2 1
@@ -94,9 +88,10 @@ Bath and the remaining 6 are followed by another day in Warwick, so that nWC
 0
 8 8 8
 P
-(iv) The model is irreducible. Starting from Bath it is possible to visit Stratford,
-Warwick, Caernarvon and return to Bath, completing the circuit.
+(iv) The model is irreducible. Starting from Bath it is possible to visit Stratford, Warwick, Caernarvon and return to Bath, completing the circuit.
+
 It is also aperiodic, since pii > 0 for some (in fact for all) state i.
+
 (v) We need the entry of P3 corresponding to the row and column of Warwick
 (4th row, 4th column in this case).
 Now 2
@@ -109,8 +104,10 @@ P , so the required answer is
 .1417 .0111 .1550 .5729
 8 8 8 8
 = 0.4488.
-Each part of this question attracted some unexpected answers as well as some good
-ones. The answers to part (i) were on the whole disappointing, but the final parts were
-rather better answered in general.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Each part of this question attracted some unexpected answers as well as some good ones. The answers to part (i) were on the whole disappointing, but the final parts were rather better answered in general.
 %%--Subject 103 (Stochastic Modelling) April 2004 Examiners Report
 \end{document}
