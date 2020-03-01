@@ -1,0 +1,114 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+\begin{enumerate}
+
+5
+A motor insurance company assumes that a holder of a provisional driver’s
+licence will make claims according to a Poisson process with rate X per year,
+where X is not fixed but is determined randomly for each driver according to the
+density function
+f(x) = 2e −2x
+6
+(x > 0).
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{framed}
+\large
+(i) Describe how to simulate an observation X from the density f using a
+single pseudo-random variable U assumed uniformly distributed on [0, 1].
+
+\end{framed}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+6
+(x > 0).
+(i) Describe how to simulate an observation X from the density f using a
+single pseudo-random variable U assumed uniformly distributed on [0, 1].
+[3]
+(ii) Explain how, given the value X generated in (i), you would use a sequence
+U 1 , U 2 , ... of uniform pseudo-random variables to simulate the number of
+claims made in two six-month periods by a provisional driver with mean
+claim rate X per year.
+[4]
+(iii) Describe a simulation-based method for estimating the conditional
+probability that a provisional driver makes 2 or more claims in the second
+six months of driving given that no claim was made in the first six
+months. [Here the value X is to be assumed unknown.]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+5
+(i)
+Use the inverse distribution function technique.
+We have F(x) = 1 - e - 2 x , and we require U = F(X) = 1 - e - 2 X , so that
+X = - 12 log(1 - U ) .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{framed}
+\large
+(ii) Explain how, given the value X generated in (i), you would use a sequence
+U 1 , U 2 , ... of uniform pseudo-random variables to simulate the number of
+claims made in two six-month periods by a provisional driver with mean
+claim rate X per year.
+\end{framed}
+
+(ii)
+We need two Poisson pseudo-random variables, Y 1 and Y 2 , each with
+mean m = 12 X .
+There are two possible methods for generating Poisson(m):
+6
+· Keep generating exponential variables with mean 1 until the
+cumulative sum exceeds m, then set Y equal to one less than the
+number of variables generated.
+· Draw up a table of the cumulative distribution function F m of Poisson (m), use a single uniform U and let Y be the first y such
+that F m (y) > U.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+\begin{framed}
+\large
+(iii) Describe a simulation-based method for estimating the conditional
+probability that a provisional driver makes 2 or more claims in the second
+six months of driving given that no claim was made in the first six
+months. [Here the value X is to be assumed unknown.]
+\end{framed}
+
+
+(iii) Carry out the above procedures a large number of times, independently.
+Let N 0 be the number of times no claims were made in the first six
+months, N 0,2+ the number of times no claims were made in the first six months but two or more in the next six. The required estimate is
+N 0,2+ / N 0 .
