@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+[Total 6]
+2 Yt, t = 1, 2, ., is a time series defined by
+Yt Yt 1 Zt 1  Zt 1  
+   
+where Zt, t = 0, 1, , is a sequence of independent zero-mean variables with
+common variance 2 and where || < 1.
+(i) State, giving your reasons, the values of p, d and q for which Y is an
+ARIMA(p, d, q) process. [2]
+(ii) Derive the autocorrelation function 	k, k = 0, 1, 2, . [6]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+
+2 (i) Since the equation can be written (1  B) Y = (1 + (1  )B)Z, the process is
+ARMA(1,1), or ARIMA(1,0,1).
+(ii) There are a number of possible ways to calculate the k, and one way which
+sidesteps the k and calculates the k directly. The solution presented here is
+one of the possible answers; other methods were marked on their merits.
+k = CovYt ,Yt k    .
+Rearrange the time series equation to give Yt = Yt 1 Zt 1  Zt 1      
+Now Cov[Yt, Zt] = σ2
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 3
+and Cov[Yt, Zt1] = α.Cov[Yt1, Zt1] + Cov[Zt, Zt1] + (1  α).Cov[Zt1, Zt1]
+= α.σ2 + 0 + (1  α).σ2 = σ2
+Therefore
+0 = CovYt ,Yt  = .CovYt ,Yt 1 CovYt ,Zt  1 .CovYt ,Zt 1      
+= 2   2
+.1    1 .
+   2
+0 = .1  2  . (1)
+1 = CovYt ,Yt 1 
+= .CovYt 1,Yt 1 CovZt ,Yt 1 1 .CovZt 1,Yt 1     
+   
+=   2
+.0  0  1  .
+   2
+1 = .0  1  . (2)
+substitute for γ0 from (1) into (2)
+    2    2
+1 = . .1  2     1 .
+
+    2
+1 2
+2 . 1 .
+=
+1
+         	
+
+2
+2
+2
+= 1 .
+1
+    
+       	 
+
+substitute for γ1 back into (1)
+
+ 
+ 
+2 2
+2
+0 2
+1 .
+. 2 .
+1
+  
+    
+
+2
+2
+2
+= 2 .
+1
+  
+       	
+For k  2,
+k = CovYt ,Yt k  
+= .CovYt 1,Yt k  CovZt ,Yt k  1 .CovZt 1,Yt k      
+   
+= . k 1 0 0     
+ 1
+= . 1 k
+k
+
+  
+Subject 103 (Stochastic Modelling)  September 2002  Examiners Report
+Page 4
+The autocorrelation function is:
+0
+= k
+k
+
+
+
+. Therefore
+0 =1
+2
+1 2
+= 1
+2
+ 
+
+
+1
+= 1 2 k
+k k     
+Part (i) was generally well answered, using a variety of different approaches. Candidates
+generally made good attempts at part (ii), the main problems occurring being a failure to
+correctly specify γ0 and algebraic errors in solving the simultaneous equations.
