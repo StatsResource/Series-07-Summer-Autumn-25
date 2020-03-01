@@ -1,0 +1,74 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+1 Consider the Poisson process Xt defined as a Markov jump process with state space
+{0, 1, 2, } and transition probabilities
+Pij(t) = ( )
+( )!
+j i
+t e t
+j i
+
+ 
+
+(j  i).
+(i) Prove that Xt has independent increments.
+(ii) Hence prove that Xt t is a martingale with respect to the natural filtration t
+associated with Xt. 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1 (i) Prove this using the Markov property. (Note that this mark can be earned for
+use of the property even if the word Markov is not mentioned.)
+If s0 < s1,  < sn < s < t, then
+P[Xt  Xs = j
+Xs0 = i0, , Xsn = in, Xs = i]
+= P[Xt = i + jXs = i] = ( ( )) ( ) ,
+!
+j
+t s e t s
+j
+   
+independent of i0, i1, , in.
+(ii) We need to prove that E[Xt  s ] = Xs .
+With s < t we have
+E[Xt  s ] = E[Xt  Xs  s ] E[Xs  s ]
+= E[Xt  Xs  Xs = (t  s)  Xs .
+Thus E[Xt  t  s ] = Xs  s.
+The key to part (i) was to use the Markov property; only a few candidates managed to do this
+part. Part (ii) was generally well answered.
+
+
+
+
+
