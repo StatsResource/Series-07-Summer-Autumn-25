@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+
+
+
+[Total 8]6
+In a mortality investigation the actual number of deaths at age x last birthday
+is d x . The goodness of fit between the data and the force of mortality, \mu x+1⁄2 ,
+over the age range x 1 , x 1 + 1, x 1 + 2 ..., x 1 + m − 1 can be tested using the
+statistic
+x = x 1 + m − 1
+∑
+x = x 1
+( d
+x
+− E x c \mu x + 1⁄2
+E x c \mu x + 1⁄2
+)
+2
+where E x c is the central exposed to risk which corresponds to d x .
+For each of the following cases state the null hypothesis being tested, and give
+the sampling distribution of this statistic as precisely as you can from the
+given information:
+(a) if \mu x+1⁄2 are taken from a standard mortality table;
+(b) if \mu x+1⁄2 are the graduated rates obtained from the crude estimates using
+the Gompertz-Makeham formula
+g(x) = a 0 + exp{b 0 + b 1 x + b 2 x 2 };
+(c)
+if \mu x+1⁄2 are the graduated rates obtained from the crude estimates using
+the formula
+g(x) = \mu sx + k
+where \mu sx are taken from a standard mortality table and k is a constant;
+and
+(d)
+if \mu x+1⁄2 are the graduated rates obtained from a graphical graduation of
+the crude estimates d x / E x c .
+104—3
+[8]
+
+
+
+
+6
+(a)
+H 0 : the observed transition rates m ˆ x + 1⁄2 come from a population in which
+the standard table rates are the true rates.
+c 2 with m degrees of freedom
+(b)
+H 0 : the observed transition rates m ˆ x + 1⁄2 come from a population in which
+the graduated transition rates are the true rates
+In the graduation process four parameters have been estimated so
+sampling distribution is c 2 with m - 4 degrees of freedom.
+%%---- Page 5Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+(c)
+H 0 : same as in (b).
+1 degree of freedom is lost for each parameter estimated, plus an
+unknown additional number for each constraint imposed by the standard
+table; say p degrees of freedom, so:
+c 2 with m - 1 - p degrees of freedom.
+(d)
+H 0 : same as in (b)
+The best fitting curve will usually be drawn as a series of curved segments
+joined smoothly.
+Each segment imposes a constraint of height, slope and curvature; so lose
+2 or 3 degrees of freedom for each section of about 10 ages drawn; so in 2
+sections for example we have
+c 2 with say m - 5 degrees of freedom.
