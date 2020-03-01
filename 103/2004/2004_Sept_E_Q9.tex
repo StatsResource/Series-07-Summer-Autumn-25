@@ -35,27 +35,35 @@
 
 9 Vehicles in a certain country are required to be assessed every year for roadworthiness. At one vehicle assessment centre, drivers wait for an average of 15
 minutes before the road-worthiness assessment of their vehicle commences. The
-assessment takes on average 20 minutes to complete. Following the assessment, 80\%of vehicles are passed as road-worthy allowing the driver to drive home. A further 15% of vehicles are categorised as a minor fail ; these vehicles require on average 30 minutes of repair work before the driver is allowed to drive home. The remaining 5% of vehicles are categorised as a significant fail ; these vehicles require on average three hours of repair work before the driver can go home.
+assessment takes on average 20 minutes to complete. 
+
+\begin{itemize}
+\item Following the assessment, 80\%of vehicles are passed as road-worthy allowing the driver to drive home. 
+\item A further 15\% of vehicles are categorised as a minor fail ; these vehicles require on average 30 minutes of repair work before the driver is allowed to drive home. 
+\item The remaining 5\% of vehicles are categorised as a significant fail ; these vehicles require on average three hours of repair work before the driver can go home.
+\end{itemize}
+%-------------------------------------------------------------%
 A continuous-time Markov model is to be used to model the operation of the vehicle assessment centre, with states W (waiting for assessment), A (assessment taking place), M (minor repair taking place), S (significant repair taking place) and H
 (travelling home).
 
-(i) Explain what assumption must be made about the distribution of the time
-spent in each state. [1]
-(ii) Write down the generator matrix for this process. [2]
-103 S2004 7
+\begin{enumerate}
+\item (i) Explain what assumption must be made about the distribution of the time
+spent in each state.
+\item (ii) Write down the generator matrix for this process.
+
 (a) Use Kolmogorov s Forward Equations to write down differential
 equations satisfied by pWM(t) and by pWA(t).
 (b) Verify that ( ) = 4 t / 20 4 t /15
 pWA t e e for t 0, where t is measured in
 minutes.
 (c) Derive an expression for pWM(t) for t 0.
-[7]
+\item 
 (iii) Let Ti be the expected length of time (in minutes) until the vehicle can be
 driven home given that the assessment process is currently in state i.
 (a) Explain why TW = 15 + TA.
 (b) Derive corresponding equations for TA, TM and TS.
 (c) Calculate TW.
-[4]
+\end{enumerate}
 \newpage
 
 %%---- [Total 14]
