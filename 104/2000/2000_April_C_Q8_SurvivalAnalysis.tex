@@ -1,0 +1,107 @@
+\documentclass[a4paper,12pt]{article}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+%\usepackage{bigints}
+
+\usepackage{vmargin}
+% left top textwidth textheight headheight
+% headsep footheight footskip
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+\begin{document}
+
+8
+X is a random variable which measures the duration from the date of a kidney
+transplant until death.
+(i) Express the hazard rate and the integrated hazard function at duration
+x, in terms of probabilities.
+
+(ii) If the hazard rate at duration x is
+h(x) = \alpha\lambda x \alpha−1
+derive an expression for the integrated hazard, H(x).
+(iii)
+
+The hazard rate h(x), as defined in part (i), varies between transplant
+patients in such a way that
+\alpha = \alpha 0 + \alpha 1 z_{1}
+\lambda = \lambda 1 z_{1} + \lambda 2 z_{2}
+where \alpha 0 , \alpha 1 , \lambda 1 , \lambda 2 are constants; z_{1} is the age of the patient at the date
+of the transplant and z_{2} is the patient’s sex where z_{2} = 0 = female,
+z_{2} = 1 = male.
+Show that these hazards are not in general proportional, but that if
+\alpha 1 = 0 the hazards are proportional.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+8
+(i)
+Hazard Rate, h(x) = Lim
+h ® 0 +
+P [ x < X £ x + h 1⁄2 X > x ]
+h
+Alternative expressions are also correct.
+u = x
+Integrated Hazard H(x) =
+ò
+h ( u ) . du = - ln(S(x))
+u = 0
+= - ln . P[X > x]
+where S(x) = P[X > x]
+u = x
+(ii)
+From (i)
+H(x) =
+ò
+al u a - 1 . du
+u = 0
+=
+a
+l u a
+a
+u = x
+u = 0
+= lx =
+(iii)
+x > 0
+h(x) = (a 0 + a 1 z_{1} )(l 1 z_{1} + l 2 z_{2} ) x a 0 +a 1 z_{1} - 1
+Then
+h ( x 1⁄2 z )
+h ( x 1⁄2 z *)
+=
+( a 0 + a 1 z_{1} )( l 1 z_{1} + l 2 z_{2} ) x a 0 +a 1 z - 1
+( a 0 + a 1 z_{1} * )( l 1 z_{1} * + l 2 z_{2} * ) x a 0 +a 1 z * - 1
+which is not in general independent of x, so hazards are
+not proportional.
+%%---- Page 7Subject 104 (Survival Models) — %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5
+If a 1 = 0, then
+h ( x 1⁄2 z )
+h ( x 1⁄2 z *)
+=
+=
+a 0 ( l 1 z_{1} + l 2 z_{2} ) x a 0 - 1
+a 0 ( l 1 z_{1} * + l 2 z_{2} * ) x a 0 - 1
+l 1 z_{1} + l 2 z_{2}
+l 1 z_{1} * + l 2 z_{2} *
+which is independent of x, so the hazards are proportional.
+Alternatively if a 1 = 0, then
+h(x1⁄2z) = a 0 (l 1 z_{1} + l 2 z_{2} ) x a 0 - 1
+which is of the form h 0 (x) = a 0 x a 0 - 1  ́ c ( z ) ; where c(z) = l 1 z_{1} + l 2 z_{2}
+
+\end{document}
