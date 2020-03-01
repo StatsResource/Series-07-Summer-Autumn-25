@@ -1,0 +1,103 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 The number, N(t), of members of a pension scheme who are receiving benefits at time
+t, is subject to change of two kinds:
+it increases by 1 when an active member reaches retirement age
+it decreases by 1 when a retired member dies
+Assume that retirements occur according to a Poisson process with rate and that
+each retired member, independently, has a probability dt of dying within the time
+interval (t, t + dt).
+(i) Explain why, under these assumptions, N(t) is a Markov jump process. [1]
+(ii) Write down the transition rates of N(t). [1]
+(iii) Using the notation pn(t) = P(N(t) = n), obtain a differential equation satisfied
+by pn(t). [2]
+(iv) Verify that one solution of the equation in (iii) is given by
+1 /
+( ) = , = 0,1,...
+!
+n
+pn t e n
+n
+[2]
+(v) State what conclusions can be drawn from (iv). [1]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+3 (i) It is a jump process because it remains in one state for a period of time and
+then jumps to another state, or alternatively because it is a continuous-time
+process with a discrete state space.
+Given the entire past history of the process, the probability of a member
+retiring and beginning to receive benefits in the next dt interval is dt, i.e.
+independent of the past. The same applies to the probability of death between
+times t and t + dt: it is dependent only on the state (the number of retired
+members) at time t, and not on anything which happened before that. Thus the
+Markov property holds.
+(ii) n,n 1 , n,n 1 n
+Subject 103 (Stochastic Modelling) April 2004 Examiners Report
+(iii) From the Kolomogorov Forward equations we have that
+, 1 , 1 1, 1 1, 1
+1 1
+( )
+( ) ( 1)
+n
+n n n n n n n n n n n
+n n n
+dp
+p p p
+dt
+n p n p p
+,.
+(iv) The suggested form of pn does not depend on t, so its derivative is zero. The
+RHS is
+1 1
+( ) ( 1) 0
+! ( 1)! ( 1)!
+n n n
+n e n e e
+n n n
+,
+where = / .
+(v) The implication is that Poisson( ) is a stationary distribution for the Markov
+jump process. (In this case it is also a limiting distribution, but that is not
+deducible from the Core Reading.)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+
+Very few candidates suggested that the rate at which deaths take place should be
+proportional to the number of retired scheme members.
+In (iv) examiners awarded marks for correct attempts to carry out the verification procedure even when the differential equation in (iii) was wrong.
+In (v), terms such as limiting distribution or equilibrium distribution were given full credit.
+
+\end{document}
