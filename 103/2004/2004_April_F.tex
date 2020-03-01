@@ -31,21 +31,24 @@
 \setcounter{MaxMatrixCols}{10}
 
 \begin{document}
-\begin{enumerate}
+
 %--- Question 10 
 \item An insurance company has an initial capital of u and receives premium income at constant rate c per unit time. Claims, for one unit each, occur according to a Poisson process {Nt, t 0} with rate . The company s surplus at time t is defined as
 St = u ct Nt .
-(i) A Lévy process is defined as a stochastic process with stationary, independent
-increments. Verify that St satisfies this definition. [2]
-(ii) For s > 0, write down the conditional distribution of Nt+s Nt given Nt. [1]
-(iii) Define = St
+
+\begin{enumerate}
+\item (i) A Lévy process is defined as a stochastic process with stationary, independent
+increments. Verify that St satisfies this definition. 
+\item (ii) For s > 0, write down the conditional distribution of Nt+s Nt given Nt. 
+\item (iii) Define = St
 Yt e .
 (a) Derive an equation which must be satisfied by if Yt is to be a
 martingale.
 (b) Show, by means of a sketch or otherwise, that the equation derived in (a) has a negative solution as long as c > and a positive solution
 if c < .
-(c) Comment on whether the condition c > is likely to be satisfied in practice. [6]
-(iv) LetT = inf{t 0 : St 0 or St K}, where K is a positive constant and assume that c > .
+(c) Comment on whether the condition c > is likely to be satisfied in practice. 
+%------------------------------------------------------------------%
+\item (iv) LetT = inf{t 0 : St 0 or St K}, where K is a positive constant and assume that c > .
 (a) Explain why either ST = K or 1 ST < 0.
 (b) Verify that the conditions of the optional stopping theorem apply to the stopped martingaleYmin(t,T ) .
 (c) Define to be the probability that S goes below zero before it hits K,
@@ -53,10 +56,9 @@ that is, the probability that ST < 0. Prove that
 ( ) (1 ) K
 E YT e
 (d) Derive a lower bound for using the result in (iv)(c) and state the
-limit of this lower bound as K . [6]
-[Total 15]
-END OF PAPER
-
+limit of this lower bound as K .
+\end{enumerate}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 10 t t t t t r r r r .
 is best estimated using the lag-1 autocorrelation of R ,
@@ -107,13 +109,14 @@ always well understood.
 anything that happened before time t and has the same distribution as
 cs (Ns N0), using the independent increment property of the Poisson
 process.
-Alternatively, it is possible to use the Decomposition Theorem, to state that a
-Lévy process is any sum of three components: a deterministic linear function
-of time, a purely continuous random component (a multiple of Brownian
+%---------------------------------------------------------------%
+Alternatively, it is possible to use the Decomposition Theorem, to state that a Lévy process is any sum of three components: a deterministic linear function of time, a purely continuous random component (a multiple of Brownian
 motion) and a purely discontinuous random component (a compound Poisson
 process). In this case the coefficient of the Brownian component is zero and
 the jumps of the compound Poisson process all have size 1.
 (ii) By the independent increments property, Nt s Nt ~ Po( s) given Nt.
+
+%---------------------------------------------------------------%
 (iii) (a) [ | ] [u c(t s)] [ Nt s | ] [u c(t s) Nt ] s[e 1]
 E Yt s Ft e E e Ft e .
 This is equal to Yt if c [1 e ] .
@@ -121,17 +124,18 @@ This is equal to Yt if c [1 e ] .
 whereas [1 e ] increases more rapidly to start with, but never 
 %% Subject 103 (Stochastic Modelling) April 2004 Examiners Report
 %%Page 13
-exceeds . Therefore there must be a crossing point at a positive value
-of .
+exceeds . Therefore there must be a crossing point at a positive value of .
 If, on the other hand, c > , then there is no positive crossing point; the
 line y = c goes slowly to as , whereas [1 e ] tends to
 exponentially fast as .
 (c) Yes; this is the condition for the company to remain solvent.
+%---------------------------------------------------------------%
 (iv) (a) If S hits K first, then ST = K exactly, since increases in S occur continuously. But if S becomes negative before hitting K, then the
 negative movement must have been caused by a downward jump; jumps are of magnitude 1, so in this case ST can be no less than 1.
 (b) Since St is between 1 and K for all 0 t T, it follows that Ymin(t,T ) is
 bounded above and below, from which we deduce that the optional
 stopping theorem applies.
+%---------------------------------------------------------------%
 (c) ST = K with probability 1 , or with probability , ST takes a value
 somewhere between 1 and 0. Therefore YT takes the value e K with
 probability 1 , or with probability it takes some value between 1
@@ -147,6 +151,7 @@ e e
 .
 As K becomes larger, the fact that < 0 means that e K 0, so in the
 limit we have e u.
+%---------------------------------------------------------------%
 There was an error in the final part of the question; where the question asked for a lower bound, the quantity which could be derived from the previous part of the question was in fact an upper bound. Candidates who reached the last part and were confused by the error were treated generously.
 It appeared that many candidates tried this question when they were short on time. Those candidates who attempted part (iv) often did quite well on it, even if they had omitted earlier parts of the question.
 \end{document}
