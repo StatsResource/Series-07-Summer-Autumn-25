@@ -1,0 +1,105 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+5
+A life insurance company prices its long-term sickness policies using the following
+3-state continuous-time Markov model, in which the forces of transition \sigma, \rho, \mu
+and υ are assumed to be constant:
+\sigma
+State 1
+(healthy)
+\mu
+State 2
+(sick)
+\rho
+υ
+State 3
+(dead)
+For a group of policyholders observed over a 1-year period, there are:
+10 transitions from state 1 to state 2;
+7 transitions from state 2 to state 1;
+2 deaths from state 1;
+3 deaths from state 2.
+The total time spent in state 1 is 512 years, and in state 2 is 20 years.
+(i) Write down the likelihood function for these data. 
+(ii) Hence derive the maximum likelihood estimate of \sigma. 
+(iii) Calculate an estimate of the standard error of \sigmâ , where \sigmâ is the
+maximum likelihood estimator of \sigma .
+104(S)—3
+
+[Total 6]
+
+
+Page 5%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+5
+(i)
+(ii)
+L = exp ( − 512 ( \sigma + \mu ) ) exp ( − 20 ( \rho + υ ) ) \sigma 10 \rho 7 \mu 2 υ 3
+l = ln L = − 512 \sigma + 10 ln \sigma + const . ( w . r . t . \sigma )
+∂ l
+10
+10
+0 =
+= − 512 +
+\sigma ˆ =
+= 0 . 0195 p.a.
+∂ \sigma
+\sigma
+512
+Þ
+A derivation was required.
+(iii)
+−
+10
+∂ 2 l
+= 2 , hence we can estimate Var \sigma ˆ by
+2
+∂ \sigma
+\sigma
+æ 10 ö
+ç 2 ÷
+è \sigma ø
+− 1
+\sigma ˆ 2
+, hence by
+10
+æ
+ç =
+ç
+è
+\sigmâ ö
+÷
+512 ÷ ø
+Hence estimated standard deviation of \sigmâ is \sigma ˆ
+\end{document}
