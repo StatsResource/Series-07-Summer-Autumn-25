@@ -1,3 +1,37 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
 ã Faculty of Actuaries
 ã Institute of Actuaries1
 (i) Explain precisely what is meant by
@@ -13,43 +47,6 @@ Evaluate
 3  5
 
 q 50 using the A1967-70 Ultimate mortality table.
-
-[Total 4]
-2
-A life insurance company sells whole-life assurance policies with a sum assured of
-£20,000, payable at the end of the year of death. The premium is £520 payable
-annually in advance until the death of the policyholder.
-A life now aged 50 purchased a policy exactly one year ago, and is now due to pay
-the second annual premium.
-(i) Find the expected present value of the future loss to the company arising
-from this policy.
-
-(ii) Show that the variance of the present value of the future loss from this
-policy can be expressed as:
-′ + c
-b . A 50
-Determine the numerical values of b and c , and the rate of interest used
-′ .
-
-to evaluate A 50
-Basis: mortality A1967-70 (Ultimate), interest 4% per annum. Ignore expenses.
-[Total 5]
-3
-Is it possible for t V x to exceed t V x : n ? Justify your answer, either by providing
-proof or by showing a suitable example, as appropriate.
-4
-
-You are given that q 75 = 0.06229.
-(i)
-(ii)
-104(S)—2
-Calculate 1⁄4 p 75 and 1⁄4 p 753⁄4 , assuming a uniform distribution of deaths
-between integer ages.
-
-Repeat part (i), using the alternative assumption that a constant hazard
-rate applies between integer ages.
-
-[Total 6]
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -288,36 +285,6 @@ Credit was also given for labelled sketches on t V x and t V x : n against t, fo
 chosen numerical examples and for careful verbal arguments.
 It was appreciated that the wording of the question would have been improved if it
 specifically asked for a comparison for 0 \leq t \leq n.
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-4
-(i)
-0 . 25
-p 75 = 1 − 0 . 25 q 75 = 1 − 0 . 25 × q 75 = 0 . 98443 assuming uniform distribution
-of deaths
-= 1− 0.25 × 0.06229 = 1 − 0.01557 = 0.98443
-p 75 = 0 . 75 p 75 × 0 . 25 p 75 . 75 = (1− 0.75 × q 75 ) 0.25 p 75.75 assuming uniform
-distribution of deaths
-Þ
-=
-(ii)
-0.25
-p 75.75 =
-1 − q 75
-1 − 0.75 q 75
-1 − 0.06229
-0.93771
-=
-= 0.98366
-1 − 0.75 × 0.06229 0.95328
-\mu satisfies e − \mu = p 75 = 0.93771 assuming a constant force of mortality
-So \mu = 0.0643145
-Then
-And
-0.25
-0.25
-p 75 = e − 0.25 \mu = e − 0.016078 = 0.98405
-p 75.75 = e − 0.25 \mu = e − 0.016078 = 0.98405
-Can also use e − 0.25 \mu = (0.93771) 0.25 = 0.98405
-A complete verbal argument that the calendar values of the hazard ratios
-resulted in the relationships between the survival functions is also
-acceptable.
+
+
+\end{document}
