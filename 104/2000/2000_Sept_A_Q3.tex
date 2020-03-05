@@ -1,0 +1,343 @@
+\documentclass[a4paper,12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{eurosym}
+\usepackage{vmargin}
+\usepackage{amsmath}
+\usepackage{graphics}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{subfigure}
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{framed}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{chngpage}
+
+%\usepackage{bigints}
+\usepackage{vmargin}
+
+% left top textwidth textheight headheight
+
+% headsep footheight footskip
+
+\setmargins{2.0cm}{2.5cm}{16 cm}{22cm}{0.5cm}{0cm}{1cm}{1cm}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\setcounter{MaxMatrixCols}{10}
+
+\begin{document}
+
+2
+A life insurance company sells whole-life assurance policies with a sum assured of
+£20,000, payable at the end of the year of death. The premium is £520 payable
+annually in advance until the death of the policyholder.
+A life now aged 50 purchased a policy exactly one year ago, and is now due to pay
+the second annual premium.
+(i) Find the expected present value of the future loss to the company arising
+from this policy.
+
+(ii) Show that the variance of the present value of the future loss from this
+policy can be expressed as:
+′ + c
+b . A 50
+Determine the numerical values of b and c , and the rate of interest used
+′ .
+
+to evaluate A 50
+Basis: mortality A1967-70 (Ultimate), interest 4% per annum. Ignore expenses.
+[Total 5]
+3
+Is it possible for t V x to exceed t V x : n ? Justify your answer, either by providing
+proof or by showing a suitable example, as appropriate.
+4
+
+You are given that q 75 = 0.06229.
+(i)
+(ii)
+104(S)—2
+Calculate 1⁄4 p 75 and 1⁄4 p 753⁄4 , assuming a uniform distribution of deaths
+between integer ages.
+
+Repeat part (i), using the alternative assumption that a constant hazard
+rate applies between integer ages.
+
+[Total 6]
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+1
+(i) Pr(a life aged 50 dies between exact ages 53 and 58)
+(ii) 3|5 q 50
+= ò
+8
+t
+3
+p 50 . \mu 50 + t dt
+5
+= 3 p 50 ò t p 53 . \mu 53 + t dt
+0
+3
+5
+t
+= exp é ê − ò \mu 50 + r dr ù ú ò exp é ê − ò \mu 53 + r dr ù ú \mu 53 + t dt
+ë
+û
+0
+ë
+0
+o
+û
+Several other alternatives were acceptable, in particular
+8
+ò 3
+t
+exp é ê − ò \mu 50 + r dr ù ú \mu 50 + t dt
+ë
+ì
+ï
+0
+3
+û
+é
+ü
+ï ì
+ï
+ï
+þ ê
+ë ï
+î
+5
+ù
+ü
+ï
+or exp í − ò \mu 50 + r dr ý ê 1 − exp í − ò \mu 53 + r dr ý ú
+ï
+î
+0
+0
+ï
+þ ú
+û
+3
+8
+ì
+ü
+ì
+ü
+ï
+ï
+ï
+ï
+or exp í − ò \mu 50 + r dr ý − exp. í − ò \mu x 50 + r dr ý
+ï 0
+ï
+ï 0
+ï
+î
+þ
+î
+þ
+3
+5
+r
+ì
+ü
+ì
+ü
+ï
+ï
+ï
+ï
+or exp í − ò \mu 50 + r . dr ý ò exp. í − ò \mu 53 + s . ds ý \mu 53 + r . dr
+ï 0
+ï 0
+ï 0
+ï
+î
+þ
+î
+þ
+(iii)
+2
+l 53 − l 58 32,143.546 − 30,795.116
+=
+= 0.04127
+l 50
+32,669.855
+ 
+Present value of the loss = λ = 20000 v K + 1 − 520 a
+where K = curtate future
+K + 1 |
+lifetime, of the life aged 50.
+(i) EPV loss
+  50 = 20 , 000 × 0 . 38450 − 520 × 16 . 003 = − 631 . 56
+= Ε ( λ ) = 20 , 000 A 50 − 520 a
+(ii) λ = 20000 v K + 1 − 520 ç
+æ 1 − v K + 1 ö
+÷
+è d 0.04 ø
+= constant + ( 520 d 0 . 04 + 20 , 000 ) v K + 1
+(
+)
+Var v K + 1 = 2 A 50 − A 50 2 (where 2 A is @ 8.16% and A @ 4%)
+= A 50 − 0 . 38450 2 ,
+2
+Then Var ( λ ) = 33 , 520 2
+(
+2
+A 50 − 0 . 38450 2
+)
+So b = 33520 2 = 1,123,590,400
+Page 3%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+C = -(33,520 x 0.38450) 2 = − 166,111,886
+An approach using co-variances is possible, but much more complicated.
+3
+In both cases the retrospective policy value is
+D x æ
+ö
+  − A 1 ÷ .
+ç P a
+x : t | ø
+D x + t è x : t |
+P x > P x :n |
+V x will exceed t V x :n | if
+t
+1
+1
+− d >
+− d
+ x
+a
+a  x : n
+a  x < a  x : n
+  x = a
+  + a nonnegative term.
+But a
+x :n |
+Hence it is not possible.
+Alternatively,
+If
+1 −
+t V x
+> t V x : n then
+
+a
+ x + t
+a
+> 1 − x + t : n − t
+ x
+
+a
+a
+x : n
+which means
+1 −
+
+a
+ x + t
+a
+< x + t : n − t
+ x
+
+a
+a
+x : n
+But a  x = a  x : n + v n n P x a  x + n
+a  x + t = a  x + t : n − 1 + v n − t
+ x + n
+n − t P x + t a
+So the inequality will hold if
+( a
+
+x + t : n − t
+)
+which means
+ x + n a
+
+
+ x + n
+v n − t n − t P x + t a
+< a
+v n n P x a
+x : n
+x + t : n − t
+
+
+a
+< v t t P x a
+x : n
+x + t : n − t
+
+
+= a
+− a
+x : n
+x : t
+Page 4
+(
+ x + n a
+
+
+ x + n
++ v n − t n − t P x + t a
+< a
+a  x : n + v n n P x a
+x : n
+x + t : n − t
+)%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%5for September 2000
+which is not true, hence the original assumption is untrue.
+[Or: Write in terms of commutation functions
+N x + t
+N − N x + n
+< x + t
+N x
+N x − N x + n
+which implies
+N x+t > N x
+Which is not true, hence the original assumption is untrue.
+Credit was also given for labelled sketches on t V x and t V x : n against t, for well
+chosen numerical examples and for careful verbal arguments.
+It was appreciated that the wording of the question would have been improved if it
+specifically asked for a comparison for 0 \leq t \leq n.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+4
+(i)
+0 . 25
+p 75 = 1 − 0 . 25 q 75 = 1 − 0 . 25 × q 75 = 0 . 98443 assuming uniform distribution
+of deaths
+= 1− 0.25 × 0.06229 = 1 − 0.01557 = 0.98443
+p 75 = 0 . 75 p 75 × 0 . 25 p 75 . 75 = (1− 0.75 × q 75 ) 0.25 p 75.75 assuming uniform
+distribution of deaths
+Þ
+=
+(ii)
+0.25
+p 75.75 =
+1 − q 75
+1 − 0.75 q 75
+1 − 0.06229
+0.93771
+=
+= 0.98366
+1 − 0.75 × 0.06229 0.95328
+\mu satisfies e − \mu = p 75 = 0.93771 assuming a constant force of mortality
+So \mu = 0.0643145
+Then
+And
+0.25
+0.25
+p 75 = e − 0.25 \mu = e − 0.016078 = 0.98405
+p 75.75 = e − 0.25 \mu = e − 0.016078 = 0.98405
+Can also use e − 0.25 \mu = (0.93771) 0.25 = 0.98405
+A complete verbal argument that the calendar values of the hazard ratios
+resulted in the relationships between the survival functions is also
+acceptable.
+
+
+\end{document}
