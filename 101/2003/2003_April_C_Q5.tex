@@ -33,18 +33,15 @@
 \begin{document}
 
 %%-Question 5 
-Consider a random sample of size n from a normal distribution N(,2) and let $S^2$
+Consider a random sample of size n from a normal distribution $N( \mu, \sigma^2)$ and let $S^2$
 denote the sample variance.
 \begin{enumerate}[(a)]
     \item  State the sampling distribution for
-2
-2
-(n 1)S
-
+${ \displaystyle \frac{(n-1)S^2}{\sigma^2} }$
 , and specify an approximate
 sampling distribution for this expression when n is large. 
-    \item ) For n = 101 calculate an approximate value for the probability that S2 exceeds
-2 by more than a factor of 10\%, i.e. P(S2 > 1.1 2). 
+    \item For $n = 101$ calculate an approximate value for the probability that $S^2$ exceeds
+$\sigma^2$ by more than a factor of 10\%, i.e. $P(S2 > 1.1 \sigma^2)$. 
 
 \end{enumerate}
 
@@ -54,27 +51,17 @@ sampling distribution for this expression when n is large.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newpage
+${ \displaystyle \frac{(n-1)S^2}{\sigma^2} } \sim \chi^2_{n-1}$
 
-5 (i)
-2
-2
-2 1
-( 1) ~ n
-n S
-
-
-
-
- N n 1, 2n 1 for large n.
+\approx N \left(n-1,2(n-1) \right) for large $n$
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 (ii)
-2
-2
-(100 110) ( 110 100 0.707) 1 0.76 0.24
-200
-P S P Z 
-      
-
-OR: can interpolate in the Yellow Tables (p.169)
+
+\[P \left(  \frac{100 S^2}{\sigma^2} > 110 \right)
+\approx P \left( Z > \frac{110-100}{\sqrt{200}} = 0.707 \right)  = 1-0.76=0.24 \]
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \end{document}
