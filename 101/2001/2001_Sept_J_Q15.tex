@@ -159,4 +159,41 @@ n S
 10 2.82596
 %%%%%%%%%%%%%%%
 95\% confidence limits are  2.306(0.1173) =  0.270 or (5.004, 5.544)
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\noindent{\bf Regression estimates}
+
+\begin{eqnarray*}
+	S_{XY} &=&
+	\sum x_iy_i - \frac{\sum x_i\sum y_i}{n}\\
+	S_{XX} &=&
+	\sum x_i^2 - \frac{(\sum x_i)^2}{n}\\
+	S_{YY} &=&
+	\sum y_i^2 - \frac{(\sum y_i)^2}{n}\\
+\end{eqnarray*}
+{\bf Slope Estimate}
+\begin{eqnarray*}
+	b_1 = \frac{S_{XY}}{S_{XX}}
+\end{eqnarray*}
+{\bf Intercept Estimate}
+\begin{eqnarray*}
+	b_0 = \bar{y} -b_1\bar{x}
+\end{eqnarray*}
+{\bf Pearson's correlation coefficient}
+
+\begin{eqnarray*}
+	r = \frac{S_{XY}}{\sqrt{S_{XX} \times S_{YY}}}
+\end{eqnarray*}
+{\bf Standard error of the Slope}
+\begin{eqnarray*}
+	S.E.(b1) = \sqrt{\frac{s^2}{S_{XX}}}
+\end{eqnarray*}
+
+where $s^2 = \frac{SSE}{n-2}$
+and SSE $= S_{YY} - b_1S_{XY}$
+
 \end{document}
