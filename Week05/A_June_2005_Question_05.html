@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Joint Random Variables: Worked Example</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.29/header-attrs.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+.title[
+# Joint Random Variables: Worked Example
+]
+.subtitle[
+## Discrete Probability Distributions
+]
+
+---
+
+
+
+
+
+
+
+
+
+
+
+### Part (a)
+
+**Central Limit Theorem (CLT) for Independent Identically Distributed Random Variables:**
+
+The Central Limit Theorem states that if `\(X_1, X_2, ..., X_n\)` are independent and identically distributed (i.i.d.) random variables with mean `\(\mu\)` and variance `\(\sigma^2\)`, then the distribution of the sample mean `\(\bar{X} = \frac{1}{n} \sum_{i=1}^{n} X_i\)` approaches a normal distribution as the sample size `\(n\)` becomes large. Specifically,
+$$ \bar{X} \approx N\left(\mu, \frac{\sigma^2}{n}\right) $$
+---
+
+**Given:**
+- Mean, `\(\mu = 167\)`
+- Standard deviation, `\(\sigma = 27\)`
+- Sample size, `\(n = 36\)`
+
+**Find:**
+- Probability that the sample mean lies between 163 and 171 units.
+
+First, compute the standard error of the mean:
+$$ \text{SE} = \frac{\sigma}{\sqrt{n}} = \frac{27}{\sqrt{36}} = \frac{27}{6} = 4.5 $$
+
+---
+
+The sample mean `\(\bar{X}\)` follows the normal distribution:
+$$ \bar{X} \sim N\left(167, 4.5^2\right) $$
+
+To find the probability:
+$$ P(163 &lt; \bar{X} &lt; 171) = P\left(\frac{163 - 167}{4.5} &lt; Z &lt; \frac{171 - 167}{4.5}\right) $$
+$$ = P\left(\frac{-4}{4.5} &lt; Z &lt; \frac{4}{4.5}\right) $$
+$$ = P(-0.8889 &lt; Z &lt; 0.8889) $$
+---
+
+From the standard normal distribution table:
+$$ P(Z &lt; 0.8889) = 0.8133 $$
+$$ P(Z &lt; -0.8889) = 1 - 0.8133 = 0.1867 $$
+
+Therefore:
+$$ P(-0.8889 &lt; Z &lt; 0.8889) = 0.8133 - 0.1867 = 0.6266 $$
+
+Thus, the approximate probability that the sample mean lies between 163 and 171 units is `\(0.6266\)`.
+
+---
+
+### Part (b)
+
+**Given:**
+- The distribution function `\(F_X(x)\)` of `\(X\)` is:
+$$ F_X(x) = 
+   \begin{cases} 
+   0 &amp; \text{if } x &lt; 0 \\
+   3x^2 - 2x^3 &amp; \text{if } 0 \le x \le 1 \\
+   1 &amp; \text{if } x &gt; 1 
+   \end{cases}
+$$
+
+---
+
+The volume `\(V\)` of the sphere of radius `\(X\)` is:
+$$ V = \frac{4}{3}\pi X^3 $$
+
+**Find the probability that the volume of the sphere is greater than `\(V_0\)`.**
+
+$$ P(V &gt; V_0) = P\left(\frac{4}{3}\pi X^3 &gt; V_0\right) $$
+
+$$ P\left(X^3 &gt; \frac{3V_0}{4\pi}\right) $$
+
+---
+
+$$ P\left(X &gt; \left(\frac{3V_0}{4\pi}\right)^{1/3}\right) $$
+
+Let `\(y = \left(\frac{3V_0}{4\pi}\right)^{1/3}\)`.
+
+---
+**For what values of `\(V_0\)` is the above probability zero?**
+
+The probability is zero if `\(y &gt; 1\)`, as `\(X\)` lies between 0 and 1.
+
+`$$\left(\frac{3V_0}{4\pi}\right)^{1/3} &gt; 1$$`
+
+Cubing both sides:
+`$$\frac{3V_0}{4\pi} &gt; 1$$`
+---
+Solving for `\(V_0\)`:
+$$ V_0 &gt; \frac{4\pi}{3} $$
+
+---
+
+### Conclusion
+
+- **Part (a):** 
+
+The approximate probability that the sample mean lies between 163 and 171 units is `\(0.6266\)`.
+
+- **Part (b):**
+
+  - `\(P(V &gt; V_0) = 1 - \left( \frac{3V_0}{4\pi} \right) + 2 \left( \frac{3V_0}{4\pi} \right)^2\)` for `\(0 \le V_0 \le \frac{4\pi}{3}\)`.
+  
+  - The probability that the volume of the sphere is greater than `\(V_0\)` is zero if `\(V_0 &gt; \frac{4\pi}{3}\)`.
+
+---
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

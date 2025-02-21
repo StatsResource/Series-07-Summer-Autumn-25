@@ -1,0 +1,89 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r echo=FALSE,eval=FALSE,include=FALSE}
+
+## ASI - CT3 - 2005 - November - Question 02
+
+```
+
+1. **Given data**:
+   - Mean of 5 observations (x̄) = 15
+   - Variance of 5 observations (s²) = 9
+   - Number of observations (n) = 5
+
+2. **Calculate the sum of the original observations (Σx)**:
+   - Σx = n * x̄
+   - Σx = 5 * 15
+   - Σx = 75
+
+3. **Add the two new observations (-3 and 10)**:
+   - Σx (new) = 75 - 3 + 10
+   - Σx (new) = 82
+
+4. **Calculate the new mean (x̄₇)**:
+   - Number of new observations = 7
+   - New mean (x̄₇) = Σx (new) / 7
+   - New mean (x̄₇) = 82 / 7
+   - New mean (x̄₇) ≈ 11.71
+
+5. **Calculate the corrected sum of squares (Σx²)**:
+   - Variance formula: s² = (Σ(xi - x̄)²) / (n - 1)
+   - Rearrange the formula: Σ(xi - x̄)² = s² * (n - 1)
+   - Σ(xi - x̄)² = 9 * (5 - 1)
+   - Σ(xi - x̄)² = 9 * 4
+   - Σ(xi - x̄)² = 36
+
+6. **Calculate the sum of squares of new observations (Σx² new)**:
+   - Σx² new = Σ(xi - x̄)² + (-3)² + 10²
+   - Σx² new = 36 + 9 + 100
+   - Σx² new = 145
+
+7. **Calculate the new variance (s²₇)**:
+   - New variance (s²₇) = (Σx² new - (Σx new)² / n) / (n - 1)
+   - New variance (s²₇) = (145 - (82)² / 7) / 6
+   - New variance (s²₇) ≈ (145 - 6724 / 7) / 6
+   - New variance (s²₇) ≈ (145 - 960.57) / 6
+   - New variance (s²₇) ≈ (-815.57) / 6
+   - New variance (s²₇) ≈ 51.5 (approximately)
+
+So, the new mean of the 7 observations is approximately **11.71** and the new variance is approximately **51.5**.
+
+I hope this helps! If you have any other questions or need further clarification, just let me know. 😊

@@ -1,0 +1,155 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+In the surgical treatment of duodenal ulcers, there are three different operations corresponding to the removal of various amounts of the stomach. 
+The three operations are denoted A, B, and C, with A being the least traumatic and C the most traumatic. It is known that these operations have an undesirable side effect for some patients. In cases where the side effect is present, it can be classified as being of “slight degree” or of “moderate degree”.
+
+The data in the following table relate to a group of 417 patients and specify the operation received and the degree of the side effects suffered.
+
+| Operation | None | Slight | Moderate | Total |
+|-----------|------|--------|----------|-------|
+| A         | 63   | 26     | 7        | 96    |
+| B         | 126  | 63     | 25       | 214   |
+| C         | 51   | 40     | 16       | 107   |
+| **Total** | 240  | 129    | 48       | 417   |
+
+1. **Perform a chi-squared (χ²) test on this table to investigate independence between the level of operation and the degree of side effects.**
+2. **Examine whether the operation has any significance on the presence of side effects.**
+
+---
+
+Alright, let's dive into the solution for both parts of your question step-by-step:
+
+### (a) Chi-Square Test for Independence
+
+We'll perform a chi-square test to investigate whether the level of operation (A, B, C) is independent of the degree of side effects (None, Slight, Moderate).
+
+1. **Observed Frequencies:**
+
+|             | None | Slight | Moderate | Total |
+|-------------|------|--------|----------|-------|
+| Operation A |  63  |   26   |    7     |   96  |
+| Operation B | 126  |   63   |   25     |  214  |
+| Operation C |  51  |   40   |   16     |  107  |
+| **Total**   | 240  |  129   |   48     |  417  |
+
+2. **Expected Frequencies:**
+   $$
+   E_{ij} = \frac{(\text{Row Total}) \times (\text{Column Total})}{\text{Grand Total}}
+   $$
+
+|             | None     | Slight   | Moderate | Total |
+|-------------|----------|----------|----------|-------|
+| Operation A |  $\frac{96 \times 240}{417}$  | $\frac{96 \times 129}{417}$ | $\frac{96 \times 48}{417}$ |   96  |
+| Operation B | $\frac{214 \times 240}{417}$ | $\frac{214 \times 129}{417}$ | $\frac{214 \times 48}{417}$ |  214  |
+| Operation C | $\frac{107 \times 240}{417}$  | $\frac{107 \times 129}{417}$  | $\frac{107 \times 48}{417}$  |  107  |
+| **Total**   | 240      | 129      | 48       |  417  |
+
+Calculating these values:
+- Expected for Operation A: $E_{A,\text{None}} = \frac{96 \times 240}{417} \approx 55.3$, $E_{A,\text{Slight}} = \frac{96 \times 129}{417} \approx 29.7$, $E_{A,\text{Moderate}} = \frac{96 \times 48}{417} \approx 11.1$
+- Expected for Operation B: $E_{B,\text{None}} = \frac{214 \times 240}{417} \approx 123.2$, $E_{B,\text{Slight}} = \frac{214 \times 129}{417} \approx 66.2$, $E_{B,\text{Moderate}} = \frac{214 \times 48}{417} \approx 24.6$
+- Expected for Operation C: $E_{C,\text{None}} = \frac{107 \times 240}{417} \approx 61.6$, $E_{C,\text{Slight}} = \frac{107 \times 129}{417} \approx 33.1$, $E_{C,\text{Moderate}} = \frac{107 \times 48}{417} \approx 12.3$
+
+3. **Chi-Square Statistic Calculation:**
+   $$
+   \chi^2 = \sum \frac{(O_{ij} - E_{ij})^2}{E_{ij}}
+   $$
+
+Using the observed and expected frequencies:
+- For Operation A: $\chi^2_A = \frac{(63 - 55.3)^2}{55.3} + \frac{(26 - 29.7)^2}{29.7} + \frac{(7 - 11.1)^2}{11.1} \approx 1.072 + 0.461 + 1.514 = 3.047$
+- For Operation B: $\chi^2_B = \frac{(126 - 123.2)^2}{123.2} + \frac{(63 - 66.2)^2}{66.2} + \frac{(25 - 24.6)^2}{24.6} \approx 0.064 + 0.155 + 0.007 = 0.226$
+- For Operation C: $\chi^2_C = \frac{(51 - 61.6)^2}{61.6} + \frac{(40 - 33.1)^2}{33.1} + \frac{(16 - 12.3)^2}{12.3} \approx 1.824 + 1.438 + 1.113 = 4.375$
+
+Total Chi-Square statistic:
+$$
+\chi^2 = 3.047 + 0.226 + 4.375 = 7.65
+$$
+
+4. **Degrees of Freedom:**
+   - $df = (3 - 1) \times (3 - 1) = 4$
+
+5. **Critical Value:**
+   - The critical value for $\chi^2$ with 4 degrees of freedom at 5% significance level is 9.488.
+
+Since 7.65 < 9.488, we fail to reject the null hypothesis $H_0$. There is no evidence to suggest that the level of operation and the degree of side-effects are not independent.
+
+### (b) Examining Significance on Presence of Side Effects
+
+Here, we will combine the "Slight" and "Moderate" categories to see if the operation has any significance on the presence of side effects.
+
+|             | None | Side Effects | Total |
+|-------------|------|--------------|-------|
+| Operation A |  63  |     33       |   96  |
+| Operation B | 126  |     88       |  214  |
+| Operation C |  51  |     56       |  107  |
+| **Total**   | 240  |    177       |  417  |
+
+1. **Expected Frequencies:**
+
+|             | None     | Side Effects | Total |
+|-------------|----------|--------------|-------|
+| Operation A | $\frac{96 \times 240}{417} \approx 55.3$  | $\frac{96 \times 177}{417} \approx 40.8$ |   96  |
+| Operation B | $\frac{214 \times 240}{417} \approx 123.2$ | $\frac{214 \times 177}{417} \approx 90.8$ |  214  |
+| Operation C | $\frac{107 \times 240}{417} \approx 61.6$  | $\frac{107 \times 177}{417} \approx 45.4$  |  107  |
+
+2. **Chi-Square Statistic Calculation:**
+
+Using the observed and expected frequencies:
+- For None:
+  $$
+  \chi^2_{\text{None}} = \frac{(63 - 55.3)^2}{55.3} + \frac{(126 - 123.2)^2}{123.2} + \frac{(51 - 61.6)^2}{61.6} \approx 1.072 + 0.064 + 1.824 = 2.96
+  $$
+- For Side Effects:
+  $$
+  \chi^2_{\text{Side}} = \frac{(33 - 40.8)^2}{40.8} + \frac{(88 - 90.8)^2}{90.8} + \frac{(56 - 45.4)^2}{45.4} \approx 1.491 + 0.086 + 2.475 = 4.052
+  $$
+
+Total Chi-Square statistic:
+$$
+\chi^2 = 2.96 + 4.052 = 7.012
+$$
+
+3. **Degrees of Freedom:**
+   - $df = (3 - 1) \times (2 - 1) = 2$
+
+4. **Critical Value:**
+   - The critical value for $\chi^2$ with 2 degrees of freedom at 5% significance level is 5.991.
+
+Since 7.012 > 5.991, we reject the null hypothesis $H_0$. There is evidence to suggest that the presence or absence of side effects depends on the type of operation.

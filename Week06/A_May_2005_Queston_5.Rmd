@@ -1,0 +1,120 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Let's walk through the steps to find the cumulant generating function, mean, and variance for a given random variable \(X\) with the following probability density function (pdf):
+
+\[ f(x) = \frac{a}{2} e^{-a|x|}, \; a > 0, \; -\infty < x < \infty \]
+
+### Step 1: Moment-Generating Function (MGF)
+
+The moment-generating function \(M_X(t)\) is defined as:
+
+\[ M_X(t) = \mathbb{E}[e^{tX}] = \int_{-\infty}^{\infty} e^{tx} f(x) \, dx \]
+
+Since \(f(x)\) is different for positive and negative \(x\), we split the integral:
+
+\[ M_X(t) = \int_{-\infty}^{\infty} e^{tx} \frac{a}{2} e^{-a|x|} \, dx \]
+
+\[ = \int_{-\infty}^{0} e^{tx} \frac{a}{2} e^{ax} \, dx + \int_{0}^{\infty} e^{tx} \frac{a}{2} e^{-ax} \, dx \]
+
+For \(x < 0\), \(|x| = -x\):
+
+\[ M_X(t) = \frac{a}{2} \int_{-\infty}^{0} e^{(t+a)x} \, dx + \frac{a}{2} \int_{0}^{\infty} e^{(t-a)x} \, dx \]
+
+### Solving the Integrals
+
+For the first integral:
+
+\[ \int_{-\infty}^{0} e^{(t+a)x} \, dx = \left[ \frac{e^{(t+a)x}}{t+a} \right]_{-\infty}^{0} = \frac{1}{t+a} \]
+
+For the second integral:
+
+\[ \int_{0}^{\infty} e^{(t-a)x} \, dx = \left[ \frac{e^{(t-a)x}}{t-a} \right]_{0}^{\infty} = \frac{1}{a-t} \]
+
+Thus,
+
+\[ M_X(t) = \frac{a}{2} \left( \frac{1}{t+a} + \frac{1}{a-t} \right) \]
+
+Simplifying,
+
+\[ M_X(t) = \frac{a}{2} \left( \frac{a-t + t+a}{(t+a)(a-t)} \right) = \frac{a^2}{a^2-t^2} \]
+
+### Step 2: Cumulant Generating Function (CGF)
+
+The cumulant generating function \(K_X(t)\) is the natural logarithm of the MGF:
+
+\[ K_X(t) = \log M_X(t) = \log \left( \frac{a^2}{a^2-t^2} \right) = \log(a^2) - \log(a^2-t^2) \]
+
+### Step 3: Mean and Variance
+
+The mean and variance are the first and second cumulants, respectively.
+
+#### Mean (\(\mu\)):
+
+The first cumulant is the coefficient of \(t\) in the power series expansion of \(K_X(t)\):
+
+\[ K_X(t) = \log(a^2) - \log(a^2-t^2) = -\log(1 - \frac{t^2}{a^2}) \]
+
+Since there is no linear term in \(t\), the mean \(\mu = 0\).
+
+#### Variance (\(\sigma^2\)):
+
+The second cumulant is the coefficient of \(\frac{t^2}{2}\):
+
+\[ K''_X(t) = \frac{d^2}{dt^2} \left( -\log(1 - \frac{t^2}{a^2}) \right) \]
+
+First derivative:
+
+\[ K'_X(t) = \frac{2t/a^2}{1 - t^2/a^2} \]
+
+Second derivative:
+
+\[ K''_X(t) = \frac{2/a^2 (1 - t^2/a^2) - 2t/a^2 (2t/a^2)}{(1 - t^2/a^2)^2} \]
+\[ K''_X(t) = \frac{2/a^2}{(1 - t^2/a^2)^2} \bigg|_{t=0} = \frac{2}{a^2} \]
+
+Thus, the variance \(\sigma^2 = \frac{2}{a^2}\).
+
+### Summary
+
+- **Cumulant Generating Function (CGF)**: \( K_X(t) = -\log(1 - \frac{t^2}{a^2}) \)
+- **Mean**: \( \mu = 0 \)
+- **Variance**: \( \sigma^2 = \frac{2}{a^2} \)
+
+If you have any more questions or need further assistance, feel free to ask!

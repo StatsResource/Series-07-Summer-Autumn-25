@@ -1,0 +1,92 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r echo=FALSE,eval=FALSE,include=FALSE}
+
+## ASI - CT3 - 2005 - November - Question 07
+
+```
+
+
+A random variable ${\displaystyle X}$ follows the hypergeometric distribution if its probability mass function is given by
+
+$$ {\displaystyle \Pr(X=k)={\frac {{\binom {K}{k}}{\binom {N-K}{n-k}}}{\binom {N}{n}}},}$$
+
+\noindent where
+
+\begin{itemize}
+    \item     ${\displaystyle N} $ is the population size,
+    \item       ${\displaystyle K}$  is the number of success states in the population,
+    \item       ${\displaystyle n}$  is the number of draws (i.e. quantity drawn in each trial),
+     \item      ${\displaystyle k}$ is the number of observed successes,
+     \item     ${\textstyle \textstyle {a \choose b}}$ is a binomial coefficient.
+
+\end{itemize}
+
+
+\end{framed}
+\medskip
+\noindent \textbf{Solution}\\
+Invoking Hyper geometric distribution with
+x = 2, n = 5, N = 120 and K = 80,
+
+
+$$ {\displaystyle \Pr(X=2)={\frac {{\binom {80}{2}}{\binom {40}{3}}}{\binom {120}{5}}},}$$
+
+
+\begin{itemize}
+    \item ${ \displaystyle {\binom {80}{2}}   =  \frac{80 \times 79}{2\times 1}  = (40 \times 79) }$
+    \item ${ \displaystyle  {\binom {40}{2}}  =  \frac{40 \times 39 \times 38}{3 \times 2\times 1}  = (20 \times 13 \times 38) }$
+    \item ${ \displaystyle {\binom {120}{5}}  =  \frac{120 \times 119 \times 118 \times 117 \times 116 }{5 \times 4 \times 3 \times 2\times 1} = (119 \times 118 \times 117 \times 116)}$
+\end{itemize}
+
+\begin{eqnarray*}
+\Pr(X=2) &=& {\frac {{\binom {80}{2}}{\binom {40}{3}}}{\binom {120}{5}}} \\
+& &  \\
+&=& \frac{(40 \times 79) \times (20 \times 13 \times 38) }{(119 \times 118 \times 117 \times 116)}\\
+&=&  \left( \frac{40 \times 79}{119 \times 118} \right)  \times  \left( \frac{20 \times 13 \times 38}{117 \times 116} \right) \\
+& & \\
+&=& \frac{3,160}{14,042}  \times \frac{9,880}{13,572}\\
+& & \\
+&=& 0.22503 \times 0.73533\\
+& & \\
+&=& 0.16547 \\
+\end{eqnarray*}

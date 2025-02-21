@@ -1,0 +1,82 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+Sure, let's walk through the process of calculating the lower 95% confidence interval for λ using the provided data.
+
+### Step-by-Step Solution
+
+1. **Data and Assumptions:**
+   - Sample size, $n = 200$
+   - Total claims, $X = 52$
+   - Poisson distribution is assumed for the number of claims.
+
+2. **Estimate the Mean:**
+   - The mean number of claims per policy, $\hat{\lambda}$, is estimated by the sample mean:
+     $$
+     \hat{\lambda} = \frac{X}{n} = \frac{52}{200} = 0.26
+     $$
+
+3. **Using Normal Approximation:**
+   - The distribution of the sample mean $\hat{\lambda}$ can be approximated by a normal distribution with mean $\lambda$ and variance $\frac{\lambda}{n}$.
+     $$
+     \hat{\lambda} \sim N \left( \lambda, \frac{\lambda}{n} \right)
+     $$
+
+4. **Standard Error:**
+   - The standard error (SE) of $\hat{\lambda}$ is:
+     $$
+     \text{SE} = \sqrt{\frac{\hat{\lambda}}{n}} = \sqrt{\frac{0.26}{200}} \approx 0.036
+     $$
+
+5. **Z-value for 95% Confidence:**
+   - The Z-value for a lower 95% confidence interval (one-tailed) is 1.645.
+
+6. **Lower Confidence Limit:**
+   - The lower limit of the 95% confidence interval is given by:
+     $$
+     \hat{\lambda} - Z \times \text{SE} = 0.26 - 1.645 \times 0.036 \approx 0.26 - 0.059 = 0.201
+     $$
+
+### Conclusion:
+The lower limit of the 95% confidence interval for $\lambda$ is approximately $0.201$.
+
+Therefore, the lower 95% confidence interval for $\lambda$ is $(0.201, \infty)$.
+
+If you need further clarification or have any other questions, feel free to ask!

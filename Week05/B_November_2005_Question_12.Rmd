@@ -1,0 +1,80 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+The number of claims, which arise in a year under each individual policy of a certain
+type, has a Poisson distribution with unknown mean l. Last year’s experience for a
+group of independent policies of this type is examined and it is found that no claims
+arose under 78% of the policies (and claims did arise under 22% of the policies).
+Find the maximum likelihood estimate of l
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Solution
+\medskip
+\noident \textbf{Solution}\\
+P(no claims) = e -l 
+Observed proportion of “no claims” = 0.78 
+\ MLE of el is 0.78 so MLE of l is –log(0.78) = 0.248
+
+---
+
+Let's find the maximum likelihood estimate (MLE) of $\lambda$, the mean of the Poisson distribution.
+
+Given that the number of claims follows a Poisson distribution with mean $\lambda$, the probability of observing zero claims under a policy is:
+
+$$ P(\text{no claims}) = e^{-\lambda} $$
+
+From the given information, the observed proportion of policies with no claims is 0.78. This observed proportion serves as the MLE for $e^{-\lambda}$.
+
+Hence, we have:
+
+$$ e^{-\lambda} = 0.78 $$
+
+Taking the natural logarithm on both sides to solve for $\lambda$:
+
+$$ -\lambda = \log(0.78) $$
+$$ \lambda = -\log(0.78) $$
+
+Computing this value:
+
+$$ \lambda \approx -(-0.248) $$
+$$ \lambda \approx 0.248 $$
+
+Therefore, the maximum likelihood estimate (MLE) of $\lambda$ is approximately $0.248$.

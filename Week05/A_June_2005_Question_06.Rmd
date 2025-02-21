@@ -1,0 +1,120 @@
+---
+title: "Joint Random Variables: Worked Example"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r echo=FALSE,eval=FALSE,include=FALSE}
+
+## ASI - CT3 - 2005 - June - Question 06
+
+```
+### Part (i)
+**Maximum Likelihood Estimator (MLE) of $\lambda$:**
+
+Given the exponential distribution with the probability density function:
+$$ f(x) = \lambda e^{-\lambda x}, \quad x > 0, \lambda > 0 $$
+
+Let $\{x_1, x_2, \ldots, x_n\}$ be a random sample of size $n$. The likelihood function $L(\lambda)$ is:
+$$ L(\lambda) = \prod_{i=1}^{n} f(x_i) = \prod_{i=1}^{n} \lambda e^{-\lambda x_i} = \lambda^n e^{-\lambda \sum_{i=1}^{n} x_i} $$
+
+The log-likelihood function $\ell(\lambda)$ is:
+$$ \ell(\lambda) = \ln L(\lambda) = n \ln \lambda - \lambda \sum_{i=1}^{n} x_i $$
+
+To find the MLE, take the derivative of $\ell(\lambda)$ with respect to $\lambda$ and set it to zero:
+$$ \frac{d\ell(\lambda)}{d\lambda} = \frac{n}{\lambda} - \sum_{i=1}^{n} x_i = 0 $$
+
+Solving for $\lambda$:
+$$ \hat{\lambda} = \frac{n}{\sum_{i=1}^{n} x_i} $$
+
+### Part (ii)
+**Unbiased Estimator of $\lambda$:**
+
+To show that $\hat{\lambda}$ is an unbiased estimator of $\lambda$:
+$$ E[\hat{\lambda}] = E\left[\frac{n}{\sum_{i=1}^{n} x_i}\right] $$
+
+Let $ \bar{X} = \frac{1}{n} \sum_{i=1}^{n} x_i $. Since $ \sum_{i=1}^{n} x_i $ follows a Gamma distribution with parameters $ \alpha = n $ and $ \beta = \frac{1}{\lambda} $:
+$$ E\left[\sum_{i=1}^{n} x_i\right] = \frac{n}{\lambda} $$
+
+Thus:
+$$ E\left[\frac{n}{\sum_{i=1}^{n} x_i}\right] = \frac{n}{E\left[\sum_{i=1}^{n} x_i\right]} = \frac{n}{\frac{n}{\lambda}} = \lambda $$
+
+Hence, $\hat{\lambda}$ is an unbiased estimator of $\lambda$.
+
+### Part (iii)
+**Cramer-Rao Lower Bound for the Variance:**
+
+The Fisher information $I(\lambda)$ for the exponential distribution is:
+$$ I(\lambda) = -E\left[\frac{d^2 \ell(\lambda)}{d \lambda^2}\right] $$
+$$ \frac{d^2 \ell(\lambda)}{d \lambda^2} = -\frac{n}{\lambda^2} $$
+$$ I(\lambda) = E\left[\frac{n}{\lambda^2}\right] = \frac{n}{\lambda^2} $$
+
+The Cramer-Rao lower bound for the variance of an unbiased estimator is:
+$$ \text{Var}(\hat{\lambda}) \geq \frac{1}{I(\lambda)} = \frac{\lambda^2}{n} $$
+
+### Part (iv)
+**Variance of $\hat{\lambda}$:**
+
+The variance of $\hat{\lambda}$ is:
+$$ \text{Var}(\hat{\lambda}) = \text{Var}\left(\frac{n}{\sum_{i=1}^{n} x_i}\right) $$
+
+Since $\sum_{i=1}^{n} x_i$ follows a Gamma distribution with mean $\frac{n}{\lambda}$ and variance $\frac{n}{\lambda^2}$:
+$$ \text{Var}\left(\frac{n}{\sum_{i=1}^{n} x_i}\right) = \left(\frac{n}{\frac{n}{\lambda}}\right)^2 \frac{n}{\lambda^2} = \frac{\lambda^2}{n} $$
+
+Hence, the variance of $\hat{\lambda}$ attains the Cramer-Rao lower bound.
+
+### Part (v)
+**95% Confidence Interval for $\lambda$:**
+
+Using the approximate normal distribution of $\hat{\lambda}$:
+$$ \hat{\lambda} \pm z_{0.025} \sqrt{\text{Var}(\hat{\lambda})} $$
+
+Given:
+$$ \hat{\lambda} = \frac{n}{\sum_{i=1}^{n} x_i} $$
+$$ \text{Var}(\hat{\lambda}) = \frac{\lambda^2}{n} $$
+
+Using $z_{0.025} \approx 1.96$:
+$$ \hat{\lambda} \pm 1.96 \cdot \frac{\lambda}{\sqrt{n}} $$
+
+Hence, the 95% approximate confidence interval for $\lambda$ is:
+$$ \left( \frac{n}{\sum_{i=1}^{n} x_i} - 1.96 \frac{\frac{n}{\sum_{i=1}^{n} x_i}}{\sqrt{n}}, \frac{n}{\sum_{i=1}^{n} x_i} + 1.96 \frac{\frac{n}{\sum_{i=1}^{n} x_i}}{\sqrt{n}} \right) $$
+
+---
+
+
+---
