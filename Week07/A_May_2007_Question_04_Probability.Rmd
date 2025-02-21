@@ -26,6 +26,8 @@ Let's break down the problem to find the expected winnings step by step:
    \[
    E(X) = \left(\frac{1}{2} \times 1\right) + \left(\frac{1}{4} \times 0\right) + \left(\frac{1}{4} \times -2\right)
    \]
+
+---
    Simplifying:
    \[
    E(X) = \frac{1}{2} + 0 + \left(\frac{-2}{4}\right)
