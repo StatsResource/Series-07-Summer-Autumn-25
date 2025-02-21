@@ -1,5 +1,5 @@
 ---
-title: "Joint Random Variables: Worked Example"
+title: "Moment Generating Functions"
 subtitle: "Discrete Probability Distributions"
 output:
   xaringan::moon_reader:
@@ -42,11 +42,14 @@ Let's walk through the steps to find the cumulant generating function, mean, and
 
 \[ f(x) = \frac{a}{2} e^{-a|x|}, \; a > 0, \; -\infty < x < \infty \]
 
+---
 ### Step 1: Moment-Generating Function (MGF)
 
 The moment-generating function \(M_X(t)\) is defined as:
 
 \[ M_X(t) = \mathbb{E}[e^{tX}] = \int_{-\infty}^{\infty} e^{tx} f(x) \, dx \]
+
+---
 
 Since \(f(x)\) is different for positive and negative \(x\), we split the integral:
 
@@ -57,6 +60,9 @@ Since \(f(x)\) is different for positive and negative \(x\), we split the integr
 For \(x < 0\), \(|x| = -x\):
 
 \[ M_X(t) = \frac{a}{2} \int_{-\infty}^{0} e^{(t+a)x} \, dx + \frac{a}{2} \int_{0}^{\infty} e^{(t-a)x} \, dx \]
+
+
+---
 
 ### Solving the Integrals
 
@@ -76,11 +82,14 @@ Simplifying,
 
 \[ M_X(t) = \frac{a}{2} \left( \frac{a-t + t+a}{(t+a)(a-t)} \right) = \frac{a^2}{a^2-t^2} \]
 
+---
 ### Step 2: Cumulant Generating Function (CGF)
 
 The cumulant generating function \(K_X(t)\) is the natural logarithm of the MGF:
 
 \[ K_X(t) = \log M_X(t) = \log \left( \frac{a^2}{a^2-t^2} \right) = \log(a^2) - \log(a^2-t^2) \]
+
+---
 
 ### Step 3: Mean and Variance
 
@@ -111,10 +120,12 @@ Second derivative:
 
 Thus, the variance \(\sigma^2 = \frac{2}{a^2}\).
 
+---
 ### Summary
 
 - **Cumulant Generating Function (CGF)**: \( K_X(t) = -\log(1 - \frac{t^2}{a^2}) \)
 - **Mean**: \( \mu = 0 \)
 - **Variance**: \( \sigma^2 = \frac{2}{a^2} \)
 
-If you have any more questions or need further assistance, feel free to ask!
+
+---
