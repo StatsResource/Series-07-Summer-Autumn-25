@@ -1,7 +1,55 @@
-Week-07
+Certainly! Here's the conversion of the given LaTeX to markdown:
 
-Let's tackle the problem step by step.
+### A claim size distribution is modeled using a simple distribution with density of the form
 
+\[
+\int_{0}^{50} k ( 50 - x ) dx
+\]
+
+1. **Find \( k \)**
+2. **Determine the mean of this claim size distribution.**
+3. **Calculate the probability that an individual claim size is greater than 25**
+4. **Calculate the probability that an individual claim size is less than 30 given that it is greater than 25**
+
+### Solution
+
+#### 3. a)
+
+\[
+\int_{0}^{50} k ( 50 - x ) dx = 1
+\]
+
+Solving for \( k \):
+
+\[
+k = \frac{1}{1250}
+\]
+
+#### b)
+
+\[
+\int_{0}^{50} \frac{1}{1250} x ( 50 - x ) dx = \frac{1}{1250} \left( \frac{50x^2}{2} - \frac{x^3}{3} \right)
+\]
+
+Evaluating:
+
+\[
+= \frac{1}{1250} \left( \frac{50 \times (50)^2}{2} - \frac{(50)^3}{3} \right) = 16.67
+\]
+
+#### c)
+
+\[
+\int_{25}^{50} \frac{1}{1250} (50 - x) dx = \frac{1}{1250} \left[ 50x - \frac{x^2}{2} \right]_{25}^{50} = 0.25
+\]
+
+#### d)
+
+\[
+P(X < 30 \mid X > 25) = \frac{P(25 < X < 30)}{P(X > 25)} = \frac{\int_{25}^{30} f(x) dx}{\int_{25}^{50} f(x) dx} = \frac{0.09}{0.25} = 0.36
+\]
+
+If you need further clarification or additional help, feel free to ask!
 ### 1. Find \( k \)
 
 Given the density function of the form:
