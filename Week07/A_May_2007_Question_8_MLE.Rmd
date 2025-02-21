@@ -1,0 +1,48 @@
+### Part (a) Likelihood Function and MLE
+
+Given the pdf of the distribution: 
+\[ f(x;\theta) = \begin{cases} 
+\frac{2}{\theta^2}x & \text{for } 0 < x < \theta \\ 
+0 & \text{otherwise} 
+\end{cases} \]
+
+The likelihood function for a random sample of size \(n\) is:
+\[ L(\theta | x_1, x_2, \ldots, x_n) = \prod_{i=1}^n f(x_i;\theta) \]
+\[ L(\theta | x_1, x_2, \ldots, x_n) = \left(\frac{2}{\theta^2}\right)^n \prod_{i=1}^n x_i \]
+
+The likelihood function is non-zero only when \( \theta \geq x_{(n)} \), where \( x_{(n)} = \max(x_1, x_2, \ldots, x_n) \). Hence, we have:
+\[ L(\theta | x_1, x_2, \ldots, x_n) = \left(\frac{2}{\theta^2}\right)^n \prod_{i=1}^n x_i \text{ for } \theta \geq x_{(n)} \]
+
+To obtain the MLE, we maximize the likelihood function with respect to \(\theta\). Since the likelihood function \( L(\theta | x_1, x_2, \ldots, x_n) \) is a decreasing function of \(\theta\) for \(\theta > x_{(n)}\), the MLE is:
+\[ \hat{\theta} = x_{(n)} \]
+
+---
+### Part (b) Unbiasedness of the MLE
+
+To check if the MLE \( \hat{\theta} \) is unbiased, we need to check if \( E[\hat{\theta}] = \theta \).
+
+We know that \( \hat{\theta} = x_{(n)} \) is the maximum of \( n \) independent and identically distributed random variables from the given distribution. The CDF of \( X \) is:
+\[ F(x) = \left( \frac{x}{\theta} \right)^2 \text{ for } 0 < x < \theta \]
+
+---
+
+The CDF of \( x_{(n)} \) is:
+\[ F_{x_{(n)}}(x) = \left( F(x) \right)^n = \left( \frac{x}{\theta} \right)^{2n} \]
+
+
+The pdf of \( x_{(n)} \) is:
+\[ f_{x_{(n)}}(x) = \frac{d}{dx} F_{x_{(n)}}(x) = 2n \left( \frac{x}{\theta} \right)^{2n-1} \frac{1}{\theta} \]
+
+---
+The expected value of \( x_{(n)} \) is:
+\[ E[x_{(n)}] = \int_0^{\theta} x f_{x_{(n)}}(x) dx \]
+\[ E[x_{(n)}] = \int_0^{\theta} x \cdot 2n \left( \frac{x}{\theta} \right)^{2n-1} \frac{1}{\theta} dx \]
+\[ E[x_{(n)}] = \int_0^{\theta} \frac{2n}{\theta^{2n}} x^{2n} dx \]
+\[ E[x_{(n)}] = \frac{2n}{\theta^{2n}} \int_0^{\theta} x^{2n} dx \]
+\[ E[x_{(n)}] = \frac{2n}{\theta^{2n}} \left[ \frac{x^{2n+1}}{2n+1} \right]_0^{\theta} \]
+\[ E[x_{(n)}] = \frac{2n}{\theta^{2n}} \cdot \frac{\theta^{2n+1}}{2n+1} \]
+\[ E[x_{(n)}] = \frac{2n \cdot \theta}{2n+1} \]
+
+Since \( E[x_{(n)}] < \theta \) for all \(\theta\), the MLE \( x_{(n)} \) is not unbiased.
+
+I hope this explanation helps! If you have any further questions or need additional clarification, feel free to ask.
