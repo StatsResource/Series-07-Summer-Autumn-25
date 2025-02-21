@@ -1,3 +1,7 @@
+ A man wins a rupee for head and loses a rupee for tail when a fair coin is tossed. Suppose that he tosses once and quits if he wins; but tries once more if he losses on the first toss. What are his expected winnings?
+
+---
+
 Let's break down the problem to find the expected winnings step by step:
 
 ### Steps and Solution:
@@ -13,6 +17,7 @@ Let's break down the problem to find the expected winnings step by step:
      - Probability: \(P(C) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}\) 
      - Earnings: \(E(X|C) = -1 - 1 = -2\) rupees
 
+---
 2. **Expected winnings calculation:**
    \[
    E(X) = P(A)E(X|A) + P(B)E(X|B) + P(C)E(X|C)
@@ -32,4 +37,10 @@ Let's break down the problem to find the expected winnings step by step:
    E(X) = 0
    \]
 
+---
 So, the man's expected winnings are **0 rupees**.
+
+---
+
+
+---
