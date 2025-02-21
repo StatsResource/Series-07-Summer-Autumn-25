@@ -1,0 +1,32 @@
+
+---
+(a) State the conditions under which a counting process is called a Poisson process with parameter \( \lambda \).
+(b) Consumers arrive in an insurance company branch office for premium payment according to a Poisson process with rate \( \lambda = 4 \) per hour. The office opens at 9:00 AM. Find the probability that “exactly one customer visits by 9:30 AM and four more visit till 11:30 AM for premium payment”.
+
+---
+
+**Solution**
+
+(a) A counting process \( \{N(t); t \geq 0\} \) is said to be a Poisson process if the following conditions are satisfied:
+1. \( N(t) \) is independent of the number of occurrences in an interval prior to the interval \((0, t)\).
+2. \( P_n(t) \) depends only on the length of the interval and is independent of where this interval is situated.
+3. In the interval of infinitesimal length \( h \), the probability of exactly one occurrence is \( \tau h + o(h) \) (\( \tau \) is constant) and that of more than one occurrence is \( o(h) \).
+
+---
+(b) 
+
+- Measuring time \( t \) in hours from 9:00 a.m., it is asked to determine \( P[X(1/2) = 1, X(5/2) = 5] \).
+- Using the independence of \( X(5/2) - X(1/2) \) and \( X(1/2) \), the question is reformulated as:
+\[ P[X(1/2) = 1, X(5/2) = 5] = P[X(1/2) = 1, X(5/2) - X(1/2) = 4] \]
+
+\[
+= \frac{e^{-2} \cdot (4(1/2))^1}{1!} \times \frac{e^{-8} \cdot (4(2))^4}{4!}
+= (2e^{-2}) (e^{-8} \cdot \frac{256}{24})
+= 2e^{-2} \times e^{-8} \times \frac{256}{24}
+= 2 \times \frac{256}{24} \times e^{-10}
+= 0.0154965
+\]
+
+---
+
+---
