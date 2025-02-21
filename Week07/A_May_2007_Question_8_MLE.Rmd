@@ -1,3 +1,21 @@
+A random sample of size \( n \) is taken from a distribution with pdf 
+
+
+
+\[ 
+f(x; \theta) = \begin{cases} 
+\frac{2}{\theta^2}x & \text{for } 0 < x < \theta \\
+0 & \text{otherwise} 
+\end{cases}
+\]
+
+
+
+1. Write down the likelihood function and hence by drawing the rough sketch of the likelihood function, obtain the maximum likelihood estimator (MLE) for \( \theta \).
+
+2. Examine if the MLE is unbiased.
+
+---
 ### Part (a) Likelihood Function and MLE
 
 Given the pdf of the distribution: 
