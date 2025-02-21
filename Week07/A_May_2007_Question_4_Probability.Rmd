@@ -1,0 +1,35 @@
+Let's break down the problem to find the expected winnings step by step:
+
+### Steps and Solution:
+
+1. **Possible outcomes and their respective probabilities:**
+   - **A**: Heads on the first toss. 
+     - Probability: \(P(A) = \frac{1}{2}\) 
+     - Earnings: \(E(X|A) = 1\) rupee
+   - **B**: Tails on the first toss and heads on the second toss.
+     - Probability: \(P(B) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}\) 
+     - Earnings: \(E(X|B) = 1 - 1 = 0\) rupees
+   - **C**: Tails on both tosses.
+     - Probability: \(P(C) = \frac{1}{2} \times \frac{1}{2} = \frac{1}{4}\) 
+     - Earnings: \(E(X|C) = -1 - 1 = -2\) rupees
+
+2. **Expected winnings calculation:**
+   \[
+   E(X) = P(A)E(X|A) + P(B)E(X|B) + P(C)E(X|C)
+   \]
+   Substituting the probabilities and earnings:
+   \[
+   E(X) = \left(\frac{1}{2} \times 1\right) + \left(\frac{1}{4} \times 0\right) + \left(\frac{1}{4} \times -2\right)
+   \]
+   Simplifying:
+   \[
+   E(X) = \frac{1}{2} + 0 + \left(\frac{-2}{4}\right)
+   \]
+   \[
+   E(X) = \frac{1}{2} - \frac{1}{2}
+   \]
+   \[
+   E(X) = 0
+   \]
+
+So, the man's expected winnings are **0 rupees**.
