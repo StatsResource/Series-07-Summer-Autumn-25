@@ -1,0 +1,62 @@
+Sure, let's work through the solution for each part step-by-step:
+
+### Part (a) Can we conclude \( p = 0.5 \) at the 0.05 level of significance?
+
+1. **Given Data:**
+   - Sample size, \( n = 1034 \)
+   - Number of successes, \( X = 848 \)
+
+2. **Sample Proportion:**
+   \[
+   \hat{p} = \frac{X}{n} = \frac{848}{1034} \approx 0.82
+   \]
+
+3. **Hypotheses:**
+   - Null hypothesis \( H_0: p = 0.5 \)
+   - Alternative hypothesis \( H_1: p \neq 0.5 \)
+
+4. **Test Statistic (Z):**
+   \[
+   Z = \frac{\hat{p} - p_0}{\sqrt{\frac{p_0 (1 - p_0)}{n}}}
+   \]
+   Substituting the values:
+   \[
+   Z = \frac{0.82 - 0.5}{\sqrt{\frac{0.5 \cdot 0.5}{1034}}} \approx 20.64
+   \]
+
+5. **Critical Value:**
+   - At the 0.05 level of significance, the critical value for a two-tailed test is 1.96.
+
+Since \( Z = 20.64 \) is greater than 1.96, we **reject** \( H_0 \).
+
+**Conclusion:** There is significant evidence to conclude that the proportion \( p \) is not equal to 0.5.
+
+---
+### Part (b) Obtain a 90% confidence interval for \( p \).
+
+1. **Confidence Interval Formula:**
+   \[
+   \hat{p} \pm Z_{\alpha/2} \sqrt{\frac{\hat{p}(1 - \hat{p})}{n}}
+   \]
+
+2. **Values:**
+   - Sample proportion, \( \hat{p} \approx 0.82 \)
+   - Sample size, \( n = 1034 \)
+   - \( Z_{\alpha/2} \) for 90% confidence interval is 1.645
+
+---
+3. **Interval Calculation:**
+   \[
+   0.82 \pm 1.645 \sqrt{\frac{0.82 \cdot 0.18}{1034}} \approx 0.82 \pm 0.0197
+   \]
+
+4. **Confidence Interval:**
+   \[
+   (0.8003, 0.8397)
+   \]
+
+---
+
+**Conclusion:** The 90% confidence interval for the proportion \( p \) is \((0.8003, 0.8397)\).
+
+If you need further clarification or additional help, feel free to ask!
