@@ -1,0 +1,68 @@
+Here's the given information formatted in Markdown:
+
+```markdown
+\large 
+The random variable \( Y = \log X \) has \( N(10, 4) \) distribution. Find:
+\begin{enumerate}[(a)]
+\item The pdf of \( X \)
+\item Mean and variance of \( X \)
+\item \( P(X \leq 1000) \)
+\end{enumerate}
+
+\begin{framed}
+A lognormal distribution is a continuous probability distribution of a random variable whose logarithm is normally distributed. Thus, if the random variable \( X \) is log-normally distributed, then \( Y = \ln(X) \) has a normal distribution. Equivalently, if \( Y \) has a normal distribution, then the exponential function of \( Y \), \( X = \exp(Y) \), has a log-normal distribution.
+\begin{itemize}
+\item Probability Density Function: 
+\[ f(x) = \frac{1}{x\sigma \sqrt{2\pi}} \exp\left( -\frac{(\ln x - \mu)^2}{2\sigma^2} \right) \text{ for } x > 0 \]
+\item Mean: 
+\[ \exp \left( \mu + \frac{\sigma^2}{2} \right) \]
+\item Variance: 
+\[ \left[ \exp(\sigma^2) - 1 \right] \exp(2\mu + \sigma^2) \]
+\end{itemize}
+\end{framed}
+
+\textbf{Solution}
+
+\textbf{Part (a)}
+
+\[
+f(x) = 
+\begin{cases}
+\frac{1}{2x \sqrt{2 \pi}} \exp\left( -\frac{(\ln x - 10)^2}{8} \right) & x \geq 0 \\
+0 & \text{otherwise}
+\end{cases}
+\]
+
+\textbf{Part (b)}
+
+\[
+E(X) = \exp \left( \mu_Y + \frac{\sigma_Y^2}{2} \right) \\
+= e^{10 + 2} \\
+= e^{12} \\
+\approx 162.754
+\]
+
+\[
+\operatorname{Var}(X) = \left[ \exp(\sigma_Y^2) - 1 \right] \exp(2\mu_Y + \sigma_Y^2) \\
+= (e^4 - 1) \times \exp(24) \\
+= (e^4 - 1) e^{24} \\
+\approx 53.598 \times e^{24}
+\]
+
+
+---
+
+\textbf{Part (c)}
+
+\[
+P(X \leq 1000) \\
+= P(\log X \leq \log 1000) \\
+= P(Y \leq \log 1000) \\
+= P\left( Z \leq \frac{\log 1000 - 10}{2} \right) \\
+= P(Z \leq -1.55) \\
+= \Phi(-1.55) \\
+= 0.0611
+\]
+```
+
+Feel free to further adjust or elaborate as needed! If you need more assistance, just let me know.
