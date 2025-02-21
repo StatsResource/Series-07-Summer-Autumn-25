@@ -1,0 +1,90 @@
+Alright, let's go through the solution step-by-step for each part of the problem:
+
+### Part (a) Has any change taken place? Test your claim at 5% level.
+
+1. **Scores and Differences:**
+
+\[
+\begin{array}{|c|c|c|}
+\hline
+\text{Before Training (X)} & 42 & 35 & 37 & 46 & 53 & 38 & 44 & 40 & 43 \\
+\hline
+\text{After Training (Y)} & 47 & 28 & 26 & 54 & 42 & 17 & 44 & 31 & 44 \\
+\hline
+\text{Difference (d) = X - Y} & -5 & 7 & 11 & -8 & 11 & 21 & 0 & 9 & -1 \\
+\hline
+\end{array}
+\]
+
+2. **Mean and Standard Deviation of Differences:**
+   - Mean difference, \( \bar{d} = 5 \)
+   - Standard deviation of differences, \( s_d = 9.206 \)
+   - Sample size, \( n = 9 \)
+
+3. **Hypotheses:**
+   - Null hypothesis \( H_0 \): \( \mu_d = 0 \)
+   - Alternative hypothesis \( H_1 \): \( \mu_d \neq 0 \)
+
+4. **Test Statistic:**
+   \[
+   t = \frac{\bar{d}}{s_d / \sqrt{n}} = \frac{5}{9.206 / \sqrt{9}} = 1.63
+   \]
+
+5. **Critical Value:**
+   - Degrees of freedom (d.f.) = \( n - 1 = 9 - 1 = 8 \)
+   - Critical value of \( t \) at 5% level for 8 d.f. = 2.306
+
+Since \( t = 1.63 \) is less than 2.306, we **do not reject** \( H_0 \).
+
+**Conclusion:** No significant change has taken place.
+
+### Part (b) Obtain 95% confidence interval for the mean change in ability of trainees.
+
+1. **Confidence Interval Calculation:**
+   \[
+   \bar{d} \pm t_{\alpha/2} \frac{s_d}{\sqrt{n}} = 5 \pm 2.306 \frac{9.206}{\sqrt{9}}
+   \]
+
+2. **Interval Calculation:**
+   \[
+   5 \pm 2.306 \times 3.069 = 5 \pm 7.088
+   \]
+
+3. **Confidence Interval:**
+   \[
+   (-2.088, 12.088)
+   \]
+
+**Conclusion:** The 95% confidence interval for the mean change in ability of trainees is \((-2.088, 12.088)\).
+
+### Part (c) Compute Pearson’s correlation coefficient and test its significance.
+
+1. **Calculation of Correlation Coefficient:**
+   - Sum of \( X \), \( Y \), \( X^2 \), \( Y^2 \), \( XY \)
+     \[
+     \sum X = 378, \quad \sum Y = 333, \quad \sum X^2 = 16112, \quad \sum Y^2 = 13471, \quad \sum XY = 14340
+     \]
+
+   - Correlation coefficient \( r \):
+     \[
+     r = \frac{n \sum XY - (\sum X)(\sum Y)}{\sqrt{(n \sum X^2 - (\sum X)^2)(n \sum Y^2 - (\sum Y)^2)}} = 0.6796
+     \]
+
+2. **Test the significance of \( \rho \):**
+   - Hypotheses:
+     \[
+     H_0: \rho = 0 \quad \text{vs.} \quad H_1: \rho \neq 0
+     \]
+
+   - Test statistic:
+     \[
+     t = \frac{r \sqrt{n - 2}}{\sqrt{1 - r^2}} = \frac{0.6796 \sqrt{7}}{\sqrt{1 - 0.6796^2}} = 2.451
+     \]
+
+   - Critical value of \( t \) at 5% level for 8 d.f. = 2.306
+
+Since \( t = 2.451 \) is greater than 2.306, we **reject** \( H_0 \).
+
+**Conclusion:** There is a significant correlation between the scores before and after training.
+
+If you need further clarification or additional help, feel free to ask!
