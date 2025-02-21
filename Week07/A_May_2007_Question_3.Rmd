@@ -1,0 +1,123 @@
+Week-07
+
+Let's tackle the problem step by step.
+
+### 1. Find \( k \)
+
+Given the density function of the form:
+\[\int^{50}_{0} k ( 50 - x ) dx = 1\]
+
+We solve for \( k \):
+
+\[
+k \int^{50}_{0} ( 50 - x ) dx = 1
+\]
+\[
+k \left[ 50x - \frac{x^2}{2} \right]^{50}_{0} = 1
+\]
+\[
+k \left[ 50(50) - \frac{50^2}{2} \right] = 1
+\]
+\[
+k \left[ 2500 - 1250 \right] = 1
+\]
+\[
+k \times 1250 = 1
+\]
+\[
+k = \frac{1}{1250}
+\]
+
+### 2. Determine the mean of this claim size distribution
+
+To find the mean, we calculate the expected value \( E[X] \):
+
+\[
+E[X] = \int^{50}_{0} x f(x) dx
+\]
+\[
+E[X] = \int^{50}_{0} \frac{1}{1250} x ( 50 - x ) dx
+\]
+\[
+E[X] = \frac{1}{1250} \left[ \frac{ 50x^2 }{2} - \frac{x^3}{3} \right]^{50}_{0}
+\]
+\[
+E[X] = \frac{1}{1250} \left[ \frac{ 50(50)^2 }{2} - \frac{50^3}{3} \right]
+\]
+\[
+E[X] = \frac{1}{1250} \left[ \frac{ 50 \times 2500 }{2} - \frac{125000}{3} \right]
+\]
+\[
+E[X] = \frac{1}{1250} \left[ 62500 - 41666.67 \right]
+\]
+\[
+E[X] = \frac{1}{1250} \times 20833.33
+\]
+\[
+E[X] = 16.67
+\]
+
+### 3. Calculate the probability that an individual claim size is greater than 25
+
+\[
+P(X > 25) = \int^{50}_{25} \frac{1}{1250} (50 - x) dx
+\]
+\[
+P(X > 25) = \frac{1}{1250} \left[ 50x - \frac{x^2}{2} \right]^{50}_{25}
+\]
+\[
+P(X > 25) = \frac{1}{1250} \left[ (50 \times 50 - \frac{50^2}{2}) - (50 \times 25 - \frac{25^2}{2}) \right]
+\]
+\[
+P(X > 25) = \frac{1}{1250} \left[ (2500 - 1250) - (1250 - 312.5) \right]
+\]
+\[
+P(X > 25) = \frac{1}{1250} \left[ 1250 - 937.5 \right]
+\]
+\[
+P(X > 25) = \frac{1}{1250} \times 312.5
+\]
+\[
+P(X > 25) = 0.25
+\]
+
+### 4. Calculate the probability that an individual claim size is less than 30 given that it is greater than 25
+
+\[
+P(X < 30 \mid X > 25) = \frac{P(25 < X < 30)}{P(X > 25)}
+\]
+\[
+P(X < 30 \mid X > 25) = \frac{\int^{30}_{25} f(x) dx}{\int^{50}_{25} f(x) dx}
+\]
+
+Calculate \( \int^{30}_{25} \frac{1}{1250} (50 - x) dx \):
+
+\[
+\int^{30}_{25} \frac{1}{1250} (50 - x) dx = \frac{1}{1250} \left[ 50x - \frac{x^2}{2} \right]^{30}_{25}
+\]
+\[
+= \frac{1}{1250} \left[ (50 \times 30 - \frac{30^2}{2}) - (50 \times 25 - \frac{25^2}{2}) \right]
+\]
+\[
+= \frac{1}{1250} \left[ (1500 - 450) - (1250 - 312.5) \right]
+\]
+\[
+= \frac{1}{1250} \left[ 1050 - 937.5 \right]
+\]
+\[
+= \frac{1}{1250} \times 112.5
+\]
+\[
+= 0.09
+\]
+
+Now calculate \( P(X < 30 \mid X > 25) \):
+
+\[
+P(X < 30 \mid X > 25) = \frac{0.09}{0.25}
+\]
+\[
+P(X < 30 \mid X > 25) = 0.36
+\]
+
+I hope this helps! If you have any further questions or need additional explanations, feel free to ask.
