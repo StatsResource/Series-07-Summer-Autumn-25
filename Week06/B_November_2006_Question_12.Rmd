@@ -1,0 +1,154 @@
+---
+title: "ANOVA"
+subtitle: "Analysis of Variance"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+highlightStyle: github
+countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#11AA83",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r echo=FALSE,eval=FALSE,include=FALSE}
+
+## ASI - CT3 - 2006 - November - Question 12
+
+```
+
+
+**Problem:**
+
+A private insurance company has three offices at Delhi, Mumbai, and Chennai. To measure how much the employees at these places know about total quality management, a random sample of six employees was selected from each place and given a quality awareness examination. The examination scores are given in the following table.
+
+**Examination Scores:**
+
+| Observation | Delhi | Mumbai | Chennai |
+|-------------|-------|--------|---------|
+| 1           | 85    | 71     | 59      |
+| 2           | 75    | 75     | 64      |
+| 3           | 82    | 73     | 62      |
+| 4           | 76    | 74     | 69      |
+| 5           | 71    | 69     | 75      |
+| 6           | 85    | 82     | 67      |
+
+
+Test the hypothesis that the mean examination score is the same for all three places at the 5% level by stating the model, the hypothesis, and the assumptions involved for this test.
+
+---
+
+### Solution:
+
+
+*  **Model:**
+    
+$$x_{ij} = \mu + \alpha_i + e_{ij}$$
+where $j = 1,2,\ldots,n_i$; $i = 1,2,3$
+
+- $\mu$: the overall mean
+- $e_{ij}$: random component ~ $N(0,\sigma^2)$
+
+---
+
+*  **Hypothesis:**
+    
+- $H_0 : \alpha_1 = \alpha_2 = \alpha_3$
+- $H_1 : \alpha_1 \neq \alpha_2 \neq \alpha_3$
+
+Where $\alpha_i$ (i = 1, 2, 3) are the population means at Delhi, Mumbai, and Chennai, respectively.
+
+*  **Assumptions:**
+    
+i) Samples are drawn from normal populations  
+ii) Samples are independent  
+iii) Population variances are equal
+
+
+---
+
+
+Let's calculate the overall mean for the three cities (Delhi, Mumbai, and Chennai) based on the examination scores provided.
+
+First, we'll sum up the scores for each city and then calculate the average for each city individually. Finally, we'll compute the overall mean of these three averages.
+
+**Scores:**
+
+| Observation | Delhi | Mumbai | Chennai |
+|-------------|-------|--------|---------|
+| 1           | 85    | 71     | 59      |
+| 2           | 75    | 75     | 64      |
+| 3           | 82    | 73     | 62      |
+| 4           | 76    | 74     | 69      |
+| 5           | 71    | 69     | 75      |
+| 6           | 85    | 82     | 67      |
+
+---
+
+**Step-by-Step Calculations:**
+
+1. Sum of the scores for each city:
+   - Delhi: $85 + 75 + 82 + 76 + 71 + 85 = 474$
+   - Mumbai: $71 + 75 + 73 + 74 + 69 + 82 = 444$
+   - Chennai: $59 + 64 + 62 + 69 + 75 + 67 = 396$
+
+2. Number of observations for each city: $6$
+
+3. Mean score for each city:
+   - Delhi: $\frac{474}{6} = 79$
+   - Mumbai: $\frac{444}{6} = 74$
+   - Chennai: $\frac{396}{6} = 66$
+
+4. Overall mean:
+   \[ \text{Overall Mean} = \frac{79 + 74 + 66}{3} \approx 73 \]
+
+So, the overall mean for the examination scores from the three cities is approximately $73$.
+
+---
+
+*  **ANOVA:**
+
+$$\begin{array}{|c|c|c|c|c|}
+\hline
+\text{Sources} & \text{Sum of squares} & \text{d.f.} & \text{MSS} & \text{F} \\ \hline
+\text{Treatments} & 516 & 2 & 258 & 9.00 \\ \hline
+\text{Error} & 430 & 15 & 28.67 & \\ \hline
+\text{Total} & 946 & 17 &  & \\ \hline
+\end{array}$$
+
+*  Critical value of $F(2,15)$ at 5% level = 3.682
+ 
+---
+
+*  **Conclusion:**
+    
+Reject $H_0$. The population means are not equal in these places.
+
+---

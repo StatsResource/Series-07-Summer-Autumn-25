@@ -1,0 +1,128 @@
+---
+title: "Correlation Hypothesis Testing"
+subtitle: "Bivariate Analyses"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r echo=FALSE,eval=FALSE,include=FALSE}
+
+## ASI - CT3 - 2006 - November - Question 13
+
+```
+
+
+In a correlation analysis, based on a sample of size 10 from a bivariate normal
+distribution, a test of $H_0: \rho = 0$ against $H_1: \rho > 0$ results in a probability value of 0.025. 
+
+
+**Compute the value of the sample correlation coefficient.**
+
+---
+
+### Solution
+
+Let's break it down:
+
+#### Step 1. **Hypotheses**: 
+
+   - $H_0 : \rho = 0$ 
+   - $H_1 : \rho > 0$
+
+#### Step 2. **Test Statistic**: 
+   - The test statistic $t$ follows a $t$-distribution with $n-2$ degrees of freedom (df).
+   - Test Statistic $$t = \frac{r \sqrt{n-2}}{\sqrt{1-r^2}}$$ with $n = 10$.
+
+#### Step 3. **P-value Interpretation**:
+   - Given a one-sided p-value of 0.025, the observed $t$-value is 2.306.
+---
+
+#### Step 4. **Solving for $r$**:
+   - Plugging in the observed $t$-value, we get:
+   $$
+   2.306 = \frac{r \sqrt{10-2}}{\sqrt{1-r^2}}
+   $$
+   - Simplifying:
+   $$
+   2.306 = \frac{r \sqrt{8}}{\sqrt{1-r^2}}
+   $$
+
+---
+
+#### Step 5. **Calculations**:
+   - Rearrange and solve for $r$:
+   $$
+    \frac{2.306}{\sqrt{8}} = \frac{r}{\sqrt{1-r^2}}
+   $$
+   - Solving
+   $$
+    \frac{2.306}{\sqrt{8}} = 0.8153
+   $$
+   
+   $$
+   0.8153 = \frac{r}{\sqrt{1-r^2}}
+   $$
+   $$
+   r = 0.632
+   $$
+
+---
+
+### Fisher's Transformation
+
+Fisher's transformation is a mathematical technique used to transform the sample correlation coefficient $r$ to a variable $Z$ that is approximately normally distributed. 
+
+This transformation makes it easier to conduct hypothesis tests and construct confidence intervals for the correlation coefficient, particularly when the sample size is small.
+
+The transformation is given by:
+$$Z = \frac{1}{2} \log \left( \frac{1+r}{1-r} \right)$$
+Under the null hypothesis $H_0$, the transformed variable $Z$ follows a normal distribution with mean 0 and standard deviation $\frac{1}{\sqrt{n-3}}$, where $n$ is the sample size. This allows us to perform statistical tests using standard normal distribution properties.
+
+---
+
+
+
+### **Using Fisher's Transformation**:
+   - Fisher's transformation is given by:
+   $$
+   Z = \frac{1}{2} \log \left( \frac{1+r}{1-r} \right)
+   $$
+   - Under $H_0$, $Z$ approximately follows a normal distribution $N(0, \frac{1}{7})$.
+   - This also gives $r = 0.630$.
+
+Therefor the sample correlation coefficient $r$ is approximately $0.632$.
+
+---

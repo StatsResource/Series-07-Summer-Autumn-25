@@ -1,0 +1,98 @@
+---
+title: "Chi Square Goodness of Fit"
+subtitle: "Discrete Probability Distributions"
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      countIncrementalSlides: false
+---
+
+
+```{r setup1, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(magrittr)
+library(knitr)
+library(tidyquant)
+library(ggside)
+library(ggplot2)
+
+
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_accent_inverse(
+  #base_color = "#3C989E")(
+  base_color = "#0cB2A3",
+  header_font_google = google_font("Josefin Sans"),
+  text_font_google   = google_font("Montserrat", "300", "300i"),
+  code_font_google   = google_font("Fira Mono")
+)
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+
+```{r echo=FALSE,eval=FALSE,include=FALSE}
+
+## ASI - CT3 - 2006 - November - Question 10
+
+```
+Suppose that the breakdown of blood types of Blood types in a country follow the following distribution
+
+0 A B AB
+50% 35% 10% 5%
+In a random sample of 200 stomach cancer patients yielded 
+ - 84 having blood type O.
+ - 92 having blood type A, 
+ - 20 having blood type B, 
+ - 4 having blood type AB 
+
+
+* Are these data significant enough, at 5% level of significance to enable us to reject the
+null hypothesis that the blood type distribution of stomach cancer sufferers is the same
+as that of the general population?
+
+---
+
+\textbf{Solution}
+
+
+*  Note: In the question, the distribution of blood groups among the general public is not given. In fact, the
+proportion of people with different blood groups is known to be different. 
+
+*  However, in the
+absence of this information, the problem has been solved as given below under the assumption of
+equality of different proportions. 
+*  The law of equal distribution of ignorance is valid if the
+proportions of different attributes are not given. 
+
+*  The rejection of such a hypothesis would lead to
+different proportions for the various levels of the attributes in the population.
+*  $n = 200$
+    
+    Observed frequencies: $O_A = 92$, $O_B = 20$, $O_{AB} = 4$, $O_O = 84$
+
+*  The expected frequencies: $E_A = 50$, $E_B = 50$, $E_{AB} = 50$, $E_O = 50$ (under $H_0$)
+
+---
+
+*  Calculate the chi-square statistic ($\chi^2$):
+    $$
+    \chi^2 = \sum \frac{(O_i - E_i)^2}{E_i} = \frac{(92-50)^2}{50} + \frac{(20-50)^2}{50} + \frac{(4-50)^2}{50} + \frac{(84-50)^2}{50}
+    $$
+    $$
+    \chi^2 = \frac{42^2}{50} + \frac{(-30)^2}{50} + \frac{(-46)^2}{50} + \frac{34^2}{50} = 35.28 + 18 + 42.32 + 23.12 = 118.72
+    $$
+
+---
+
+*  Critical value of $\chi^2$ with 3 degrees of freedom at 5% level is 7.815
+*  Conclusion: Since 118.72 is greater than 7.815, we reject $H_0$. The blood type distribution of people with stomach cancer is significantly different from that of the general public.
+
